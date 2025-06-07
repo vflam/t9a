@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="4a09-4942-d456-6690" name="Special Items" gameSystemId="8c9a-3026-84b4-cf16" gameSystemRevision="11" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="Categories" id="ff63-c408-2582-d4d0" targetId="3d0c-ac41-94b3-0d21"/>
+  </catalogueLinks>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Recruiting Officer" id="27af-ec49-53be-9014" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Fresh Meat" hidden="true" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="35"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="undefined-constraint-0" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="roster" childId="f332gf4ds3g45h6578jytt" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f332gf4ds3g45h6578jytt" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Fresh Meat" id="37bd-9034-3121-6969" hidden="false" targetId="de3d-0354-7a19-f97f" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="Recruiting Officer" id="6c27-e2b3-ab56-fb61" hidden="false" targetId="75ea-9840-afde-47d4" type="rule"/>
+      </infoLinks>
+      <comment>dict:recruitingOfficer</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Leadership Skills" id="fc84-0567-ac27-02bc" hidden="false" collective="true" type="upgrade" sortIndex="3">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Battleline Hero" hidden="true" id="fn392nfu932nf932f3sds2f32f2" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fn392nfu932nf932f3sds2f32f2-constraint-0" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Battleline Hero" id="6e64-a3b8-01e9-e885" hidden="false" targetId="febe-3e9f-b942-8818" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Innovative Leader" hidden="true" id="f32f32f832n439g4a3g54g4545" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f32f32f832n439g4a3g54g4545-constraint-0" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Innovative Leader" id="f7a9-a689-287f-915e" hidden="false" targetId="6432-19b7-a922-68bc" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Recruiting Officer" hidden="false" id="f332gf4ds3g45h6578jytt" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f332gf4ds3g45h6578jytt-constraint-0" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Recruiting Officer" id="9598-50e1-c1aa-ff10" hidden="false" targetId="75ea-9840-afde-47d4" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc84-0567-ac27-02bc-constraint-0" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Leadership Skills" id="22f9-baf8-88fa-c791" hidden="false" targetId="f42f-1154-6a6b-18a0" type="rule"/>
+      </infoLinks>
+      <comment>dict:leadershipSkills</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Shield Enchant" id="2f0e-74b0-cf35-1594" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Dusk Forged" hidden="false" id="1dtxsil1vdhf4zubs7m9nh" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1dtxsil1vdhf4zubs7m9nh-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0460-85ba-9e7b-488f" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Dusk Forged" id="7740-7f28-642c-c900" hidden="false" targetId="f932-bf69-1c2c-5c37" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sigil of Protection" hidden="false" id="sdfsdv43g3432d321h5434f34f" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="sdfsdv43g3432d321h5434f34f-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7cab-509d-f817-1312" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Sigil of Protection" id="8bb1-3e11-39cc-6a0b" hidden="false" targetId="de0c-f2a8-2699-0401" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Wild Warding" hidden="false" id="fdsf3f32dsfh54g4sdfd3" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fdsf3f32dsfh54g4sdfd3-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2f1e-07ea-76a6-4c62" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Wild Warding" id="d4fd-b74c-e9d1-adbd" hidden="false" targetId="e8d7-d805-4166-618e" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:shieldEnchant</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Armour Enchant" id="cd8c-a1bb-0680-443d" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Death Cheater" hidden="false" id="ddeqgw7silpyehc3dho56a" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ddeqgw7silpyehc3dho56a-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="108d-1474-c8ba-5f73" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Death Cheater" id="30a4-c3b9-50c0-357a" hidden="false" targetId="3371-27f5-4f19-988b" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ghostly Guard" hidden="false" id="rqdl9cpywzh262hohgle5" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="rqdl9cpywzh262hohgle5-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a2c2-8055-e539-959b" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Ghostly Guard" id="eee9-1d20-66ac-9a76" hidden="false" targetId="7282-ec1a-d83f-0d37" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Destiny&apos;s Call" hidden="false" id="s9z04q3xgjjxel74a79o" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="s9z04q3xgjjxel74a79o-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9c17-0063-e26c-43df" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Destiny&apos;s Call" id="d5ea-1800-dd22-49f8" hidden="false" targetId="808f-2c2e-d293-240e" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Warding of Unity" hidden="false" id="z9jl20l8yz8jhbibib1jy" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="z9jl20l8yz8jhbibib1jy-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cca3-3215-4103-6563" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Warding of Unity" id="246e-6763-0c6f-1abe" hidden="false" targetId="6fad-32f1-5d30-2150" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Basalt Infusion" hidden="false" id="hbd97jgcpta71x43zd1qmb" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="hbd97jgcpta71x43zd1qmb-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1c49-e821-0b97-b41c" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Basalt Infusion" id="947f-4563-91f2-1924" hidden="false" targetId="cc9e-844d-a2c7-e2d6" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:armourEnchant</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Banner Enchant" id="20c8-b34c-b894-a622" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Stalker&apos;s Standard" hidden="false" id="ktsioxz6xd8oiu3c860rac" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="21c8-72cf-147d-ea48" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Stalker&apos;s Standard" id="b0cf-5fa4-b7f7-87c3" hidden="false" targetId="bd6a-e64f-cb3c-4028" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sheltering Standard" hidden="false" id="rf23v342v32434gefgdsgdfgfd" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="55f3-a5b6-3837-de7d" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Sheltering Standard" id="3f35-9a5b-526e-1398" hidden="false" targetId="dc7a-3f0d-2f75-920a" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Flaming Standard" hidden="false" id="svp35mhrwadblwsw69epg" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="46e5-9fda-fdcb-ebc9" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Flaming Standard" id="9484-8fa1-e3d3-8dff" hidden="false" targetId="3448-9c9c-5874-45ad" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Aether Icon" hidden="false" id="k1mvodzrbem4w6rz1unbsn" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="050d-f62c-fa75-b379" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Aether Icon" id="cfcb-5be6-ef13-a8a2" hidden="false" targetId="0541-8f60-93ec-5614" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Banner of Courage" hidden="false" id="6fgr12sviic72tkct212zo" collective="true">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="da68-b292-4433-3a2a" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Banner of Courage" id="b7bc-97cf-01cd-be8e" hidden="false" targetId="7c65-5e87-7d0c-7fa7" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Banner of Speed" hidden="false" id="6n4c7cjvglja18yoqzcsct" collective="true">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="roster" shared="true" id="0700-f21d-d4d8-d1b7" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Banner of Speed" id="a18e-eef0-c532-b16f" hidden="false" targetId="0022-dd9d-f5a5-4b3b" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Distortion Emblem" hidden="false" id="6n4c7dscjvglja18yoqzcsct" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6n4c7dscjvglja18yoqzcsct-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="46ea-439e-2516-216d" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Distortion Emblem" id="34bd-5be9-39c6-4855" hidden="false" targetId="241c-c9be-487d-cc33" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rending Banner" hidden="false" id="fsdfsdfsdf23yt234g34wg43g43" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fsdfsdfsdf23yt234g34wg43g43-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="36f1-1d8f-1e70-04f3" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Rending Banner" id="db23-39dd-3fd1-623e" hidden="false" targetId="fd31-e1a7-7a98-1653" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:bannerEnchant</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Weapon Enchant" id="644c-06b2-5fdc-4e9d" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Vorpal Binding" hidden="false" id="fsdf32f32hjdgdsv32g342g43" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="70"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fsdf32f32hjdgdsv32g342g43-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="de39-6773-2516-50a5" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1b08-8405-a006-e06d" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="8bbc-49ed-fc2f-0757" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="4ad9-6095-6e7b-8d5d" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Vorpal Binding" id="5f9f-4492-b508-2843" hidden="false" targetId="2ce8-1894-e5fe-bce5" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="King Slayer" hidden="false" id="9nbhwy7x5j8arx2vum3628" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9nbhwy7x5j8arx2vum3628-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="6486-be18-c895-fada" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="af58-b51a-e5fa-7bad" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="f6ac-6952-439a-470a" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="0688-b2b8-d260-d233" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="King Slayer" id="c9df-6c9a-51ac-b8ac" hidden="false" targetId="40e5-bf73-835b-c7cd" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Touch of Greatness" hidden="false" id="f4rvj2z0e17zf7kivsczl" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4rvj2z0e17zf7kivsczl-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="791e-2b31-3937-7670" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="44c5-e102-0a83-02bb" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="3665-1383-ec2d-2b41" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="35cf-d672-71ef-d5cb" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Touch of Greatness" id="e9ea-2c0f-d73f-437d" hidden="false" targetId="1ba7-7f19-d60b-2f17" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Giant Slayer" hidden="false" id="fed32jsfdf235jfg342f342" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fed32jsfdf235jfg342f342-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="9b7b-85f6-a9eb-359c" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e54d-8b57-e483-ffd8" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="4fa8-45f9-d5d1-cda9" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="6b90-2554-6b6b-98a1" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Giant Slayer" id="cfcf-6039-de94-22af" hidden="false" targetId="9a96-0140-8068-a906" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Supernatural Dexterity" hidden="false" id="mv855a917kgpn2e269486" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="mv855a917kgpn2e269486-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d084-a5c8-1898-964f" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2dbe-fee0-4ad6-76e0" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="88f2-7e8c-8ed0-5b10" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="decb-6fa5-5fda-809a" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Supernatural Dexterity" id="fe5a-6f7c-4ee9-4c27" hidden="false" targetId="e49e-a1d0-9038-a997" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Eldritch Inscriptions" hidden="false" id="7q0v4r6y4am8ab7ct168bx" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7q0v4r6y4am8ab7ct168bx-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="c7ee-a493-e4ec-4e13" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7c73-e3f9-6581-50c5" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="a51e-7116-f9d5-7ebe" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="2beb-aff1-c54e-d930" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Eldritch Inscriptions" id="20d2-efcd-aa79-1903" hidden="false" targetId="61d5-ad50-61c3-1e52" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Shield Breaker" hidden="false" id="llspua8sxbhbm9p2mr5lg" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="llspua8sxbhbm9p2mr5lg-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="1c5c-f605-fa51-f8e1" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7bc2-16d2-db60-e24d" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="fac6-0d66-d773-122c" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="91e7-3548-7f0a-c7d1" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Shield Breaker" id="2745-59ca-2bb1-6057" hidden="false" targetId="a8f3-0af3-4a5a-cf50" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:weaponEnchant</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Hand Weapon Enchant" id="c97d-edc8-3a68-0882" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Hero&apos;s Heart" hidden="false" id="tq76txrmr1lyzqyfjyir8f" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="tq76txrmr1lyzqyfjyir8f-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="136e-29e9-2fc9-161c" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="03f4-65fd-109c-8bee" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="df06-caf3-4463-fa24" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="7c4c-5ab6-1868-56b7" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Hero&apos;s Heart" id="8530-17a3-65bb-5a6b" hidden="false" targetId="1a7d-a2cd-ef0f-bfc6" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:handWeaponEnchant-pairedWeaponsEnchant</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Paired Weapons Enchant" id="444e-04d7-3174-b267" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Hero&apos;s Heart" hidden="false" id="b488-be0a-2c05-74b4" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f87e-8562-e96f-03fc" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="294c-3473-d07b-f942" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1f47-b5b5-93a8-11e5" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="639b-1056-e254-d7c9" targetId="e57c-08ad-6d14-3c25"/>
+            <categoryLink name="Weapon Enchant" hidden="false" id="70dc-3779-6cbc-cc47" targetId="2803-805a-6d32-504d"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Hero&apos;s Heart" id="493e-4f71-1a9c-dab4" hidden="false" targetId="1a7d-a2cd-ef0f-bfc6" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:handWeaponEnchant-pairedWeaponsEnchant</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Artefact" id="a686-601e-1891-7f26" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Magical Heirloom" hidden="false" id="f900q91pw2kbnpcjai2xxe" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f900q91pw2kbnpcjai2xxe-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="13ef-7d15-b76b-03ff" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="9074-4f6a-970e-72c3" targetId="e57c-08ad-6d14-3c25"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Magical Heirloom" id="aa9a-42fd-b851-b912" hidden="false" targetId="617b-5cc7-576c-db30" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Talisman of Shielding" hidden="false" id="qgh98lzrupif6hlydex33u" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="qgh98lzrupif6hlydex33u-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fc18-54fd-c679-decd" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Talisman of Shielding" id="829b-030a-b335-a527" hidden="false" targetId="2111-4d0e-69d6-183e" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Crown of the Wizard King" hidden="false" id="0xe0vzte8ybruhnpexpia8j" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0xe0vzte8ybruhnpexpia8j-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3956-48c9-d3ff-3c07" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Crown of the Wizard King" id="c127-bd9c-81fe-8193" hidden="false" targetId="136e-d34d-f2ab-a627" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mimic Cloak" hidden="false" id="f32f32fewwfsdf32f32g32" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f32f32fewwfsdf32f32g32-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5eff-f9c6-5c0c-5b44" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Mimic Cloak" id="c925-d2b4-8e73-4d73" hidden="false" targetId="cbcc-1a94-2a59-0e4c" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Talisman of the Void" hidden="false" id="wjs63i4cw5eqxlvcm1mj1" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="wjs63i4cw5eqxlvcm1mj1-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7777-36cd-f013-3f10" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Talisman of the Void" id="f4cc-974d-53ce-dfc4" hidden="false" targetId="5b33-bdc3-2f83-ce20" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Essence of a Free Mind" hidden="false" id="h5tyfl483j7wpov0jd0r2s" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="h5tyfl483j7wpov0jd0r2s-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fc39-6f94-8606-b49a" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="5169-f959-48c0-11d8" targetId="e57c-08ad-6d14-3c25"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Essence of a Free Mind" id="6c6d-ce44-2b49-6f3c" hidden="false" targetId="da28-87db-1e31-d95a" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mask of Mindless Violence" hidden="false" id="8923rce68gfdsdfsf62" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8923rce68gfdsdfsf62-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7cb5-7043-5035-1898" includeChildSelections="true"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="One of a Kind" hidden="false" id="8784-27cd-98b5-9ff3" targetId="e57c-08ad-6d14-3c25"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Mask of Mindless Violence" id="b220-3b1d-18b8-f3c4" hidden="false" targetId="bf9a-1360-916c-fe8c" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Obsidian Rock" hidden="false" id="ck0fefg5g56ltydfpadwi" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ck0fefg5g56ltydfpadwi-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="916c-8f4d-1d91-267e" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Obsidian Rock" id="d7ee-c6a5-024c-4e3a" hidden="false" targetId="735a-7bed-ccb1-6b4e" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rod of Battle" hidden="false" id="4kj8yym077guw0cq3wd2r" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4kj8yym077guw0cq3wd2r-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="230d-aa87-e71d-aa9f" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Rod of Battle" id="cc86-a4ff-5395-7566" hidden="false" targetId="06d8-1df8-84bf-aecd" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:artefact</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Potions And Scrolls" id="0045-f97a-822a-1524" hidden="false" collective="true" type="upgrade">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Binding Scroll" hidden="false" id="u44i127ro4aijz0q2zvmi" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="50"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="roster" shared="true" id="84d3-2b42-8df2-439b" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Binding Scroll" id="3cf6-0073-e09b-a509" hidden="false" targetId="581f-55b5-4454-9109" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Potion of Power Preservation" hidden="false" id="f32ffdsfsdf3e2dsjgbj4342hj" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="45"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f32ffdsfsdf3e2dsjgbj4342hj-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="257e-c975-c61a-ce20" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Potion of Power Preservation" id="3834-77e3-3bb9-f4e6" hidden="false" targetId="58a4-1f57-004b-f4de" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dragon&apos;s Brew" hidden="false" id="f32ffdsfdsdsdsdf3e2dsjgbj4342hj" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f32ffdsfdsdsdsdf3e2dsjgbj4342hj-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7a6b-d52f-5132-b067" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Dragon&apos;s Brew" id="befb-bbd8-b67e-676f" hidden="false" targetId="e3c3-de95-541c-728c" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Potion of Swiftness" hidden="false" id="o2tpicuu5kmtkw6tg2e4c" collective="true">
+          <costs>
+            <cost name="pts" typeId="24fd-8af8-0c78-001c" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="o2tpicuu5kmtkw6tg2e4c-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b0ea-e322-4af1-e3b9" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Potion of Swiftness" id="221a-fc7e-2586-b7d1" hidden="false" targetId="9f6d-5cfb-b547-a7ea" type="rule"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Scroll of Draining" hidden="false" id="932fn4w20v0342vj32fv32" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="932fn4w20v0342vj32fv32-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2a73-c1a6-7b03-09fd" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Scroll of Draining" id="a01b-7247-98af-1f9f" hidden="false" targetId="cfe0-152e-ec96-7203" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Potion of Healing" hidden="false" id="gdfg324g34gfdsjj54g4g54g54" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="gdfg324g34gfdsjj54g4g54g54-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="26c4-b72b-4447-e00f" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Potion of Healing" id="8b5e-582d-1044-27e5" hidden="false" targetId="e092-146e-ff75-ccf9" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Scroll of Power" hidden="false" id="943jg349jg034f34f342h534" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="943jg349jg034f34f342h534-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b929-69d7-cd18-1bc7" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Scroll of Power" id="cc8b-358a-1cfe-23ea" hidden="false" targetId="13e4-5960-4a5d-89d8" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spell Scroll" hidden="false" id="8o56hn54g34f34g34h54hg54" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8o56hn54g34f34g34h54hg54-constraint-0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c80a-b7a4-aaa4-963b" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Spell Scroll" id="7174-75f7-1f18-1f72" hidden="false" targetId="c1c0-5e70-c483-6858" type="rule"/>
+          </infoLinks>
+          <comment>shared item</comment>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>dict:potions_and_scrolls</comment>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>
