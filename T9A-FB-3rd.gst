@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="11" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
+<gameSystem id="8c9a-3026-84b4-cf16" name="The 9th Age: Fantasy Battles 3rd Edition" revision="12" battleScribeVersion="2.03" authorName="DarkSky" authorUrl="https://www.the-ninth-age.com/" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" hidden="false">
   <costTypes>
     <costType id="24fd-8af8-0c78-001c" name="pts" defaultCostLimit="-1" hidden="false"/>
     <costType name="Special Equipment" id="78d6-b449-3c80-9b2a" defaultCostLimit="-1" hidden="true"/>
