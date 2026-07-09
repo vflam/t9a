@@ -1934,6 +1934,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -3268,6 +3273,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -4614,6 +4624,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -6570,6 +6585,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -8232,6 +8252,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×75"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -8816,6 +8841,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -9612,6 +9642,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -10285,6 +10320,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -10882,6 +10922,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Regular"
        }
       ]
      }
@@ -11612,6 +11657,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Regular"
        }
       ]
      }
@@ -12245,6 +12295,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -12938,6 +12993,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -13394,6 +13454,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -13880,6 +13945,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -14132,7 +14202,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "00cd-7753-823b-e7ef",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "916b-2be8-8383-1c7c",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "00cd-7753-823b-e7ef",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary"
+     },
+     {
+      "type": "increment",
+      "field": "916b-2be8-8383-1c7c",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "00cd-7753-823b-e7ef",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "00cd-7753-823b-e7ef",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -14311,6 +14471,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -14685,6 +14850,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -15093,6 +15263,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -15903,6 +16078,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -16471,6 +16651,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -17159,7 +17344,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "9174-0bfa-119e-4e13",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "2570-b5aa-919b-20e9",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "9174-0bfa-119e-4e13",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary"
+     },
+     {
+      "type": "increment",
+      "field": "2570-b5aa-919b-20e9",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "9174-0bfa-119e-4e13",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "9174-0bfa-119e-4e13",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -17357,6 +17632,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -17970,6 +18250,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -18487,6 +18772,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -19030,6 +19320,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -19802,6 +20097,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -20148,6 +20448,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "100×200"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -20471,6 +20776,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -20822,6 +21132,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×75"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -21067,6 +21382,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -21347,6 +21667,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×75"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -21679,6 +22004,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Regular"
        }
       ]
      }
@@ -21975,6 +22305,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -22251,6 +22586,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -27445,7 +27785,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "40x40",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28222,7 +28562,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "100x150",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28231,7 +28571,7 @@
      {
       "parentKey": "modifiers",
       "field": "78b5-478f-5615-ac81",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
@@ -28286,7 +28626,7 @@
      {
       "parentKey": "modifiers",
       "field": "7e95-b3fb-a6d6-4cd9",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
@@ -28532,7 +28872,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "60x100",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28564,7 +28904,7 @@
      {
       "parentKey": "modifiers",
       "field": "78b5-478f-5615-ac81",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],

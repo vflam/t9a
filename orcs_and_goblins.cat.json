@@ -2188,6 +2188,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -3589,7 +3594,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Uncommon"
+      "comment": "Uncommon",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "80ca-fb99-a9f3-2a93",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Regular"
+     },
+     {
+      "type": "increment",
+      "field": "80ca-fb99-a9f3-2a93",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Regular",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Regular",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -3782,6 +3877,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -5210,7 +5310,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Uncommon"
+      "comment": "Uncommon",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "e690-4e44-9ff8-9151",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common"
+     },
+     {
+      "type": "increment",
+      "field": "e690-4e44-9ff8-9151",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Common",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -5403,6 +5593,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -5543,7 +5738,31 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "type": "set",
+          "field": "117e-0987-cb97-4ccc",
+          "value": "Ordinary",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Size",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "childId": "c5b2-d324-e374-9bc1",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -5586,7 +5805,31 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "type": "set",
+          "field": "117e-0987-cb97-4ccc",
+          "value": "Ordinary",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Size",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "childId": "c5b2-d324-e374-9bc1",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -5629,7 +5872,31 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "type": "set",
+          "field": "117e-0987-cb97-4ccc",
+          "value": "Ordinary",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Size",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "childId": "c5b2-d324-e374-9bc1",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -5766,6 +6033,29 @@
     "entryLinks": [],
     "constraints": [],
     "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Regular",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
      {
       "type": "remove",
       "field": "category",
@@ -6014,6 +6304,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -6127,7 +6422,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Uncommon"
+      "comment": "Uncommon",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "dc81-61d4-dd2f-b060",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Regular"
+     },
+     {
+      "type": "increment",
+      "field": "dc81-61d4-dd2f-b060",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Regular",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Regular",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -6320,6 +6705,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -7795,7 +8185,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "15b6-6d5e-f644-5c0b",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common"
+     },
+     {
+      "type": "increment",
+      "field": "15b6-6d5e-f644-5c0b",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Common",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -7995,6 +8475,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -9223,6 +9708,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -9730,7 +10220,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Extraordinary"
+      "comment": "Extraordinary",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "e09f-04ba-49ac-fb67",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare"
+     },
+     {
+      "type": "increment",
+      "field": "e09f-04ba-49ac-fb67",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 2500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Rare",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -9923,6 +10503,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -10833,6 +11418,29 @@
     "constraints": [],
     "modifiers": [
      {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Regular",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "8ae7-fb8a-bebd-4980",
@@ -11051,6 +11659,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -11480,6 +12093,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -11780,6 +12398,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -12224,6 +12847,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Regular"
        }
       ]
      }
@@ -12914,6 +13542,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -13283,7 +13916,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "30f6-3041-f195-91d9",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common"
+     },
+     {
+      "type": "increment",
+      "field": "30f6-3041-f195-91d9",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Common",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -13507,6 +14230,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Regular"
        }
       ]
      }
@@ -13732,7 +14460,31 @@
             "percentValue": false
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "parentKey": "modifiers",
+            "type": "set",
+            "field": "117e-0987-cb97-4ccc",
+            "value": "Rare",
+            "scope": "non-upgrade-entry-self",
+            "affects": "self.profiles.Size",
+            "position": "1",
+            "conditions": [
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "roster",
+              "childId": "c5b2-d324-e374-9bc1",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -14264,6 +15016,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -14464,7 +15221,7 @@
            {
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "1",
             "type": "replace",
@@ -14476,7 +15233,7 @@
            {
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "2",
             "type": "replace",
@@ -14488,7 +15245,7 @@
            {
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "3",
             "type": "replace",
@@ -14500,7 +15257,7 @@
            {
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "1",
             "type": "replace",
@@ -14512,7 +15269,7 @@
            {
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "2",
             "type": "replace",
@@ -14524,7 +15281,7 @@
            {
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "3",
             "type": "replace",
@@ -14536,7 +15293,7 @@
            {
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "1",
             "type": "replace",
@@ -14548,7 +15305,7 @@
            {
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "2",
             "type": "replace",
@@ -14560,13 +15317,36 @@
            {
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "3",
             "type": "replace",
             "value": "",
             "arg": "Scoring",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "type": "set",
+            "field": "117e-0987-cb97-4ccc",
+            "value": "Uncommon",
+            "scope": "non-upgrade-entry-self",
+            "affects": "self.profiles.Size",
+            "position": "1",
+            "conditions": [
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "roster",
+              "childId": "c5b2-d324-e374-9bc1",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false
+             }
+            ],
             "conditionGroups": []
            }
           ],
@@ -14874,7 +15654,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Uncommon"
+      "comment": "Uncommon",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "1e1d-52b2-1148-b75b",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common"
+     },
+     {
+      "type": "increment",
+      "field": "1e1d-52b2-1148-b75b",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Common",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Common",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -15079,6 +15949,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Regular"
        }
       ]
      }
@@ -15894,6 +16769,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -16242,7 +17122,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Extraordinary"
+      "comment": "Extraordinary",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "4f3a-3a9d-8b86-e31f",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon"
+     },
+     {
+      "type": "increment",
+      "field": "4f3a-3a9d-8b86-e31f",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Uncommon",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -16473,6 +17443,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×75"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -16787,7 +17762,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "d12c-1886-600f-0dd2",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon"
+     },
+     {
+      "type": "increment",
+      "field": "d12c-1886-600f-0dd2",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Uncommon",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -16966,6 +18031,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -17415,6 +18485,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "75×75"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -17488,7 +18563,31 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "type": "set",
+          "field": "117e-0987-cb97-4ccc",
+          "value": "Common",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Size",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "childId": "c5b2-d324-e374-9bc1",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -17539,7 +18638,31 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "type": "set",
+          "field": "117e-0987-cb97-4ccc",
+          "value": "Uncommon",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Size",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "childId": "c5b2-d324-e374-9bc1",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -17590,7 +18713,31 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "type": "set",
+          "field": "117e-0987-cb97-4ccc",
+          "value": "Rare",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Size",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "roster",
+            "childId": "c5b2-d324-e374-9bc1",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -17658,7 +18805,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Uncommon"
+      "comment": "Uncommon",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "2744-a098-b22c-c8d6",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Regular"
+     },
+     {
+      "type": "increment",
+      "field": "2744-a098-b22c-c8d6",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Regular",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Regular",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -17989,6 +19226,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -18142,7 +19384,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "1460-92e6-6d51-648e",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon"
+     },
+     {
+      "type": "increment",
+      "field": "1460-92e6-6d51-648e",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Uncommon",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -18335,6 +19667,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "20×20"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -18455,7 +19792,7 @@
            {
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "1",
             "type": "replace",
@@ -18467,7 +19804,7 @@
            {
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "2",
             "type": "replace",
@@ -18479,7 +19816,7 @@
            {
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "3",
             "type": "replace",
@@ -18491,7 +19828,7 @@
            {
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "1",
             "type": "replace",
@@ -18503,7 +19840,7 @@
            {
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "2",
             "type": "replace",
@@ -18515,7 +19852,7 @@
            {
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "3",
             "type": "replace",
@@ -18527,7 +19864,7 @@
            {
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "1",
             "type": "replace",
@@ -18539,7 +19876,7 @@
            {
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "2",
             "type": "replace",
@@ -18551,7 +19888,7 @@
            {
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
-            "scope": "non-upgrade-entry",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "3",
             "type": "replace",
@@ -18767,7 +20104,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Extraordinary"
+      "comment": "Extraordinary",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "c7bf-9f66-86ba-eed1",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare"
+     },
+     {
+      "type": "increment",
+      "field": "c7bf-9f66-86ba-eed1",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 2500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Rare",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -18960,6 +20387,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "100×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -19156,7 +20588,185 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       },
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "f1b6-a2c7-59bc-d449",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary"
+     },
+     {
+      "type": "increment",
+      "field": "f1b6-a2c7-59bc-d449",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "f1b6-a2c7-59bc-d449",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary"
+     },
+     {
+      "type": "increment",
+      "field": "f1b6-a2c7-59bc-d449",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -19335,6 +20945,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -19732,6 +21347,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -20082,6 +21702,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -20449,7 +22074,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Extraordinary"
+      "comment": "Extraordinary",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "c3b0-d15f-45d0-08ea",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare"
+     },
+     {
+      "type": "increment",
+      "field": "c3b0-d15f-45d0-08ea",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 2500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Rare",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "c5b2-d324-e374-9bc1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -20723,6 +22438,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -21119,7 +22839,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "f0ff-bf36-8f86-5f15",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon"
+     },
+     {
+      "type": "increment",
+      "field": "f0ff-bf36-8f86-5f15",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Uncommon",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -21362,6 +23172,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×25"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -21789,7 +23604,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Extraordinary"
+      "comment": "Extraordinary",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "d586-74ff-27c9-5eda",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon"
+     },
+     {
+      "type": "increment",
+      "field": "d586-74ff-27c9-5eda",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Uncommon",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Uncommon",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -22025,6 +23930,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -22488,6 +24398,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "60×60"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Rare"
        }
       ]
      }
@@ -22773,6 +24688,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -23077,6 +24997,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -23387,6 +25312,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "100×150"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -23660,6 +25590,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": ""
        }
       ]
      }
@@ -23907,6 +25842,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×100"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -24166,6 +26106,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "40×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Uncommon"
        }
       ]
      }
@@ -24454,6 +26399,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "50×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Extraordinary"
        }
       ]
      }
@@ -24603,7 +26553,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Extraordinary"
+      "comment": "Extraordinary",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "87a8-6705-74fc-3e3c",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare"
+     },
+     {
+      "type": "increment",
+      "field": "87a8-6705-74fc-3e3c",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Rare",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 2500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Rare",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f77c-474e-c50d-c347",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "collective": true
@@ -24777,6 +26817,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "25×50"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -25001,6 +27046,11 @@
         "name": "Base",
         "typeId": "a8c6-520e-1327-a8bc",
         "$text": "60×40"
+       },
+       {
+        "name": "Rarity",
+        "typeId": "117e-0987-cb97-4ccc",
+        "$text": "Legendary"
        }
       ]
      }
@@ -27722,7 +29772,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "75x100",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -27731,7 +29781,7 @@
      {
       "parentKey": "modifiers",
       "field": "78b5-478f-5615-ac81",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
@@ -27786,7 +29836,7 @@
      {
       "parentKey": "modifiers",
       "field": "7e95-b3fb-a6d6-4cd9",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
@@ -27821,7 +29871,7 @@
      {
       "parentKey": "modifiers",
       "field": "00fe-697b-eb17-c206",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
@@ -28298,7 +30348,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "50x50",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28332,7 +30382,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "100x150",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28341,7 +30391,7 @@
      {
       "parentKey": "modifiers",
       "field": "78b5-478f-5615-ac81",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
@@ -28585,7 +30635,7 @@
      {
       "parentKey": "modifiers",
       "field": "00fe-697b-eb17-c206",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
@@ -28621,7 +30671,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "60x60",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28779,7 +30829,7 @@
      {
       "parentKey": "modifiers",
       "field": "29f8-d428-4518-3108",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
@@ -28790,7 +30840,7 @@
      {
       "parentKey": "modifiers",
       "field": "78b5-478f-5615-ac81",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
@@ -28847,7 +30897,7 @@
       "type": "set",
       "field": "a8c6-520e-1327-a8bc",
       "value": "40x40",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28856,7 +30906,7 @@
      {
       "parentKey": "modifiers",
       "field": "7606-12ef-d609-88b4",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Size",
       "position": "1",
       "conditions": [],
@@ -28867,7 +30917,7 @@
      {
       "parentKey": "modifiers",
       "field": "11fe-c01b-c45c-fcf8",
-      "scope": "non-upgrade-entry",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Global",
       "position": "1",
       "conditions": [],
