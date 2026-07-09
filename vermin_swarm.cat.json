@@ -2451,6 +2451,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Stomp Attack (D6), Magical Attacks"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Caelysian Pantheon"
        }
       ]
      },
@@ -2555,7 +2560,7 @@
       "name": "Aegis",
       "hidden": false,
       "type": "profile",
-      "targetId": "1b72-14fc-21d7-f34a"
+      "targetId": "8bcb-afaf-0f53-3431"
      },
      {
       "id": "5af0-75fb-dc94-6491",
@@ -2570,6 +2575,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "4cae-8942-e006-f5f9"
+     },
+     {
+      "id": "5570-bae3-cbfb-761b",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [],
@@ -3922,6 +3934,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Light Armour"
        }
       ]
      },
@@ -3971,6 +3988,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "d374-5567-bff4-5ce0"
+     },
+     {
+      "id": "d17a-5412-bf94-2108",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [],
@@ -4573,6 +4597,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Metal Armour"
        }
       ]
      },
@@ -4622,6 +4651,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cfbb-118b-629b-24b9"
+     },
+     {
+      "id": "89de-b964-e1f5-a1f8",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [],
@@ -5740,6 +5776,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Pistol"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Metal Armour"
        }
       ]
      },
@@ -5796,6 +5837,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "4595-398c-2a6e-8658"
+     },
+     {
+      "id": "bf89-e5ef-673b-fa69",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [],
@@ -6000,7 +6048,116 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -6017,6 +6174,13 @@
           "name": "Fetthis Fleshmaster",
           "hidden": true,
           "targetId": "b29d-e7b6-c7c0-d9b9",
+          "primary": false
+         },
+         {
+          "id": "94a9-143e-d195-7941",
+          "name": "⟨loses:lightarmour⟩",
+          "hidden": true,
+          "targetId": "b228-c623-01a2-81d4",
           "primary": false
          },
          {
@@ -6116,7 +6280,116 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Light Armour",
+          "conditions": [],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -6133,6 +6406,13 @@
           "name": "Stygian Overseer",
           "hidden": true,
           "targetId": "0b76-4281-bac9-b8e2",
+          "primary": false
+         },
+         {
+          "id": "80d1-19f1-de04-9f42",
+          "name": "⟨loses:lightarmour⟩",
+          "hidden": true,
+          "targetId": "b228-c623-01a2-81d4",
           "primary": false
          },
          {
@@ -6880,6 +7160,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -6922,6 +7207,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "b424-76bb-fc3d-d8ac"
+     },
+     {
+      "id": "a80f-155f-8b2b-8b7d",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [],
@@ -8401,6 +8693,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Divine Attacks, Multiple Wounds (2, against Characters), Hatred (against Characters)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -8485,6 +8782,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "39ee-98b3-7532-8dd3"
+     },
+     {
+      "id": "6fcc-eec3-53f3-e4e5",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [],
@@ -8688,6 +8992,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Maniacal Enthusiasm (To-Hit Roll)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -8727,6 +9036,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Devastating Charge (1 St, 1 AP, 10 Ag), Grind Attack (3D3, Lightning Attacks)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Construct, Metal Armour"
        }
       ]
      },
@@ -8839,6 +9153,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "f7bd-2fab-e04c-a2a2"
+     },
+     {
+      "id": "8408-4a7f-c638-bb42",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
+     },
+     {
+      "id": "2cab-51bd-d40b-687d",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -9015,6 +9343,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Divine Attacks, Poison Attacks, Shadowslice’s Panoply, Hatred (against Characters), Multiple Wounds (2, against Characters)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -9120,6 +9453,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "7230-b501-e62b-1367"
+     },
+     {
+      "id": "2d56-c0a3-e62e-4dba",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [],
@@ -9289,6 +9629,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Cohort Coordination, Gladius, Weapon Master"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Legionary, Metal Armour"
        }
       ]
      },
@@ -9352,6 +9697,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "6405-e868-d2f6-1c09"
+     },
+     {
+      "id": "3602-7896-171a-70fd",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -9435,7 +9787,116 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Halberd",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Halberd, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Global",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Halberd",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Halberd",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Halberd, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Offensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Halberd",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Halberd",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Halberd, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry",
+          "affects": "self.profiles.Defensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Halberd",
+          "conditions": [],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -9452,6 +9913,13 @@
           "name": "Bloodfur Praetorian",
           "hidden": true,
           "targetId": "b140-ab18-1d01-4a33",
+          "primary": false
+         },
+         {
+          "id": "282e-fae9-64e0-a43c",
+          "name": "⟨loses:halberd⟩",
+          "hidden": true,
+          "targetId": "4136-1fd1-3154-064c",
           "primary": false
          }
         ],
@@ -9761,6 +10229,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Zeal"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Cult Of Errahman, Vermin"
        }
       ]
      },
@@ -9817,6 +10290,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "52da-dfae-d897-2b2f"
+     },
+     {
+      "id": "0343-6b3f-9ba6-f9c1",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -10308,6 +10788,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Cohort Coordination"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Legionary, Light Armour"
        }
       ]
      },
@@ -10357,6 +10842,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "fa76-3037-045a-8208"
+     },
+     {
+      "id": "4e13-637a-f1d2-09f4",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -10786,6 +11278,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -10842,6 +11339,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "910a-e5a9-c228-e1fc"
+     },
+     {
+      "id": "10f6-95fd-b8ed-4a65",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -11191,6 +11695,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Cohort Coordination"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Light Armour, Legionary"
        }
       ]
      },
@@ -11240,6 +11749,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "fa76-3037-045a-8208"
+     },
+     {
+      "id": "f4b5-474e-cfd6-9a49",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -11576,6 +12092,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Fight in Extra Rank"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Mutant"
        }
       ]
      },
@@ -11618,6 +12139,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "ad6f-0ad5-9510-4fc5"
+     },
+     {
+      "id": "bd2a-cdd8-8552-dce3",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -11854,6 +12382,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Devastating Charge (1 At)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Beast, Mutant"
        }
       ]
      },
@@ -11924,6 +12457,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "e052-9518-2b65-26d1"
+     },
+     {
+      "id": "aeb0-bb02-8e78-fd6c",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [
@@ -12160,6 +12700,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "P A R E N T, Flaming Attacks"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Beast, Mutant"
        }
       ]
      },
@@ -12230,6 +12775,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "7367-617a-14c1-ac6b"
+     },
+     {
+      "id": "c08f-0d7b-4b8d-f411",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [
@@ -12466,6 +13018,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Extra Support (3)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Beast"
        }
       ]
      },
@@ -12578,6 +13135,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "b810-a004-1c7e-66e2"
+     },
+     {
+      "id": "ed6d-7fe3-841f-a85c",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [
@@ -12814,6 +13378,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Grind Attack (3)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Construct, Metal Armour"
        }
       ]
      },
@@ -12884,6 +13453,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "f7bd-2fab-e04c-a2a2"
+     },
+     {
+      "id": "7825-dbec-eccf-18c7",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -13073,6 +13649,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Cohort Coordination, Weapon Master"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Mutant, Metal Armour"
        }
       ]
      },
@@ -13122,6 +13703,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "6405-e868-d2f6-1c09"
+     },
+     {
+      "id": "9398-e2a9-2676-cc42",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -13482,6 +14070,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -13521,6 +14114,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Grind Attack (D6+1, D6+1 St, 3 AP, Lightning Attacks, Unmodifiable)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Construct, Metal Armour"
        }
       ]
      },
@@ -13584,6 +14182,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "f7bd-2fab-e04c-a2a2"
+     },
+     {
+      "id": "66d8-c632-c588-19e5",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
+     },
+     {
+      "id": "0234-a0cd-66ee-0766",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -13773,6 +14385,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -13850,6 +14467,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "5edf-edf0-2a52-ca2d"
+     },
+     {
+      "id": "f723-61d8-aede-50bb",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -14323,6 +14947,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Cohort Coordination"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Mutant, Metal Armour"
        }
       ]
      },
@@ -14365,6 +14994,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "fa76-3037-045a-8208"
+     },
+     {
+      "id": "e42e-f7b2-fa64-2b33",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -15067,6 +15703,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Metal Armour"
        }
       ]
      },
@@ -15116,6 +15757,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "b859-7941-dc72-5312"
+     },
+     {
+      "id": "024e-20cd-8b03-bcb4",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -15687,6 +16335,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Metal Armour"
        }
       ]
      },
@@ -15757,6 +16410,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "5edf-edf0-2a52-ca2d"
+     },
+     {
+      "id": "29cc-f2fc-bd11-a383",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
     "selectionEntries": [
@@ -15993,6 +16653,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Maniacal Enthusiasm (To-hit roll)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin, Construct"
        }
       ]
      },
@@ -16056,6 +16721,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "3e06-f02c-4e68-41ac"
+     },
+     {
+      "id": "b245-0b58-4274-935b",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -16443,6 +17115,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -16482,6 +17159,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Stomp Attack (D6)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Beast, Mutant"
        }
       ]
      },
@@ -16559,6 +17241,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "ca2f-c97f-04de-88bd"
+     },
+     {
+      "id": "dbd4-718f-664f-7160",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
+     },
+     {
+      "id": "2145-69a7-ea89-1f42",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -16606,7 +17302,15 @@
           "targetId": "0258-9edf-c99c-06a1"
          }
         ],
-        "categoryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "4387-ffaa-cf3b-5463",
+          "name": "⟨loses:harnessed⟩",
+          "hidden": true,
+          "targetId": "b5e7-bb2d-59fe-3df5",
+          "primary": false
+         }
+        ],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -16805,6 +17509,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -16844,6 +17553,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Impact Hits (D6)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Construct, Light Armour"
        }
       ]
      },
@@ -16935,6 +17649,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "1dcc-132d-575e-55ec",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
+     },
+     {
+      "id": "dbb1-4660-25b0-894d",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [
@@ -17171,6 +17899,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Grind Attack (3D3), Devastating Charge (10 Ag)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Construct, Metal Armour"
        }
       ]
      },
@@ -17248,6 +17981,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "e052-9518-2b65-26d1"
+     },
+     {
+      "id": "9041-1996-1670-f70e",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -17451,6 +18191,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Mount"
        }
       ]
      },
@@ -17479,7 +18224,15 @@
       ]
      }
     ],
-    "infoLinks": [],
+    "infoLinks": [
+     {
+      "id": "6bd8-9811-d640-1ed3",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -17662,6 +18415,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Mount, Mutant"
        }
       ]
      },
@@ -17690,7 +18448,15 @@
       ]
      }
     ],
-    "infoLinks": [],
+    "infoLinks": [
+     {
+      "id": "0bc0-b6ba-6b8a-fecb",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -17873,6 +18639,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Vermin"
        }
       ]
      },
@@ -17912,6 +18683,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Mount, Construct"
        }
       ]
      },
@@ -17981,7 +18757,21 @@
       "name": "Aegis",
       "hidden": false,
       "type": "profile",
-      "targetId": "1b72-14fc-21d7-f34a"
+      "targetId": "8bcb-afaf-0f53-3431"
+     },
+     {
+      "id": "609d-73d9-c200-c8db",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
+     },
+     {
+      "id": "774d-5ed1-6b30-2e22",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -18329,6 +19119,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": ""
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Mutant, Vermin"
        }
       ]
      },
@@ -18368,6 +19163,11 @@
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
         "$text": "Impact Hits (D6+1)"
+       },
+       {
+        "name": "Tags",
+        "typeId": "6079-9ce5-90ed-8c32",
+        "$text": "Construct, Mount"
        }
       ]
      },
@@ -18431,6 +19231,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "1dfe-f095-6358-a3a2",
+      "name": "Hand Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "cc6a-85fb-a07e-e781"
+     },
+     {
+      "id": "5ca9-323f-4da4-f81b",
+      "name": "Innate Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "9938-bd60-6310-69d8"
      }
     ],
     "selectionEntries": [],
@@ -18732,7 +19546,15 @@
       "targetId": "955f-5704-ac5a-35b5"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "f475-a5ac-d527-3af4",
+      "name": "⟨loses:caelysianpantheon⟩",
+      "hidden": true,
+      "targetId": "bfee-09a6-036e-3d2d",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -21907,7 +22729,7 @@
      {
       "name": "Banner Enchant",
       "typeId": "230e-af1c-f984-b6df",
-      "$text": "The bearer’s unit gains Ambush (Terrain Feature with a friendly Tunnel Marker)."
+      "$text": "The bearer’s unit gains <b>Ambush (Terrain Feature with a friendly Tunnel Marker)</b>."
      }
     ]
    },
@@ -21921,7 +22743,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Bodyguard (General), and the Blackfur Veteran model part gains Great Weapon, and loses Halberd."
+      "$text": "The model gains <b>Bodyguard (General)</b>, and the Blackfur Veteran model part gains Great Weapon, and loses Halberd."
      }
     ]
    },
@@ -21935,7 +22757,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "Paired Weapons. Poison Attacks."
+      "$text": "Paired Weapons. <b>Poison Attacks</b>."
      }
     ]
    },
@@ -21949,9 +22771,10 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model may use Shooting Attacks towards enemy units Engaged in Combat, with the following rules and restrictions: • Friendly units Engaged in this Combat are ignored for Cover purposes (but not for drawing Line of Sight). • Roll to-hit as normal against the intended target. Immediately after determining the number of hits, roll a D6 for each hit. On a roll of 4+, the hit is distributed onto a randomly chosen friendly unit Engaged with the original target. Otherwise, proceed as normal."
+      "$text": "The model may use Shooting Attacks towards enemy units Engaged in Combat, with the following rules and restrictions: <br>&nbsp;&nbsp;&bull; Friendly units Engaged in this Combat are ignored for Cover purposes (but not for drawing Line of Sight). <br>&nbsp;&nbsp;&bull; Roll to-hit as normal against the intended target. Immediately after determining the number of hits, roll a D6 for each hit. On a roll of 4+, the hit is distributed onto a randomly chosen friendly unit Engaged with the original target. Otherwise, proceed as normal."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "1d38-3c74-a10e-7cd2",
@@ -22002,9 +22825,10 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Shooting Attacks towards enemy units in contact with one or more models with Cannon Fodder gain +1 to hit."
+      "$text": "Shooting Attacks towards enemy units in contact with one or more models with <b>Cannon Fodder</b> gain +1 to hit."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "fa76-3037-045a-8208",
@@ -22016,9 +22840,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "While the unit has a Standard Bearer and the General is on the Battlefield, it: • Gains Fight in Extra Rank. • May reroll a failed Command Test. If it chooses to do this, and still fails the test, the unit loses Standard Bearer, and you must remove one Rank-and-File model from the unit as a casualty (no saves allowed)."
+      "$text": "While the unit has a Standard Bearer and the General is on the Battlefield, it: <br>&nbsp;&nbsp;&bull; Gains <b>Fight in Extra Rank</b>. <br>&nbsp;&nbsp;&bull; <b>May</b> reroll a failed Command Test. If it chooses to do this, and still fails the test, the unit loses <b>Standard Bearer</b>, and you must remove one Rank-and-File model from the unit as a casualty (no saves allowed)."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "c2a0-9339-8538-4654",
@@ -22030,7 +22855,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "At the start of any friendly Magic Phase, the bearer may choose to inflict 3 HP losses on its unit. If so, the bearer gains Channel (2) Duration: One Phase."
+      "$text": "At the start of any friendly Magic Phase, the bearer <b>may</b> choose to inflict 3 HP losses on its unit.<br> If so, the bearer gains <b>Channel (2)</b> Duration: One Phase."
      }
     ]
    },
@@ -22044,7 +22869,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Whenever a natural ‘1’ is rolled to hit for a Close Combat Attack allocated towards a model with Cult of Errahman, the model inflicts 1 hit with Toxic Attacks against the attacking model in the same Initiative Step."
+      "$text": "Whenever a natural ‘1’ is rolled to hit for a Close Combat Attack allocated towards a model with <b>Cult of Errahman</b>, the model inflicts 1 hit with <b>Toxic Attacks</b> against the attacking model in the same Initiative Step."
      }
     ]
    },
@@ -22060,7 +22885,8 @@
       "typeId": "5e36-ea13-a37c-73d0",
       "$text": "The model selects one spell less than normal."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "02eb-c475-653f-1664",
@@ -22072,7 +22898,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "At the end of any friendly Movement Phase after the first, the bearer may remove all friendly Tunnel Markers placed on a single Terrain Feature within 24\" of the bearer. If so, one Unengaged unit in contact with that Terrain Feature suffers 2D6 hits with Str 4, AP 1, and Unmodifiable."
+      "$text": "At the end of any friendly Movement Phase after the first, the bearer <b>may</b> remove all friendly Tunnel Markers placed on a single Terrain Feature within 24\" of the bearer. If so, one Unengaged unit in contact with that Terrain Feature suffers 2D6 hits with Str 4, AP 1, and <b>Unmodifiable</b>."
      }
     ]
    },
@@ -22100,7 +22926,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "When shooting at an enemy unit Engaged in Combat (using the Callous rule), hits are distributed onto a randomly chosen friendly unit Engaged with the original target on a roll of 5+ instead of 4+."
+      "$text": "When shooting at an enemy unit Engaged in Combat <i>(using the <b>Callous</b> rule)</i>, hits are distributed onto a randomly chosen friendly unit Engaged with the original target on a roll of 5+ instead of 4+."
      }
     ]
    },
@@ -22153,9 +22979,31 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A Charging model with this Attribute, or using a weapon with this Attribute, gains the Model Rules and Characteristic modifiers stated in brackets (X). For example, a Charging model part with Devastating Charge (+1 Strength, Poison Attacks) gains +1 Strength and Poison Attacks when it is Charging. This rule is cumulative: a model part with several instances of Devastating Charge applies all Attack Attributes and Characteristics modifiers from all of them when Charging."
+      "$text": "A Charging model with this Attribute, or using a weapon with this Attribute, gains the Model Rules and Characteristic modifiers stated in brackets (X). For example, a Charging model part with <b>Devastating Charge (+1 Strength, <b>Poison Attacks</b>)</b> gains +1 Strength and <b>Poison Attacks</b> when it is Charging. This rule is cumulative: a model part with several instances of <b>Devastating Charge</b> applies all Attack Attributes and Characteristics modifiers from all of them when Charging."
      }
-    ]
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditionGroups": [],
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry",
+        "childId": "b683-ec00-5895-cd4f",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ]
+     }
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "cfd2-2d22-4a40-96eb",
@@ -22167,7 +23015,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "For each Standard Melee Attack allocated against a model with Diseased that rolls a to-hit roll of ‘1’, the attacking model's Health Pool suffers 1 hit with Toxic Attacks at the end of the same Agility Step."
+      "$text": "For each Standard Melee Attack allocated against a model with Diseased that rolls a to-hit roll of ‘1’, the attacking model's Health Pool suffers 1 hit with <b>Toxic Attacks</b> at the end of the same Agility Step."
      }
     ]
    },
@@ -22181,9 +23029,10 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "One use only. Start of Vanguard Units (Battle Setup, 3.F), a unit containing Drill Down! may choose to be removed from the Battlefield. If so, the unit gains Ambush (Terrain Feature with a friendly Tunnel Marker). ."
+      "$text": "One use only. <br>Start of Vanguard Units <i>(Battle Setup, 3.F)</i>, a unit containing Drill Down! <b>may</b> choose to be removed from the Battlefield. If so, the unit gains <b>Ambush (Terrain Feature with a friendly Tunnel Marker)</b>.<br>."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "74b7-eea1-899f-ffec",
@@ -22195,7 +23044,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model replaces Wizard Apprentice with Wizard Adept, and can choose Witchcraft,Thaumaturgy instead of Occultism. The model cannot take Paired Weapons, Halberd, Great Weapon."
+      "$text": "The model replaces <b>Wizard Apprentice</b> with <b>Wizard Adept</b>, and can choose Witchcraft,Thaumaturgy instead of <i>Occultism</i>. <br>The model cannot take Paired Weapons, Halberd, Great Weapon."
      }
     ]
    },
@@ -22209,9 +23058,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with Extra Support replaces the limit on the maximum number of attacks the model can do as Restricted Attack with the value in brackets (X) or, if it includes a +, increases that limit with +X."
+      "$text": "A model part with <b>Extra Support</b> replaces the limit on the maximum number of attacks the model can do as Restricted Attack with the value in brackets (X) or, if it includes a +, increases that limit with +X."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "984e-8e18-32cf-a4c1",
@@ -22223,7 +23073,7 @@
      {
       "name": "Potions and Scrolls",
       "typeId": "787f-4507-5a22-ddb0",
-      "$text": "One use only. Duration: One Phase. When casting a Hex spell, after seeing the result of the roll, the bearer can choose to gain Maniacal Enthusiasm (Casting Roll)."
+      "$text": "One use only. Duration: One Phase.<br>When casting a Hex spell, after seeing the result of the roll, the bearer can choose to gain <b>Maniacal Enthusiasm (Casting Roll)</b>."
      }
     ]
    },
@@ -22237,7 +23087,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The Charge Range rolls of units entirely with Mutant within 12\" one or more Fetthis Fleshmaster gains Maximised."
+      "$text": "The Charge Range rolls of units entirely with Mutant within 12\" one or more Fetthis Fleshmaster gains <b>Maximised</b>."
      }
     ]
    },
@@ -22267,7 +23117,8 @@
       "typeId": "5e36-ea13-a37c-73d0",
       "$text": "Immediately before the model is removed as a casualty as a result of an enemy Melee Attack, it inflicts 1 hit with Str 3, AP 0, Flaming Attacks, Unmodifiable towards the Health Pool of the model that caused the wound."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "a52c-e4d9-6424-1cb5",
@@ -22279,7 +23130,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model's Armour is set to 4, it gains Magic Resistance (2) and Metal Armour."
+      "$text": "The model's Armour is <b>set</b> to 4, it gains <b>Magic Resistance (2)</b> and Metal Armour."
      }
     ]
    },
@@ -22295,7 +23146,8 @@
       "typeId": "5e36-ea13-a37c-73d0",
       "$text": "The model part gains +1 Str when using a Hand Weapon."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "74e3-54cc-8f2a-5580",
@@ -22307,9 +23159,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with Grind Attack resolves these attacks at the same Initiative Step as its Close Combat Attacks. It must choose an enemy model in base contact with it. The chosen enemy model suffers a number of hits equal to the value stated in brackets (X). These hits are resolved with the model part’s Strength and Armour Penetration, unless otherwise specified. If a model has both Grind Attack and Impact Hits, it may only use one of these rules in the same Round of Combat (the owner may choose which)."
+      "$text": "A model part with <b>Grind Attack</b> resolves these attacks at the same Initiative Step as its Close Combat Attacks. It must choose an enemy model in base contact with it. The chosen enemy model suffers a number of hits equal to the value stated in brackets (X). These hits are resolved with the model part’s Strength and Armour Penetration, unless otherwise specified.<br> If a model has both <b>Grind Attack</b> and <b>Impact Hits</b>, it may only use one of these rules in the same Round of Combat (the owner may choose which)."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "d55d-3370-c951-64c1",
@@ -22321,9 +23174,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "During the first Round of Combat, failed to-hit rolls from attacks with Hatred must be rerolled."
+      "$text": "During the first Round of Combat, failed to-hit rolls from attacks with <b>Hatred</b> must be rerolled."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "2df4-4354-4b01-d507",
@@ -22362,9 +23216,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "At Initiative Step 10, a Charging model part with Impact Hits must choose an enemy model in base contact. This model suffers a number of hits equal to the value stated in brackets (X). These hits are resolved with the attacking model part’s Strength and Armour Penetration, unless otherwise specified. If a model has both Grind Attack and Impact Hits, it may only use one of these rules in the same Round of Combat (the owner may choose which)."
+      "$text": "At Initiative Step 10, a Charging model part with <b>Impact Hits</b> must choose an enemy model in base contact. This model suffers a number of hits equal to the value stated in brackets (X). These hits are resolved with the attacking model part’s Strength and Armour Penetration, unless otherwise specified.<br> If a model has both <b>Grind Attack</b> and <b>Impact Hits</b>, it may only use one of these rules in the same Round of Combat (the owner may choose which)."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "2ab4-f6d5-6f1d-7ef8",
@@ -22376,9 +23231,10 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Other friendly units within range of the model’s Commanding Presence benefit from Fearless. In the Melee Phase they also benefit from Unstable."
+      "$text": "Other friendly units within range of the model’s <b>Commanding Presence</b> benefit from <b>Fearless</b>. In the Melee Phase they also benefit from <b>Unstable</b>."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "1075-c6c7-cfd8-b28c",
@@ -22443,9 +23299,10 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "When calculating Combat Score, ignore the first two Health Point losses of Health Pools with Life is Cheap in each Round of Combat. Note: the number of ignored Health Point losses is not affected by the amount of Health Pools. Units containing Life is Cheap that are both Steady and Solid get +2 Discipline when taking Break Tests."
+      "$text": "When calculating Combat Score, ignore the first two Health Point losses of Health Pools with Life is Cheap in each Round of Combat. <br> <i>Note: the number of ignored Health Point losses is not affected by the amount of Health Pools</i>. <br> Units containing <b>Life is Cheap</b> that are both <b>Steady</b> and <b>Solid</b> get +2 Discipline when taking Break Tests."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "b5b0-cf35-e5ba-5e64",
@@ -22457,7 +23314,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The Ruinous Dictator’s model part’s Standard Melee Attacks gains Multiple Wounds (D3)."
+      "$text": "The Ruinous Dictator’s model part’s Standard Melee Attacks gains <b>Multiple Wounds (D3)</b>."
      }
     ]
    },
@@ -22471,9 +23328,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "When models in a unit make a dice roll of the type defined in brackets (X), after seeing the result(s) of all simultaneous rolls for X, and rolling eventual re-rolls, it may add 2 to X for all simultaneous rolls with this attribute. If this modifier is used, immediately roll a D6 and consult the table below: • 1--2 Oops: Change the target of all simultaneous Attacks or a spell with Maniacal Enthusiasm to a friendly unit within range chosen by the controlling player (the model’s own unit is always an eligible target). • 3--4 Room for Improvement: After fully resolving the simultaneous attacks or a spell that triggered the roll on this table, the model’s unit suffers 3 hits with Str 4, AP 10 and Unmodifiable. • 5--6 Glorious Success!: No additional effect."
+      "$text": "When models in a unit make a dice roll of the type defined in brackets (X), after seeing the result(s) of all simultaneous rolls for X, and rolling eventual re-rolls, it may add 2 to X for all simultaneous rolls with this attribute.<br> If this modifier is used, immediately roll a D6 and consult the table below: <br>&nbsp;&nbsp;&bull; <b>1--2 Oops:</b> Change the target of all simultaneous Attacks or a spell with <b>Maniacal Enthusiasm</b> to a friendly unit within range chosen by the controlling player <i>(the model’s own unit is always an eligible target)</i>. <br>&nbsp;&nbsp;&bull; <b>3--4 Room for Improvement:</b> After fully resolving the simultaneous attacks or a spell that triggered the roll on this table, the model’s unit suffers 3 hits with Str 4, AP 10 and <b>Unmodifiable</b>. <br>&nbsp;&nbsp;&bull; <b>5--6 Glorious Success!:</b> No additional effect."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "33d8-cfa3-4705-1cff",
@@ -22485,9 +23343,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "Health Point losses caused by the attack are multiplied into the value given in brackets (X). If the value is a dice, roll one dice for each unsaved wound from an attack with Multiple Wounds. The number of Health Point losses that the attack is multiplied into can never be higher than the Health Points Characteristic of the target (excluding Health Points lost previously in the battle). For example, if an attack with Multiple Wounds (D6) wounds a unit of Trolls (HP 3) and rolls a ‘5’ for the multiplier, the number of Health Points lost is reduced to 3, even if the Troll unit has already lost one or two Health Points previously in battle."
+      "$text": "Health Point losses caused by the attack are multiplied into the value given in brackets (X). If the value is a dice, roll one dice for each unsaved wound from an attack with <b>Multiple Wounds</b>. <br> The number of Health Point losses that the attack is multiplied into can never be higher than the Health Points Characteristic of the target (excluding Health Points lost previously in the battle).<br> <i>For example, if an attack with <b>Multiple Wounds (D6)</b> wounds a unit of Trolls (HP 3) and rolls a ‘5’ for the multiplier, the number of Health Points lost is reduced to 3, even if the Troll unit has already lost one or two Health Points previously in battle.</i>"
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "9b83-b8f2-d370-b8c6",
@@ -22499,7 +23358,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The bearer gains Stand Behind."
+      "$text": "The bearer gains <b>Stand Behind</b>."
      }
     ]
    },
@@ -22513,7 +23372,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Diseased, Exclusive (Plague Cultists). The model’s unit gains Poison Attacks. The Chassis model part’s Agility is set to 4 and it gains Grind Attack (D3+1), Devastating Charge (+10 Agi)."
+      "$text": "The model gains Diseased, Exclusive (Plague Cultists). <br>The model’s unit gains <b>Poison Attacks</b>. <br>The Chassis model part’s Agility is <b>set</b> to 4 and it gains Grind Attack (D3+1), Devastating Charge (+10 Agi)."
      }
     ]
    },
@@ -22527,9 +23386,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "Quick to Fire, Slow Reload. May be counted as Close Combat Weapon for the purpose of how many weapons a model can carry. A model equipped with two or more Pistols can choose to fire either one or two in the Shooting Phase. If two or more shots are fired in total, the -1 to-hit modifier is applied to all shots. In Close Combat, a Pistol can be used as a Dagger. In addition, any Close Combat Attack made with the Pistol can be made with the Strength and Armour Penetration of the Pistol (instead of the user). Announce if this is used when attacks are allocated. Roll to hit as any other Close Combat Attack. Each attack made in this way counts as firing a shot for the purpose of Slow Reload. (Remember that Slow Reload shots cannot be reloaded while Engaged in Combat.)"
+      "$text": "<b>Quick to Fire</b>, <b>Slow Reload</b>. May be counted as Close Combat Weapon for the purpose of how many weapons a model can carry. <br> A model equipped with two or more Pistols can choose to fire either one or two in the Shooting Phase. If two or more shots are fired in total, the −1 to-hit modifier is applied to all shots.<br> In Close Combat, a Pistol can be used as a Dagger. In addition, any Close Combat Attack made with the Pistol can be made with the Strength and Armour Penetration of the Pistol (instead of the user). Announce if this is used when attacks are allocated. Roll to hit as any other Close Combat Attack. Each attack made in this way counts as firing a shot for the purpose of <b>Slow Reload</b>. (Remember that <b>Slow Reload</b> shots cannot be reloaded while Engaged in Combat.)"
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "6d7c-de68-95c5-0f1a",
@@ -22541,7 +23401,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The unit replaces its Bloodpox Blades with Plague Flail."
+      "$text": "The unit replaces its <b>Bloodpox Blades</b> with <b>Plague Flail</b>."
      }
     ]
    },
@@ -22618,7 +23478,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model may take (and pay the price for) one item from Artefacts or Potions and Scrolls, worth up to 50 pts, that is normally available to Vermin Swarm Characters."
+      "$text": "The model may take <i>(and pay the price for)</i> one item from Artefacts or Potions and Scrolls, worth up to 50 pts, that is normally available to Vermin Swarm Characters."
      }
     ]
    },
@@ -22632,7 +23492,7 @@
      {
       "name": "Potions and Scrolls",
       "typeId": "787f-4507-5a22-ddb0",
-      "$text": "One use only. Duration: One Phase. During any friendly Magic Phase, the bearer can choose to lose Attached (if they had it) and perform a  Magical Move (6 Mar). It must end this move by joining another friendly unit (following the normal rules for joining units)."
+      "$text": "One use only. Duration: One Phase.<br>During any friendly Magic Phase, the bearer can choose to lose <b>Attached</b> (if they had it) and perform a <b>Magical Move (6 Mar)</b>. <br>It must end this move by joining another friendly unit <i>(following the normal rules for joining units)</i>."
      }
     ]
    },
@@ -22660,7 +23520,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Engineer."
+      "$text": "The model gains <b>Engineer</b>."
      }
     ]
    },
@@ -22674,7 +23534,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "Range 18\", Shots 3, AP 3, Accurate."
+      "$text": "Range 18\", Shots 3, AP 3, <b>Accurate</b>."
      }
     ]
    },
@@ -22727,7 +23587,7 @@
      {
       "name": "Banner Enchant",
       "typeId": "230e-af1c-f984-b6df",
-      "$text": "The bearer and Rank-and-File models in the bearer’s unit gain Fury. In addition, for each to-hit roll of ‘1’ with a Melee Attack made by the bearer or a Rank-and-File model in its unit, the bearer’s unit suffers 1 hit with Str 3, AP 0 and Unmodifiable at the end of the Agility Step in which this effect is triggered."
+      "$text": "The bearer and Rank-and-File models in the bearer’s unit gain <b>Fury</b>. <br>In addition, for each to-hit roll of ‘1’ with a Melee Attack made by the bearer or a Rank-and-File model in its unit, the bearer’s unit suffers 1 hit with Str 3, AP 0 and <b>Unmodifiable</b> at the end of the Agility Step in which this effect is triggered."
      }
     ]
    },
@@ -22741,7 +23601,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "The bearer’s unit gains Fearless. If the Leader is removed as a casualty, the bearer becomes the Leader. If the slain Leader was a Ruinous Dictator, the bearer also sets their Discipline to 9. Duration: Permanent."
+      "$text": "The bearer’s unit gains <b>Fearless</b>. <br>If the Leader is removed as a casualty, the bearer becomes the Leader. <br>If the slain Leader was a Ruinous Dictator, the bearer also <b>sets</b> their Discipline to <b>9</b>. Duration: Permanent."
      }
     ]
    },
@@ -22755,7 +23615,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "+1 Att, +2 AP. Maniacal Enthusiasm (To-wound roll),Multiple Wounds (D3). Rolls this model makes on the Maniacal Enthusiasm chart gain a +2 modifier."
+      "$text": "+1 Att, +2 AP. Maniacal Enthusiasm (To-wound roll),Multiple Wounds (D3). <br>Rolls this model makes on the <b>Maniacal Enthusiasm</b> chart gain a +2 modifier."
      }
     ],
     "modifiers": [
@@ -22826,7 +23686,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Shooting Attacks from the model with a Pistol gain Flaming Attacks. In addition, Height 1 Rank-and-File models in the bearer’s unit benefits from First Strike (Zeal, Flaming Attacks)."
+      "$text": "Shooting Attacks from the model with a Pistol gain <b>Flaming Attacks</b>. <br>In addition, Height 1 Rank-and-File models in the bearer’s unit benefits from <br><b>First Strike (Zeal, Flaming Attacks)</b>."
      }
     ]
    },
@@ -22868,9 +23728,10 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with Stomp Attack can make a Special Attack which is resolved at Agility Step 0, can only be allocated towards a Health Pool of Height 0–1, and inflicts X hits, using the model part’s Strength, Armour Penetration and Attack Attributes, but not Weapons. If more than one model part of a combined model has Stomp Attack, only a single model part (chosen by the model’s owner) can perform its Stomp Attack in each Round of Combat."
+      "$text": "A model part with <b>Stomp Attack</b> can make a Special Attack which is resolved at Agility Step 0, can only be allocated towards a Health Pool of Height 0–1, and inflicts X hits, using the model part’s Strength, Armour Penetration and Attack Attributes, but not Weapons. If more than one model part of a combined model has <b>Stomp Attack</b>, only a single model part <i>(chosen by the model’s owner)</i> can perform its <b>Stomp Attack</b> in each Round of Combat."
      }
-    ]
+    ],
+    "attribute": "offensive"
    },
    {
     "id": "c27f-79eb-0280-545a",
@@ -22882,7 +23743,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "Aim 3+, Range 24\", Str 5, AP 2, Flaming Attacks, Maniacal Enthusiasm (To-Hit Roll). If the weapon hits, it causes D6 hits instead of 1."
+      "$text": "Aim 3+, Range 24\", Str 5, AP 2, Flaming Attacks, Maniacal Enthusiasm (To-Hit Roll).<br>If the weapon hits, it causes D6 hits instead of 1."
      }
     ]
    },
@@ -22896,7 +23757,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Ambush (Terrain Feature with a friendly Tunnel Marker),Tunnel Digger. In addition, each Stygian Overseer on the Army List increases the duplication limit of Legionary Drill Teams by 1."
+      "$text": "Ambush (Terrain Feature with a friendly Tunnel Marker),Tunnel Digger. <br>In addition, each Stygian Overseer on the Army List increases the duplication limit of Legionary Drill Teams by 1."
      }
     ]
    },
@@ -22910,7 +23771,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "While using this weapon, the wielder gains Grind Attack (X, Str 3, AP 1,Unmodifiable), where X is the number of Proper Ranks in the wielder’s unit, up to a maximum of 10."
+      "$text": "While using this weapon, the wielder gains <b>Grind Attack (X, Str 3, AP 1,Unmodifiable)</b>, where X is the number of Proper Ranks in the wielder’s unit, up to a maximum of 10."
      }
     ]
    },
@@ -22924,7 +23785,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "Any Stomp Attack made by enemy units within 8\" of the bearer suffers a -2 to-wound modifier."
+      "$text": "Any <b>Stomp Attack</b> made by enemy units within 8\" of the bearer suffers a −2 to-wound modifier."
      }
     ]
    },
@@ -22938,7 +23799,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "The bearer’s unit gains Unstable."
+      "$text": "The bearer’s unit gains <b>Unstable</b>."
      }
     ]
    },
@@ -22952,9 +23813,10 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains +1 to hit towards targets with Hard Target that are at Long Range."
+      "$text": "The model gains +1 to hit towards targets with <b>Hard Target</b> that are at Long Range."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "83f8-76f7-47ed-785f",
@@ -22966,7 +23828,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Each Vermin Swarm army gains one Tunnel Marker, and an additional Tunnel Marker for each unit on the Army List with Tunnel Digger. During Pre-game Selections, for each of your army’s Tunnel Markers, mark a Terrain Feature with a Tunnel Marker. Only Terrain Features that are not in contact with the opponent’s Deployment Zone can be marked. Note: Impassable Terrain can be chosen."
+      "$text": "Each Vermin Swarm army gains one Tunnel Marker, and an additional Tunnel Marker for each unit on the Army List with <b>Tunnel Digger</b>. <br>During Pre-game Selections, for each of your army’s Tunnel Markers, mark a Terrain Feature with a Tunnel Marker. <br>Only Terrain Features that are not in contact with the opponent’s Deployment Zone can be marked. <i>Note: Impassable Terrain can be chosen.</i>"
      }
     ]
    },
@@ -22994,7 +23856,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Random Movement (3D6\"). It loses the Pitmaster model part, and its base size is changed to 60×100 mm. The Arena Beast model parts Attack Value is set to 4D3."
+      "$text": "The model gains <b>Random Movement (3D6\")</b>.<br> It loses the Pitmaster model part, and its base size is changed to 60×100 mm. <br> The Arena Beast model parts Attack Value is <b>set</b> to 4D3."
      }
     ],
     "modifiers": [
@@ -23131,9 +23993,10 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "If one model in this unit is affected by an Engineer, all Rank-and-File models in this unit are affected by the Engineer."
+      "$text": "If one model in this unit is affected by an <b>Engineer</b>, all Rank-and-File models in this unit are affected by the <b>Engineer</b>."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "c1ea-699d-127d-478a",
@@ -23147,7 +24010,8 @@
       "typeId": "5e36-ea13-a37c-73d0",
       "$text": "Immediately before the model is removed as a casualty, it inflicts D6 hits with Str 4, AP 0, Flaming Attacks, Unmodifiable on all units, other than its own, within 6\" of the model’s unit."
      }
-    ]
+    ],
+    "attribute": "global"
    },
    {
     "id": "d14f-e17b-1052-3e4e",
@@ -23159,7 +24023,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Commanding Presence (6\")."
+      "$text": "The model gains <b>Commanding Presence (6\")</b>."
      }
     ]
    },
@@ -23173,7 +24037,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Musician, Exclusive (Blackfur Veterans, Vermin Legionaries), and the Chassis Model part gains Impact Hits (D3+1) Increase the number of ignored Health Points due to Life is Cheap by two in Combats where at least one friendly unit containing Life is Cheap is within 12\" of the Whispering Bell. Remember that Unit Boundaries are frozen until after taking Break Tests."
+      "$text": "The model gains Musician, Exclusive (Blackfur Veterans, Vermin Legionaries), and the Chassis Model part gains <b>Impact Hits (D3+1)</b> <br>Increase the number of ignored Health Points due to <b>Life is Cheap</b> by two in Combats where at least one friendly unit containing <b>Life is Cheap</b> is within 12\" of the Whispering Bell. <br> <i>Remember that Unit Boundaries are frozen until after taking Break Tests.</i>"
      }
     ]
    }
