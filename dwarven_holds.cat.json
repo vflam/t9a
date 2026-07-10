@@ -52,6 +52,46 @@
     "hidden": false
    },
    {
+    "id": "ef2d-690a-fed9-3331",
+    "name": "Mount",
+    "comment": "mount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "c28c-6ae7-ad6d-979a",
+    "name": "runeOfIron",
+    "comment": "runeOfIron",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "69a1-cfcc-1c12-1967",
+    "name": "Runic Smith",
+    "comment": "runic_smith",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "44f4-da26-f460-cce9",
+    "name": "War Throne",
+    "comment": "warThrone_mount_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "b663-a1af-a5d1-cbdf",
+    "name": "Core Unit",
+    "comment": "core_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "b3b0-3b06-2bdf-c1d3",
     "name": "General",
     "comment": "general",
@@ -2218,7 +2258,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "38bf-2c38-2d72-f291",
+            "scope": "root-entry-self",
             "childId": "b3b0-3b06-2bdf-c1d3",
             "shared": true,
             "includeChildSelections": true,
@@ -3177,7 +3217,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "c395-bd02-b967-d08f",
+            "scope": "root-entry-self",
             "childId": "7506-9313-2f51-149d",
             "shared": true,
             "includeChildSelections": true,
@@ -3595,7 +3635,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "c395-bd02-b967-d08f",
+            "scope": "root-entry-self",
             "childId": "16a4-69ea-cf03-f18a",
             "shared": true,
             "includeChildSelections": true,
@@ -3724,7 +3764,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "c395-bd02-b967-d08f",
+            "scope": "root-entry-self",
             "childId": "b3b0-3b06-2bdf-c1d3",
             "shared": true,
             "includeChildSelections": true,
@@ -4342,6 +4382,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "d743-d597-d817-b981",
+      "name": "Runic Smith",
+      "hidden": true,
+      "targetId": "69a1-cfcc-1c12-1967",
+      "primary": false
+     },
+     {
       "id": "5273-5af5-3773-b211",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -4899,7 +4946,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8e68-f8b5-32c8-ec98",
+            "scope": "root-entry-self",
             "childId": "b3b0-3b06-2bdf-c1d3",
             "shared": true,
             "includeChildSelections": true,
@@ -4975,8 +5022,74 @@
           "id": "3ad5-0fb7-0e77-a934",
           "name": "Spells",
           "hidden": false,
-          "constraints": [],
-          "modifiers": [],
+          "constraints": [
+           {
+            "id": "7674-7a0c-f915-a1da",
+            "field": "selections",
+            "scope": "parent",
+            "value": 0,
+            "type": "min",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           },
+           {
+            "id": "64cd-c1f4-ac45-88ef",
+            "field": "selections",
+            "scope": "parent",
+            "value": 0,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [
+           {
+            "type": "increment",
+            "field": "64cd-c1f4-ac45-88ef",
+            "value": 1,
+            "conditions": [],
+            "conditionGroups": [],
+            "repeats": [
+             {
+              "field": "selections",
+              "scope": "root-entry",
+              "value": 1,
+              "percentValue": false,
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "childId": "fc4e-ea1d-8e5d-a3c6",
+              "repeats": 1,
+              "roundUp": false
+             }
+            ]
+           },
+           {
+            "type": "increment",
+            "field": "7674-7a0c-f915-a1da",
+            "value": 1,
+            "conditions": [],
+            "conditionGroups": [],
+            "repeats": [
+             {
+              "field": "selections",
+              "scope": "root-entry",
+              "value": 1,
+              "percentValue": false,
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "childId": "fc4e-ea1d-8e5d-a3c6",
+              "repeats": 1,
+              "roundUp": false
+             }
+            ]
+           }
+          ],
           "selectionEntries": [
            {
             "id": "7b53-ae1a-7ba0-49df",
@@ -6144,7 +6257,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "9e1a-8866-494e-3753",
+            "scope": "root-entry-self",
             "childId": "b3b0-3b06-2bdf-c1d3",
             "shared": true,
             "includeChildSelections": true,
@@ -7205,6 +7318,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "f507-c6d8-8901-7c17",
+      "name": "Clan Warriors",
+      "hidden": true,
+      "targetId": "b663-a1af-a5d1-cbdf",
+      "primary": false
+     },
+     {
       "id": "3fd6-f25c-0fe0-d6a4",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -7957,6 +8077,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "47c8-b8fb-db74-6b1f",
+      "name": "Greybeards",
+      "hidden": true,
+      "targetId": "b663-a1af-a5d1-cbdf",
+      "primary": false
+     },
+     {
       "id": "7380-74be-71d5-a204",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -8636,6 +8763,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "1d50-fe8a-657a-e262",
+      "name": "Clan Marksmen",
+      "hidden": true,
+      "targetId": "b663-a1af-a5d1-cbdf",
+      "primary": false
+     },
      {
       "id": "d1fe-98c2-d0fe-deb6",
       "name": "clans_thunder",
@@ -13073,7 +13207,7 @@
               "type": "atLeast",
               "value": 16,
               "field": "selections",
-              "scope": "f0af-71d1-9b1d-5f23",
+              "scope": "root-entry-self",
               "childId": "0770-547f-de78-3dc7",
               "shared": true,
               "includeChildSelections": true,
@@ -15566,6 +15700,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "7696-b598-8aa4-21e7",
+      "name": "Shield Bearers",
+      "hidden": true,
+      "targetId": "ef2d-690a-fed9-3331",
+      "primary": false
+     },
+     {
       "id": "59a3-b882-b283-7551",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -15794,6 +15935,20 @@
     "type": "mount",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "04ef-7b3e-37af-5f9c",
+      "name": "War Throne",
+      "hidden": true,
+      "targetId": "ef2d-690a-fed9-3331",
+      "primary": false
+     },
+     {
+      "id": "da7b-bcee-f60d-0076",
+      "name": "War Throne",
+      "hidden": true,
+      "targetId": "44f4-da26-f460-cce9",
+      "primary": false
+     },
      {
       "id": "6d58-6ca5-edfa-b5a4",
       "name": "⟨Hgt:3⟩",
@@ -16466,6 +16621,25 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "ef2d-690a-fed9-3331",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -17115,7 +17289,27 @@
       "percentValue": false
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 3,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c28c-6ae7-ad6d-979a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17287,6 +17481,25 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "69a1-cfcc-1c12-1967",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -17363,6 +17576,25 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "69a1-cfcc-1c12-1967",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -17557,6 +17789,25 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "69a1-cfcc-1c12-1967",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -17878,7 +18129,27 @@
       "percentValue": false
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "44f4-da26-f460-cce9",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17953,6 +18224,25 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "b663-a1af-a5d1-cbdf",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20089,7 +20379,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Hard Target (1), Light Troops, Skirmisher, Vanguard."
+      "$text": "The model gains <b>Hard Target (1)</b>, <b>Light Troops</b>, <b>Skirmisher</b>, and <b>Vanguard</b>."
      }
     ],
     "attributes": [
@@ -20110,7 +20400,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Hard Target (1), Light Troops,Skirmisher."
+      "$text": "The model gains <b>Hard Target (1)</b>, <b>Light Troops</b>, and <b>Skirmisher</b>."
      }
     ],
     "attributes": [
@@ -20378,7 +20668,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model’s Shooting Attacks become Flaming Attacks, Magical Attacks."
+      "$text": "The model’s Shooting Attacks become <b>Flaming Attacks</b> and <b>Magical Attacks</b>."
      }
     ],
     "attributes": [
@@ -20399,7 +20689,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Range 18\", Shots 2, Str 4, AP 0, Slow Reload,Flaming Attacks."
+      "$text": "Range 18\", Shots 2, Str 4, AP 0, <b>Flaming Attacks</b> and <b>Slow Reload</b>."
      }
     ],
     "attributes": [
@@ -20899,7 +21189,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "<b>Breath Attack (Str 4, AP 1, Flaming Attacks, Magical Attacks)</b>."
+      "$text": "<b>Breath Attack (Str 4, AP 1, Flaming Attacks and Magical Attacks)</b>."
      }
     ],
     "attributes": [
@@ -20941,7 +21231,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The target gains Distracting (1),Hard Target (1).<br><br>No model can be affected by more than one instance of the same Battle Rune simultaneously."
+      "$text": "The target gains <b>Distracting (1)</b> and <b>Hard Target (1)</b>.<br><br>No model can be affected by more than one instance of the same Battle Rune simultaneously."
      }
     ],
     "attributes": [
@@ -21038,7 +21328,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The bearer gains Ambush (Battlefield Edge), Scout, Vanguard."
+      "$text": "The bearer gains <b>Ambush (Battlefield Edge)</b>, <b>Scout</b>, and <b>Vanguard</b>."
      }
     ],
     "attributes": [
@@ -21059,7 +21349,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "<b>Grind Attack (D3, Str 4, AP 1, Lightning Attacks,Magical Attacks, Unmodifiable)</b>. <br>A model with two instances of this Rune increases the number of hits to 2D3. <br> <i>Note that these hits are not affected by the effects of other Runic Weapon Enchantments</i>."
+      "$text": "<b>Grind Attack (D3, Str 4, AP 1, Lightning Attacks, Magical Attacks, and Unmodifiable)</b>. <br>A model with two instances of this Rune increases the number of hits to 2D3. <br> <i>Note that these hits are not affected by the effects of other Runic Weapon Enchantments</i>."
      }
     ],
     "attributes": [
@@ -21849,7 +22139,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Sweeping Attack (2D6, Str 3, AP 1)."
+      "$text": "The model gains <b>AP 1)</b>, <b>Str 3</b>, and <b>Sweeping Attack (2D6</b>."
      }
     ],
     "attributes": [
@@ -21870,7 +22160,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "One use only. Duration: One Phase.<br> Can be activated in the Movement Phase: when activated, the model gains Sweeping Attack (D3, Str 3, AP 1)."
+      "$text": "One use only. Duration: One Phase.<br> Can be activated in the Movement Phase: when activated, the model gains <b>AP 1)</b>, <b>Str 3</b>, and <b>Sweeping Attack (D3</b>."
      }
     ],
     "attributes": [
@@ -21891,7 +22181,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "When equipped with a Whirling Chain of Doom, the model gains Distracting,Hard Target (1)."
+      "$text": "When equipped with a Whirling Chain of Doom, the model gains <b>Distracting</b> and <b>Hard Target (1)</b>."
      }
     ],
     "attributes": [
@@ -21979,7 +22269,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Range 24\", Shots 1, Str 6, AP 3, Flaming Attacks,Mighty Attacks (D3). Can only be used once per game."
+      "$text": "Range 24\", Shots 1, Str 6, AP 3, <b>Flaming Attacks</b> and <b>Mighty Attacks (D3)</b>. Can only be used once per game."
      }
     ],
     "attributes": [

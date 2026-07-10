@@ -57,6 +57,103 @@
     "hidden": false
    },
    {
+    "id": "36be-c347-327d-29df",
+    "name": "Mount",
+    "comment": "mount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "a57c-5af6-7606-1e8c",
+    "name": "General",
+    "comment": "army_general",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "c941-0b97-d8f1-4918",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "c941-0b97-d8f1-4918",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "fef4-f609-2625-8b48",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "c941-0b97-d8f1-4918",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "de0d-816e-ced2-0287",
+    "name": "Mammoth Hunter",
+    "comment": "mammoth_hunter",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "6562-c413-54da-bf3b",
+    "name": "Shaman",
+    "comment": "shaman",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "7ab0-17fe-e7f0-7b1c",
+    "name": "Core Unit",
+    "comment": "core_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "f242-ddeb-eae4-55e9",
+    "name": "Weapon Enchant",
+    "comment": "weaponEnchantUni",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "0c2e-1443-2346-586b",
     "name": "Wildheart",
     "comment": "ok_bn_wildheart",
@@ -148,63 +245,6 @@
     "hidden": true,
     "constraints": [],
     "modifiers": []
-   },
-   {
-    "id": "a57c-5af6-7606-1e8c",
-    "name": "General",
-    "comment": "army_general",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "c941-0b97-d8f1-4918",
-      "field": "selections",
-      "scope": "roster",
-      "value": -1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "c941-0b97-d8f1-4918",
-      "value": 1,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "roster",
-        "childId": "fef4-f609-2625-8b48",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": true,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "c941-0b97-d8f1-4918",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "fef4-f609-2625-8b48",
@@ -307,14 +347,6 @@
     "id": "0e46-043e-40d2-7c4c",
     "name": "Rock Aurochs",
     "comment": "rockAurochs",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "36be-c347-327d-29df",
-    "name": "Mount",
-    "comment": "mount",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -2491,7 +2523,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "c074-ae66-3f20-8ce6",
+              "scope": "root-entry-self",
               "childId": "0e8b-e2a2-0ab4-9aee",
               "shared": true,
               "includeChildSelections": true,
@@ -2578,7 +2610,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "c074-ae66-3f20-8ce6",
+              "scope": "root-entry-self",
               "childId": "0e8b-e2a2-0ab4-9aee",
               "shared": true,
               "includeChildSelections": true,
@@ -2665,7 +2697,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "c074-ae66-3f20-8ce6",
+              "scope": "root-entry-self",
               "childId": "0e8b-e2a2-0ab4-9aee",
               "shared": true,
               "includeChildSelections": true,
@@ -2954,7 +2986,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "c074-ae66-3f20-8ce6",
+            "scope": "root-entry-self",
             "childId": "0e8b-e2a2-0ab4-9aee",
             "shared": true,
             "includeChildSelections": true,
@@ -3633,7 +3665,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "3c77-9d54-f997-8cee",
+              "scope": "root-entry-self",
               "childId": "0e8b-e2a2-0ab4-9aee",
               "shared": true,
               "includeChildSelections": true,
@@ -3720,7 +3752,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "3c77-9d54-f997-8cee",
+              "scope": "root-entry-self",
               "childId": "0e8b-e2a2-0ab4-9aee",
               "shared": true,
               "includeChildSelections": true,
@@ -3807,7 +3839,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "3c77-9d54-f997-8cee",
+              "scope": "root-entry-self",
               "childId": "0e8b-e2a2-0ab4-9aee",
               "shared": true,
               "includeChildSelections": true,
@@ -4073,7 +4105,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "3c77-9d54-f997-8cee",
+            "scope": "root-entry-self",
             "childId": "f59b-71d8-e50e-8c89",
             "shared": true,
             "includeChildSelections": true,
@@ -4239,6 +4271,13 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "346e-3047-69ca-e494",
+      "name": "Shaman",
+      "hidden": true,
+      "targetId": "6562-c413-54da-bf3b",
+      "primary": false
+     },
      {
       "id": "5ecb-2d3d-231e-8ba4",
       "name": "⟨Hgt:3⟩",
@@ -4702,7 +4741,7 @@
           "type": "atLeast",
           "value": 1,
           "field": "selections",
-          "scope": "c31c-a03e-f00c-ab04",
+          "scope": "root-entry-self",
           "childId": "de94-93d6-4980-f579",
           "shared": true,
           "includeChildSelections": true,
@@ -4751,7 +4790,6 @@
           "name": "Shamanism Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "9b1c-b671-7d51-95d1",
           "constraints": [
            {
             "id": "1a68-f2de-c34c-570b",
@@ -4892,6 +4930,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "9b1c-b671-7d51-95d1",
           "sortIndex": 1,
           "collective": true
          }
@@ -4936,7 +4975,6 @@
           "name": "Thaumaturgy Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "7e31-0369-2f85-26e8",
           "constraints": [
            {
             "id": "bc66-e449-8357-90d8",
@@ -5077,6 +5115,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "7e31-0369-2f85-26e8",
           "sortIndex": 1,
           "collective": true
          }
@@ -5121,7 +5160,6 @@
           "name": "Pyromancy Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "9688-fc01-ddfc-08cf",
           "constraints": [
            {
             "id": "ac53-c2d8-36b1-ec1a",
@@ -5262,6 +5300,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "9688-fc01-ddfc-08cf",
           "sortIndex": 1,
           "collective": true
          }
@@ -5676,6 +5715,13 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "e61f-12d6-3365-337f",
+      "name": "Mammoth Hunter",
+      "hidden": true,
+      "targetId": "de0d-816e-ced2-0287",
+      "primary": false
+     },
      {
       "id": "8ff6-fea3-a207-eaf6",
       "name": "⟨Hgt:3⟩",
@@ -6379,7 +6425,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "0dde-73c4-0f48-ddcf",
+              "scope": "root-entry-self",
               "childId": "36be-c347-327d-29df",
               "shared": true,
               "includeChildSelections": true,
@@ -6833,7 +6879,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "0dde-73c4-0f48-ddcf",
+            "scope": "root-entry-self",
             "childId": "f59b-71d8-e50e-8c89",
             "shared": true,
             "includeChildSelections": true,
@@ -7104,7 +7150,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "0dde-73c4-0f48-ddcf",
+        "scope": "root-entry-self",
         "childId": "0e46-043e-40d2-7c4c",
         "shared": true,
         "includeChildSelections": true,
@@ -7813,6 +7859,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "aee5-feea-6039-a058",
+      "name": "Tribesmen",
+      "hidden": true,
+      "targetId": "7ab0-17fe-e7f0-7b1c",
+      "primary": false
+     },
+     {
       "id": "3367-c3be-c9ca-ed33",
       "name": "⟨Hgt:3⟩",
       "hidden": true,
@@ -8321,6 +8374,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "9c1c-051a-6b78-44e5",
+      "name": "Bruisers",
+      "hidden": true,
+      "targetId": "7ab0-17fe-e7f0-7b1c",
+      "primary": false
+     },
+     {
       "id": "02d6-aa93-a062-a5ca",
       "name": "⟨Hgt:3⟩",
       "hidden": true,
@@ -8719,6 +8779,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "c6cd-5739-9d9c-cd0c",
+      "name": "Scraplings",
+      "hidden": true,
+      "targetId": "7ab0-17fe-e7f0-7b1c",
+      "primary": false
+     },
      {
       "id": "51d4-fd12-0161-d704",
       "name": "⟨Hgt:1⟩",
@@ -17255,7 +17322,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "36be-c347-327d-29df",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17310,7 +17397,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "a57c-5af6-7606-1e8c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17365,7 +17472,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "de0d-816e-ced2-0287",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17420,7 +17547,46 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "de0d-816e-ced2-0287",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6562-c413-54da-bf3b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17530,7 +17696,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6562-c413-54da-bf3b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17661,7 +17847,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6562-c413-54da-bf3b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17771,7 +17977,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "36be-c347-327d-29df",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17826,7 +18052,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "7ab0-17fe-e7f0-7b1c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -17991,7 +18237,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f242-ddeb-eae4-55e9",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -18046,7 +18312,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f242-ddeb-eae4-55e9",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -18057,7 +18343,15 @@
       "targetId": "1339-d997-a915-c405"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "dd94-cb1b-75b1-aae9",
+      "name": "Viper's Curse ",
+      "hidden": true,
+      "targetId": "f242-ddeb-eae4-55e9",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -18101,7 +18395,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f242-ddeb-eae4-55e9",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -18112,7 +18426,15 @@
       "targetId": "8114-bc78-20e4-faed"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "03f0-8709-718a-51a3",
+      "name": "Heart-Ripper",
+      "hidden": true,
+      "targetId": "f242-ddeb-eae4-55e9",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -18156,7 +18478,46 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6562-c413-54da-bf3b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f242-ddeb-eae4-55e9",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -18167,7 +18528,15 @@
       "targetId": "6521-a925-a82c-f9a3"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "02b1-fa3c-34c9-ad89",
+      "name": "Ritual Bloodletter",
+      "hidden": true,
+      "targetId": "f242-ddeb-eae4-55e9",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -18393,7 +18762,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "36be-c347-327d-29df",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -18448,7 +18837,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "36be-c347-327d-29df",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -20681,7 +21090,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "Breath Attack (Str 4, AP 0, Flaming Attacks), Flaming Attacks, Resistance (Flaming Attacks), and automatically fails all Regeneration Saves. <br>The model can cast <i>Dragon’s Roar</i> (Pyromancy) as a Bound Spell (5+)."
+      "$text": "<b>AP 0</b>, <b>Breath Attack (Str 4</b>, <b>Flaming Attacks</b>, <b>Flaming Attacks)</b>, and <b>Resistance (Flaming Attacks)</b>, and automatically fails all Regeneration Saves. <br>The model can cast <i>Dragon’s Roar</i> (Pyromancy) as a Bound Spell (5+)."
      }
     ],
     "attributes": [
@@ -20744,7 +21153,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "Attached, Fearless. <br>The bearer’s unit gains <b>Unstable</b> (the model may join units without <b>Unstable</b> during Deployment despite having <b>Unstable</b>)."
+      "$text": "<b>Attached</b> and <b>Fearless</b>. <br>The bearer’s unit gains <b>Unstable</b> (the model may join units without <b>Unstable</b> during Deployment despite having <b>Unstable</b>)."
      }
     ],
     "attributes": [
@@ -20765,7 +21174,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "Channel (1), Horror."
+      "$text": "<b>Channel (1)</b> and <b>Horror</b>."
      }
     ],
     "attributes": [
@@ -20786,7 +21195,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Range 24\", Shots 1, Str 4, Ap 2, Slow Reload, Quick to Fire.<br> After choosing the target, roll a D6 and choose up to that many additional targets, all within 3\" of the original target or in contact with a line drawn from the centre of the shooter to the centre of the original target. If a natural ‘6’ is rolled, the shooter is also automatically hit by the weapon. Roll to hit for all other targets as normal. The weapon does not suffer the −1 to-hit modifier from firing multiple shots.<br> No model can ever gain Weapon Proficiency for Hand Cannons after being recruited."
+      "$text": "Range 24\", Shots 1, Str 4, Ap 2, <b>Quick to Fire</b> and <b>Slow Reload</b>.<br> After choosing the target, roll a D6 and choose up to that many additional targets, all within 3\" of the original target or in contact with a line drawn from the centre of the shooter to the centre of the original target. If a natural ‘6’ is rolled, the shooter is also automatically hit by the weapon. Roll to hit for all other targets as normal. The weapon does not suffer the −1 to-hit modifier from firing multiple shots.<br> No model can ever gain Weapon Proficiency for Hand Cannons after being recruited."
      }
     ],
     "attributes": [
@@ -20862,7 +21271,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "+1 Arm, <b>Weapon Master</b>, and may not take any Weapon Enchantment. <br>In addition, the bearer gains the following weapons: Great Weapon, Halberd, Paired Weapons, Iron Fist."
+      "$text": "+1 Arm, <b>Weapon Master</b>, and may not take any Weapon Enchantment. <br>In addition, the bearer gains the following weapons: Great Weapon, Halberd, Iron Fist, and Paired Weapons."
      }
     ],
     "modifiers": [
@@ -21293,7 +21702,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "Poison Attacks, Immune (Poison Attacks). <br> Friendly Kin-Eater units <b>may</b> reroll failed <b>Ambush</b> rolls while the bearer is on the Battlefield."
+      "$text": "<b>Immune (Poison Attacks)</b> and <b>Poison Attacks</b>. <br> Friendly Kin-Eater units <b>may</b> reroll failed <b>Ambush</b> rolls while the bearer is on the Battlefield."
      }
     ],
     "attributes": [
@@ -21461,7 +21870,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "Regeneration (5+), Multiple Wounds (2, towards Height 3)."
+      "$text": "<b>Multiple Wounds (2</b>, <b>Regeneration (5+)</b>, and <b>towards Height 3)</b>."
      }
     ],
     "attributes": [
@@ -21482,7 +21891,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "<b>Poison Attacks (Melee & Shooting)</b>. <br> Shots 4, Str 4, AP 2, and <b>always</b> hits on 4+. <br> It cannot benefit from Area Attack, Direct Hit."
+      "$text": "<b>Poison Attacks (Melee & Shooting)</b>. <br> Shots 4, Str 4, AP 2, and <b>always</b> hits on 4+. <br> It cannot benefit from <b>Area Attack</b> or <b>Direct Hit</b>."
      }
     ],
     "attributes": [
@@ -21581,7 +21990,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "Touch of Frost, Strider."
+      "$text": "<b>Strider</b> and <b>Touch of Frost</b>."
      }
     ],
     "attributes": [

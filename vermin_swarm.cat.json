@@ -52,6 +52,95 @@
     "hidden": false
    },
    {
+    "id": "6e46-5daf-f0c0-2d3b",
+    "name": "Mount",
+    "comment": "mount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "82ec-274b-6330-2465",
+    "name": "greater eagle",
+    "comment": "greater_eagle",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "e522-0397-3811-7a0e",
+    "name": "Weapon Enchant",
+    "comment": "weaponEnchantUni",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "6be1-d981-05b5-b7fa",
+    "name": "construct",
+    "comment": "construct",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "0328-0de2-683b-0108",
+    "name": "Battle Standard",
+    "comment": "army_bsb",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "8a39-fc2c-f73a-953b",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "8a39-fc2c-f73a-953b",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "aa71-05a3-c333-16b1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "8a39-fc2c-f73a-953b",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
     "id": "85c5-0e07-870c-00de",
     "name": "General",
     "comment": "army_general",
@@ -256,71 +345,6 @@
     "hidden": true,
     "constraints": [],
     "modifiers": []
-   },
-   {
-    "id": "6e46-5daf-f0c0-2d3b",
-    "name": "Mount",
-    "comment": "mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "0328-0de2-683b-0108",
-    "name": "Battle Standard",
-    "comment": "army_bsb",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "8a39-fc2c-f73a-953b",
-      "field": "selections",
-      "scope": "roster",
-      "value": -1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "8a39-fc2c-f73a-953b",
-      "value": 1,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "roster",
-        "childId": "aa71-05a3-c333-16b1",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": true,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "8a39-fc2c-f73a-953b",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "aa71-05a3-c333-16b1",
@@ -2332,6 +2356,13 @@
       "primary": false
      },
      {
+      "id": "e61b-80af-37a0-63e2",
+      "name": "Wizard Apprentice",
+      "hidden": false,
+      "targetId": "a71d-a1c0-93ae-9ac5",
+      "primary": false
+     },
+     {
       "id": "8c6c-05c9-9f5c-83b5",
       "name": "Ruinous Dictator",
       "hidden": true,
@@ -2743,7 +2774,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "c9d0-c098-4e8e-ba1e",
+              "scope": "root-entry-self",
               "childId": "6466-5a74-9386-d52e",
               "shared": true,
               "includeChildSelections": true,
@@ -2814,7 +2845,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "c9d0-c098-4e8e-ba1e",
+              "scope": "root-entry-self",
               "childId": "6466-5a74-9386-d52e",
               "shared": true,
               "includeChildSelections": true,
@@ -2912,7 +2943,6 @@
             "name": "Occultism Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "b38c-2938-23e7-6ddd",
             "constraints": [
              {
               "id": "ccd1-9eca-a707-a404",
@@ -3053,6 +3083,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "b38c-2938-23e7-6ddd",
             "sortIndex": 1,
             "collective": true
            }
@@ -3095,7 +3126,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "c9d0-c098-4e8e-ba1e",
+              "scope": "root-entry-self",
               "childId": "6466-5a74-9386-d52e",
               "shared": true,
               "includeChildSelections": true,
@@ -3117,7 +3148,6 @@
             "name": "Thaumaturgy Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "7e31-0369-2f85-26e8",
             "constraints": [
              {
               "id": "23d8-864b-7229-5caa",
@@ -3258,6 +3288,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "7e31-0369-2f85-26e8",
             "sortIndex": 1,
             "collective": true
            }
@@ -3300,7 +3331,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "c9d0-c098-4e8e-ba1e",
+              "scope": "root-entry-self",
               "childId": "6466-5a74-9386-d52e",
               "shared": true,
               "includeChildSelections": true,
@@ -3322,7 +3353,6 @@
             "name": "Witchcraft Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "f0af-8fcd-892c-4890",
             "constraints": [
              {
               "id": "e5b9-5556-4ae7-d737",
@@ -3463,6 +3493,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "f0af-8fcd-892c-4890",
             "sortIndex": 1,
             "collective": true
            }
@@ -3746,7 +3777,7 @@
           "type": "atMost",
           "value": 0,
           "field": "selections",
-          "scope": "c9d0-c098-4e8e-ba1e",
+          "scope": "root-entry-self",
           "childId": "18fe-3847-74bc-4685",
           "shared": true,
           "includeChildSelections": true,
@@ -5160,7 +5191,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "e8d9-5e22-4164-0add",
+              "scope": "root-entry-self",
               "childId": "6e46-5daf-f0c0-2d3b",
               "shared": true,
               "includeChildSelections": true,
@@ -5383,7 +5414,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "e8d9-5e22-4164-0add",
+            "scope": "root-entry-self",
             "childId": "0328-0de2-683b-0108",
             "shared": true,
             "includeChildSelections": true,
@@ -6625,7 +6656,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "e261-33ff-3de7-684f",
+            "scope": "root-entry-self",
             "childId": "b29d-e7b6-c7c0-d9b9",
             "shared": true,
             "includeChildSelections": true,
@@ -6719,7 +6750,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "e261-33ff-3de7-684f",
+              "scope": "root-entry-self",
               "childId": "d2c9-d4a5-75e0-bb93",
               "shared": true,
               "includeChildSelections": true,
@@ -7658,7 +7689,6 @@
             "name": "Thaumaturgy Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "7e31-0369-2f85-26e8",
             "constraints": [
              {
               "id": "a75d-86d0-9f2f-91be",
@@ -7725,7 +7755,7 @@
              {
               "type": "set",
               "field": "a75d-86d0-9f2f-91be",
-              "value": 3,
+              "value": 2,
               "conditions": [
                {
                 "type": "atLeast",
@@ -7744,7 +7774,7 @@
              {
               "type": "set",
               "field": "8eee-2fe6-1d13-8b54",
-              "value": 3,
+              "value": 2,
               "conditions": [
                {
                 "type": "atLeast",
@@ -7763,7 +7793,7 @@
              {
               "type": "set",
               "field": "a75d-86d0-9f2f-91be",
-              "value": 5,
+              "value": 4,
               "conditions": [
                {
                 "type": "atLeast",
@@ -7782,7 +7812,7 @@
              {
               "type": "set",
               "field": "8eee-2fe6-1d13-8b54",
-              "value": 5,
+              "value": 4,
               "conditions": [
                {
                 "type": "atLeast",
@@ -7799,6 +7829,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "7e31-0369-2f85-26e8",
             "sortIndex": 1,
             "collective": true
            }
@@ -7841,7 +7872,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "ab68-a8a8-dda3-cfa1",
+              "scope": "root-entry-self",
               "childId": "278a-cf6b-eb3f-85bd",
               "shared": true,
               "includeChildSelections": true,
@@ -7863,7 +7894,6 @@
             "name": "Occultism Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "b38c-2938-23e7-6ddd",
             "constraints": [
              {
               "id": "a104-bdde-12ba-ada9",
@@ -7930,7 +7960,7 @@
              {
               "type": "set",
               "field": "a104-bdde-12ba-ada9",
-              "value": 3,
+              "value": 2,
               "conditions": [
                {
                 "type": "atLeast",
@@ -7949,7 +7979,7 @@
              {
               "type": "set",
               "field": "633d-5b6e-72dc-7bb2",
-              "value": 3,
+              "value": 2,
               "conditions": [
                {
                 "type": "atLeast",
@@ -7968,7 +7998,7 @@
              {
               "type": "set",
               "field": "a104-bdde-12ba-ada9",
-              "value": 5,
+              "value": 4,
               "conditions": [
                {
                 "type": "atLeast",
@@ -7987,7 +8017,7 @@
              {
               "type": "set",
               "field": "633d-5b6e-72dc-7bb2",
-              "value": 5,
+              "value": 4,
               "conditions": [
                {
                 "type": "atLeast",
@@ -8004,6 +8034,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "b38c-2938-23e7-6ddd",
             "sortIndex": 1,
             "collective": true
            }
@@ -8046,7 +8077,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "ab68-a8a8-dda3-cfa1",
+              "scope": "root-entry-self",
               "childId": "278a-cf6b-eb3f-85bd",
               "shared": true,
               "includeChildSelections": true,
@@ -8068,7 +8099,6 @@
             "name": "Witchcraft Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "f0af-8fcd-892c-4890",
             "constraints": [
              {
               "id": "6efc-c26b-9346-9dc6",
@@ -8135,7 +8165,7 @@
              {
               "type": "set",
               "field": "6efc-c26b-9346-9dc6",
-              "value": 3,
+              "value": 2,
               "conditions": [
                {
                 "type": "atLeast",
@@ -8154,7 +8184,7 @@
              {
               "type": "set",
               "field": "12c7-4dd3-666c-dd72",
-              "value": 3,
+              "value": 2,
               "conditions": [
                {
                 "type": "atLeast",
@@ -8173,7 +8203,7 @@
              {
               "type": "set",
               "field": "6efc-c26b-9346-9dc6",
-              "value": 5,
+              "value": 4,
               "conditions": [
                {
                 "type": "atLeast",
@@ -8192,7 +8222,7 @@
              {
               "type": "set",
               "field": "12c7-4dd3-666c-dd72",
-              "value": 5,
+              "value": 4,
               "conditions": [
                {
                 "type": "atLeast",
@@ -8209,6 +8239,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "f0af-8fcd-892c-4890",
             "sortIndex": 1,
             "collective": true
            }
@@ -8325,7 +8356,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "ab68-a8a8-dda3-cfa1",
+            "scope": "root-entry-self",
             "childId": "fb98-b40b-30d4-3494",
             "shared": true,
             "includeChildSelections": true,
@@ -18996,7 +19027,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "f960-5edb-2131-3908",
+            "scope": "root-entry-self",
             "childId": "c561-7998-b08e-a278",
             "shared": true,
             "includeChildSelections": true,
@@ -19059,7 +19090,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "f960-5edb-2131-3908",
+            "scope": "root-entry-self",
             "childId": "fb98-b40b-30d4-3494",
             "shared": true,
             "includeChildSelections": true,
@@ -19695,7 +19726,46 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6e46-5daf-f0c0-2d3b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "82ec-274b-6330-2465",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -19909,6 +19979,25 @@
        }
       ],
       "comment": "Rare"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e522-0397-3811-7a0e",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20130,7 +20219,15 @@
       "targetId": "b837-7c56-48f8-92c3"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "9019-847d-e8d7-fe2e",
+      "name": "Secrets of the Doom Blade",
+      "hidden": true,
+      "targetId": "e522-0397-3811-7a0e",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -20216,6 +20313,44 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e522-0397-3811-7a0e",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6be1-d981-05b5-b7fa",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20228,7 +20363,15 @@
       "targetId": "96ce-2692-6dca-3e41"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "cfc7-23cf-71dc-5d96",
+      "name": "Swarm Master",
+      "hidden": true,
+      "targetId": "e522-0397-3811-7a0e",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -20437,7 +20580,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "0328-0de2-683b-0108",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23317,7 +23480,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model replaces <b>Wizard Apprentice</b> with <b>Wizard Adept</b>, and can choose Witchcraft,Thaumaturgy instead of <i>Occultism</i>. <br>The model cannot take Paired Weapons, Halberd, Great Weapon."
+      "$text": "The model replaces <b>Wizard Apprentice</b> with <b>Wizard Adept</b>, and can choose <i>Thaumaturgy</i> or <i>Witchcraft</i> instead of <i>Occultism</i>. <br>The model cannot take Great Weapon, Halberd, or Paired Weapons."
      }
     ],
     "attributes": [
@@ -23401,7 +23564,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model gains Regeneration (4+), Hard Target (1)."
+      "$text": "The model gains <b>Hard Target (1)</b> and <b>Regeneration (4+)</b>."
      }
     ],
     "attributes": [
@@ -23422,7 +23585,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Immediately before the model is removed as a casualty as a result of an enemy Melee Attack, it inflicts 1 hit with Str 3, AP 0, Flaming Attacks, Unmodifiable towards the Health Pool of the model that caused the wound."
+      "$text": "Immediately before the model is removed as a casualty as a result of an enemy Melee Attack, it inflicts 1 hit with Str 3, AP 0, <b>Flaming Attacks</b> and <b>Unmodifiable</b> towards the Health Pool of the model that caused the wound."
      }
     ],
     "attributes": [
@@ -23603,7 +23766,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The target suffers 2D3 hits with Str 4, AP 1, Lightning Attacks,Magical Attacks, Maniacal Enthusiasm (To-wound roll)."
+      "$text": "The target suffers 2D3 hits with Str 4, AP 1, <b>Lightning Attacks</b>, <b>Magical Attacks</b>, and <b>Maniacal Enthusiasm (To-wound roll)</b>."
      }
     ],
     "attributes": [
@@ -23775,7 +23938,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Diseased, Exclusive (Plague Cultists). <br>The model’s unit gains <b>Poison Attacks</b>. <br>The Chassis model part’s Agility is <b>set</b> to 4 and it gains Grind Attack (D3+1), Devastating Charge (+10 Agi)."
+      "$text": "The model gains <b>Diseased</b> and <b>Exclusive (Plague Cultists)</b>. <br>The model’s unit gains <b>Poison Attacks</b>. <br>The Chassis model part’s Agility is <b>set</b> to 4 and it gains <b>Devastating Charge (+10 Agi)</b> and <b>Grind Attack (D3+1)</b>."
      }
     ],
     "attributes": [
@@ -24108,7 +24271,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "+1 Att, +2 AP. Maniacal Enthusiasm (To-wound roll),Multiple Wounds (D3). <br>Rolls this model makes on the <b>Maniacal Enthusiasm</b> chart gain a +2 modifier."
+      "$text": "+1 Att, +2 AP. <b>Maniacal Enthusiasm (To-wound roll)</b> and <b>Multiple Wounds (D3)</b>. <br>Rolls this model makes on the <b>Maniacal Enthusiasm</b> chart gain a +2 modifier."
      }
     ],
     "modifiers": [
@@ -24186,7 +24349,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Shooting Attacks from the model with a Pistol gain <b>Flaming Attacks</b>. <br>In addition, Height 1 Rank-and-File models in the bearer’s unit benefits from <br><b>First Strike (Zeal, Flaming Attacks)</b>."
+      "$text": "Shooting Attacks from the model with a Pistol gain <b>Flaming Attacks</b>. <br>In addition, Height 1 Rank-and-File models in the bearer’s unit benefits from <br><b>First Strike (Flaming Attacks and Zeal)</b>."
      }
     ],
     "attributes": [
@@ -24270,7 +24433,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "Aim 3+, Range 24\", Str 5, AP 2, Flaming Attacks, Maniacal Enthusiasm (To-Hit Roll).<br>If the weapon hits, it causes D6 hits instead of 1."
+      "$text": "Aim 3+, Range 24\", Str 5, AP 2, <b>Flaming Attacks</b> and <b>Maniacal Enthusiasm (To-Hit Roll)</b>.<br>If the weapon hits, it causes D6 hits instead of 1."
      }
     ],
     "attributes": [
@@ -24291,7 +24454,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Ambush (Terrain Feature with a friendly Tunnel Marker),Tunnel Digger. <br>In addition, each Stygian Overseer on the Army List increases the duplication limit of Legionary Drill Teams by 1."
+      "$text": "<b>Ambush (Terrain Feature with a friendly Tunnel Marker)</b> and <b>Tunnel Digger</b>. <br>In addition, each Stygian Overseer on the Army List increases the duplication limit of Legionary Drill Teams by 1."
      }
     ],
     "attributes": [
@@ -24603,7 +24766,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Immediately before the model is removed as a casualty, it inflicts D6 hits with Str 4, AP 0, Flaming Attacks, Unmodifiable on all units, other than its own, within 6\" of the model’s unit."
+      "$text": "Immediately before the model is removed as a casualty, it inflicts D6 hits with Str 4, AP 0, <b>Flaming Attacks</b> and <b>Unmodifiable</b> on all units, other than its own, within 6\" of the model’s unit."
      }
     ],
     "attributes": [
@@ -24645,7 +24808,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Musician, Exclusive (Blackfur Veterans, Vermin Legionaries), and the Chassis Model part gains <b>Impact Hits (D3+1)</b> <br>Increase the number of ignored Health Points due to <b>Life is Cheap</b> by two in Combats where at least one friendly unit containing <b>Life is Cheap</b> is within 12\" of the Whispering Bell. <br> <i>Remember that Unit Boundaries are frozen until after taking Break Tests.</i>"
+      "$text": "The model gains <b>Exclusive (Blackfur Veterans</b>, <b>Musician</b>, <b>Vermin Legionaries)</b>, and the Chassis Model part gains <b>Impact Hits (D3+1)</b> <br>Increase the number of ignored Health Points due to <b>Life is Cheap</b> by two in Combats where at least one friendly unit containing <b>Life is Cheap</b> is within 12\" of the Whispering Bell. <br> <i>Remember that Unit Boundaries are frozen until after taking Break Tests.</i>"
      }
     ],
     "attributes": [

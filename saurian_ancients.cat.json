@@ -52,6 +52,46 @@
     "hidden": false
    },
    {
+    "id": "81cc-ae23-dfff-edfc",
+    "name": "Core Unit",
+    "comment": "core_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "9c26-fc8e-c9a3-4527",
+    "name": "Anurarch Archmage",
+    "comment": "anurarchArchmage",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "9a38-a329-9993-21e2",
+    "name": "Weapon Enchant",
+    "comment": "weaponEnchantUni",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "6157-c442-a2ef-e487",
+    "name": "Veil Mastery",
+    "comment": "veil_mastery",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "cadb-9f83-04fe-c233",
+    "name": "Eternal Mastery",
+    "comment": "eternal_mastery",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "b62a-3916-7275-8844",
     "name": "Silver Spike",
     "comment": "srar:tabletSilver",
@@ -1779,6 +1819,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "1f92-7be3-7ac9-620d",
+      "name": "Anurarch Archmage",
+      "hidden": true,
+      "targetId": "9c26-fc8e-c9a3-4527",
+      "primary": false
+     },
+     {
       "id": "581a-185c-6bfe-2ede",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -1790,6 +1837,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "09f4-ec5e-b8ac-04a6",
+      "name": "Wizard Master",
+      "hidden": false,
+      "targetId": "c04d-1882-6246-277c",
       "primary": false
      }
     ],
@@ -2107,6 +2161,17 @@
       "hidden": false,
       "constraints": [
        {
+        "id": "e6a4-11b4-0dfc-b003",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
         "id": "b15a-4490-2474-6cbd",
         "field": "selections",
         "scope": "parent",
@@ -2128,7 +2193,7 @@
           "type": "atLeast",
           "value": 1,
           "field": "selections",
-          "scope": "0379-1e49-d004-7c31",
+          "scope": "root-entry-self",
           "childId": "5c66-aba8-8df6-9fa4",
           "shared": true,
           "includeChildSelections": true,
@@ -2177,7 +2242,6 @@
           "name": "Alchemy Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "e7fb-de28-fe31-1798",
           "constraints": [
            {
             "id": "ade1-5009-d9eb-d82f",
@@ -2318,6 +2382,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "e7fb-de28-fe31-1798",
           "sortIndex": 1,
           "collective": true
          }
@@ -2362,7 +2427,6 @@
           "name": "Druidism Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "5e0d-ec58-5ae3-23d4",
           "constraints": [
            {
             "id": "18a3-b61d-58df-88a6",
@@ -2503,6 +2567,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "5e0d-ec58-5ae3-23d4",
           "sortIndex": 1,
           "collective": true
          }
@@ -2547,7 +2612,6 @@
           "name": "Divination Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "17b3-c05a-f059-f09a",
           "constraints": [
            {
             "id": "032f-7e40-6bf6-a8bb",
@@ -2688,6 +2752,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "17b3-c05a-f059-f09a",
           "sortIndex": 1,
           "collective": true
          }
@@ -2732,7 +2797,6 @@
           "name": "Evocation Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "8c0c-e97a-397d-574d",
           "constraints": [
            {
             "id": "3fc4-aaa3-f95d-000e",
@@ -2873,6 +2937,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "8c0c-e97a-397d-574d",
           "sortIndex": 1,
           "collective": true
          }
@@ -3554,7 +3619,7 @@
                 "type": "atMost",
                 "value": 0,
                 "field": "selections",
-                "scope": "e17f-136c-0532-6f49",
+                "scope": "root-entry-self",
                 "childId": "001e-a799-9b9a-a818",
                 "shared": true,
                 "includeChildSelections": true,
@@ -3573,7 +3638,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "e17f-136c-0532-6f49",
+                "scope": "root-entry-self",
                 "childId": "5c66-aba8-8df6-9fa4",
                 "shared": true,
                 "includeChildSelections": true,
@@ -3672,7 +3737,6 @@
                   "name": "Druidism Spells",
                   "hidden": false,
                   "type": "selectionEntryGroup",
-                  "targetId": "5e0d-ec58-5ae3-23d4",
                   "constraints": [
                    {
                     "id": "d32c-290d-79af-08e3",
@@ -3813,6 +3877,7 @@
                     "conditionGroups": []
                    }
                   ],
+                  "targetId": "5e0d-ec58-5ae3-23d4",
                   "sortIndex": 1,
                   "collective": true
                  }
@@ -3857,7 +3922,6 @@
                   "name": "Evocation Spells",
                   "hidden": false,
                   "type": "selectionEntryGroup",
-                  "targetId": "8c0c-e97a-397d-574d",
                   "constraints": [
                    {
                     "id": "b589-4240-aa43-c164",
@@ -3998,6 +4062,7 @@
                     "conditionGroups": []
                    }
                   ],
+                  "targetId": "8c0c-e97a-397d-574d",
                   "sortIndex": 1,
                   "collective": true
                  }
@@ -4042,7 +4107,6 @@
                   "name": "Shamanism Spells",
                   "hidden": false,
                   "type": "selectionEntryGroup",
-                  "targetId": "9b1c-b671-7d51-95d1",
                   "constraints": [
                    {
                     "id": "06de-b533-3b19-8fa1",
@@ -4183,6 +4247,7 @@
                     "conditionGroups": []
                    }
                   ],
+                  "targetId": "9b1c-b671-7d51-95d1",
                   "sortIndex": 1,
                   "collective": true
                  }
@@ -4270,7 +4335,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "e17f-136c-0532-6f49",
+            "scope": "root-entry-self",
             "childId": "001e-a799-9b9a-a818",
             "shared": true,
             "includeChildSelections": true,
@@ -4313,7 +4378,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "e17f-136c-0532-6f49",
+            "scope": "root-entry-self",
             "childId": "001e-a799-9b9a-a818",
             "shared": true,
             "includeChildSelections": true,
@@ -4356,7 +4421,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "e17f-136c-0532-6f49",
+            "scope": "root-entry-self",
             "childId": "001e-a799-9b9a-a818",
             "shared": true,
             "includeChildSelections": true,
@@ -4399,7 +4464,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "e17f-136c-0532-6f49",
+            "scope": "root-entry-self",
             "childId": "001e-a799-9b9a-a818",
             "shared": true,
             "includeChildSelections": true,
@@ -4911,7 +4976,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "abcf-1ef1-7704-721a",
+            "scope": "root-entry-self",
             "childId": "5c66-aba8-8df6-9fa4",
             "shared": true,
             "includeChildSelections": true,
@@ -5010,7 +5075,6 @@
               "name": "Druidism Spells",
               "hidden": false,
               "type": "selectionEntryGroup",
-              "targetId": "5e0d-ec58-5ae3-23d4",
               "constraints": [
                {
                 "id": "eb3b-b0d2-3890-8f87",
@@ -5151,6 +5215,7 @@
                 "conditionGroups": []
                }
               ],
+              "targetId": "5e0d-ec58-5ae3-23d4",
               "sortIndex": 1,
               "collective": true
              }
@@ -5195,7 +5260,6 @@
               "name": "Evocation Spells",
               "hidden": false,
               "type": "selectionEntryGroup",
-              "targetId": "8c0c-e97a-397d-574d",
               "constraints": [
                {
                 "id": "1ec8-4440-6535-bf60",
@@ -5336,6 +5400,7 @@
                 "conditionGroups": []
                }
               ],
+              "targetId": "8c0c-e97a-397d-574d",
               "sortIndex": 1,
               "collective": true
              }
@@ -5380,7 +5445,6 @@
               "name": "Shamanism Spells",
               "hidden": false,
               "type": "selectionEntryGroup",
-              "targetId": "9b1c-b671-7d51-95d1",
               "constraints": [
                {
                 "id": "fee4-4dd4-e9dc-29e5",
@@ -5521,6 +5585,7 @@
                 "conditionGroups": []
                }
               ],
+              "targetId": "9b1c-b671-7d51-95d1",
               "sortIndex": 1,
               "collective": true
              }
@@ -5948,7 +6013,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "abcf-1ef1-7704-721a",
+              "scope": "root-entry-self",
               "childId": "f724-6997-4e3f-c578",
               "shared": true,
               "includeChildSelections": true,
@@ -6225,7 +6290,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "abcf-1ef1-7704-721a",
+            "scope": "root-entry-self",
             "childId": "f724-6997-4e3f-c578",
             "shared": true,
             "includeChildSelections": true,
@@ -6310,7 +6375,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "abcf-1ef1-7704-721a",
+            "scope": "root-entry-self",
             "childId": "f724-6997-4e3f-c578",
             "shared": true,
             "includeChildSelections": true,
@@ -6809,27 +6874,7 @@
           "percentValue": false
          }
         ],
-        "modifiers": [
-         {
-          "type": "set",
-          "field": "13d4-6cf8-3bdc-982b",
-          "value": 2,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "17d9-3276-f83f-1e49",
-            "childId": "5c66-aba8-8df6-9fa4",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
-          "conditionGroups": []
-         }
-        ],
+        "modifiers": [],
         "profiles": [],
         "infoLinks": [
          {
@@ -6918,7 +6963,6 @@
               "name": "Druidism Spells",
               "hidden": false,
               "type": "selectionEntryGroup",
-              "targetId": "5e0d-ec58-5ae3-23d4",
               "constraints": [
                {
                 "id": "d94a-6c59-c23a-3971",
@@ -7059,6 +7103,7 @@
                 "conditionGroups": []
                }
               ],
+              "targetId": "5e0d-ec58-5ae3-23d4",
               "sortIndex": 1,
               "collective": true
              }
@@ -7103,7 +7148,6 @@
               "name": "Evocation Spells",
               "hidden": false,
               "type": "selectionEntryGroup",
-              "targetId": "8c0c-e97a-397d-574d",
               "constraints": [
                {
                 "id": "43e0-9750-56df-b940",
@@ -7244,6 +7288,7 @@
                 "conditionGroups": []
                }
               ],
+              "targetId": "8c0c-e97a-397d-574d",
               "sortIndex": 1,
               "collective": true
              }
@@ -7288,7 +7333,6 @@
               "name": "Shamanism Spells",
               "hidden": false,
               "type": "selectionEntryGroup",
-              "targetId": "9b1c-b671-7d51-95d1",
               "constraints": [
                {
                 "id": "91d9-c1fd-5b2e-4244",
@@ -7429,6 +7473,7 @@
                 "conditionGroups": []
                }
               ],
+              "targetId": "9b1c-b671-7d51-95d1",
               "sortIndex": 1,
               "collective": true
              }
@@ -7620,7 +7665,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "17d9-3276-f83f-1e49",
+              "scope": "root-entry-self",
               "childId": "f724-6997-4e3f-c578",
               "shared": true,
               "includeChildSelections": true,
@@ -7841,7 +7886,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "17d9-3276-f83f-1e49",
+              "scope": "root-entry-self",
               "childId": "f724-6997-4e3f-c578",
               "shared": true,
               "includeChildSelections": true,
@@ -8108,6 +8153,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "87a8-7557-1d63-aa3a",
+      "name": "Wizard Master",
+      "hidden": false,
+      "targetId": "c04d-1882-6246-277c",
       "primary": false
      }
     ],
@@ -8430,7 +8482,6 @@
           "name": "Occultism Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "b38c-2938-23e7-6ddd",
           "constraints": [
            {
             "id": "a044-d6e8-914c-8cb7",
@@ -8571,6 +8622,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "b38c-2938-23e7-6ddd",
           "sortIndex": 1,
           "collective": true
          }
@@ -9494,6 +9546,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "8d93-07d6-d2c6-d30e",
+      "name": "Caiman Warriors",
+      "hidden": true,
+      "targetId": "81cc-ae23-dfff-edfc",
+      "primary": false
+     },
+     {
       "id": "0682-a659-e5bc-3356",
       "name": "⟨Hgt:3⟩",
       "hidden": true,
@@ -10172,6 +10231,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "e430-d48a-5860-7290",
+      "name": "Skink Hunters",
+      "hidden": true,
+      "targetId": "81cc-ae23-dfff-edfc",
+      "primary": false
+     },
+     {
       "id": "a6aa-2c2c-0e2e-2428",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -10773,6 +10839,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "6f78-b8f8-97e5-d40c",
+      "name": "Skink Warriors",
+      "hidden": true,
+      "targetId": "81cc-ae23-dfff-edfc",
+      "primary": false
+     },
      {
       "id": "80ed-f649-c9db-1c31",
       "name": "⟨Hgt:1⟩",
@@ -11508,6 +11581,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "69e3-a8af-0925-7844",
+      "name": "Tegu Warriors",
+      "hidden": true,
+      "targetId": "81cc-ae23-dfff-edfc",
+      "primary": false
+     },
      {
       "id": "355f-d14c-61cd-b2f0",
       "name": "⟨Hgt:1⟩",
@@ -16230,7 +16310,7 @@
               "type": "atLeast",
               "value": 2,
               "field": "selections",
-              "scope": "c9db-1c30-9f39-740e",
+              "scope": "root-entry-self",
               "childId": "cc17-dff0-8770-0127",
               "shared": true,
               "includeChildSelections": true,
@@ -22766,7 +22846,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "81cc-ae23-dfff-edfc",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22897,7 +22997,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "9c26-fc8e-c9a3-4527",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23007,7 +23127,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "9a38-a329-9993-21e2",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23242,6 +23382,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "9c26-fc8e-c9a3-4527",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -23298,7 +23457,46 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6157-c442-a2ef-e487",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "cadb-9f83-04fe-c233",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -24761,7 +24959,15 @@
       "targetId": "8915-2d0e-291c-604a"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "6f5c-0fa4-633b-9f91",
+      "name": "Veil Mastery",
+      "hidden": true,
+      "targetId": "6157-c442-a2ef-e487",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -24871,7 +25077,15 @@
       "targetId": "12e4-7526-b71b-4703"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "5d30-a7d1-e904-7d67",
+      "name": "Eternal Mastery",
+      "hidden": true,
+      "targetId": "cadb-9f83-04fe-c233",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -27734,7 +27948,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Ambush (Battlefield Edge), Hard Target (1), Scout."
+      "$text": "The model gains <b>Ambush (Battlefield Edge)</b>, <b>Hard Target (1)</b>, and <b>Scout</b>."
      }
     ],
     "attributes": [
@@ -27755,7 +27969,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Attached, Exclusive (Caiman Elders, Tegu Guards, Tegu Warriors), Stand Behind, Strider, War Platform."
+      "$text": "The model gains <b>Attached</b>, <b>Exclusive (Caiman Elders</b>, <b>Stand Behind</b>, <b>Strider</b>, <b>Tegu Guards</b>, <b>Tegu Warriors)</b>, and <b>War Platform</b>."
      }
     ],
     "attributes": [
@@ -27776,7 +27990,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Attached, Exclusive (Skink Warriors), and its base size is changed to 40×40mm. <br> The Caiman Mentor model part gains Tooth and Claw."
+      "$text": "The model gains <b>Attached</b>, <b>Exclusive (Skink Warriors)</b>, and its base size is changed to 40×40mm. <br> The Caiman Mentor model part gains Tooth and Claw."
      }
     ],
     "modifiers": [
@@ -27810,7 +28024,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Exclusive (Caiman Elders). <br> The Caiman Mentor model part gains <b>Weapon Master</b>, and Tooth and Claw, Halberd, Great Weapon. <br> While the Caiman Mentor model part is using a Melee Weapon without a Weapon Enchantment, add the following rules to the weapon, depending on the weapon used: <br>&nbsp;&nbsp;&bull; Great Weapon: +2 Att, +1 to wound. <br>&nbsp;&nbsp;&bull; Halberd: +2 Att, <b>Distracting (1)</b>. <br>&nbsp;&nbsp;&bull; Tooth and Claw: +3 Att."
+      "$text": "The model gains <b>Exclusive (Caiman Elders)</b>. <br> The Caiman Mentor model part gains <b>Weapon Master</b>, and Great Weapon, Halberd, and Tooth and Claw. <br> While the Caiman Mentor model part is using a Melee Weapon without a Weapon Enchantment, add the following rules to the weapon, depending on the weapon used: <br>&nbsp;&nbsp;&bull; Great Weapon: +2 Att, +1 to wound. <br>&nbsp;&nbsp;&bull; Halberd: +2 Att, <b>Distracting (1)</b>. <br>&nbsp;&nbsp;&bull; Tooth and Claw: +3 Att."
      }
     ],
     "attributes": [
@@ -27831,7 +28045,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Attached, Exclusive (Tegu Warriors). <br> The Caiman Mentor model part gains <b>Weapon Master</b>, and Tooth and Claw, Halberd, Great Weapon."
+      "$text": "The model gains <b>Attached</b> and <b>Exclusive (Tegu Warriors)</b>. <br> The Caiman Mentor model part gains <b>Weapon Master</b>, and Great Weapon, Halberd, and Tooth and Claw."
      }
     ],
     "attributes": [
@@ -27873,7 +28087,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "One use only. Choose one of the effects below to apply, with Duration: End of Turn.<br>All models in the unit must choose and activate the same effect simultaneously. <br>&nbsp;&nbsp;&bull; May be activated during Choosing Equipment and Abilities. <br>The model gains Grind Attack (1, Str 2, AP 3, Unmodifiable); if it is in the second rank and not in contact with any enemy model, it can make its <b>Grind Attack</b> across models in the first rank directly in front of it. <br>&nbsp;&nbsp;&bull; May be activated in the Shooting Phase. The model gains the following Shooting Weapon: <table><tr><th>Name</th><th>Aim</th><th>Range</th><th>Shots</th><th>Str</th><th>AP</th><th>Attack Attributes</th></tr><tr><td>Corrosive Spit</td><td>1</td><td>6\"</td><td>2</td><td>2</td><td>3</td><td>Accurate, March and Shoot</td></tr></table>"
+      "$text": "One use only. Choose one of the effects below to apply, with Duration: End of Turn.<br>All models in the unit must choose and activate the same effect simultaneously. <br>&nbsp;&nbsp;&bull; May be activated during Choosing Equipment and Abilities. <br>The model gains <b>AP 3</b>, <b>Grind Attack (1</b>, <b>Str 2</b>, and <b>Unmodifiable)</b>; if it is in the second rank and not in contact with any enemy model, it can make its <b>Grind Attack</b> across models in the first rank directly in front of it. <br>&nbsp;&nbsp;&bull; May be activated in the Shooting Phase. The model gains the following Shooting Weapon: <table><tr><th>Name</th><th>Aim</th><th>Range</th><th>Shots</th><th>Str</th><th>AP</th><th>Attack Attributes</th></tr><tr><td>Corrosive Spit</td><td>1</td><td>6\"</td><td>2</td><td>2</td><td>3</td><td>Accurate, March and Shoot</td></tr></table>"
      }
     ],
     "attributes": [
@@ -27894,7 +28108,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model is a <b>Wizard Apprentice</b> with access to Druidism, Shamanism, Evocation. It can select its spells from the Apprentice Spell and Adept Spells (#1-#4) from its chosen Path. <i>This replaces the normal rules for Spell Selection connected to being a <b>Wizard Apprentice</b>.</i><br> <br> Evocation=evocation,Druidism=druidism,Shamanism=shamanism"
+      "$text": "The model is a <b>Wizard Apprentice</b> with access to <i>Druidism</i>, <i>Evocation</i>, and <i>Shamanism</i>. It can select its spells from the Apprentice Spell and Adept Spells (#1-#4) from its chosen Path. <i>This replaces the normal rules for Spell Selection connected to being a <b>Wizard Apprentice</b>.</i><br> <br> Evocation=evocation,Druidism=druidism,Shamanism=shamanism"
      }
     ],
     "attributes": [
@@ -27999,7 +28213,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "Select either Pyromancy,Occultism: the model knows one additional spell from the selected Path, which <b>must</b> be selected from the Apprentice Spell and Adept Spells (#1--#4)."
+      "$text": "Select either <i>Occultism</i> or <i>Pyromancy</i>: the model knows one additional spell from the selected Path, which <b>must</b> be selected from the Apprentice Spell and Adept Spells (#1--#4)."
      }
     ],
     "attributes": [
@@ -28041,7 +28255,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Exclusive (Tegu Warriors),War Platform, and it loses <b>Stubborn</b>. In addition, all Rank-and-File models in its unit benefit from <b>Parry</b>."
+      "$text": "The model gains <b>Exclusive (Tegu Warriors)</b> and <b>War Platform</b>, and it loses <b>Stubborn</b>. In addition, all Rank-and-File models in its unit benefit from <b>Parry</b>."
      }
     ],
     "attributes": [
@@ -28104,7 +28318,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model becomes an Attachable Model, gains Exclusive (Raptor Pack, Raptor Riders), and loses <b>Solitary</b>. <br>While the model is joined to a unit of Raptor Pack or Raptor Riders, the model gains <b>Pack Hunter</b>. <br>Model parts with Magnasaur in the model’s unit gain <b>Fury</b>. <br>No more than a single model with <b>Hunt Leader</b> can ever be joined to the same unit."
+      "$text": "The model becomes an Attachable Model, gains <b>Exclusive (Raptor Pack</b> and <b>Raptor Riders)</b>, and loses <b>Solitary</b>. <br>While the model is joined to a unit of Raptor Pack or Raptor Riders, the model gains <b>Pack Hunter</b>. <br>Model parts with Magnasaur in the model’s unit gain <b>Fury</b>. <br>No more than a single model with <b>Hunt Leader</b> can ever be joined to the same unit."
      }
     ],
     "attributes": [
@@ -28125,7 +28339,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "Channel (1), Regeneration (5+)."
+      "$text": "<b>Channel (1)</b> and <b>Regeneration (5+)</b>."
      }
     ],
     "attributes": [
@@ -28251,7 +28465,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model gains , Musician, Horror."
+      "$text": "The model gains <b>Horror</b> and <b>Musician</b>."
      }
     ],
     "attributes": [
@@ -28339,7 +28553,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "While joined to a unit consisting entirely of Height 1 Skinks, the unit gains Feigned Flight, Hit and Run, Vanguard."
+      "$text": "While joined to a unit consisting entirely of Height 1 Skinks, the unit gains <b>Feigned Flight</b>, <b>Hit and Run</b>, and <b>Vanguard</b>."
      }
     ],
     "attributes": [
@@ -28716,7 +28930,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "Immune (Flaming Attacks), Hard Target (1)."
+      "$text": "<b>Hard Target (1)</b> and <b>Immune (Flaming Attacks)</b>."
      }
     ],
     "attributes": [
@@ -28863,7 +29077,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model’s base size is changed to 60×100 mm, and it gains 6 additional Skink Riders. <br> The rule <b>Exclusive (Tegu Warriors)</b> is replaced with <b>Exclusive (Skink Warriors, Skink Hunters)</b>. <br> Model parts with Skink in the bearer’s unit benefit from First Strike (Hatred), Poison Attacks."
+      "$text": "The model’s base size is changed to 60×100 mm, and it gains 6 additional Skink Riders. <br> The rule <b>Exclusive (Tegu Warriors)</b> is replaced with <b>Exclusive (Skink Warriors, Skink Hunters)</b>. <br> Model parts with Skink in the bearer’s unit benefit from <b>First Strike (Hatred)</b> and <b>Poison Attacks</b>."
      }
     ],
     "modifiers": [

@@ -9,7 +9,81 @@
   "gameSystemId": "3552-6259-4b66-3788",
   "gameSystemRevision": 1,
   "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
-  "categoryEntries": [],
+  "catalogueLinks": [
+   {
+    "id": "5d27-fb56-12ef-b301",
+    "name": "T9A Spells",
+    "targetId": "a537-9001-2890-1713",
+    "type": "catalogue",
+    "importRootEntries": false
+   }
+  ],
+  "categoryEntries": [
+   {
+    "id": "c656-059f-e05e-bb10",
+    "name": "Metal Armour",
+    "comment": "tag_Metal Armour",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "26fe-d5db-2b18-8214",
+    "name": "Construct",
+    "comment": "tag_Construct",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "0a6f-3a58-451f-c62c",
+    "name": "solitary",
+    "comment": "solitary",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "503b-177f-e18a-c777",
+    "name": "army bsb",
+    "comment": "army_bsb",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "cbcd-0850-b7d5-b63c",
+    "name": "trophyRack",
+    "comment": "trophyRack",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "d460-d72b-ea84-ec77",
+    "name": "King Slayer or Touch of Greatness or Giant Slayer or Supernatural Dexterity",
+    "comment": "weaponEnchantUni",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "5dc3-fd98-3501-4968",
+    "name": "wizard",
+    "comment": "wizard",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "df25-7c45-2567-5d78",
+    "name": "bound or broken",
+    "comment": "bound_or_broken",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   }
+  ],
   "forceEntries": [],
   "selectionEntries": [],
   "sharedSelectionEntries": [
@@ -359,6 +433,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c656-059f-e05e-bb10",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -1087,6 +1180,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "26fe-d5db-2b18-8214",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -1241,6 +1353,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "0a6f-3a58-451f-c62c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -1575,6 +1706,44 @@
        }
       ],
       "comment": "Rare"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "503b-177f-e18a-c777",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "cbcd-0850-b7d5-b63c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -2045,7 +2214,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2100,7 +2289,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2111,7 +2320,15 @@
       "targetId": "e8ce-1df9-dc68-d7b8"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "6d71-626a-e7f2-d5f1",
+      "name": "King Slayer",
+      "hidden": true,
+      "targetId": "d460-d72b-ea84-ec77",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -2155,7 +2372,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2166,7 +2403,15 @@
       "targetId": "de18-9ed7-fa85-9573"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "03b9-c676-0dbc-73b7",
+      "name": "Touch of Greatness",
+      "hidden": true,
+      "targetId": "d460-d72b-ea84-ec77",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -2308,6 +2553,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -2320,7 +2584,15 @@
       "targetId": "97b2-1ae3-65ea-f2a8"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "fd0c-34a3-59b4-14f2",
+      "name": "Giant Slayer",
+      "hidden": true,
+      "targetId": "d460-d72b-ea84-ec77",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -2462,6 +2734,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -2474,7 +2765,15 @@
       "targetId": "6cbe-1a71-df90-11a8"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "f831-3fab-216c-efcd",
+      "name": "Supernatural Dexterity",
+      "hidden": true,
+      "targetId": "d460-d72b-ea84-ec77",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -2518,7 +2817,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2529,7 +2848,15 @@
       "targetId": "c9bc-80e7-fd81-d92d"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "00f1-b904-abe9-30b2",
+      "name": "Eldritch Inscriptions",
+      "hidden": true,
+      "targetId": "d460-d72b-ea84-ec77",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -2573,7 +2900,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2584,7 +2931,15 @@
       "targetId": "7741-b0a1-d22e-b9a4"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "5991-c85d-b6e9-8edb",
+      "name": "Shield Breaker",
+      "hidden": true,
+      "targetId": "d460-d72b-ea84-ec77",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -2628,7 +2983,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d460-d72b-ea84-ec77",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2639,7 +3014,15 @@
       "targetId": "64b4-8c35-e959-fdc9"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "2d86-77f3-fadc-b079",
+      "name": "Hero's Heart",
+      "hidden": true,
+      "targetId": "d460-d72b-ea84-ec77",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -2683,7 +3066,46 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "5dc3-fd98-3501-4968",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "df25-7c45-2567-5d78",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2920,7 +3342,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "5dc3-fd98-3501-4968",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -2933,7 +3375,604 @@
     ],
     "categoryLinks": [],
     "selectionEntries": [],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "d11b-68fb-4717-5dd2",
+      "name": "Spells",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "957d-4750-1fe0-8e1d",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "3ee9-089a-2253-d995",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [],
+      "entryLinks": [],
+      "selectionEntryGroups": [
+       {
+        "id": "a6bd-4703-4d15-d73e",
+        "name": "Alchemy",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "aaec-7ec2-e4ec-e0b8",
+          "name": "Living Steel",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "2dc0-e369-38d3-5bd1",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "9e4d-69b8-20e6-c626",
+            "name": "Living Steel",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "f5f2-977a-5484-0424",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       },
+       {
+        "id": "3f60-f9d7-f17a-e7d1",
+        "name": "Druidism",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "e751-53b2-b923-2871",
+          "name": "Fountain of Youth",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "8b77-d2d1-93d5-81ab",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "205d-06c7-9e5e-9b9c",
+            "name": "Fountain of Youth",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "8d83-ef4e-e9c1-5f8d",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 2,
+        "collective": true
+       },
+       {
+        "id": "714d-e798-4026-5c51",
+        "name": "Evocation",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "4f8e-790d-afb3-3e5a",
+          "name": "Whispers of the Veil",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "bea5-48d7-1808-ddee",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "511b-fddd-472b-ede1",
+            "name": "Whispers of the Veil",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "6d62-d131-6798-ba17",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 3,
+        "collective": true
+       },
+       {
+        "id": "dee7-93c5-bc3c-bf6e",
+        "name": "Pyromancy",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "48ea-33e3-b807-f89c",
+          "name": "Fireball",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "5aa3-8057-5d79-e97c",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "3b1d-da62-821c-4714",
+            "name": "Fireball",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "93b4-a2ca-b04d-d7bf",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 4,
+        "collective": true
+       },
+       {
+        "id": "f2ba-94f0-e92a-c6b0",
+        "name": "Witchcraft",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "f02e-f515-c045-3d8e",
+          "name": "Mind Fog",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "bc10-b29e-2ed9-8a79",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "60ba-a49a-135d-3135",
+            "name": "Mind Fog",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "63b8-33e1-ce14-4f9f",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 5,
+        "collective": true
+       },
+       {
+        "id": "7f44-8c49-3648-4603",
+        "name": "Shamanism",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "4b75-88bd-bf75-51c4",
+          "name": "Swarm of Insects",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "37c2-7cd3-009e-5ebb",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "7e94-2fa1-2351-c8fc",
+            "name": "Swarm of Insects",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "270c-d5bd-1312-30b2",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 6,
+        "collective": true
+       },
+       {
+        "id": "0ec5-a132-8b6c-612e",
+        "name": "Cosmology",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "3407-9fe8-82d3-107a",
+          "name": "Altered Sight",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "2f20-126b-a61e-bd6f",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "9555-1ca7-5165-c021",
+            "name": "Altered Sight",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "c004-fce0-d138-de91",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 7,
+        "collective": true
+       },
+       {
+        "id": "064d-dd04-6fd0-956e",
+        "name": "Occultism",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "37f0-a87a-f468-7ddf",
+          "name": "The Devouring Dark",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "88df-8218-3037-6577",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "9fca-bc2e-bc77-7b36",
+            "name": "The Devouring Dark",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "1358-f3b9-5529-d81f",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 8,
+        "collective": true
+       },
+       {
+        "id": "3502-35f3-0d60-514f",
+        "name": "Divination",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "4846-4df0-a2c9-b1b7",
+          "name": "Foresight",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "4d0f-74ba-1ca0-7c00",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "b987-5b95-8c25-ced9",
+            "name": "Foresight",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "15e4-f139-43d5-6357",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 9,
+        "collective": true
+       },
+       {
+        "id": "1a8c-e71e-5b2b-81b8",
+        "name": "Thaumaturgy",
+        "hidden": false,
+        "constraints": [],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "5f4b-2851-d6a9-d5e6",
+          "name": "Smite the Unbeliever",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "1f11-4e69-e617-e691",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "ec15-c78c-41ed-245d",
+            "name": "Smite the Unbeliever",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cff2-4a02-13fe-fa4b",
+            "modifiers": []
+           }
+          ],
+          "categoryLinks": [],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 10,
+        "collective": true
+       }
+      ],
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "collective": true
    },
@@ -3073,6 +4112,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "5dc3-fd98-3501-4968",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -3503,7 +4561,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "5dc3-fd98-3501-4968",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -3960,7 +5038,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "5dc3-fd98-3501-4968",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -4015,7 +5113,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "5dc3-fd98-3501-4968",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -4413,7 +5531,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "First Strike (Hatred, Zeal)."
+      "$text": "<b>First Strike (Hatred</b> and <b>Zeal)</b>."
      }
     ],
     "attributes": [
@@ -4692,7 +5810,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "<b>Stand Behind</b>. <br> The wearer’s model loses Stubborn, Bodyguard, cannot gain either in any way, and is never considered to fulfil the criteria of <b>Bodyguard</b>.<br> In addition, the model cannot make any Supporting Attacks."
+      "$text": "<b>Stand Behind</b>. <br> The wearer’s model loses <b>Bodyguard</b> and <b>Stubborn</b>, cannot gain either in any way, and is never considered to fulfil the criteria of <b>Bodyguard</b>.<br> In addition, the model cannot make any Supporting Attacks."
      }
     ],
     "attributes": [
@@ -5317,7 +6435,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Unless specifically mentioned otherwise: <br>&nbsp;&nbsp;&bull; Global and Defensive Characteristic modifiers are applied only to the model part taking the Magic Item <i>(and not to other model parts such as mounts)</i>*. <br>&nbsp;&nbsp;&bull; Model Rules that are not Attack Attributes are applied to the combined model as a whole. <br>&nbsp;&nbsp;&bull; Offensive Characteristic modifiers and Attack Attributes are applied only to the model part bearing or wearing the item. <br>&nbsp;&nbsp;&bull; Rules and modifiers from a Weapon Enchantment are only applied to the Standard Melee Attacks made with the Enchanted Weapon. Exceptions to the above may be noted in the item’s description, using terminology such as: <br>&nbsp;&nbsp;&bull; The wielder, wearer, bearer - these terms mean the same thing for rules purposes and refer to the model part the Magic Item was bought for, and therefore generally do not affect mounts. <br>&nbsp;&nbsp;&bull; The wielder’s model, wearer’s model, bearer’s model - these terms refer to all model parts of the model the Magic Item was bought for, including their mounts. <br>&nbsp;&nbsp;&bull; The wielder’s unit, wearer’s unit, bearer’s unit - these terms refer to all model parts in the same unit as the model the Magic Item was bought for, including mounts and the model itself. *<i>Characters on mounts with fixed Global or Defensive Characteristics values (i.e. any value that is not C or C+X) do not benefit from modifiers to those Characteristics. <br> See the Character Mounts section of the Characters chapter for examples of interactions with mounts.</i>"
+      "$text": "Unless specifically mentioned otherwise: <br>&nbsp;&nbsp;&bull; Global and Defensive Characteristic modifiers are applied only to the model part taking the Magic Item <i>(and not to other model parts such as mounts)</i>*. <br>&nbsp;&nbsp;&bull; Model Rules that are not Attack Attributes are applied to the combined model as a whole. <br>&nbsp;&nbsp;&bull; Offensive Characteristic modifiers and Attack Attributes are applied only to the model part bearing or wearing the item. <br>&nbsp;&nbsp;&bull; Rules and modifiers from a Weapon Enchantment are only applied to the Standard Melee Attacks made with the Enchanted Weapon. Exceptions to the above may be noted in the item’s description, using terminology such as: <br>&nbsp;&nbsp;&bull; The <b>bearer</b>, <b>wearer</b>, or <b>wielder</b> - these terms mean the same thing for rules purposes and refer to the model part the Magic Item was bought for, and therefore generally do not affect mounts. <br>&nbsp;&nbsp;&bull; The <b>bearer’s model</b>, <b>wearer’s model</b>, or <b>wielder’s model</b> - these terms refer to all model parts of the model the Magic Item was bought for, including their mounts. <br>&nbsp;&nbsp;&bull; The <b>bearer’s unit</b>, <b>wearer’s unit</b>, or <b>wielder’s unit</b> - these terms refer to all model parts in the same unit as the model the Magic Item was bought for, including mounts and the model itself. *<i>Characters on mounts with fixed Global or Defensive Characteristics values (i.e. any value that is not C or C+X) do not benefit from modifiers to those Characteristics. <br> See the Character Mounts section of the Characters chapter for examples of interactions with mounts.</i>"
      }
     ],
     "attributes": [

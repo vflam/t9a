@@ -52,61 +52,44 @@
     "hidden": false
    },
    {
-    "id": "987e-a62f-2ad4-f9a0",
-    "name": "Sainted",
-    "comment": "sainted",
+    "id": "9ddd-1fee-614e-3c6c",
+    "name": "Core Unit",
+    "comment": "core_unit",
     "hidden": true,
-    "constraints": [
-     {
-      "id": "1dd0-5b39-2d9f-bef2",
-      "field": "selections",
-      "scope": "roster",
-      "value": -1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "1dd0-5b39-2d9f-bef2",
-      "value": 1,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "roster",
-        "childId": "b857-36f5-551a-d427",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": true,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "1dd0-5b39-2d9f-bef2",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "382c-3b81-1dcd-10d8",
+    "name": "Weapon Enchant",
+    "comment": "weaponEnchantUni",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "cdd6-63fd-357c-eba9",
+    "name": "King Henry the Young or Knights of the Realm or Mounted Serjeants or Hedge Knights",
+    "comment": "tag_Mount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "2392-7a31-36d6-a340",
+    "name": "Castellan",
+    "comment": "castellan",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "3868-5853-4459-8f27",
+    "name": "quin",
+    "comment": "quin",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
    },
    {
     "id": "4d5f-1553-c2a9-35ae",
@@ -151,6 +134,144 @@
       "type": "ceil",
       "value": -1,
       "field": "c0a5-c601-2ea3-0979",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fdc4-da8d-c2ea-4308",
+    "name": "Battle Standard",
+    "comment": "army_bsb",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "2698-56c8-7ed4-5fc5",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "2698-56c8-7ed4-5fc5",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "625e-5b2c-9450-3bd9",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "2698-56c8-7ed4-5fc5",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "625e-5b2c-9450-3bd9",
+    "name": "condtrigger:army bsb:v1",
+    "comment": "condtrigger:army_bsb:v1",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "adbc-ba96-1dd0-2c7c",
+    "name": "towering",
+    "comment": "towering",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "f0ab-cf87-7ea6-9722",
+    "name": "sizeGigantic",
+    "comment": "sizeGigantic",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "987e-a62f-2ad4-f9a0",
+    "name": "Sainted",
+    "comment": "sainted",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "1dd0-5b39-2d9f-bef2",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "1dd0-5b39-2d9f-bef2",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "b857-36f5-551a-d427",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "1dd0-5b39-2d9f-bef2",
       "conditions": [
        {
         "type": "instanceOf",
@@ -214,74 +335,9 @@
     "modifiers": []
    },
    {
-    "id": "fdc4-da8d-c2ea-4308",
-    "name": "Battle Standard",
-    "comment": "army_bsb",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "2698-56c8-7ed4-5fc5",
-      "field": "selections",
-      "scope": "roster",
-      "value": -1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "2698-56c8-7ed4-5fc5",
-      "value": 1,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "roster",
-        "childId": "625e-5b2c-9450-3bd9",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": true,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "2698-56c8-7ed4-5fc5",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
     "id": "3e22-4eeb-1c23-355a",
     "name": "Battle Standard Bearer",
     "comment": "battleStandardBearer",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "625e-5b2c-9450-3bd9",
-    "name": "condtrigger:army bsb:v1",
-    "comment": "condtrigger:army_bsb:v1",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -371,14 +427,6 @@
     "id": "a6ab-48d2-2cad-cf3a",
     "name": "condtrigger:longbow hero:v2",
     "comment": "condtrigger:longbow_hero:v2",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "2392-7a31-36d6-a340",
-    "name": "castellan",
-    "comment": "castellan",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -2240,7 +2288,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "608d-3c81-6459-2b79",
+              "scope": "root-entry-self",
               "childId": "bb47-e352-25fe-c5d4",
               "shared": true,
               "includeChildSelections": true,
@@ -2251,7 +2299,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "608d-3c81-6459-2b79",
+              "scope": "root-entry-self",
               "childId": "0b40-b132-be7a-ea39",
               "shared": true,
               "includeChildSelections": true,
@@ -2308,7 +2356,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "608d-3c81-6459-2b79",
+              "scope": "root-entry-self",
               "childId": "bb47-e352-25fe-c5d4",
               "shared": true,
               "includeChildSelections": true,
@@ -2319,7 +2367,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "608d-3c81-6459-2b79",
+              "scope": "root-entry-self",
               "childId": "0b40-b132-be7a-ea39",
               "shared": true,
               "includeChildSelections": true,
@@ -2376,7 +2424,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "608d-3c81-6459-2b79",
+              "scope": "root-entry-self",
               "childId": "bb47-e352-25fe-c5d4",
               "shared": true,
               "includeChildSelections": true,
@@ -2387,7 +2435,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "608d-3c81-6459-2b79",
+              "scope": "root-entry-self",
               "childId": "0b40-b132-be7a-ea39",
               "shared": true,
               "includeChildSelections": true,
@@ -2660,7 +2708,7 @@
           "type": "atLeast",
           "value": 1,
           "field": "selections",
-          "scope": "608d-3c81-6459-2b79",
+          "scope": "root-entry-self",
           "childId": "f96e-47ab-7d00-0f3b",
           "shared": true,
           "includeChildSelections": true,
@@ -2709,7 +2757,6 @@
           "name": "Divination Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "17b3-c05a-f059-f09a",
           "constraints": [
            {
             "id": "3aed-7c47-ed5a-49e4",
@@ -2850,6 +2897,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "17b3-c05a-f059-f09a",
           "sortIndex": 1,
           "collective": true
          }
@@ -2894,7 +2942,6 @@
           "name": "Druidism Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "5e0d-ec58-5ae3-23d4",
           "constraints": [
            {
             "id": "6044-fbdf-d25d-05a2",
@@ -3035,6 +3082,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "5e0d-ec58-5ae3-23d4",
           "sortIndex": 1,
           "collective": true
          }
@@ -3079,7 +3127,6 @@
           "name": "Shamanism Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "9b1c-b671-7d51-95d1",
           "constraints": [
            {
             "id": "4bb0-3ca9-ddd3-c9d1",
@@ -3220,6 +3267,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "9b1c-b671-7d51-95d1",
           "sortIndex": 1,
           "collective": true
          }
@@ -3435,7 +3483,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "608d-3c81-6459-2b79",
+        "scope": "root-entry-self",
         "childId": "987e-a62f-2ad4-f9a0",
         "shared": true,
         "includeChildSelections": true,
@@ -3724,7 +3772,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "8103-8cee-a9ce-9a84",
+            "scope": "root-entry-self",
             "childId": "fdc4-da8d-c2ea-4308",
             "shared": true,
             "includeChildSelections": true,
@@ -3950,7 +3998,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8103-8cee-a9ce-9a84",
+            "scope": "root-entry-self",
             "childId": "987e-a62f-2ad4-f9a0",
             "shared": true,
             "includeChildSelections": true,
@@ -4063,7 +4111,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8103-8cee-a9ce-9a84",
+            "scope": "root-entry-self",
             "childId": "987e-a62f-2ad4-f9a0",
             "shared": true,
             "includeChildSelections": true,
@@ -4322,7 +4370,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "8103-8cee-a9ce-9a84",
+              "scope": "root-entry-self",
               "childId": "604d-3184-c854-5e7c",
               "shared": true,
               "includeChildSelections": true,
@@ -4545,7 +4593,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8103-8cee-a9ce-9a84",
+            "scope": "root-entry-self",
             "childId": "fdc4-da8d-c2ea-4308",
             "shared": true,
             "includeChildSelections": true,
@@ -4720,7 +4768,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "8103-8cee-a9ce-9a84",
+            "scope": "root-entry-self",
             "childId": "3e22-4eeb-1c23-355a",
             "shared": true,
             "includeChildSelections": true,
@@ -4833,7 +4881,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "8103-8cee-a9ce-9a84",
+        "scope": "root-entry-self",
         "childId": "987e-a62f-2ad4-f9a0",
         "shared": true,
         "includeChildSelections": true,
@@ -5136,7 +5184,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "4d01-f050-70e1-8ce0",
+            "scope": "root-entry-self",
             "childId": "987e-a62f-2ad4-f9a0",
             "shared": true,
             "includeChildSelections": true,
@@ -5155,7 +5203,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "4d01-f050-70e1-8ce0",
+            "scope": "root-entry-self",
             "childId": "ca2a-9c5a-749a-63db",
             "shared": true,
             "includeChildSelections": true,
@@ -5648,7 +5696,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "4d01-f050-70e1-8ce0",
+              "scope": "root-entry-self",
               "childId": "604d-3184-c854-5e7c",
               "shared": true,
               "includeChildSelections": true,
@@ -6360,7 +6408,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "8cb0-6802-1418-9fda",
+            "scope": "root-entry-self",
             "childId": "fdc4-da8d-c2ea-4308",
             "shared": true,
             "includeChildSelections": true,
@@ -6521,7 +6569,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8cb0-6802-1418-9fda",
+            "scope": "root-entry-self",
             "childId": "987e-a62f-2ad4-f9a0",
             "shared": true,
             "includeChildSelections": true,
@@ -6572,7 +6620,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8cb0-6802-1418-9fda",
+            "scope": "root-entry-self",
             "childId": "987e-a62f-2ad4-f9a0",
             "shared": true,
             "includeChildSelections": true,
@@ -6623,7 +6671,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8cb0-6802-1418-9fda",
+            "scope": "root-entry-self",
             "childId": "987e-a62f-2ad4-f9a0",
             "shared": true,
             "includeChildSelections": true,
@@ -6847,7 +6895,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "8cb0-6802-1418-9fda",
+              "scope": "root-entry-self",
               "childId": "604d-3184-c854-5e7c",
               "shared": true,
               "includeChildSelections": true,
@@ -7001,7 +7049,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "8cb0-6802-1418-9fda",
+              "scope": "root-entry-self",
               "childId": "604d-3184-c854-5e7c",
               "shared": true,
               "includeChildSelections": true,
@@ -7163,7 +7211,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "8cb0-6802-1418-9fda",
+              "scope": "root-entry-self",
               "childId": "2392-7a31-36d6-a340",
               "shared": true,
               "includeChildSelections": true,
@@ -7250,7 +7298,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "8cb0-6802-1418-9fda",
+              "scope": "root-entry-self",
               "childId": "2392-7a31-36d6-a340",
               "shared": true,
               "includeChildSelections": true,
@@ -7337,7 +7385,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "8cb0-6802-1418-9fda",
+              "scope": "root-entry-self",
               "childId": "2392-7a31-36d6-a340",
               "shared": true,
               "includeChildSelections": true,
@@ -7424,7 +7472,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "8cb0-6802-1418-9fda",
+              "scope": "root-entry-self",
               "childId": "604d-3184-c854-5e7c",
               "shared": true,
               "includeChildSelections": true,
@@ -7443,7 +7491,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "8cb0-6802-1418-9fda",
+              "scope": "root-entry-self",
               "childId": "2392-7a31-36d6-a340",
               "shared": true,
               "includeChildSelections": true,
@@ -7532,7 +7580,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8cb0-6802-1418-9fda",
+            "scope": "root-entry-self",
             "childId": "fdc4-da8d-c2ea-4308",
             "shared": true,
             "includeChildSelections": true,
@@ -7750,7 +7798,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "8cb0-6802-1418-9fda",
+            "scope": "root-entry-self",
             "childId": "fdc4-da8d-c2ea-4308",
             "shared": true,
             "includeChildSelections": true,
@@ -7939,6 +7987,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "2acc-697f-dcb2-cf16",
+      "name": "Wizard Adept",
+      "hidden": false,
+      "targetId": "0eb6-4350-a18a-a9bf",
       "primary": false
      }
     ],
@@ -8226,7 +8281,6 @@
           "name": "Witchcraft Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "f0af-8fcd-892c-4890",
           "constraints": [
            {
             "id": "e922-89a6-f14c-7288",
@@ -8367,6 +8421,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "f0af-8fcd-892c-4890",
           "sortIndex": 1,
           "collective": true
          }
@@ -8431,6 +8486,13 @@
       "name": "King Henry the Young",
       "hidden": true,
       "targetId": "4d5f-1553-c2a9-35ae",
+      "primary": false
+     },
+     {
+      "id": "c201-08c9-6c55-6a6d",
+      "name": "King Henry the Young",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
       "primary": false
      },
      {
@@ -8775,6 +8837,20 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "9636-34f5-a03f-6d5b",
+      "name": "Knights of the Realm",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
+      "id": "c1ee-ba61-24ad-1b61",
+      "name": "Knights of the Realm",
+      "hidden": true,
+      "targetId": "9ddd-1fee-614e-3c6c",
+      "primary": false
+     },
      {
       "id": "be62-58f3-d5b0-e8b3",
       "name": "⟨Hgt:2⟩",
@@ -9278,7 +9354,7 @@
             "type": "atMost",
             "value": 7,
             "field": "selections",
-            "scope": "3b44-0751-44da-5ba6",
+            "scope": "root-entry-self",
             "childId": "9c9c-d2c0-09b7-a622",
             "shared": true,
             "includeChildSelections": true,
@@ -9459,6 +9535,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "fbaa-d068-e3f5-1279",
+      "name": "Lowborn Archers",
+      "hidden": true,
+      "targetId": "9ddd-1fee-614e-3c6c",
+      "primary": false
+     },
      {
       "id": "c5fb-c8a8-112f-be8c",
       "name": "smallArmsFire",
@@ -10081,6 +10164,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "7205-51d1-bc33-139d",
+      "name": "Lowborn Levies",
+      "hidden": true,
+      "targetId": "9ddd-1fee-614e-3c6c",
+      "primary": false
+     },
+     {
       "id": "d44c-8c7a-1d46-39dd",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -10699,6 +10789,20 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "7625-fce8-f82f-5325",
+      "name": "Mounted Serjeants",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
+      "id": "4245-efa3-8a04-809d",
+      "name": "Mounted Serjeants",
+      "hidden": true,
+      "targetId": "9ddd-1fee-614e-3c6c",
+      "primary": false
+     },
+     {
       "id": "ed5c-c06d-64b8-3624",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -11313,6 +11417,20 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "71b1-b6f6-2250-8e7d",
+      "name": "Hedge Knights",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
+      "id": "9cc4-f1a2-09cf-0f53",
+      "name": "Hedge Knights",
+      "hidden": true,
+      "targetId": "9ddd-1fee-614e-3c6c",
+      "primary": false
+     },
+     {
       "id": "1f89-29aa-0eea-e782",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -11787,7 +11905,7 @@
             "type": "atMost",
             "value": 7,
             "field": "selections",
-            "scope": "f04b-2442-f91e-bbb4",
+            "scope": "root-entry-self",
             "childId": "37c3-3d18-da86-49f6",
             "shared": true,
             "includeChildSelections": true,
@@ -12394,7 +12512,7 @@
                   "type": "atMost",
                   "value": 0,
                   "field": "selections",
-                  "scope": "b9f6-ce16-1764-8c3c",
+                  "scope": "root-entry-self",
                   "childId": "132a-876e-ef1f-e1d7",
                   "shared": true,
                   "includeChildSelections": true,
@@ -12466,7 +12584,7 @@
                   "type": "atMost",
                   "value": 0,
                   "field": "selections",
-                  "scope": "b9f6-ce16-1764-8c3c",
+                  "scope": "root-entry-self",
                   "childId": "132a-876e-ef1f-e1d7",
                   "shared": true,
                   "includeChildSelections": true,
@@ -12664,6 +12782,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "b36c-9a41-3d02-ac23",
+      "name": "Knights of the Quest",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
      {
       "id": "4dde-c635-f01d-32d7",
       "name": "⟨Hgt:2⟩",
@@ -13268,6 +13393,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "ef89-1c1f-fb27-0efc",
+      "name": "Knights Penitent",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
       "id": "f7fa-20fa-385e-6759",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -13780,6 +13912,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "0aaf-e684-32a2-78a0",
+      "name": "Knights of the Court",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
       "id": "fe29-f96e-4853-b185",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -14233,7 +14372,7 @@
             "type": "atMost",
             "value": 7,
             "field": "selections",
-            "scope": "8f10-820d-5a95-5b52",
+            "scope": "root-entry-self",
             "childId": "d7f1-1706-0b56-bf01",
             "shared": true,
             "includeChildSelections": true,
@@ -14965,7 +15104,7 @@
             "type": "atMost",
             "value": 19,
             "field": "selections",
-            "scope": "bf5d-e478-5eea-0597",
+            "scope": "root-entry-self",
             "childId": "3bfd-1947-bfa2-403c",
             "shared": true,
             "includeChildSelections": true,
@@ -14984,7 +15123,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "bf5d-e478-5eea-0597",
+            "scope": "root-entry-self",
             "childId": "d7b8-2b27-8550-8e3c",
             "shared": true,
             "includeChildSelections": true,
@@ -15146,6 +15285,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "2747-755f-648c-60f7",
+      "name": "Pegasus Knights",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
      {
       "id": "1343-7523-3a36-ced1",
       "name": "⟨Hgt:3⟩",
@@ -15614,7 +15760,7 @@
             "type": "atMost",
             "value": 3,
             "field": "selections",
-            "scope": "810f-0395-272b-72ef",
+            "scope": "root-entry-self",
             "childId": "9966-be08-ec9d-363b",
             "shared": true,
             "includeChildSelections": true,
@@ -16454,6 +16600,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "47b7-f28d-25ad-a730",
+      "name": "Sky Heralds",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
       "id": "949e-3dd5-7cb7-1c28",
       "name": "Sky Heralds",
       "hidden": true,
@@ -17078,6 +17231,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "e710-ec25-08d4-03bb",
+      "name": "Yeoman Outriders",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
      {
       "id": "756f-765f-a7cc-07e4",
       "name": "⟨Hgt:2⟩",
@@ -17741,6 +17901,13 @@
       "name": "Fey Knight",
       "hidden": true,
       "targetId": "68c7-0265-c38c-8acc",
+      "primary": false
+     },
+     {
+      "id": "df12-5d98-3d0e-6725",
+      "name": "Fey Knight",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
       "primary": false
      },
      {
@@ -20031,6 +20198,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "26df-d005-ae7b-c4c9",
+      "name": "Destrier",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
       "id": "4866-b469-e073-ca78",
       "name": "Destrier",
       "hidden": true,
@@ -20273,6 +20447,13 @@
     "type": "mount",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "4abb-985f-ff65-7f05",
+      "name": "Heraldic Steed",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
      {
       "id": "cee3-bd0e-c59f-5735",
       "name": "Heraldic Steed",
@@ -20552,6 +20733,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "9769-25c7-a7e5-cd09",
+      "name": "Revered Unicorn",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
       "id": "1722-1863-63ef-67f4",
       "name": "Revered Unicorn",
       "hidden": true,
@@ -20816,6 +21004,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "2ae0-3d68-4f9c-ecc4",
+      "name": "Pegasus Charger",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
+     {
       "id": "3f7f-1a86-db1d-5852",
       "name": "Pegasus Charger",
       "hidden": true,
@@ -21079,6 +21274,13 @@
     "type": "mount",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "24b2-b8cd-3b5d-6751",
+      "name": "Hippogriff",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
      {
       "id": "6ba1-c1c6-f1c0-4eea",
       "name": "Hippogriff",
@@ -21350,6 +21552,13 @@
     "type": "mount",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "2346-c0ad-e8db-36cb",
+      "name": "Fey Steed",
+      "hidden": true,
+      "targetId": "cdd6-63fd-357c-eba9",
+      "primary": false
+     },
      {
       "id": "bb22-b25a-b15e-ca56",
       "name": "Fey Steed",
@@ -22148,7 +22357,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "9ddd-1fee-614e-3c6c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22520,7 +22749,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "382c-3b81-1dcd-10d8",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22575,7 +22824,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "382c-3b81-1dcd-10d8",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22586,7 +22855,15 @@
       "targetId": "cc3d-146f-8e56-2c6f"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "b88c-e471-bbb2-1a66",
+      "name": "Mortal Reminder",
+      "hidden": true,
+      "targetId": "382c-3b81-1dcd-10d8",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -22630,7 +22907,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "382c-3b81-1dcd-10d8",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22641,7 +22938,15 @@
       "targetId": "0e12-0abb-e838-bd42"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "db76-fe61-834e-7c22",
+      "name": "Divine Judgement",
+      "hidden": true,
+      "targetId": "382c-3b81-1dcd-10d8",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -22685,7 +22990,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "382c-3b81-1dcd-10d8",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22696,7 +23021,15 @@
       "targetId": "a874-7c1e-912f-668f"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "78f3-a0dc-1fd4-b473",
+      "name": "Uther's Mettle",
+      "hidden": true,
+      "targetId": "382c-3b81-1dcd-10d8",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -22795,7 +23128,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "cdd6-63fd-357c-eba9",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22947,7 +23300,27 @@
       "percentValue": false
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "2392-7a31-36d6-a340",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23028,7 +23401,6 @@
           "name": "Witchcraft Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "f0af-8fcd-892c-4890",
           "constraints": [
            {
             "id": "f095-6e2b-ff76-4e6f",
@@ -23169,6 +23541,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "f0af-8fcd-892c-4890",
           "sortIndex": 1,
           "collective": true
          }
@@ -23211,7 +23584,46 @@
       "percentValue": false
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "3868-5853-4459-8f27",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "2392-7a31-36d6-a340",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23261,7 +23673,65 @@
       "percentValue": false
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "4d5f-1553-c2a9-35ae",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "3868-5853-4459-8f27",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "2392-7a31-36d6-a340",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23272,7 +23742,15 @@
       "targetId": "69f6-e224-b7c8-6b0a"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "b2e4-7f03-9c5b-4700",
+      "name": "Bannerman",
+      "hidden": true,
+      "targetId": "625e-5b2c-9450-3bd9",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -23303,7 +23781,46 @@
       "percentValue": false
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "3868-5853-4459-8f27",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "2392-7a31-36d6-a340",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23384,7 +23901,6 @@
           "name": "Divination Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "17b3-c05a-f059-f09a",
           "constraints": [
            {
             "id": "ee74-04bd-425f-45a2",
@@ -23525,6 +24041,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "17b3-c05a-f059-f09a",
           "sortIndex": 1,
           "collective": true
          }
@@ -23567,7 +24084,46 @@
       "percentValue": false
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "3868-5853-4459-8f27",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "4d5f-1553-c2a9-35ae",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23578,7 +24134,15 @@
       "targetId": "9207-d8a1-7c98-d246"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "879b-ac21-953c-6314",
+      "name": "Castellan",
+      "hidden": true,
+      "targetId": "2392-7a31-36d6-a340",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -23897,7 +24461,46 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "adbc-ba96-1dd0-2c7c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f0ab-cf87-7ea6-9722",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -26282,7 +26885,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The bearer gains Captain, Commanding Presence (6\", Commonfolk)."
+      "$text": "The bearer gains <b>Captain</b>, <b>Commanding Presence (6\"</b>, and <b>Commonfolk)</b>."
      }
     ],
     "attributes": [
@@ -26408,7 +27011,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model gains Clergy, Ordo Minister, and Holy Vows, and loses <b>Commonfolk</b>."
+      "$text": "The model gains <b>Clergy</b>, <b>Ordo Minister</b>, and Holy Vows, and loses <b>Commonfolk</b>."
      }
     ],
     "attributes": [
@@ -26450,7 +27053,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Fly, Wizard Conclave (1)<br> The unit selects its spells from the following: Predator’s Instinct (Shamanism)"
+      "$text": "The model gains <b>Fly</b> and <b>Wizard Conclave (1)</b><br> The unit selects its spells from the following: Predator’s Instinct (Shamanism)"
      }
     ],
     "attributes": [
@@ -26471,7 +27074,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Wizard Conclave (2).<br> The unit selects its spells from the following: Fountain of Youth (Druidism), Stone Skin (Druidism), Mind Fog (Witchcraft), Shrouded Steps (Witchcraft),"
+      "$text": "The model gains <b>Wizard Conclave (2)</b>.<br> The unit selects its spells from the following: Fountain of Youth (Druidism), Stone Skin (Druidism), Mind Fog (Witchcraft), Shrouded Steps (Witchcraft),"
      }
     ],
     "attributes": [
@@ -26720,7 +27323,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model’s unit gains Magical Attacks, Strider (Forest)."
+      "$text": "The model’s unit gains <b>Magical Attacks</b> and <b>Strider (Forest).</b>"
      }
     ],
     "attributes": [
@@ -26775,7 +27378,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model gains Attached, Exclusive (Rank-and-File). <br>In addition, if Deployed in a unit where the Rank-and-File models have <b>Nobility</b>. Then all Rank-and-File model parts without mount gain a Bastard Sword and <b>Weapon Master</b>. Duration: Permanent."
+      "$text": "The model gains <b>Attached</b> and <b>Exclusive (Rank-and-File)</b>. <br>In addition, if Deployed in a unit where the Rank-and-File models have <b>Nobility</b>. Then all Rank-and-File model parts without mount gain a Bastard Sword and <b>Weapon Master</b>. Duration: Permanent."
      }
     ],
     "attributes": [
@@ -26838,7 +27441,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Hard Target (1), Skirmisher."
+      "$text": "The model gains <b>Hard Target (1)</b> and <b>Skirmisher</b>."
      }
     ],
     "attributes": [
@@ -26948,7 +27551,7 @@
      {
       "name": "Banner Enchant",
       "typeId": "230e-af1c-f984-b6df",
-      "$text": "One use only. May be activated when the bearer’s unit is chosen as the target of an Orison. <br> The bearer’s unit gains the effects of all Orisons <i>(i.e Discipline <b>set</b> to 9, +2 Off, Aegis (5+), Magical Attacks, and ignore <b>Parry</b></i>), with Duration: One Turn."
+      "$text": "One use only. May be activated when the bearer’s unit is chosen as the target of an Orison. <br> The bearer’s unit gains the effects of all Orisons <i>(i.e Discipline <b>set</b> to 9, +2 Off, <b>Aegis (5+)</b>, <b>Magical Attacks</b>, and ignore <b>Parry</b></i>), with Duration: One Turn."
      }
     ],
     "attributes": [
@@ -27119,7 +27722,7 @@
      {
       "name": "Banner Enchant",
       "typeId": "230e-af1c-f984-b6df",
-      "$text": "The bearer’s unit gains Afflict (−1 Dis), Horror."
+      "$text": "The bearer’s unit gains <b>Afflict (−1 Dis)</b> and <b>Horror</b>."
      }
     ],
     "attributes": [
@@ -27334,7 +27937,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model part gains +1 Att, and the model gains <b>Fearless</b>.<br>The model is <b>always</b> considered to be under the effect of all Orisons at the same time <i>(i.e. Discipline <b>set</b> to 9, +2 Off, Aegis (5+), Magical Attacks, ignore <b>Parry</b>)</i>.<br>This does not prevent the model’s unit from being the target of an Orison, although the model itself does not benefit from this additional Orison."
+      "$text": "The model part gains +1 Att, and the model gains <b>Fearless</b>.<br>The model is <b>always</b> considered to be under the effect of all Orisons at the same time <i>(i.e. Discipline <b>set</b> to 9, +2 Off, <b>Aegis (5+)</b>, <b>Magical Attacks</b>, ignore <b>Parry</b>)</i>.<br>This does not prevent the model’s unit from being the target of an Orison, although the model itself does not benefit from this additional Orison."
      }
     ],
     "modifiers": [
@@ -27473,7 +28076,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "During Pre-game Selections, an army containing <b>The Quest</b> selects a unit entry from the opponent’s Army Book, which cannot be a Character mount <i>(but can be a Character Entry)</i>. <br> All instances of the selected Unit Entry in the opponent’s Army List are marked with a Quest Marker. <br> Model parts with <b>The Quest</b> benefit from Lethal Strike (against units containing a Quest Marker), Zeal (against units containing a Quest Marker)."
+      "$text": "During Pre-game Selections, an army containing <b>The Quest</b> selects a unit entry from the opponent’s Army Book, which cannot be a Character mount <i>(but can be a Character Entry)</i>. <br> All instances of the selected Unit Entry in the opponent’s Army List are marked with a Quest Marker. <br> Model parts with <b>The Quest</b> benefit from <b>Lethal Strike (against units containing a Quest Marker)</b> and <b>Zeal (against units containing a Quest Marker)</b>."
      }
     ],
     "attributes": [

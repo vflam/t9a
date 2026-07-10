@@ -52,6 +52,38 @@
     "hidden": false
    },
    {
+    "id": "6492-4c68-3fa6-5d79",
+    "name": "Core Unit",
+    "comment": "core_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "175f-4f33-c0c4-fdaa",
+    "name": "Weapon Enchant",
+    "comment": "weaponEnchantUni",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "4f2f-54e6-f856-a5a4",
+    "name": "Dread Prince or Silexian Officer or Temple Exarch or The Black Rose",
+    "comment": "tag_Metal Armour",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "121e-ecd8-fd18-e138",
+    "name": "Mount",
+    "comment": "mount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "8028-c52b-5bed-56a0",
     "name": "General",
     "comment": "general",
@@ -128,14 +160,6 @@
     "id": "cec2-8b64-c8f1-9986",
     "name": "condtrigger:army general:v1",
     "comment": "condtrigger:army_general:v1",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "121e-ecd8-fd18-e138",
-    "name": "Mount",
-    "comment": "mount",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -1312,6 +1336,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "e937-4e49-04c9-0e5a",
+      "name": "Dread Prince",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
+     {
       "id": "572f-98f5-4bea-c65b",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -1555,7 +1586,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "ef49-4897-48e9-472d",
+            "scope": "root-entry-self",
             "childId": "4b88-cb15-0fcf-8640",
             "shared": true,
             "includeChildSelections": true,
@@ -1655,7 +1686,7 @@
                 "type": "atMost",
                 "value": 0,
                 "field": "selections",
-                "scope": "ef49-4897-48e9-472d",
+                "scope": "root-entry-self",
                 "childId": "8028-c52b-5bed-56a0",
                 "shared": true,
                 "includeChildSelections": true,
@@ -1718,7 +1749,7 @@
                 "type": "atMost",
                 "value": 0,
                 "field": "selections",
-                "scope": "ef49-4897-48e9-472d",
+                "scope": "root-entry-self",
                 "childId": "8028-c52b-5bed-56a0",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2151,7 +2182,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "ef49-4897-48e9-472d",
+            "scope": "root-entry-self",
             "childId": "121e-ecd8-fd18-e138",
             "shared": true,
             "includeChildSelections": true,
@@ -2235,7 +2266,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "ef49-4897-48e9-472d",
+              "scope": "root-entry-self",
               "childId": "121e-ecd8-fd18-e138",
               "shared": true,
               "includeChildSelections": true,
@@ -2389,7 +2420,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "ef49-4897-48e9-472d",
+              "scope": "root-entry-self",
               "childId": "121e-ecd8-fd18-e138",
               "shared": true,
               "includeChildSelections": true,
@@ -2718,6 +2749,13 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "da3e-a955-c304-08e1",
+      "name": "Silexian Officer",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
      {
       "id": "5014-3188-6d04-5f3a",
       "name": "⟨Hgt:1⟩",
@@ -3242,7 +3280,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "e85d-2b7e-2fdb-4008",
+            "scope": "root-entry-self",
             "childId": "0066-ca34-b24f-16bd",
             "shared": true,
             "includeChildSelections": true,
@@ -3309,7 +3347,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "e85d-2b7e-2fdb-4008",
+            "scope": "root-entry-self",
             "childId": "0066-ca34-b24f-16bd",
             "shared": true,
             "includeChildSelections": true,
@@ -3368,7 +3406,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "e85d-2b7e-2fdb-4008",
+            "scope": "root-entry-self",
             "childId": "0066-ca34-b24f-16bd",
             "shared": true,
             "includeChildSelections": true,
@@ -3427,7 +3465,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "e85d-2b7e-2fdb-4008",
+            "scope": "root-entry-self",
             "childId": "e28f-37dc-1ee9-6c7c",
             "shared": true,
             "includeChildSelections": true,
@@ -3486,7 +3524,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "e85d-2b7e-2fdb-4008",
+            "scope": "root-entry-self",
             "childId": "e28f-37dc-1ee9-6c7c",
             "shared": true,
             "includeChildSelections": true,
@@ -3545,7 +3583,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "e85d-2b7e-2fdb-4008",
+            "scope": "root-entry-self",
             "childId": "e28f-37dc-1ee9-6c7c",
             "shared": true,
             "includeChildSelections": true,
@@ -3702,7 +3740,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "e85d-2b7e-2fdb-4008",
+              "scope": "root-entry-self",
               "childId": "121e-ecd8-fd18-e138",
               "shared": true,
               "includeChildSelections": true,
@@ -3790,7 +3828,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "e85d-2b7e-2fdb-4008",
+              "scope": "root-entry-self",
               "childId": "121e-ecd8-fd18-e138",
               "shared": true,
               "includeChildSelections": true,
@@ -4154,7 +4192,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "e85d-2b7e-2fdb-4008",
+            "scope": "root-entry-self",
             "childId": "3cca-2875-8359-739b",
             "shared": true,
             "includeChildSelections": true,
@@ -4657,6 +4695,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "d55e-ded7-b2d1-fcd5",
+      "name": "Temple Exarch",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
+     {
       "id": "fe8d-5b32-cf69-e613",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -4668,6 +4713,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "e37d-3622-0313-4b5b",
+      "name": "Wizard Apprentice",
+      "hidden": false,
+      "targetId": "a71d-a1c0-93ae-9ac5",
       "primary": false
      }
     ],
@@ -5124,7 +5176,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "82fe-afb4-2062-6e27",
+            "scope": "root-entry-self",
             "childId": "3cca-2875-8359-739b",
             "shared": true,
             "includeChildSelections": true,
@@ -5205,7 +5257,7 @@
           "type": "atLeast",
           "value": 1,
           "field": "selections",
-          "scope": "82fe-afb4-2062-6e27",
+          "scope": "root-entry-self",
           "childId": "5d13-6451-0334-284b",
           "shared": true,
           "includeChildSelections": true,
@@ -5254,7 +5306,6 @@
           "name": "Alchemy Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "e7fb-de28-fe31-1798",
           "constraints": [
            {
             "id": "52be-9130-4870-6953",
@@ -5395,6 +5446,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "e7fb-de28-fe31-1798",
           "sortIndex": 1,
           "collective": true
          }
@@ -5439,7 +5491,6 @@
           "name": "Divination Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "17b3-c05a-f059-f09a",
           "constraints": [
            {
             "id": "bb2a-942d-0ae5-c8f1",
@@ -5580,6 +5631,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "17b3-c05a-f059-f09a",
           "sortIndex": 1,
           "collective": true
          }
@@ -5668,7 +5720,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "82fe-afb4-2062-6e27",
+              "scope": "root-entry-self",
               "childId": "121e-ecd8-fd18-e138",
               "shared": true,
               "includeChildSelections": true,
@@ -5965,7 +6017,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "82fe-afb4-2062-6e27",
+            "scope": "root-entry-self",
             "childId": "3cca-2875-8359-739b",
             "shared": true,
             "includeChildSelections": true,
@@ -6351,7 +6403,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "3e30-895b-2210-89fe",
+            "scope": "root-entry-self",
             "childId": "4b88-cb15-0fcf-8640",
             "shared": true,
             "includeChildSelections": true,
@@ -6636,7 +6688,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "3e30-895b-2210-89fe",
+            "scope": "root-entry-self",
             "childId": "4698-a2c4-9a14-9602",
             "shared": true,
             "includeChildSelections": true,
@@ -6695,7 +6747,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "3e30-895b-2210-89fe",
+            "scope": "root-entry-self",
             "childId": "4698-a2c4-9a14-9602",
             "shared": true,
             "includeChildSelections": true,
@@ -6913,7 +6965,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "3e30-895b-2210-89fe",
+            "scope": "root-entry-self",
             "childId": "5d13-6451-0334-284b",
             "shared": true,
             "includeChildSelections": true,
@@ -6962,7 +7014,6 @@
             "name": "Cosmology Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "cd2d-2d05-7117-8aab",
             "constraints": [
              {
               "id": "9498-4fda-9bc3-fb07",
@@ -7103,6 +7154,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "cd2d-2d05-7117-8aab",
             "sortIndex": 1,
             "collective": true
            }
@@ -7147,7 +7199,6 @@
             "name": "Evocation Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "8c0c-e97a-397d-574d",
             "constraints": [
              {
               "id": "cc14-d32a-30de-46a0",
@@ -7288,6 +7339,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "8c0c-e97a-397d-574d",
             "sortIndex": 1,
             "collective": true
            }
@@ -7332,7 +7384,6 @@
             "name": "Witchcraft Spells",
             "hidden": false,
             "type": "selectionEntryGroup",
-            "targetId": "f0af-8fcd-892c-4890",
             "constraints": [
              {
               "id": "d186-e227-ee8e-b695",
@@ -7473,6 +7524,7 @@
               "conditionGroups": []
              }
             ],
+            "targetId": "f0af-8fcd-892c-4890",
             "sortIndex": 1,
             "collective": true
            }
@@ -8114,6 +8166,13 @@
       "primary": false
      },
      {
+      "id": "1b08-c7bd-724d-4068",
+      "name": "The Black Rose",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
+     {
       "id": "cbd8-074d-8816-7be0",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -8438,6 +8497,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "0eb0-3803-9b8d-3353",
+      "name": "Silexian Spears",
+      "hidden": true,
+      "targetId": "6492-4c68-3fa6-5d79",
+      "primary": false
+     },
      {
       "id": "a1ae-9a15-140f-3505",
       "name": "⟨Hgt:1⟩",
@@ -8864,6 +8930,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "add0-a72a-dd77-f438",
+      "name": "Silexian Auxiliaries",
+      "hidden": true,
+      "targetId": "6492-4c68-3fa6-5d79",
+      "primary": false
+     },
      {
       "id": "b435-b6db-6a4c-90a9",
       "name": "⟨Hgt:1⟩",
@@ -9297,6 +9370,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "e648-cbed-c605-0f0a",
+      "name": "Corsairs",
+      "hidden": true,
+      "targetId": "6492-4c68-3fa6-5d79",
+      "primary": false
+     },
      {
       "id": "7b7e-63ce-cbd0-3900",
       "name": "⟨Hgt:1⟩",
@@ -9878,6 +9958,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "137b-9846-391b-c734",
+      "name": "Temple Militants",
+      "hidden": true,
+      "targetId": "6492-4c68-3fa6-5d79",
+      "primary": false
+     },
+     {
       "id": "5bd1-307e-0717-3dc5",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -10310,6 +10397,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "8239-0cf1-8232-921e",
+      "name": "Shadow Riders",
+      "hidden": true,
+      "targetId": "6492-4c68-3fa6-5d79",
+      "primary": false
+     },
      {
       "id": "f1fa-2cde-1ca8-bbf7",
       "name": "⟨Hgt:2⟩",
@@ -10929,6 +11023,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "ee01-4f7a-30f0-deb9",
+      "name": "Dread Knights",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
+     {
       "id": "10b8-e71c-88c2-26ff",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -11524,6 +11625,13 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "6a32-9885-3e36-1d5f",
+      "name": "Raptor Chariot",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
      {
       "id": "7f6a-d868-fab9-dc33",
       "name": "⟨Hgt:4⟩",
@@ -13266,6 +13374,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "8540-3d26-859d-63ee",
+      "name": "Judicators",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
+     {
       "id": "cb4d-b00c-90dd-dd72",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -13664,6 +13779,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "2168-bc1e-712a-3cb3",
+      "name": "Obsidian Guard",
+      "hidden": true,
+      "targetId": "4f2f-54e6-f856-a5a4",
+      "primary": false
+     },
      {
       "id": "bedd-3473-b2c7-74ab",
       "name": "⟨Hgt:1⟩",
@@ -16398,7 +16520,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "4656-8ee7-96a2-c98a",
+        "scope": "root-entry-self",
         "childId": "fce3-bbc3-d6e8-d6e5",
         "shared": true,
         "includeChildSelections": true,
@@ -20028,7 +20150,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "7204-def5-aded-462c",
+        "scope": "root-entry-self",
         "childId": "d5fb-07ed-8b7d-e618",
         "shared": true,
         "includeChildSelections": true,
@@ -20443,7 +20565,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6492-4c68-3fa6-5d79",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -20650,7 +20792,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "175f-4f33-c0c4-fdaa",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -20705,7 +20867,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "175f-4f33-c0c4-fdaa",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -20716,7 +20898,15 @@
       "targetId": "ff92-0ebe-03d7-24ed"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "796d-29ee-00da-2b0d",
+      "name": "Mastery of Slaughter",
+      "hidden": true,
+      "targetId": "175f-4f33-c0c4-fdaa",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -20760,7 +20950,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "175f-4f33-c0c4-fdaa",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -20771,7 +20981,15 @@
       "targetId": "63bc-e17c-0d28-0e31"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "24ac-bf7e-63e7-527a",
+      "name": "Pride of Gar Daecos",
+      "hidden": true,
+      "targetId": "175f-4f33-c0c4-fdaa",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -20815,7 +21033,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "175f-4f33-c0c4-fdaa",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -20826,7 +21064,15 @@
       "targetId": "ecbb-aaae-fdfa-3996"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "1df3-5b72-cc34-e664",
+      "name": "Transcendence",
+      "hidden": true,
+      "targetId": "175f-4f33-c0c4-fdaa",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -20870,7 +21116,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "175f-4f33-c0c4-fdaa",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -20881,7 +21147,15 @@
       "targetId": "4ddd-3579-726d-8712"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "573f-bf06-a555-f151",
+      "name": "Lacerating Touch",
+      "hidden": true,
+      "targetId": "175f-4f33-c0c4-fdaa",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -20925,7 +21199,46 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "4f2f-54e6-f856-a5a4",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "121e-ecd8-fd18-e138",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -23267,7 +23580,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Attached, Exclusive (Height 1), Frenzy, Fury, War Platform, Unruly.<br> Model parts with Elf in friendly units within 12\" of the <b>Altar of Nabh</b> gain <b>Fury</b>."
+      "$text": "The model gains <b>Attached</b>, <b>Exclusive (Height 1)</b>, <b>Frenzy</b>, <b>Fury</b>, <b>Unruly</b>, and <b>War Platform</b>.<br> Model parts with Elf in friendly units within 12\" of the <b>Altar of Nabh</b> gain <b>Fury</b>."
      }
     ],
     "attributes": [
@@ -23288,7 +23601,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model’s Charge Speed and Mobility are <b>always</b> 0\". <br> In addition, it gains Channel (2), Emplacement, Solitary, Fearless, Stubborn, Unstable. <br> When another friendly unit within 18\" of the model suffers one or more HP losses from an enemy attack, the <b>Altar of Tila</b> may cause three hits with Str 4, AP 2, and <b>Unmodifiable</b> onto the enemy unit that caused those losses. This effect can only be used once per phase."
+      "$text": "The model’s Charge Speed and Mobility are <b>always</b> 0\". <br> In addition, it gains <b>Channel (2)</b>, <b>Emplacement</b>, <b>Fearless</b>, <b>Solitary</b>, <b>Stubborn</b>, and <b>Unstable</b>. <br> When another friendly unit within 18\" of the model suffers one or more HP losses from an enemy attack, the <b>Altar of Tila</b> may cause three hits with Str 4, AP 2, and <b>Unmodifiable</b> onto the enemy unit that caused those losses. This effect can only be used once per phase."
      }
     ],
     "attributes": [
@@ -23309,7 +23622,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Attached, War Platform, Exclusive (Height 1), and a single Attendant model part gains <b>Petrifying Stare</b>. <br> Whenever a friendly unit within 12\" of the <b>Altar of Yema</b> initiates any kind of move <i>(see the Definition and Terminology chapter in the Reference Handbook)</i>, the unit gains +1 Mobility and <b>Devastating Charge (Strider)</b>, with Duration: End of Turn."
+      "$text": "The model gains <b>Attached</b>, <b>Exclusive (Height 1)</b>, <b>War Platform</b>, and a single Attendant model part gains <b>Petrifying Stare</b>. <br> Whenever a friendly unit within 12\" of the <b>Altar of Yema</b> initiates any kind of move <i>(see the Definition and Terminology chapter in the Reference Handbook)</i>, the unit gains +1 Mobility and <b>Devastating Charge (Strider)</b>, with Duration: End of Turn."
      }
     ],
     "attributes": [
@@ -23627,7 +23940,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Aegis (5+, against Melee Attacks), First Strike (+1 Att),Elven Finesse, Weapon Master. <br> It also gains Shield, Great Weapon, Halberd."
+      "$text": "The model gains <b>Aegis (5+</b>, <b>against Melee Attacks)</b>, <b>Elven Finesse</b>, <b>First Strike (+1 Att)</b>, and <b>Weapon Master</b>. <br> It also gains Great Weapon, Halberd, and Shield."
      }
     ],
     "attributes": [
@@ -24046,7 +24359,7 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "At the model part’s Agility Step, each enemy unit in contact with it suffers two hits that are <b>set</b> to-wound on 5+, <b>always</b> have AP 10, Magical Attacks, Unmodifiable."
+      "$text": "At the model part’s Agility Step, each enemy unit in contact with it suffers two hits that are <b>set</b> to-wound on 5+, <b>always</b> have AP 10, <b>Magical Attacks</b> and <b>Unmodifiable</b>."
      }
     ],
     "attributes": [
@@ -24277,7 +24590,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "While mounted on an Elven Horse, the model gains Vanguard (12\"),March and Shoot."
+      "$text": "While mounted on an Elven Horse, the model gains <b>March and Shoot</b> and <b>Vanguard (12\")</b>."
      }
     ],
     "attributes": [

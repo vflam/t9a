@@ -52,6 +52,191 @@
     "hidden": false
    },
    {
+    "id": "f60a-e790-d784-7b42",
+    "name": "Core Unit",
+    "comment": "core_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "c41c-7f73-4f34-ef9c",
+    "name": "Weapon Enchant",
+    "comment": "weaponEnchantUni",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "e24e-728b-74d4-726e",
+    "name": "Mount",
+    "comment": "mount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "082c-9761-f479-c1e9",
+    "name": "Forest Prince",
+    "comment": "prince",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "4504-be40-c1b2-c139",
+    "name": "Chieftain",
+    "comment": "chieftain",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "d945-a40b-3f17-ecae",
+    "name": "Blade Dancer",
+    "comment": "blade_dancer",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "5d11-29dc-de75-afb1",
+    "name": "Treefather Ancient or Avatar of Nature or Dryad Ancient or Thicket Shepherd",
+    "comment": "sylvan_spirit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "419c-1fbc-3300-6198",
+    "name": "Captain and Attached",
+    "comment": "attached",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "cd7c-7d06-137d-3c59",
+    "name": "Elven Horse",
+    "comment": "elvenHorse_mount_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "2da5-6cb8-4f21-adb0",
+    "name": "Great Elk",
+    "comment": "greatElk_mount_unit",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "ec29-b745-8d7e-6a63",
+    "name": "Sylvan Blades or Lance",
+    "comment": "sylvan_blades_or_lance",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "0740-091d-73f1-af83",
+    "name": "Battle Standard",
+    "comment": "army_bsb",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "f1a7-d8e2-833a-59af",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "f1a7-d8e2-833a-59af",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "9a5a-1b78-eaa0-1d90",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "f1a7-d8e2-833a-59af",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c5db-0eac-5aad-ea08",
+    "name": "Battle Standard Bearer",
+    "comment": "not_a_leader",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "b6e2-bfdb-3697-f483",
+    "name": "Shield or Lance and Shield",
+    "comment": "shield",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "09d3-32e3-6986-cf75",
+    "name": "Sylvan Bow",
+    "comment": "sylvanBow",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "dba2-40d0-abbd-d5ac",
+    "name": "Treefather Ancient",
+    "comment": "treefather_ancient",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "f50e-0bab-1426-d100",
+    "name": "Forest Dragon or Forest Eagle",
+    "comment": "flyer",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "6286-89ff-10e1-c702",
     "name": "General",
     "comment": "army_general",
@@ -117,14 +302,6 @@
     "modifiers": []
    },
    {
-    "id": "d945-a40b-3f17-ecae",
-    "name": "blade dancer",
-    "comment": "blade_dancer",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "bd3b-0319-6252-240b",
     "name": "Sylvan Shooting",
     "comment": "sylvan_shooting",
@@ -182,77 +359,12 @@
     ]
    },
    {
-    "id": "e24e-728b-74d4-726e",
-    "name": "Mount",
-    "comment": "mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "85d0-2784-efc1-9793",
     "name": "Captain and Attached",
     "comment": "captain",
     "hidden": true,
     "constraints": [],
     "modifiers": []
-   },
-   {
-    "id": "0740-091d-73f1-af83",
-    "name": "Battle Standard",
-    "comment": "army_bsb",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "f1a7-d8e2-833a-59af",
-      "field": "selections",
-      "scope": "roster",
-      "value": -1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "f1a7-d8e2-833a-59af",
-      "value": 1,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "roster",
-        "childId": "9a5a-1b78-eaa0-1d90",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": true,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "f1a7-d8e2-833a-59af",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "9a5a-1b78-eaa0-1d90",
@@ -1365,6 +1477,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "ebec-cc20-4331-06ca",
+      "name": "Forest Prince",
+      "hidden": true,
+      "targetId": "082c-9761-f479-c1e9",
+      "primary": false
+     },
+     {
       "id": "98be-5ce4-32df-3054",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -1896,7 +2015,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "7d9d-dff1-d1f7-2402",
+            "scope": "root-entry-self",
             "childId": "d945-a40b-3f17-ecae",
             "shared": true,
             "includeChildSelections": true,
@@ -1917,7 +2036,15 @@
           "targetId": "cfbb-118b-629b-24b9"
          }
         ],
-        "categoryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "df07-1891-ab26-6b97",
+          "name": "Shield",
+          "hidden": true,
+          "targetId": "b6e2-bfdb-3697-f483",
+          "primary": false
+         }
+        ],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [
@@ -2090,7 +2217,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "7d9d-dff1-d1f7-2402",
+              "scope": "root-entry-self",
               "childId": "d945-a40b-3f17-ecae",
               "shared": true,
               "includeChildSelections": true,
@@ -2121,6 +2248,13 @@
            }
           ],
           "categoryLinks": [
+           {
+            "id": "1150-1906-d981-2dad",
+            "name": "Sylvan Bow (0+)",
+            "hidden": true,
+            "targetId": "09d3-32e3-6986-cf75",
+            "primary": false
+           },
            {
             "id": "bd46-534b-4dc6-976c",
             "name": "Sylvan Bow (0+)",
@@ -2219,7 +2353,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "7d9d-dff1-d1f7-2402",
+              "scope": "root-entry-self",
               "childId": "e24e-728b-74d4-726e",
               "shared": true,
               "includeChildSelections": true,
@@ -2307,7 +2441,15 @@
             "targetId": "8716-1f38-2caf-3ef5"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "d8d2-08ff-9210-12c3",
+            "name": "Sylvan Blades",
+            "hidden": true,
+            "targetId": "ec29-b745-8d7e-6a63",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -2447,7 +2589,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "7d9d-dff1-d1f7-2402",
+              "scope": "root-entry-self",
               "childId": "e24e-728b-74d4-726e",
               "shared": true,
               "includeChildSelections": true,
@@ -2468,7 +2610,15 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "313e-0578-ac39-0daa",
+            "name": "Lance",
+            "hidden": true,
+            "targetId": "ec29-b745-8d7e-6a63",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -2670,6 +2820,13 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "7a21-0285-47b2-bde1",
+      "name": "Chieftain",
+      "hidden": true,
+      "targetId": "4504-be40-c1b2-c139",
+      "primary": false
+     },
      {
       "id": "ba2c-58f0-c54a-a580",
       "name": "⟨Hgt:1⟩",
@@ -2940,6 +3097,13 @@
           "hidden": true,
           "targetId": "85d0-2784-efc1-9793",
           "primary": false
+         },
+         {
+          "id": "8e5b-27b2-3ad6-aab7",
+          "name": "Captain and Attached",
+          "hidden": true,
+          "targetId": "419c-1fbc-3300-6198",
+          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -3091,6 +3255,13 @@
           "name": "Battle Standard Bearer",
           "hidden": true,
           "targetId": "0740-091d-73f1-af83",
+          "primary": false
+         },
+         {
+          "id": "8749-cd70-1bd2-b047",
+          "name": "Battle Standard Bearer",
+          "hidden": true,
+          "targetId": "c5db-0eac-5aad-ea08",
           "primary": false
          },
          {
@@ -3288,7 +3459,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "edc4-7770-74b7-b18a",
+            "scope": "root-entry-self",
             "childId": "85d0-2784-efc1-9793",
             "shared": true,
             "includeChildSelections": true,
@@ -3363,7 +3534,15 @@
           "targetId": "cfbb-118b-629b-24b9"
          }
         ],
-        "categoryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "4d20-b02a-3190-cdbd",
+          "name": "Shield",
+          "hidden": true,
+          "targetId": "b6e2-bfdb-3697-f483",
+          "primary": false
+         }
+        ],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [
@@ -3536,7 +3715,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "edc4-7770-74b7-b18a",
+              "scope": "root-entry-self",
               "childId": "d945-a40b-3f17-ecae",
               "shared": true,
               "includeChildSelections": true,
@@ -3567,6 +3746,13 @@
            }
           ],
           "categoryLinks": [
+           {
+            "id": "3898-560f-9fb4-0487",
+            "name": "Sylvan Bow (1+)",
+            "hidden": true,
+            "targetId": "09d3-32e3-6986-cf75",
+            "primary": false
+           },
            {
             "id": "1269-15d9-baa9-22b3",
             "name": "Sylvan Bow (1+)",
@@ -3665,7 +3851,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "edc4-7770-74b7-b18a",
+              "scope": "root-entry-self",
               "childId": "e24e-728b-74d4-726e",
               "shared": true,
               "includeChildSelections": true,
@@ -3753,7 +3939,15 @@
             "targetId": "8716-1f38-2caf-3ef5"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "53e9-8764-9667-a342",
+            "name": "Sylvan Blades",
+            "hidden": true,
+            "targetId": "ec29-b745-8d7e-6a63",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -3893,7 +4087,7 @@
               "type": "atMost",
               "value": 0,
               "field": "selections",
-              "scope": "edc4-7770-74b7-b18a",
+              "scope": "root-entry-self",
               "childId": "e24e-728b-74d4-726e",
               "shared": true,
               "includeChildSelections": true,
@@ -3914,7 +4108,15 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "7bdf-8ac0-6519-6667",
+            "name": "Lance",
+            "hidden": true,
+            "targetId": "ec29-b745-8d7e-6a63",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -3982,7 +4184,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "edc4-7770-74b7-b18a",
+            "scope": "root-entry-self",
             "childId": "0740-091d-73f1-af83",
             "shared": true,
             "includeChildSelections": true,
@@ -4637,7 +4839,7 @@
             "type": "atMost",
             "value": 0,
             "field": "selections",
-            "scope": "8028-fd5d-6102-5c3e",
+            "scope": "root-entry-self",
             "childId": "a1e8-8a18-c8c0-14f2",
             "shared": true,
             "includeChildSelections": true,
@@ -4839,7 +5041,7 @@
           "type": "atLeast",
           "value": 1,
           "field": "selections",
-          "scope": "8028-fd5d-6102-5c3e",
+          "scope": "root-entry-self",
           "childId": "96d7-1b07-fa42-c153",
           "shared": true,
           "includeChildSelections": true,
@@ -4888,7 +5090,6 @@
           "name": "Cosmology Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "cd2d-2d05-7117-8aab",
           "constraints": [
            {
             "id": "b1ff-2423-fa72-f828",
@@ -5029,6 +5230,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "cd2d-2d05-7117-8aab",
           "sortIndex": 1,
           "collective": true
          }
@@ -5073,7 +5275,6 @@
           "name": "Druidism Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "5e0d-ec58-5ae3-23d4",
           "constraints": [
            {
             "id": "5895-4016-bfac-93c2",
@@ -5214,6 +5415,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "5e0d-ec58-5ae3-23d4",
           "sortIndex": 1,
           "collective": true
          }
@@ -5258,7 +5460,6 @@
           "name": "Shamanism Spells",
           "hidden": false,
           "type": "selectionEntryGroup",
-          "targetId": "9b1c-b671-7d51-95d1",
           "constraints": [
            {
             "id": "b1ce-010e-0547-dd4a",
@@ -5399,6 +5600,7 @@
             "conditionGroups": []
            }
           ],
+          "targetId": "9b1c-b671-7d51-95d1",
           "sortIndex": 1,
           "collective": true
          }
@@ -5487,7 +5689,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "8028-fd5d-6102-5c3e",
+              "scope": "root-entry-self",
               "childId": "d945-a40b-3f17-ecae",
               "shared": true,
               "includeChildSelections": true,
@@ -5518,6 +5720,13 @@
            }
           ],
           "categoryLinks": [
+           {
+            "id": "653d-337a-bef6-8ba0",
+            "name": "Sylvan Bow (3+)",
+            "hidden": true,
+            "targetId": "09d3-32e3-6986-cf75",
+            "primary": false
+           },
            {
             "id": "69f5-f8c2-3419-211a",
             "name": "Sylvan Bow (3+)",
@@ -5841,10 +6050,24 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "0e03-b1c0-4a76-9e50",
+      "name": "Treefather Ancient",
+      "hidden": true,
+      "targetId": "dba2-40d0-abbd-d5ac",
+      "primary": false
+     },
+     {
       "id": "850c-b817-7650-be8f",
       "name": "Treefather Ancient",
       "hidden": true,
       "targetId": "bd60-5d0c-13e2-5f03",
+      "primary": false
+     },
+     {
+      "id": "06e5-b76e-501f-f5ae",
+      "name": "Treefather Ancient",
+      "hidden": true,
+      "targetId": "5d11-29dc-de75-afb1",
       "primary": false
      },
      {
@@ -6426,7 +6649,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "4e2a-c220-5ce1-8eee",
+                "scope": "root-entry-self",
                 "childId": "96d7-1b07-fa42-c153",
                 "shared": true,
                 "includeChildSelections": true,
@@ -6475,7 +6698,6 @@
                 "name": "Divination Spells",
                 "hidden": false,
                 "type": "selectionEntryGroup",
-                "targetId": "17b3-c05a-f059-f09a",
                 "constraints": [
                  {
                   "id": "8265-ddc2-f7e1-c2c8",
@@ -6616,6 +6838,7 @@
                   "conditionGroups": []
                  }
                 ],
+                "targetId": "17b3-c05a-f059-f09a",
                 "sortIndex": 1,
                 "collective": true
                }
@@ -6660,7 +6883,6 @@
                 "name": "Druidism Spells",
                 "hidden": false,
                 "type": "selectionEntryGroup",
-                "targetId": "5e0d-ec58-5ae3-23d4",
                 "constraints": [
                  {
                   "id": "44f3-e034-70d7-141a",
@@ -6801,6 +7023,7 @@
                   "conditionGroups": []
                  }
                 ],
+                "targetId": "5e0d-ec58-5ae3-23d4",
                 "sortIndex": 1,
                 "collective": true
                }
@@ -6912,7 +7135,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "4e2a-c220-5ce1-8eee",
+        "scope": "root-entry-self",
         "childId": "eeb5-7788-b77e-925c",
         "shared": true,
         "includeChildSelections": true,
@@ -6955,6 +7178,13 @@
       "name": "Avatar of Nature",
       "hidden": true,
       "targetId": "bd60-5d0c-13e2-5f03",
+      "primary": false
+     },
+     {
+      "id": "eb87-0019-7546-b370",
+      "name": "Avatar of Nature",
+      "hidden": true,
+      "targetId": "5d11-29dc-de75-afb1",
       "primary": false
      },
      {
@@ -7409,6 +7639,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "f7db-af4b-2089-b287",
+      "name": "Dryad Ancient",
+      "hidden": true,
+      "targetId": "5d11-29dc-de75-afb1",
+      "primary": false
+     },
+     {
       "id": "84dd-3769-ace0-9c14",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -7734,6 +7971,13 @@
           "hidden": true,
           "targetId": "85d0-2784-efc1-9793",
           "primary": false
+         },
+         {
+          "id": "eb51-b0b7-a62d-3ed0",
+          "name": "Captain and Attached",
+          "hidden": true,
+          "targetId": "419c-1fbc-3300-6198",
+          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -8007,7 +8251,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "5725-c813-d27b-9281",
+                "scope": "root-entry-self",
                 "childId": "96d7-1b07-fa42-c153",
                 "shared": true,
                 "includeChildSelections": true,
@@ -8056,7 +8300,6 @@
                 "name": "Divination Spells",
                 "hidden": false,
                 "type": "selectionEntryGroup",
-                "targetId": "17b3-c05a-f059-f09a",
                 "constraints": [
                  {
                   "id": "fbf7-6639-dea9-4071",
@@ -8197,6 +8440,7 @@
                   "conditionGroups": []
                  }
                 ],
+                "targetId": "17b3-c05a-f059-f09a",
                 "sortIndex": 1,
                 "collective": true
                }
@@ -8241,7 +8485,6 @@
                 "name": "Druidism Spells",
                 "hidden": false,
                 "type": "selectionEntryGroup",
-                "targetId": "5e0d-ec58-5ae3-23d4",
                 "constraints": [
                  {
                   "id": "6fc2-f184-f844-4b60",
@@ -8382,6 +8625,7 @@
                   "conditionGroups": []
                  }
                 ],
+                "targetId": "5e0d-ec58-5ae3-23d4",
                 "sortIndex": 1,
                 "collective": true
                }
@@ -8490,6 +8734,13 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "7be2-40e3-3319-64e6",
+      "name": "Thicket Shepherd",
+      "hidden": true,
+      "targetId": "5d11-29dc-de75-afb1",
+      "primary": false
+     },
      {
       "id": "6d7b-9b7d-6537-62b2",
       "name": "⟨Hgt:3⟩",
@@ -8848,6 +9099,13 @@
           "name": "Battle Standard Bearer",
           "hidden": true,
           "targetId": "0740-091d-73f1-af83",
+          "primary": false
+         },
+         {
+          "id": "6b13-3046-fe4c-9a2d",
+          "name": "Battle Standard Bearer",
+          "hidden": true,
+          "targetId": "c5db-0eac-5aad-ea08",
           "primary": false
          },
          {
@@ -9286,6 +9544,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "c098-86dc-5d6a-b5b8",
+      "name": "Wizard Adept",
+      "hidden": false,
+      "targetId": "0eb6-4350-a18a-a9bf",
       "primary": false
      },
      {
@@ -9774,6 +10039,13 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "32a7-e624-e3d4-dfd4",
+      "name": "Forest Guard",
+      "hidden": true,
+      "targetId": "f60a-e790-d784-7b42",
+      "primary": false
+     },
+     {
       "id": "0e3b-ee1c-97c4-07d8",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -10061,7 +10333,15 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "fcbb-ba8a-d977-ea31",
+            "name": "Shield",
+            "hidden": true,
+            "targetId": "b6e2-bfdb-3697-f483",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10270,6 +10550,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "421e-6f0a-9eb4-9c90",
+      "name": "Sylvan Archers",
+      "hidden": true,
+      "targetId": "f60a-e790-d784-7b42",
+      "primary": false
+     },
      {
       "id": "fbac-9610-0f18-d61d",
       "name": "⟨Hgt:1⟩",
@@ -10689,6 +10976,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "17b1-b27e-363e-94c3",
+      "name": "Heath Riders",
+      "hidden": true,
+      "targetId": "f60a-e790-d784-7b42",
+      "primary": false
+     },
      {
       "id": "c295-f848-3245-e726",
       "name": "⟨Hgt:2⟩",
@@ -11392,7 +11686,7 @@
                   "type": "atMost",
                   "value": 0,
                   "field": "selections",
-                  "scope": "7ba7-c8b1-2370-1ecc",
+                  "scope": "root-entry-self",
                   "childId": "9cb5-b7c4-72af-3a06",
                   "shared": true,
                   "includeChildSelections": true,
@@ -11615,7 +11909,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "7ba7-c8b1-2370-1ecc",
+        "scope": "root-entry-self",
         "childId": "07ca-a8bf-1736-d7fc",
         "shared": true,
         "includeChildSelections": true,
@@ -11634,7 +11928,7 @@
         "type": "atLeast",
         "value": 1,
         "field": "selections",
-        "scope": "7ba7-c8b1-2370-1ecc",
+        "scope": "root-entry-self",
         "childId": "9cb5-b7c4-72af-3a06",
         "shared": true,
         "includeChildSelections": true,
@@ -11672,6 +11966,13 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
+     {
+      "id": "c60a-11e9-daf7-3e23",
+      "name": "Dryads",
+      "hidden": true,
+      "targetId": "f60a-e790-d784-7b42",
+      "primary": false
+     },
      {
       "id": "44d4-470c-9bd9-f345",
       "name": "⟨Hgt:1⟩",
@@ -12087,7 +12388,7 @@
             "type": "atLeast",
             "value": 1,
             "field": "selections",
-            "scope": "9750-45fc-16c2-c039",
+            "scope": "root-entry-self",
             "childId": "8aac-8612-c2c6-6f8b",
             "shared": true,
             "includeChildSelections": true,
@@ -14543,7 +14844,15 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "cc68-0ea4-9f7d-2f90",
+            "name": "Shield",
+            "hidden": true,
+            "targetId": "b6e2-bfdb-3697-f483",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -15359,7 +15668,15 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "0478-10ba-0cd9-b661",
+            "name": "Lance and Shield",
+            "hidden": true,
+            "targetId": "b6e2-bfdb-3697-f483",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -17390,6 +17707,13 @@
       "primary": false
      },
      {
+      "id": "9221-4419-2509-a15b",
+      "name": "Forest Dragon",
+      "hidden": true,
+      "targetId": "f50e-0bab-1426-d100",
+      "primary": false
+     },
+     {
       "id": "0db4-b5a6-5974-2d6e",
       "name": "⟨Hgt:5⟩",
       "hidden": true,
@@ -17682,6 +18006,13 @@
       "primary": false
      },
      {
+      "id": "2112-99fd-ac49-370a",
+      "name": "Forest Eagle",
+      "hidden": true,
+      "targetId": "f50e-0bab-1426-d100",
+      "primary": false
+     },
+     {
       "id": "beb8-d2c0-418a-c597",
       "name": "⟨Hgt:3⟩",
       "hidden": true,
@@ -17901,6 +18232,13 @@
       "name": "Elven Horse",
       "hidden": true,
       "targetId": "e24e-728b-74d4-726e",
+      "primary": false
+     },
+     {
+      "id": "3467-8cbe-a448-a9d1",
+      "name": "Elven Horse",
+      "hidden": true,
+      "targetId": "cd7c-7d06-137d-3c59",
       "primary": false
      },
      {
@@ -18144,6 +18482,13 @@
       "name": "Great Elk",
       "hidden": true,
       "targetId": "e24e-728b-74d4-726e",
+      "primary": false
+     },
+     {
+      "id": "b61d-e9b5-ec6f-41c7",
+      "name": "Great Elk",
+      "hidden": true,
+      "targetId": "2da5-6cb8-4f21-adb0",
       "primary": false
      },
      {
@@ -19002,7 +19347,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f60a-e790-d784-7b42",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -19057,7 +19422,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c41c-7f73-4f34-ef9c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -19112,7 +19497,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c41c-7f73-4f34-ef9c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -19123,7 +19528,15 @@
       "targetId": "8778-150a-c3ff-5bfb"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "bb86-8db7-3890-a23b",
+      "name": "Spirit Arrows",
+      "hidden": true,
+      "targetId": "c41c-7f73-4f34-ef9c",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -19167,7 +19580,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c41c-7f73-4f34-ef9c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -19178,7 +19611,15 @@
       "targetId": "863c-848d-5929-6876"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "d1b4-5b3b-610b-b302",
+      "name": "Bough Of Wyscan",
+      "hidden": true,
+      "targetId": "c41c-7f73-4f34-ef9c",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -19222,7 +19663,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c41c-7f73-4f34-ef9c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -19233,7 +19694,15 @@
       "targetId": "d290-affe-6e89-1df9"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "61ff-4d2d-1a6c-e2ee",
+      "name": "Spirit of the Whirlwind",
+      "hidden": true,
+      "targetId": "c41c-7f73-4f34-ef9c",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -19319,6 +19788,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e24e-728b-74d4-726e",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -19375,7 +19863,63 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [],
+      "conditionGroups": [
+       {
+        "type": "or",
+        "conditions": [
+         {
+          "type": "atMost",
+          "value": 0,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "082c-9761-f479-c1e9",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         },
+         {
+          "type": "atMost",
+          "value": 0,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "4504-be40-c1b2-c139",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "d945-a40b-3f17-ecae",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -19611,6 +20155,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "5d11-29dc-de75-afb1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -19687,6 +20250,44 @@
        }
       ],
       "comment": "Common"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e24e-728b-74d4-726e",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "419c-1fbc-3300-6198",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -19763,6 +20364,61 @@
        }
       ],
       "comment": "Common"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [],
+      "conditionGroups": [
+       {
+        "type": "or",
+        "conditions": [
+         {
+          "type": "atMost",
+          "value": 0,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "cd7c-7d06-137d-3c59",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         },
+         {
+          "type": "atMost",
+          "value": 0,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "2da5-6cb8-4f21-adb0",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "ec29-b745-8d7e-6a63",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -19839,6 +20495,61 @@
        }
       ],
       "comment": "Rare"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e24e-728b-74d4-726e",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [],
+      "conditionGroups": [
+       {
+        "type": "or",
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "0740-091d-73f1-af83",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         },
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "c5db-0eac-5aad-ea08",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ]
      }
     ],
     "profiles": [],
@@ -19915,6 +20626,25 @@
        }
       ],
       "comment": "Common"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e24e-728b-74d4-726e",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -19991,6 +20721,63 @@
        }
       ],
       "comment": "Common"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e24e-728b-74d4-726e",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "b6e2-bfdb-3697-f483",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "09d3-32e3-6986-cf75",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20003,7 +20790,15 @@
       "targetId": "0f2f-b81e-7f11-52d6"
      }
     ],
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "70b4-d3d6-37a7-52fb",
+      "name": "Blade Dancer",
+      "hidden": true,
+      "targetId": "d945-a40b-3f17-ecae",
+      "primary": false
+     }
+    ],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -20371,6 +21166,25 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "dba2-40d0-abbd-d5ac",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20427,7 +21241,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f50e-0bab-1426-d100",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -22454,7 +23288,7 @@
      {
       "name": "Weapon Enchant",
       "typeId": "0817-5783-f763-200f",
-      "$text": "Number of Shots is <b>always</b> 1, Str 3, AP 2, Area Attack (1×5), Direct Hit (Str 6, AP 4, Multiple Wounds (2))."
+      "$text": "Number of Shots is <b>always</b> 1, Str 3, AP 2, <b>AP 4</b>, <b>Area Attack (1×5)</b>, <b>Direct Hit (Str 6</b>, and <b>Multiple Wounds (2))</b>."
      }
     ],
     "attributes": [
@@ -22496,7 +23330,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Hard Target (1), Light Troops, Skirmisher."
+      "$text": "The model gains <b>Hard Target (1)</b>, <b>Light Troops</b>, and <b>Skirmisher</b>."
      }
     ],
     "attributes": [
@@ -22883,7 +23717,7 @@
      {
       "name": "Artefact",
       "typeId": "d5ea-130f-c160-2568",
-      "$text": "One use only. Duration: One Phase.<br>Can be activated during the Charge Phase or during the Shooting Phase.<br>This is a Shooting Weapon with the following profile: <br>&nbsp;&nbsp;&bull; Aim 2+, Range 30\", Shots 3D6, Str 4, AP 1, Magical Attacks, Quick to Fire. <i>Hail Shot</i> cannot benefit from <b>Forest’s Thorns</b>."
+      "$text": "One use only. Duration: One Phase.<br>Can be activated during the Charge Phase or during the Shooting Phase.<br>This is a Shooting Weapon with the following profile: <br>&nbsp;&nbsp;&bull; Aim 2+, Range 30\", Shots 3D6, Str 4, AP 1, <b>Magical Attacks</b> and <b>Quick to Fire</b>. <i>Hail Shot</i> cannot benefit from <b>Forest’s Thorns</b>."
      }
     ],
     "attributes": [
@@ -22904,7 +23738,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Feigned Flight, Hit and Run, Light Troops, Vanguard, and the Heath Rider model part gains a Light Lance and a Sylvan Bow (3+)."
+      "$text": "The model gains <b>Feigned Flight</b>, <b>Hit and Run</b>, <b>Light Troops</b>, <b>Vanguard</b>, and the Heath Rider model part gains a Light Lance and a Sylvan Bow (3+)."
      }
     ],
     "attributes": [
@@ -22946,7 +23780,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model’s unit gains Magical Attacks, Strider."
+      "$text": "The model’s unit gains <b>Magical Attacks</b> and <b>Strider</b>."
      }
     ],
     "attributes": [
@@ -23163,7 +23997,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The wearer gains Disciplined, Magic Resistance (2)."
+      "$text": "The wearer gains <b>Disciplined</b> and <b>Magic Resistance (2)</b>."
      }
     ],
     "attributes": [
@@ -23218,7 +24052,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model gains ,Forest’s Thorns,Scout, Stand and Shoot, Vanguard.<br>A Sylvan Bow wielded by the model has its number of Shots <b>set</b> to 3 if the wielder is a Chieftain with <b>Captain</b>, to 5 otherwise."
+      "$text": "The model gains <b>Forest’s Thorns</b>, <b>Scout</b>, <b>Stand and Shoot</b>, and <b>Vanguard</b>.<br>A Sylvan Bow wielded by the model has its number of Shots <b>set</b> to 3 if the wielder is a Chieftain with <b>Captain</b>, to 5 otherwise."
      }
     ],
     "attributes": [
@@ -23323,7 +24157,7 @@
      {
       "name": "Abilities",
       "typeId": "5480-0139-15c8-4fe4",
-      "$text": "The model gains +2\" Adv and +2\" Mar, as well as Solitary,Vanguard, Devastating Charge (Height is set to 3).<br>The model part gains Multiple Wounds (2, towards Height 4-5)."
+      "$text": "The model gains +2\" Adv and +2\" Mar, as well as <b>Devastating Charge (Height is set to 3)</b>, <b>Solitary</b>, and <b>Vanguard</b>.<br>The model part gains Multiple Wounds (2, towards Height 4-5)."
      }
     ],
     "modifiers": [
@@ -23368,7 +24202,7 @@
      {
       "name": "Armour Enchant",
       "typeId": "ddfb-d964-d4d4-ca48",
-      "$text": "+1 HP, Aegis (5+),Fearless, Tree Singing,Weakness (Flaming Attacks). <br>The Armour value is <b>set</b> to 4 and can <b>never</b> be improved beyond this."
+      "$text": "+1 HP, <b>Aegis (5+)</b>, <b>Fearless</b>, <b>Tree Singing</b>, and <b>Weakness (Flaming Attacks)</b>. <br>The Armour value is <b>set</b> to 4 and can <b>never</b> be improved beyond this."
      }
     ],
     "modifiers": [
@@ -23645,7 +24479,7 @@
      {
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model gains Fearless, Magical Attacks. If the model has <b>Commanding Presence</b>, only friendly models with <b>Sylvan Spirit</b> are affected by it."
+      "$text": "The model gains <b>Fearless</b> and <b>Magical Attacks</b>. If the model has <b>Commanding Presence</b>, only friendly models with <b>Sylvan Spirit</b> are affected by it."
      }
     ],
     "attributes": [
