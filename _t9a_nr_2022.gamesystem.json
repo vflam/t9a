@@ -552,6 +552,757 @@
     "id": "b228-c623-01a2-81d4",
     "name": "⟨loses:lightarmour⟩",
     "hidden": true
+   },
+   {
+    "id": "f98e-90de-1eac-f873",
+    "name": "Metal Armour",
+    "comment": "tag_Metal Armour",
+    "hidden": true
+   },
+   {
+    "id": "499f-aeb4-d942-d4bc",
+    "name": "Solitary",
+    "comment": "solitary",
+    "hidden": true
+   },
+   {
+    "id": "7227-7a7f-4b51-86d7",
+    "name": "Battle Standard",
+    "comment": "army_bsb",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "1bee-6812-3a46-7628",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "1bee-6812-3a46-7628",
+      "value": 1,
+      "conditions": [],
+      "conditionGroups": [
+       {
+        "type": "or",
+        "conditions": [
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "89a6-95de-82cb-acd5",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "2ddf-f151-4c56-2df3",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "0bca-81b0-a241-d3b5",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "4b97-f4a2-074f-83ad",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "894d-4251-1c53-daef",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "d1ff-961a-2b6f-35ed",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "cebb-6401-a703-eb27",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "e3dd-5f4f-3876-1e85",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "a0f6-4b42-4a53-da13",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "94fd-ce86-2f0a-9683",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "074b-880a-7aee-52da",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "f0e4-d463-91d0-6b26",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "5443-a627-b3a9-e96a",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "0b96-4aff-f830-7181",
+          "shared": true
+         }
+        ],
+        "conditionGroups": []
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "1bee-6812-3a46-7628",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c68b-884a-a0d7-b8b4",
+    "name": "Weapon Enchant",
+    "comment": "weaponEnchantUni",
+    "hidden": true
+   },
+   {
+    "id": "6c7e-be70-e418-112c",
+    "name": "Wizard",
+    "comment": "wizard",
+    "hidden": true
+   },
+   {
+    "id": "db21-6ca1-547b-551a",
+    "name": "Mount",
+    "comment": "mount",
+    "hidden": true
+   },
+   {
+    "id": "bf19-2ae3-58d2-5ff5",
+    "name": "General",
+    "comment": "army_general",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "c1e8-47d6-816d-547a",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "c1e8-47d6-816d-547a",
+      "value": 1,
+      "conditions": [],
+      "conditionGroups": [
+       {
+        "type": "or",
+        "conditions": [
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "89a6-95de-82cb-acd5",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "2ddf-f151-4c56-2df3",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "0bca-81b0-a241-d3b5",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "4b97-f4a2-074f-83ad",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "894d-4251-1c53-daef",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "d1ff-961a-2b6f-35ed",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "cebb-6401-a703-eb27",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "e3dd-5f4f-3876-1e85",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "a0f6-4b42-4a53-da13",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "94fd-ce86-2f0a-9683",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "074b-880a-7aee-52da",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "f0e4-d463-91d0-6b26",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "5443-a627-b3a9-e96a",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "0b96-4aff-f830-7181",
+          "shared": true
+         },
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "primary-catalogue",
+          "childId": "4b83-1381-bb23-9294",
+          "shared": true
+         }
+        ],
+        "conditionGroups": []
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "c1e8-47d6-816d-547a",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "78e6-b065-4446-c3ec",
+    "name": "Shield",
+    "comment": "shield",
+    "hidden": true
+   },
+   {
+    "id": "cda6-3d55-eecf-4914",
+    "name": "Captain",
+    "comment": "captain",
+    "hidden": true
+   },
+   {
+    "id": "0237-49e0-a2f5-2467",
+    "name": "Not A Leader",
+    "comment": "not_a_leader",
+    "hidden": true
+   },
+   {
+    "id": "3ab0-9185-e522-de12",
+    "name": "Art Free Ess",
+    "comment": "art_free_ess",
+    "hidden": true
+   },
+   {
+    "id": "bc9c-d563-7c81-e5a3",
+    "name": "Core Unit",
+    "comment": "core_unit",
+    "hidden": true
+   },
+   {
+    "id": "b9c1-5c30-13e9-8d07",
+    "name": "Towering",
+    "comment": "towering",
+    "hidden": true
+   },
+   {
+    "id": "dc6d-f21e-be27-7f76",
+    "name": "Flyer",
+    "comment": "flyer",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "c783-7fc9-83db-676c",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "c783-7fc9-83db-676c",
+      "value": 2,
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "cebb-6401-a703-eb27",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "c783-7fc9-83db-676c",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ab93-e320-530b-bfcf",
+    "name": "Dominant",
+    "comment": "dominant",
+    "hidden": true
+   },
+   {
+    "id": "30b9-e188-4de5-6ddb",
+    "name": "Small Arms Fire",
+    "comment": "[indicator] small_arms_fire",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "e4a7-8e58-a1ee-ec8f",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     },
+     {
+      "id": "0e92-8544-162b-8669",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     },
+     {
+      "id": "c293-a3f8-055c-bc1c",
+      "field": "selections",
+      "scope": "roster",
+      "value": -1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "e4a7-8e58-a1ee-ec8f",
+      "value": 15,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "4b97-f4a2-074f-83ad",
+        "shared": true
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "e4a7-8e58-a1ee-ec8f",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "4b97-f4a2-074f-83ad",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "e4a7-8e58-a1ee-ec8f",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "0e92-8544-162b-8669",
+      "value": 30,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "e3dd-5f4f-3876-1e85",
+        "shared": true
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "0e92-8544-162b-8669",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "e3dd-5f4f-3876-1e85",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "0e92-8544-162b-8669",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "c293-a3f8-055c-bc1c",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "0b96-4aff-f830-7181",
+        "shared": true
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "c293-a3f8-055c-bc1c",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "0b96-4aff-f830-7181",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "c293-a3f8-055c-bc1c",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "e668-0e14-cd56-554a",
+    "name": "Dragon or Ancient Dragon",
+    "comment": "mountDragon",
+    "hidden": true
+   },
+   {
+    "id": "52a1-6ffc-f6a0-6aa7",
+    "name": "Gigantic Size",
+    "comment": "sizeGigantic",
+    "hidden": true
+   },
+   {
+    "id": "37fb-d62f-d2eb-9cce",
+    "name": "Holy Vows",
+    "comment": "[indicator] tag_Holy Vows",
+    "hidden": true
+   },
+   {
+    "id": "7c4d-6437-9c27-ad7b",
+    "name": "Aspis Arrows",
+    "comment": "[indicator] aspisArrows",
+    "hidden": true
+   },
+   {
+    "id": "59d3-3e05-f6bf-f1e5",
+    "name": "Canister Launcher",
+    "comment": "[indicator] canisterLauncher",
+    "hidden": true
+   },
+   {
+    "id": "c8bf-79a8-fbcb-574a",
+    "name": "Deepfire Thrower",
+    "comment": "[indicator] deepfireThrower",
+    "hidden": true
+   },
+   {
+    "id": "31d5-85af-8d39-0a9d",
+    "name": "Deepfire Thrower",
+    "comment": "[indicator] deepfire_thrower",
+    "hidden": true
+   },
+   {
+    "id": "30ce-2799-f7ed-6d34",
+    "name": "Rotary Gun",
+    "comment": "[indicator] rotaryGun",
+    "hidden": true
+   },
+   {
+    "id": "1348-28b6-0bc5-dbb5",
+    "name": "Rotary Gun",
+    "comment": "[indicator] rotary_gun",
+    "hidden": true
+   },
+   {
+    "id": "b376-7078-76d6-9109",
+    "name": "Feldraks",
+    "comment": "[indicator] feldraks",
+    "hidden": true
    }
   ],
   "forceEntries": [
