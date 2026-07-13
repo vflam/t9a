@@ -2874,6 +2874,17 @@
         "hidden": false,
         "constraints": [
          {
+          "id": "a245-b4e6-dbd3-d9d0",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
           "id": "bc58-0c0a-c272-90cb",
           "field": "selections",
           "scope": "parent",
@@ -2887,6 +2898,74 @@
         ],
         "modifiers": [],
         "selectionEntries": [
+         {
+          "id": "e17b-c05c-1dca-7d98",
+          "name": "Hand Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "20cc-0c27-524c-f0dd",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "a3ea-c289-4470-82ec",
+            "name": "Hand Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cc6a-85fb-a07e-e781"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "0107-3e9f-1d66-d5c3",
+            "name": "Hand Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "d099-d137-e8ae-36af",
+            "constraints": [
+             {
+              "id": "9e14-77f1-92c8-cb1c",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 1,
+          "collective": true
+         },
          {
           "id": "ba95-6509-6a06-c746",
           "name": "Paired Weapons",
@@ -2952,7 +3031,7 @@
             "collective": true
            }
           ],
-          "sortIndex": 1,
+          "sortIndex": 2,
           "collective": true
          },
          {
@@ -3020,7 +3099,7 @@
             "collective": true
            }
           ],
-          "sortIndex": 2,
+          "sortIndex": 3,
           "collective": true
          },
          {
@@ -3096,7 +3175,7 @@
             "collective": true
            }
           ],
-          "sortIndex": 3,
+          "sortIndex": 4,
           "collective": true
          },
          {
@@ -3184,12 +3263,13 @@
             "collective": true
            }
           ],
-          "sortIndex": 4,
+          "sortIndex": 5,
           "collective": true
          }
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "e17b-c05c-1dca-7d98",
         "sortIndex": 3,
         "collective": true
        }
@@ -3240,30 +3320,6 @@
         "collective": true
        },
        {
-        "id": "49bd-4eda-727b-6d83",
-        "name": "Hand Weapon Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "d099-d137-e8ae-36af",
-        "constraints": [
-         {
-          "id": "a9cf-e54a-577f-f0b5",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
-        "sortIndex": 5,
-        "collective": true
-       },
-       {
         "id": "dc10-43c2-d63e-eadf",
         "name": "Armour Enchant",
         "hidden": false,
@@ -3284,7 +3340,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 6,
+        "sortIndex": 5,
         "collective": true
        },
        {
@@ -3308,7 +3364,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 7,
+        "sortIndex": 6,
         "collective": true
        },
        {
@@ -3332,7 +3388,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 8,
+        "sortIndex": 7,
         "collective": true
        }
       ],
@@ -4953,17 +5009,25 @@
       ],
       "modifiers": [],
       "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [
+      "selectionEntryGroups": [
        {
-        "id": "d394-ab14-e145-d617",
-        "name": "Armour Enchant",
+        "id": "f8ff-b0e6-6dae-36ab",
+        "name": "Weapon",
         "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "a5a1-8eed-f0c1-f5af",
         "constraints": [
          {
-          "id": "cc74-7a08-b4c8-a780",
+          "id": "0914-aa0a-a9a6-8189",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "4af4-c96c-1301-b465",
           "field": "selections",
           "scope": "parent",
           "value": 1,
@@ -4975,19 +5039,93 @@
          }
         ],
         "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "5c71-4fb5-33b6-41ae",
+          "name": "Hand Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "02a8-37ba-f66c-49a0",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "3c46-c4be-9aad-fe1d",
+            "name": "Hand Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cc6a-85fb-a07e-e781"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "2978-a9d0-c67b-99e8",
+            "name": "Hand Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "d099-d137-e8ae-36af",
+            "constraints": [
+             {
+              "id": "0c80-c52e-b1f2-ac5b",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
         "collapsible": true,
         "sortIndex": 1,
         "collective": true
-       },
+       }
+      ],
+      "entryLinks": [
        {
-        "id": "0e3b-2b31-54af-243a",
-        "name": "Hand Weapon Enchant",
+        "id": "d394-ab14-e145-d617",
+        "name": "Armour Enchant",
         "hidden": false,
         "type": "selectionEntryGroup",
-        "targetId": "d099-d137-e8ae-36af",
+        "targetId": "a5a1-8eed-f0c1-f5af",
         "constraints": [
          {
-          "id": "8e47-311d-5184-e775",
+          "id": "cc74-7a08-b4c8-a780",
           "field": "selections",
           "scope": "parent",
           "value": 1,
@@ -7824,6 +7962,17 @@
         "hidden": false,
         "constraints": [
          {
+          "id": "9973-44c2-29ae-6221",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
           "id": "5755-bdd1-0d37-0ce3",
           "field": "selections",
           "scope": "parent",
@@ -7837,6 +7986,74 @@
         ],
         "modifiers": [],
         "selectionEntries": [
+         {
+          "id": "3d0f-aea4-d3db-6fff",
+          "name": "Hand Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "9448-77b1-a008-c6e6",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "f4f5-365a-9282-97e0",
+            "name": "Hand Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cc6a-85fb-a07e-e781"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "67cf-e61a-c95d-8241",
+            "name": "Hand Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "d099-d137-e8ae-36af",
+            "constraints": [
+             {
+              "id": "9829-9c07-eb96-a739",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 1,
+          "collective": true
+         },
          {
           "id": "ce1c-63ef-69c5-a4e8",
           "name": "Paired Weapons",
@@ -7902,7 +8119,7 @@
             "collective": true
            }
           ],
-          "sortIndex": 1,
+          "sortIndex": 2,
           "collective": true
          }
         ],
@@ -7913,30 +8130,6 @@
        }
       ],
       "entryLinks": [
-       {
-        "id": "f631-d642-1176-5f83",
-        "name": "Hand Weapon Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "d099-d137-e8ae-36af",
-        "constraints": [
-         {
-          "id": "85a1-bca5-6489-e93e",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
-        "sortIndex": 2,
-        "collective": true
-       },
        {
         "id": "b6e3-8a51-ae6f-9026",
         "name": "Armour Enchant",
@@ -7958,7 +8151,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 3,
+        "sortIndex": 2,
         "collective": true
        },
        {
@@ -7982,7 +8175,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 4,
+        "sortIndex": 3,
         "collective": true
        },
        {
@@ -8006,7 +8199,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 5,
+        "sortIndex": 4,
         "collective": true
        }
       ],
@@ -8901,9 +9094,89 @@
         "id": "c28d-9ac8-dd35-428e",
         "name": "Melee Weapons",
         "hidden": false,
-        "constraints": [],
+        "constraints": [
+         {
+          "id": "3b51-9124-35a5-06d2",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
         "modifiers": [],
         "selectionEntries": [
+         {
+          "id": "d170-dcd6-bf90-2e4c",
+          "name": "Hand Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "784e-2541-d47e-dc19",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "dcea-88d1-a66b-b21d",
+            "name": "Hand Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cc6a-85fb-a07e-e781"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "0e67-b717-d125-73bc",
+            "name": "Hand Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "d099-d137-e8ae-36af",
+            "constraints": [
+             {
+              "id": "6196-598b-3c64-4b0c",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 1,
+          "collective": true
+         },
          {
           "id": "3827-087e-3b0b-f209",
           "name": "Paired Weapons",
@@ -8969,7 +9242,7 @@
             "collective": true
            }
           ],
-          "sortIndex": 1,
+          "sortIndex": 2,
           "collective": true
          },
          {
@@ -9065,7 +9338,7 @@
             "collective": true
            }
           ],
-          "sortIndex": 2,
+          "sortIndex": 3,
           "collective": true
          },
          {
@@ -9133,12 +9406,13 @@
             "collective": true
            }
           ],
-          "sortIndex": 3,
+          "sortIndex": 4,
           "collective": true
          }
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "d170-dcd6-bf90-2e4c",
         "sortIndex": 2,
         "collective": true
        }
@@ -9169,30 +9443,6 @@
         "collective": true
        },
        {
-        "id": "7ee9-fbf3-3e34-fe36",
-        "name": "Hand Weapon Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "d099-d137-e8ae-36af",
-        "constraints": [
-         {
-          "id": "5a77-0714-73ba-41fc",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
-        "sortIndex": 4,
-        "collective": true
-       },
-       {
         "id": "b57f-056e-64b6-8048",
         "name": "Artefact",
         "hidden": false,
@@ -9213,7 +9463,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 5,
+        "sortIndex": 4,
         "collective": true
        },
        {
@@ -9237,7 +9487,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 6,
+        "sortIndex": 5,
         "collective": true
        }
       ],
@@ -9877,7 +10127,325 @@
       ],
       "modifiers": [],
       "selectionEntries": [],
-      "selectionEntryGroups": [],
+      "selectionEntryGroups": [
+       {
+        "id": "8e5a-ab00-b043-d320",
+        "name": "Weapon",
+        "hidden": false,
+        "constraints": [
+         {
+          "id": "0d2d-8068-1ebd-83ee",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "7cce-652e-4696-8684",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "f30a-5a91-b0a9-ecdd",
+          "name": "Paired Weapons",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "89f1-26d7-a81e-787e",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "5b0c-ad3a-6d4a-f121",
+            "name": "Paired Weapons",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "2431-3187-a071-99c8"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "ed92-cba4-f127-64cd",
+            "name": "Paired Weapons Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "1940-e258-7c65-73d6",
+            "constraints": [
+             {
+              "id": "c845-c69d-fe62-a585",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 1,
+          "collective": true
+         },
+         {
+          "id": "2d99-268e-147c-fff3",
+          "name": "Great Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "9bb7-d654-9e3c-8173",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "b9a0-ab07-92cf-b026",
+            "name": "Great Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "404b-7330-b333-3778"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "9755-6c14-04f8-780c",
+            "name": "Great Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "4fa2-d59a-ac8c-9e58",
+            "constraints": [
+             {
+              "id": "1ee7-07f5-42bd-594f",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 2,
+          "collective": true
+         },
+         {
+          "id": "c4c8-c3f6-9c5d-a5d3",
+          "name": "Lance",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "20c7-914f-260e-2d9a",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "4e34-3f3c-6a98-1fa1",
+            "name": "Lance",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "7732-8bec-981c-6371"
+           }
+          ],
+          "categoryLinks": [
+           {
+            "id": "d155-e4ff-207f-7a08",
+            "name": "Lance",
+            "hidden": true,
+            "targetId": "4251-a9ca-1be7-86a0",
+            "primary": false
+           }
+          ],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "b383-7d4d-43a7-ad37",
+            "name": "Lance Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "cc63-b331-6b54-7972",
+            "constraints": [
+             {
+              "id": "9354-214c-fbc9-6b04",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 3,
+          "collective": true
+         },
+         {
+          "id": "037a-a641-ecb0-ad15",
+          "name": "Hand Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "fb61-cc3b-3638-0b7b",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "1e70-053e-3dd3-bf71",
+            "name": "Hand Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cc6a-85fb-a07e-e781"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "6d1b-de63-da3e-2648",
+            "name": "Hand Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "d099-d137-e8ae-36af",
+            "constraints": [
+             {
+              "id": "8526-4909-f0b2-2584",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 4,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "collapsible": true,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "entryLinks": [
        {
         "id": "1e33-4e53-df98-941a",
@@ -9900,7 +10468,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        },
        {
@@ -9924,103 +10492,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 2,
-        "collective": true
-       },
-       {
-        "id": "f3aa-4a2e-9921-6228",
-        "name": "Paired Weapons Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "1940-e258-7c65-73d6",
-        "constraints": [
-         {
-          "id": "1672-e467-0833-4d6c",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
         "sortIndex": 3,
-        "collective": true
-       },
-       {
-        "id": "dcbd-f893-a0a7-adc9",
-        "name": "Great Weapon Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "4fa2-d59a-ac8c-9e58",
-        "constraints": [
-         {
-          "id": "4319-7fcb-d490-ac48",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
-        "sortIndex": 4,
-        "collective": true
-       },
-       {
-        "id": "f1d1-f46d-75fe-c551",
-        "name": "Lance Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "cc63-b331-6b54-7972",
-        "constraints": [
-         {
-          "id": "403c-9294-53bb-187b",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
-        "sortIndex": 5,
-        "collective": true
-       },
-       {
-        "id": "f1ab-7f23-15bb-a6b3",
-        "name": "Hand Weapon Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "d099-d137-e8ae-36af",
-        "constraints": [
-         {
-          "id": "e6c7-c19a-c98e-f5a8",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
-        "sortIndex": 6,
         "collective": true
        },
        {
@@ -10044,7 +10516,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 7,
+        "sortIndex": 4,
         "collective": true
        },
        {
@@ -10068,7 +10540,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 8,
+        "sortIndex": 5,
         "collective": true
        }
       ],
@@ -11078,7 +11550,113 @@
         "collective": true
        }
       ],
-      "selectionEntryGroups": [],
+      "selectionEntryGroups": [
+       {
+        "id": "195f-12bc-85b6-7943",
+        "name": "Weapon",
+        "hidden": false,
+        "constraints": [
+         {
+          "id": "cae4-57da-ad90-f26b",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "7d06-b209-db14-af9b",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "selectionEntries": [
+         {
+          "id": "e313-6147-9efb-be0c",
+          "name": "Hand Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "9975-b8a6-519e-e8df",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "c391-1303-31f8-3914",
+            "name": "Hand Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cc6a-85fb-a07e-e781"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "4b43-9581-a23c-6817",
+            "name": "Hand Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "d099-d137-e8ae-36af",
+            "constraints": [
+             {
+              "id": "366b-4d44-828f-28c9",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "collapsible": true,
+        "sortIndex": 5,
+        "collective": true
+       }
+      ],
       "entryLinks": [
        {
         "id": "0fcd-6fcc-23c5-9bcd",
@@ -11121,7 +11699,7 @@
          }
         ],
         "collapsible": true,
-        "sortIndex": 5,
+        "sortIndex": 6,
         "collective": true
        },
        {
@@ -11133,30 +11711,6 @@
         "constraints": [
          {
           "id": "e73b-ab53-f16e-947a",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "collapsible": true,
-        "sortIndex": 6,
-        "collective": true
-       },
-       {
-        "id": "e828-956e-7120-b160",
-        "name": "Hand Weapon Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "d099-d137-e8ae-36af",
-        "constraints": [
-         {
-          "id": "9cde-d251-81d1-f158",
           "field": "selections",
           "scope": "parent",
           "value": 1,
@@ -28664,6 +29218,194 @@
     "collective": true
    },
    {
+    "id": "d099-d137-e8ae-36af",
+    "name": "Hand Weapon Enchant",
+    "hidden": false,
+    "constraints": [],
+    "modifiers": [],
+    "selectionEntries": [],
+    "selectionEntryGroups": [],
+    "entryLinks": [
+     {
+      "id": "4204-9c18-cff5-675c",
+      "name": "Omen of the Apocalypse",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "c2a0-c52f-b1bc-aa30",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "eeb8-0000-1861-6f6a",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 1,
+      "collective": true
+     },
+     {
+      "id": "7ec9-dede-c8bd-91fd",
+      "name": "Attack Gnasher",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "d143-04ae-3c68-67e4",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "9bd6-e4d6-7c6a-c111",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 2,
+      "collective": true
+     },
+     {
+      "id": "1576-b9b7-a204-9cd9",
+      "name": "Touch of Greatness",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "7cfc-3b95-6969-929b",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "5054-669d-d9b9-cff9",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 3,
+      "collective": true
+     },
+     {
+      "id": "3334-072d-0e81-5d69",
+      "name": "Vorpal Binding",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "dc43-9d4c-3ef7-5c8c",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "42d9-0a9d-c0f3-5d3f",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 4,
+      "collective": true
+     },
+     {
+      "id": "755d-ec08-7d7b-3ee3",
+      "name": "King Slayer",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "d9bd-9ee6-564b-e050",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "e380-baeb-7649-7be4",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 5,
+      "collective": true
+     },
+     {
+      "id": "3981-ffd0-6105-cd6b",
+      "name": "Shield Breaker",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "d82d-fb6f-5ec9-5048",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 30,
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
+      "categoryLinks": [
+       {
+        "id": "a1c3-9938-a9dc-7bb2",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 6,
+      "collective": true
+     },
+     {
+      "id": "4ded-0eb8-7801-2eb5",
+      "name": "Eldritch Inscriptions",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "10dd-d1ae-8ba1-bb32",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 25,
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
+      "categoryLinks": [
+       {
+        "id": "edc2-4cbf-02c8-fba4",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 7,
+      "collective": true
+     },
+     {
+      "id": "8aa9-fbf1-3140-52bf",
+      "name": "Giant Slayer",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "ec30-2e97-7e13-f776",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "fa31-0130-bf93-0c58",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 8,
+      "collective": true
+     }
+    ],
+    "collective": true
+   },
+   {
     "id": "1940-e258-7c65-73d6",
     "name": "Paired Weapons Enchant",
     "hidden": false,
@@ -29330,194 +30072,6 @@
       ],
       "constraints": [],
       "sortIndex": 7,
-      "collective": true
-     }
-    ],
-    "collective": true
-   },
-   {
-    "id": "d099-d137-e8ae-36af",
-    "name": "Hand Weapon Enchant",
-    "hidden": false,
-    "constraints": [],
-    "modifiers": [],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [
-     {
-      "id": "4204-9c18-cff5-675c",
-      "name": "Omen of the Apocalypse",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "c2a0-c52f-b1bc-aa30",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "eeb8-0000-1861-6f6a",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 1,
-      "collective": true
-     },
-     {
-      "id": "7ec9-dede-c8bd-91fd",
-      "name": "Attack Gnasher",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "d143-04ae-3c68-67e4",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "9bd6-e4d6-7c6a-c111",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 2,
-      "collective": true
-     },
-     {
-      "id": "1576-b9b7-a204-9cd9",
-      "name": "Touch of Greatness",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "7cfc-3b95-6969-929b",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "5054-669d-d9b9-cff9",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 3,
-      "collective": true
-     },
-     {
-      "id": "3334-072d-0e81-5d69",
-      "name": "Vorpal Binding",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "dc43-9d4c-3ef7-5c8c",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "42d9-0a9d-c0f3-5d3f",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 4,
-      "collective": true
-     },
-     {
-      "id": "755d-ec08-7d7b-3ee3",
-      "name": "King Slayer",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "d9bd-9ee6-564b-e050",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "e380-baeb-7649-7be4",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 5,
-      "collective": true
-     },
-     {
-      "id": "3981-ffd0-6105-cd6b",
-      "name": "Shield Breaker",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "d82d-fb6f-5ec9-5048",
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "ea90-6996-33df-993c",
-        "value": 30,
-        "conditions": [],
-        "conditionGroups": []
-       }
-      ],
-      "categoryLinks": [
-       {
-        "id": "a1c3-9938-a9dc-7bb2",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 6,
-      "collective": true
-     },
-     {
-      "id": "4ded-0eb8-7801-2eb5",
-      "name": "Eldritch Inscriptions",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "10dd-d1ae-8ba1-bb32",
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "ea90-6996-33df-993c",
-        "value": 25,
-        "conditions": [],
-        "conditionGroups": []
-       }
-      ],
-      "categoryLinks": [
-       {
-        "id": "edc2-4cbf-02c8-fba4",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 7,
-      "collective": true
-     },
-     {
-      "id": "8aa9-fbf1-3140-52bf",
-      "name": "Giant Slayer",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "ec30-2e97-7e13-f776",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "fa31-0130-bf93-0c58",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 8,
       "collective": true
      }
     ],
@@ -30271,7 +30825,8 @@
       "typeId": "ea9d-5b65-af01-37be",
       "$text": "offensive"
      }
-    ]
+    ],
+    "selectable": true
    },
    {
     "id": "aa6e-7911-5de5-f9bd",
@@ -31014,7 +31569,8 @@
       "typeId": "5679-0040-2585-071a",
       "$text": "defensive"
      }
-    ]
+    ],
+    "selectable": true
    },
    {
     "id": "c969-4d8b-769c-14cf",
@@ -31035,7 +31591,9 @@
       "typeId": "b94a-3a7c-6990-1947",
       "$text": "offensive"
      }
-    ]
+    ],
+    "selectable": true,
+    "selectionGroup": "weapon"
    },
    {
     "id": "cd7d-5132-0bb0-331a",
