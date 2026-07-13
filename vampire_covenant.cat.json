@@ -93,8 +93,38 @@
     "name": "Blood Powers",
     "comment": "blood_power",
     "hidden": true,
-    "constraints": [],
-    "modifiers": []
+    "constraints": [
+     {
+      "id": "3189-84cd-b21d-b322",
+      "field": "selections",
+      "scope": "root-entry",
+      "value": 2,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "3189-84cd-b21d-b322",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
    },
    {
     "id": "a321-c041-20d7-23ed",
@@ -1453,6 +1483,17 @@
                 "includeChildForces": false,
                 "shared": true,
                 "percentValue": false
+               },
+               {
+                "id": "6c19-4f61-1edc-3b5c",
+                "field": "selections",
+                "scope": "parent",
+                "value": 1,
+                "type": "min",
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "shared": true,
+                "percentValue": false
                }
               ],
               "modifiers": [
@@ -1490,6 +1531,7 @@
               "selectionEntries": [],
               "selectionEntryGroups": [],
               "entryLinks": [],
+              "defaultAmount": 1,
               "sortIndex": 1,
               "collective": true
              }
@@ -4100,6 +4142,17 @@
                   "includeChildForces": false,
                   "shared": true,
                   "percentValue": false
+                 },
+                 {
+                  "id": "b88e-8a24-d44e-e463",
+                  "field": "selections",
+                  "scope": "parent",
+                  "value": 1,
+                  "type": "min",
+                  "includeChildSelections": false,
+                  "includeChildForces": false,
+                  "shared": true,
+                  "percentValue": false
                  }
                 ],
                 "modifiers": [
@@ -4137,6 +4190,7 @@
                 "selectionEntries": [],
                 "selectionEntryGroups": [],
                 "entryLinks": [],
+                "defaultAmount": 1,
                 "sortIndex": 1,
                 "collective": true
                }
@@ -11658,20 +11712,55 @@
             "type": "set",
             "field": "hidden",
             "value": true,
-            "conditions": [
+            "conditions": [],
+            "conditionGroups": [
              {
-              "type": "atLeast",
-              "value": 36,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "f8e1-ad82-f47f-2939",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
+              "type": "or",
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 36,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "f8e1-ad82-f47f-2939",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": [
+               {
+                "type": "and",
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 35,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "f8e1-ad82-f47f-2939",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": false,
+                  "percentValue": false
+                 },
+                 {
+                  "type": "atMost",
+                  "value": 0,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "9f09-a7b1-fd91-d236",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": false,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               }
+              ]
              }
-            ],
-            "conditionGroups": []
+            ]
            }
           ],
           "profiles": [],
@@ -23456,27 +23545,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -23551,25 +23620,6 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "7271-81e4-be14-4cc1",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24616,27 +24666,7 @@
       "percentValue": false
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -24717,25 +24747,6 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "a321-c041-20d7-23ed",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24832,25 +24843,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -24933,25 +24925,6 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "cc7b-1fee-0f95-90d8",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -25048,25 +25021,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -25130,25 +25084,6 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "6c7e-be70-e418-112c",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -26304,27 +26239,7 @@
       "percentValue": false
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -26374,27 +26289,7 @@
       "percentValue": false
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -26463,25 +26358,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -26533,27 +26409,7 @@
       "percentValue": false
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -26622,25 +26478,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -26692,27 +26529,7 @@
       "percentValue": false
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -26774,25 +26591,6 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "4067-7597-6273-04e3",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "6451-e6dc-ca95-135d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,

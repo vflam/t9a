@@ -2630,6 +2630,17 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "c73f-6ee4-0295-aeab",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
          }
         ],
         "modifiers": [],
@@ -2652,7 +2663,56 @@
             "hidden": false,
             "constraints": [],
             "modifiers": [],
-            "selectionEntries": [],
+            "selectionEntries": [
+             {
+              "id": "d1bb-3c0d-2247-f756",
+              "name": "Wizard",
+              "type": "upgrade",
+              "hidden": false,
+              "defaultAmount": 1,
+              "constraints": [
+               {
+                "id": "ddaa-ba72-4f0b-18e5",
+                "field": "selections",
+                "scope": "parent",
+                "value": 1,
+                "type": "min",
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "shared": true,
+                "percentValue": false
+               },
+               {
+                "id": "498d-cc42-a104-5839",
+                "field": "selections",
+                "scope": "parent",
+                "value": 1,
+                "type": "max",
+                "includeChildSelections": false,
+                "includeChildForces": false,
+                "shared": true,
+                "percentValue": false
+               }
+              ],
+              "modifiers": [],
+              "profiles": [],
+              "infoLinks": [],
+              "selectionEntries": [],
+              "selectionEntryGroups": [],
+              "entryLinks": [],
+              "categoryLinks": [
+               {
+                "id": "1710-36b8-4807-95ce",
+                "name": "Wizard",
+                "hidden": true,
+                "targetId": "6c7e-be70-e418-112c",
+                "primary": false
+               }
+              ],
+              "sortIndex": 1,
+              "collective": true
+             }
+            ],
             "selectionEntryGroups": [
              {
               "id": "d353-cd56-9893-5588",
@@ -2779,7 +2839,7 @@
               "selectionEntryGroups": [],
               "entryLinks": [],
               "collapsible": true,
-              "sortIndex": 1,
+              "sortIndex": 2,
               "collective": true
              },
              {
@@ -3556,7 +3616,7 @@
               "selectionEntryGroups": [],
               "entryLinks": [],
               "collapsible": true,
-              "sortIndex": 2,
+              "sortIndex": 3,
               "collective": true
              }
             ],
@@ -3572,6 +3632,7 @@
          }
         ],
         "entryLinks": [],
+        "defaultAmount": 1,
         "sortIndex": 1,
         "collective": true
        }
@@ -11339,6 +11400,17 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "79fd-98c9-fa98-ac93",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
          }
         ],
         "modifiers": [],
@@ -11905,6 +11977,7 @@
          }
         ],
         "entryLinks": [],
+        "defaultAmount": 1,
         "sortIndex": 1,
         "collective": true
        }
@@ -13517,7 +13590,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "e7d3-1f47-f905-6a6f",
+        "name": "Small Arms Fire",
+        "hidden": true,
+        "targetId": "30b9-e188-4de5-6ddb",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -16291,7 +16372,56 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "b7ee-9e21-792b-03be",
+        "name": "Small Arms Fire",
+        "type": "upgrade",
+        "hidden": false,
+        "defaultAmount": 3,
+        "constraints": [
+         {
+          "id": "2122-725d-6ffb-c9d0",
+          "field": "selections",
+          "scope": "parent",
+          "value": 3,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "b842-420d-b11f-68e1",
+          "field": "selections",
+          "scope": "parent",
+          "value": 3,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "6e03-2e48-02f9-7888",
+          "name": "Small Arms Fire",
+          "hidden": true,
+          "targetId": "30b9-e188-4de5-6ddb",
+          "primary": false
+         }
+        ],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "abbc-3512-f27e-a301",
@@ -16346,7 +16476,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        },
        {
@@ -16499,7 +16629,7 @@
           "collective": true
          }
         ],
-        "sortIndex": 2,
+        "sortIndex": 3,
         "collective": true
        }
       ],
@@ -28094,13 +28224,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "b993-1a8f-8630-c9f2",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "ee52-8ef4-fa75-2286",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -28247,13 +28370,6 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [
-         {
-          "id": "a9d5-8bd5-69cd-2503",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
          {
           "id": "e00c-e134-59c6-f993",
           "name": "⟨Dominant⟩",
@@ -28409,13 +28525,6 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [
-         {
-          "id": "1362-b18b-6870-6cde",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
          {
           "id": "ff39-f7b2-7a18-a02e",
           "name": "⟨Dominant⟩",
@@ -28826,13 +28935,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "5ea8-e7d5-2144-33b0",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "3808-d2e7-a10f-dfae",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -29176,13 +29278,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "2e82-66d4-4fb7-05cb",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "9557-3d45-8b41-f100",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -29338,13 +29433,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "11f5-0986-02a3-f9ea",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "0b4f-827a-36e3-cbfd",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -29491,13 +29579,6 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [
-         {
-          "id": "2743-d9da-50c8-c0b3",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
          {
           "id": "a8da-f1d2-abb4-3993",
           "name": "⟨Dominant⟩",
@@ -29654,13 +29735,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "7c9b-4d3d-2889-53a3",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "4727-4d98-21df-61e2",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -29727,25 +29801,6 @@
     ],
     "modifiers": [
      {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "ab93-e320-530b-bfcf",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
       "type": "prepend",
       "field": "name",
       "value": "Guiding ",
@@ -29776,13 +29831,6 @@
      }
     ],
     "categoryLinks": [
-     {
-      "id": "0f86-3a3a-07c1-564f",
-      "name": "Dominant",
-      "hidden": true,
-      "targetId": "ab93-e320-530b-bfcf",
-      "primary": false
-     },
      {
       "id": "0e73-e5ec-8528-4bd9",
       "name": "⟨Dominant⟩",
@@ -29990,13 +30038,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "e09e-8bc9-6b6a-3f7d",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "dba2-ab05-fa8c-a672",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -30152,13 +30193,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "68dc-83f3-199d-1bff",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "464b-c7b7-d962-61c9",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -30235,13 +30269,6 @@
      }
     ],
     "categoryLinks": [
-     {
-      "id": "f8ec-f4b8-9e71-4148",
-      "name": "Dominant",
-      "hidden": true,
-      "targetId": "ab93-e320-530b-bfcf",
-      "primary": false
-     },
      {
       "id": "63ea-17d6-674e-7dec",
       "name": "⟨Dominant⟩",
@@ -30371,13 +30398,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "559d-f754-a4d9-716d",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "a38c-4508-4318-e22f",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -30454,13 +30474,6 @@
      }
     ],
     "categoryLinks": [
-     {
-      "id": "b84c-e7b4-d33b-0dda",
-      "name": "Dominant",
-      "hidden": true,
-      "targetId": "ab93-e320-530b-bfcf",
-      "primary": false
-     },
      {
       "id": "6359-ba26-aecb-5ad1",
       "name": "⟨Dominant⟩",
@@ -30589,13 +30602,6 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [
-         {
-          "id": "b38d-3038-3c65-5bbb",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
          {
           "id": "4e9c-de77-95c7-2c4f",
           "name": "⟨Dominant⟩",
@@ -30744,13 +30750,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "717c-f20b-6353-2a67",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "d095-8bc8-d797-3fc9",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -30827,13 +30826,6 @@
      }
     ],
     "categoryLinks": [
-     {
-      "id": "5151-3e93-e318-3b43",
-      "name": "Dominant",
-      "hidden": true,
-      "targetId": "ab93-e320-530b-bfcf",
-      "primary": false
-     },
      {
       "id": "7858-1452-559a-9e4a",
       "name": "⟨Dominant⟩",
@@ -31033,13 +31025,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "3634-ec3d-a1a4-0d5b",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "a70b-be55-7d4e-0e02",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -31186,13 +31171,6 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [
-         {
-          "id": "e9ca-98c6-a0e8-e43a",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
          {
           "id": "9b81-b7a4-5e74-8a7d",
           "name": "⟨Dominant⟩",
@@ -31349,13 +31327,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "e996-5f9d-33d8-1034",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "f7d0-c8bf-a96c-50c2",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -31503,13 +31474,6 @@
         "infoLinks": [],
         "categoryLinks": [
          {
-          "id": "8110-c1fe-3ba7-fd46",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
-         {
           "id": "cfd1-ad69-bc6c-ed0a",
           "name": "⟨Dominant⟩",
           "hidden": true,
@@ -31656,13 +31620,6 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [
-         {
-          "id": "d09b-fcc3-149b-79b4",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
          {
           "id": "9efe-571d-2c32-fa5e",
           "name": "⟨Dominant⟩",
@@ -31860,13 +31817,6 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [
-         {
-          "id": "9155-22b2-4318-4115",
-          "name": "Dominant",
-          "hidden": true,
-          "targetId": "ab93-e320-530b-bfcf",
-          "primary": false
-         },
          {
           "id": "b6fe-8252-83a7-7ba6",
           "name": "⟨Dominant⟩",

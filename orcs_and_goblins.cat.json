@@ -5803,6 +5803,17 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "69fd-a876-1114-59b5",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "min",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
            }
           ],
           "modifiers": [],
@@ -5820,6 +5831,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "defaultAmount": 1,
           "sortIndex": 1,
           "collective": true
          }
@@ -19388,7 +19400,56 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "0633-7542-1561-e651",
+        "name": "Archer Broods",
+        "type": "upgrade",
+        "hidden": false,
+        "defaultAmount": 3,
+        "constraints": [
+         {
+          "id": "9d5e-ab03-b6cf-b094",
+          "field": "selections",
+          "scope": "parent",
+          "value": 3,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "0556-3e21-ce7c-c280",
+          "field": "selections",
+          "scope": "parent",
+          "value": 3,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "1c5f-0bf0-de6f-47a5",
+          "name": "Archer Broods",
+          "hidden": true,
+          "targetId": "209a-9a1c-6893-aadd",
+          "primary": false
+         }
+        ],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -19807,7 +19868,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "f199-fe0e-4f1b-ff5f",
+        "name": "Archer Broods",
+        "hidden": true,
+        "targetId": "209a-9a1c-6893-aadd",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -19955,20 +20024,55 @@
             "type": "set",
             "field": "hidden",
             "value": true,
-            "conditions": [
+            "conditions": [],
+            "conditionGroups": [
              {
-              "type": "atLeast",
-              "value": 16,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "ca72-098b-3552-3737",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
+              "type": "or",
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 16,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "ca72-098b-3552-3737",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": [
+               {
+                "type": "and",
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 15,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "ca72-098b-3552-3737",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": false,
+                  "percentValue": false
+                 },
+                 {
+                  "type": "atMost",
+                  "value": 0,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "488f-3c42-3007-719d",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": false,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               }
+              ]
              }
-            ],
-            "conditionGroups": []
+            ]
            }
           ],
           "profiles": [],
@@ -22711,7 +22815,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "88f7-0717-0be9-e5a1",
+        "name": "Orc Chariots Numbers",
+        "hidden": true,
+        "targetId": "f896-d753-814d-2bd2",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -27358,61 +27470,6 @@
     "collective": true
    },
    {
-    "id": "4221-dd02-fa09-920c",
-    "name": "Spell Scroll (Awaken the Beast)",
-    "type": "upgrade",
-    "hidden": false,
-    "costs": [
-     {
-      "name": "pts",
-      "typeId": "ea90-6996-33df-993c",
-      "value": 30
-     }
-    ],
-    "constraints": [
-     {
-      "id": "c821-c2d1-8662-48bc",
-      "field": "selections",
-      "scope": "parent",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": false,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false
-     },
-     {
-      "id": "62e0-69b8-a38a-4c5f",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false,
-      "comment": "Legendary",
-      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
-     }
-    ],
-    "modifiers": [],
-    "profiles": [],
-    "infoLinks": [
-     {
-      "id": "2104-815f-1091-ead9",
-      "name": "Spell Scroll",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "53e3-cb05-65c2-ccdf"
-     }
-    ],
-    "categoryLinks": [],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [],
-    "collective": true
-   },
-   {
     "id": "bc99-ee49-cb00-5720",
     "name": "Gnasher Bait",
     "type": "upgrade",
@@ -27599,25 +27656,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "ab93-e320-530b-bfcf",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -27631,13 +27669,6 @@
      }
     ],
     "categoryLinks": [
-     {
-      "id": "9d60-eae9-d8df-5427",
-      "name": "Dominant",
-      "hidden": true,
-      "targetId": "ab93-e320-530b-bfcf",
-      "primary": false
-     },
      {
       "id": "f980-67dd-20b0-f195",
       "name": "⟨Dominant⟩",
@@ -27689,27 +27720,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -27772,27 +27783,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -28416,25 +28407,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "ab93-e320-530b-bfcf",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -28448,13 +28420,6 @@
      }
     ],
     "categoryLinks": [
-     {
-      "id": "bc96-d041-dc6c-a6c3",
-      "name": "Dominant",
-      "hidden": true,
-      "targetId": "ab93-e320-530b-bfcf",
-      "primary": false
-     },
      {
       "id": "1155-c99e-fea2-bb46",
       "name": "⟨Dominant⟩",
@@ -30016,15 +29981,30 @@
       "collective": true
      },
      {
-      "id": "af8b-2d84-4827-e9c4",
+      "id": "11ce-3b2a-b862-d021",
       "name": "Spell Scroll (Awaken the Beast)",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "4221-dd02-fa09-920c",
-      "modifiers": [],
+      "targetId": "0728-f6bf-3460-1fac",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 30,
+        "conditions": [],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "name",
+        "value": "Spell Scroll (Awaken the Beast)",
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
       "categoryLinks": [
        {
-        "id": "1f44-6bf8-6e05-ac6b",
+        "id": "e760-4454-7fd9-2b03",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",

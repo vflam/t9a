@@ -298,6 +298,14 @@
     "modifiers": []
    },
    {
+    "id": "361b-b9ed-1b8e-5e44",
+    "name": "Knights Of The Realm Amount",
+    "comment": "knights_of_the_realm_amount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "bab0-0500-db9f-8c3e",
     "name": "Knight Banneret",
     "comment": "srar:knightBanneret",
@@ -356,14 +364,6 @@
       ]
      }
     ]
-   },
-   {
-    "id": "361b-b9ed-1b8e-5e44",
-    "name": "Knights Of The Realm Amount",
-    "comment": "knights_of_the_realm_amount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
    },
    {
     "id": "d140-5c01-481c-3d3b",
@@ -474,17 +474,17 @@
     ]
    },
    {
-    "id": "6116-f1cb-9022-e19a",
-    "name": "Ma Folorn Knights",
-    "comment": "ma_folorn_knights",
+    "id": "2dc1-41a2-b526-8df4",
+    "name": "Men At Arms Amount",
+    "comment": "men-at-arms_amount",
     "hidden": true,
     "constraints": [],
     "modifiers": []
    },
    {
-    "id": "2dc1-41a2-b526-8df4",
-    "name": "Men At Arms Amount",
-    "comment": "men-at-arms_amount",
+    "id": "6116-f1cb-9022-e19a",
+    "name": "Ma Folorn Knights",
+    "comment": "ma_folorn_knights",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -8861,7 +8861,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "d301-1b0a-4397-e40b",
+        "name": "Knights Of The Realm Amount",
+        "hidden": true,
+        "targetId": "361b-b9ed-1b8e-5e44",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -11670,7 +11678,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "dc17-ae62-4747-d9ca",
+        "name": "Hedge Knights Numbers",
+        "hidden": true,
+        "targetId": "a226-0917-653a-2e3f",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -14262,7 +14278,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "309b-45e8-cce5-d66b",
+        "name": "Knights Of The Court Amount",
+        "hidden": true,
+        "targetId": "581d-b18c-ea34-13ca",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -14822,7 +14846,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "2f5c-4835-1f76-a21d",
+        "name": "Men At Arms Amount",
+        "hidden": true,
+        "targetId": "2dc1-41a2-b526-8df4",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -15709,7 +15741,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "2b6c-4c42-8150-d0b6",
+        "name": "Pegasus Knights Amount",
+        "hidden": true,
+        "targetId": "f464-d7a4-0516-d854",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -23100,27 +23140,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -23183,27 +23203,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -23266,27 +23266,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -23349,27 +23329,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {

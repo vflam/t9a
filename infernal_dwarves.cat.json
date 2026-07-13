@@ -17429,7 +17429,56 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "e37a-873e-7c1f-2c8e",
+        "name": "Black Powder",
+        "type": "upgrade",
+        "hidden": false,
+        "defaultAmount": 0.5,
+        "constraints": [
+         {
+          "id": "073e-d27b-a224-6ba3",
+          "field": "selections",
+          "scope": "parent",
+          "value": 0.5,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "f0ea-da4d-fe46-d705",
+          "field": "selections",
+          "scope": "parent",
+          "value": 0.5,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "7a3a-4e94-6b56-6510",
+          "name": "Black Powder",
+          "hidden": true,
+          "targetId": "92f4-8db1-486d-e336",
+          "primary": false
+         }
+        ],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -22517,20 +22566,55 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [
+      "conditions": [],
+      "conditionGroups": [
        {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "0237-49e0-a2f5-2467",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
+        "type": "or",
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 2,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "0237-49e0-a2f5-2467",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": [
+         {
+          "type": "and",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "0237-49e0-a2f5-2467",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1228-2628-cf0f-e1c7",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
        }
-      ],
-      "conditionGroups": []
+      ]
      }
     ],
     "collective": true
@@ -23490,61 +23574,6 @@
     "collective": true
    },
    {
-    "id": "b8a9-8ece-724f-13fc",
-    "name": "Spell Scroll (Tidal Flame)",
-    "type": "upgrade",
-    "hidden": false,
-    "costs": [
-     {
-      "name": "pts",
-      "typeId": "ea90-6996-33df-993c",
-      "value": 10
-     }
-    ],
-    "constraints": [
-     {
-      "id": "b27d-9e5a-9e65-abf9",
-      "field": "selections",
-      "scope": "parent",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": false,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false
-     },
-     {
-      "id": "a499-610b-c468-db91",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false,
-      "comment": "Legendary",
-      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
-     }
-    ],
-    "modifiers": [],
-    "profiles": [],
-    "infoLinks": [
-     {
-      "id": "dea9-e6c1-4f9c-0238",
-      "name": "Spell Scroll",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "53e3-cb05-65c2-ccdf"
-     }
-    ],
-    "categoryLinks": [],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [],
-    "collective": true
-   },
-   {
     "id": "4306-ad40-0d93-7235",
     "name": "Flame of the East",
     "type": "upgrade",
@@ -23624,25 +23653,6 @@
         ]
        }
       ]
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -23714,27 +23724,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -23804,27 +23794,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -25259,25 +25229,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "ab93-e320-530b-bfcf",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -25296,13 +25247,6 @@
       "name": "Id Special Item",
       "hidden": true,
       "targetId": "d57f-c74f-7f62-ba19",
-      "primary": false
-     },
-     {
-      "id": "4ba2-be2d-5260-0198",
-      "name": "Dominant",
-      "hidden": true,
-      "targetId": "ab93-e320-530b-bfcf",
       "primary": false
      },
      {
@@ -26754,15 +26698,30 @@
       "collective": true
      },
      {
-      "id": "f493-eda6-4059-adeb",
+      "id": "6c03-e76a-ae2a-8c95",
       "name": "Spell Scroll (Tidal Flame)",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "b8a9-8ece-724f-13fc",
-      "modifiers": [],
+      "targetId": "0728-f6bf-3460-1fac",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 10,
+        "conditions": [],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "name",
+        "value": "Spell Scroll (Tidal Flame)",
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
       "categoryLinks": [
        {
-        "id": "4788-14d6-c5dd-a33d",
+        "id": "9a1f-83f7-8e62-8e8a",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",

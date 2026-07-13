@@ -11905,7 +11905,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "288e-aefd-4f30-18ed",
+        "name": "Sticks and Stones",
+        "hidden": true,
+        "targetId": "d90c-b07e-02e0-31d1",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -19710,25 +19718,6 @@
       "conditions": [
        {
         "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
@@ -19850,25 +19839,6 @@
        }
       ],
       "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -19933,27 +19903,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -20016,27 +19966,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -20623,61 +20553,6 @@
       "hidden": false,
       "type": "profile",
       "targetId": "04a1-3162-ebe2-f6d4"
-     }
-    ],
-    "categoryLinks": [],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [],
-    "collective": true
-   },
-   {
-    "id": "cd1c-7686-1767-e071",
-    "name": "Spell Scroll (Wild Guardian)",
-    "type": "upgrade",
-    "hidden": false,
-    "costs": [
-     {
-      "name": "pts",
-      "typeId": "ea90-6996-33df-993c",
-      "value": 35
-     }
-    ],
-    "constraints": [
-     {
-      "id": "ba3e-3ada-7e47-a1f1",
-      "field": "selections",
-      "scope": "parent",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": false,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false
-     },
-     {
-      "id": "0b2b-0afe-4ea0-fb04",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false,
-      "comment": "Legendary",
-      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
-     }
-    ],
-    "modifiers": [],
-    "profiles": [],
-    "infoLinks": [
-     {
-      "id": "ae79-2263-d87a-ab5b",
-      "name": "Spell Scroll",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "53e3-cb05-65c2-ccdf"
      }
     ],
     "categoryLinks": [],
@@ -21946,15 +21821,30 @@
       "collective": true
      },
      {
-      "id": "9e3e-9e17-1899-c7e7",
+      "id": "5469-81d4-8cdd-129e",
       "name": "Spell Scroll (Wild Guardian)",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "cd1c-7686-1767-e071",
-      "modifiers": [],
+      "targetId": "0728-f6bf-3460-1fac",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 35,
+        "conditions": [],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "name",
+        "value": "Spell Scroll (Wild Guardian)",
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
       "categoryLinks": [
        {
-        "id": "dd1c-263d-1df5-d1ec",
+        "id": "07fb-aeff-2b06-c9ce",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",

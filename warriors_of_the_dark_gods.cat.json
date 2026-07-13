@@ -387,6 +387,14 @@
     ]
    },
    {
+    "id": "25e6-8636-43d6-70d4",
+    "name": "Feldraks",
+    "comment": "[indicator] feldrak",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "fb59-a4c7-830b-1de3",
     "name": "Mount Dragon",
     "comment": "mount_dragon",
@@ -7902,6 +7910,54 @@
            }
           ],
           "sortIndex": 1,
+          "collective": true
+         },
+         {
+          "id": "f264-8580-249b-2252",
+          "name": "Shield",
+          "type": "upgrade",
+          "hidden": false,
+          "defaultAmount": 1,
+          "constraints": [
+           {
+            "id": "6568-df71-6c71-8fe1",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "min",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           },
+           {
+            "id": "936a-d002-e8c9-34ff",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "0af2-fb92-1aa2-fb14",
+            "name": "Shield",
+            "hidden": true,
+            "targetId": "78e6-b065-4446-c3ec",
+            "primary": false
+           }
+          ],
+          "sortIndex": 2,
           "collective": true
          }
         ],
@@ -19586,7 +19642,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "e9ac-8f38-ca7b-4a9a",
+        "name": "Feldraks",
+        "hidden": true,
+        "targetId": "25e6-8636-43d6-70d4",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -25557,61 +25621,6 @@
     "collective": true
    },
    {
-    "id": "9d91-1e8b-ed6a-d084",
-    "name": "Spell Scroll (The Grave Calls)",
-    "type": "upgrade",
-    "hidden": false,
-    "costs": [
-     {
-      "name": "pts",
-      "typeId": "ea90-6996-33df-993c",
-      "value": 25
-     }
-    ],
-    "constraints": [
-     {
-      "id": "55ad-9a7e-df69-aafb",
-      "field": "selections",
-      "scope": "parent",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": false,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false
-     },
-     {
-      "id": "dbb4-9792-9dfa-32a2",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false,
-      "comment": "Legendary",
-      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
-     }
-    ],
-    "modifiers": [],
-    "profiles": [],
-    "infoLinks": [
-     {
-      "id": "38ca-c4b1-da62-3364",
-      "name": "Spell Scroll",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "53e3-cb05-65c2-ccdf"
-     }
-    ],
-    "categoryLinks": [],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [],
-    "collective": true
-   },
-   {
     "id": "6175-2d08-d632-8e3e",
     "name": "Wyrd Stone",
     "type": "upgrade",
@@ -25986,27 +25995,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -26069,27 +26058,7 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     }
-    ],
+    "modifiers": [],
     "profiles": [],
     "infoLinks": [
      {
@@ -29056,15 +29025,30 @@
       "collective": true
      },
      {
-      "id": "e14c-8731-44c9-1788",
+      "id": "8a05-7df4-1260-c8bc",
       "name": "Spell Scroll (The Grave Calls)",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "9d91-1e8b-ed6a-d084",
-      "modifiers": [],
+      "targetId": "0728-f6bf-3460-1fac",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 25,
+        "conditions": [],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "name",
+        "value": "Spell Scroll (The Grave Calls)",
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
       "categoryLinks": [
        {
-        "id": "65a0-23c5-0875-64f7",
+        "id": "c140-23a2-3888-60e6",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",

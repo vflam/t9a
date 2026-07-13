@@ -13389,20 +13389,55 @@
             "type": "set",
             "field": "hidden",
             "value": true,
-            "conditions": [
+            "conditions": [],
+            "conditionGroups": [
              {
-              "type": "atLeast",
-              "value": 16,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "3919-8527-ba17-8714",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
+              "type": "or",
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 16,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "3919-8527-ba17-8714",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": [
+               {
+                "type": "and",
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 15,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "3919-8527-ba17-8714",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": false,
+                  "percentValue": false
+                 },
+                 {
+                  "type": "atMost",
+                  "value": 0,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "8169-d6b6-9172-8307",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": false,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               }
+              ]
              }
-            ],
-            "conditionGroups": []
+            ]
            }
           ],
           "profiles": [],
@@ -14151,7 +14186,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "28b9-5d75-5bd7-4209",
+        "name": "Clans Thunder",
+        "hidden": true,
+        "targetId": "bf9c-b9ed-8c3e-2453",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -14600,7 +14643,56 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "0e72-c2bf-e9d8-e36f",
+        "name": "Clans Thunder",
+        "type": "upgrade",
+        "hidden": false,
+        "defaultAmount": 5,
+        "constraints": [
+         {
+          "id": "3163-4889-0a0e-5a00",
+          "field": "selections",
+          "scope": "parent",
+          "value": 5,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "94da-65a7-1dd5-7771",
+          "field": "selections",
+          "scope": "parent",
+          "value": 5,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "35b9-9e06-6f7f-522d",
+          "name": "Clans Thunder",
+          "hidden": true,
+          "targetId": "bf9c-b9ed-8c3e-2453",
+          "primary": false
+         }
+        ],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "d349-9c7b-adca-671c",
@@ -14722,7 +14814,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "defaultSelectionEntryId": "13de-3d7b-7372-215c",
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -17818,20 +17910,55 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [
+      "conditions": [],
+      "conditionGroups": [
        {
-        "type": "atLeast",
-        "value": 3,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "f92a-5aed-504e-ca94",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
+        "type": "or",
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 3,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "f92a-5aed-504e-ca94",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": [
+         {
+          "type": "and",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 2,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "f92a-5aed-504e-ca94",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "a100-86bf-1ce6-1f6b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
        }
-      ],
-      "conditionGroups": []
+      ]
      }
     ],
     "profiles": [],

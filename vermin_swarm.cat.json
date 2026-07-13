@@ -2369,6 +2369,54 @@
         "entryLinks": [],
         "sortIndex": 1,
         "collective": true
+       },
+       {
+        "id": "f15a-3e73-35a8-2747",
+        "name": "General",
+        "type": "upgrade",
+        "hidden": false,
+        "defaultAmount": 1,
+        "constraints": [
+         {
+          "id": "d76e-a522-5d0c-ee98",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "8288-eee9-ba18-2c5f",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "fc0c-1aa5-1697-cd2e",
+          "name": "General",
+          "hidden": true,
+          "targetId": "bf19-2ae3-58d2-5ff5",
+          "primary": false
+         }
+        ],
+        "sortIndex": 2,
+        "collective": true
        }
       ],
       "selectionEntryGroups": [],
@@ -11726,7 +11774,56 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "fb01-634b-f7c3-e4df",
+        "name": "Small Arms Fire",
+        "type": "upgrade",
+        "hidden": false,
+        "defaultAmount": 0.5,
+        "constraints": [
+         {
+          "id": "29d4-002c-1565-2ada",
+          "field": "selections",
+          "scope": "parent",
+          "value": 0.5,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "75bc-477d-eaef-a90c",
+          "field": "selections",
+          "scope": "parent",
+          "value": 0.5,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "categoryLinks": [
+         {
+          "id": "82a3-b118-9776-4fa9",
+          "name": "Small Arms Fire",
+          "hidden": true,
+          "targetId": "30b9-e188-4de5-6ddb",
+          "primary": false
+         }
+        ],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -14568,7 +14665,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "8a3c-f52d-a2d9-fa42",
+        "name": "Small Arms Fire",
+        "hidden": true,
+        "targetId": "30b9-e188-4de5-6ddb",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -16632,7 +16737,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "29a8-d809-f088-f3f0",
+        "name": "Small Arms Fire",
+        "hidden": true,
+        "targetId": "30b9-e188-4de5-6ddb",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -17935,7 +18048,15 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [],
+      "categoryLinks": [
+       {
+        "id": "d6d9-367f-8ed6-5fc0",
+        "name": "Small Arms Fire",
+        "hidden": true,
+        "targetId": "30b9-e188-4de5-6ddb",
+        "primary": false
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -19601,61 +19722,6 @@
     "collective": true
    },
    {
-    "id": "a2e2-468f-29a4-6ec5",
-    "name": "Spell Scroll (Rain of Fire)",
-    "type": "upgrade",
-    "hidden": false,
-    "costs": [
-     {
-      "name": "pts",
-      "typeId": "ea90-6996-33df-993c",
-      "value": 35
-     }
-    ],
-    "constraints": [
-     {
-      "id": "7446-dfc9-bacb-710c",
-      "field": "selections",
-      "scope": "parent",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": false,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false
-     },
-     {
-      "id": "e646-9f0c-fa6a-495e",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": false,
-      "shared": true,
-      "percentValue": false,
-      "comment": "Legendary",
-      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
-     }
-    ],
-    "modifiers": [],
-    "profiles": [],
-    "infoLinks": [
-     {
-      "id": "f62f-f01b-6fdf-ed7a",
-      "name": "Spell Scroll",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "53e3-cb05-65c2-ccdf"
-     }
-    ],
-    "categoryLinks": [],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [],
-    "collective": true
-   },
-   {
     "id": "600e-2ef7-1cd8-f9a6",
     "name": "Potion of Rat Form",
     "type": "upgrade",
@@ -20106,25 +20172,6 @@
        }
       ],
       "comment": "Rare"
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20448,25 +20495,6 @@
         ]
        }
       ]
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 2,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "c68b-884a-a0d7-b8b4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      },
      {
       "type": "set",
@@ -21457,15 +21485,30 @@
       "collective": true
      },
      {
-      "id": "5581-f051-f2e8-92c4",
+      "id": "a028-062f-c93a-c306",
       "name": "Spell Scroll (Rain of Fire)",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "a2e2-468f-29a4-6ec5",
-      "modifiers": [],
+      "targetId": "0728-f6bf-3460-1fac",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 35,
+        "conditions": [],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "name",
+        "value": "Spell Scroll (Rain of Fire)",
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
       "categoryLinks": [
        {
-        "id": "123e-6671-b692-321f",
+        "id": "8859-75f3-0c88-e766",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",
@@ -22421,15 +22464,30 @@
       "collective": true
      },
      {
-      "id": "1f5e-a04e-ee04-a1bb",
+      "id": "8804-3717-55e0-8928",
       "name": "Spell Scroll (Rain of Fire)",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "a2e2-468f-29a4-6ec5",
-      "modifiers": [],
+      "targetId": "0728-f6bf-3460-1fac",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 35,
+        "conditions": [],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "name",
+        "value": "Spell Scroll (Rain of Fire)",
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
       "categoryLinks": [
        {
-        "id": "8b66-d593-384f-32e9",
+        "id": "19ec-b32c-aab7-24d6",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",
