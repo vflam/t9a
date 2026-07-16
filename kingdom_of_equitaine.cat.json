@@ -25,6 +25,22 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "90cf-642c-cc19-c9b7",
+    "name": "Gallantry",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   },
+   {
+    "id": "6f3b-f6d9-5407-317e",
+    "name": "Small Arms Fire",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "1962-ad57-6223-d1f7",
@@ -58,79 +74,6 @@
     "hidden": true,
     "constraints": [],
     "modifiers": []
-   },
-   {
-    "id": "b782-615e-896a-66a8",
-    "name": "Quin",
-    "comment": "quin",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "d626-cbeb-5459-8143",
-    "name": "Castellan",
-    "comment": "castellan",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "b9ec-675f-d1c4-1efb",
-    "name": "Gallantry",
-    "comment": "[indicator] gallantry",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "afb6-4604-f86d-92cc",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "afb6-4604-f86d-92cc",
-      "value": 1,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 650,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "afb6-4604-f86d-92cc",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "f3d9-31c7-0bd5-728d",
@@ -228,14 +171,6 @@
     ]
    },
    {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "e47f-3496-4422-34e1",
     "name": "Halberd",
     "comment": "halberd",
@@ -293,14 +228,6 @@
     "id": "e4f6-8aaa-e455-8e9c",
     "name": "Attached",
     "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "361b-b9ed-1b8e-5e44",
-    "name": "Knights Of The Realm Amount",
-    "comment": "knights_of_the_realm_amount",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -412,30 +339,6 @@
     ]
    },
    {
-    "id": "a226-0917-653a-2e3f",
-    "name": "Hedge Knights Numbers",
-    "comment": "hedge_knights_numbers",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "1668-cefa-b333-9400",
-    "name": "Hooded Men",
-    "comment": "hoodedMen",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "581d-b18c-ea34-13ca",
-    "name": "Knights Of The Court Amount",
-    "comment": "knights_of_the_court_amount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "c75d-83bd-f6a4-b03c",
     "name": "Men At Arms",
     "comment": "men-at-arms",
@@ -474,41 +377,9 @@
     ]
    },
    {
-    "id": "2dc1-41a2-b526-8df4",
-    "name": "Men At Arms Amount",
-    "comment": "men-at-arms_amount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "6116-f1cb-9022-e19a",
-    "name": "Ma Folorn Knights",
-    "comment": "ma_folorn_knights",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "f464-d7a4-0516-d854",
-    "name": "Pegasus Knights Amount",
-    "comment": "pegasus_knights_amount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "a8fb-40ff-2487-c252",
     "name": "Construct",
     "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "6f07-7d5d-6eb3-67ef",
-    "name": "Fey Knight",
-    "comment": "feyKnight",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -951,7 +822,72 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "afb6-4604-f86d-92cc",
+      "field": "90cf-642c-cc19-c9b7",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     },
+     {
+      "id": "0e92-8544-162b-8669",
+      "field": "6f3b-f6d9-5407-317e",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "afb6-4604-f86d-92cc",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 650,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "0e92-8544-162b-8669",
+      "value": 30,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -1852,37 +1788,31 @@
           "type": "set",
           "field": "hidden",
           "value": true,
-          "conditions": [],
-          "conditionGroups": [
+          "conditions": [
            {
-            "type": "or",
-            "conditions": [
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "c04d-1882-6246-277c",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             },
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "0eb6-4350-a18a-a9bf",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             }
-            ],
-            "conditionGroups": []
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "c04d-1882-6246-277c",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "0eb6-4350-a18a-a9bf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
            }
-          ]
+          ],
+          "conditionGroups": []
          }
         ],
         "categoryLinks": [],
@@ -1920,37 +1850,31 @@
           "type": "set",
           "field": "hidden",
           "value": true,
-          "conditions": [],
-          "conditionGroups": [
+          "conditions": [
            {
-            "type": "or",
-            "conditions": [
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "c04d-1882-6246-277c",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             },
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "0eb6-4350-a18a-a9bf",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             }
-            ],
-            "conditionGroups": []
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "c04d-1882-6246-277c",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "0eb6-4350-a18a-a9bf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
            }
-          ]
+          ],
+          "conditionGroups": []
          }
         ],
         "categoryLinks": [],
@@ -1988,37 +1912,31 @@
           "type": "set",
           "field": "hidden",
           "value": true,
-          "conditions": [],
-          "conditionGroups": [
+          "conditions": [
            {
-            "type": "or",
-            "conditions": [
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "c04d-1882-6246-277c",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             },
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "0eb6-4350-a18a-a9bf",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             }
-            ],
-            "conditionGroups": []
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "c04d-1882-6246-277c",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "0eb6-4350-a18a-a9bf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
            }
-          ]
+          ],
+          "conditionGroups": []
          }
         ],
         "categoryLinks": [],
@@ -3496,13 +3414,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "07b9-d17e-18a4-799a",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "1350-4f77-7795-c371",
           "name": "Battle Standard",
           "hidden": true,
@@ -4499,7 +4410,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3462-fea4-4a35-6174",
+            "childId": "a73a-422b-a513-303f",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -4943,7 +4854,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "0237-49e0-a2f5-2467",
+            "childId": "09ec-7a02-ecfd-2be8",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -6970,6 +6881,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Small Arms Fire",
+            "typeId": "6f3b-f6d9-5407-317e",
+            "value": 2
            }
           ],
           "constraints": [
@@ -6997,56 +6913,7 @@
             "primary": false
            }
           ],
-          "selectionEntries": [
-           {
-            "id": "acf4-d862-040a-cdf7",
-            "name": "Small Arms Fire",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 2,
-            "constraints": [
-             {
-              "id": "38b1-477b-d578-79ca",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "b94c-9068-b10e-7a6f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "7985-9c6d-a3f5-9a80",
-              "name": "Small Arms Fire",
-              "hidden": true,
-              "targetId": "30b9-e188-4de5-6ddb",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 4,
@@ -7183,7 +7050,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d626-cbeb-5459-8143",
+              "childId": "6400-569c-ec46-52af",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -7271,7 +7138,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d626-cbeb-5459-8143",
+              "childId": "6400-569c-ec46-52af",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -7359,7 +7226,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d626-cbeb-5459-8143",
+              "childId": "6400-569c-ec46-52af",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -7474,7 +7341,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d626-cbeb-5459-8143",
+              "childId": "6400-569c-ec46-52af",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -9135,15 +9002,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "d301-1b0a-4397-e40b",
-        "name": "Knights Of The Realm Amount",
-        "hidden": true,
-        "targetId": "361b-b9ed-1b8e-5e44",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -9362,7 +9221,7 @@
             "value": 7,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "361b-b9ed-1b8e-5e44",
+            "childId": "4d92-b8da-0685-674e",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -9828,6 +9687,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Small Arms Fire",
+            "typeId": "6f3b-f6d9-5407-317e",
+            "value": 2
            }
           ],
           "constraints": [
@@ -9872,56 +9736,7 @@
             "primary": false
            }
           ],
-          "selectionEntries": [
-           {
-            "id": "2e0d-5d94-9995-c176",
-            "name": "Small Arms Fire",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 2,
-            "constraints": [
-             {
-              "id": "2602-503e-7e3e-c1a0",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "42c7-0fc2-f087-3253",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "2ce1-daf8-3f7e-fc4f",
-              "name": "Small Arms Fire",
-              "hidden": true,
-              "targetId": "30b9-e188-4de5-6ddb",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -9937,6 +9752,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Small Arms Fire",
+            "typeId": "6f3b-f6d9-5407-317e",
+            "value": 2
            }
           ],
           "constraints": [
@@ -9973,56 +9793,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "f0d2-e902-e676-d3b1",
-            "name": "Small Arms Fire",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 2,
-            "constraints": [
-             {
-              "id": "65e9-996c-e00d-058d",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "7990-2f0a-59e3-82c6",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "4db5-2922-e5b2-4b61",
-              "name": "Small Arms Fire",
-              "hidden": true,
-              "targetId": "30b9-e188-4de5-6ddb",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -11603,6 +11374,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 100
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 2
      }
     ],
     "profiles": [
@@ -11866,54 +11642,6 @@
     ],
     "selectionEntries": [
      {
-      "id": "9fc3-8e51-142d-5cde",
-      "name": "Gallantry",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "3132-047d-1692-2c2d",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "1bbb-822e-74bf-c845",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "cfde-9b23-981c-df8f",
-        "name": "Gallantry",
-        "hidden": true,
-        "targetId": "b9ec-675f-d1c4-1efb",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     },
-     {
       "id": "b035-b2b2-9949-8db8",
       "name": "Hedge Knight",
       "type": "model",
@@ -11952,19 +11680,11 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "dc17-ae62-4747-d9ca",
-        "name": "Hedge Knights Numbers",
-        "hidden": true,
-        "targetId": "a226-0917-653a-2e3f",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      }
     ],
@@ -12123,7 +11843,7 @@
             "value": 7,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "a226-0917-653a-2e3f",
+            "childId": "b035-b2b2-9949-8db8",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -12178,7 +11898,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 3,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -12561,6 +12281,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Small Arms Fire",
+            "typeId": "6f3b-f6d9-5407-317e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -12603,15 +12328,7 @@
             "targetId": "f930-f7e6-2b9b-81d7"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "f1f3-d992-c8ab-8358",
-            "name": "Small Arms Fire",
-            "hidden": true,
-            "targetId": "30b9-e188-4de5-6ddb",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -12654,15 +12371,7 @@
             "targetId": "bd19-100a-5601-658e"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "555f-6122-d764-cca4",
-            "name": "Hooded Men",
-            "hidden": true,
-            "targetId": "1668-cefa-b333-9400",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [
            {
@@ -12705,6 +12414,11 @@
                 "name": "pts",
                 "typeId": "ea90-6996-33df-993c",
                 "value": 0
+               },
+               {
+                "name": "Small Arms Fire",
+                "typeId": "6f3b-f6d9-5407-317e",
+                "value": 2
                }
               ],
               "constraints": [
@@ -12731,7 +12445,7 @@
                   "value": 0,
                   "field": "selections",
                   "scope": "root-entry-self",
-                  "childId": "1668-cefa-b333-9400",
+                  "childId": "ca8a-857d-33bd-1ba2",
                   "shared": true,
                   "includeChildSelections": true,
                   "includeChildForces": false,
@@ -12769,56 +12483,7 @@
                 "primary": false
                }
               ],
-              "selectionEntries": [
-               {
-                "id": "ff42-7709-5a5d-9159",
-                "name": "Small Arms Fire",
-                "type": "upgrade",
-                "hidden": false,
-                "defaultAmount": 2,
-                "constraints": [
-                 {
-                  "id": "743a-c561-7d90-c771",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 2,
-                  "type": "min",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "0c55-af7d-2348-f9c0",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 2,
-                  "type": "max",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 }
-                ],
-                "modifiers": [],
-                "profiles": [],
-                "infoLinks": [],
-                "selectionEntries": [],
-                "selectionEntryGroups": [],
-                "entryLinks": [],
-                "categoryLinks": [
-                 {
-                  "id": "a934-705c-2f85-9a50",
-                  "name": "Small Arms Fire",
-                  "hidden": true,
-                  "targetId": "30b9-e188-4de5-6ddb",
-                  "primary": false
-                 }
-                ],
-                "sortIndex": 1,
-                "collective": true
-               }
-              ],
+              "selectionEntries": [],
               "selectionEntryGroups": [],
               "entryLinks": [],
               "sortIndex": 1,
@@ -12834,6 +12499,11 @@
                 "name": "pts",
                 "typeId": "ea90-6996-33df-993c",
                 "value": 0
+               },
+               {
+                "name": "Small Arms Fire",
+                "typeId": "6f3b-f6d9-5407-317e",
+                "value": 2
                }
               ],
               "constraints": [
@@ -12860,7 +12530,7 @@
                   "value": 0,
                   "field": "selections",
                   "scope": "root-entry-self",
-                  "childId": "1668-cefa-b333-9400",
+                  "childId": "ca8a-857d-33bd-1ba2",
                   "shared": true,
                   "includeChildSelections": true,
                   "includeChildForces": false,
@@ -12890,56 +12560,7 @@
                }
               ],
               "categoryLinks": [],
-              "selectionEntries": [
-               {
-                "id": "1b6a-2a10-0e5b-4980",
-                "name": "Small Arms Fire",
-                "type": "upgrade",
-                "hidden": false,
-                "defaultAmount": 2,
-                "constraints": [
-                 {
-                  "id": "33f1-e26f-a1bf-61eb",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 2,
-                  "type": "min",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "ae9c-47f2-8173-755a",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 2,
-                  "type": "max",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 }
-                ],
-                "modifiers": [],
-                "profiles": [],
-                "infoLinks": [],
-                "selectionEntries": [],
-                "selectionEntryGroups": [],
-                "entryLinks": [],
-                "categoryLinks": [
-                 {
-                  "id": "77dd-47f1-4b9d-fc5b",
-                  "name": "Small Arms Fire",
-                  "hidden": true,
-                  "targetId": "30b9-e188-4de5-6ddb",
-                  "primary": false
-                 }
-                ],
-                "sortIndex": 1,
-                "collective": true
-               }
-              ],
+              "selectionEntries": [],
               "selectionEntryGroups": [],
               "entryLinks": [],
               "sortIndex": 2,
@@ -14552,15 +14173,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "309b-45e8-cce5-d66b",
-        "name": "Knights Of The Court Amount",
-        "hidden": true,
-        "targetId": "581d-b18c-ea34-13ca",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -14723,7 +14336,7 @@
             "value": 7,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "581d-b18c-ea34-13ca",
+            "childId": "84a8-83f1-938a-ea0e",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -15120,15 +14733,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "2f5c-4835-1f76-a21d",
-        "name": "Men At Arms Amount",
-        "hidden": true,
-        "targetId": "2dc1-41a2-b526-8df4",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -15240,15 +14845,7 @@
             "targetId": "8e81-8cdd-dcdc-aacb"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "2c53-dae4-4733-128e",
-            "name": "Ma Folorn Knights",
-            "hidden": true,
-            "targetId": "6116-f1cb-9022-e19a",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -15465,7 +15062,7 @@
             "value": 19,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "2dc1-41a2-b526-8df4",
+            "childId": "89d2-d2ba-1d03-d3f6",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -15484,7 +15081,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "6116-f1cb-9022-e19a",
+            "childId": "b0df-61d0-32f0-50ad",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -15673,6 +15270,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 85
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 2
      }
     ],
     "profiles": [
@@ -15929,54 +15531,6 @@
     ],
     "selectionEntries": [
      {
-      "id": "c5dc-57a0-3fb3-adb4",
-      "name": "Gallantry",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "113c-eb0d-4867-75f2",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "1114-50b8-5279-b285",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "227f-01d8-6d9f-7164",
-        "name": "Gallantry",
-        "hidden": true,
-        "targetId": "b9ec-675f-d1c4-1efb",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     },
-     {
       "id": "ae2d-f4c1-7236-a71f",
       "name": "Pegasus Knight",
       "type": "model",
@@ -16015,19 +15569,11 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "2b6c-4c42-8150-d0b6",
-        "name": "Pegasus Knights Amount",
-        "hidden": true,
-        "targetId": "f464-d7a4-0516-d854",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      }
     ],
@@ -16186,7 +15732,7 @@
             "value": 3,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "f464-d7a4-0516-d854",
+            "childId": "ae2d-f4c1-7236-a71f",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -16241,7 +15787,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 3,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -17054,13 +16600,6 @@
       "primary": false
      },
      {
-      "id": "949e-3dd5-7cb7-1c28",
-      "name": "Gallantry",
-      "hidden": true,
-      "targetId": "b9ec-675f-d1c4-1efb",
-      "primary": false
-     },
-     {
       "id": "0e27-129f-3fb2-9514",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -17073,6 +16612,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 122
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 1
      }
     ],
     "profiles": [
@@ -18021,6 +17565,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Small Arms Fire",
+            "typeId": "6f3b-f6d9-5407-317e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -18056,15 +17605,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "c691-e3c7-a092-af66",
-            "name": "Small Arms Fire",
-            "hidden": true,
-            "targetId": "30b9-e188-4de5-6ddb",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -18081,6 +17622,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Small Arms Fire",
+            "typeId": "6f3b-f6d9-5407-317e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -18116,15 +17662,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "dae4-7eb2-5a98-7369",
-            "name": "Small Arms Fire",
-            "hidden": true,
-            "targetId": "30b9-e188-4de5-6ddb",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -18352,13 +17890,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "318a-784c-78c1-fe4a",
-      "name": "Fey Knight",
-      "hidden": true,
-      "targetId": "6f07-7d5d-6eb3-67ef",
-      "primary": false
-     },
-     {
       "id": "4a8b-f622-2069-499d",
       "name": "Metal Armour",
       "hidden": true,
@@ -18370,13 +17901,6 @@
       "name": "Mount",
       "hidden": true,
       "targetId": "31a4-1a73-082e-1ba9",
-      "primary": false
-     },
-     {
-      "id": "43e7-50d2-4647-4e90",
-      "name": "Gallantry",
-      "hidden": true,
-      "targetId": "b9ec-675f-d1c4-1efb",
       "primary": false
      },
      {
@@ -18399,6 +17923,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 360
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 1
      }
     ],
     "profiles": [
@@ -20171,6 +19700,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Gallantry",
+          "typeId": "90cf-642c-cc19-c9b7",
+          "value": 2
          }
         ],
         "constraints": [
@@ -20220,56 +19754,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "8125-6d84-4f3c-5270",
-          "name": "Gallantry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 2,
-          "constraints": [
-           {
-            "id": "f747-d3a6-ce44-7c11",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "452f-c966-8f9a-6e1d",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "6f29-6c2c-0ec0-c3ae",
-            "name": "Gallantry",
-            "hidden": true,
-            "targetId": "b9ec-675f-d1c4-1efb",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [
          {
           "id": "2a27-ed5b-c9b3-ea8c",
@@ -20347,7 +19832,7 @@
           ],
           "entryLinks": [],
           "selectionEntryGroups": [],
-          "sortIndex": 2,
+          "sortIndex": 1,
           "collective": true
          }
         ],
@@ -20365,6 +19850,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 40
+         },
+         {
+          "name": "Gallantry",
+          "typeId": "90cf-642c-cc19-c9b7",
+          "value": 2
          }
         ],
         "constraints": [
@@ -20407,56 +19897,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "8440-d0f4-4728-6ce3",
-          "name": "Gallantry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 2,
-          "constraints": [
-           {
-            "id": "e239-b093-4201-7d59",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "f54e-72c8-1f9b-314e",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "f6c7-9a2c-d853-2f79",
-            "name": "Gallantry",
-            "hidden": true,
-            "targetId": "b9ec-675f-d1c4-1efb",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [
          {
           "id": "ba92-aeb0-0e3f-7490",
@@ -20663,7 +20104,7 @@
           ],
           "entryLinks": [],
           "selectionEntryGroups": [],
-          "sortIndex": 2,
+          "sortIndex": 1,
           "collective": true
          }
         ],
@@ -21008,13 +20449,6 @@
       "primary": false
      },
      {
-      "id": "bfda-b7b8-e201-4974",
-      "name": "Gallantry",
-      "hidden": true,
-      "targetId": "b9ec-675f-d1c4-1efb",
-      "primary": false
-     },
-     {
       "id": "f165-734f-ec24-7e0e",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -21034,6 +20468,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 1
      }
     ],
     "profiles": [
@@ -21590,6 +21029,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 1
      }
     ],
     "profiles": [
@@ -21779,56 +21223,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "847f-860f-29a7-e2a7",
-      "name": "Gallantry",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 1,
-      "constraints": [
-       {
-        "id": "5936-c28c-a8be-ef0e",
-        "field": "selections",
-        "scope": "parent",
-        "value": 1,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "50da-2306-9cc8-0b6c",
-        "field": "selections",
-        "scope": "parent",
-        "value": 1,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "81a0-80df-6597-a91e",
-        "name": "Gallantry",
-        "hidden": true,
-        "targetId": "b9ec-675f-d1c4-1efb",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -21924,6 +21319,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 2
      }
     ],
     "profiles": [
@@ -22120,56 +21520,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "8a3c-a1f0-12df-e83f",
-      "name": "Gallantry",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "f55b-bb9a-2be3-27fe",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "941c-4f08-a720-425a",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "aff7-e33f-f019-f522",
-        "name": "Gallantry",
-        "hidden": true,
-        "targetId": "b9ec-675f-d1c4-1efb",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -22232,13 +21583,6 @@
       "primary": false
      },
      {
-      "id": "4cf4-30d9-3d7d-43f1",
-      "name": "Gallantry",
-      "hidden": true,
-      "targetId": "b9ec-675f-d1c4-1efb",
-      "primary": false
-     },
-     {
       "id": "d4e0-ef25-6057-a48b",
       "name": "⟨Hgt:4⟩",
       "hidden": true,
@@ -22265,6 +21609,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Gallantry",
+      "typeId": "90cf-642c-cc19-c9b7",
+      "value": 1
      }
     ],
     "profiles": [
@@ -22519,7 +21868,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "6f07-7d5d-6eb3-67ef",
+        "childId": "0f23-cfd5-0465-d974",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -22537,7 +21886,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "6f07-7d5d-6eb3-67ef",
+        "childId": "0f23-cfd5-0465-d974",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -22557,7 +21906,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "6f07-7d5d-6eb3-67ef",
+        "childId": "0f23-cfd5-0465-d974",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -22595,7 +21944,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "6f07-7d5d-6eb3-67ef",
+        "childId": "0f23-cfd5-0465-d974",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -23912,7 +23261,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "d626-cbeb-5459-8143",
+        "childId": "6400-569c-ec46-52af",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -23933,13 +23282,6 @@
      }
     ],
     "categoryLinks": [
-     {
-      "id": "9926-2ddb-6445-8b0a",
-      "name": "Quin",
-      "hidden": true,
-      "targetId": "b782-615e-896a-66a8",
-      "primary": false
-     },
      {
       "id": "e65d-075c-96e4-25c6",
       "name": "Wizard",
@@ -24218,7 +23560,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "b782-615e-896a-66a8",
+        "childId": "31f0-3ad7-19b3-7be8",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24237,7 +23579,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "d626-cbeb-5459-8143",
+        "childId": "6400-569c-ec46-52af",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24333,7 +23675,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "b782-615e-896a-66a8",
+        "childId": "31f0-3ad7-19b3-7be8",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24352,7 +23694,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "d626-cbeb-5459-8143",
+        "childId": "6400-569c-ec46-52af",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24422,7 +23764,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "b782-615e-896a-66a8",
+        "childId": "31f0-3ad7-19b3-7be8",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24441,7 +23783,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "d626-cbeb-5459-8143",
+        "childId": "6400-569c-ec46-52af",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24740,7 +24082,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "b782-615e-896a-66a8",
+        "childId": "31f0-3ad7-19b3-7be8",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24779,15 +24121,7 @@
       "targetId": "9207-d8a1-7c98-d246"
      }
     ],
-    "categoryLinks": [
-     {
-      "id": "879b-ac21-953c-6314",
-      "name": "Castellan",
-      "hidden": true,
-      "targetId": "d626-cbeb-5459-8143",
-      "primary": false
-     }
-    ],
+    "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],

@@ -25,6 +25,15 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "6f3b-f6d9-5407-317e",
+    "name": "Small Arms Fire",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "7137-b809-eb64-ac5c",
@@ -117,14 +126,6 @@
     "id": "e4f6-8aaa-e455-8e9c",
     "name": "Attached",
     "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -396,73 +397,9 @@
     ]
    },
    {
-    "id": "2f7c-7e2c-fc57-ffee",
-    "name": "Strixian",
-    "comment": "strixian",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "3c0d-c857-c57c-aa08",
     "name": "Fly",
     "comment": "fly",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "83d7-2813-f200-24e8",
-    "name": "Favored Of Envy",
-    "comment": "favored_of_envy",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "7dce-18cc-6a28-3ab5",
-    "name": "Favored Of Greed",
-    "comment": "favored_of_greed",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "d28d-d23e-618f-d0e4",
-    "name": "Favored Of Lust",
-    "comment": "favored_of_lust",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "9715-eac8-e9aa-f1ca",
-    "name": "Favored Of Pride",
-    "comment": "favored_of_pride",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3abe-bba9-4f50-ebd2",
-    "name": "Favored Of Sloth",
-    "comment": "favored_of_sloth",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "cbd9-db28-60ba-26be",
-    "name": "Favored Of Wrath",
-    "comment": "favored_of_wrath",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "770a-ee13-22ba-d8cc",
-    "name": "Favored Of Gluttony",
-    "comment": "favored_of_gluttony",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -1071,7 +1008,41 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "e4a7-8e58-a1ee-ec8f",
+      "field": "6f3b-f6d9-5407-317e",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "e4a7-8e58-a1ee-ec8f",
+      "value": 15,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -2084,13 +2055,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "a57d-3ee7-bb5c-030f",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "ec92-9dfa-33e7-95fc",
           "name": "Battle Standard",
           "hidden": true,
@@ -2184,7 +2148,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "499f-aeb4-d942-d4bc",
+            "childId": "2609-d057-7378-4b05",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -2282,7 +2246,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "cda6-3d55-eecf-4914",
+            "childId": "2c85-52ab-3e0a-ef11",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -2503,6 +2467,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 15
+         },
+         {
+          "name": "Small Arms Fire",
+          "typeId": "6f3b-f6d9-5407-317e",
+          "value": 3
          }
         ],
         "constraints": [
@@ -2539,56 +2508,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "89c8-ed5c-cbb7-bf2f",
-          "name": "Small Arms Fire",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 3,
-          "constraints": [
-           {
-            "id": "dfd8-c0d9-8487-4f20",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "d10e-371d-bef4-5cff",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "a98b-a63f-b701-ebe5",
-            "name": "Small Arms Fire",
-            "hidden": true,
-            "targetId": "30b9-e188-4de5-6ddb",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -4704,6 +4624,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 15
+         },
+         {
+          "name": "Small Arms Fire",
+          "typeId": "6f3b-f6d9-5407-317e",
+          "value": 3
          }
         ],
         "constraints": [
@@ -4740,56 +4665,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "f038-acf8-fa9c-08bd",
-          "name": "Small Arms Fire",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 3,
-          "constraints": [
-           {
-            "id": "846c-2a20-520f-4edf",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "d863-5f48-0fc8-a560",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "4d79-d93c-55b7-05b2",
-            "name": "Small Arms Fire",
-            "hidden": true,
-            "targetId": "30b9-e188-4de5-6ddb",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -9950,13 +9826,6 @@
           "hidden": true,
           "targetId": "dc6d-f21e-be27-7f76",
           "primary": false
-         },
-         {
-          "id": "6454-a244-503a-23f1",
-          "name": "Strixian",
-          "hidden": true,
-          "targetId": "2f7c-7e2c-fc57-ffee",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -10958,7 +10827,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "2f7c-7e2c-fc57-ffee",
+        "childId": "33b5-4812-8cb7-f2c6",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -13561,6 +13430,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 10
+       },
+       {
+        "name": "Small Arms Fire",
+        "typeId": "6f3b-f6d9-5407-317e",
+        "value": 1
        }
       ],
       "constraints": [
@@ -13590,15 +13464,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "e7d3-1f47-f905-6a6f",
-        "name": "Small Arms Fire",
-        "hidden": true,
-        "targetId": "30b9-e188-4de5-6ddb",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -16342,6 +16208,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 28
+       },
+       {
+        "name": "Small Arms Fire",
+        "typeId": "6f3b-f6d9-5407-317e",
+        "value": 3
        }
       ],
       "constraints": [
@@ -16372,56 +16243,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "b7ee-9e21-792b-03be",
-        "name": "Small Arms Fire",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 3,
-        "constraints": [
-         {
-          "id": "2122-725d-6ffb-c9d0",
-          "field": "selections",
-          "scope": "parent",
-          "value": 3,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "b842-420d-b11f-68e1",
-          "field": "selections",
-          "scope": "parent",
-          "value": 3,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "6e03-2e48-02f9-7888",
-          "name": "Small Arms Fire",
-          "hidden": true,
-          "targetId": "30b9-e188-4de5-6ddb",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [
        {
         "id": "abbc-3512-f27e-a301",
@@ -16476,7 +16298,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 1,
         "collective": true
        },
        {
@@ -16629,7 +16451,7 @@
           "collective": true
          }
         ],
-        "sortIndex": 3,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -19515,7 +19337,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "83d7-2813-f200-24e8",
+            "childId": "2b56-0c7a-13b5-836f",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -19710,15 +19532,7 @@
           "targetId": "b46e-d49a-f8b2-6895"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "af24-c63a-15e7-7d26",
-          "name": "Favored Of Envy",
-          "hidden": true,
-          "targetId": "83d7-2813-f200-24e8",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -20671,7 +20485,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "7dce-18cc-6a28-3ab5",
+            "childId": "6e5a-2c5b-9be4-ca81",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -20930,15 +20744,7 @@
           "targetId": "a861-34f5-b967-22d8"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "8667-fc68-9c4d-574b",
-          "name": "Favored Of Greed",
-          "hidden": true,
-          "targetId": "7dce-18cc-6a28-3ab5",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -21520,7 +21326,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "d28d-d23e-618f-d0e4",
+            "childId": "d1e2-44c8-5473-d2fa",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -21747,15 +21553,7 @@
           "targetId": "ff97-a703-10cc-ac07"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "8d4a-c880-09e0-ddc9",
-          "name": "Favored Of Lust",
-          "hidden": true,
-          "targetId": "d28d-d23e-618f-d0e4",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -22234,15 +22032,7 @@
           "targetId": "2c53-537c-923e-1208"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "8f59-a9dd-3002-9def",
-          "name": "Favored Of Pride",
-          "hidden": true,
-          "targetId": "9715-eac8-e9aa-f1ca",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -22341,7 +22131,7 @@
           "value": 1,
           "field": "selections",
           "scope": "root-entry-self",
-          "childId": "9715-eac8-e9aa-f1ca",
+          "childId": "8917-e563-e1c1-9838",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": false,
@@ -22642,6 +22432,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 240
+     },
+     {
+      "name": "Small Arms Fire",
+      "typeId": "6f3b-f6d9-5407-317e",
+      "value": 5
      }
     ],
     "profiles": [
@@ -22845,56 +22640,7 @@
       "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "92fa-4718-061f-ea8b",
-      "name": "Small Arms Fire",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 5,
-      "constraints": [
-       {
-        "id": "9966-15d2-c6c1-a289",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "85a2-8cca-d671-c702",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "aa4f-81c5-5599-3195",
-        "name": "Small Arms Fire",
-        "hidden": true,
-        "targetId": "30b9-e188-4de5-6ddb",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "0182-d09f-0573-aa5e",
@@ -22939,15 +22685,7 @@
           "targetId": "ade5-3e14-c593-b27d"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "2adc-40d8-54e0-6a00",
-          "name": "Favored Of Sloth",
-          "hidden": true,
-          "targetId": "3abe-bba9-4f50-ebd2",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -22957,7 +22695,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      },
      {
@@ -23245,7 +22983,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 3,
+      "sortIndex": 2,
       "collective": true
      },
      {
@@ -23276,7 +23014,7 @@
           "value": 1,
           "field": "selections",
           "scope": "root-entry-self",
-          "childId": "3abe-bba9-4f50-ebd2",
+          "childId": "5bc4-3f3a-0533-fb09",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": false,
@@ -23450,7 +23188,7 @@
         "collective": true
        }
       ],
-      "sortIndex": 4,
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -23909,7 +23647,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "cbd9-db28-60ba-26be",
+            "childId": "96e6-352c-7556-2cfa",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -24136,15 +23874,7 @@
           "targetId": "cdac-580a-8983-cb81"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "bbd7-e891-d0f7-a1ff",
-          "name": "Favored Of Wrath",
-          "hidden": true,
-          "targetId": "cbd9-db28-60ba-26be",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -25783,7 +25513,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "770a-ee13-22ba-d8cc",
+            "childId": "9b78-d9b8-5311-eb61",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -25978,15 +25708,7 @@
           "targetId": "0a79-0b0c-c8f8-f27e"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "16af-c0b5-b914-24c1",
-          "name": "Favored Of Gluttony",
-          "hidden": true,
-          "targetId": "770a-ee13-22ba-d8cc",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],

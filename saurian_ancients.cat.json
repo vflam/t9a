@@ -25,6 +25,15 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "10ed-adce-519c-4b4e",
+    "name": "Saurian Shooting",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "461c-f192-5e67-6cae",
@@ -50,30 +59,6 @@
     "id": "13aa-6aca-3ead-e1bd",
     "name": "Mounts",
     "hidden": false
-   },
-   {
-    "id": "8ba1-376d-2bcb-3858",
-    "name": "Anurarch Archmage",
-    "comment": "anurarchArchmage",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3ede-d87c-6c40-dd78",
-    "name": "Veil Mastery",
-    "comment": "veil_mastery",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "2e7d-7c73-bfa9-a575",
-    "name": "Eternal Mastery",
-    "comment": "eternal_mastery",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
    },
    {
     "id": "b62a-3916-7275-8844",
@@ -221,63 +206,6 @@
       "type": "ceil",
       "value": -1,
       "field": "190d-3947-56ac-9e16",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "83bf-a615-e5e1-0457",
-    "name": "Saurian Shooting",
-    "comment": "[indicator] saurian_shooting",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "adc9-da0b-dca5-f1b7",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "adc9-da0b-dca5-f1b7",
-      "value": 10,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 400,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "adc9-da0b-dca5-f1b7",
       "conditions": [
        {
         "type": "instanceOf",
@@ -529,30 +457,6 @@
     "id": "31a4-1a73-082e-1ba9",
     "name": "Mount",
     "comment": "tag_Mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "7fce-9b2d-5e56-10dc",
-    "name": "Rhamphodon Riders",
-    "comment": "rhamphodonRiders",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "ae8a-4da2-018c-8e5c",
-    "name": "Pteradon Riders",
-    "comment": "pteradonRiders",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4ee6-37a4-adc3-7e76",
-    "name": "Great Protector 2cb7cip",
-    "comment": "great protector_2cb7cip",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -1197,7 +1101,41 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "adc9-da0b-dca5-f1b7",
+      "field": "10ed-adce-519c-4b4e",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "adc9-da0b-dca5-f1b7",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 400,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -1711,13 +1649,6 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "1f92-7be3-7ac9-620d",
-      "name": "Anurarch Archmage",
-      "hidden": true,
-      "targetId": "8ba1-376d-2bcb-3858",
-      "primary": false
-     },
      {
       "id": "5958-56cd-8d57-b576",
       "name": "Wizard",
@@ -4905,6 +4836,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 360
+         },
+         {
+          "name": "Saurian Shooting",
+          "typeId": "10ed-adce-519c-4b4e",
+          "value": 4
          }
         ],
         "constraints": [
@@ -4928,56 +4864,6 @@
           "hidden": true,
           "targetId": "db21-6ca1-547b-551a",
           "primary": false
-         }
-        ],
-        "selectionEntries": [
-         {
-          "id": "2ea4-5292-347b-41a3",
-          "name": "Saurian Shooting",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 4,
-          "constraints": [
-           {
-            "id": "4029-2ef6-8c35-3b61",
-            "field": "selections",
-            "scope": "parent",
-            "value": 4,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "2b2b-a5ae-fa90-7ee1",
-            "field": "selections",
-            "scope": "parent",
-            "value": 4,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "4e9c-7004-e1d4-701b",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
          }
         ],
         "sortIndex": 4,
@@ -5821,6 +5707,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -5839,15 +5730,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "10c4-48da-2435-b8de",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -5864,6 +5747,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
+            "value": 2
            }
           ],
           "constraints": [
@@ -5883,56 +5771,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "cd20-cfa8-e3d7-1c12",
-            "name": "Saurian Shooting",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 2,
-            "constraints": [
-             {
-              "id": "9661-c0bf-2efa-fe56",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "6cb3-5ac7-cdda-39db",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "d7cb-9503-1fd4-35d1",
-              "name": "Saurian Shooting",
-              "hidden": true,
-              "targetId": "83bf-a615-e5e1-0457",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -5948,6 +5787,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -5966,15 +5810,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "e3cc-5be7-b098-32d2",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -10824,6 +10660,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -10842,15 +10683,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "4e7b-76dd-a4cd-bbf9",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10866,6 +10699,11 @@
            {
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
+            "value": 1
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
             "value": 1
            }
           ],
@@ -10885,15 +10723,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "62ae-430b-96d0-d172",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11566,6 +11396,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 2
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -11584,15 +11419,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "7d28-ed16-ff6f-7c23",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13581,6 +13408,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -13607,15 +13439,7 @@
             "targetId": "7448-dc33-63f6-b120"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5c60-747b-7720-bf60",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -14217,13 +14041,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "3da5-d912-37fe-d11c",
-      "name": "Rhamphodon Riders",
-      "hidden": true,
-      "targetId": "7fce-9b2d-5e56-10dc",
-      "primary": false
-     },
-     {
       "id": "550f-be55-2868-9dcb",
       "name": "Mount",
       "hidden": true,
@@ -14687,7 +14504,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "ae8a-4da2-018c-8e5c",
+        "childId": "42aa-a499-2438-df04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -14705,7 +14522,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "ae8a-4da2-018c-8e5c",
+        "childId": "42aa-a499-2438-df04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -14725,7 +14542,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "ae8a-4da2-018c-8e5c",
+        "childId": "42aa-a499-2438-df04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -14763,7 +14580,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "ae8a-4da2-018c-8e5c",
+        "childId": "42aa-a499-2438-df04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -16651,6 +16468,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 140
+       },
+       {
+        "name": "Saurian Shooting",
+        "typeId": "10ed-adce-519c-4b4e",
+        "value": 4
        }
       ],
       "constraints": [
@@ -16681,56 +16503,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "9c4c-2b6a-c5e0-a5a9",
-        "name": "Saurian Shooting",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 4,
-        "constraints": [
-         {
-          "id": "2f1a-6bb7-a760-06ba",
-          "field": "selections",
-          "scope": "parent",
-          "value": 4,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "b618-9329-078b-2f49",
-          "field": "selections",
-          "scope": "parent",
-          "value": 4,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "c9bb-bb99-3166-546e",
-          "name": "Saurian Shooting",
-          "hidden": true,
-          "targetId": "83bf-a615-e5e1-0457",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [
        {
         "id": "39c2-768a-bcfe-ee16",
@@ -16779,7 +16552,7 @@
                 "value": 2,
                 "field": "selections",
                 "scope": "root-entry-self",
-                "childId": "4ee6-37a4-adc3-7e76",
+                "childId": "268f-7f4e-3c7f-dfc5",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
@@ -16795,7 +16568,7 @@
                   "value": 1,
                   "field": "selections",
                   "scope": "root-entry-self",
-                  "childId": "4ee6-37a4-adc3-7e76",
+                  "childId": "268f-7f4e-3c7f-dfc5",
                   "shared": true,
                   "includeChildSelections": true,
                   "includeChildForces": false,
@@ -16830,15 +16603,7 @@
             "targetId": "9ce1-796b-fe90-98f4"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "eb77-45db-211e-a476",
-            "name": "Great Protector 2cb7cip",
-            "hidden": true,
-            "targetId": "4ee6-37a4-adc3-7e76",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [
            {
@@ -16858,6 +16623,11 @@
                 "name": "pts",
                 "typeId": "ea90-6996-33df-993c",
                 "value": 50
+               },
+               {
+                "name": "Saurian Shooting",
+                "typeId": "10ed-adce-519c-4b4e",
+                "value": 6
                }
               ],
               "constraints": [
@@ -16885,56 +16655,7 @@
                }
               ],
               "categoryLinks": [],
-              "selectionEntries": [
-               {
-                "id": "b435-1477-f758-13e5",
-                "name": "Saurian Shooting",
-                "type": "upgrade",
-                "hidden": false,
-                "defaultAmount": 6,
-                "constraints": [
-                 {
-                  "id": "4af7-4091-e751-0b22",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 6,
-                  "type": "min",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "85ea-7774-4045-020e",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 6,
-                  "type": "max",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 }
-                ],
-                "modifiers": [],
-                "profiles": [],
-                "infoLinks": [],
-                "selectionEntries": [],
-                "selectionEntryGroups": [],
-                "entryLinks": [],
-                "categoryLinks": [
-                 {
-                  "id": "39b7-06e4-e38b-b58d",
-                  "name": "Saurian Shooting",
-                  "hidden": true,
-                  "targetId": "83bf-a615-e5e1-0457",
-                  "primary": false
-                 }
-                ],
-                "sortIndex": 1,
-                "collective": true
-               }
-              ],
+              "selectionEntries": [],
               "selectionEntryGroups": [],
               "entryLinks": [],
               "sortIndex": 1,
@@ -16954,7 +16675,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 1,
         "collective": true
        }
       ],
@@ -16979,7 +16700,7 @@
          }
         ],
         "modifiers": [],
-        "sortIndex": 3,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -17072,13 +16793,6 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "b955-3750-6604-92ca",
-      "name": "Pteradon Riders",
-      "hidden": true,
-      "targetId": "ae8a-4da2-018c-8e5c",
-      "primary": false
-     },
      {
       "id": "823c-6dbd-6a80-1a4a",
       "name": "Mount",
@@ -17399,6 +17113,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 45
+       },
+       {
+        "name": "Saurian Shooting",
+        "typeId": "10ed-adce-519c-4b4e",
+        "value": 3
        }
       ],
       "constraints": [
@@ -17429,56 +17148,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "153a-932d-5501-bf04",
-        "name": "Saurian Shooting",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 3,
-        "constraints": [
-         {
-          "id": "7a1e-51a9-5e25-29d4",
-          "field": "selections",
-          "scope": "parent",
-          "value": 3,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "fe64-3de0-aa5d-cf8d",
-          "field": "selections",
-          "scope": "parent",
-          "value": 3,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "07ab-393d-eca2-fffa",
-          "name": "Saurian Shooting",
-          "hidden": true,
-          "targetId": "83bf-a615-e5e1-0457",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [
        {
         "id": "add5-3f0c-7b51-a0ea",
@@ -17583,7 +17253,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 1,
         "collective": true
        }
       ],
@@ -18029,7 +17699,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "7fce-9b2d-5e56-10dc",
+        "childId": "f5e5-658f-d5cc-7ce0",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -18047,7 +17717,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "7fce-9b2d-5e56-10dc",
+        "childId": "f5e5-658f-d5cc-7ce0",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -18067,7 +17737,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "7fce-9b2d-5e56-10dc",
+        "childId": "f5e5-658f-d5cc-7ce0",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -18105,7 +17775,7 @@
         "value": 2,
         "field": "selections",
         "scope": "roster",
-        "childId": "7fce-9b2d-5e56-10dc",
+        "childId": "f5e5-658f-d5cc-7ce0",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -18453,6 +18123,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -18471,15 +18146,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "b3ed-8053-b7a7-3be0",
-            "name": "Saurian Shooting",
-            "hidden": true,
-            "targetId": "83bf-a615-e5e1-0457",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -18495,6 +18162,11 @@
            {
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
+            "value": 2
+           },
+           {
+            "name": "Saurian Shooting",
+            "typeId": "10ed-adce-519c-4b4e",
             "value": 2
            }
           ],
@@ -18515,56 +18187,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "a523-1747-80ae-88fd",
-            "name": "Saurian Shooting",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 2,
-            "constraints": [
-             {
-              "id": "ccd9-cb21-c77d-683f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "1ca4-c434-7a75-fbbb",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "dd63-6c64-5908-5365",
-              "name": "Saurian Shooting",
-              "hidden": true,
-              "targetId": "83bf-a615-e5e1-0457",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -19027,6 +18650,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 100
+       },
+       {
+        "name": "Saurian Shooting",
+        "typeId": "10ed-adce-519c-4b4e",
+        "value": 5
        }
       ],
       "constraints": [
@@ -19057,56 +18685,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "c262-0f61-4bdf-91b7",
-        "name": "Saurian Shooting",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 5,
-        "constraints": [
-         {
-          "id": "870b-954d-30f4-b10f",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "f153-3a26-1dd9-dada",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "86b2-9b25-845c-7a7b",
-          "name": "Saurian Shooting",
-          "hidden": true,
-          "targetId": "83bf-a615-e5e1-0457",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [
        {
         "id": "e520-f492-afcd-6674",
@@ -19227,7 +18806,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 1,
         "collective": true
        }
       ],
@@ -20716,6 +20295,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 380
+     },
+     {
+      "name": "Saurian Shooting",
+      "typeId": "10ed-adce-519c-4b4e",
+      "value": 5
      }
     ],
     "profiles": [
@@ -20963,56 +20547,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "f76a-1d0d-56e3-d29a",
-      "name": "Saurian Shooting",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 5,
-      "constraints": [
-       {
-        "id": "4fba-fd21-7f9c-12c7",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "7b25-9b69-29db-af38",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "4732-aac3-9b88-76e2",
-        "name": "Saurian Shooting",
-        "hidden": true,
-        "targetId": "83bf-a615-e5e1-0457",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [
      {
@@ -21035,7 +20570,7 @@
        }
       ],
       "modifiers": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      }
     ],
@@ -21123,6 +20658,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 460
+     },
+     {
+      "name": "Saurian Shooting",
+      "typeId": "10ed-adce-519c-4b4e",
+      "value": 6
      }
     ],
     "profiles": [
@@ -21370,56 +20910,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "7387-911a-fd1f-9dd9",
-      "name": "Saurian Shooting",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 6,
-      "constraints": [
-       {
-        "id": "ba4a-b895-41de-aa5c",
-        "field": "selections",
-        "scope": "parent",
-        "value": 6,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "ad44-a784-b31e-7db1",
-        "field": "selections",
-        "scope": "parent",
-        "value": 6,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "01f5-886c-0f33-da79",
-        "name": "Saurian Shooting",
-        "hidden": true,
-        "targetId": "83bf-a615-e5e1-0457",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [
      {
@@ -21442,7 +20933,7 @@
        }
       ],
       "modifiers": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      }
     ],
@@ -22171,6 +21662,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Saurian Shooting",
+      "typeId": "10ed-adce-519c-4b4e",
+      "value": 2
      }
     ],
     "profiles": [
@@ -22374,56 +21870,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "6bab-d846-a22f-74ae",
-      "name": "Saurian Shooting",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "7b3b-ea7b-8fc9-8683",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "b2fd-a2e1-033f-20b7",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "2c0b-cc10-ed89-1211",
-        "name": "Saurian Shooting",
-        "hidden": true,
-        "targetId": "83bf-a615-e5e1-0457",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -23923,7 +23370,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "8ba1-376d-2bcb-3858",
+        "childId": "0379-1e49-d004-7c31",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24312,7 +23759,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "8ba1-376d-2bcb-3858",
+        "childId": "0379-1e49-d004-7c31",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24387,7 +23834,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "3ede-d87c-6c40-dd78",
+        "childId": "8182-0541-6670-aef0",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -24406,7 +23853,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "2e7d-7c73-bfa9-a575",
+        "childId": "735c-9cbe-0181-249e",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -25619,6 +25066,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 50
+     },
+     {
+      "name": "Saurian Shooting",
+      "typeId": "10ed-adce-519c-4b4e",
+      "value": 5
      }
     ],
     "constraints": [
@@ -25680,56 +25132,7 @@
      }
     ],
     "categoryLinks": [],
-    "selectionEntries": [
-     {
-      "id": "1dd7-79d3-f17e-a8c3",
-      "name": "Saurian Shooting",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 5,
-      "constraints": [
-       {
-        "id": "03bf-77e5-e695-78c6",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "a69d-cdcb-04a8-b28f",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "6edc-29da-26c3-d5c1",
-        "name": "Saurian Shooting",
-        "hidden": true,
-        "targetId": "83bf-a615-e5e1-0457",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "collective": true
@@ -25927,15 +25330,7 @@
       "targetId": "8915-2d0e-291c-604a"
      }
     ],
-    "categoryLinks": [
-     {
-      "id": "6f5c-0fa4-633b-9f91",
-      "name": "Veil Mastery",
-      "hidden": true,
-      "targetId": "3ede-d87c-6c40-dd78",
-      "primary": false
-     }
-    ],
+    "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -26045,15 +25440,7 @@
       "targetId": "12e4-7526-b71b-4703"
      }
     ],
-    "categoryLinks": [
-     {
-      "id": "5d30-a7d1-e904-7d67",
-      "name": "Eternal Mastery",
-      "hidden": true,
-      "targetId": "2e7d-7c73-bfa9-a575",
-      "primary": false
-     }
-    ],
+    "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],

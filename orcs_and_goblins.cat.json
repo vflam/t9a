@@ -25,6 +25,15 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "2668-8f5d-45bd-a0ae",
+    "name": "Archer Broods",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "21fd-e96f-bba1-f282",
@@ -97,63 +106,6 @@
       "type": "ceil",
       "value": -1,
       "field": "797a-4cad-f74e-bde6",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "209a-9a1c-6893-aadd",
-    "name": "Archer Broods",
-    "comment": "[indicator] archer_broods",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "de0b-368e-ff16-f0a2",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "de0b-368e-ff16-f0a2",
-      "value": 10,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 500,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "de0b-368e-ff16-f0a2",
       "conditions": [
        {
         "type": "instanceOf",
@@ -258,14 +210,6 @@
     "modifiers": []
    },
    {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "4251-a9ca-1be7-86a0",
     "name": "Lance",
     "comment": "lance",
@@ -360,33 +304,9 @@
     "modifiers": []
    },
    {
-    "id": "75df-eeb0-01e5-bbcd",
-    "name": "Bows And Spies",
-    "comment": "bows_and_spies",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "a8fb-40ff-2487-c252",
     "name": "Construct",
     "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "ca72-098b-3552-3737",
-    "name": "Creepers 9a29l3yc",
-    "comment": "creepers_9a29l3yc",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "f896-d753-814d-2bd2",
-    "name": "Orc Chariots Numbers",
-    "comment": "orc_chariots_numbers",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -1095,7 +1015,41 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "de0b-368e-ff16-f0a2",
+      "field": "2668-8f5d-45bd-a0ae",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "de0b-368e-ff16-f0a2",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -2280,13 +2234,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "5750-aea4-af98-63a6",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "6952-52ca-3a4e-f035",
           "name": "Battle Standard",
           "hidden": true,
@@ -2373,7 +2320,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "499f-aeb4-d942-d4bc",
+            "childId": "4b5b-2fa6-6249-5379",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -2440,7 +2387,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "499f-aeb4-d942-d4bc",
+            "childId": "4b5b-2fa6-6249-5379",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -2551,6 +2498,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 330
+         },
+         {
+          "name": "Archer Broods",
+          "typeId": "2668-8f5d-45bd-a0ae",
+          "value": 8
          }
         ],
         "constraints": [
@@ -2601,56 +2553,6 @@
           "hidden": true,
           "targetId": "4bcf-dcf2-3f84-d432",
           "primary": false
-         }
-        ],
-        "selectionEntries": [
-         {
-          "id": "7dfe-140c-fe39-368a",
-          "name": "Archer Broods",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 8,
-          "constraints": [
-           {
-            "id": "f8b2-1bd2-b1d8-f1ad",
-            "field": "selections",
-            "scope": "parent",
-            "value": 8,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "3d9b-3458-1646-63f6",
-            "field": "selections",
-            "scope": "parent",
-            "value": 8,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "8db6-e883-56b0-db46",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
          }
         ],
         "sortIndex": 5,
@@ -2812,6 +2714,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Archer Broods",
+            "typeId": "2668-8f5d-45bd-a0ae",
+            "value": 1
            }
           ],
           "constraints": [
@@ -2847,15 +2754,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "0544-6a9a-51c6-1bc0",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -4174,37 +4073,31 @@
           "type": "set",
           "field": "hidden",
           "value": true,
-          "conditions": [],
-          "conditionGroups": [
+          "conditions": [
            {
-            "type": "or",
-            "conditions": [
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "c04d-1882-6246-277c",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             },
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "0eb6-4350-a18a-a9bf",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             }
-            ],
-            "conditionGroups": []
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "c04d-1882-6246-277c",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "0eb6-4350-a18a-a9bf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
            }
-          ]
+          ],
+          "conditionGroups": []
          }
         ],
         "categoryLinks": [
@@ -5724,6 +5617,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 5
+         },
+         {
+          "name": "Archer Broods",
+          "typeId": "2668-8f5d-45bd-a0ae",
+          "value": 1
          }
         ],
         "constraints": [
@@ -5775,56 +5673,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "ee67-166c-db26-dd1e",
-          "name": "Archer Broods",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "1598-0659-2572-bf1c",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "2fd7-1393-bcf6-d1bd",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "a6e6-5338-3a39-bdfa",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 2,
@@ -7120,37 +6969,31 @@
           "type": "set",
           "field": "hidden",
           "value": true,
-          "conditions": [],
-          "conditionGroups": [
+          "conditions": [
            {
-            "type": "or",
-            "conditions": [
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "0eb6-4350-a18a-a9bf",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             },
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "c04d-1882-6246-277c",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             }
-            ],
-            "conditionGroups": []
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "0eb6-4350-a18a-a9bf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "c04d-1882-6246-277c",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
            }
-          ]
+          ],
+          "conditionGroups": []
          }
         ],
         "categoryLinks": [
@@ -11055,13 +10898,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "10ba-fc28-8d5e-c2e3",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "ce5d-abfa-cf7b-b0a6",
           "name": "Battle Standard",
           "hidden": true,
@@ -13467,6 +13303,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Archer Broods",
+            "typeId": "2668-8f5d-45bd-a0ae",
+            "value": 1
            }
           ],
           "constraints": [
@@ -13502,15 +13343,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "73e8-5672-78a6-5e76",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -15083,6 +14916,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Archer Broods",
+            "typeId": "2668-8f5d-45bd-a0ae",
+            "value": 1
            }
           ],
           "constraints": [
@@ -15118,15 +14956,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "6347-07f9-d144-bc45",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -15777,6 +15607,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Archer Broods",
+            "typeId": "2668-8f5d-45bd-a0ae",
+            "value": 1
            }
           ],
           "constraints": [
@@ -15953,20 +15788,6 @@
           ],
           "categoryLinks": [
            {
-            "id": "37f1-5b7b-240f-b8d0",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           },
-           {
-            "id": "96fc-32df-38a2-932f",
-            "name": "Bows And Spies",
-            "hidden": true,
-            "targetId": "75df-eeb0-01e5-bbcd",
-            "primary": false
-           },
-           {
             "id": "5ebc-7701-75f1-f7c4",
             "name": "⟨loses:scoring⟩",
             "hidden": true,
@@ -16136,7 +15957,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "75df-eeb0-01e5-bbcd",
+            "childId": "e831-7de2-fda7-ae3b",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -16786,6 +16607,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Archer Broods",
+            "typeId": "2668-8f5d-45bd-a0ae",
+            "value": 1
            }
           ],
           "constraints": [
@@ -16821,15 +16647,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "4652-b8e7-8a18-c4f4",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -19924,6 +19742,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 80
+       },
+       {
+        "name": "Archer Broods",
+        "typeId": "2668-8f5d-45bd-a0ae",
+        "value": 3
        }
       ],
       "constraints": [
@@ -19954,56 +19777,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "0633-7542-1561-e651",
-        "name": "Archer Broods",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 3,
-        "constraints": [
-         {
-          "id": "9d5e-ab03-b6cf-b094",
-          "field": "selections",
-          "scope": "parent",
-          "value": 3,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "0556-3e21-ce7c-c280",
-          "field": "selections",
-          "scope": "parent",
-          "value": 3,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "1c5f-0bf0-de6f-47a5",
-          "name": "Archer Broods",
-          "hidden": true,
-          "targetId": "209a-9a1c-6893-aadd",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -20393,6 +20167,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 12
+       },
+       {
+        "name": "Archer Broods",
+        "typeId": "2668-8f5d-45bd-a0ae",
+        "value": 1
        }
       ],
       "constraints": [
@@ -20422,15 +20201,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "f199-fe0e-4f1b-ff5f",
-        "name": "Archer Broods",
-        "hidden": true,
-        "targetId": "209a-9a1c-6893-aadd",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -20588,7 +20359,7 @@
                 "value": 16,
                 "field": "selections",
                 "scope": "root-entry-self",
-                "childId": "ca72-098b-3552-3737",
+                "childId": "488f-3c42-3007-719d",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
@@ -20604,7 +20375,7 @@
                   "value": 15,
                   "field": "selections",
                   "scope": "root-entry-self",
-                  "childId": "ca72-098b-3552-3737",
+                  "childId": "488f-3c42-3007-719d",
                   "shared": true,
                   "includeChildSelections": true,
                   "includeChildForces": false,
@@ -20640,13 +20411,6 @@
            }
           ],
           "categoryLinks": [
-           {
-            "id": "db09-6676-5be0-80db",
-            "name": "Creepers 9a29l3yc",
-            "hidden": true,
-            "targetId": "ca72-098b-3552-3737",
-            "primary": false
-           },
            {
             "id": "03c5-b7c0-70bd-ef3d",
             "name": "⟨loses:scoring⟩",
@@ -22255,6 +22019,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 280
+     },
+     {
+      "name": "Archer Broods",
+      "typeId": "2668-8f5d-45bd-a0ae",
+      "value": 4
      }
     ],
     "profiles": [
@@ -22516,56 +22285,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "fcad-efa1-6642-82d4",
-      "name": "Archer Broods",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 4,
-      "constraints": [
-       {
-        "id": "90fe-4337-71f3-6e05",
-        "field": "selections",
-        "scope": "parent",
-        "value": 4,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "1617-b1c2-ea85-cf85",
-        "field": "selections",
-        "scope": "parent",
-        "value": 4,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "e4e3-abfe-ec04-2a49",
-        "name": "Archer Broods",
-        "hidden": true,
-        "targetId": "209a-9a1c-6893-aadd",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "57f5-f820-4a4b-b865",
@@ -22761,7 +22481,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      },
      {
@@ -22817,7 +22537,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 3,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -23369,15 +23089,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "88f7-0717-0be9-e5a1",
-        "name": "Orc Chariots Numbers",
-        "hidden": true,
-        "targetId": "f896-d753-814d-2bd2",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -23486,7 +23198,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "f896-d753-814d-2bd2",
+            "childId": "997f-f55d-a39c-e63b",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -23549,7 +23261,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "f896-d753-814d-2bd2",
+            "childId": "997f-f55d-a39c-e63b",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -24108,6 +23820,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 2
+           },
+           {
+            "name": "Archer Broods",
+            "typeId": "2668-8f5d-45bd-a0ae",
+            "value": 1
            }
           ],
           "constraints": [
@@ -24143,15 +23860,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5cb3-c3bb-8646-7fa6",
-            "name": "Archer Broods",
-            "hidden": true,
-            "targetId": "209a-9a1c-6893-aadd",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -25964,6 +25673,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Archer Broods",
+      "typeId": "2668-8f5d-45bd-a0ae",
+      "value": 8
      }
     ],
     "profiles": [
@@ -26211,56 +25925,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "a4c8-accb-afe8-face",
-      "name": "Archer Broods",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 8,
-      "constraints": [
-       {
-        "id": "9fec-5a21-7e53-9171",
-        "field": "selections",
-        "scope": "parent",
-        "value": 8,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "e527-3e78-358b-9c55",
-        "field": "selections",
-        "scope": "parent",
-        "value": 8,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "99a6-679b-0013-2af2",
-        "name": "Archer Broods",
-        "hidden": true,
-        "targetId": "209a-9a1c-6893-aadd",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [

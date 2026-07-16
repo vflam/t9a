@@ -25,6 +25,22 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "8a5a-a70b-5f22-5426",
+    "name": "Imperial Armoury",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   },
+   {
+    "id": "22a5-b312-12e8-f42d",
+    "name": "Imperial Auxiliaries",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "a134-101b-894b-1958",
@@ -50,38 +66,6 @@
     "id": "a8af-23b0-0fa2-d85c",
     "name": "Mounts",
     "hidden": false
-   },
-   {
-    "id": "ccf2-1e8d-4b3e-9f8f",
-    "name": "Marshal",
-    "comment": "marshal",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "17f9-9fff-c924-9edd",
-    "name": "Knight Commander",
-    "comment": "knight_commander",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "160d-1b18-c93e-5cdc",
-    "name": "Horse Mount",
-    "comment": "horse_mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "a5c0-7db2-6431-0e27",
-    "name": "Young Griffon",
-    "comment": "youngGriffon",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
    },
    {
     "id": "7e89-1c63-8843-fa64",
@@ -138,136 +122,6 @@
     ]
    },
    {
-    "id": "5a99-e97f-aa7b-48d1",
-    "name": "Prelate",
-    "comment": "prelate",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "2d84-f210-ebe4-c022",
-    "name": "Imperial Auxiliaries",
-    "comment": "[indicator] imperial_auxiliaries",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "ad79-f846-fdfd-08cc",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "ad79-f846-fdfd-08cc",
-      "value": 20,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 1000,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "ad79-f846-fdfd-08cc",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "8a86-edc6-44a2-391a",
-    "name": "Steam Tank",
-    "comment": "[indicator] imperial_armoury",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "c887-6fcc-8c5b-70f8",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "c887-6fcc-8c5b-70f8",
-      "value": 1,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 1000,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "c887-6fcc-8c5b-70f8",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "3bc0-45d4-63e0-49ce",
-    "name": "Commanding Dragon",
-    "comment": "commandingDragon",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "e4f6-8aaa-e455-8e9c",
     "name": "Attached",
     "comment": "attached",
@@ -279,22 +133,6 @@
     "id": "bfd4-1c45-8b4e-75a4",
     "name": "Imperial Authority",
     "comment": "imperialAuthority",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "dced-cea4-e0d2-3a19",
-    "name": "Imperial Prince",
-    "comment": "imperialPrince",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -319,22 +157,6 @@
     "id": "4251-a9ca-1be7-86a0",
     "name": "Lance",
     "comment": "lance",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "cb3f-0e7c-2524-8428",
-    "name": "Altar Of Battle",
-    "comment": "altarOfBattle",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "faac-2708-70ab-f1a8",
-    "name": "Militia Skirmishers",
-    "comment": "militia_skirmishers",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -844,7 +666,72 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "ad79-f846-fdfd-08cc",
+      "field": "22a5-b312-12e8-f42d",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     },
+     {
+      "id": "c887-6fcc-8c5b-70f8",
+      "field": "8a5a-a70b-5f22-5426",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "ad79-f846-fdfd-08cc",
+      "value": 20,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "c887-6fcc-8c5b-70f8",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -1318,13 +1205,6 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "2b10-f0f7-dc37-dbeb",
-      "name": "Marshal",
-      "hidden": true,
-      "targetId": "ccf2-1e8d-4b3e-9f8f",
-      "primary": false
-     },
      {
       "id": "1941-02a4-6961-0eed",
       "name": "Metal Armour",
@@ -1806,13 +1686,6 @@
             ],
             "categoryLinks": [
              {
-              "id": "593c-f505-8aaa-4b8a",
-              "name": "Imperial Prince",
-              "hidden": true,
-              "targetId": "dced-cea4-e0d2-3a19",
-              "primary": false
-             },
-             {
               "id": "9807-221f-5344-866a",
               "name": "Light of Sonnstahl",
               "hidden": true,
@@ -1886,13 +1759,6 @@
           "name": "Imperial Authority",
           "hidden": true,
           "targetId": "bfd4-1c45-8b4e-75a4",
-          "primary": false
-         },
-         {
-          "id": "217c-25ad-eb1f-2fbb",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
           "primary": false
          },
          {
@@ -1982,7 +1848,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "499f-aeb4-d942-d4bc",
+            "childId": "06c3-d625-c9ba-9c4c",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -2049,7 +1915,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "499f-aeb4-d942-d4bc",
+            "childId": "06c3-d625-c9ba-9c4c",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -2210,7 +2076,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "dced-cea4-e0d2-3a19",
+            "childId": "460f-1b6a-56d0-fd9d",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -2220,15 +2086,7 @@
           "conditionGroups": []
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "2f92-79f7-d5a9-4fd2",
-          "name": "Commanding Dragon",
-          "hidden": true,
-          "targetId": "3bc0-45d4-63e0-49ce",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "sortIndex": 5,
         "collective": true
        }
@@ -2794,6 +2652,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -2812,15 +2675,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "81f8-8b97-79b3-4f8a",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -2837,6 +2692,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -2855,15 +2715,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "d8b3-1965-53bf-713b",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -3089,7 +2941,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "3bc0-45d4-63e0-49ce",
+        "childId": "cbce-ede8-88ae-4a16",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -3131,13 +2983,6 @@
       "name": "Metal Armour",
       "hidden": true,
       "targetId": "f98e-90de-1eac-f873",
-      "primary": false
-     },
-     {
-      "id": "69b2-cfe0-d48a-c48c",
-      "name": "Knight Commander",
-      "hidden": true,
-      "targetId": "17f9-9fff-c924-9edd",
       "primary": false
      },
      {
@@ -3489,15 +3334,7 @@
          }
         ],
         "modifiers": [],
-        "categoryLinks": [
-         {
-          "id": "34b3-3ef1-a015-3e6c",
-          "name": "Young Griffon",
-          "hidden": true,
-          "targetId": "a5c0-7db2-6431-0e27",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "sortIndex": 2,
         "collective": true
        }
@@ -4169,13 +4006,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "7ffa-e467-c1a7-e9cd",
-      "name": "Prelate",
-      "hidden": true,
-      "targetId": "5a99-e97f-aa7b-48d1",
-      "primary": false
-     },
-     {
       "id": "60d6-10b8-0351-fd41",
       "name": "Metal Armour",
       "hidden": true,
@@ -4647,15 +4477,7 @@
          }
         ],
         "modifiers": [],
-        "categoryLinks": [
-         {
-          "id": "5312-d727-d924-2f23",
-          "name": "Altar Of Battle",
-          "hidden": true,
-          "targetId": "cb3f-0e7c-2524-8428",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "sortIndex": 3,
         "collective": true
        }
@@ -5271,7 +5093,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "cb3f-0e7c-2524-8428",
+        "childId": "4d66-69bc-5268-31c0",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -7423,6 +7245,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -7458,15 +7285,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "c228-318e-2606-895d",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -7483,6 +7302,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -7501,15 +7325,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "642c-33e9-6960-c62d",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -7526,6 +7342,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 3
            }
           ],
           "constraints": [
@@ -7545,56 +7366,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "8864-16a1-45a6-a3a1",
-            "name": "Imperial Auxiliaries",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 3,
-            "constraints": [
-             {
-              "id": "5a8d-2403-1e44-4e8d",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "c5ea-f5a6-b3ce-f066",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "adef-1f29-4cff-0c0f",
-              "name": "Imperial Auxiliaries",
-              "hidden": true,
-              "targetId": "2d84-f210-ebe4-c022",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 3,
@@ -7610,6 +7382,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 15
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 3
            }
           ],
           "constraints": [
@@ -7629,56 +7406,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "92c9-f1c9-b7ef-1232",
-            "name": "Imperial Auxiliaries",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 3,
-            "constraints": [
-             {
-              "id": "d15f-24c1-e38f-1a26",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "270f-6ebf-2f49-6ab3",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "6552-629f-4caf-ee22",
-              "name": "Imperial Auxiliaries",
-              "hidden": true,
-              "targetId": "2d84-f210-ebe4-c022",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 4,
@@ -8718,6 +8446,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -8753,15 +8486,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "9cba-4f14-7f93-cc56",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -8778,6 +8503,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -8796,15 +8526,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "217d-8f2c-2eb4-a7da",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -8821,6 +8543,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -8839,15 +8566,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "b16b-51c8-f2af-4790",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11199,6 +10918,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -11234,15 +10958,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "6244-cf98-306c-2db6",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11259,6 +10975,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 2
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 1
            }
           ],
           "constraints": [
@@ -11294,15 +11015,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "bb7b-b0b1-150c-2fa9",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11717,6 +11430,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 5
+       },
+       {
+        "name": "Imperial Auxiliaries",
+        "typeId": "22a5-b312-12e8-f42d",
+        "value": 1
        }
       ],
       "constraints": [
@@ -11746,15 +11464,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "0aaa-6dd2-5110-322c",
-        "name": "Imperial Auxiliaries",
-        "hidden": true,
-        "targetId": "2d84-f210-ebe4-c022",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -11804,7 +11514,7 @@
                 "value": 16,
                 "field": "selections",
                 "scope": "root-entry-self",
-                "childId": "faac-2708-70ab-f1a8",
+                "childId": "2d4a-c9e9-d4bc-add6",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
@@ -11820,7 +11530,7 @@
                   "value": 15,
                   "field": "selections",
                   "scope": "root-entry-self",
-                  "childId": "faac-2708-70ab-f1a8",
+                  "childId": "2d4a-c9e9-d4bc-add6",
                   "shared": true,
                   "includeChildSelections": true,
                   "includeChildForces": false,
@@ -11855,15 +11565,7 @@
             "targetId": "955a-090d-b54a-91de"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "4c54-df00-0f9e-af36",
-            "name": "Militia Skirmishers",
-            "hidden": true,
-            "targetId": "faac-2708-70ab-f1a8",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13298,7 +13000,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "17f9-9fff-c924-9edd",
+        "childId": "921a-1e8f-72c3-f78b",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -13316,7 +13018,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "17f9-9fff-c924-9edd",
+        "childId": "921a-1e8f-72c3-f78b",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -13336,7 +13038,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "17f9-9fff-c924-9edd",
+        "childId": "921a-1e8f-72c3-f78b",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -13374,7 +13076,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "17f9-9fff-c924-9edd",
+        "childId": "921a-1e8f-72c3-f78b",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -16120,6 +15822,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 8
+       },
+       {
+        "name": "Imperial Auxiliaries",
+        "typeId": "22a5-b312-12e8-f42d",
+        "value": 1
        }
       ],
       "constraints": [
@@ -16149,15 +15856,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "91e3-a452-ed4e-d722",
-        "name": "Imperial Auxiliaries",
-        "hidden": true,
-        "targetId": "2d84-f210-ebe4-c022",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -16597,6 +16296,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
+            "value": 3
            }
           ],
           "constraints": [
@@ -16616,56 +16320,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "e6f4-2292-7f00-0564",
-            "name": "Imperial Auxiliaries",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 3,
-            "constraints": [
-             {
-              "id": "404d-6afb-39fc-6285",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "0ec9-d552-3eec-09c1",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "ff0e-7eae-b362-135d",
-              "name": "Imperial Auxiliaries",
-              "hidden": true,
-              "targetId": "2d84-f210-ebe4-c022",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -16680,6 +16335,11 @@
            {
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
+            "value": 1
+           },
+           {
+            "name": "Imperial Auxiliaries",
+            "typeId": "22a5-b312-12e8-f42d",
             "value": 1
            }
           ],
@@ -16707,15 +16367,7 @@
             "targetId": "1e9f-21cb-b325-a78d"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "3650-7d9e-d258-1326",
-            "name": "Imperial Auxiliaries",
-            "hidden": true,
-            "targetId": "2d84-f210-ebe4-c022",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -17046,6 +16698,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Imperial Armoury",
+          "typeId": "8a5a-a70b-5f22-5426",
+          "value": 1
          }
         ],
         "constraints": [
@@ -17079,13 +16736,6 @@
           "hidden": true,
           "targetId": "b6c6-25ac-b019-82bf",
           "primary": false
-         },
-         {
-          "id": "5f28-fbfc-d64d-37fe",
-          "name": "Steam Tank",
-          "hidden": true,
-          "targetId": "8a86-edc6-44a2-391a",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -17104,6 +16754,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 30
+         },
+         {
+          "name": "Imperial Armoury",
+          "typeId": "8a5a-a70b-5f22-5426",
+          "value": 1
          }
         ],
         "constraints": [
@@ -17137,13 +16792,6 @@
           "hidden": true,
           "targetId": "3722-75a7-ad3f-af0a",
           "primary": false
-         },
-         {
-          "id": "b839-5b3d-d056-6472",
-          "name": "Steam Tank",
-          "hidden": true,
-          "targetId": "8a86-edc6-44a2-391a",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -17162,6 +16810,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 30
+         },
+         {
+          "name": "Imperial Armoury",
+          "typeId": "8a5a-a70b-5f22-5426",
+          "value": 1
          }
         ],
         "constraints": [
@@ -17195,13 +16848,6 @@
           "hidden": true,
           "targetId": "2018-5fa1-5c9d-c652",
           "primary": false
-         },
-         {
-          "id": "3548-d848-28a1-4943",
-          "name": "Steam Tank",
-          "hidden": true,
-          "targetId": "8a86-edc6-44a2-391a",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -17220,6 +16866,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 120
+         },
+         {
+          "name": "Imperial Armoury",
+          "typeId": "8a5a-a70b-5f22-5426",
+          "value": 1
          }
         ],
         "constraints": [
@@ -17252,13 +16903,6 @@
           "name": "Artillery Canon",
           "hidden": true,
           "targetId": "8775-3432-d838-85b3",
-          "primary": false
-         },
-         {
-          "id": "34f2-b610-4473-0c63",
-          "name": "Steam Tank",
-          "hidden": true,
-          "targetId": "8a86-edc6-44a2-391a",
           "primary": false
          }
         ],
@@ -17798,13 +17442,6 @@
       "primary": false
      },
      {
-      "id": "4ef1-3838-83af-ddf7",
-      "name": "imperialArmoury",
-      "hidden": true,
-      "targetId": "8a86-edc6-44a2-391a",
-      "primary": false
-     },
-     {
       "id": "1c18-e344-215d-3500",
       "name": "⟨Hgt:5⟩",
       "hidden": true,
@@ -17817,6 +17454,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 460
+     },
+     {
+      "name": "Imperial Armoury",
+      "typeId": "8a5a-a70b-5f22-5426",
+      "value": 2
      }
     ],
     "profiles": [
@@ -18048,56 +17690,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "6335-d619-c938-487c",
-      "name": "Steam Tank",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "54ab-6ca9-577b-5b9c",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "8fc6-7ccc-916b-42f0",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "771f-c588-2c2d-943d",
-        "name": "Steam Tank",
-        "hidden": true,
-        "targetId": "8a86-edc6-44a2-391a",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -19724,13 +19317,6 @@
       "primary": false
      },
      {
-      "id": "1f0c-b207-ad1c-b840",
-      "name": "Horse Mount",
-      "hidden": true,
-      "targetId": "160d-1b18-c93e-5cdc",
-      "primary": false
-     },
-     {
       "id": "65b6-3b89-cd61-0c59",
       "name": "⟨Hgt:2⟩",
       "hidden": true,
@@ -20475,73 +20061,61 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
-      "conditionGroups": [
+      "conditions": [
        {
-        "type": "or",
-        "conditions": [
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "ccf2-1e8d-4b3e-9f8f",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "17f9-9fff-c924-9edd",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "80af-dac5-fd83-09ee",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "921a-1e8f-72c3-f78b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
        }
-      ]
+      ],
+      "conditionGroups": []
      },
      {
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
-      "conditionGroups": [
+      "conditions": [
        {
-        "type": "or",
-        "conditions": [
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "160d-1b18-c93e-5cdc",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "a5c0-7db2-6431-0e27",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "803d-dc17-8e9b-40a4",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "39c3-864d-5bfe-5eb4",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
        }
-      ]
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20603,37 +20177,31 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
-      "conditionGroups": [
+      "conditions": [
        {
-        "type": "or",
-        "conditions": [
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "7e89-1c63-8843-fa64",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "cdb1-963d-c6e3-8d68",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "7e89-1c63-8843-fa64",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "cdb1-963d-c6e3-8d68",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
        }
-      ]
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -21389,37 +20957,31 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
-      "conditionGroups": [
+      "conditions": [
        {
-        "type": "or",
-        "conditions": [
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "6c7e-be70-e418-112c",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "5a99-e97f-aa7b-48d1",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "a394-ae6d-28d8-c685",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "8dd3-6b87-8c31-f1d2",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
        }
-      ]
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],

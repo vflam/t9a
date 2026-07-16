@@ -25,6 +25,15 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "96ad-79a5-38d0-ad47",
+    "name": "Hired Guns",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "2267-04f0-ffaf-b3ca",
@@ -55,30 +64,6 @@
     "id": "8ab0-2d18-8d72-a69e",
     "name": "Mounts",
     "hidden": false
-   },
-   {
-    "id": "7614-b597-68ee-1d11",
-    "name": "Mammoth Hunter",
-    "comment": "mammoth_hunter",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "b3a7-2830-a699-fcf4",
-    "name": "Ok Bn Hoardmaster",
-    "comment": "ok_bn_hoardmaster",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "15ea-e931-bd5f-6739",
-    "name": "Shaman",
-    "comment": "shaman",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
    },
    {
     "id": "2b0d-a42f-6166-e141",
@@ -138,63 +123,6 @@
     ]
    },
    {
-    "id": "b27e-7571-b846-5c85",
-    "name": "Hired Guns",
-    "comment": "[indicator] hired_guns",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "bea2-c398-31bb-b97f",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "bea2-c398-31bb-b97f",
-      "value": 10,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 500,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "bea2-c398-31bb-b97f",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
     "id": "df86-05de-de8d-8ea8",
     "name": "Wildheart",
     "comment": "ok_bn_wildheart",
@@ -236,14 +164,6 @@
     "id": "e4f6-8aaa-e455-8e9c",
     "name": "Attached",
     "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -1284,7 +1204,41 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "bea2-c398-31bb-b97f",
+      "field": "96ad-79a5-38d0-ad47",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "bea2-c398-31bb-b97f",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -2101,7 +2055,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "b3a7-2830-a699-fcf4",
+              "childId": "e810-1cc5-8e38-83f6",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -2189,7 +2143,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "b3a7-2830-a699-fcf4",
+              "childId": "e810-1cc5-8e38-83f6",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -2277,7 +2231,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "b3a7-2830-a699-fcf4",
+              "childId": "e810-1cc5-8e38-83f6",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -2365,6 +2319,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -2401,56 +2360,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "5ec8-7d58-5a43-54f0",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "4d02-2207-f8ea-f8fe",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "0045-7288-48e3-b35f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "fe38-e398-c05a-9d6a",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
            {
@@ -2474,7 +2384,7 @@
             ],
             "modifiers": [],
             "collapsible": true,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "collective": true
            }
           ],
@@ -2491,6 +2401,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -2527,56 +2442,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "7957-c394-3262-8a05",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "dd74-fae3-8b65-5ea2",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "710d-48f5-792f-524e",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "1a96-68cf-e532-cf65",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
            {
@@ -2600,7 +2466,7 @@
             ],
             "modifiers": [],
             "collapsible": true,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "collective": true
            }
           ],
@@ -2670,7 +2536,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "b3a7-2830-a699-fcf4",
+            "childId": "e810-1cc5-8e38-83f6",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3279,13 +3145,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "cf8b-c5f7-5598-c16d",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "412e-1330-25b1-91fa",
           "name": "Battle Standard",
           "hidden": true,
@@ -3461,7 +3320,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "b3a7-2830-a699-fcf4",
+              "childId": "e810-1cc5-8e38-83f6",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -3549,7 +3408,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "b3a7-2830-a699-fcf4",
+              "childId": "e810-1cc5-8e38-83f6",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -3637,7 +3496,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "b3a7-2830-a699-fcf4",
+              "childId": "e810-1cc5-8e38-83f6",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -3726,6 +3585,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -3762,56 +3626,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "3252-d74f-986c-80f0",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "6244-89d2-4ecf-0f64",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "7d0c-4155-79ef-0697",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "5fcb-9284-94b3-a639",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
            {
@@ -3835,7 +3650,7 @@
             ],
             "modifiers": [],
             "collapsible": true,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "collective": true
            }
           ],
@@ -3852,6 +3667,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -3888,56 +3708,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "aafc-221c-b1e4-7e60",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "0d82-04f4-9831-55f4",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "f17f-a4fe-7050-dc9b",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "9f73-03af-d1d6-f747",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
            {
@@ -3961,7 +3732,7 @@
             ],
             "modifiers": [],
             "collapsible": true,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "collective": true
            }
           ],
@@ -4168,13 +3939,6 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "346e-3047-69ca-e494",
-      "name": "Shaman",
-      "hidden": true,
-      "targetId": "15ea-e931-bd5f-6739",
-      "primary": false
-     },
      {
       "id": "bc77-6ca6-a123-61f8",
       "name": "Wizard",
@@ -5680,13 +5444,6 @@
       "primary": false
      },
      {
-      "id": "e61f-12d6-3365-337f",
-      "name": "Mammoth Hunter",
-      "hidden": true,
-      "targetId": "7614-b597-68ee-1d11",
-      "primary": false
-     },
-     {
       "id": "8ff6-fea3-a207-eaf6",
       "name": "⟨Hgt:3⟩",
       "hidden": true,
@@ -6018,13 +5775,6 @@
          }
         ],
         "categoryLinks": [
-         {
-          "id": "72ef-de86-9739-ed7f",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
          {
           "id": "c519-9ff5-f53d-a170",
           "name": "Battle Standard",
@@ -6789,6 +6539,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -6825,56 +6580,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "e45f-c7ff-81f9-40a1",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "5dc1-7383-b20e-d0fd",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "a2cc-ccda-ca64-0ca8",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "4038-42bb-9e83-f639",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -6890,6 +6596,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -6926,56 +6637,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "84d7-8c85-6385-4e00",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "4b4b-0a7d-8bfe-aca4",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "05c1-9caa-0763-c79f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "c55e-8646-9386-68ca",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
            {
@@ -6999,7 +6661,7 @@
             ],
             "modifiers": [],
             "collapsible": true,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "collective": true
            }
           ],
@@ -9255,6 +8917,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 1
            }
           ],
           "constraints": [
@@ -9290,15 +8957,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "6ab0-7536-e1da-2ff5",
-            "name": "Hired Guns",
-            "hidden": true,
-            "targetId": "b27e-7571-b846-5c85",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9358,6 +9017,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 1
            }
           ],
           "constraints": [
@@ -9399,13 +9063,6 @@
             "name": "Scrapling Bows",
             "hidden": true,
             "targetId": "ffa1-726f-8d92-3798",
-            "primary": false
-           },
-           {
-            "id": "cf35-18ac-cc85-87f8",
-            "name": "Hired Guns",
-            "hidden": true,
-            "targetId": "b27e-7571-b846-5c85",
             "primary": false
            }
           ],
@@ -12009,6 +11666,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 5
+       },
+       {
+        "name": "Hired Guns",
+        "typeId": "96ad-79a5-38d0-ad47",
+        "value": 1
        }
       ],
       "constraints": [
@@ -12038,15 +11700,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "f183-b5b1-1b45-5f39",
-        "name": "Hired Guns",
-        "hidden": true,
-        "targetId": "b27e-7571-b846-5c85",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -13068,6 +12722,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -13118,56 +12777,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "f64e-3a04-f961-0eca",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "0ee9-8204-9687-0a8e",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "3509-f973-1b23-4268",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "0339-d767-2f12-aeda",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -13183,6 +12793,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 3
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -13238,56 +12853,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "9ab2-a4ba-ab77-1d26",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "7775-51f7-6287-4752",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "0631-bebb-a895-626f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "dc04-0286-cd27-54e5",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -13303,6 +12869,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Hired Guns",
+            "typeId": "96ad-79a5-38d0-ad47",
+            "value": 5
            }
           ],
           "constraints": [
@@ -13346,56 +12917,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "fbc3-4638-b4a9-7bb5",
-            "name": "Hired Guns",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "259b-8a8b-de55-3178",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "a108-2329-95e4-3c0b",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "1283-9ae5-241a-260f",
-              "name": "Hired Guns",
-              "hidden": true,
-              "targetId": "b27e-7571-b846-5c85",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 3,
@@ -14095,6 +13617,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 60
+       },
+       {
+        "name": "Hired Guns",
+        "typeId": "96ad-79a5-38d0-ad47",
+        "value": 5
        }
       ],
       "constraints": [
@@ -14125,56 +13652,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "c1dd-a7ff-e41b-b7f6",
-        "name": "Hired Guns",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 5,
-        "constraints": [
-         {
-          "id": "5547-5498-4e8c-8587",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "5531-bdf0-347d-ec2f",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "03b2-1626-daeb-ce30",
-          "name": "Hired Guns",
-          "hidden": true,
-          "targetId": "b27e-7571-b846-5c85",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -15450,6 +14928,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Hired Guns",
+          "typeId": "96ad-79a5-38d0-ad47",
+          "value": 5
          }
         ],
         "constraints": [
@@ -15486,56 +14969,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "0a69-7ec4-618f-1190",
-          "name": "Hired Guns",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 5,
-          "constraints": [
-           {
-            "id": "46d9-a49e-d546-5fec",
-            "field": "selections",
-            "scope": "parent",
-            "value": 5,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "1b02-bb6d-b92d-c4f3",
-            "field": "selections",
-            "scope": "parent",
-            "value": 5,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "7d04-90a6-1d77-8d9f",
-            "name": "Hired Guns",
-            "hidden": true,
-            "targetId": "b27e-7571-b846-5c85",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -15551,6 +14985,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Hired Guns",
+          "typeId": "96ad-79a5-38d0-ad47",
+          "value": 5
          }
         ],
         "constraints": [
@@ -15587,56 +15026,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "fef7-e5fa-6335-c3c5",
-          "name": "Hired Guns",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 5,
-          "constraints": [
-           {
-            "id": "fdbe-c6d0-0db0-b2bd",
-            "field": "selections",
-            "scope": "parent",
-            "value": 5,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "28e3-b2a0-d1c2-b0ae",
-            "field": "selections",
-            "scope": "parent",
-            "value": 5,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "5645-4a2a-e824-9c89",
-            "name": "Hired Guns",
-            "hidden": true,
-            "targetId": "b27e-7571-b846-5c85",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 2,
@@ -16081,6 +15471,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Hired Guns",
+          "typeId": "96ad-79a5-38d0-ad47",
+          "value": 10
          }
         ],
         "constraints": [
@@ -16117,56 +15512,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "5b3f-6f54-3c92-2eca",
-          "name": "Hired Guns",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 10,
-          "constraints": [
-           {
-            "id": "ca67-3e53-5667-fb77",
-            "field": "selections",
-            "scope": "parent",
-            "value": 10,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "4f8b-faf2-2223-7ce7",
-            "field": "selections",
-            "scope": "parent",
-            "value": 10,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "dbbe-7c0d-e4a2-6b07",
-            "name": "Hired Guns",
-            "hidden": true,
-            "targetId": "b27e-7571-b846-5c85",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -16182,6 +15528,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 20
+         },
+         {
+          "name": "Hired Guns",
+          "typeId": "96ad-79a5-38d0-ad47",
+          "value": 10
          }
         ],
         "constraints": [
@@ -16218,56 +15569,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "e5ca-55ac-04d2-492c",
-          "name": "Hired Guns",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 10,
-          "constraints": [
-           {
-            "id": "41f7-1c9a-51c9-2ccc",
-            "field": "selections",
-            "scope": "parent",
-            "value": 10,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "b885-6be1-fac7-66c6",
-            "field": "selections",
-            "scope": "parent",
-            "value": 10,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "f260-862f-6a9e-2d65",
-            "name": "Hired Guns",
-            "hidden": true,
-            "targetId": "b27e-7571-b846-5c85",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 2,
@@ -18124,7 +17426,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "7614-b597-68ee-1d11",
+        "childId": "0dde-73c4-0f48-ddcf",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -18199,7 +17501,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "7614-b597-68ee-1d11",
+        "childId": "0dde-73c4-0f48-ddcf",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -18218,7 +17520,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "15ea-e931-bd5f-6739",
+        "childId": "c31c-a03e-f00c-ab04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -18238,15 +17540,7 @@
       "targetId": "4d8f-462e-4bb2-acd6"
      }
     ],
-    "categoryLinks": [
-     {
-      "id": "d4d8-50c3-a95e-2072",
-      "name": "Ok Bn Hoardmaster",
-      "hidden": true,
-      "targetId": "b3a7-2830-a699-fcf4",
-      "primary": false
-     }
-    ],
+    "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -18356,7 +17650,7 @@
         "value": 0,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "15ea-e931-bd5f-6739",
+        "childId": "c31c-a03e-f00c-ab04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -18507,7 +17801,7 @@
         "value": 0,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "15ea-e931-bd5f-6739",
+        "childId": "c31c-a03e-f00c-ab04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -19086,7 +18380,7 @@
         "value": 0,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "15ea-e931-bd5f-6739",
+        "childId": "c31c-a03e-f00c-ab04",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,

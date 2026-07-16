@@ -25,6 +25,22 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "55bd-5671-f4cc-4498",
+    "name": "Clans Thunder",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   },
+   {
+    "id": "ef40-233e-dda8-7e5f",
+    "name": "Engines of War",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "914b-386a-c00b-2457",
@@ -52,150 +68,12 @@
     "hidden": false
    },
    {
-    "id": "f92a-5aed-504e-ca94",
-    "name": "Rune Of Iron",
-    "comment": "runeOfIron",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "c87e-89ed-e56a-0253",
-    "name": "Runic Smith",
-    "comment": "runic_smith",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "d2d7-e625-87e9-df2f",
-    "name": "War Throne Mount Unit",
-    "comment": "warThrone_mount_unit",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "b7c7-c55e-91e9-0dd0",
     "name": "Grudges",
     "comment": "[indicator] grudge",
     "hidden": true,
     "constraints": [],
     "modifiers": []
-   },
-   {
-    "id": "bf9c-b9ed-8c3e-2453",
-    "name": "Clans Thunder",
-    "comment": "[indicator] clans_thunder",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "899f-a18a-9c90-58e5",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "899f-a18a-9c90-58e5",
-      "value": 10,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 700,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "899f-a18a-9c90-58e5",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "4cce-82fe-a371-53a4",
-    "name": "Engines of War",
-    "comment": "[indicator] engines_of_war",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "e0ad-ca37-ca91-e674",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "e0ad-ca37-ca91-e674",
-      "value": 1,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 500,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "e0ad-ca37-ca91-e674",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "e4f6-8aaa-e455-8e9c",
@@ -244,14 +122,6 @@
     ]
    },
    {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "31a4-1a73-082e-1ba9",
     "name": "Mount",
     "comment": "tag_Mount",
@@ -271,14 +141,6 @@
     "id": "a8fb-40ff-2487-c252",
     "name": "Construct",
     "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3919-8527-ba17-8714",
-    "name": "Ranger Skirmishers",
-    "comment": "ranger_skirmishers",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -715,7 +577,72 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "899f-a18a-9c90-58e5",
+      "field": "55bd-5671-f4cc-4498",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     },
+     {
+      "id": "e0ad-ca37-ca91-e674",
+      "field": "ef40-233e-dda8-7e5f",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "899f-a18a-9c90-58e5",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 700,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "e0ad-ca37-ca91-e674",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -1688,6 +1615,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -1723,15 +1655,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "3c6c-06fc-f002-11b8",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -1748,6 +1672,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -1766,15 +1695,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "5a7b-ca31-535c-fd99",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -1791,6 +1712,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -1826,15 +1752,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5a25-4a70-b4ef-812a",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -2974,13 +2892,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "9108-e3d0-640b-9996",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "f22a-27fd-b483-41f9",
           "name": "Battle Standard",
           "hidden": true,
@@ -3074,7 +2985,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "499f-aeb4-d942-d4bc",
+            "childId": "3b6e-2261-db59-8c85",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3234,6 +3145,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -3269,15 +3185,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "67a7-a591-66ea-4cef",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -3294,6 +3202,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -3312,15 +3225,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "8b69-c7b6-7596-826c",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -3337,6 +3242,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -3372,15 +3282,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "4c5d-6521-3cf3-2dbf",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -4472,13 +4374,6 @@
       "name": "Metal Armour",
       "hidden": true,
       "targetId": "f98e-90de-1eac-f873",
-      "primary": false
-     },
-     {
-      "id": "d743-d597-d817-b981",
-      "name": "Runic Smith",
-      "hidden": true,
-      "targetId": "c87e-89ed-e56a-0253",
       "primary": false
      },
      {
@@ -5980,6 +5875,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6015,15 +5915,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "870e-9842-0a77-ead0",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -6040,6 +5932,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6058,15 +5955,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "bc91-cc58-e8a2-fc7c",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -6083,6 +5972,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6118,15 +6012,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "9d9d-d57f-a700-dbc8",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -6143,6 +6029,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 20
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 5
            }
           ],
           "constraints": [
@@ -6162,56 +6053,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "9f37-1401-2203-d020",
-            "name": "Clans Thunder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "adc0-1506-daed-7abf",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "86cf-77a1-2798-3529",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "c32b-665f-1aec-a154",
-              "name": "Clans Thunder",
-              "hidden": true,
-              "targetId": "bf9c-b9ed-8c3e-2453",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 4,
@@ -6227,6 +6069,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 25
+           },
+           {
+            "name": "Engines of War",
+            "typeId": "ef40-233e-dda8-7e5f",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6253,15 +6100,7 @@
             "targetId": "3e19-4bb9-63f3-3373"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "49e4-a06b-8acd-b48a",
-            "name": "Engines of War",
-            "hidden": true,
-            "targetId": "4cce-82fe-a371-53a4",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -8029,6 +7868,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 0.5
            }
           ],
           "constraints": [
@@ -8065,56 +7909,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "436a-7ba5-126e-d395",
-            "name": "Clans Thunder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 0.5,
-            "constraints": [
-             {
-              "id": "a8e3-9f88-bd81-6852",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "49c4-11e4-9f5f-c66e",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "1857-5989-33dc-b333",
-              "name": "Clans Thunder",
-              "hidden": true,
-              "targetId": "bf9c-b9ed-8c3e-2453",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -8875,6 +8670,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 3
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 0.5
            }
           ],
           "constraints": [
@@ -8911,56 +8711,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "e7c2-9792-bc0c-d0dc",
-            "name": "Clans Thunder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 0.5,
-            "constraints": [
-             {
-              "id": "1d8f-23ce-84cf-b474",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "f55f-83f9-a422-b33b",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "56f9-da0c-3ec9-5e68",
-              "name": "Clans Thunder",
-              "hidden": true,
-              "targetId": "bf9c-b9ed-8c3e-2453",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 3,
@@ -9529,6 +9280,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -9564,15 +9320,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "8f51-8145-3969-8c35",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9588,6 +9336,11 @@
            {
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
+            "value": 1
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
             "value": 1
            }
           ],
@@ -9631,15 +9384,7 @@
             "targetId": "404b-7330-b333-3778"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "d950-30a4-6322-f6c4",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9656,6 +9401,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 6
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -9674,15 +9424,7 @@
           "modifiers": [],
           "profiles": [],
           "infoLinks": [],
-          "categoryLinks": [
-           {
-            "id": "4ca1-e10d-c106-4928",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11425,6 +11167,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 3
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -11460,15 +11207,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "15fa-523e-b337-d795",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11485,6 +11224,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 0.5
            }
           ],
           "constraints": [
@@ -11521,56 +11265,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "028c-c1bb-9909-1e77",
-            "name": "Clans Thunder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 0.5,
-            "constraints": [
-             {
-              "id": "093b-e823-7278-dad2",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "5886-469a-473c-1166",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "35b2-b682-be00-4758",
-              "name": "Clans Thunder",
-              "hidden": true,
-              "targetId": "bf9c-b9ed-8c3e-2453",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 5,
@@ -13089,6 +12784,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 260
+     },
+     {
+      "name": "Clans Thunder",
+      "typeId": "55bd-5671-f4cc-4498",
+      "value": 5
      }
     ],
     "profiles": [
@@ -13336,56 +13036,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "203f-4d49-1b12-e27d",
-      "name": "Clans Thunder",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 5,
-      "constraints": [
-       {
-        "id": "3083-b356-e60b-58e5",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "1776-dd87-e1c8-291a",
-        "field": "selections",
-        "scope": "parent",
-        "value": 5,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "d1ff-910d-9af9-8e58",
-        "name": "Clans Thunder",
-        "hidden": true,
-        "targetId": "bf9c-b9ed-8c3e-2453",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -13808,7 +13459,7 @@
                 "value": 16,
                 "field": "selections",
                 "scope": "root-entry-self",
-                "childId": "3919-8527-ba17-8714",
+                "childId": "8169-d6b6-9172-8307",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
@@ -13824,7 +13475,7 @@
                   "value": 15,
                   "field": "selections",
                   "scope": "root-entry-self",
-                  "childId": "3919-8527-ba17-8714",
+                  "childId": "8169-d6b6-9172-8307",
                   "shared": true,
                   "includeChildSelections": true,
                   "includeChildForces": false,
@@ -13859,15 +13510,7 @@
             "targetId": "1b03-fc83-b330-f7fb"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "0397-304b-6a0d-3d3b",
-            "name": "Ranger Skirmishers",
-            "hidden": true,
-            "targetId": "3919-8527-ba17-8714",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13920,6 +13563,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 0.5
            }
           ],
           "constraints": [
@@ -13956,56 +13604,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "8316-2d8a-4099-8dc8",
-            "name": "Clans Thunder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 0.5,
-            "constraints": [
-             {
-              "id": "a370-f117-5d3d-5c50",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "98e1-4072-fee5-3656",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "5395-2f1e-9253-9b23",
-              "name": "Clans Thunder",
-              "hidden": true,
-              "targetId": "bf9c-b9ed-8c3e-2453",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -14021,6 +13620,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 6
+           },
+           {
+            "name": "Clans Thunder",
+            "typeId": "55bd-5671-f4cc-4498",
+            "value": 1
            }
           ],
           "constraints": [
@@ -14056,15 +13660,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "6490-5af7-b150-79ad",
-            "name": "Clans Thunder",
-            "hidden": true,
-            "targetId": "bf9c-b9ed-8c3e-2453",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -14566,6 +14162,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 18
+       },
+       {
+        "name": "Clans Thunder",
+        "typeId": "55bd-5671-f4cc-4498",
+        "value": 1
        }
       ],
       "constraints": [
@@ -14595,15 +14196,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "28b9-5d75-5bd7-4209",
-        "name": "Clans Thunder",
-        "hidden": true,
-        "targetId": "bf9c-b9ed-8c3e-2453",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -15022,6 +14615,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 120
+       },
+       {
+        "name": "Clans Thunder",
+        "typeId": "55bd-5671-f4cc-4498",
+        "value": 5
        }
       ],
       "constraints": [
@@ -15052,56 +14650,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "0e72-c2bf-e9d8-e36f",
-        "name": "Clans Thunder",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 5,
-        "constraints": [
-         {
-          "id": "3163-4889-0a0e-5a00",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "94da-65a7-1dd5-7771",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "35b9-9e06-6f7f-522d",
-          "name": "Clans Thunder",
-          "hidden": true,
-          "targetId": "bf9c-b9ed-8c3e-2453",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [
        {
         "id": "d349-9c7b-adca-671c",
@@ -15223,7 +14772,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "defaultSelectionEntryId": "13de-3d7b-7372-215c",
-        "sortIndex": 2,
+        "sortIndex": 1,
         "collective": true
        }
       ],
@@ -15561,6 +15110,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Engines of War",
+          "typeId": "ef40-233e-dda8-7e5f",
+          "value": 1
          }
         ],
         "constraints": [
@@ -15596,15 +15150,7 @@
           ]
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "b18b-b945-1f53-c1b7",
-          "name": "Engines of War",
-          "hidden": true,
-          "targetId": "4cce-82fe-a371-53a4",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [
          {
@@ -15722,6 +15268,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 70
+         },
+         {
+          "name": "Engines of War",
+          "typeId": "ef40-233e-dda8-7e5f",
+          "value": 3
          }
         ],
         "constraints": [
@@ -15758,56 +15309,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "de8f-038b-fb70-ea77",
-          "name": "Engines of War",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 3,
-          "constraints": [
-           {
-            "id": "5213-f402-feb8-f80e",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "083c-82fe-038d-747f",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "7ab9-b65f-6342-a2ba",
-            "name": "Engines of War",
-            "hidden": true,
-            "targetId": "4cce-82fe-a371-53a4",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [
          {
           "id": "bc5a-9108-c2bc-f9ff",
@@ -15906,7 +15408,7 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
-          "sortIndex": 2,
+          "sortIndex": 1,
           "collective": true
          }
         ],
@@ -15924,6 +15426,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 70
+         },
+         {
+          "name": "Engines of War",
+          "typeId": "ef40-233e-dda8-7e5f",
+          "value": 2
          }
         ],
         "constraints": [
@@ -15960,56 +15467,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "eb35-dbce-dd88-08d8",
-          "name": "Engines of War",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 2,
-          "constraints": [
-           {
-            "id": "ee15-f20d-312d-6efc",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "ce2e-47e9-cbaa-9b37",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "4c22-bf87-9a5d-aed0",
-            "name": "Engines of War",
-            "hidden": true,
-            "targetId": "4cce-82fe-a371-53a4",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [
          {
           "id": "3d82-b351-e300-3876",
@@ -16108,7 +15566,7 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
-          "sortIndex": 2,
+          "sortIndex": 1,
           "collective": true
          }
         ],
@@ -16126,6 +15584,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 130
+         },
+         {
+          "name": "Engines of War",
+          "typeId": "ef40-233e-dda8-7e5f",
+          "value": 3
          }
         ],
         "constraints": [
@@ -16162,56 +15625,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "3c92-cb90-5a5c-d9a2",
-          "name": "Engines of War",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 3,
-          "constraints": [
-           {
-            "id": "f1b2-c3ff-bbbd-a6a9",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "63d0-8beb-7b76-f912",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "0c1e-4f8d-f47c-cc37",
-            "name": "Engines of War",
-            "hidden": true,
-            "targetId": "4cce-82fe-a371-53a4",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [
          {
           "id": "050e-43cf-be27-8822",
@@ -16310,7 +15724,7 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
-          "sortIndex": 2,
+          "sortIndex": 1,
           "collective": true
          }
         ],
@@ -16328,6 +15742,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 160
+         },
+         {
+          "name": "Engines of War",
+          "typeId": "ef40-233e-dda8-7e5f",
+          "value": 3
          }
         ],
         "constraints": [
@@ -16364,56 +15783,7 @@
          }
         ],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "38bf-2eb9-6660-0585",
-          "name": "Engines of War",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 3,
-          "constraints": [
-           {
-            "id": "d5cd-10aa-861d-99b0",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "cc28-2706-f3d8-db7e",
-            "field": "selections",
-            "scope": "parent",
-            "value": 3,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "88dc-4aa7-7199-cfe3",
-            "name": "Engines of War",
-            "hidden": true,
-            "targetId": "4cce-82fe-a371-53a4",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [
          {
           "id": "a37f-2157-9e9f-65a3",
@@ -16504,7 +15874,7 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
-          "sortIndex": 2,
+          "sortIndex": 1,
           "collective": true
          }
         ],
@@ -16916,13 +16286,6 @@
       "name": "Mount",
       "hidden": true,
       "targetId": "db21-6ca1-547b-551a",
-      "primary": false
-     },
-     {
-      "id": "da7b-bcee-f60d-0076",
-      "name": "War Throne Mount Unit",
-      "hidden": true,
-      "targetId": "d2d7-e625-87e9-df2f",
       "primary": false
      },
      {
@@ -18329,7 +17692,7 @@
           "value": 3,
           "field": "selections",
           "scope": "root-entry-self",
-          "childId": "f92a-5aed-504e-ca94",
+          "childId": "a100-86bf-1ce6-1f6b",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": false,
@@ -18345,7 +17708,7 @@
             "value": 2,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "f92a-5aed-504e-ca94",
+            "childId": "a100-86bf-1ce6-1f6b",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -18380,15 +17743,7 @@
       "targetId": "7e0c-af10-eb03-84be"
      }
     ],
-    "categoryLinks": [
-     {
-      "id": "7eff-2cf4-8f12-8e0e",
-      "name": "Rune Of Iron",
-      "hidden": true,
-      "targetId": "f92a-5aed-504e-ca94",
-      "primary": false
-     }
-    ],
+    "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -18560,7 +17915,7 @@
         "value": 0,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "c87e-89ed-e56a-0253",
+        "childId": "8e68-f8b5-32c8-ec98",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -18655,7 +18010,7 @@
         "value": 0,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "c87e-89ed-e56a-0253",
+        "childId": "8e68-f8b5-32c8-ec98",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -18868,7 +18223,7 @@
         "value": 0,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "c87e-89ed-e56a-0253",
+        "childId": "8e68-f8b5-32c8-ec98",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -19208,7 +18563,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "d2d7-e625-87e9-df2f",
+        "childId": "2813-cb0a-8d67-1dd6",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,

@@ -25,6 +25,15 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "2800-dfe9-c34e-4324",
+    "name": "Aspis Arrows",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "13f6-175d-1a64-9206",
@@ -91,63 +100,6 @@
       "type": "ceil",
       "value": -1,
       "field": "0f28-d9de-48c9-70b8",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "60d6-ba22-702f-33ff",
-    "name": "Aspis Arrows",
-    "comment": "[indicator] aspis_arrows",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "f2bb-f54f-4f23-a4bb",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "f2bb-f54f-4f23-a4bb",
-      "value": 10,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 400,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "f2bb-f54f-4f23-a4bb",
       "conditions": [
        {
         "type": "instanceOf",
@@ -431,38 +383,6 @@
     "modifiers": []
    },
    {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "13c9-35e2-0892-773f",
-    "name": "Deathless Noble",
-    "comment": "deathless_noble",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "a313-1e3e-cc47-ccc0",
-    "name": "Tomb Harbinger",
-    "comment": "tomb_harbinger",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "9e10-4e6a-1f81-2e94",
-    "name": "Deathless Noble",
-    "comment": "deathlessNoble",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "9de7-9a8f-8823-2091",
     "name": "Harbinger Amuut",
     "comment": "harbinger_amuut",
@@ -517,22 +437,6 @@
     "modifiers": []
    },
    {
-    "id": "adae-cc37-04f1-c13a",
-    "name": "Death Cult Hierarch",
-    "comment": "deathCultHierarch",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4a45-82bf-d5dc-fb1e",
-    "name": "Casket Of Phatep",
-    "comment": "casketOfPhatep",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "31a4-1a73-082e-1ba9",
     "name": "Mount",
     "comment": "tag_Mount",
@@ -544,14 +448,6 @@
     "id": "a8fb-40ff-2487-c252",
     "name": "Construct",
     "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "c8ab-e80a-4e79-4fb0",
-    "name": "Legion Charioteers",
-    "comment": "legionCharioteers",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -948,7 +844,41 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "f2bb-f54f-4f23-a4bb",
+      "field": "2800-dfe9-c34e-4324",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "f2bb-f54f-4f23-a4bb",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 400,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -2039,6 +1969,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Aspis Arrows",
+            "typeId": "2800-dfe9-c34e-4324",
+            "value": 5
            }
           ],
           "constraints": [
@@ -2058,56 +1993,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "199b-bf41-a374-d330",
-            "name": "Aspis Arrows",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 5,
-            "constraints": [
-             {
-              "id": "ea18-7b91-1f1f-17f4",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "d1e3-8801-381b-0bc5",
-              "field": "selections",
-              "scope": "parent",
-              "value": 5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "c615-e789-4a0a-9edf",
-              "name": "Aspis Arrows",
-              "hidden": true,
-              "targetId": "60d6-ba22-702f-33ff",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -3342,37 +3228,31 @@
           "type": "set",
           "field": "hidden",
           "value": true,
-          "conditions": [],
-          "conditionGroups": [
+          "conditions": [
            {
-            "type": "or",
-            "conditions": [
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "13c9-35e2-0892-773f",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             },
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "a313-1e3e-cc47-ccc0",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             }
-            ],
-            "conditionGroups": []
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "e897-fc70-3925-264f",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "e253-8e39-06ee-4017",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
            }
-          ]
+          ],
+          "conditionGroups": []
          }
         ],
         "profiles": [],
@@ -3386,13 +3266,6 @@
          }
         ],
         "categoryLinks": [
-         {
-          "id": "b5bd-bfba-e48a-9965",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
          {
           "id": "c5af-cac3-2e39-a200",
           "name": "Battle Standard",
@@ -3487,15 +3360,7 @@
           "targetId": "f923-631c-669d-b4ac"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "314d-6cc0-e26a-4658",
-          "name": "Tomb Harbinger",
-          "hidden": true,
-          "targetId": "a313-1e3e-cc47-ccc0",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -3539,20 +3404,6 @@
          }
         ],
         "categoryLinks": [
-         {
-          "id": "153e-6bae-f63c-2208",
-          "name": "Deathless Noble",
-          "hidden": true,
-          "targetId": "9e10-4e6a-1f81-2e94",
-          "primary": false
-         },
-         {
-          "id": "1cab-8468-3273-f5e6",
-          "name": "Deathless Noble",
-          "hidden": true,
-          "targetId": "13c9-35e2-0892-773f",
-          "primary": false
-         },
          {
           "id": "749e-5f61-fca8-620a",
           "name": "Undying Will",
@@ -3729,7 +3580,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "499f-aeb4-d942-d4bc",
+            "childId": "38f2-7cb1-77e0-3d7b",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3870,7 +3721,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "9e10-4e6a-1f81-2e94",
+            "childId": "e897-fc70-3925-264f",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3889,7 +3740,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "cda6-3d55-eecf-4914",
+            "childId": "b24b-df70-ccb1-eb91",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3957,6 +3808,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 5
+         },
+         {
+          "name": "Aspis Arrows",
+          "typeId": "2800-dfe9-c34e-4324",
+          "value": 2
          }
         ],
         "constraints": [
@@ -4001,56 +3857,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "655a-dcf9-7e06-5f1f",
-          "name": "Aspis Arrows",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 2,
-          "constraints": [
-           {
-            "id": "e6c7-5fed-26b7-648c",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "56a6-a361-2031-55e0",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "5988-fe7c-0581-81a9",
-            "name": "Aspis Arrows",
-            "hidden": true,
-            "targetId": "60d6-ba22-702f-33ff",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -5365,13 +5172,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "446a-8821-1284-b63d",
-      "name": "Death Cult Hierarch",
-      "hidden": true,
-      "targetId": "adae-cc37-04f1-c13a",
-      "primary": false
-     },
-     {
       "id": "cd7e-b058-4f98-2811",
       "name": "Wizard",
       "hidden": true,
@@ -5776,6 +5576,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 100
+         },
+         {
+          "name": "Aspis Arrows",
+          "typeId": "2800-dfe9-c34e-4324",
+          "value": 2
          }
         ],
         "constraints": [
@@ -5793,56 +5598,6 @@
         ],
         "modifiers": [],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "64fb-e52b-e607-dde4",
-          "name": "Aspis Arrows",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 2,
-          "constraints": [
-           {
-            "id": "eed1-7090-a1e9-005c",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "480c-5bc8-3405-e399",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "ba1c-2cd0-ed91-6e47",
-            "name": "Aspis Arrows",
-            "hidden": true,
-            "targetId": "60d6-ba22-702f-33ff",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
         "sortIndex": 3,
         "collective": true
        }
@@ -8202,7 +7957,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "adae-cc37-04f1-c13a"
+      "childId": "f122-399e-6e6e-b49c"
      },
      {
       "id": "c2fb-442a-709e-ec1f",
@@ -8214,7 +7969,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "4a45-82bf-d5dc-fb1e"
+      "childId": "a1d1-ad5f-2056-dfb5"
      },
      {
       "id": "c4bb-7773-ba98-a676",
@@ -10300,6 +10055,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Aspis Arrows",
+            "typeId": "2800-dfe9-c34e-4324",
+            "value": 1
            }
           ],
           "constraints": [
@@ -10335,15 +10095,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "c61a-2399-5ef2-d5e6",
-            "name": "Aspis Arrows",
-            "hidden": true,
-            "targetId": "60d6-ba22-702f-33ff",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10359,6 +10111,11 @@
            {
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
+            "value": 2
+           },
+           {
+            "name": "Aspis Arrows",
+            "typeId": "2800-dfe9-c34e-4324",
             "value": 2
            }
           ],
@@ -10404,56 +10161,7 @@
             "primary": false
            }
           ],
-          "selectionEntries": [
-           {
-            "id": "18d1-dcc7-9049-b956",
-            "name": "Aspis Arrows",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 2,
-            "constraints": [
-             {
-              "id": "e71f-e237-c976-2502",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "72af-c340-eba8-433c",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "799c-9dd7-0609-ba63",
-              "name": "Aspis Arrows",
-              "hidden": true,
-              "targetId": "60d6-ba22-702f-33ff",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -12715,6 +12423,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 9
+       },
+       {
+        "name": "Aspis Arrows",
+        "typeId": "2800-dfe9-c34e-4324",
+        "value": 1
        }
       ],
       "constraints": [
@@ -12744,15 +12457,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "500f-8864-cb1b-36ce",
-        "name": "Aspis Arrows",
-        "hidden": true,
-        "targetId": "60d6-ba22-702f-33ff",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -13963,6 +13668,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Aspis Arrows",
+            "typeId": "2800-dfe9-c34e-4324",
+            "value": 3
            }
           ],
           "constraints": [
@@ -14014,56 +13724,7 @@
             "primary": false
            }
           ],
-          "selectionEntries": [
-           {
-            "id": "6576-b803-5d64-0e53",
-            "name": "Aspis Arrows",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 3,
-            "constraints": [
-             {
-              "id": "1c9e-56ec-c987-460f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "f43a-6e6c-e51f-69c7",
-              "field": "selections",
-              "scope": "parent",
-              "value": 3,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "06ea-58a6-1c77-beae",
-              "name": "Aspis Arrows",
-              "hidden": true,
-              "targetId": "60d6-ba22-702f-33ff",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -14215,13 +13876,6 @@
            }
           ],
           "categoryLinks": [
-           {
-            "id": "b285-c1dd-733e-d8ea",
-            "name": "Legion Charioteers",
-            "hidden": true,
-            "targetId": "c8ab-e80a-4e79-4fb0",
-            "primary": false
-           },
            {
             "id": "7f66-8d21-13a7-71ad",
             "name": "⟨loses:lighttroops⟩",
@@ -14950,7 +14604,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "c8ab-e80a-4e79-4fb0",
+            "childId": "eca6-14fe-86c5-de25",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -15102,13 +14756,6 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "989c-a01b-7ff2-e8c0",
-      "name": "Casket Of Phatep",
-      "hidden": true,
-      "targetId": "4a45-82bf-d5dc-fb1e",
-      "primary": false
-     },
      {
       "id": "e72e-f5b8-10c4-4741",
       "name": "Construct",
@@ -21218,6 +20865,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 85
+       },
+       {
+        "name": "Aspis Arrows",
+        "typeId": "2800-dfe9-c34e-4324",
+        "value": 5
        }
       ],
       "constraints": [
@@ -21248,56 +20900,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "3659-fc67-55fd-468a",
-        "name": "Aspis Arrows",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 5,
-        "constraints": [
-         {
-          "id": "57d5-c572-177d-db73",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "7e20-019c-773b-9ae9",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "ef13-88e2-8229-47f5",
-          "name": "Aspis Arrows",
-          "hidden": true,
-          "targetId": "60d6-ba22-702f-33ff",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -22355,6 +21958,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 70
+       },
+       {
+        "name": "Aspis Arrows",
+        "typeId": "2800-dfe9-c34e-4324",
+        "value": 5
        }
       ],
       "constraints": [
@@ -22385,56 +21993,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "3c3e-f290-7dbd-4f65",
-        "name": "Aspis Arrows",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 5,
-        "constraints": [
-         {
-          "id": "e281-11bc-fa92-389a",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "f85f-3591-b647-b9de",
-          "field": "selections",
-          "scope": "parent",
-          "value": 5,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "7eee-f151-3723-5b8c",
-          "name": "Aspis Arrows",
-          "hidden": true,
-          "targetId": "60d6-ba22-702f-33ff",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [
        {
         "id": "2c0b-3889-cd50-c3f3",
@@ -22509,7 +22068,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 1,
         "collective": true
        },
        {
@@ -23182,7 +22741,7 @@
          }
         ],
         "entryLinks": [],
-        "sortIndex": 3,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -30709,37 +30268,31 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
-      "conditionGroups": [
+      "conditions": [
        {
-        "type": "or",
-        "conditions": [
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "bc9c-d563-7c81-e5a3",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "7227-7a7f-4b51-86d7",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "bc9c-d563-7c81-e5a3",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "7227-7a7f-4b51-86d7",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
        }
-      ]
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],

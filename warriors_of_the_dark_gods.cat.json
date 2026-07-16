@@ -25,6 +25,22 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "148c-da54-724a-2653",
+    "name": "Catch This!",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   },
+   {
+    "id": "223e-4e5a-33a8-df22",
+    "name": "Legendary Beasts",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "6930-e676-4fe9-2b9f",
@@ -45,144 +61,6 @@
     "id": "b4ce-d676-5929-d3ba",
     "name": "Mounts",
     "hidden": false
-   },
-   {
-    "id": "fbb4-4952-619f-d454",
-    "name": "Sorcerer",
-    "comment": "sorcerer",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "e918-7788-0975-fc75",
-    "name": "Battle Shrine",
-    "comment": "battle_shrine",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "e26b-b647-a026-5f96",
-    "name": "Doom Lord",
-    "comment": "doom_lord",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "b632-4774-8be8-b652",
-    "name": "Legendary Beasts",
-    "comment": "[indicator] legendary_beast",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "8cb1-1307-3c3b-faa8",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "8cb1-1307-3c3b-faa8",
-      "value": 1,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 700,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "8cb1-1307-3c3b-faa8",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "9068-b1b6-8b3d-9e84",
-    "name": "Catch This!",
-    "comment": "[indicator] catch_this",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "fede-2dea-9662-ae4a",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "fede-2dea-9662-ae4a",
-      "value": 10,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 1000,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "fede-2dea-9662-ae4a",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "e47f-3496-4422-34e1",
@@ -217,14 +95,6 @@
     "modifiers": []
    },
    {
-    "id": "2bdd-95cd-74e5-cc61",
-    "name": "Greed",
-    "comment": "fv_sugulag",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "9e25-49b4-7d34-e880",
     "name": "Potion Or Scroll",
     "comment": "potion_or_scroll",
@@ -236,22 +106,6 @@
     "id": "d3e3-b47f-9d3f-f4df",
     "name": "Artefact Item",
     "comment": "artefact_item",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "68f7-3e4e-12b5-424c",
-    "name": "Doom General",
-    "comment": "doom_general",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "9b0a-b216-069a-4dac",
-    "name": "Battleshrine Mount Unit",
-    "comment": "battleshrine_mount_unit",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -276,14 +130,6 @@
     "id": "a8fb-40ff-2487-c252",
     "name": "Construct",
     "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "8b25-f777-f214-5660",
-    "name": "Barbarian Shields",
-    "comment": "barbarian_shields",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -736,7 +582,72 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "8cb1-1307-3c3b-faa8",
+      "field": "223e-4e5a-33a8-df22",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     },
+     {
+      "id": "fede-2dea-9662-ae4a",
+      "field": "148c-da54-724a-2653",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "8cb1-1307-3c3b-faa8",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 700,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "fede-2dea-9662-ae4a",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -1351,6 +1262,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 650
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 3
      }
     ],
     "profiles": [
@@ -1568,56 +1484,7 @@
       "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "b002-b42b-2a05-4451",
-      "name": "Legendary Beasts",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 3,
-      "constraints": [
-       {
-        "id": "aee7-3cc8-9edf-5140",
-        "field": "selections",
-        "scope": "parent",
-        "value": 3,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "e2c4-dfa1-5643-652f",
-        "field": "selections",
-        "scope": "parent",
-        "value": 3,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "d144-11c3-6f77-7db0",
-        "name": "Legendary Beasts",
-        "hidden": true,
-        "targetId": "b632-4774-8be8-b652",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "ca6b-471a-41ff-aab2",
@@ -1692,7 +1559,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      }
     ],
@@ -1799,6 +1666,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 520
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 2
      }
     ],
     "profiles": [
@@ -2016,56 +1888,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "1ef3-ea1f-f3b0-406b",
-      "name": "Legendary Beasts",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "afff-767c-5897-b9ad",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "ae96-aff2-9795-0346",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "612b-e40f-9581-83cd",
-        "name": "Legendary Beasts",
-        "hidden": true,
-        "targetId": "b632-4774-8be8-b652",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "8e1d-efdd-49ae-0659",
@@ -2140,7 +1963,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      },
      {
@@ -2465,7 +2288,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
-      "sortIndex": 3,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -3804,7 +3627,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "2bdd-95cd-74e5-cc61",
+            "childId": "359d-3a6e-b7dc-6400",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3843,7 +3666,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "2bdd-95cd-74e5-cc61",
+            "childId": "359d-3a6e-b7dc-6400",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3875,7 +3698,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "2bdd-95cd-74e5-cc61",
+            "childId": "359d-3a6e-b7dc-6400",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3919,7 +3742,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "2bdd-95cd-74e5-cc61",
+            "childId": "359d-3a6e-b7dc-6400",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3974,7 +3797,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "2bdd-95cd-74e5-cc61",
+            "childId": "359d-3a6e-b7dc-6400",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -4172,15 +3995,7 @@
           "targetId": "ec18-63b6-925e-787b"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "5701-bfa6-9b52-510c",
-          "name": "Greed",
-          "hidden": true,
-          "targetId": "2bdd-95cd-74e5-cc61",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -4471,13 +4286,6 @@
       "primary": false
      },
      {
-      "id": "4cff-a0f1-536a-8a27",
-      "name": "Doom Lord",
-      "hidden": true,
-      "targetId": "e26b-b647-a026-5f96",
-      "primary": false
-     },
-     {
       "id": "a6e9-e1c3-bb2d-a9da",
       "name": "⟨Hgt:3⟩",
       "hidden": true,
@@ -4763,13 +4571,6 @@
           "name": "General",
           "hidden": true,
           "targetId": "bf19-2ae3-58d2-5ff5",
-          "primary": false
-         },
-         {
-          "id": "f50e-af69-dc7b-bc6c",
-          "name": "Doom General",
-          "hidden": true,
-          "targetId": "68f7-3e4e-12b5-424c",
           "primary": false
          }
         ],
@@ -5512,13 +5313,6 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "adbd-a53b-fd89-8c35",
-      "name": "Sorcerer",
-      "hidden": true,
-      "targetId": "fbb4-4952-619f-d454",
-      "primary": false
-     },
      {
       "id": "85e7-8ff1-3c9e-1e23",
       "name": "Metal Armour",
@@ -7101,7 +6895,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "9b0a-b216-069a-4dac",
+            "childId": "7f27-f665-c29a-a1a2",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -7838,7 +7632,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "cda6-3d55-eecf-4914",
+            "childId": "75e3-27fb-7993-fb32",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -7889,7 +7683,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "cda6-3d55-eecf-4914",
+            "childId": "75e3-27fb-7993-fb32",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -7940,7 +7734,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "cda6-3d55-eecf-4914",
+            "childId": "75e3-27fb-7993-fb32",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -8235,6 +8029,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Catch This!",
+            "typeId": "148c-da54-724a-2653",
+            "value": 1
            }
           ],
           "constraints": [
@@ -8270,15 +8069,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "2c1f-10e4-5fde-c994",
-            "name": "Catch This!",
-            "hidden": true,
-            "targetId": "9068-b1b6-8b3d-9e84",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9325,6 +9116,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 460
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 2
      }
     ],
     "profiles": [
@@ -9542,56 +9338,7 @@
       "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "3178-6f82-aef2-1c99",
-      "name": "Legendary Beasts",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "35fd-0b75-6d5d-fb28",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "105f-7d3a-96dd-f9ff",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "71ed-56e0-5231-2477",
-        "name": "Legendary Beasts",
-        "hidden": true,
-        "targetId": "b632-4774-8be8-b652",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -10924,7 +10671,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "68f7-3e4e-12b5-424c",
+        "childId": "29d7-e57b-ba15-259d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -10942,7 +10689,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "68f7-3e4e-12b5-424c",
+        "childId": "29d7-e57b-ba15-259d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -10962,7 +10709,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "68f7-3e4e-12b5-424c",
+        "childId": "29d7-e57b-ba15-259d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -11000,7 +10747,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "68f7-3e4e-12b5-424c",
+        "childId": "29d7-e57b-ba15-259d",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -11278,6 +11025,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 1
+           },
+           {
+            "name": "Catch This!",
+            "typeId": "148c-da54-724a-2653",
+            "value": 1
            }
           ],
           "constraints": [
@@ -11313,15 +11065,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "fcb7-875c-1756-0f34",
-            "name": "Catch This!",
-            "hidden": true,
-            "targetId": "9068-b1b6-8b3d-9e84",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11406,13 +11150,6 @@
             "name": "Shield",
             "hidden": true,
             "targetId": "78e6-b065-4446-c3ec",
-            "primary": false
-           },
-           {
-            "id": "f785-5bf0-347d-3b91",
-            "name": "Barbarian Shields",
-            "hidden": true,
-            "targetId": "8b25-f777-f214-5660",
             "primary": false
            }
           ],
@@ -11501,7 +11238,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "8b25-f777-f214-5660",
+              "childId": "23e3-30ae-778c-d1df",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -17698,13 +17435,6 @@
       "primary": false
      },
      {
-      "id": "691a-b59a-ab47-ab44",
-      "name": "Battle Shrine",
-      "hidden": true,
-      "targetId": "e918-7788-0975-fc75",
-      "primary": false
-     },
-     {
       "id": "8619-5146-e5b6-7972",
       "name": "Wizard",
       "hidden": true,
@@ -18719,6 +18449,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 2
+           },
+           {
+            "name": "Catch This!",
+            "typeId": "148c-da54-724a-2653",
+            "value": 1
            }
           ],
           "constraints": [
@@ -18754,15 +18489,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "695b-753c-f236-ad62",
-            "name": "Catch This!",
-            "hidden": true,
-            "targetId": "9068-b1b6-8b3d-9e84",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -18779,6 +18506,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 4
+           },
+           {
+            "name": "Catch This!",
+            "typeId": "148c-da54-724a-2653",
+            "value": 1
            }
           ],
           "constraints": [
@@ -18814,15 +18546,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "a3bb-cc4d-7a66-4474",
-            "name": "Catch This!",
-            "hidden": true,
-            "targetId": "9068-b1b6-8b3d-9e84",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -18839,6 +18563,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 6
+           },
+           {
+            "name": "Catch This!",
+            "typeId": "148c-da54-724a-2653",
+            "value": 2
            }
           ],
           "constraints": [
@@ -18866,56 +18595,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "e7e0-ddc4-435f-c24a",
-            "name": "Catch This!",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 2,
-            "constraints": [
-             {
-              "id": "c88c-12a8-c6b8-ab39",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "eed0-9859-8cad-172c",
-              "field": "selections",
-              "scope": "parent",
-              "value": 2,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "eef9-c09f-87da-c0b6",
-              "name": "Catch This!",
-              "hidden": true,
-              "targetId": "9068-b1b6-8b3d-9e84",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 3,
@@ -19343,13 +19023,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "a3dc-c589-7bbb-38eb",
-      "name": "Legendary Beasts",
-      "hidden": true,
-      "targetId": "b632-4774-8be8-b652",
-      "primary": false
-     },
-     {
       "id": "8dcd-5c57-3b07-950b",
       "name": "⟨Hgt:4⟩",
       "hidden": true,
@@ -19369,6 +19042,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 210
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 1
      }
     ],
     "profiles": [
@@ -20358,6 +20036,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 440
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 2
      }
     ],
     "profiles": [
@@ -20561,56 +20244,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "74ff-e50a-683f-36de",
-      "name": "Legendary Beasts",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "15e6-5dab-db41-07fc",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "864a-6140-ba52-7aaa",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "227d-65fa-0863-197a",
-        "name": "Legendary Beasts",
-        "hidden": true,
-        "targetId": "b632-4774-8be8-b652",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "7183-4c75-4b5c-c891",
@@ -20771,7 +20405,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      }
     ],
@@ -20841,13 +20475,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "2fa6-e996-f50b-6726",
-      "name": "Legendary Beasts",
-      "hidden": true,
-      "targetId": "b632-4774-8be8-b652",
-      "primary": false
-     },
-     {
       "id": "b776-c32e-0658-c3c7",
       "name": "⟨Hgt:5⟩",
       "hidden": true,
@@ -20860,6 +20487,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 280
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 1
      }
     ],
     "profiles": [
@@ -21540,6 +21172,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 360
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 2
      }
     ],
     "profiles": [
@@ -21757,56 +21394,7 @@
       "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "3a6e-a12d-0b9b-57ff",
-      "name": "Legendary Beasts",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "8f29-52cf-e94b-58f1",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "3908-b281-e4a4-4ec9",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "b20b-8cae-95c5-6bda",
-        "name": "Legendary Beasts",
-        "hidden": true,
-        "targetId": "b632-4774-8be8-b652",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -22168,13 +21756,6 @@
       "name": "Mount",
       "hidden": true,
       "targetId": "db21-6ca1-547b-551a",
-      "primary": false
-     },
-     {
-      "id": "1ed8-bb85-ffb1-be9c",
-      "name": "Battleshrine Mount Unit",
-      "hidden": true,
-      "targetId": "9b0a-b216-069a-4dac",
       "primary": false
      },
      {
@@ -23218,13 +22799,6 @@
       "primary": false
      },
      {
-      "id": "5a2b-68eb-c0e2-38f7",
-      "name": "Legendary Beasts",
-      "hidden": true,
-      "targetId": "b632-4774-8be8-b652",
-      "primary": false
-     },
-     {
       "id": "7d5c-eeb7-85ef-3e09",
       "name": "Solitary",
       "hidden": true,
@@ -23258,6 +22832,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 1
      }
     ],
     "profiles": [
@@ -24887,13 +24466,6 @@
       "primary": false
      },
      {
-      "id": "9c25-5f1b-5102-a213",
-      "name": "Legendary Beasts",
-      "hidden": true,
-      "targetId": "b632-4774-8be8-b652",
-      "primary": false
-     },
-     {
       "id": "6a84-e836-c596-4b8a",
       "name": "⟨Hgt:5⟩",
       "hidden": true,
@@ -24913,6 +24485,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 1
      }
     ],
     "profiles": [
@@ -25248,6 +24825,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 0
+     },
+     {
+      "name": "Legendary Beasts",
+      "typeId": "223e-4e5a-33a8-df22",
+      "value": 2
      }
     ],
     "profiles": [
@@ -25451,56 +25033,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "8378-828a-6ef2-0fd7",
-      "name": "Legendary Beasts",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 2,
-      "constraints": [
-       {
-        "id": "064f-1e4b-3b77-3f88",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "baa6-dabe-b549-730e",
-        "field": "selections",
-        "scope": "parent",
-        "value": 2,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "1ece-3330-2007-07ef",
-        "name": "Legendary Beasts",
-        "hidden": true,
-        "targetId": "b632-4774-8be8-b652",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -26741,48 +26274,42 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
-      "conditionGroups": [
+      "conditions": [
        {
-        "type": "or",
-        "conditions": [
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "fbb4-4952-619f-d454",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "e918-7788-0975-fc75",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "e26b-b647-a026-5f96",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "cd31-6c26-303e-c6c6",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "1409-5c6d-2557-a433",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "1016-2298-52a6-ef7a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
        }
-      ]
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],

@@ -25,6 +25,22 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "1bd0-da8e-8993-9602",
+    "name": "Black Powder",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   },
+   {
+    "id": "270f-73ea-de53-6fde",
+    "name": "Fires of Industry",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "598a-096f-84c3-b04c",
@@ -60,142 +76,12 @@
     "modifiers": []
    },
    {
-    "id": "f697-12c5-7379-d84b",
-    "name": "Vassal Cavalry",
-    "comment": "vassalCavalry",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "5241-eb0d-fa99-53c1",
-    "name": "Vassal Levies",
-    "comment": "vassalLevies",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "42db-ab1f-9a2c-8ea7",
     "name": "Seat Of Authority Mount",
     "comment": "seatOfAuthorityMount",
     "hidden": true,
     "constraints": [],
     "modifiers": []
-   },
-   {
-    "id": "fdd4-0cdd-aaac-2040",
-    "name": "Fires of Industry",
-    "comment": "[indicator] fires_of_industry",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "9e3c-3745-b490-d6b7",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "9e3c-3745-b490-d6b7",
-      "value": 1,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 800,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "9e3c-3745-b490-d6b7",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "92f4-8db1-486d-e336",
-    "name": "Black Powder",
-    "comment": "[indicator] black_powder",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "e32c-715c-7f70-445b",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "e32c-715c-7f70-445b",
-      "value": 10,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 750,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "e32c-715c-7f70-445b",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "bd5c-7336-085f-0f3e",
@@ -252,46 +138,6 @@
     ]
    },
    {
-    "id": "6116-723e-1f41-912c",
-    "name": "Great Bull Of Shamut",
-    "comment": "greatBullOfShamut",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "d284-67a6-52c2-c7bd",
-    "name": "Prophet Of Shamut",
-    "comment": "prophetOfShamut",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "1f48-5faa-72d4-ab4c",
-    "name": "Prophet Of Ashuruk",
-    "comment": "prophetOfAshuruk",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "6a3e-2d45-2de6-67b5",
-    "name": "Prophet Of Lugar",
-    "comment": "prophetOfLugar",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "f9ce-22c0-ec1d-d1a0",
-    "name": "Prophet Of Nezibkesh",
-    "comment": "prophetOfNezibkesh",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "a96f-ba74-07a2-13b6",
     "name": "Prophet Shamut",
     "comment": "prophet_shamut",
@@ -319,14 +165,6 @@
     "id": "e4f6-8aaa-e455-8e9c",
     "name": "Attached",
     "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -384,14 +222,6 @@
       ]
      }
     ]
-   },
-   {
-    "id": "f587-1b41-b947-709c",
-    "name": "Infernal Bastion",
-    "comment": "infernalBastion",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
    },
    {
     "id": "f659-6d09-ecad-8162",
@@ -874,7 +704,72 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "9e3c-3745-b490-d6b7",
+      "field": "270f-73ea-de53-6fde",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     },
+     {
+      "id": "e32c-715c-7f70-445b",
+      "field": "1bd0-da8e-8993-9602",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "9e3c-3745-b490-d6b7",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 800,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "e32c-715c-7f70-445b",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 750,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -1435,6 +1330,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 170
+     },
+     {
+      "name": "Black Powder",
+      "typeId": "1bd0-da8e-8993-9602",
+      "value": 1
      }
     ],
     "profiles": [
@@ -1631,56 +1531,7 @@
       "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "772f-e098-2ebd-e14a",
-      "name": "Black Powder",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 1,
-      "constraints": [
-       {
-        "id": "33ae-6c6f-2968-85bc",
-        "field": "selections",
-        "scope": "parent",
-        "value": 1,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "0327-3e20-f992-a8f4",
-        "field": "selections",
-        "scope": "parent",
-        "value": 1,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "903e-9261-a65d-bacc",
-        "name": "Black Powder",
-        "hidden": true,
-        "targetId": "92f4-8db1-486d-e336",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "6790-e5f4-79bd-d696",
@@ -1755,7 +1606,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      },
      {
@@ -1974,7 +1825,7 @@
        }
       ],
       "collapsible": true,
-      "sortIndex": 3,
+      "sortIndex": 2,
       "collective": true
      },
      {
@@ -2083,6 +1934,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 5
+         },
+         {
+          "name": "Black Powder",
+          "typeId": "1bd0-da8e-8993-9602",
+          "value": 1
          }
         ],
         "constraints": [
@@ -2102,56 +1958,7 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "3e60-ca8d-57c4-b98a",
-          "name": "Black Powder",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "ca7f-db4c-e690-e413",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "7c7e-3bab-42d0-5665",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "4876-9294-e162-1d50",
-            "name": "Black Powder",
-            "hidden": true,
-            "targetId": "92f4-8db1-486d-e336",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 2,
@@ -2513,7 +2320,7 @@
        }
       ],
       "collapsible": true,
-      "sortIndex": 4,
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -2985,15 +2792,7 @@
           "targetId": "fb35-6beb-f7cc-b5e8"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "2845-2ec3-5bf1-af82",
-          "name": "Prophet Of Shamut",
-          "hidden": true,
-          "targetId": "d284-67a6-52c2-c7bd",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -3036,15 +2835,7 @@
           "targetId": "1e5f-e948-1194-c39c"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "0b6d-a8c3-891f-dc03",
-          "name": "Prophet Of Ashuruk",
-          "hidden": true,
-          "targetId": "1f48-5faa-72d4-ab4c",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -3198,13 +2989,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "4464-fd2e-5bf3-dfd3",
-          "name": "Prophet Of Lugar",
-          "hidden": true,
-          "targetId": "6a3e-2d45-2de6-67b5",
-          "primary": false
-         },
-         {
           "id": "9cf6-658e-f1c5-f111",
           "name": "⟨loses:infernalarmour⟩",
           "hidden": true,
@@ -3254,15 +3038,7 @@
           "targetId": "2d14-5822-53b4-ac89"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "be7a-e515-6cd9-c1c6",
-          "name": "Prophet Of Nezibkesh",
-          "hidden": true,
-          "targetId": "f9ce-22c0-ec1d-d1a0",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -3355,37 +3131,31 @@
           "type": "set",
           "field": "hidden",
           "value": true,
-          "conditions": [],
-          "conditionGroups": [
+          "conditions": [
            {
-            "type": "or",
-            "conditions": [
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "1f48-5faa-72d4-ab4c",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             },
-             {
-              "type": "atMost",
-              "value": 0,
-              "field": "selections",
-              "scope": "root-entry-self",
-              "childId": "f9ce-22c0-ec1d-d1a0",
-              "shared": true,
-              "includeChildSelections": true,
-              "includeChildForces": false,
-              "percentValue": false
-             }
-            ],
-            "conditionGroups": []
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "5988-ae69-38ba-a953",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "9f88-e529-f03d-bdb4",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
            }
-          ]
+          ],
+          "conditionGroups": []
          },
          {
           "type": "set",
@@ -3460,7 +3230,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "d284-67a6-52c2-c7bd",
+            "childId": "4bc5-ac0e-9a4e-6bd4",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3531,7 +3301,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "6a3e-2d45-2de6-67b5",
+            "childId": "06e4-86c1-d5d4-7a26",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3605,7 +3375,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "1f48-5faa-72d4-ab4c",
+            "childId": "5988-ae69-38ba-a953",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3664,7 +3434,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "6a3e-2d45-2de6-67b5",
+            "childId": "06e4-86c1-d5d4-7a26",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3715,7 +3485,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "d284-67a6-52c2-c7bd",
+            "childId": "4bc5-ac0e-9a4e-6bd4",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3774,7 +3544,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "f9ce-22c0-ec1d-d1a0",
+            "childId": "9f88-e529-f03d-bdb4",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3825,7 +3595,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "d284-67a6-52c2-c7bd",
+            "childId": "4bc5-ac0e-9a4e-6bd4",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3854,15 +3624,7 @@
           "conditionGroups": []
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "ceaf-950b-6354-41f4",
-          "name": "Great Bull Of Shamut",
-          "hidden": true,
-          "targetId": "6116-723e-1f41-912c",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "sortIndex": 8,
         "collective": true
        }
@@ -4763,6 +4525,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -4789,7 +4556,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "f9ce-22c0-ec1d-d1a0",
+              "childId": "9f88-e529-f03d-bdb4",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -4802,56 +4569,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "4442-5951-794a-cf35",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "3e4c-7870-4f69-6352",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "31a9-b1d3-d857-3b96",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "c878-6667-970e-64ce",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -4867,6 +4585,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -4893,7 +4616,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "f9ce-22c0-ec1d-d1a0",
+              "childId": "9f88-e529-f03d-bdb4",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -4906,56 +4629,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "acfb-91c9-0434-18b0",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "6030-6187-ea2d-5071",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "4fd7-e79c-a768-85c0",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "0314-f518-2b47-7035",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
            {
@@ -4979,7 +4653,7 @@
             ],
             "modifiers": [],
             "collapsible": true,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "collective": true
            }
           ],
@@ -5053,37 +4727,31 @@
             "type": "set",
             "field": "hidden",
             "value": true,
-            "conditions": [],
-            "conditionGroups": [
+            "conditions": [
              {
-              "type": "or",
-              "conditions": [
-               {
-                "type": "atMost",
-                "value": 0,
-                "field": "selections",
-                "scope": "root-entry-self",
-                "childId": "6a3e-2d45-2de6-67b5",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": false,
-                "percentValue": false
-               },
-               {
-                "type": "atMost",
-                "value": 0,
-                "field": "selections",
-                "scope": "root-entry-self",
-                "childId": "d284-67a6-52c2-c7bd",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": false,
-                "percentValue": false
-               }
-              ],
-              "conditionGroups": []
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "06e4-86c1-d5d4-7a26",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             },
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "4bc5-ac0e-9a4e-6bd4",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
              }
-            ]
+            ],
+            "conditionGroups": []
            },
            {
             "type": "set",
@@ -5114,7 +4782,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d284-67a6-52c2-c7bd",
+              "childId": "4bc5-ac0e-9a4e-6bd4",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -5264,37 +4932,31 @@
             "type": "set",
             "field": "hidden",
             "value": true,
-            "conditions": [],
-            "conditionGroups": [
+            "conditions": [
              {
-              "type": "or",
-              "conditions": [
-               {
-                "type": "atMost",
-                "value": 0,
-                "field": "selections",
-                "scope": "root-entry-self",
-                "childId": "6a3e-2d45-2de6-67b5",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": false,
-                "percentValue": false
-               },
-               {
-                "type": "atMost",
-                "value": 0,
-                "field": "selections",
-                "scope": "root-entry-self",
-                "childId": "d284-67a6-52c2-c7bd",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": false,
-                "percentValue": false
-               }
-              ],
-              "conditionGroups": []
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "06e4-86c1-d5d4-7a26",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             },
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "4bc5-ac0e-9a4e-6bd4",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
              }
-            ]
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -5375,7 +5037,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d284-67a6-52c2-c7bd",
+              "childId": "4bc5-ac0e-9a4e-6bd4",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -5547,7 +5209,7 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "6116-723e-1f41-912c",
+        "childId": "36db-e5bb-0418-db26",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -6016,13 +5678,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "8b83-1ad9-ddd0-b6c3",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "fbef-e835-01da-1ab4",
           "name": "Battle Standard",
           "hidden": true,
@@ -6286,7 +5941,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "cda6-3d55-eecf-4914",
+            "childId": "6b76-42f8-dd1e-175f",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -6491,6 +6146,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6510,56 +6170,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "db0f-38f4-e7fc-9657",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "5a8f-4b40-ce38-c04b",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "8bf3-406f-df05-7858",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "73fa-b484-bc76-028b",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -6575,6 +6186,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6611,56 +6227,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "397a-848e-6ec2-8198",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "5815-3d43-e135-0406",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "ef5e-7212-ed5a-4e57",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "4bf8-d3f2-ed75-18cc",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -6956,6 +6523,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6975,56 +6547,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "0bf8-16dd-d648-5264",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "2ff3-1296-7bd4-8344",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "1b46-f9f2-a16d-851d",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "5d0b-322c-948d-4f9d",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
            {
@@ -7048,7 +6571,7 @@
             ],
             "modifiers": [],
             "collapsible": true,
-            "sortIndex": 2,
+            "sortIndex": 1,
             "collective": true
            }
           ],
@@ -7698,13 +7221,6 @@
          }
         ],
         "categoryLinks": [
-         {
-          "id": "f5d4-7f02-2f3b-7c26",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
          {
           "id": "ef1c-1faa-88c4-c314",
           "name": "Battle Standard",
@@ -11505,6 +11021,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 7
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -11524,56 +11045,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "bffc-ea58-da86-005e",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "723d-4ee8-23f4-21cb",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "e68d-b645-ac20-708a",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "8b21-d645-9fa2-6558",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 3,
@@ -12074,6 +11546,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -12110,56 +11587,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "6ee7-713d-4ce2-31c6",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "2b3a-0661-e827-522f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "d87c-b250-db50-0193",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "e9b4-7c23-780c-385d",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -12175,6 +11603,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 3
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -12194,56 +11627,7 @@
           "profiles": [],
           "infoLinks": [],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "da40-a787-9860-d61b",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "43b3-b195-f418-db5f",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "6378-749e-1a9e-2ec3",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "2add-8bcd-3fe2-cc6b",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -12259,6 +11643,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 6
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -12302,56 +11691,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "9804-8868-658f-1826",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "61df-d89c-e4d4-4b3c",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "7332-5ae1-7a46-1bd6",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "585f-d68f-9ef2-25c3",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 3,
@@ -12560,13 +11900,6 @@
     "type": "unit",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "8a62-d6e2-6b36-3e1a",
-      "name": "Vassal Levies",
-      "hidden": true,
-      "targetId": "5241-eb0d-fa99-53c1",
-      "primary": false
-     },
      {
       "id": "bb28-7728-6b70-33b3",
       "name": "Core Unit",
@@ -13017,6 +12350,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 3
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 0.5
            }
           ],
           "constraints": [
@@ -13053,56 +12391,7 @@
            }
           ],
           "categoryLinks": [],
-          "selectionEntries": [
-           {
-            "id": "5d92-2f18-c130-7a5e",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 0.5,
-            "constraints": [
-             {
-              "id": "f544-6dbc-1f42-2162",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "ed0e-8975-cd50-3533",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0.5,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "edeb-23cf-9f17-4659",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
@@ -16380,6 +15669,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 3
+           },
+           {
+            "name": "Black Powder",
+            "typeId": "1bd0-da8e-8993-9602",
+            "value": 1
            }
           ],
           "constraints": [
@@ -16407,56 +15701,7 @@
             "primary": false
            }
           ],
-          "selectionEntries": [
-           {
-            "id": "5f43-dbf3-c0c5-3c0c",
-            "name": "Black Powder",
-            "type": "upgrade",
-            "hidden": false,
-            "defaultAmount": 1,
-            "constraints": [
-             {
-              "id": "b68c-a895-c3e2-b7b8",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "9f49-ba09-f00f-7afb",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "profiles": [],
-            "infoLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "categoryLinks": [
-             {
-              "id": "7db9-0b6e-728a-f09d",
-              "name": "Black Powder",
-              "hidden": true,
-              "targetId": "92f4-8db1-486d-e336",
-              "primary": false
-             }
-            ],
-            "sortIndex": 1,
-            "collective": true
-           }
-          ],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
@@ -17343,13 +16588,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "634c-2172-3bb2-1b4f",
-      "name": "Vassal Cavalry",
-      "hidden": true,
-      "targetId": "f697-12c5-7379-d84b",
-      "primary": false
-     },
-     {
       "id": "6c70-a6c4-893d-f3aa",
       "name": "Mount",
       "hidden": true,
@@ -17648,6 +16886,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 12
+       },
+       {
+        "name": "Black Powder",
+        "typeId": "1bd0-da8e-8993-9602",
+        "value": 0.5
        }
       ],
       "constraints": [
@@ -17678,56 +16921,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "e37a-873e-7c1f-2c8e",
-        "name": "Black Powder",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 0.5,
-        "constraints": [
-         {
-          "id": "073e-d27b-a224-6ba3",
-          "field": "selections",
-          "scope": "parent",
-          "value": 0.5,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "f0ea-da4d-fe46-d705",
-          "field": "selections",
-          "scope": "parent",
-          "value": 0.5,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "7a3a-4e94-6b56-6510",
-          "name": "Black Powder",
-          "hidden": true,
-          "targetId": "92f4-8db1-486d-e336",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -17925,13 +17119,6 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "e066-3cbf-5f27-2bad",
-      "name": "Infernal Bastion",
-      "hidden": true,
-      "targetId": "f587-1b41-b947-709c",
-      "primary": false
-     },
      {
       "id": "bf83-e106-b42f-2725",
       "name": "Metal Armour",
@@ -18283,6 +17470,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Black Powder",
+          "typeId": "1bd0-da8e-8993-9602",
+          "value": 6
          }
         ],
         "constraints": [
@@ -18302,56 +17494,7 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "e26b-3eeb-e09c-caa1",
-          "name": "Black Powder",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 6,
-          "constraints": [
-           {
-            "id": "c797-0783-a3bc-3557",
-            "field": "selections",
-            "scope": "parent",
-            "value": 6,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "13e7-3cb7-7ccb-101d",
-            "field": "selections",
-            "scope": "parent",
-            "value": 6,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "3677-eb39-9e68-0361",
-            "name": "Black Powder",
-            "hidden": true,
-            "targetId": "92f4-8db1-486d-e336",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -18480,13 +17623,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "35e3-b31f-620d-64b5",
-      "name": "Fires of Industry",
-      "hidden": true,
-      "targetId": "fdd4-0cdd-aaac-2040",
-      "primary": false
-     },
-     {
       "id": "926d-ea14-3a2b-cefc",
       "name": "firesOfIndustry",
       "hidden": true,
@@ -18506,6 +17642,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 80
+     },
+     {
+      "name": "Fires of Industry",
+      "typeId": "270f-73ea-de53-6fde",
+      "value": 1
      }
     ],
     "profiles": [
@@ -19041,6 +18182,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 1
          }
         ],
         "constraints": [
@@ -19068,56 +18214,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "1323-bbd9-7daa-a426",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "868b-8d94-3225-1240",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "5057-049c-ff3e-e8b3",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "197e-c0db-1638-8521",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -19133,6 +18230,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 10
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 1
          }
         ],
         "constraints": [
@@ -19160,56 +18262,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "d66b-498f-8664-a4ef",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "0f5b-91b2-c848-182c",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "f4c7-3a63-b428-92ee",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "55bb-b412-d6e1-5272",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 2,
@@ -19225,6 +18278,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 40
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 1
          }
         ],
         "constraints": [
@@ -19252,56 +18310,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "90a6-19ae-d65f-ab46",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "bc0e-fea1-7944-5c43",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "aec9-f85f-0bd3-25d5",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "e010-2d89-087b-37b0",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 3,
@@ -19637,6 +18646,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 1
          }
         ],
         "constraints": [
@@ -19664,56 +18678,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "32d3-7214-d384-e13a",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "417d-09b9-f74f-183d",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "0b86-faf5-064d-62c4",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "b7e2-1041-b105-8541",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -19729,6 +18694,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 70
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 2
          }
         ],
         "constraints": [
@@ -19756,56 +18726,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "c1d5-8817-45c2-b5ec",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 2,
-          "constraints": [
-           {
-            "id": "ce23-13bb-6eaa-8265",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "938a-25a6-6d31-bc6a",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "51bd-5f54-8cc8-b4e2",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 2,
@@ -19821,6 +18742,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 115
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 2
          }
         ],
         "constraints": [
@@ -19848,56 +18774,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "e7f4-d36e-3d98-fa1e",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 2,
-          "constraints": [
-           {
-            "id": "df6d-d82f-da30-fc89",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "c3b4-b686-d5e1-3148",
-            "field": "selections",
-            "scope": "parent",
-            "value": 2,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "62ca-6591-c8c4-91c7",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 3,
@@ -20227,6 +19104,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 1
          }
         ],
         "constraints": [
@@ -20254,56 +19136,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "2cd6-9f0f-a21d-c027",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "87d3-db20-8a07-390a",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "2d13-e573-d1ab-ff05",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "dc9b-cfa7-fc5c-7668",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -20362,6 +19195,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 20
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 1
          }
         ],
         "constraints": [
@@ -20389,56 +19227,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "95a7-be6a-0eb3-6c8b",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "9d15-aef9-00d4-e3d5",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "12b6-fa3c-0fe1-9f2d",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "944b-a761-96a9-2061",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 3,
@@ -20454,6 +19243,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 25
+         },
+         {
+          "name": "Fires of Industry",
+          "typeId": "270f-73ea-de53-6fde",
+          "value": 1
          }
         ],
         "constraints": [
@@ -20481,56 +19275,7 @@
           "primary": false
          }
         ],
-        "selectionEntries": [
-         {
-          "id": "6f57-5033-018b-0f96",
-          "name": "Fires of Industry",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 1,
-          "constraints": [
-           {
-            "id": "f473-1af4-f777-851f",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "0f84-35b3-f89a-df5c",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "1055-d47d-7fd8-4bed",
-            "name": "Fires of Industry",
-            "hidden": true,
-            "targetId": "fdd4-0cdd-aaac-2040",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 4,
@@ -22638,6 +21383,11 @@
           "name": "pts",
           "typeId": "ea90-6996-33df-993c",
           "value": 0
+         },
+         {
+          "name": "Black Powder",
+          "typeId": "1bd0-da8e-8993-9602",
+          "value": 6
          }
         ],
         "constraints": [
@@ -22657,56 +21407,7 @@
         "profiles": [],
         "infoLinks": [],
         "categoryLinks": [],
-        "selectionEntries": [
-         {
-          "id": "f217-d7fe-21ae-8b80",
-          "name": "Black Powder",
-          "type": "upgrade",
-          "hidden": false,
-          "defaultAmount": 6,
-          "constraints": [
-           {
-            "id": "5306-da56-2b5d-8caa",
-            "field": "selections",
-            "scope": "parent",
-            "value": 6,
-            "type": "min",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           },
-           {
-            "id": "b4e3-939c-4e4a-9c81",
-            "field": "selections",
-            "scope": "parent",
-            "value": 6,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [],
-          "categoryLinks": [
-           {
-            "id": "abab-084d-cfa2-61d1",
-            "name": "Black Powder",
-            "hidden": true,
-            "targetId": "92f4-8db1-486d-e336",
-            "primary": false
-           }
-          ],
-          "sortIndex": 1,
-          "collective": true
-         }
-        ],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
@@ -22787,7 +21488,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "f587-1b41-b947-709c"
+      "childId": "8697-5f0f-6e03-2cec"
      }
     ],
     "modifiers": [
@@ -24202,48 +22903,42 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
-      "conditionGroups": [
+      "conditions": [
        {
-        "type": "or",
-        "conditions": [
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "f697-12c5-7379-d84b",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "5241-eb0d-fa99-53c1",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         },
-         {
-          "type": "atMost",
-          "value": 0,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "42db-ab1f-9a2c-8ea7",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "9454-da29-83ce-11fc",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "261a-6067-639a-92f8",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "42db-ab1f-9a2c-8ea7",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
        }
-      ]
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],

@@ -25,6 +25,22 @@
     "importRootEntries": false
    }
   ],
+  "costTypes": [
+   {
+    "id": "6f3b-f6d9-5407-317e",
+    "name": "Small Arms Fire",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   },
+   {
+    "id": "f35a-9936-5f8a-d068",
+    "name": "Tunnel Gunners",
+    "defaultCostLimit": -1,
+    "hidden": true,
+    "comment": "costIndicator"
+   }
+  ],
   "categoryEntries": [
    {
     "id": "1af0-c32d-fce3-c6b9",
@@ -74,79 +90,6 @@
     "hidden": true,
     "constraints": [],
     "modifiers": []
-   },
-   {
-    "id": "d870-2490-20fb-edc1",
-    "name": "Enlightened By Favana",
-    "comment": "enlightenedByFavana",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "ea58-02e2-b444-4f72",
-    "name": "Pontifex Maximus",
-    "comment": "pontifexMaximus",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "d8d9-45ef-74a9-9cf9",
-    "name": "Tunnel Gunners",
-    "comment": "[indicator] tunnel_gunners",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "84ff-66de-80e8-fb82",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "84ff-66de-80e8-fb82",
-      "value": 1,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 250,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ]
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "84ff-66de-80e8-fb82",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
    },
    {
     "id": "9949-36f2-41de-a3a4",
@@ -266,14 +209,6 @@
     "id": "e4f6-8aaa-e455-8e9c",
     "name": "Attached",
     "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3462-fea4-4a35-6174",
-    "name": "Battle Standard Bearer",
-    "comment": "battleStandardBearer",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -467,14 +402,6 @@
       ]
      }
     ]
-   },
-   {
-    "id": "8d4d-086d-f78b-6d15",
-    "name": "This Caelysian Pantheon",
-    "comment": "thisCaelysianPantheon",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
    },
    {
     "id": "a8fb-40ff-2487-c252",
@@ -1372,7 +1299,72 @@
       "constraints": []
      }
     ],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "c293-a3f8-055c-bc1c",
+      "field": "6f3b-f6d9-5407-317e",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     },
+     {
+      "id": "84ff-66de-80e8-fb82",
+      "field": "f35a-9936-5f8a-d068",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "childId": "any"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "c293-a3f8-055c-bc1c",
+      "value": 10,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "type": "increment",
+      "field": "84ff-66de-80e8-fb82",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 250,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     }
+    ],
     "forceEntries": []
    }
   ],
@@ -2001,6 +1993,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 500
+     },
+     {
+      "name": "Tunnel Gunners",
+      "typeId": "f35a-9936-5f8a-d068",
+      "value": 7
      }
     ],
     "profiles": [
@@ -2246,56 +2243,7 @@
       "targetId": "cc6a-85fb-a07e-e781"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "4c4c-b831-b977-947f",
-      "name": "Tunnel Gunners",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 7,
-      "constraints": [
-       {
-        "id": "b137-fc26-561a-c702",
-        "field": "selections",
-        "scope": "parent",
-        "value": 7,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "a75e-e9df-b7be-0b2e",
-        "field": "selections",
-        "scope": "parent",
-        "value": 7,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "c1d5-ad86-d1ef-18d0",
-        "name": "Tunnel Gunners",
-        "hidden": true,
-        "targetId": "d8d9-45ef-74a9-9cf9",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "b6e8-67b1-8c51-b88d",
@@ -2421,7 +2369,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      },
      {
@@ -2498,7 +2446,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d870-2490-20fb-edc1",
+              "childId": "c689-2e16-4fa1-815e",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -2569,7 +2517,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d870-2490-20fb-edc1",
+              "childId": "c689-2e16-4fa1-815e",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -2851,7 +2799,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d870-2490-20fb-edc1",
+              "childId": "c689-2e16-4fa1-815e",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -3056,7 +3004,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "d870-2490-20fb-edc1",
+              "childId": "c689-2e16-4fa1-815e",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -3235,7 +3183,7 @@
       ],
       "entryLinks": [],
       "collapsible": true,
-      "sortIndex": 3,
+      "sortIndex": 2,
       "collective": true
      },
      {
@@ -3397,7 +3345,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 4,
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -3434,7 +3382,7 @@
       ],
       "modifiers": [],
       "collapsible": true,
-      "sortIndex": 5,
+      "sortIndex": 4,
       "collective": true
      },
      {
@@ -3469,7 +3417,7 @@
       ],
       "modifiers": [],
       "collapsible": true,
-      "sortIndex": 6,
+      "sortIndex": 5,
       "collective": true
      },
      {
@@ -3514,7 +3462,7 @@
           "value": 0,
           "field": "selections",
           "scope": "root-entry-self",
-          "childId": "ea58-02e2-b444-4f72",
+          "childId": "45fa-d3ce-beb7-fd06",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": false,
@@ -3524,7 +3472,7 @@
         "conditionGroups": []
        }
       ],
-      "sortIndex": 7,
+      "sortIndex": 6,
       "collective": true
      }
     ],
@@ -3573,13 +3521,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "2f51-0d4f-5735-1f92",
-      "name": "Small Arms Fire",
-      "hidden": true,
-      "targetId": "30b9-e188-4de5-6ddb",
-      "primary": false
-     },
-     {
       "id": "4c9b-16d1-e074-34db",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -3599,6 +3540,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 90
+     },
+     {
+      "name": "Small Arms Fire",
+      "typeId": "6f3b-f6d9-5407-317e",
+      "value": 1
      }
     ],
     "profiles": [
@@ -4656,13 +4602,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "e1ec-d80c-c550-10ce",
-          "name": "Battle Standard Bearer",
-          "hidden": true,
-          "targetId": "3462-fea4-4a35-6174",
-          "primary": false
-         },
-         {
           "id": "26e0-7cc9-980e-9e28",
           "name": "Battle Standard",
           "hidden": true,
@@ -4898,6 +4837,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 5
+           },
+           {
+            "name": "Small Arms Fire",
+            "typeId": "6f3b-f6d9-5407-317e",
+            "value": 1
            }
           ],
           "constraints": [
@@ -4933,15 +4877,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "46f7-33a0-01d6-8aa8",
-            "name": "Small Arms Fire",
-            "hidden": true,
-            "targetId": "30b9-e188-4de5-6ddb",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -5613,13 +5549,6 @@
       "primary": false
      },
      {
-      "id": "dfb6-9902-5ea4-dbb6",
-      "name": "Small Arms Fire",
-      "hidden": true,
-      "targetId": "30b9-e188-4de5-6ddb",
-      "primary": false
-     },
-     {
       "id": "036a-00c0-ad8d-aa50",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -5639,6 +5568,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 60
+     },
+     {
+      "name": "Small Arms Fire",
+      "typeId": "6f3b-f6d9-5407-317e",
+      "value": 1
      }
     ],
     "profiles": [
@@ -6630,6 +6564,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -6674,13 +6613,6 @@
             "name": "Jezail",
             "hidden": true,
             "targetId": "a07a-54d5-80bd-96b1",
-            "primary": false
-           },
-           {
-            "id": "b1e5-600a-4f3d-12ae",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
             "primary": false
            }
           ],
@@ -7862,7 +7794,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "8d4d-086d-f78b-6d15",
+              "childId": "ebc0-9ded-e155-49d5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -8067,7 +7999,7 @@
               "value": 0,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "8d4d-086d-f78b-6d15",
+              "childId": "ebc0-9ded-e155-49d5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -8571,13 +8503,6 @@
           "hidden": true,
           "targetId": "9d12-3e41-fd28-e1aa",
           "primary": false
-         },
-         {
-          "id": "91d8-3ea9-c19c-04c9",
-          "name": "This Caelysian Pantheon",
-          "hidden": true,
-          "targetId": "8d4d-086d-f78b-6d15",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -8710,13 +8635,6 @@
       "primary": false
      },
      {
-      "id": "b482-79f0-0fda-90d9",
-      "name": "Small Arms Fire",
-      "hidden": true,
-      "targetId": "30b9-e188-4de5-6ddb",
-      "primary": false
-     },
-     {
       "id": "74bd-4f9b-623c-0816",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -8736,6 +8654,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 125
+     },
+     {
+      "name": "Small Arms Fire",
+      "typeId": "6f3b-f6d9-5407-317e",
+      "value": 1
      }
     ],
     "profiles": [
@@ -9054,6 +8977,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 540
+     },
+     {
+      "name": "Tunnel Gunners",
+      "typeId": "f35a-9936-5f8a-d068",
+      "value": 8
      }
     ],
     "profiles": [
@@ -9343,56 +9271,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "eff9-4fa1-b086-a328",
-      "name": "Tunnel Gunners",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 8,
-      "constraints": [
-       {
-        "id": "728b-2470-bbd8-b594",
-        "field": "selections",
-        "scope": "parent",
-        "value": 8,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "5607-56d7-a4ed-36f7",
-        "field": "selections",
-        "scope": "parent",
-        "value": 8,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "1358-9d33-ba7d-1c52",
-        "name": "Tunnel Gunners",
-        "hidden": true,
-        "targetId": "d8d9-45ef-74a9-9cf9",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -12052,6 +11931,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 4
+       },
+       {
+        "name": "Small Arms Fire",
+        "typeId": "6f3b-f6d9-5407-317e",
+        "value": 0.5
        }
       ],
       "constraints": [
@@ -12082,56 +11966,7 @@
       "profiles": [],
       "infoLinks": [],
       "categoryLinks": [],
-      "selectionEntries": [
-       {
-        "id": "fb01-634b-f7c3-e4df",
-        "name": "Small Arms Fire",
-        "type": "upgrade",
-        "hidden": false,
-        "defaultAmount": 0.5,
-        "constraints": [
-         {
-          "id": "29d4-002c-1565-2ada",
-          "field": "selections",
-          "scope": "parent",
-          "value": 0.5,
-          "type": "min",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         },
-         {
-          "id": "75bc-477d-eaef-a90c",
-          "field": "selections",
-          "scope": "parent",
-          "value": 0.5,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [],
-        "profiles": [],
-        "infoLinks": [],
-        "selectionEntries": [],
-        "selectionEntryGroups": [],
-        "entryLinks": [],
-        "categoryLinks": [
-         {
-          "id": "82a3-b118-9776-4fa9",
-          "name": "Small Arms Fire",
-          "hidden": true,
-          "targetId": "30b9-e188-4de5-6ddb",
-          "primary": false
-         }
-        ],
-        "sortIndex": 1,
-        "collective": true
-       }
-      ],
+      "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -14361,6 +14196,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 220
+     },
+     {
+      "name": "Tunnel Gunners",
+      "typeId": "f35a-9936-5f8a-d068",
+      "value": 3
      }
     ],
     "profiles": [
@@ -14601,56 +14441,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "76dd-8175-108f-9286",
-      "name": "Tunnel Gunners",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 3,
-      "constraints": [
-       {
-        "id": "623e-c490-15a8-1317",
-        "field": "selections",
-        "scope": "parent",
-        "value": 3,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "6142-2847-dba9-6946",
-        "field": "selections",
-        "scope": "parent",
-        "value": 3,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "72be-215a-83bd-eb5c",
-        "name": "Tunnel Gunners",
-        "hidden": true,
-        "targetId": "d8d9-45ef-74a9-9cf9",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -14944,6 +14735,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 7
+       },
+       {
+        "name": "Small Arms Fire",
+        "typeId": "6f3b-f6d9-5407-317e",
+        "value": 1
        }
       ],
       "constraints": [
@@ -14973,15 +14769,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "8a3c-f52d-a2d9-fa42",
-        "name": "Small Arms Fire",
-        "hidden": true,
-        "targetId": "30b9-e188-4de5-6ddb",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -15563,6 +15351,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -15603,13 +15396,6 @@
             "hidden": true,
             "targetId": "78e6-b065-4446-c3ec",
             "primary": false
-           },
-           {
-            "id": "620b-6ed3-07a7-cf23",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
-            "primary": false
            }
           ],
           "selectionEntries": [],
@@ -15628,6 +15414,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -15670,13 +15461,6 @@
             "hidden": true,
             "targetId": "59d3-3e05-f6bf-f1e5",
             "primary": false
-           },
-           {
-            "id": "af50-b93f-a278-7be7",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
-            "primary": false
            }
           ],
           "selectionEntries": [],
@@ -15695,6 +15479,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 15
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -15744,13 +15533,6 @@
             "hidden": true,
             "targetId": "31d5-85af-8d39-0a9d",
             "primary": false
-           },
-           {
-            "id": "de9a-d821-71c5-12a4",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
-            "primary": false
            }
           ],
           "selectionEntries": [],
@@ -15769,6 +15551,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 25
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -15800,13 +15587,6 @@
             "name": "Rotary Gun",
             "hidden": true,
             "targetId": "1348-28b6-0bc5-dbb5",
-            "primary": false
-           },
-           {
-            "id": "df0e-3180-7fff-b9f0",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
             "primary": false
            }
           ],
@@ -16381,6 +16161,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 0
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -16421,13 +16206,6 @@
             "hidden": true,
             "targetId": "78e6-b065-4446-c3ec",
             "primary": false
-           },
-           {
-            "id": "4700-3f54-4984-79bf",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
-            "primary": false
            }
           ],
           "selectionEntries": [],
@@ -16446,6 +16224,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 10
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -16488,13 +16271,6 @@
             "hidden": true,
             "targetId": "59d3-3e05-f6bf-f1e5",
             "primary": false
-           },
-           {
-            "id": "6a74-a7df-86e3-8208",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
-            "primary": false
            }
           ],
           "selectionEntries": [],
@@ -16513,6 +16289,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 25
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -16545,13 +16326,6 @@
             "hidden": true,
             "targetId": "1348-28b6-0bc5-dbb5",
             "primary": false
-           },
-           {
-            "id": "154e-448d-bbfe-46d2",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
-            "primary": false
            }
           ],
           "selectionEntries": [],
@@ -16570,6 +16344,11 @@
             "name": "pts",
             "typeId": "ea90-6996-33df-993c",
             "value": 25
+           },
+           {
+            "name": "Tunnel Gunners",
+            "typeId": "f35a-9936-5f8a-d068",
+            "value": 1
            }
           ],
           "constraints": [
@@ -16618,13 +16397,6 @@
             "name": "Deepfire Thrower",
             "hidden": true,
             "targetId": "31d5-85af-8d39-0a9d",
-            "primary": false
-           },
-           {
-            "id": "61ec-78d4-dc3c-1c8a",
-            "name": "Tunnel Gunners",
-            "hidden": true,
-            "targetId": "d8d9-45ef-74a9-9cf9",
             "primary": false
            }
           ],
@@ -17016,6 +16788,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 9
+       },
+       {
+        "name": "Small Arms Fire",
+        "typeId": "6f3b-f6d9-5407-317e",
+        "value": 1
        }
       ],
       "constraints": [
@@ -17045,15 +16822,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "29a8-d809-f088-f3f0",
-        "name": "Small Arms Fire",
-        "hidden": true,
-        "targetId": "30b9-e188-4de5-6ddb",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -17140,6 +16909,11 @@
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
       "value": 170
+     },
+     {
+      "name": "Tunnel Gunners",
+      "typeId": "f35a-9936-5f8a-d068",
+      "value": 3
      }
     ],
     "profiles": [
@@ -17329,56 +17103,7 @@
       "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [
-     {
-      "id": "1634-0213-2ba5-a9e9",
-      "name": "Tunnel Gunners",
-      "type": "upgrade",
-      "hidden": false,
-      "defaultAmount": 3,
-      "constraints": [
-       {
-        "id": "1100-95e9-5464-2ec4",
-        "field": "selections",
-        "scope": "parent",
-        "value": 3,
-        "type": "min",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       },
-       {
-        "id": "9d0a-875f-a41e-1ce7",
-        "field": "selections",
-        "scope": "parent",
-        "value": 3,
-        "type": "max",
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "shared": true,
-        "percentValue": false
-       }
-      ],
-      "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [],
-      "categoryLinks": [
-       {
-        "id": "ab30-9d7f-ac1a-5df1",
-        "name": "Tunnel Gunners",
-        "hidden": true,
-        "targetId": "d8d9-45ef-74a9-9cf9",
-        "primary": false
-       }
-      ],
-      "sortIndex": 1,
-      "collective": true
-     }
-    ],
+    "selectionEntries": [],
     "selectionEntryGroups": [
      {
       "id": "c844-d08b-ff3e-c4da",
@@ -17515,7 +17240,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 1,
       "collective": true
      }
     ],
@@ -18327,6 +18052,11 @@
         "name": "pts",
         "typeId": "ea90-6996-33df-993c",
         "value": 80
+       },
+       {
+        "name": "Small Arms Fire",
+        "typeId": "6f3b-f6d9-5407-317e",
+        "value": 1
        }
       ],
       "constraints": [
@@ -18356,15 +18086,7 @@
       "modifiers": [],
       "profiles": [],
       "infoLinks": [],
-      "categoryLinks": [
-       {
-        "id": "d6d9-367f-8ed6-5fc0",
-        "name": "Small Arms Fire",
-        "hidden": true,
-        "targetId": "30b9-e188-4de5-6ddb",
-        "primary": false
-       }
-      ],
+      "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
       "entryLinks": [],
@@ -21247,15 +20969,7 @@
       "targetId": "74b7-eea1-899f-ffec"
      }
     ],
-    "categoryLinks": [
-     {
-      "id": "6a0a-2d03-3be0-8fb9",
-      "name": "Enlightened By Favana",
-      "hidden": true,
-      "targetId": "d870-2490-20fb-edc1",
-      "primary": false
-     }
-    ],
+    "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
@@ -21365,15 +21079,7 @@
       "targetId": "59c3-bb6a-2101-5012"
      }
     ],
-    "categoryLinks": [
-     {
-      "id": "f550-07b6-5f1a-178e",
-      "name": "Pontifex Maximus",
-      "hidden": true,
-      "targetId": "ea58-02e2-b444-4f72",
-      "primary": false
-     }
-    ],
+    "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
