@@ -1539,7 +1539,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -2741,8 +2741,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "bfd8-130e-13c1-d5bd",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "bfd8-130e-13c1-d5bd",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -5338,7 +5372,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -7178,8 +7212,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "edd9-f1cf-0a8b-389d",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "edd9-f1cf-0a8b-389d",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -8170,50 +8238,6 @@
       ]
      },
      {
-      "id": "5a06-3d17-7354-b7c6",
-      "name": "Skeletal Horse (4)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Grind Attack (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Mount"
-       }
-      ]
-     },
-     {
       "id": "99d5-e7c0-3ae2-9733",
       "name": "Chassis",
       "typeId": "462e-145c-42af-7edc",
@@ -8254,35 +8278,6 @@
         "name": "Tags",
         "typeId": "6079-9ce5-90ed-8c32",
         "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "4ccb-bf2f-9f90-3cee",
-      "name": "Rehnepeh, the Undying Sun (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "100×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Legendary"
        }
       ]
      }
@@ -8373,13 +8368,6 @@
       "targetId": "544e-de88-9364-58b5"
      },
      {
-      "id": "2c55-c237-461e-c4a5",
-      "name": "Grind Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f7bd-2fab-e04c-a2a2"
-     },
-     {
       "id": "6b19-2a4d-c613-55b0",
       "name": "Impact Hits",
       "hidden": false,
@@ -8392,16 +8380,146 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "f691-5d89-b136-aadd",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "d1c5-bbd1-0af7-ce2a",
+      "name": "Skeletal Horse (4)",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "ba9a-5fad-cc43-d5a7",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "76b6-d124-ad0c-7229",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "5a06-3d17-7354-b7c6",
+        "name": "Skeletal Horse (4)",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Grind Attack (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Mount"
+         }
+        ]
+       },
+       {
+        "id": "4ccb-bf2f-9f90-3cee",
+        "name": "Rehnepeh, the Undying Sun (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Skeleton,\n\t\tLight Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "100×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Legendary"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "2c55-c237-461e-c4a5",
+        "name": "Grind Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f7bd-2fab-e04c-a2a2"
+       },
+       {
+        "id": "f691-5d89-b136-aadd",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -8470,186 +8588,8 @@
       "value": 10
      }
     ],
-    "profiles": [
-     {
-      "id": "18d8-9873-1085-778c",
-      "name": "Skeleton Warriors (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "4"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Unstable, Dust to Dust, Fearless"
-       }
-      ]
-     },
-     {
-      "id": "3006-fae2-128b-7bcf",
-      "name": "Skeleton Warriors (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "1"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "17c4-16b5-b577-8e80",
-      "name": "Skeleton Warrior",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "8669-ead2-533d-3683",
-      "name": "Skeleton Warriors (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "80dc-dc36-58e3-7b55",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "6432-1610-1e6b-bd6a",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "e95b-de4b-72f9-775f",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "482b-3a45-1d47-ecce",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "2613-49ab-76da-ffd8",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "b2e0-cbcc-acc9-41e6",
@@ -8688,8 +8628,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "18d8-9873-1085-778c",
+        "name": "Skeleton Warriors (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "4"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Unstable, Dust to Dust, Fearless"
+         }
+        ]
+       },
+       {
+        "id": "3006-fae2-128b-7bcf",
+        "name": "Skeleton Warriors (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "1"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "17c4-16b5-b577-8e80",
+        "name": "Skeleton Warrior",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Skeleton, Light Armour"
+         }
+        ]
+       },
+       {
+        "id": "8669-ead2-533d-3683",
+        "name": "Skeleton Warriors (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Skeleton,\n\t\tLight Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "80dc-dc36-58e3-7b55",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "6432-1610-1e6b-bd6a",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "e95b-de4b-72f9-775f",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "482b-3a45-1d47-ecce",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "2613-49ab-76da-ffd8",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -9785,193 +9903,8 @@
       "value": 25
      }
     ],
-    "profiles": [
-     {
-      "id": "db84-e556-2884-ef3f",
-      "name": "Skeleton Archers (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "4"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Unstable, Dust to Dust, Fearless"
-       }
-      ]
-     },
-     {
-      "id": "a337-e40d-839c-c4dc",
-      "name": "Skeleton Archers (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "2"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "1"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "0f11-d749-227b-e6fe",
-      "name": "Skeleton Archer",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Aspis Arrows"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "3592-0397-4578-380f",
-      "name": "Skeleton Archers (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "63a4-b7c9-93d9-2f29",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "7731-d7d2-6a46-9b60",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "17a5-a721-6d8d-c27c",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "8126-cde5-dbf4-850d",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "5d6c-9586-c653-eef4",
-      "name": "Aspis Arrows",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9897-43c6-61c9-cc75"
-     },
-     {
-      "id": "3ab3-8d88-37f8-56d1",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "9934-0da8-f781-32f2",
@@ -10010,8 +9943,193 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "db84-e556-2884-ef3f",
+        "name": "Skeleton Archers (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "4"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Unstable, Dust to Dust, Fearless"
+         }
+        ]
+       },
+       {
+        "id": "a337-e40d-839c-c4dc",
+        "name": "Skeleton Archers (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "2"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "1"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "0f11-d749-227b-e6fe",
+        "name": "Skeleton Archer",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Aspis Arrows"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Skeleton, Light Armour"
+         }
+        ]
+       },
+       {
+        "id": "3592-0397-4578-380f",
+        "name": "Skeleton Archers (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Skeleton,\n\t\tLight Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "63a4-b7c9-93d9-2f29",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "7731-d7d2-6a46-9b60",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "17a5-a721-6d8d-c27c",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "8126-cde5-dbf4-850d",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "5d6c-9586-c653-eef4",
+        "name": "Aspis Arrows",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9897-43c6-61c9-cc75"
+       },
+       {
+        "id": "3ab3-8d88-37f8-56d1",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -11076,258 +11194,8 @@
       "value": 50
      }
     ],
-    "profiles": [
-     {
-      "id": "779d-a017-4b01-a58b",
-      "name": "Skeleton Cavalry (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "8"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "8"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Unstable, Dust to Dust, Fearless, Swiftstride, Vanguard"
-       }
-      ]
-     },
-     {
-      "id": "83ae-aef1-65a9-de5c",
-      "name": "Skeleton Cavalry (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "2"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Shield"
-       }
-      ]
-     },
-     {
-      "id": "b8b9-2315-85b0-e826",
-      "name": "Rider",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "3468-b770-7f04-98d6",
-      "name": "Skeletal Horse",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Mount"
-       }
-      ]
-     },
-     {
-      "id": "6de7-9e8e-1c33-3ce4",
-      "name": "Skeleton Cavalry (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "2"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "f165-37b7-5912-3c79",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "19e8-bf28-4220-dd5a",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "2310-4698-8b32-5469",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "07d6-29fc-124e-9371",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "245a-fa45-7105-8514",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "0484-9143-a886-214e",
-      "name": "Vanguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f930-f7e6-2b9b-81d7"
-     },
-     {
-      "id": "a769-c764-37ef-5b59",
-      "name": "Shield",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cfbb-118b-629b-24b9"
-     },
-     {
-      "id": "39ad-1bf7-aee3-8a24",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "deb7-61db-3638-42e6",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "8262-5e36-4834-a0e9",
@@ -11366,10 +11234,310 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "779d-a017-4b01-a58b",
+        "name": "Skeleton Cavalry (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "8"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "8"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Unstable, Dust to Dust, Fearless, Swiftstride, Vanguard"
+         }
+        ]
+       },
+       {
+        "id": "83ae-aef1-65a9-de5c",
+        "name": "Skeleton Cavalry (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "2"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Shield"
+         }
+        ]
+       },
+       {
+        "id": "b8b9-2315-85b0-e826",
+        "name": "Rider",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Skeleton, Light Armour"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "f165-37b7-5912-3c79",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "19e8-bf28-4220-dd5a",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "2310-4698-8b32-5469",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "07d6-29fc-124e-9371",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "245a-fa45-7105-8514",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "0484-9143-a886-214e",
+        "name": "Vanguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f930-f7e6-2b9b-81d7"
+       },
+       {
+        "id": "a769-c764-37ef-5b59",
+        "name": "Shield",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "39ad-1bf7-aee3-8a24",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "4cd4-275a-a265-6bf3",
+        "name": "Skeletal Horse",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "dbf8-2a72-1fbf-5ebf",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "4980-186f-be40-da5a",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "3468-b770-7f04-98d6",
+          "name": "Skeletal Horse",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "1"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "2"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "3"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "0"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "2"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": ""
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Skeleton, Mount"
+           }
+          ]
+         },
+         {
+          "id": "6de7-9e8e-1c33-3ce4",
+          "name": "Skeleton Cavalry (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "2"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Skeleton,\n\t\tLight Armour"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "25×50"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Uncommon"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "deb7-61db-3638-42e6",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "155a-3158-97fc-56ec",
@@ -11456,7 +11624,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        },
        {
@@ -11898,7 +12066,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 3,
         "collective": true
        }
       ],
@@ -12146,272 +12314,8 @@
       "value": 95
      }
     ],
-    "profiles": [
-     {
-      "id": "e5dd-45be-3cdb-916f",
-      "name": "Skeleton Scouts (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "8"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "8"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Unstable, Dust to Dust, Swiftstride, Vanguard, Scout, Light Troops, Fearless"
-       }
-      ]
-     },
-     {
-      "id": "1478-c921-f8e1-9028",
-      "name": "Skeleton Scouts (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "2"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "1"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "1e59-e229-03e3-5fd3",
-      "name": "Rider",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Aspis Arrows"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton"
-       }
-      ]
-     },
-     {
-      "id": "8016-08fe-d842-e050",
-      "name": "Skeletal Horse",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Mount"
-       }
-      ]
-     },
-     {
-      "id": "f42f-141f-3d27-0fcf",
-      "name": "Skeleton Scouts (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "2"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "0fcd-cf17-77d3-0866",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "f36d-79ad-1ba8-34c2",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "c39f-c579-6285-3288",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "3589-c765-3015-dbf3",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "85bc-ef07-14fe-8b99",
-      "name": "Vanguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f930-f7e6-2b9b-81d7"
-     },
-     {
-      "id": "94ab-5817-3a55-5c74",
-      "name": "Scout",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dc62-e346-c5c3-de7c"
-     },
-     {
-      "id": "7acc-b0ed-f631-1918",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "9dcf-63a0-1df8-a0f1",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "5413-fd97-574e-4de3",
-      "name": "Aspis Arrows",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9897-43c6-61c9-cc75"
-     },
-     {
-      "id": "6063-d574-8272-2ebc",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "6017-ecd5-a2a9-ae60",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "ff80-bfe8-1225-65d5",
@@ -12455,10 +12359,324 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "e5dd-45be-3cdb-916f",
+        "name": "Skeleton Scouts (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "8"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "8"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Unstable, Dust to Dust, Swiftstride, Vanguard, Scout, Light Troops, Fearless"
+         }
+        ]
+       },
+       {
+        "id": "1478-c921-f8e1-9028",
+        "name": "Skeleton Scouts (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "2"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "1"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "1e59-e229-03e3-5fd3",
+        "name": "Rider",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Aspis Arrows"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Skeleton"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "0fcd-cf17-77d3-0866",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "f36d-79ad-1ba8-34c2",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "c39f-c579-6285-3288",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "3589-c765-3015-dbf3",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "85bc-ef07-14fe-8b99",
+        "name": "Vanguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f930-f7e6-2b9b-81d7"
+       },
+       {
+        "id": "94ab-5817-3a55-5c74",
+        "name": "Scout",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dc62-e346-c5c3-de7c"
+       },
+       {
+        "id": "7acc-b0ed-f631-1918",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "9dcf-63a0-1df8-a0f1",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "5413-fd97-574e-4de3",
+        "name": "Aspis Arrows",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9897-43c6-61c9-cc75"
+       },
+       {
+        "id": "6063-d574-8272-2ebc",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "ccc0-de2f-efd9-4fc7",
+        "name": "Skeletal Horse",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "e28d-213b-1666-f905",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "ad4b-bff1-379c-f2fa",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "8016-08fe-d842-e050",
+          "name": "Skeletal Horse",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "1"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "2"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "3"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "0"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "2"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": ""
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Skeleton, Mount"
+           }
+          ]
+         },
+         {
+          "id": "f42f-141f-3d27-0fcf",
+          "name": "Skeleton Scouts (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "2"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Skeleton"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "25×50"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Uncommon"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "6017-ecd5-a2a9-ae60",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "5f06-c954-1a34-3a25",
@@ -12899,7 +13117,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -13166,309 +13384,8 @@
       "value": 45
      }
     ],
-    "profiles": [
-     {
-      "id": "4f10-dd7f-8ef3-ec8c",
-      "name": "Skeleton Chariots (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "8"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Unstable, Dust to Dust, Swiftstride, Light Troops, Fearless, Autonomous"
-       }
-      ]
-     },
-     {
-      "id": "6f17-8efa-0a78-0967",
-      "name": "Skeleton Chariots (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "90c3-2687-435a-3d27",
-      "name": "Charioteer (3)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "854c-2f50-2924-f0cc",
-      "name": "Skeletal Horse (2)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Mount"
-       }
-      ]
-     },
-     {
-      "id": "63a2-f1c4-d05d-f80f",
-      "name": "Chassis",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": ""
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": ""
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (D3)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "b647-539f-a358-e472",
-      "name": "Skeleton Chariots (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "d025-d4e8-c678-cd94",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "2bf5-7f61-3c3f-1ed9",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "ed49-32fc-8f0a-201a",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "ef4e-0f41-f961-4768",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "04eb-77b6-a4a9-cb32",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "22d4-7aab-578e-1968",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "da62-64f9-8d0f-3753",
-      "name": "Autonomous",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2332-24d4-87c3-0bde"
-     },
-     {
-      "id": "deeb-b718-84a2-9394",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
-      "id": "d16c-94d6-269c-6fc8",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "d14b-ca7e-bc57-61bf",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "dc74-9dfb-961e-14da",
@@ -13507,10 +13424,361 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "4f10-dd7f-8ef3-ec8c",
+        "name": "Skeleton Chariots (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "8"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Unstable, Dust to Dust, Swiftstride, Light Troops, Fearless, Autonomous"
+         }
+        ]
+       },
+       {
+        "id": "6f17-8efa-0a78-0967",
+        "name": "Skeleton Chariots (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "90c3-2687-435a-3d27",
+        "name": "Charioteer (3)",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Skeleton, Light Armour"
+         }
+        ]
+       },
+       {
+        "id": "63a2-f1c4-d05d-f80f",
+        "name": "Chassis",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": ""
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": ""
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Impact Hits (D3)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Construct"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "d025-d4e8-c678-cd94",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "2bf5-7f61-3c3f-1ed9",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "ed49-32fc-8f0a-201a",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "ef4e-0f41-f961-4768",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "04eb-77b6-a4a9-cb32",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "22d4-7aab-578e-1968",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "da62-64f9-8d0f-3753",
+        "name": "Autonomous",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2332-24d4-87c3-0bde"
+       },
+       {
+        "id": "deeb-b718-84a2-9394",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "d16c-94d6-269c-6fc8",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "5a3d-13ba-9440-7cb1",
+        "name": "Skeletal Horse (2)",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "fe4a-b8c6-db91-b744",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "a4e4-d8ac-85da-b4ec",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "854c-2f50-2924-f0cc",
+          "name": "Skeletal Horse (2)",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "1"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "2"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "3"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "0"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "2"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": ""
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Skeleton, Mount"
+           }
+          ]
+         },
+         {
+          "id": "b647-539f-a358-e472",
+          "name": "Skeleton Chariots (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "4"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Skeleton,\n\t\tLight Armour"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "50×100"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Common"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "d14b-ca7e-bc57-61bf",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "b93d-aa0f-762a-43a2",
@@ -13636,7 +13904,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        },
        {
@@ -13893,7 +14161,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 3,
         "collective": true
        },
        {
@@ -14551,7 +14819,7 @@
          }
         ],
         "entryLinks": [],
-        "sortIndex": 3,
+        "sortIndex": 4,
         "collective": true
        }
       ],
@@ -14707,8 +14975,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "8a47-5ef0-ef58-35b8",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "8a47-5ef0-ef58-35b8",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -15785,214 +16087,8 @@
       "value": -45
      }
     ],
-    "profiles": [
-     {
-      "id": "90ab-c942-bd26-f101",
-      "name": "Necropolis Guard (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "4"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Dying Blow, Unstable, Dust to Dust, Bodyguard (Nomarch, Pharaoh), Fearless"
-       }
-      ]
-     },
-     {
-      "id": "f24b-7651-1cf4-f67f",
-      "name": "Necropolis Guard (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "1"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "d798-0cdc-a786-80d9",
-      "name": "Necropolis Guard",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Lethal Strike, In Your Name"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "b6b7-c31f-2f01-7fd0",
-      "name": "Necropolis Guard (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "2810-88b7-0336-b50b",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "92d4-4434-1069-4295",
-      "name": "Dying Blow",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2b5c-2b1c-dfe1-6489"
-     },
-     {
-      "id": "cb4f-9722-a9d5-e8e4",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "aa81-8f36-0633-33a0",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "4e9d-0ff1-fd62-e0f4",
-      "name": "Bodyguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1cd2-570c-ae3d-72ff"
-     },
-     {
-      "id": "89bf-d0ee-940d-fb30",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "3dab-2553-a125-56a9",
-      "name": "Lethal Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b128-d5b9-a024-b424"
-     },
-     {
-      "id": "11dc-02d4-a820-e384",
-      "name": "In Your Name",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "eb42-d80f-35c6-a07c"
-     },
-     {
-      "id": "8200-7eb1-918f-6dd7",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "61e5-048d-15ab-11c8",
@@ -16031,8 +16127,214 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "90ab-c942-bd26-f101",
+        "name": "Necropolis Guard (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "4"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Dying Blow, Unstable, Dust to Dust, Bodyguard (Nomarch, Pharaoh), Fearless"
+         }
+        ]
+       },
+       {
+        "id": "f24b-7651-1cf4-f67f",
+        "name": "Necropolis Guard (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "1"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "d798-0cdc-a786-80d9",
+        "name": "Necropolis Guard",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Lethal Strike, In Your Name"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Skeleton, Light Armour"
+         }
+        ]
+       },
+       {
+        "id": "b6b7-c31f-2f01-7fd0",
+        "name": "Necropolis Guard (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Skeleton,\n\t\tLight Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "2810-88b7-0336-b50b",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "92d4-4434-1069-4295",
+        "name": "Dying Blow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2b5c-2b1c-dfe1-6489"
+       },
+       {
+        "id": "cb4f-9722-a9d5-e8e4",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "aa81-8f36-0633-33a0",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "4e9d-0ff1-fd62-e0f4",
+        "name": "Bodyguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1cd2-570c-ae3d-72ff"
+       },
+       {
+        "id": "89bf-d0ee-940d-fb30",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "3dab-2553-a125-56a9",
+        "name": "Lethal Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b128-d5b9-a024-b424"
+       },
+       {
+        "id": "11dc-02d4-a820-e384",
+        "name": "In Your Name",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "eb42-d80f-35c6-a07c"
+       },
+       {
+        "id": "8200-7eb1-918f-6dd7",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -16882,8 +17184,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "12cf-bfa0-d411-4746",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "12cf-bfa0-d411-4746",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -16941,265 +17277,8 @@
       "value": -70
      }
     ],
-    "profiles": [
-     {
-      "id": "1656-011e-f2ee-a12c",
-      "name": "Tomb Cataphracts (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "7"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Ensouled Statue, Fearless, Undead, Unstable, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "f988-a6ac-57a2-9fc5",
-      "name": "Tomb Cataphracts (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "4"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "af80-35ce-6f14-9cd6",
-      "name": "Rider",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Lethal Strike"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Skeleton, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "721d-d2a8-7fcf-ed25",
-      "name": "Amuut",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Poison Attacks, Stomp Attack (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Statue, Mount"
-       }
-      ]
-     },
-     {
-      "id": "3dac-c3c7-09f5-f838",
-      "name": "Tomb Cataphracts (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "6279-9fdb-0d61-ebb4",
-      "name": "Ensouled Statue",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b844-e2fc-fedb-5335"
-     },
-     {
-      "id": "9396-3941-7df3-8fab",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "e3a3-6582-6ae0-2c61",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "99ff-80e9-218a-125f",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "d4c8-4d7c-ad8f-91b7",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "2e9d-3b4f-d50e-8531",
-      "name": "Lethal Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b128-d5b9-a024-b424"
-     },
-     {
-      "id": "16b4-619d-78ba-ffb3",
-      "name": "Poison Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "644e-543b-7f0a-41e2"
-     },
-     {
-      "id": "6dd0-f684-551f-76ee",
-      "name": "Stomp Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ca2f-c97f-04de-88bd"
-     },
-     {
-      "id": "370b-2a05-8729-048f",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "e48e-8dbd-f724-61b4",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "f7ad-1a0c-f113-614d",
@@ -17238,10 +17317,317 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "1656-011e-f2ee-a12c",
+        "name": "Tomb Cataphracts (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "7"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Ensouled Statue, Fearless, Undead, Unstable, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "f988-a6ac-57a2-9fc5",
+        "name": "Tomb Cataphracts (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "4"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "af80-35ce-6f14-9cd6",
+        "name": "Rider",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Lethal Strike"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Skeleton, Light Armour"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "6279-9fdb-0d61-ebb4",
+        "name": "Ensouled Statue",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b844-e2fc-fedb-5335"
+       },
+       {
+        "id": "9396-3941-7df3-8fab",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "e3a3-6582-6ae0-2c61",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "99ff-80e9-218a-125f",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "d4c8-4d7c-ad8f-91b7",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "2e9d-3b4f-d50e-8531",
+        "name": "Lethal Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b128-d5b9-a024-b424"
+       },
+       {
+        "id": "370b-2a05-8729-048f",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "bb32-eddb-519a-6bf7",
+        "name": "Amuut",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "fa25-2aa9-b554-96ee",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "5c35-c3ff-50f6-7dd1",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "721d-d2a8-7fcf-ed25",
+          "name": "Amuut",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "3"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "3"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "5"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "2"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "3"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": "Poison Attacks, Stomp Attack (1)"
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Statue, Mount"
+           }
+          ]
+         },
+         {
+          "id": "3dac-c3c7-09f5-f838",
+          "name": "Tomb Cataphracts (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "4"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Skeleton,\n\t\tLight Armour"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "50×100"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Uncommon"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "16b4-619d-78ba-ffb3",
+          "name": "Poison Attacks",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "644e-543b-7f0a-41e2"
+         },
+         {
+          "id": "6dd0-f684-551f-76ee",
+          "name": "Stomp Attack",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "ca2f-c97f-04de-88bd"
+         },
+         {
+          "id": "e48e-8dbd-f724-61b4",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "054b-4521-49e6-10b0",
@@ -17324,7 +17710,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        },
        {
@@ -17433,7 +17819,7 @@
          }
         ],
         "entryLinks": [],
-        "sortIndex": 2,
+        "sortIndex": 3,
         "collective": true
        }
       ],
@@ -17667,186 +18053,8 @@
       "value": -50
      }
     ],
-    "profiles": [
-     {
-      "id": "6a19-6be2-b54c-712d",
-      "name": "Shabtis (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Ensouled Statue, Fearless, Undead, Unstable"
-       }
-      ]
-     },
-     {
-      "id": "c423-6286-0cdd-3165",
-      "name": "Shabtis (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "16fe-7ccb-4d01-3ef1",
-      "name": "Shabti",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Statue"
-       }
-      ]
-     },
-     {
-      "id": "0e9c-585f-2534-61d5",
-      "name": "Shabtis (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Statue"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "371f-ffcf-7e22-723b",
-      "name": "Ensouled Statue",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b844-e2fc-fedb-5335"
-     },
-     {
-      "id": "33d3-edad-b6dd-4d3c",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "8036-7606-0484-6f19",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "bf8c-f911-0872-d0d1",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "3246-64dd-fe0b-bf50",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "e73a-6571-274e-9f00",
@@ -17885,8 +18093,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "6a19-6be2-b54c-712d",
+        "name": "Shabtis (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "6"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Ensouled Statue, Fearless, Undead, Unstable"
+         }
+        ]
+       },
+       {
+        "id": "c423-6286-0cdd-3165",
+        "name": "Shabtis (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "16fe-7ccb-4d01-3ef1",
+        "name": "Shabti",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Statue"
+         }
+        ]
+       },
+       {
+        "id": "0e9c-585f-2534-61d5",
+        "name": "Shabtis (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Statue"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "371f-ffcf-7e22-723b",
+        "name": "Ensouled Statue",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b844-e2fc-fedb-5335"
+       },
+       {
+        "id": "33d3-edad-b6dd-4d3c",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "8036-7606-0484-6f19",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "bf8c-f911-0872-d0d1",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "3246-64dd-fe0b-bf50",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -18879,235 +19265,8 @@
       "value": 85
      }
     ],
-    "profiles": [
-     {
-      "id": "da4b-c2cc-ebaf-9aa6",
-      "name": "Great Vultures (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "9"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "9"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Unruly, Unstable, Dust to Dust, Skirmisher, Fly, Light Troops, Fearless, Swiftstride, Solitary"
-       }
-      ]
-     },
-     {
-      "id": "7bd7-1e42-8cc9-49b0",
-      "name": "Great Vultures (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "2"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Hard Target (1)"
-       }
-      ]
-     },
-     {
-      "id": "e017-5de9-5ee0-b4c6",
-      "name": "Great Vulture",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Beast"
-       }
-      ]
-     },
-     {
-      "id": "4ba4-194f-c7ec-70c6",
-      "name": "Great Vultures (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Beast"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "95a3-8f05-9327-a207",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "8f89-6291-7ef4-5322",
-      "name": "Unruly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "910a-e5a9-c228-e1fc"
-     },
-     {
-      "id": "ab64-b7cf-1cad-e066",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "bd09-4867-ac62-bd90",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "2144-2e1b-c61c-2148",
-      "name": "Skirmisher",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e6d7-6601-01c8-5b11"
-     },
-     {
-      "id": "9ffe-895b-87c6-3425",
-      "name": "Fly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1c37-18a9-53c1-2636"
-     },
-     {
-      "id": "8f7c-7090-e508-cee1",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "f13e-8e07-11f8-b164",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "60ed-d971-579a-76ea",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "9412-87b8-d943-f642",
-      "name": "Solitary",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8793-b53c-382d-3a4d"
-     },
-     {
-      "id": "c4e3-f67d-e2f8-0a86",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "a963-c9e0-3559-1a3b",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "b54a-883b-2e43-de74",
@@ -19146,8 +19305,235 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "da4b-c2cc-ebaf-9aa6",
+        "name": "Great Vultures (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "9"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "9"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Unruly, Unstable, Dust to Dust, Skirmisher, Fly, Light Troops, Fearless, Swiftstride, Solitary"
+         }
+        ]
+       },
+       {
+        "id": "7bd7-1e42-8cc9-49b0",
+        "name": "Great Vultures (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "2"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Hard Target (1)"
+         }
+        ]
+       },
+       {
+        "id": "e017-5de9-5ee0-b4c6",
+        "name": "Great Vulture",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Beast"
+         }
+        ]
+       },
+       {
+        "id": "4ba4-194f-c7ec-70c6",
+        "name": "Great Vultures (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Beast"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "95a3-8f05-9327-a207",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "8f89-6291-7ef4-5322",
+        "name": "Unruly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "910a-e5a9-c228-e1fc"
+       },
+       {
+        "id": "ab64-b7cf-1cad-e066",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "bd09-4867-ac62-bd90",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "2144-2e1b-c61c-2148",
+        "name": "Skirmisher",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e6d7-6601-01c8-5b11"
+       },
+       {
+        "id": "9ffe-895b-87c6-3425",
+        "name": "Fly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1c37-18a9-53c1-2636"
+       },
+       {
+        "id": "8f7c-7090-e508-cee1",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "f13e-8e07-11f8-b164",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "60ed-d971-579a-76ea",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "9412-87b8-d943-f642",
+        "name": "Solitary",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8793-b53c-382d-3a4d"
+       },
+       {
+        "id": "c4e3-f67d-e2f8-0a86",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "a963-c9e0-3559-1a3b",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
@@ -19692,256 +20078,8 @@
       "value": 85
      }
     ],
-    "profiles": [
-     {
-      "id": "6e80-3965-f497-4177",
-      "name": "Scarab Swarms (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Undead, Unruly, Unstable, Dust to Dust, Skirmisher, Light Troops, Fearless, Swiftstride, Solitary, Afflict (-1 Ag)"
-       }
-      ]
-     },
-     {
-      "id": "72a7-be17-1198-bc06",
-      "name": "Scarab Swarms (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "5"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "2"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "2"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Distracting (1), Hard Target (1)"
-       }
-      ]
-     },
-     {
-      "id": "64de-c569-84c4-15b6",
-      "name": "Scarab Swarm",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "6"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "2"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Poison Attacks, Extra Support (3)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Beast"
-       }
-      ]
-     },
-     {
-      "id": "7701-d2c6-5e09-50f7",
-      "name": "Scarab Swarms (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "0"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Beast"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "3dc1-203e-4bbf-e13b",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "f049-eb78-ad36-310e",
-      "name": "Unruly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "910a-e5a9-c228-e1fc"
-     },
-     {
-      "id": "2cea-8cf2-6cd5-e050",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "6815-69bf-9f5f-43ce",
-      "name": "Dust to Dust",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1422-75a1-d2ae-9c5b"
-     },
-     {
-      "id": "fa08-b09b-0cc2-8126",
-      "name": "Skirmisher",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e6d7-6601-01c8-5b11"
-     },
-     {
-      "id": "7819-5c36-7d90-a3b5",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "151a-73d3-092f-7178",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "249c-0064-6b9a-7892",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "de90-ea70-5da1-7486",
-      "name": "Solitary",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8793-b53c-382d-3a4d"
-     },
-     {
-      "id": "de39-1d3d-e655-655f",
-      "name": "Afflict",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6f5d-59b4-374d-5686"
-     },
-     {
-      "id": "7817-9863-1527-62ad",
-      "name": "Distracting",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cab6-5fc6-a5ff-b970"
-     },
-     {
-      "id": "1d6d-ff7b-2150-3cb6",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "5c71-7600-669e-eca3",
-      "name": "Poison Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "644e-543b-7f0a-41e2"
-     },
-     {
-      "id": "ae09-1008-aa6b-26aa",
-      "name": "Extra Support",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b810-a004-1c7e-66e2"
-     },
-     {
-      "id": "ff4e-e397-a104-4aa3",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "36e2-112a-a731-24a6",
@@ -19980,8 +20118,256 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "6e80-3965-f497-4177",
+        "name": "Scarab Swarms (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "6"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Undead, Unruly, Unstable, Dust to Dust, Skirmisher, Light Troops, Fearless, Swiftstride, Solitary, Afflict (-1 Ag)"
+         }
+        ]
+       },
+       {
+        "id": "72a7-be17-1198-bc06",
+        "name": "Scarab Swarms (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "5"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "2"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "2"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Distracting (1), Hard Target (1)"
+         }
+        ]
+       },
+       {
+        "id": "64de-c569-84c4-15b6",
+        "name": "Scarab Swarm",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "6"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "2"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Poison Attacks, Extra Support (3)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Beast"
+         }
+        ]
+       },
+       {
+        "id": "7701-d2c6-5e09-50f7",
+        "name": "Scarab Swarms (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "0"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Beast"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "3dc1-203e-4bbf-e13b",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "f049-eb78-ad36-310e",
+        "name": "Unruly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "910a-e5a9-c228-e1fc"
+       },
+       {
+        "id": "2cea-8cf2-6cd5-e050",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "6815-69bf-9f5f-43ce",
+        "name": "Dust to Dust",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1422-75a1-d2ae-9c5b"
+       },
+       {
+        "id": "fa08-b09b-0cc2-8126",
+        "name": "Skirmisher",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e6d7-6601-01c8-5b11"
+       },
+       {
+        "id": "7819-5c36-7d90-a3b5",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "151a-73d3-092f-7178",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "249c-0064-6b9a-7892",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "de90-ea70-5da1-7486",
+        "name": "Solitary",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8793-b53c-382d-3a4d"
+       },
+       {
+        "id": "de39-1d3d-e655-655f",
+        "name": "Afflict",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6f5d-59b4-374d-5686"
+       },
+       {
+        "id": "7817-9863-1527-62ad",
+        "name": "Distracting",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cab6-5fc6-a5ff-b970"
+       },
+       {
+        "id": "1d6d-ff7b-2150-3cb6",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "5c71-7600-669e-eca3",
+        "name": "Poison Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "644e-543b-7f0a-41e2"
+       },
+       {
+        "id": "ae09-1008-aa6b-26aa",
+        "name": "Extra Support",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b810-a004-1c7e-66e2"
+       },
+       {
+        "id": "ff4e-e397-a104-4aa3",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -20674,186 +21060,8 @@
       "value": -55
      }
     ],
-    "profiles": [
-     {
-      "id": "f7e4-1631-259d-7173",
-      "name": "Shabti Archers (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Ensouled Statue, Fearless, Undead, Unstable"
-       }
-      ]
-     },
-     {
-      "id": "5181-e0e1-78bd-80e8",
-      "name": "Shabti Archers (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "0184-7c50-67bf-14cb",
-      "name": "Shabti Archer",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Statue"
-       }
-      ]
-     },
-     {
-      "id": "8e7d-188a-bef2-a7c0",
-      "name": "Shabti Archers (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Statue"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Rare"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "8cb8-787c-4cf3-2e59",
-      "name": "Ensouled Statue",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b844-e2fc-fedb-5335"
-     },
-     {
-      "id": "3d74-8015-d20f-638b",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "7632-57bf-56ec-c166",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "9635-7330-9a98-a9c0",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "bcbb-5252-a187-0f16",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "95b1-5017-fafe-a8e5",
@@ -20897,8 +21105,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "f7e4-1631-259d-7173",
+        "name": "Shabti Archers (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "6"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Ensouled Statue, Fearless, Undead, Unstable"
+         }
+        ]
+       },
+       {
+        "id": "5181-e0e1-78bd-80e8",
+        "name": "Shabti Archers (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "0184-7c50-67bf-14cb",
+        "name": "Shabti Archer",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Statue"
+         }
+        ]
+       },
+       {
+        "id": "8e7d-188a-bef2-a7c0",
+        "name": "Shabti Archers (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Statue"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Rare"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "8cb8-787c-4cf3-2e59",
+        "name": "Ensouled Statue",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b844-e2fc-fedb-5335"
+       },
+       {
+        "id": "3d74-8015-d20f-638b",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "7632-57bf-56ec-c166",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "9635-7330-9a98-a9c0",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "bcbb-5252-a187-0f16",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
@@ -21746,207 +22132,8 @@
       "value": 60
      }
     ],
-    "profiles": [
-     {
-      "id": "c3f0-c65b-d2bb-5d20",
-      "name": "Sand Stalkers (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "7"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Autonomous, Ensouled Statue, Light Troops, Fearless, Undead, Unstable"
-       }
-      ]
-     },
-     {
-      "id": "2174-e029-f221-509e",
-      "name": "Sand Stalkers (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "2"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "6738-6348-18af-e4a2",
-      "name": "Sand Stalker",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Petrifying Gaze"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Statue, Beast"
-       }
-      ]
-     },
-     {
-      "id": "3c98-2f99-3bc0-b0f0",
-      "name": "Sand Stalkers (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Statue,\n\t\tBeast"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "9c2f-7a14-38aa-e4fa",
-      "name": "Autonomous",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2332-24d4-87c3-0bde"
-     },
-     {
-      "id": "9aab-5fe4-9a96-eacc",
-      "name": "Ensouled Statue",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b844-e2fc-fedb-5335"
-     },
-     {
-      "id": "f5b5-5822-85e3-4480",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "165f-c377-3b29-8ee4",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "d20f-cf92-2455-8202",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "7c20-38d5-388a-7b4a",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "eefb-9ffa-456e-b480",
-      "name": "Petrifying Gaze",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "195a-7411-2844-d2ff"
-     },
-     {
-      "id": "24fc-0e76-705d-2854",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "e228-161e-360b-533f",
@@ -21990,8 +22177,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "c3f0-c65b-d2bb-5d20",
+        "name": "Sand Stalkers (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "7"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Autonomous, Ensouled Statue, Light Troops, Fearless, Undead, Unstable"
+         }
+        ]
+       },
+       {
+        "id": "2174-e029-f221-509e",
+        "name": "Sand Stalkers (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "2"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "6738-6348-18af-e4a2",
+        "name": "Sand Stalker",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Petrifying Gaze"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Statue, Beast"
+         }
+        ]
+       },
+       {
+        "id": "3c98-2f99-3bc0-b0f0",
+        "name": "Sand Stalkers (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Statue,\n\t\tBeast"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "9c2f-7a14-38aa-e4fa",
+        "name": "Autonomous",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2332-24d4-87c3-0bde"
+       },
+       {
+        "id": "9aab-5fe4-9a96-eacc",
+        "name": "Ensouled Statue",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b844-e2fc-fedb-5335"
+       },
+       {
+        "id": "f5b5-5822-85e3-4480",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "165f-c377-3b29-8ee4",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "d20f-cf92-2455-8202",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "7c20-38d5-388a-7b4a",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "eefb-9ffa-456e-b480",
+        "name": "Petrifying Gaze",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "195a-7411-2844-d2ff"
+       },
+       {
+        "id": "24fc-0e76-705d-2854",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -23867,79 +24253,6 @@
         "$text": "Skeleton"
        }
       ]
-     },
-     {
-      "id": "029f-6a2d-83a7-103a",
-      "name": "Battle Sphinx",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "5"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "1"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Poison Attacks, Stomp Attack (D6, Maximised)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Statue, Beast, Mount"
-       }
-      ]
-     },
-     {
-      "id": "7b7e-78d4-19ae-77b5",
-      "name": "Battle Sphinx (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "5"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
      }
     ],
     "infoLinks": [
@@ -24000,13 +24313,6 @@
       "targetId": "b128-d5b9-a024-b424"
      },
      {
-      "id": "9081-a6f2-4fa9-db58",
-      "name": "Poison Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "644e-543b-7f0a-41e2"
-     },
-     {
       "id": "612b-83a0-45ae-de02",
       "name": "Stomp Attack",
       "hidden": false,
@@ -24019,16 +24325,146 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "96b6-0f6d-057e-80c5",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "c33f-927f-f6c1-e300",
+      "name": "Battle Sphinx",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "0a58-6c57-28b7-ca78",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "8dfb-e9cf-fdd9-1114",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "029f-6a2d-83a7-103a",
+        "name": "Battle Sphinx",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "5"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "1"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Poison Attacks, Stomp Attack (D6, Maximised)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Statue, Beast, Mount"
+         }
+        ]
+       },
+       {
+        "id": "7b7e-78d4-19ae-77b5",
+        "name": "Battle Sphinx (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "5"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Skeleton"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "9081-a6f2-4fa9-db58",
+        "name": "Poison Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "644e-543b-7f0a-41e2"
+       },
+       {
+        "id": "96b6-0f6d-057e-80c5",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [
      {
       "id": "3d0b-3be9-9551-a80b",
@@ -24083,7 +24519,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 1,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -24612,228 +25048,8 @@
       "value": -30
      }
     ],
-    "profiles": [
-     {
-      "id": "52e9-91a1-3671-9a4c",
-      "name": "Tomb Reapers (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Ensouled Statue, Fly, Autonomous, Swiftstride, Fearless, Undead, Unstable, Vanguard (3)"
-       }
-      ]
-     },
-     {
-      "id": "a12b-f506-5c3b-ca4d",
-      "name": "Tomb Reapers (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "4"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "5"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "5"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "97c4-1c99-1d4a-dcae",
-      "name": "Tomb Reaper",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "4"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "5"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Lethal Strike, Stomp Attack (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Statue"
-       }
-      ]
-     },
-     {
-      "id": "cfdc-a64c-0ab8-6a91",
-      "name": "Tomb Reapers (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Statue"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×75"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "af2f-2975-8438-5fc1",
-      "name": "Ensouled Statue",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b844-e2fc-fedb-5335"
-     },
-     {
-      "id": "6dbc-5f71-b15a-01a4",
-      "name": "Fly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1c37-18a9-53c1-2636"
-     },
-     {
-      "id": "9de0-8073-579f-c333",
-      "name": "Autonomous",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2332-24d4-87c3-0bde"
-     },
-     {
-      "id": "4cdc-ac80-1ba0-0ab0",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "6e59-fd6e-9f3d-e596",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "d2ea-fc2f-0001-9170",
-      "name": "Undead",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "2168-fbbf-3b09-e0bd"
-     },
-     {
-      "id": "3529-3a9b-b0bd-0cbf",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "117c-34ac-e391-c2a7",
-      "name": "Vanguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f930-f7e6-2b9b-81d7"
-     },
-     {
-      "id": "1cdc-ab0c-489d-4f08",
-      "name": "Lethal Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b128-d5b9-a024-b424"
-     },
-     {
-      "id": "653a-7a57-1fd6-3831",
-      "name": "Stomp Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ca2f-c97f-04de-88bd"
-     },
-     {
-      "id": "0228-cc91-12ae-f332",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "b49e-355d-d3ec-bb39",
@@ -24872,8 +25088,228 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "52e9-91a1-3671-9a4c",
+        "name": "Tomb Reapers (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "6"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Ensouled Statue, Fly, Autonomous, Swiftstride, Fearless, Undead, Unstable, Vanguard (3)"
+         }
+        ]
+       },
+       {
+        "id": "a12b-f506-5c3b-ca4d",
+        "name": "Tomb Reapers (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "4"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "5"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "5"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "97c4-1c99-1d4a-dcae",
+        "name": "Tomb Reaper",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "4"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "5"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Lethal Strike, Stomp Attack (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Statue"
+         }
+        ]
+       },
+       {
+        "id": "cfdc-a64c-0ab8-6a91",
+        "name": "Tomb Reapers (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Statue"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×75"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "af2f-2975-8438-5fc1",
+        "name": "Ensouled Statue",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b844-e2fc-fedb-5335"
+       },
+       {
+        "id": "6dbc-5f71-b15a-01a4",
+        "name": "Fly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1c37-18a9-53c1-2636"
+       },
+       {
+        "id": "9de0-8073-579f-c333",
+        "name": "Autonomous",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2332-24d4-87c3-0bde"
+       },
+       {
+        "id": "4cdc-ac80-1ba0-0ab0",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "6e59-fd6e-9f3d-e596",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "d2ea-fc2f-0001-9170",
+        "name": "Undead",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2168-fbbf-3b09-e0bd"
+       },
+       {
+        "id": "3529-3a9b-b0bd-0cbf",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "117c-34ac-e391-c2a7",
+        "name": "Vanguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f930-f7e6-2b9b-81d7"
+       },
+       {
+        "id": "1cdc-ab0c-489d-4f08",
+        "name": "Lethal Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b128-d5b9-a024-b424"
+       },
+       {
+        "id": "653a-7a57-1fd6-3831",
+        "name": "Stomp Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ca2f-c97f-04de-88bd"
+       },
+       {
+        "id": "0228-cc91-12ae-f332",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -28548,50 +28984,6 @@
       ]
      },
      {
-      "id": "93c0-9008-b517-2bcb",
-      "name": "Bound Spirits",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "2"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Mount, Spirit"
-       }
-      ]
-     },
-     {
       "id": "5bce-bcea-29c9-5fb0",
       "name": "Chassis",
       "typeId": "462e-145c-42af-7edc",
@@ -28632,35 +29024,6 @@
         "name": "Tags",
         "typeId": "6079-9ce5-90ed-8c32",
         "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "e03a-ecff-b12e-e85e",
-      "name": "Ark of Ages (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "60×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
        }
       ]
      }
@@ -28716,13 +29079,6 @@
       "targetId": "b128-d5b9-a024-b424"
      },
      {
-      "id": "a53f-1033-b47f-e4e0",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
       "id": "21c3-f766-01b5-aa46",
       "name": "Impact Hits",
       "hidden": false,
@@ -28735,16 +29091,146 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "ba3c-9414-70a5-f2c4",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "7ba6-e327-13d8-ae3f",
+      "name": "Bound Spirits",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "c6ee-25bb-71f5-0f35",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "de3f-24a0-01e6-991f",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "93c0-9008-b517-2bcb",
+        "name": "Bound Spirits",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "2"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Mount, Spirit"
+         }
+        ]
+       },
+       {
+        "id": "e03a-ecff-b12e-e85e",
+        "name": "Ark of Ages (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Skeleton"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "60×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "a53f-1033-b47f-e4e0",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "ba3c-9414-70a5-f2c4",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -29856,50 +30342,6 @@
       ]
      },
      {
-      "id": "110d-91af-dddb-6a89",
-      "name": "Skeletal Horse (4)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Grind Attack (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Mount"
-       }
-      ]
-     },
-     {
       "id": "aa10-300a-5613-bae1",
       "name": "Chassis",
       "typeId": "462e-145c-42af-7edc",
@@ -29940,35 +30382,6 @@
         "name": "Tags",
         "typeId": "6079-9ce5-90ed-8c32",
         "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "fe05-aede-3850-1708",
-      "name": "Rehnepeh, the Undying Sun (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Skeleton,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "100×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Legendary"
        }
       ]
      }
@@ -30059,13 +30472,6 @@
       "targetId": "544e-de88-9364-58b5"
      },
      {
-      "id": "1450-ccdd-402f-3616",
-      "name": "Grind Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f7bd-2fab-e04c-a2a2"
-     },
-     {
       "id": "ee80-df54-aeda-16f4",
       "name": "Impact Hits",
       "hidden": false,
@@ -30078,16 +30484,146 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "0175-794f-7f69-0c82",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "8806-6e9c-73c6-6a86",
+      "name": "Skeletal Horse (4)",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "cc05-d6e5-4151-dff2",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "12b8-e5de-f7a5-9be3",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "110d-91af-dddb-6a89",
+        "name": "Skeletal Horse (4)",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Grind Attack (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Mount"
+         }
+        ]
+       },
+       {
+        "id": "fe05-aede-3850-1708",
+        "name": "Rehnepeh, the Undying Sun (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Skeleton,\n\t\tLight Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "100×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Legendary"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "1450-ccdd-402f-3616",
+        "name": "Grind Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f7bd-2fab-e04c-a2a2"
+       },
+       {
+        "id": "0175-794f-7f69-0c82",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [

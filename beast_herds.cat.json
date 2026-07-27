@@ -2456,7 +2456,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -4104,8 +4104,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "9ab5-0fd5-e0e4-27d5",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "9ab5-0fd5-e0e4-27d5",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -6759,7 +6793,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -7911,8 +7945,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "6961-2506-47ec-6ec0",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "6961-2506-47ec-6ec0",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -8108,7 +8176,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -9448,8 +9516,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "dced-3141-4600-55b3",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "dced-3141-4600-55b3",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -10345,179 +10447,8 @@
       "value": 15
      }
     ],
-    "profiles": [
-     {
-      "id": "5820-3f96-ca50-068d",
-      "name": "Wildhorn Herd (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Pack Tactics, Strider (Forest)"
-       }
-      ]
-     },
-     {
-      "id": "3a7f-73a0-2706-d00d",
-      "name": "Wildhorn Herd (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "a766-dfa8-8dae-ffb2",
-      "name": "Wildhorn",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Wildhornspecies"
-       }
-      ]
-     },
-     {
-      "id": "01fa-0b39-2a15-fe98",
-      "name": "Wildhorn Herd (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Wildhornspecies"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "279b-b90a-fff5-8607",
-      "name": "Pack Tactics",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6896-76a1-9ae1-2030"
-     },
-     {
-      "id": "e623-14c2-415f-12a6",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "4b17-551c-89e2-7644",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "1042-35ff-ecd7-1521",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "6d7b-4e5c-2997-5a35",
@@ -10556,8 +10487,179 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "5820-3f96-ca50-068d",
+        "name": "Wildhorn Herd (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Pack Tactics, Strider (Forest)"
+         }
+        ]
+       },
+       {
+        "id": "3a7f-73a0-2706-d00d",
+        "name": "Wildhorn Herd (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "a766-dfa8-8dae-ffb2",
+        "name": "Wildhorn",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Wildhornspecies"
+         }
+        ]
+       },
+       {
+        "id": "01fa-0b39-2a15-fe98",
+        "name": "Wildhorn Herd (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Wildhornspecies"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "279b-b90a-fff5-8607",
+        "name": "Pack Tactics",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6896-76a1-9ae1-2030"
+       },
+       {
+        "id": "e623-14c2-415f-12a6",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "4b17-551c-89e2-7644",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "1042-35ff-ecd7-1521",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -11392,186 +11494,8 @@
       "value": 10
      }
     ],
-    "profiles": [
-     {
-      "id": "78aa-389b-1d44-e448",
-      "name": "Mongrel Herd (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "6"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Pack Tactics, Strider (Forest)"
-       }
-      ]
-     },
-     {
-      "id": "c3b2-9f5b-a4d5-2f67",
-      "name": "Mongrel Herd (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Shield"
-       }
-      ]
-     },
-     {
-      "id": "0e08-d078-bc2e-017e",
-      "name": "Mongrel",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Wildhornspecies"
-       }
-      ]
-     },
-     {
-      "id": "e313-5ec3-4fc4-34eb",
-      "name": "Mongrel Herd (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Wildhornspecies"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "7137-362c-efe3-28cf",
-      "name": "Pack Tactics",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6896-76a1-9ae1-2030"
-     },
-     {
-      "id": "5d09-d39c-b0e6-c20f",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "9c9f-d201-7f3b-f231",
-      "name": "Shield",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cfbb-118b-629b-24b9"
-     },
-     {
-      "id": "ba13-ac3c-7746-f6ad",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "f904-8faa-befa-65eb",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "6a33-4894-6f5b-b25a",
@@ -11610,8 +11534,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "78aa-389b-1d44-e448",
+        "name": "Mongrel Herd (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "6"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Pack Tactics, Strider (Forest)"
+         }
+        ]
+       },
+       {
+        "id": "c3b2-9f5b-a4d5-2f67",
+        "name": "Mongrel Herd (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Shield"
+         }
+        ]
+       },
+       {
+        "id": "0e08-d078-bc2e-017e",
+        "name": "Mongrel",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Wildhornspecies"
+         }
+        ]
+       },
+       {
+        "id": "e313-5ec3-4fc4-34eb",
+        "name": "Mongrel Herd (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Wildhornspecies"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "7137-362c-efe3-28cf",
+        "name": "Pack Tactics",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6896-76a1-9ae1-2030"
+       },
+       {
+        "id": "5d09-d39c-b0e6-c20f",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "9c9f-d201-7f3b-f231",
+        "name": "Shield",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "ba13-ac3c-7746-f6ad",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "f904-8faa-befa-65eb",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -11992,207 +12094,8 @@
       "value": 90
      }
     ],
-    "profiles": [
-     {
-      "id": "db7e-ef2b-4dff-ccbc",
-      "name": "Mongrel Raiders (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "6"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Light Troops, Pack Tactics, Skirmisher, Strider (Forest), Hard Target (1), Scout"
-       }
-      ]
-     },
-     {
-      "id": "1295-1d43-cc57-8e6d",
-      "name": "Mongrel Raiders (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "e965-f0c9-2b6e-5e5c",
-      "name": "Mongrel Raider",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Wildhornspecies"
-       }
-      ]
-     },
-     {
-      "id": "5a01-d18a-5aa8-b2b8",
-      "name": "Mongrel Raiders (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Wildhornspecies"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "bf7b-98c7-2776-4c80",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "bac6-ebc1-da11-0c89",
-      "name": "Pack Tactics",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6896-76a1-9ae1-2030"
-     },
-     {
-      "id": "6a9f-5f6c-db9a-1f43",
-      "name": "Skirmisher",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e6d7-6601-01c8-5b11"
-     },
-     {
-      "id": "404e-ff7c-226f-e5f8",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "3f0f-03f0-2492-04d3",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "84cd-af54-dd76-ee22",
-      "name": "Scout",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dc62-e346-c5c3-de7c"
-     },
-     {
-      "id": "0709-fbac-5daa-2df2",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "dabe-8d06-dc56-19e3",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "8814-de18-8757-cfa4",
@@ -12231,8 +12134,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "db7e-ef2b-4dff-ccbc",
+        "name": "Mongrel Raiders (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "6"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Light Troops, Pack Tactics, Skirmisher, Strider (Forest), Hard Target (1), Scout"
+         }
+        ]
+       },
+       {
+        "id": "1295-1d43-cc57-8e6d",
+        "name": "Mongrel Raiders (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "e965-f0c9-2b6e-5e5c",
+        "name": "Mongrel Raider",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Wildhornspecies"
+         }
+        ]
+       },
+       {
+        "id": "5a01-d18a-5aa8-b2b8",
+        "name": "Mongrel Raiders (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Wildhornspecies"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "bf7b-98c7-2776-4c80",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "bac6-ebc1-da11-0c89",
+        "name": "Pack Tactics",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6896-76a1-9ae1-2030"
+       },
+       {
+        "id": "6a9f-5f6c-db9a-1f43",
+        "name": "Skirmisher",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e6d7-6601-01c8-5b11"
+       },
+       {
+        "id": "404e-ff7c-226f-e5f8",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "3f0f-03f0-2492-04d3",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "84cd-af54-dd76-ee22",
+        "name": "Scout",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dc62-e346-c5c3-de7c"
+       },
+       {
+        "id": "0709-fbac-5daa-2df2",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "dabe-8d06-dc56-19e3",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [
        {
         "id": "288e-aefd-4f30-18ed",
@@ -12372,8 +12474,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "f828-0d67-cec6-bf14",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "f828-0d67-cec6-bf14",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -12443,207 +12579,8 @@
       "value": 60
      }
     ],
-    "profiles": [
-     {
-      "id": "9838-569b-b39e-0aeb",
-      "name": "Feral Hounds (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "8"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "8"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "5"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Insignificant, Ambush (Battlefield Edge), Vanguard, Strider (Forest), Pack Tactics, Swiftstride, Unruly"
-       }
-      ]
-     },
-     {
-      "id": "2941-ad9a-c4f2-8f8f",
-      "name": "Feral Hounds (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "23c0-538d-bb66-afc4",
-      "name": "Feral Hound",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Beast"
-       }
-      ]
-     },
-     {
-      "id": "9a49-4f01-dcf9-ca92",
-      "name": "Feral Hounds (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Beast"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "dc66-b816-1859-8805",
-      "name": "Insignificant",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f48c-19de-c165-c406"
-     },
-     {
-      "id": "39fc-e4a6-b493-ecf5",
-      "name": "Ambush",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "3bc5-40b3-2dc8-4226"
-     },
-     {
-      "id": "022d-57fa-5f62-fc2a",
-      "name": "Vanguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f930-f7e6-2b9b-81d7"
-     },
-     {
-      "id": "7f19-e5eb-98e3-ba6c",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "0525-3271-83f8-085a",
-      "name": "Pack Tactics",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6896-76a1-9ae1-2030"
-     },
-     {
-      "id": "de04-3fd9-0a92-85e0",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "7645-0a15-dfef-8fc7",
-      "name": "Unruly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "910a-e5a9-c228-e1fc"
-     },
-     {
-      "id": "8ab3-2897-3307-42b8",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "7c23-d828-e9ef-437e",
@@ -12682,8 +12619,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "9838-569b-b39e-0aeb",
+        "name": "Feral Hounds (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "8"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "8"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "5"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Insignificant, Ambush (Battlefield Edge), Vanguard, Strider (Forest), Pack Tactics, Swiftstride, Unruly"
+         }
+        ]
+       },
+       {
+        "id": "2941-ad9a-c4f2-8f8f",
+        "name": "Feral Hounds (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "23c0-538d-bb66-afc4",
+        "name": "Feral Hound",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Beast"
+         }
+        ]
+       },
+       {
+        "id": "9a49-4f01-dcf9-ca92",
+        "name": "Feral Hounds (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Beast"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×50"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "dc66-b816-1859-8805",
+        "name": "Insignificant",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f48c-19de-c165-c406"
+       },
+       {
+        "id": "39fc-e4a6-b493-ecf5",
+        "name": "Ambush",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "3bc5-40b3-2dc8-4226"
+       },
+       {
+        "id": "022d-57fa-5f62-fc2a",
+        "name": "Vanguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f930-f7e6-2b9b-81d7"
+       },
+       {
+        "id": "7f19-e5eb-98e3-ba6c",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "0525-3271-83f8-085a",
+        "name": "Pack Tactics",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6896-76a1-9ae1-2030"
+       },
+       {
+        "id": "de04-3fd9-0a92-85e0",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "7645-0a15-dfef-8fc7",
+        "name": "Unruly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "910a-e5a9-c228-e1fc"
+       },
+       {
+        "id": "8ab3-2897-3307-42b8",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
@@ -12694,8 +12830,42 @@
     ],
     "selectionEntryGroups": [],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "5c89-513d-7130-5eb1",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "5c89-513d-7130-5eb1",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -12746,186 +12916,8 @@
       "value": 10
      }
     ],
-    "profiles": [
-     {
-      "id": "fd7b-d750-b039-ed61",
-      "name": "Longhorn Herd (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Pack Tactics, Strider (Forest), Bodyguard (Wildhorn Lord, Wildhorn Chieftain)"
-       }
-      ]
-     },
-     {
-      "id": "6aef-83ce-eeca-58ea",
-      "name": "Longhorn Herd (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "2"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "f71c-b85d-e48a-90ab",
-      "name": "Longhorn",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Wildhornspecies, Metal Armour"
-       }
-      ]
-     },
-     {
-      "id": "b603-c1be-0f84-7e54",
-      "name": "Longhorn Herd (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Wildhornspecies,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "3fdc-87b9-1386-1cd4",
-      "name": "Pack Tactics",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6896-76a1-9ae1-2030"
-     },
-     {
-      "id": "f9fb-d26d-47fe-60df",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "ecd3-665b-748c-928a",
-      "name": "Bodyguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1cd2-570c-ae3d-72ff"
-     },
-     {
-      "id": "ff08-436d-f841-a0c2",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "728c-a288-56d4-34f9",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "af7f-4b9f-deff-ca4b",
@@ -12964,8 +12956,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "fd7b-d750-b039-ed61",
+        "name": "Longhorn Herd (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Pack Tactics, Strider (Forest), Bodyguard (Wildhorn Lord, Wildhorn Chieftain)"
+         }
+        ]
+       },
+       {
+        "id": "6aef-83ce-eeca-58ea",
+        "name": "Longhorn Herd (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "2"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "f71c-b85d-e48a-90ab",
+        "name": "Longhorn",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Wildhornspecies, Metal Armour"
+         }
+        ]
+       },
+       {
+        "id": "b603-c1be-0f84-7e54",
+        "name": "Longhorn Herd (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Wildhornspecies,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "3fdc-87b9-1386-1cd4",
+        "name": "Pack Tactics",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6896-76a1-9ae1-2030"
+       },
+       {
+        "id": "f9fb-d26d-47fe-60df",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "ecd3-665b-748c-928a",
+        "name": "Bodyguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1cd2-570c-ae3d-72ff"
+       },
+       {
+        "id": "ff08-436d-f841-a0c2",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "728c-a288-56d4-34f9",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -13549,8 +13719,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "3517-5700-f446-ddd9",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "3517-5700-f446-ddd9",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -13651,207 +13855,8 @@
       "value": 25
      }
     ],
-    "profiles": [
-     {
-      "id": "4168-9b55-be27-4000",
-      "name": "Minotaurs (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Fearless, Strider (Forest), Frenzy, Unruly"
-       }
-      ]
-     },
-     {
-      "id": "45ce-cc5b-7fc8-6cf1",
-      "name": "Minotaurs (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "1"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "9f1b-07d1-df24-9c28",
-      "name": "Minotaur",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct, Fury, Impact Hits (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Minotaur, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "c969-f2c2-e321-eacc",
-      "name": "Minotaurs (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Minotaur,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "171c-b396-6e17-c726",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "7e86-e303-47d4-6f6a",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "8bc8-8668-ce6c-caa9",
-      "name": "Frenzy",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "3b14-58e5-3c19-fac2"
-     },
-     {
-      "id": "48a5-6527-531e-cc9b",
-      "name": "Unruly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "910a-e5a9-c228-e1fc"
-     },
-     {
-      "id": "cea0-090c-be0a-ac12",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "d7d7-7e67-992d-c053",
-      "name": "Fury",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "481c-0c06-eaa9-bad6"
-     },
-     {
-      "id": "4e2f-9fa3-c1ef-2776",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
-      "id": "0543-bc3f-76ee-911c",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "c966-bb5c-0cec-3dca",
@@ -13890,8 +13895,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "4168-9b55-be27-4000",
+        "name": "Minotaurs (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "6"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Fearless, Strider (Forest), Frenzy, Unruly"
+         }
+        ]
+       },
+       {
+        "id": "45ce-cc5b-7fc8-6cf1",
+        "name": "Minotaurs (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "1"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "9f1b-07d1-df24-9c28",
+        "name": "Minotaur",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct, Fury, Impact Hits (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Minotaur, Light Armour"
+         }
+        ]
+       },
+       {
+        "id": "c969-f2c2-e321-eacc",
+        "name": "Minotaurs (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Minotaur,\n\t\tLight Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "171c-b396-6e17-c726",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "7e86-e303-47d4-6f6a",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "8bc8-8668-ce6c-caa9",
+        "name": "Frenzy",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "3b14-58e5-3c19-fac2"
+       },
+       {
+        "id": "48a5-6527-531e-cc9b",
+        "name": "Unruly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "910a-e5a9-c228-e1fc"
+       },
+       {
+        "id": "cea0-090c-be0a-ac12",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "d7d7-7e67-992d-c053",
+        "name": "Fury",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "481c-0c06-eaa9-bad6"
+       },
+       {
+        "id": "4e2f-9fa3-c1ef-2776",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "0543-bc3f-76ee-911c",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -14456,8 +14660,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "b812-cd08-a303-7fef",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "b812-cd08-a303-7fef",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -14501,193 +14739,8 @@
       "value": 50
      }
     ],
-    "profiles": [
-     {
-      "id": "8bc2-4979-d9ef-3b17",
-      "name": "Centaurs (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "8"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "8"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Drunkard, Strider (Forest), Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "9441-8d71-cb25-7ec4",
-      "name": "Centaurs (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "1"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Shield"
-       }
-      ]
-     },
-     {
-      "id": "34ca-2013-4fe8-b13d",
-      "name": "Centaur",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Light Armour, Centauroid"
-       }
-      ]
-     },
-     {
-      "id": "5bd0-fee6-0c4c-d69c",
-      "name": "Centaurs (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "2"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Light Armour,\n\t\tCentauroid"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "76e9-a71e-eae9-5b04",
-      "name": "Drunkard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5f67-f77c-989b-bcec"
-     },
-     {
-      "id": "b955-9e5f-690a-15a7",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "211a-014e-1881-4b82",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "b245-279d-4bd7-8537",
-      "name": "Shield",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cfbb-118b-629b-24b9"
-     },
-     {
-      "id": "8fdc-2e44-3a4d-5bdb",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "93fa-7d54-b836-a32c",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "cf51-d113-ce32-748e",
@@ -14726,8 +14779,193 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "8bc2-4979-d9ef-3b17",
+        "name": "Centaurs (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "8"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "8"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Drunkard, Strider (Forest), Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "9441-8d71-cb25-7ec4",
+        "name": "Centaurs (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "1"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Shield"
+         }
+        ]
+       },
+       {
+        "id": "34ca-2013-4fe8-b13d",
+        "name": "Centaur",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Light Armour, Centauroid"
+         }
+        ]
+       },
+       {
+        "id": "5bd0-fee6-0c4c-d69c",
+        "name": "Centaurs (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "2"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Light Armour,\n\t\tCentauroid"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×50"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "76e9-a71e-eae9-5b04",
+        "name": "Drunkard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5f67-f77c-989b-bcec"
+       },
+       {
+        "id": "b955-9e5f-690a-15a7",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "211a-014e-1881-4b82",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "b245-279d-4bd7-8537",
+        "name": "Shield",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "8fdc-2e44-3a4d-5bdb",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "93fa-7d54-b836-a32c",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -15408,8 +15646,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "834f-1473-1370-9107",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "834f-1473-1370-9107",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -15512,302 +15784,8 @@
       "value": 10
      }
     ],
-    "profiles": [
-     {
-      "id": "b24f-783a-660e-e7a0",
-      "name": "Raiding Chariots (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Light Troops, Strider (Forest), Swiftstride, Exclusive (Raiding Chariots)"
-       }
-      ]
-     },
-     {
-      "id": "9787-f173-23bf-812e",
-      "name": "Raiding Chariots (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "4"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "10e9-248a-d93c-94ec",
-      "name": "Longhorn Crew (2)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Wildhornspecies, Metal Armour"
-       }
-      ]
-     },
-     {
-      "id": "e447-b8d6-04b8-37e1",
-      "name": "Grunter (2)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Devastating Charge (1 St, 1 AP)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Mount"
-       }
-      ]
-     },
-     {
-      "id": "ca8d-28e9-4252-641b",
-      "name": "Chassis",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": ""
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": ""
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (D6)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "dccc-d3cd-df8a-f29d",
-      "name": "Raiding Chariots (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Wildhornspecies,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "9d3c-0974-2996-2efb",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "55b8-24d7-fe12-c9d3",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "9d5d-5762-af32-e055",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "5c94-acc5-cd7b-42fa",
-      "name": "Exclusive",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a005-b547-c086-fbb3"
-     },
-     {
-      "id": "c1fa-e7d1-8e1b-5ebf",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "9b27-a523-f5ef-b0c0",
-      "name": "Devastating Charge",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e052-9518-2b65-26d1"
-     },
-     {
-      "id": "112d-b55d-f2a7-dad9",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
-      "id": "ac8c-982a-22e4-3334",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "46e0-6f4b-8014-259d",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "29db-9091-275f-34b5",
@@ -15846,10 +15824,354 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "b24f-783a-660e-e7a0",
+        "name": "Raiding Chariots (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Light Troops, Strider (Forest), Swiftstride, Exclusive (Raiding Chariots)"
+         }
+        ]
+       },
+       {
+        "id": "9787-f173-23bf-812e",
+        "name": "Raiding Chariots (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "4"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "10e9-248a-d93c-94ec",
+        "name": "Longhorn Crew (2)",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Wildhornspecies, Metal Armour"
+         }
+        ]
+       },
+       {
+        "id": "ca8d-28e9-4252-641b",
+        "name": "Chassis",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": ""
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": ""
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Impact Hits (D6)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Construct"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "9d3c-0974-2996-2efb",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "55b8-24d7-fe12-c9d3",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "9d5d-5762-af32-e055",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "5c94-acc5-cd7b-42fa",
+        "name": "Exclusive",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a005-b547-c086-fbb3"
+       },
+       {
+        "id": "c1fa-e7d1-8e1b-5ebf",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "9b27-a523-f5ef-b0c0",
+        "name": "Devastating Charge",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e052-9518-2b65-26d1"
+       },
+       {
+        "id": "112d-b55d-f2a7-dad9",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "ac8c-982a-22e4-3334",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "7f70-d766-d546-dc4a",
+        "name": "Grunter (2)",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "00e5-b308-69f0-8f40",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "c301-ae85-d7f6-2e89",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "e447-b8d6-04b8-37e1",
+          "name": "Grunter (2)",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "1"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "3"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "4"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "1"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "2"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": "Devastating Charge (1 St, 1 AP)"
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Mount"
+           }
+          ]
+         },
+         {
+          "id": "dccc-d3cd-df8a-f29d",
+          "name": "Raiding Chariots (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "4"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Wildhornspecies,\n\t\tMetal Armour"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "50×100"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Common"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "46e0-6f4b-8014-259d",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -15858,8 +16180,42 @@
     ],
     "selectionEntryGroups": [],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "7cc7-7c50-7ddf-f766",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "7cc7-7c50-7ddf-f766",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -15903,186 +16259,8 @@
       "value": 27
      }
     ],
-    "profiles": [
-     {
-      "id": "4706-a0bb-8d9a-7adc",
-      "name": "Razortusk Herd (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "7"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Strider (Forest), Swiftstride, Unruly"
-       }
-      ]
-     },
-     {
-      "id": "8423-a5d7-66e7-2332",
-      "name": "Razortusk Herd (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "5"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "298a-135b-fe17-9670",
-      "name": "Razortusk",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "4"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Devastating Charge (1 St, 1 AP)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Beast"
-       }
-      ]
-     },
-     {
-      "id": "beeb-4d0d-a0dd-a30a",
-      "name": "Razortusk Herd (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Beast"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "b173-d29d-dfa7-cc6e",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "bcda-359a-0ee5-5c7f",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "4c2c-c272-55f3-213a",
-      "name": "Unruly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "910a-e5a9-c228-e1fc"
-     },
-     {
-      "id": "6730-443c-8426-1621",
-      "name": "Devastating Charge",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e052-9518-2b65-26d1"
-     },
-     {
-      "id": "5175-9a49-c1c2-9737",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "4086-81bf-1a21-93b4",
@@ -16121,8 +16299,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "4706-a0bb-8d9a-7adc",
+        "name": "Razortusk Herd (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "7"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Strider (Forest), Swiftstride, Unruly"
+         }
+        ]
+       },
+       {
+        "id": "8423-a5d7-66e7-2332",
+        "name": "Razortusk Herd (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "5"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "298a-135b-fe17-9670",
+        "name": "Razortusk",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "4"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Devastating Charge (1 St, 1 AP)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Beast"
+         }
+        ]
+       },
+       {
+        "id": "beeb-4d0d-a0dd-a30a",
+        "name": "Razortusk Herd (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Beast"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×50"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "b173-d29d-dfa7-cc6e",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "bcda-359a-0ee5-5c7f",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "4c2c-c272-55f3-213a",
+        "name": "Unruly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "910a-e5a9-c228-e1fc"
+       },
+       {
+        "id": "6730-443c-8426-1621",
+        "name": "Devastating Charge",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e052-9518-2b65-26d1"
+       },
+       {
+        "id": "5175-9a49-c1c2-9737",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
@@ -16347,50 +16703,6 @@
       ]
      },
      {
-      "id": "a0df-aa1a-f763-3314",
-      "name": "Razortusk",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "4"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Devastating Charge (1 St, 1 AP)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Mount"
-       }
-      ]
-     },
-     {
       "id": "285a-b7a1-75f1-567e",
       "name": "Chassis",
       "typeId": "462e-145c-42af-7edc",
@@ -16431,35 +16743,6 @@
         "name": "Tags",
         "typeId": "6079-9ce5-90ed-8c32",
         "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "2cb8-6d41-a993-dedc",
-      "name": "Razortusk Chariot (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Wildhornspecies,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
        }
       ]
      }
@@ -16527,20 +16810,177 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "9544-ab66-19e5-12cb",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "b8eb-6535-d7b4-6014",
+      "name": "Razortusk",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "4fe6-7e31-f06c-6d77",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "ace7-b462-220c-3e3e",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "a0df-aa1a-f763-3314",
+        "name": "Razortusk",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "4"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Devastating Charge (1 St, 1 AP)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Mount"
+         }
+        ]
+       },
+       {
+        "id": "2cb8-6d41-a993-dedc",
+        "name": "Razortusk Chariot (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Wildhornspecies,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "9544-ab66-19e5-12cb",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "8382-bb99-1073-0cf2",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "8382-bb99-1073-0cf2",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -16729,7 +17169,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -16809,8 +17249,42 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "4ef7-b2ff-515e-3d82",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "4ef7-b2ff-515e-3d82",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -16854,221 +17328,8 @@
       "value": 110
      }
     ],
-    "profiles": [
-     {
-      "id": "c654-7ea2-ca48-d2a1",
-      "name": "Gargoyles (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "9"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "9"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Skirmisher, Fly, Strider (Forest), Light Troops, Swiftstride, Hard Target (1), Scout"
-       }
-      ]
-     },
-     {
-      "id": "ab7f-9d41-64b7-535f",
-      "name": "Gargoyles (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "2e80-5ee9-5714-b8e9",
-      "name": "Gargoyle",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Primal Instinct, Devastating Charge (Distracting)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Beast"
-       }
-      ]
-     },
-     {
-      "id": "3c52-409c-6f27-003f",
-      "name": "Gargoyles (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Beast"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "9159-d43a-4a67-7684",
-      "name": "Skirmisher",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e6d7-6601-01c8-5b11"
-     },
-     {
-      "id": "79e9-2dd1-15db-b802",
-      "name": "Fly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1c37-18a9-53c1-2636"
-     },
-     {
-      "id": "30d2-a848-cf37-2a60",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "bfdd-b79d-f42c-f038",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "a40b-35bf-9a87-f1c0",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "d0ca-f31d-57c8-00e5",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "70ea-5b34-5fab-ee64",
-      "name": "Scout",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dc62-e346-c5c3-de7c"
-     },
-     {
-      "id": "ead2-93e9-8c85-2cf6",
-      "name": "Primal Instinct",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bac1-01cb-764e-6715"
-     },
-     {
-      "id": "20d4-e220-a98f-ec6c",
-      "name": "Devastating Charge",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e052-9518-2b65-26d1"
-     },
-     {
-      "id": "c297-1d8e-482f-da4c",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "c692-1934-ea08-8d49",
@@ -17107,8 +17368,221 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "c654-7ea2-ca48-d2a1",
+        "name": "Gargoyles (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "9"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "9"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Skirmisher, Fly, Strider (Forest), Light Troops, Swiftstride, Hard Target (1), Scout"
+         }
+        ]
+       },
+       {
+        "id": "ab7f-9d41-64b7-535f",
+        "name": "Gargoyles (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "2e80-5ee9-5714-b8e9",
+        "name": "Gargoyle",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Primal Instinct, Devastating Charge (Distracting)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Beast"
+         }
+        ]
+       },
+       {
+        "id": "3c52-409c-6f27-003f",
+        "name": "Gargoyles (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Beast"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "9159-d43a-4a67-7684",
+        "name": "Skirmisher",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e6d7-6601-01c8-5b11"
+       },
+       {
+        "id": "79e9-2dd1-15db-b802",
+        "name": "Fly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1c37-18a9-53c1-2636"
+       },
+       {
+        "id": "30d2-a848-cf37-2a60",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "bfdd-b79d-f42c-f038",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "a40b-35bf-9a87-f1c0",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "d0ca-f31d-57c8-00e5",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "70ea-5b34-5fab-ee64",
+        "name": "Scout",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dc62-e346-c5c3-de7c"
+       },
+       {
+        "id": "ead2-93e9-8c85-2cf6",
+        "name": "Primal Instinct",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bac1-01cb-764e-6715"
+       },
+       {
+        "id": "20d4-e220-a98f-ec6c",
+        "name": "Devastating Charge",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e052-9518-2b65-26d1"
+       },
+       {
+        "id": "c297-1d8e-482f-da4c",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
@@ -19068,7 +19542,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -19127,8 +19601,43 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
-    "constraints": [],
-    "modifiers": [],
+    "constraints": [
+     {
+      "id": "2dbc-1323-b2f3-9fe4",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "2dbc-1323-b2f3-9fe4",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     }
+    ],
     "collective": true
    },
    {
@@ -19362,7 +19871,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -19428,8 +19937,43 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
-    "constraints": [],
-    "modifiers": [],
+    "constraints": [
+     {
+      "id": "df44-478b-5b51-bbee",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "df44-478b-5b51-bbee",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     }
+    ],
     "collective": true
    },
    {

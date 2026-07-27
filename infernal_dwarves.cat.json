@@ -2620,7 +2620,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -5178,8 +5178,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "bc06-2427-a16d-781b",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "bc06-2427-a16d-781b",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -5413,7 +5447,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -6847,8 +6881,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "80f5-1b4a-28df-fd09",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "80f5-1b4a-28df-fd09",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -7063,7 +7131,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -7805,8 +7873,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "bedd-ebd9-799e-a337",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "bedd-ebd9-799e-a337",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -9087,79 +9189,6 @@
         "$text": "Dwarf, Metal Armour"
        }
       ]
-     },
-     {
-      "id": "086e-915a-cfd5-979e",
-      "name": "Lamassu",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks, Stomp Attack (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Mount"
-       }
-      ]
-     },
-     {
-      "id": "b483-d2e0-6a32-6d36",
-      "name": "Lamassu Scholar (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Extraordinary"
-       }
-      ]
      }
     ],
     "infoLinks": [
@@ -9227,35 +9256,158 @@
       "targetId": "27da-1759-8c76-baa6"
      },
      {
-      "id": "eaf2-64fe-0a7d-2c9c",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "ee16-fbf5-af9d-16d8",
-      "name": "Stomp Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ca2f-c97f-04de-88bd"
-     },
-     {
       "id": "5d42-6ad4-5b4d-5818",
       "name": "Hand Weapon",
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "b754-a8f3-5ecb-2c93",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "f634-3149-1c49-b227",
+      "name": "Lamassu",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "855a-feee-7196-a848",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "252a-9575-cdd4-43e3",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "086e-915a-cfd5-979e",
+        "name": "Lamassu",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks, Stomp Attack (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Mount"
+         }
+        ]
+       },
+       {
+        "id": "b483-d2e0-6a32-6d36",
+        "name": "Lamassu Scholar (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×50"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Extraordinary"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "eaf2-64fe-0a7d-2c9c",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "ee16-fbf5-af9d-16d8",
+        "name": "Stomp Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ca2f-c97f-04de-88bd"
+       },
+       {
+        "id": "b754-a8f3-5ecb-2c93",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [
      {
       "id": "3c8a-4542-a944-451a",
@@ -9505,7 +9657,7 @@
       ],
       "entryLinks": [],
       "selectionEntryGroups": [],
-      "sortIndex": 1,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -9531,7 +9683,7 @@
       ],
       "modifiers": [],
       "collapsible": true,
-      "sortIndex": 2,
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -10387,50 +10539,6 @@
       ]
      },
      {
-      "id": "e618-ea3c-189b-fd5c",
-      "name": "Winged Kadim (2)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Flaming Attacks, Magical Attacks, Volcanic Embrace (2)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Kadim, Metal Armour, Mount"
-       }
-      ]
-     },
-     {
       "id": "d0bb-7ff2-d71f-2db2",
       "name": "Nezibrutash",
       "typeId": "462e-145c-42af-7edc",
@@ -10471,35 +10579,6 @@
         "name": "Tags",
         "typeId": "6079-9ce5-90ed-8c32",
         "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "e465-5ccb-4356-a999",
-      "name": "Ibat-Sokavum, the Flying Charioteer (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "60×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Legendary"
        }
       ]
      }
@@ -10569,32 +10648,11 @@
       "targetId": "32e2-c021-fcef-8f6f"
      },
      {
-      "id": "2948-08e6-b3e6-2083",
-      "name": "Flaming Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "7367-617a-14c1-ac6b"
-     },
-     {
-      "id": "da56-62d2-1e8c-1ed0",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
       "id": "02c9-394e-41a0-4806",
       "name": "First Strike",
       "hidden": false,
       "type": "profile",
       "targetId": "ce0e-c1b2-a268-c6da"
-     },
-     {
-      "id": "cad7-452c-bc3c-cafb",
-      "name": "Volcanic Embrace",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a4e8-b1cc-56d4-0bb5"
      },
      {
       "id": "1539-16cb-500d-4f97",
@@ -10609,16 +10667,160 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "a7b2-2b8d-c474-4efe",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "f9d4-07af-0a77-804b",
+      "name": "Winged Kadim (2)",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "e8d2-efdb-e884-bc5c",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "024b-410b-6d6b-bc21",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "e618-ea3c-189b-fd5c",
+        "name": "Winged Kadim (2)",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Flaming Attacks, Magical Attacks, Volcanic Embrace (2)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Kadim, Metal Armour, Mount"
+         }
+        ]
+       },
+       {
+        "id": "e465-5ccb-4356-a999",
+        "name": "Ibat-Sokavum, the Flying Charioteer (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "60×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Legendary"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "2948-08e6-b3e6-2083",
+        "name": "Flaming Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7367-617a-14c1-ac6b"
+       },
+       {
+        "id": "da56-62d2-1e8c-1ed0",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "cad7-452c-bc3c-cafb",
+        "name": "Volcanic Embrace",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a4e8-b1cc-56d4-0bb5"
+       },
+       {
+        "id": "a7b2-2b8d-c474-4efe",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [],
     "entryLinks": [],
     "constraints": [
@@ -10694,179 +10896,8 @@
       "value": 90
      }
     ],
-    "profiles": [
-     {
-      "id": "d96b-1298-d439-face",
-      "name": "Infernal Warriors (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "3"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "9"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Commanding Presence (6”, Insignificant), First Strike (Stubborn)"
-       }
-      ]
-     },
-     {
-      "id": "cd40-5b01-5b7f-9900",
-      "name": "Infernal Warriors (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Infernal Armour"
-       }
-      ]
-     },
-     {
-      "id": "4388-7c5d-db53-788d",
-      "name": "Infernal Warrior",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Dwarf, Metal Armour"
-       }
-      ]
-     },
-     {
-      "id": "e1c0-d2e1-1063-515f",
-      "name": "Infernal Warriors (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "6d5c-5de9-1532-7a19",
-      "name": "Commanding Presence",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "d374-5567-bff4-5ce0"
-     },
-     {
-      "id": "310a-d2d9-8712-072d",
-      "name": "First Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ce0e-c1b2-a268-c6da"
-     },
-     {
-      "id": "fd35-d690-3714-dfa8",
-      "name": "Infernal Armour",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a18d-888e-f8fb-bc49"
-     },
-     {
-      "id": "c5c0-7a94-8c04-e867",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "d754-c987-99b7-12e9",
@@ -10905,8 +10936,179 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "d96b-1298-d439-face",
+        "name": "Infernal Warriors (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "3"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "9"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Commanding Presence (6”, Insignificant), First Strike (Stubborn)"
+         }
+        ]
+       },
+       {
+        "id": "cd40-5b01-5b7f-9900",
+        "name": "Infernal Warriors (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Infernal Armour"
+         }
+        ]
+       },
+       {
+        "id": "4388-7c5d-db53-788d",
+        "name": "Infernal Warrior",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Dwarf, Metal Armour"
+         }
+        ]
+       },
+       {
+        "id": "e1c0-d2e1-1063-515f",
+        "name": "Infernal Warriors (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "6d5c-5de9-1532-7a19",
+        "name": "Commanding Presence",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "d374-5567-bff4-5ce0"
+       },
+       {
+        "id": "310a-d2d9-8712-072d",
+        "name": "First Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "fd35-d690-3714-dfa8",
+        "name": "Infernal Armour",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a18d-888e-f8fb-bc49"
+       },
+       {
+        "id": "c5c0-7a94-8c04-e867",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -11283,186 +11485,8 @@
       "value": 35
      }
     ],
-    "profiles": [
-     {
-      "id": "b1a9-d344-3c3e-59dc",
-      "name": "Citadel Guard (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "3"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "9"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Commanding Presence (6”, Insignificant), First Strike (Stubborn)"
-       }
-      ]
-     },
-     {
-      "id": "2f24-500a-966e-c44f",
-      "name": "Citadel Guard (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Infernal Armour, Shield"
-       }
-      ]
-     },
-     {
-      "id": "eeec-d525-e231-71cb",
-      "name": "Citadel Guard",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Dwarf, Metal Armour"
-       }
-      ]
-     },
-     {
-      "id": "96a1-6657-32c0-1ef7",
-      "name": "Citadel Guard (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "61f9-d0e6-4cff-4293",
-      "name": "Commanding Presence",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "d374-5567-bff4-5ce0"
-     },
-     {
-      "id": "b5ab-5d35-8eb8-46bc",
-      "name": "First Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ce0e-c1b2-a268-c6da"
-     },
-     {
-      "id": "860a-1617-b457-953b",
-      "name": "Infernal Armour",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a18d-888e-f8fb-bc49"
-     },
-     {
-      "id": "4c1e-45f9-5730-d2a2",
-      "name": "Shield",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cfbb-118b-629b-24b9"
-     },
-     {
-      "id": "9d6a-b4fe-df84-7788",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "f65f-1509-7004-a8c9",
@@ -11501,8 +11525,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "b1a9-d344-3c3e-59dc",
+        "name": "Citadel Guard (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "3"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "9"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Commanding Presence (6”, Insignificant), First Strike (Stubborn)"
+         }
+        ]
+       },
+       {
+        "id": "2f24-500a-966e-c44f",
+        "name": "Citadel Guard (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Infernal Armour, Shield"
+         }
+        ]
+       },
+       {
+        "id": "eeec-d525-e231-71cb",
+        "name": "Citadel Guard",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Dwarf, Metal Armour"
+         }
+        ]
+       },
+       {
+        "id": "96a1-6657-32c0-1ef7",
+        "name": "Citadel Guard (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "61f9-d0e6-4cff-4293",
+        "name": "Commanding Presence",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "d374-5567-bff4-5ce0"
+       },
+       {
+        "id": "b5ab-5d35-8eb8-46bc",
+        "name": "First Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "860a-1617-b457-953b",
+        "name": "Infernal Armour",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a18d-888e-f8fb-bc49"
+       },
+       {
+        "id": "4c1e-45f9-5730-d2a2",
+        "name": "Shield",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "9d6a-b4fe-df84-7788",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -11922,186 +12124,8 @@
       "value": 50
      }
     ],
-    "profiles": [
-     {
-      "id": "979a-6dfe-f883-2759",
-      "name": "Vassal Levies (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "4"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Exclusive (Insignificant, Vassal Governor), Insignificant"
-       }
-      ]
-     },
-     {
-      "id": "05bf-8c27-a5cc-e42d",
-      "name": "Vassal Levies (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "1"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Weakness (Flaming Attacks)"
-       }
-      ]
-     },
-     {
-      "id": "fd83-55b3-3eb1-3525",
-      "name": "Vassal Levy",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Oil Flasks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Light Armour, Vassal"
-       }
-      ]
-     },
-     {
-      "id": "e675-f3c1-512f-5d7f",
-      "name": "Vassal Levies (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Light Armour,\n\t\tVassal"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "e79e-9102-815a-26c3",
-      "name": "Exclusive",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a005-b547-c086-fbb3"
-     },
-     {
-      "id": "60ac-8517-a191-4f6a",
-      "name": "Insignificant",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f48c-19de-c165-c406"
-     },
-     {
-      "id": "3c64-22c4-9a61-55b2",
-      "name": "Weakness",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "3262-08b4-b3b8-391e"
-     },
-     {
-      "id": "9724-8c92-d87f-3a17",
-      "name": "Oil Flasks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b63b-f3a0-26e9-9f66"
-     },
-     {
-      "id": "fe9e-14ae-cca5-6a67",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "bc10-d465-3fbb-9957",
@@ -12140,8 +12164,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "979a-6dfe-f883-2759",
+        "name": "Vassal Levies (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "4"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Exclusive (Insignificant, Vassal Governor), Insignificant"
+         }
+        ]
+       },
+       {
+        "id": "05bf-8c27-a5cc-e42d",
+        "name": "Vassal Levies (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "1"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Weakness (Flaming Attacks)"
+         }
+        ]
+       },
+       {
+        "id": "fd83-55b3-3eb1-3525",
+        "name": "Vassal Levy",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Oil Flasks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Light Armour, Vassal"
+         }
+        ]
+       },
+       {
+        "id": "e675-f3c1-512f-5d7f",
+        "name": "Vassal Levies (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Light Armour,\n\t\tVassal"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "e79e-9102-815a-26c3",
+        "name": "Exclusive",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a005-b547-c086-fbb3"
+       },
+       {
+        "id": "60ac-8517-a191-4f6a",
+        "name": "Insignificant",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f48c-19de-c165-c406"
+       },
+       {
+        "id": "3c64-22c4-9a61-55b2",
+        "name": "Weakness",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "3262-08b4-b3b8-391e"
+       },
+       {
+        "id": "9724-8c92-d87f-3a17",
+        "name": "Oil Flasks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b63b-f3a0-26e9-9f66"
+       },
+       {
+        "id": "fe9e-14ae-cca5-6a67",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -12622,193 +12824,8 @@
       "value": 30
      }
     ],
-    "profiles": [
-     {
-      "id": "d76c-c338-0532-1fff",
-      "name": "Shackled Slaves (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "4"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Chained Together, Insignificant, Solitary, Unruly, Unstable"
-       }
-      ]
-     },
-     {
-      "id": "0eca-df65-0d61-9cc9",
-      "name": "Shackled Slaves (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "2"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "b732-fa56-612b-babe",
-      "name": "Shackled Slave",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "1"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Slave"
-       }
-      ]
-     },
-     {
-      "id": "0a76-ebf8-5a1d-f838",
-      "name": "Shackled Slaves (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Slave"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "0e6a-cca6-6e16-582e",
-      "name": "Chained Together",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a5dd-659a-b8bf-2497"
-     },
-     {
-      "id": "984b-5683-65fe-83ba",
-      "name": "Insignificant",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f48c-19de-c165-c406"
-     },
-     {
-      "id": "c741-eb4b-5c5d-d7f4",
-      "name": "Solitary",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8793-b53c-382d-3a4d"
-     },
-     {
-      "id": "0560-e968-6faa-388a",
-      "name": "Unruly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "910a-e5a9-c228-e1fc"
-     },
-     {
-      "id": "bac3-137a-1eaf-8f47",
-      "name": "Unstable",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27a0-dd7f-eb46-2ae8"
-     },
-     {
-      "id": "7539-8560-59e3-544f",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "df8b-7912-5256-cb32",
@@ -12847,8 +12864,193 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "d76c-c338-0532-1fff",
+        "name": "Shackled Slaves (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "4"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Chained Together, Insignificant, Solitary, Unruly, Unstable"
+         }
+        ]
+       },
+       {
+        "id": "0eca-df65-0d61-9cc9",
+        "name": "Shackled Slaves (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "2"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "b732-fa56-612b-babe",
+        "name": "Shackled Slave",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "1"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Slave"
+         }
+        ]
+       },
+       {
+        "id": "0a76-ebf8-5a1d-f838",
+        "name": "Shackled Slaves (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Slave"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "0e6a-cca6-6e16-582e",
+        "name": "Chained Together",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a5dd-659a-b8bf-2497"
+       },
+       {
+        "id": "984b-5683-65fe-83ba",
+        "name": "Insignificant",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f48c-19de-c165-c406"
+       },
+       {
+        "id": "c741-eb4b-5c5d-d7f4",
+        "name": "Solitary",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8793-b53c-382d-3a4d"
+       },
+       {
+        "id": "0560-e968-6faa-388a",
+        "name": "Unruly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "910a-e5a9-c228-e1fc"
+       },
+       {
+        "id": "bac3-137a-1eaf-8f47",
+        "name": "Unstable",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "7539-8560-59e3-544f",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -13047,8 +13249,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "b4d9-eb7d-b731-6429",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "b4d9-eb7d-b731-6429",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -13099,207 +13335,8 @@
       "value": 5
      }
     ],
-    "profiles": [
-     {
-      "id": "b5a8-d74e-0b21-079b",
-      "name": "Immortals (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "3"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "9"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Bodyguard (General, Overlord, Vizier), Commanding Presence (6”, Insignificant), Disciplined, First Strike (Stubborn)"
-       }
-      ]
-     },
-     {
-      "id": "60ff-da38-d898-113f",
-      "name": "Immortals (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "5"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Defy Death, Infernal Armour, Shield"
-       }
-      ]
-     },
-     {
-      "id": "facb-9b25-a3fb-670e",
-      "name": "Immortal",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "5"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Dwarf, Metal Armour"
-       }
-      ]
-     },
-     {
-      "id": "846f-c562-55f3-0141",
-      "name": "Immortals (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "6e7e-e75e-df50-ad15",
-      "name": "Bodyguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1cd2-570c-ae3d-72ff"
-     },
-     {
-      "id": "2235-b4b6-7a49-df5a",
-      "name": "Commanding Presence",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "d374-5567-bff4-5ce0"
-     },
-     {
-      "id": "75c9-e16a-8c88-9486",
-      "name": "Disciplined",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4d3f-19f0-b319-2c54"
-     },
-     {
-      "id": "5c24-7763-9880-68c4",
-      "name": "First Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ce0e-c1b2-a268-c6da"
-     },
-     {
-      "id": "50df-eec9-baee-2837",
-      "name": "Defy Death",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ec6c-b5b1-780f-f68b"
-     },
-     {
-      "id": "c690-6264-9102-f924",
-      "name": "Infernal Armour",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a18d-888e-f8fb-bc49"
-     },
-     {
-      "id": "1677-0917-f172-4629",
-      "name": "Shield",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cfbb-118b-629b-24b9"
-     },
-     {
-      "id": "0b62-7d22-5286-c355",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "4e89-f76a-d0ff-a508",
@@ -13338,8 +13375,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "b5a8-d74e-0b21-079b",
+        "name": "Immortals (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "3"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "9"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Bodyguard (General, Overlord, Vizier), Commanding Presence (6”, Insignificant), Disciplined, First Strike (Stubborn)"
+         }
+        ]
+       },
+       {
+        "id": "60ff-da38-d898-113f",
+        "name": "Immortals (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "5"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Defy Death, Infernal Armour, Shield"
+         }
+        ]
+       },
+       {
+        "id": "facb-9b25-a3fb-670e",
+        "name": "Immortal",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "5"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": ""
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Dwarf, Metal Armour"
+         }
+        ]
+       },
+       {
+        "id": "846f-c562-55f3-0141",
+        "name": "Immortals (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "6e7e-e75e-df50-ad15",
+        "name": "Bodyguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1cd2-570c-ae3d-72ff"
+       },
+       {
+        "id": "2235-b4b6-7a49-df5a",
+        "name": "Commanding Presence",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "d374-5567-bff4-5ce0"
+       },
+       {
+        "id": "75c9-e16a-8c88-9486",
+        "name": "Disciplined",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4d3f-19f0-b319-2c54"
+       },
+       {
+        "id": "5c24-7763-9880-68c4",
+        "name": "First Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "50df-eec9-baee-2837",
+        "name": "Defy Death",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ec6c-b5b1-780f-f68b"
+       },
+       {
+        "id": "c690-6264-9102-f924",
+        "name": "Infernal Armour",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a18d-888e-f8fb-bc49"
+       },
+       {
+        "id": "1677-0917-f172-4629",
+        "name": "Shield",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "0b62-7d22-5286-c355",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -13641,8 +13877,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "4e51-55d7-fa52-6ca0",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "4e51-55d7-fa52-6ca0",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -13686,207 +13956,8 @@
       "value": 50
      }
     ],
-    "profiles": [
-     {
-      "id": "b3ba-6f34-fe68-a2bb",
-      "name": "Disciples of Lugar (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "4"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "9"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Commanding Presence (6”, Insignificant), First Strike (Stubborn), Ghost Step, Theocratic Litigators"
-       }
-      ]
-     },
-     {
-      "id": "c7e5-dd49-deaf-61f6",
-      "name": "Disciples of Lugar (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Aegis (3+, against Flaming Attacks), Aegis (5+)"
-       }
-      ]
-     },
-     {
-      "id": "420c-4992-2d63-bf50",
-      "name": "Disciple of Lugar",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Flaming Attacks, Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Dwarf"
-       }
-      ]
-     },
-     {
-      "id": "dec7-bafb-b186-c2a3",
-      "name": "Disciples of Lugar (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "20×20"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Rare"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "6599-d2b9-a0ea-780f",
-      "name": "Commanding Presence",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "d374-5567-bff4-5ce0"
-     },
-     {
-      "id": "fe40-44c0-b464-9897",
-      "name": "First Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ce0e-c1b2-a268-c6da"
-     },
-     {
-      "id": "bb6c-d9ea-df86-3091",
-      "name": "Ghost Step",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6be3-2900-77b3-79c2"
-     },
-     {
-      "id": "65f1-8599-c84c-6ea9",
-      "name": "Theocratic Litigators",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "d7f9-aa6f-1c5d-c146"
-     },
-     {
-      "id": "f1df-d3e9-d734-84ea",
-      "name": "Aegis",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8bcb-afaf-0f53-3431"
-     },
-     {
-      "id": "b12d-b460-05ad-2b76",
-      "name": "Flaming Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "7367-617a-14c1-ac6b"
-     },
-     {
-      "id": "edf1-8c53-3662-2220",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "3ccf-2e03-1183-088d",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "bdf9-966f-e9e1-2556",
@@ -13925,8 +13996,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "b3ba-6f34-fe68-a2bb",
+        "name": "Disciples of Lugar (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "4"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "9"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Commanding Presence (6”, Insignificant), First Strike (Stubborn), Ghost Step, Theocratic Litigators"
+         }
+        ]
+       },
+       {
+        "id": "c7e5-dd49-deaf-61f6",
+        "name": "Disciples of Lugar (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Aegis (3+, against Flaming Attacks), Aegis (5+)"
+         }
+        ]
+       },
+       {
+        "id": "420c-4992-2d63-bf50",
+        "name": "Disciple of Lugar",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Flaming Attacks, Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Dwarf"
+         }
+        ]
+       },
+       {
+        "id": "dec7-bafb-b186-c2a3",
+        "name": "Disciples of Lugar (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "20×20"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Rare"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "6599-d2b9-a0ea-780f",
+        "name": "Commanding Presence",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "d374-5567-bff4-5ce0"
+       },
+       {
+        "id": "fe40-44c0-b464-9897",
+        "name": "First Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "bb6c-d9ea-df86-3091",
+        "name": "Ghost Step",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6be3-2900-77b3-79c2"
+       },
+       {
+        "id": "65f1-8599-c84c-6ea9",
+        "name": "Theocratic Litigators",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "d7f9-aa6f-1c5d-c146"
+       },
+       {
+        "id": "f1df-d3e9-d734-84ea",
+        "name": "Aegis",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8bcb-afaf-0f53-3431"
+       },
+       {
+        "id": "b12d-b460-05ad-2b76",
+        "name": "Flaming Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7367-617a-14c1-ac6b"
+       },
+       {
+        "id": "edf1-8c53-3662-2220",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "3ccf-2e03-1183-088d",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -14271,228 +14541,8 @@
       "value": 70
      }
     ],
-    "profiles": [
-     {
-      "id": "05e8-e217-2af3-88d3",
-      "name": "Kadim Incarnates (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "6"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Exclusive (Supernal), Fearless, Ghost Step, Insignificant, Supernal, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "4064-6a2d-a49f-e76a",
-      "name": "Kadim Incarnates (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "2"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Aegis (3+, against Flaming Attacks), Aegis (5+)"
-       }
-      ]
-     },
-     {
-      "id": "a6b2-07f6-d7d5-dd65",
-      "name": "Kadim Incarnate",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Flaming Attacks, Magical Attacks, Volcanic Embrace (2)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Kadim, Metal Armour"
-       }
-      ]
-     },
-     {
-      "id": "8127-4776-a599-d1d9",
-      "name": "Kadim Incarnates (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Kadim,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "5d0c-65dd-a0d2-4d11",
-      "name": "Exclusive",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a005-b547-c086-fbb3"
-     },
-     {
-      "id": "60ed-fffb-a566-1f19",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "25a6-b9ec-b422-19d3",
-      "name": "Ghost Step",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "6be3-2900-77b3-79c2"
-     },
-     {
-      "id": "8675-06f4-8eee-5284",
-      "name": "Insignificant",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f48c-19de-c165-c406"
-     },
-     {
-      "id": "13ca-8e85-aabd-e685",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "4a8e-344a-c74c-9430",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "d4dd-b053-0bac-bca9",
-      "name": "Aegis",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8bcb-afaf-0f53-3431"
-     },
-     {
-      "id": "5419-3b39-b6eb-db75",
-      "name": "Flaming Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "7367-617a-14c1-ac6b"
-     },
-     {
-      "id": "6a45-fd90-91f7-b204",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "9704-5fb1-b6f9-431d",
-      "name": "Volcanic Embrace",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a4e8-b1cc-56d4-0bb5"
-     },
-     {
-      "id": "c82a-4169-cd16-fc55",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "7e21-4e0c-4bf0-cc46",
@@ -14531,8 +14581,228 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "05e8-e217-2af3-88d3",
+        "name": "Kadim Incarnates (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "6"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "6"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Exclusive (Supernal), Fearless, Ghost Step, Insignificant, Supernal, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "4064-6a2d-a49f-e76a",
+        "name": "Kadim Incarnates (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "2"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Aegis (3+, against Flaming Attacks), Aegis (5+)"
+         }
+        ]
+       },
+       {
+        "id": "a6b2-07f6-d7d5-dd65",
+        "name": "Kadim Incarnate",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Flaming Attacks, Magical Attacks, Volcanic Embrace (2)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Kadim, Metal Armour"
+         }
+        ]
+       },
+       {
+        "id": "8127-4776-a599-d1d9",
+        "name": "Kadim Incarnates (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Kadim,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "5d0c-65dd-a0d2-4d11",
+        "name": "Exclusive",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a005-b547-c086-fbb3"
+       },
+       {
+        "id": "60ed-fffb-a566-1f19",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "25a6-b9ec-b422-19d3",
+        "name": "Ghost Step",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "6be3-2900-77b3-79c2"
+       },
+       {
+        "id": "8675-06f4-8eee-5284",
+        "name": "Insignificant",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f48c-19de-c165-c406"
+       },
+       {
+        "id": "13ca-8e85-aabd-e685",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "4a8e-344a-c74c-9430",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "d4dd-b053-0bac-bca9",
+        "name": "Aegis",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8bcb-afaf-0f53-3431"
+       },
+       {
+        "id": "5419-3b39-b6eb-db75",
+        "name": "Flaming Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7367-617a-14c1-ac6b"
+       },
+       {
+        "id": "6a45-fd90-91f7-b204",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "9704-5fb1-b6f9-431d",
+        "name": "Volcanic Embrace",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a4e8-b1cc-56d4-0bb5"
+       },
+       {
+        "id": "c82a-4169-cd16-fc55",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
@@ -14814,50 +15084,6 @@
       ]
      },
      {
-      "id": "ba23-c070-9b1b-3d1f",
-      "name": "Kadim Beast",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Flaming Attacks, Magical Attacks, Volcanic Embrace (2)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Kadim, Metal Armour, Mount"
-       }
-      ]
-     },
-     {
       "id": "4636-4ade-9cf3-545d",
       "name": "Chassis",
       "typeId": "462e-145c-42af-7edc",
@@ -14900,35 +15126,6 @@
         "$text": "Construct"
        }
       ]
-     },
-     {
-      "id": "3d28-4f62-1c82-b2ce",
-      "name": "Kadim Chariot (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
      }
     ],
     "infoLinks": [
@@ -14968,27 +15165,6 @@
       "targetId": "8bcb-afaf-0f53-3431"
      },
      {
-      "id": "236c-ded1-6919-3032",
-      "name": "Flaming Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "7367-617a-14c1-ac6b"
-     },
-     {
-      "id": "54e9-5eff-1612-6cd3",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "05f6-581c-077a-668f",
-      "name": "Volcanic Embrace",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a4e8-b1cc-56d4-0bb5"
-     },
-     {
       "id": "d81e-facd-49af-32e1",
       "name": "Impact Hits",
       "hidden": false,
@@ -15001,16 +15177,160 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "20b3-917d-d055-11c8",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "9ea2-1a8d-ed76-ba94",
+      "name": "Kadim Beast",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "cb68-8984-f11d-06da",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "6ae7-fed9-8697-7e34",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "ba23-c070-9b1b-3d1f",
+        "name": "Kadim Beast",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Flaming Attacks, Magical Attacks, Volcanic Embrace (2)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Kadim, Metal Armour, Mount"
+         }
+        ]
+       },
+       {
+        "id": "3d28-4f62-1c82-b2ce",
+        "name": "Kadim Chariot (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "236c-ded1-6919-3032",
+        "name": "Flaming Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7367-617a-14c1-ac6b"
+       },
+       {
+        "id": "54e9-5eff-1612-6cd3",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "05f6-581c-077a-668f",
+        "name": "Volcanic Embrace",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a4e8-b1cc-56d4-0bb5"
+       },
+       {
+        "id": "20b3-917d-d055-11c8",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [
      {
       "id": "9e65-3b6b-4303-d76b",
@@ -15108,7 +15428,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 1,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -15199,200 +15519,8 @@
       "value": 80
      }
     ],
-    "profiles": [
-     {
-      "id": "310f-61b2-c399-ad6c",
-      "name": "Taurukh Enforcers (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "7"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "9"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Commanding Presence (6”, Insignificant), Disciplined, First Strike (Stubborn), Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "c740-2ffe-544b-b511",
-      "name": "Taurukh Enforcers (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "5"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Infernal Armour"
-       }
-      ]
-     },
-     {
-      "id": "93de-f7f0-c4c0-22f6",
-      "name": "Taurukh Enforcer",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Dwarf, Metal Armour, Centauroid"
-       }
-      ]
-     },
-     {
-      "id": "7e26-08e3-d68b-1d7a",
-      "name": "Taurukh Enforcers (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "2"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour,\n\t\tCentauroid"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "42f0-2c1a-32e7-09fa",
-      "name": "Commanding Presence",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "d374-5567-bff4-5ce0"
-     },
-     {
-      "id": "3c10-58ef-dabc-6ca6",
-      "name": "Disciplined",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4d3f-19f0-b319-2c54"
-     },
-     {
-      "id": "12b9-0289-bf67-ed29",
-      "name": "First Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ce0e-c1b2-a268-c6da"
-     },
-     {
-      "id": "d4c4-fda9-951e-a925",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "fd3a-0b8c-ec45-df80",
-      "name": "Infernal Armour",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a18d-888e-f8fb-bc49"
-     },
-     {
-      "id": "c6fb-d661-d879-ffce",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
-      "id": "2893-3ff3-34fa-ff1a",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "5f3e-2438-894d-0989",
@@ -15431,8 +15559,200 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "310f-61b2-c399-ad6c",
+        "name": "Taurukh Enforcers (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "7"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "9"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Commanding Presence (6”, Insignificant), Disciplined, First Strike (Stubborn), Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "c740-2ffe-544b-b511",
+        "name": "Taurukh Enforcers (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "5"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Infernal Armour"
+         }
+        ]
+       },
+       {
+        "id": "93de-f7f0-c4c0-22f6",
+        "name": "Taurukh Enforcer",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Impact Hits (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Dwarf, Metal Armour, Centauroid"
+         }
+        ]
+       },
+       {
+        "id": "7e26-08e3-d68b-1d7a",
+        "name": "Taurukh Enforcers (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "2"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour,\n\t\tCentauroid"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×50"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "42f0-2c1a-32e7-09fa",
+        "name": "Commanding Presence",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "d374-5567-bff4-5ce0"
+       },
+       {
+        "id": "3c10-58ef-dabc-6ca6",
+        "name": "Disciplined",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4d3f-19f0-b319-2c54"
+       },
+       {
+        "id": "12b9-0289-bf67-ed29",
+        "name": "First Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "d4c4-fda9-951e-a925",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "fd3a-0b8c-ec45-df80",
+        "name": "Infernal Armour",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a18d-888e-f8fb-bc49"
+       },
+       {
+        "id": "c6fb-d661-d879-ffce",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "2893-3ff3-34fa-ff1a",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -15846,8 +16166,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "5737-f9de-0137-4615",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "5737-f9de-0137-4615",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -15917,207 +16271,8 @@
       "value": 40
      }
     ],
-    "profiles": [
-     {
-      "id": "cffd-463f-8b71-7e0f",
-      "name": "Taurukh Anointed (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "9"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Bodyguard (Taurukh Commissioner), Commanding Presence (6”, Insignificant), First Strike (Stubborn), Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "7d3c-6444-2b51-78a8",
-      "name": "Taurukh Anointed (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "5"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "5"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "3"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Infernal Armour"
-       }
-      ]
-     },
-     {
-      "id": "1a2f-c667-3afe-b846",
-      "name": "Taurukh Anointed",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "5"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (1), Stomp Attack (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Centauroid, Dwarf, Metal Armour"
-       }
-      ]
-     },
-     {
-      "id": "908a-4e79-e244-8d95",
-      "name": "Taurukh Anointed (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Centauroid,\n\t\tDwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×75"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "f141-e4ce-73e0-76bb",
-      "name": "Bodyguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1cd2-570c-ae3d-72ff"
-     },
-     {
-      "id": "2bab-7932-43f9-56a9",
-      "name": "Commanding Presence",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "d374-5567-bff4-5ce0"
-     },
-     {
-      "id": "69a9-cc6c-f0f9-b9ad",
-      "name": "First Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ce0e-c1b2-a268-c6da"
-     },
-     {
-      "id": "3062-5ae1-9f5e-a419",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "1b55-53b3-a051-1e4f",
-      "name": "Infernal Armour",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "a18d-888e-f8fb-bc49"
-     },
-     {
-      "id": "3b53-e01a-dd49-097c",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
-      "id": "163f-41f9-b18e-4c20",
-      "name": "Stomp Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ca2f-c97f-04de-88bd"
-     },
-     {
-      "id": "d552-f4e5-5685-3e85",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "2a05-0680-3d20-e68e",
@@ -16156,8 +16311,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "cffd-463f-8b71-7e0f",
+        "name": "Taurukh Anointed (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "9"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Bodyguard (Taurukh Commissioner), Commanding Presence (6”, Insignificant), First Strike (Stubborn), Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "7d3c-6444-2b51-78a8",
+        "name": "Taurukh Anointed (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "5"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "5"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "3"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Infernal Armour"
+         }
+        ]
+       },
+       {
+        "id": "1a2f-c667-3afe-b846",
+        "name": "Taurukh Anointed",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "5"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Impact Hits (1), Stomp Attack (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Centauroid, Dwarf, Metal Armour"
+         }
+        ]
+       },
+       {
+        "id": "908a-4e79-e244-8d95",
+        "name": "Taurukh Anointed (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Centauroid,\n\t\tDwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×75"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "f141-e4ce-73e0-76bb",
+        "name": "Bodyguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1cd2-570c-ae3d-72ff"
+       },
+       {
+        "id": "2bab-7932-43f9-56a9",
+        "name": "Commanding Presence",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "d374-5567-bff4-5ce0"
+       },
+       {
+        "id": "69a9-cc6c-f0f9-b9ad",
+        "name": "First Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "3062-5ae1-9f5e-a419",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "1b55-53b3-a051-1e4f",
+        "name": "Infernal Armour",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a18d-888e-f8fb-bc49"
+       },
+       {
+        "id": "3b53-e01a-dd49-097c",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "163f-41f9-b18e-4c20",
+        "name": "Stomp Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ca2f-c97f-04de-88bd"
+       },
+       {
+        "id": "d552-f4e5-5685-3e85",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -16609,272 +16963,8 @@
       "value": 120
      }
     ],
-    "profiles": [
-     {
-      "id": "1118-cf37-f047-a305",
-      "name": "Vassal Cavalry (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "8"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "8"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Feigned Flight, Hit and Run, Insignificant, Light Troops, Swiftstride, Vanguard"
-       }
-      ]
-     },
-     {
-      "id": "97c9-68cf-1f79-bcb0",
-      "name": "Vassal Cavalry (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "2"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Shield, Weakness (Flaming Attacks)"
-       }
-      ]
-     },
-     {
-      "id": "f7ce-d601-f0b9-da81",
-      "name": "Vassal Rider",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Oil Flasks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Vassal, Light Armour"
-       }
-      ]
-     },
-     {
-      "id": "8aca-776e-2807-baad",
-      "name": "Steppe Steed",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Mount"
-       }
-      ]
-     },
-     {
-      "id": "3e09-9a46-cd7e-9c06",
-      "name": "Vassal Cavalry (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "2"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Vassal,\n\t\tLight Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Rare"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "3e21-0968-b1fc-67b0",
-      "name": "Feigned Flight",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4d61-e27e-f944-3047"
-     },
-     {
-      "id": "c9ad-83a7-3d1e-b9e7",
-      "name": "Hit and Run",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "080c-0df2-52c0-2099"
-     },
-     {
-      "id": "a5ca-c4b5-79e8-5880",
-      "name": "Insignificant",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f48c-19de-c165-c406"
-     },
-     {
-      "id": "ba3d-8e78-4d07-a059",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "8d11-b9ce-30b0-3297",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "7204-28cd-b29f-510f",
-      "name": "Vanguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f930-f7e6-2b9b-81d7"
-     },
-     {
-      "id": "a496-c5ef-c2ae-5804",
-      "name": "Shield",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cfbb-118b-629b-24b9"
-     },
-     {
-      "id": "cf4e-83d2-1a6d-0100",
-      "name": "Weakness",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "3262-08b4-b3b8-391e"
-     },
-     {
-      "id": "057c-44f9-bd75-c624",
-      "name": "Oil Flasks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b63b-f3a0-26e9-9f66"
-     },
-     {
-      "id": "2af5-ad0f-6410-2d27",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "df5a-256d-e81a-9ae5",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "127f-0d31-4fc9-5a30",
@@ -16918,10 +17008,324 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "1118-cf37-f047-a305",
+        "name": "Vassal Cavalry (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "8"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "8"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Feigned Flight, Hit and Run, Insignificant, Light Troops, Swiftstride, Vanguard"
+         }
+        ]
+       },
+       {
+        "id": "97c9-68cf-1f79-bcb0",
+        "name": "Vassal Cavalry (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "2"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Shield, Weakness (Flaming Attacks)"
+         }
+        ]
+       },
+       {
+        "id": "f7ce-d601-f0b9-da81",
+        "name": "Vassal Rider",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Oil Flasks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Vassal, Light Armour"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "3e21-0968-b1fc-67b0",
+        "name": "Feigned Flight",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4d61-e27e-f944-3047"
+       },
+       {
+        "id": "c9ad-83a7-3d1e-b9e7",
+        "name": "Hit and Run",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "080c-0df2-52c0-2099"
+       },
+       {
+        "id": "a5ca-c4b5-79e8-5880",
+        "name": "Insignificant",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f48c-19de-c165-c406"
+       },
+       {
+        "id": "ba3d-8e78-4d07-a059",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "8d11-b9ce-30b0-3297",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "7204-28cd-b29f-510f",
+        "name": "Vanguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f930-f7e6-2b9b-81d7"
+       },
+       {
+        "id": "a496-c5ef-c2ae-5804",
+        "name": "Shield",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "cf4e-83d2-1a6d-0100",
+        "name": "Weakness",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "3262-08b4-b3b8-391e"
+       },
+       {
+        "id": "057c-44f9-bd75-c624",
+        "name": "Oil Flasks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b63b-f3a0-26e9-9f66"
+       },
+       {
+        "id": "2af5-ad0f-6410-2d27",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "20c0-f2c1-d33c-bf9c",
+        "name": "Steppe Steed",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "7efb-0f15-72ec-580b",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "a361-12cb-1c2f-cd87",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "8aca-776e-2807-baad",
+          "name": "Steppe Steed",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "2"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "3"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "3"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "1"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "3"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": ""
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Mount"
+           }
+          ]
+         },
+         {
+          "id": "3e09-9a46-cd7e-9c06",
+          "name": "Vassal Cavalry (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "2"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Vassal,\n\t\tLight Armour"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "25×50"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Rare"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "df5a-256d-e81a-9ae5",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
@@ -17274,79 +17678,6 @@
         "$text": "Dwarf, Metal Armour"
        }
       ]
-     },
-     {
-      "id": "da1e-0835-8392-187b",
-      "name": "Battering Ram",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Crush Attack, Impact Hits (D3+1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Construct, Mount"
-       }
-      ]
-     },
-     {
-      "id": "7ed8-fd2d-551e-7260",
-      "name": "Infernal Bastion (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "5"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "60×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Rare"
-       }
-      ]
      }
     ],
     "infoLinks": [
@@ -17400,35 +17731,158 @@
       "targetId": "a18d-888e-f8fb-bc49"
      },
      {
-      "id": "7602-11f7-3aa5-b428",
-      "name": "Crush Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e3a1-060f-a4e9-7558"
-     },
-     {
-      "id": "0d6c-c971-6d28-ffb6",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
       "id": "ef0b-f400-e98d-9d2e",
       "name": "Hand Weapon",
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "492f-1c97-4fac-6d70",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "6f76-ce43-fd20-e927",
+      "name": "Battering Ram",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "4a43-33a4-2fee-86f3",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "e036-4a2c-8e42-a867",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "da1e-0835-8392-187b",
+        "name": "Battering Ram",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Crush Attack, Impact Hits (D3+1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Construct, Mount"
+         }
+        ]
+       },
+       {
+        "id": "7ed8-fd2d-551e-7260",
+        "name": "Infernal Bastion (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "5"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "60×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Rare"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "7602-11f7-3aa5-b428",
+        "name": "Crush Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e3a1-060f-a4e9-7558"
+       },
+       {
+        "id": "0d6c-c971-6d28-ffb6",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "492f-1c97-4fac-6d70",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [
      {
       "id": "f353-f5a8-b19c-075c",
@@ -17553,7 +18007,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 1,
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -18548,7 +19002,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -18788,8 +19242,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "c214-e171-c1dc-7b74",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "c214-e171-c1dc-7b74",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -21187,79 +21675,6 @@
         "$text": "Dwarf, Metal Armour"
        }
       ]
-     },
-     {
-      "id": "16eb-f065-2bd4-5d99",
-      "name": "Battering Ram",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Crush Attack, Impact Hits (D3+1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Construct, Mount"
-       }
-      ]
-     },
-     {
-      "id": "5d29-c560-2c81-82bd",
-      "name": "Infernal Bastion (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "5"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Dwarf,\n\t\tMetal Armour"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "60×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Extraordinary"
-       }
-      ]
      }
     ],
     "infoLinks": [
@@ -21313,35 +21728,158 @@
       "targetId": "a18d-888e-f8fb-bc49"
      },
      {
-      "id": "5d43-b66c-80e5-dbab",
-      "name": "Crush Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e3a1-060f-a4e9-7558"
-     },
-     {
-      "id": "c40c-b9c7-4a23-7f12",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
       "id": "4a32-065e-2f92-64f2",
       "name": "Hand Weapon",
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "d808-0411-a70f-7fd8",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "cf22-2c26-f88e-2079",
+      "name": "Battering Ram",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "48eb-4c2f-4d23-82b6",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "84ba-201b-0153-f7e0",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "16eb-f065-2bd4-5d99",
+        "name": "Battering Ram",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Crush Attack, Impact Hits (D3+1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Construct, Mount"
+         }
+        ]
+       },
+       {
+        "id": "5d29-c560-2c81-82bd",
+        "name": "Infernal Bastion (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "5"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Dwarf,\n\t\tMetal Armour"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "60×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Extraordinary"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "5d43-b66c-80e5-dbab",
+        "name": "Crush Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e3a1-060f-a4e9-7558"
+       },
+       {
+        "id": "c40c-b9c7-4a23-7f12",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "d808-0411-a70f-7fd8",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [
      {
       "id": "edb2-7e73-d35b-bee9",
@@ -21459,7 +21997,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 1,
+      "sortIndex": 2,
       "collective": true
      }
     ],

@@ -1776,7 +1776,7 @@
        {
         "name": "Rarity",
         "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
+        "$text": "Common"
        }
       ]
      }
@@ -3564,8 +3564,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "9860-e8f0-3fda-9961",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "9860-e8f0-3fda-9961",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -13232,193 +13266,8 @@
       "value": 100
      }
     ],
-    "profiles": [
-     {
-      "id": "f8fb-435b-9b1a-cbf3",
-      "name": "Imps (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "6"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "8f11-4bb6-cffa-9cba",
-      "name": "Imps (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "2"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Aegis (3+, against Ranged Attacks)"
-       }
-      ]
-     },
-     {
-      "id": "f621-5204-72f8-1a78",
-      "name": "Imp",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "2"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "fd22-391d-37f8-4a03",
-      "name": "Imps (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "3342-482b-433f-fcc6",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "6fdf-fd7c-02c7-5977",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "2197-7444-d8b7-7a67",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "afb2-71ef-e680-2c8d",
-      "name": "Aegis",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8bcb-afaf-0f53-3431"
-     },
-     {
-      "id": "1eaf-f237-afbc-d9fa",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "54c0-2e17-da03-48a6",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "fbe8-a63d-7ba5-6e15",
@@ -13462,8 +13311,193 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "f8fb-435b-9b1a-cbf3",
+        "name": "Imps (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "6"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "8f11-4bb6-cffa-9cba",
+        "name": "Imps (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "2"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Aegis (3+, against Ranged Attacks)"
+         }
+        ]
+       },
+       {
+        "id": "f621-5204-72f8-1a78",
+        "name": "Imp",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "2"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "fd22-391d-37f8-4a03",
+        "name": "Imps (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "3342-482b-433f-fcc6",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "6fdf-fd7c-02c7-5977",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "2197-7444-d8b7-7a67",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "afb2-71ef-e680-2c8d",
+        "name": "Aegis",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8bcb-afaf-0f53-3431"
+       },
+       {
+        "id": "1eaf-f237-afbc-d9fa",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "54c0-2e17-da03-48a6",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -14150,193 +14184,8 @@
       "value": 50
      }
     ],
-    "profiles": [
-     {
-      "id": "a32e-866f-a6f8-4cc3",
-      "name": "Succubi (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "5727-6927-1f29-466f",
-      "name": "Succubi (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "9858-ec17-9f0f-706e",
-      "name": "Succubus",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "5"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks, Smother (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "367a-6ec3-8896-c4d5",
-      "name": "Succubi (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "b9dc-1930-b556-a1f1",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "d019-04b2-bb00-95f7",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "835a-21e1-8104-e9ac",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "f344-d929-6674-b95b",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "c39e-678f-0077-bd10",
-      "name": "Smother",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "455b-d0c1-9d6f-ca61"
-     },
-     {
-      "id": "90e4-c0d5-e3e7-1e36",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "661d-6556-4c07-2ebc",
@@ -14375,8 +14224,193 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "a32e-866f-a6f8-4cc3",
+        "name": "Succubi (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "5727-6927-1f29-466f",
+        "name": "Succubi (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "9858-ec17-9f0f-706e",
+        "name": "Succubus",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "5"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks, Smother (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "367a-6ec3-8896-c4d5",
+        "name": "Succubi (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "b9dc-1930-b556-a1f1",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "d019-04b2-bb00-95f7",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "835a-21e1-8104-e9ac",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "f344-d929-6674-b95b",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "c39e-678f-0077-bd10",
+        "name": "Smother",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "455b-d0c1-9d6f-ca61"
+       },
+       {
+        "id": "90e4-c0d5-e3e7-1e36",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -14759,186 +14793,8 @@
       "value": 10
      }
     ],
-    "profiles": [
-     {
-      "id": "9d56-31c3-347b-2470",
-      "name": "Lemures (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "4"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "4"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "7bc1-2ceb-5b10-78df",
-      "name": "Lemures (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "5"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "5"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "e389-5a3e-c17d-7b94",
-      "name": "Lemure",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "c11e-51d2-080a-2f77",
-      "name": "Lemures (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "c63f-309a-15b5-78ad",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "41a7-426d-376e-68e0",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "1628-2810-5d73-f5ee",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "2088-b094-d9da-3c6e",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "0552-5c7e-2b97-7221",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "a566-49a6-da10-51fa",
@@ -14977,8 +14833,186 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "9d56-31c3-347b-2470",
+        "name": "Lemures (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "4"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "4"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "7bc1-2ceb-5b10-78df",
+        "name": "Lemures (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "5"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "5"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "e389-5a3e-c17d-7b94",
+        "name": "Lemure",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "c11e-51d2-080a-2f77",
+        "name": "Lemures (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "c63f-309a-15b5-78ad",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "41a7-426d-376e-68e0",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "1628-2810-5d73-f5ee",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "2088-b094-d9da-3c6e",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "0552-5c7e-2b97-7221",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -15380,200 +15414,8 @@
       "value": 0
      }
     ],
-    "profiles": [
-     {
-      "id": "15f2-0536-d73b-e4b2",
-      "name": "Myrmidons (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "f5d9-23b1-9cb7-30ed",
-      "name": "Myrmidons (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "f5e8-2430-85f7-6197",
-      "name": "Myrmidon",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "5"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Fight in Extra Rank, Fury, Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "5d2e-9d74-1800-655e",
-      "name": "Myrmidons (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Regular"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "508d-3d9c-f92f-709b",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "a0fd-29ed-f79c-c635",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "5b2d-ee8a-64e4-920e",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "fe8f-fc44-a2e3-437c",
-      "name": "Fight in Extra Rank",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad6f-0ad5-9510-4fc5"
-     },
-     {
-      "id": "d955-8f7b-c0c0-501f",
-      "name": "Fury",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "481c-0c06-eaa9-bad6"
-     },
-     {
-      "id": "260b-6a3b-338f-b74a",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "27ca-ffec-804f-d035",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "8a82-13fd-1fd2-9355",
@@ -15612,8 +15454,200 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "15f2-0536-d73b-e4b2",
+        "name": "Myrmidons (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "f5d9-23b1-9cb7-30ed",
+        "name": "Myrmidons (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "f5e8-2430-85f7-6197",
+        "name": "Myrmidon",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "5"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Fight in Extra Rank, Fury, Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "5d2e-9d74-1800-655e",
+        "name": "Myrmidons (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Regular"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "508d-3d9c-f92f-709b",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "a0fd-29ed-f79c-c635",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "5b2d-ee8a-64e4-920e",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "fe8f-fc44-a2e3-437c",
+        "name": "Fight in Extra Rank",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad6f-0ad5-9510-4fc5"
+       },
+       {
+        "id": "d955-8f7b-c0c0-501f",
+        "name": "Fury",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "481c-0c06-eaa9-bad6"
+       },
+       {
+        "id": "260b-6a3b-338f-b74a",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "27ca-ffec-804f-d035",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -15989,214 +16023,8 @@
       "value": 20
      }
     ],
-    "profiles": [
-     {
-      "id": "6827-301e-fa47-b7d8",
-      "name": "Eidolons (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Light Troops, Skirmisher, Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "6bf9-b2a2-e9e7-b6a5",
-      "name": "Eidolons (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "2"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Hard Target (1)"
-       }
-      ]
-     },
-     {
-      "id": "b066-3275-d89e-3a80",
-      "name": "Eidolon",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "2"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks, Stand and Shoot"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "2f97-a48c-1055-3bab",
-      "name": "Eidolons (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Rare"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "c609-4bc0-6d8b-8e76",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "a1a2-b584-400a-cc88",
-      "name": "Skirmisher",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e6d7-6601-01c8-5b11"
-     },
-     {
-      "id": "e7e8-ab9e-0f66-4b49",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "69a2-ce8c-a51d-0ccb",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "7a0b-f107-48e2-c8f9",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "66b7-589a-1416-1fe6",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "3f02-0f5a-116e-85f2",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "bba2-b7c8-543c-5151",
-      "name": "Stand and Shoot",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5c94-76ff-8f35-3e1a"
-     },
-     {
-      "id": "bd18-869d-ffe6-79c1",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "9243-003d-fe4e-77b5",
@@ -16240,8 +16068,214 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "6827-301e-fa47-b7d8",
+        "name": "Eidolons (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Light Troops, Skirmisher, Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "6bf9-b2a2-e9e7-b6a5",
+        "name": "Eidolons (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "2"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Hard Target (1)"
+         }
+        ]
+       },
+       {
+        "id": "b066-3275-d89e-3a80",
+        "name": "Eidolon",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "2"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks, Stand and Shoot"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "2f97-a48c-1055-3bab",
+        "name": "Eidolons (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Rare"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "c609-4bc0-6d8b-8e76",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "a1a2-b584-400a-cc88",
+        "name": "Skirmisher",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e6d7-6601-01c8-5b11"
+       },
+       {
+        "id": "e7e8-ab9e-0f66-4b49",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "69a2-ce8c-a51d-0ccb",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "7a0b-f107-48e2-c8f9",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "66b7-589a-1416-1fe6",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "3f02-0f5a-116e-85f2",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "bba2-b7c8-543c-5151",
+        "name": "Stand and Shoot",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5c94-76ff-8f35-3e1a"
+       },
+       {
+        "id": "bd18-869d-ffe6-79c1",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -16853,200 +16887,8 @@
       "value": 60
      }
     ],
-    "profiles": [
-     {
-      "id": "ffce-cffa-0c92-ae1d",
-      "name": "Hellhounds (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "9"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "9"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Horror, Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "77b0-0c6c-bd53-472d",
-      "name": "Hellhounds (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "4828-f2af-639e-bafb",
-      "name": "Hellhound",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "5"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Lethal Strike, Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "ae80-a6c6-755e-f2be",
-      "name": "Hellhounds (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "2"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "8bf9-1c4c-ae29-f84d",
-      "name": "Horror",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4ed8-d540-95a8-0d61"
-     },
-     {
-      "id": "4ad1-d925-d44f-f4e8",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "65e4-e34e-1399-a425",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "02af-ffdc-2ec1-8e76",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "cc37-a531-22ca-167f",
-      "name": "Lethal Strike",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b128-d5b9-a024-b424"
-     },
-     {
-      "id": "77d7-e74b-ee8b-38ef",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "7501-8f93-83de-1025",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "45f2-004c-88c5-da4d",
@@ -17085,8 +16927,200 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "ffce-cffa-0c92-ae1d",
+        "name": "Hellhounds (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "9"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "9"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Horror, Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "77b0-0c6c-bd53-472d",
+        "name": "Hellhounds (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "4828-f2af-639e-bafb",
+        "name": "Hellhound",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "5"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Lethal Strike, Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "ae80-a6c6-755e-f2be",
+        "name": "Hellhounds (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "2"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×50"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "8bf9-1c4c-ae29-f84d",
+        "name": "Horror",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4ed8-d540-95a8-0d61"
+       },
+       {
+        "id": "4ad1-d925-d44f-f4e8",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "65e4-e34e-1399-a425",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "02af-ffdc-2ec1-8e76",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "cc37-a531-22ca-167f",
+        "name": "Lethal Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b128-d5b9-a024-b424"
+       },
+       {
+        "id": "77d7-e74b-ee8b-38ef",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "7501-8f93-83de-1025",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -17340,8 +17374,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "b9aa-c778-fe6d-2ca9",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "b9aa-c778-fe6d-2ca9",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -17399,316 +17467,8 @@
       "value": 10
      }
     ],
-    "profiles": [
-     {
-      "id": "b0b6-b280-ac62-9405",
-      "name": "Threshing Engine (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "10"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Swiftstride, Supernal, Fearless, Light Troops, Solitary"
-       }
-      ]
-     },
-     {
-      "id": "e3da-bc52-f458-7f96",
-      "name": "Threshing Engine (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "4"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Hard Target (1)"
-       }
-      ]
-     },
-     {
-      "id": "4634-8260-57e0-5506",
-      "name": "Tiller (2)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "5"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks, Smother (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "0ee8-b52e-59fb-591f",
-      "name": "Hellsteed (2)",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon, Mount"
-       }
-      ]
-     },
-     {
-      "id": "1252-45b7-2d31-4d8f",
-      "name": "Chassis",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": ""
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": ""
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "3"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks, Impact Hits (2D3)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "c5e9-b132-0d86-233c",
-      "name": "Threshing Engine (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "bbde-d051-f9c3-b6d5",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "4018-f56a-b5a3-3141",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "c709-7afd-c0f8-4453",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "2dcb-1a4b-4986-a086",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "7b8c-9d57-777d-d09d",
-      "name": "Solitary",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8793-b53c-382d-3a4d"
-     },
-     {
-      "id": "9589-4096-611d-4668",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "10d2-7a3a-32c9-be08",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "dd03-e6d1-1082-1832",
-      "name": "Smother",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "455b-d0c1-9d6f-ca61"
-     },
-     {
-      "id": "42c4-49bd-f30d-f373",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
-      "id": "4e55-8194-b5ec-02d7",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "ab52-e5d8-5882-cd2e",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "d610-d9bb-6adf-da70",
@@ -17747,10 +17507,368 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "b0b6-b280-ac62-9405",
+        "name": "Threshing Engine (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "10"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Swiftstride, Supernal, Fearless, Light Troops, Solitary"
+         }
+        ]
+       },
+       {
+        "id": "e3da-bc52-f458-7f96",
+        "name": "Threshing Engine (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "4"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Hard Target (1)"
+         }
+        ]
+       },
+       {
+        "id": "4634-8260-57e0-5506",
+        "name": "Tiller (2)",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "5"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks, Smother (1)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "1252-45b7-2d31-4d8f",
+        "name": "Chassis",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": ""
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": ""
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "3"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks, Impact Hits (2D3)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Construct"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "bbde-d051-f9c3-b6d5",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "4018-f56a-b5a3-3141",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "c709-7afd-c0f8-4453",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "2dcb-1a4b-4986-a086",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "7b8c-9d57-777d-d09d",
+        "name": "Solitary",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8793-b53c-382d-3a4d"
+       },
+       {
+        "id": "9589-4096-611d-4668",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "dd03-e6d1-1082-1832",
+        "name": "Smother",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "455b-d0c1-9d6f-ca61"
+       },
+       {
+        "id": "42c4-49bd-f30d-f373",
+        "name": "Impact Hits",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "4e55-8194-b5ec-02d7",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "7897-47c9-81e3-a97e",
+        "name": "Hellsteed (2)",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "d850-f483-e8aa-c524",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "87d1-1769-a345-c77f",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "0ee8-b52e-59fb-591f",
+          "name": "Hellsteed (2)",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "1"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "3"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "3"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "0"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "3"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": "Magical Attacks"
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Daemon, Mount"
+           }
+          ]
+         },
+         {
+          "id": "c5e9-b132-0d86-233c",
+          "name": "Threshing Engine (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "4"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Daemon"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "50×100"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Common"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "10d2-7a3a-32c9-be08",
+          "name": "Magical Attacks",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "4cae-8942-e006-f5f9"
+         },
+         {
+          "id": "ab52-e5d8-5882-cd2e",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "99d4-e017-9f14-87c8",
@@ -17934,7 +18052,7 @@
           "collective": true
          }
         ],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -18223,8 +18341,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "017c-b272-8c3c-f837",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "017c-b272-8c3c-f837",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "add",
       "field": "category",
@@ -18491,50 +18643,6 @@
       ]
      },
      {
-      "id": "cd55-8637-3eb9-ce29",
-      "name": "Beast",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Devastating Charge (1 St, 1 AP), Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon, Mount"
-       }
-      ]
-     },
-     {
       "id": "d41c-251f-feb9-3b9c",
       "name": "Chassis",
       "typeId": "462e-145c-42af-7edc",
@@ -18575,35 +18683,6 @@
         "name": "Tags",
         "typeId": "6079-9ce5-90ed-8c32",
         "$text": "Construct"
-       }
-      ]
-     },
-     {
-      "id": "a516-839f-0a37-6d2a",
-      "name": "Titanslayer Chariot (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×100"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Rare"
        }
       ]
      }
@@ -18659,13 +18738,6 @@
       "targetId": "481c-0c06-eaa9-bad6"
      },
      {
-      "id": "1b26-78a9-901d-0294",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
       "id": "4291-2026-1769-7cda",
       "name": "Devastating Charge",
       "hidden": false,
@@ -18685,16 +18757,146 @@
       "hidden": false,
       "type": "profile",
       "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "2264-d0d1-4470-5125",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
      }
     ],
-    "selectionEntries": [],
+    "selectionEntries": [
+     {
+      "id": "24fe-4e77-37f1-9897",
+      "name": "Beast",
+      "type": "mount",
+      "hidden": false,
+      "costs": [
+       {
+        "name": "pts",
+        "typeId": "ea90-6996-33df-993c",
+        "value": 0
+       }
+      ],
+      "constraints": [
+       {
+        "id": "d12c-b3fb-52ca-c0e6",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "a164-aa4a-6dc0-ae31",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "profiles": [
+       {
+        "id": "cd55-8637-3eb9-ce29",
+        "name": "Beast",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "3"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Devastating Charge (1 St, 1 AP), Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon, Mount"
+         }
+        ]
+       },
+       {
+        "id": "a516-839f-0a37-6d2a",
+        "name": "Titanslayer Chariot (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×100"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Rare"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "1b26-78a9-901d-0294",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "2264-d0d1-4470-5125",
+        "name": "Innate Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9938-bd60-6310-69d8"
+       }
+      ],
+      "categoryLinks": [],
+      "selectionEntries": [],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultAmount": 1,
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "selectionEntryGroups": [
      {
       "id": "3ddb-8d35-6129-3bc9",
@@ -18878,7 +19080,7 @@
         "collective": true
        }
       ],
-      "sortIndex": 1,
+      "sortIndex": 2,
       "collective": true
      },
      {
@@ -18946,7 +19148,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 2,
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -19030,242 +19232,8 @@
       "value": 90
      }
     ],
-    "profiles": [
-     {
-      "id": "049e-b1f0-abca-4f1e",
-      "name": "Mageblight Gremlins (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Ambush (Battlefield Edge, or unit containing a Wizard), Supernal, Fearless, Skirmisher, Light Troops, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "4bfd-8cb6-eda7-9680",
-      "name": "Mageblight Gremlins (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "5"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "2"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "2"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Veil Stalker, Hard Target (1), Distracting (1)"
-       }
-      ]
-     },
-     {
-      "id": "bfcd-426c-fcf6-686a",
-      "name": "Mageblight Gremlin",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "6"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "2"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "2"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Poison Attacks (towards units containing a Wizard), Magical Attacks, Extra Support (3)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon, Swarm"
-       }
-      ]
-     },
-     {
-      "id": "565e-d631-cc0e-8c20",
-      "name": "Mageblight Gremlins (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "0"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon,\n\t\tSwarm"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "b173-8d5f-1fbe-9d90",
-      "name": "Ambush",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "3bc5-40b3-2dc8-4226"
-     },
-     {
-      "id": "5c7d-1056-e11f-1857",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "638e-7014-46a0-97f3",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "badc-cb62-60f1-e506",
-      "name": "Skirmisher",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e6d7-6601-01c8-5b11"
-     },
-     {
-      "id": "96bb-e8be-bd39-de76",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "3621-9ddf-9afc-3f6b",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "e17a-257b-79ea-4bb7",
-      "name": "Veil Stalker",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "67d5-e6c2-82a7-f1fc"
-     },
-     {
-      "id": "0ef4-6904-d63f-68ff",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "1f59-e23b-9e99-a9d7",
-      "name": "Distracting",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cab6-5fc6-a5ff-b970"
-     },
-     {
-      "id": "fc64-dc90-f936-b74c",
-      "name": "Poison Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "644e-543b-7f0a-41e2"
-     },
-     {
-      "id": "be11-06d8-5362-b68a",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "d4c8-b8ef-d6e6-423d",
-      "name": "Extra Support",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "b810-a004-1c7e-66e2"
-     },
-     {
-      "id": "5f25-018a-25a2-c9cc",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "4116-ea6e-01aa-aded",
@@ -19304,8 +19272,242 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "049e-b1f0-abca-4f1e",
+        "name": "Mageblight Gremlins (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "6"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Ambush (Battlefield Edge, or unit containing a Wizard), Supernal, Fearless, Skirmisher, Light Troops, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "4bfd-8cb6-eda7-9680",
+        "name": "Mageblight Gremlins (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "5"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "2"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "2"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Veil Stalker, Hard Target (1), Distracting (1)"
+         }
+        ]
+       },
+       {
+        "id": "bfcd-426c-fcf6-686a",
+        "name": "Mageblight Gremlin",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "6"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "2"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "2"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Poison Attacks (towards units containing a Wizard), Magical Attacks, Extra Support (3)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon, Swarm"
+         }
+        ]
+       },
+       {
+        "id": "565e-d631-cc0e-8c20",
+        "name": "Mageblight Gremlins (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "0"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon,\n\t\tSwarm"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Common"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "b173-8d5f-1fbe-9d90",
+        "name": "Ambush",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "3bc5-40b3-2dc8-4226"
+       },
+       {
+        "id": "5c7d-1056-e11f-1857",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "638e-7014-46a0-97f3",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "badc-cb62-60f1-e506",
+        "name": "Skirmisher",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e6d7-6601-01c8-5b11"
+       },
+       {
+        "id": "96bb-e8be-bd39-de76",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "3621-9ddf-9afc-3f6b",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "e17a-257b-79ea-4bb7",
+        "name": "Veil Stalker",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "67d5-e6c2-82a7-f1fc"
+       },
+       {
+        "id": "0ef4-6904-d63f-68ff",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "1f59-e23b-9e99-a9d7",
+        "name": "Distracting",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cab6-5fc6-a5ff-b970"
+       },
+       {
+        "id": "fc64-dc90-f936-b74c",
+        "name": "Poison Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "644e-543b-7f0a-41e2"
+       },
+       {
+        "id": "be11-06d8-5362-b68a",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "d4c8-b8ef-d6e6-423d",
+        "name": "Extra Support",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b810-a004-1c7e-66e2"
+       },
+       {
+        "id": "5f25-018a-25a2-c9cc",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -19547,8 +19749,42 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [],
+    "constraints": [
+     {
+      "id": "eed5-b764-b5bb-a4f3",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Common",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Common**)"
+     }
+    ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "eed5-b764-b5bb-a4f3",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Common"
+     },
      {
       "type": "remove",
       "field": "category",
@@ -19611,193 +19847,8 @@
       "value": -30
      }
     ],
-    "profiles": [
-     {
-      "id": "c8b6-e77b-8011-3e1e",
-      "name": "Clawed Fiends (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "9"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "9"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "255f-77e1-24d1-49d5",
-      "name": "Clawed Fiends (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "b3cf-c433-68a7-5c3e",
-      "name": "Clawed Fiend",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "2"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "6"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Smother (3, 4), Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon, Centauroid"
-       }
-      ]
-     },
-     {
-      "id": "e88d-b085-261f-6309",
-      "name": "Clawed Fiends (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon,\n\t\tCentauroid"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "98a9-ec5a-31f4-9cdb",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "63ec-3475-b748-d79e",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "1956-8a55-d332-6c28",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "6098-e52f-b266-16e7",
-      "name": "Smother",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "455b-d0c1-9d6f-ca61"
-     },
-     {
-      "id": "c76c-b31a-4cce-0a46",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "ca3d-ebd4-2669-5c60",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "2a03-1ad8-72b6-3597",
@@ -19836,8 +19887,193 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "c8b6-e77b-8011-3e1e",
+        "name": "Clawed Fiends (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "9"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "9"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "255f-77e1-24d1-49d5",
+        "name": "Clawed Fiends (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "b3cf-c433-68a7-5c3e",
+        "name": "Clawed Fiend",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "2"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "6"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Smother (3, 4), Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon, Centauroid"
+         }
+        ]
+       },
+       {
+        "id": "e88d-b085-261f-6309",
+        "name": "Clawed Fiends (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon,\n\t\tCentauroid"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "98a9-ec5a-31f4-9cdb",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "63ec-3475-b748-d79e",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "1956-8a55-d332-6c28",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "6098-e52f-b266-16e7",
+        "name": "Smother",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "455b-d0c1-9d6f-ca61"
+       },
+       {
+        "id": "c76c-b31a-4cce-0a46",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "ca3d-ebd4-2669-5c60",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -20213,207 +20449,8 @@
       "value": -60
      }
     ],
-    "profiles": [
-     {
-      "id": "95fc-0191-6cab-0873",
-      "name": "Hoarders (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "5"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "5"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Strider, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "2964-94ca-6cb7-0ba6",
-      "name": "Hoarders (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "4"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "5"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "5"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Parry"
-       }
-      ]
-     },
-     {
-      "id": "6375-31c2-a67f-6712",
-      "name": "Hoarder",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "2"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Tightening Grasp, Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "c31f-23c9-ffc2-c728",
-      "name": "Hoarders (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "59f1-a4fe-ae2e-10d7",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "1942-6d0c-699c-d078",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "49d5-c047-4f21-ad81",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "cc0a-8487-1f7a-97d6",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "a605-0cf5-68c6-ba5c",
-      "name": "Parry",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "0da3-2a70-ac3f-69e7"
-     },
-     {
-      "id": "e6a0-d3e8-1fc0-b414",
-      "name": "Tightening Grasp",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cefc-433e-e1ec-1d77"
-     },
-     {
-      "id": "a695-c92d-72ef-e45f",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "d219-a1a0-ac2c-baef",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "ae51-511c-a73f-7fd9",
@@ -20452,8 +20489,207 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "95fc-0191-6cab-0873",
+        "name": "Hoarders (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "5"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "5"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Strider, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "2964-94ca-6cb7-0ba6",
+        "name": "Hoarders (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "4"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "5"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "5"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Parry"
+         }
+        ]
+       },
+       {
+        "id": "6375-31c2-a67f-6712",
+        "name": "Hoarder",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "2"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Tightening Grasp, Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "c31f-23c9-ffc2-c728",
+        "name": "Hoarders (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "59f1-a4fe-ae2e-10d7",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "1942-6d0c-699c-d078",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "49d5-c047-4f21-ad81",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "cc0a-8487-1f7a-97d6",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "a605-0cf5-68c6-ba5c",
+        "name": "Parry",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "0da3-2a70-ac3f-69e7"
+       },
+       {
+        "id": "e6a0-d3e8-1fc0-b414",
+        "name": "Tightening Grasp",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cefc-433e-e1ec-1d77"
+       },
+       {
+        "id": "a695-c92d-72ef-e45f",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "d219-a1a0-ac2c-baef",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -20982,279 +21218,8 @@
       "value": 120
      }
     ],
-    "profiles": [
-     {
-      "id": "0e37-fdcf-4267-908a",
-      "name": "Succubi Tempters (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "10"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "10"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "9"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Strider, Feigned Flight, Hit and Run, Light Troops, Vanguard, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "c2f7-75b1-7b35-3140",
-      "name": "Succubi Tempters (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "97a7-64a3-9ee4-e7e0",
-      "name": "Succubus",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "5"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks, Smother (2)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "3eb2-abe0-e50d-9418",
-      "name": "Hellsteed",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "3"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon, Mount"
-       }
-      ]
-     },
-     {
-      "id": "1cfa-91b0-9734-8a7b",
-      "name": "Succubi Tempters (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "2"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×50"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "970e-1edc-aca5-76c5",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "7ebe-9eb7-2545-876b",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "1d37-2070-869a-f369",
-      "name": "Strider",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1408-f621-8299-4cc5"
-     },
-     {
-      "id": "13c6-b789-6862-445e",
-      "name": "Feigned Flight",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4d61-e27e-f944-3047"
-     },
-     {
-      "id": "ce1f-4619-cdbc-373b",
-      "name": "Hit and Run",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "080c-0df2-52c0-2099"
-     },
-     {
-      "id": "1be4-3e6d-e9f6-4b01",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "f459-5437-2c5d-3c21",
-      "name": "Vanguard",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f930-f7e6-2b9b-81d7"
-     },
-     {
-      "id": "559f-b99c-1bba-c8f2",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "1a94-750f-b6e2-7095",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "a8f8-e2d5-ebc6-2603",
-      "name": "Smother",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "455b-d0c1-9d6f-ca61"
-     },
-     {
-      "id": "23ba-e775-9db5-823a",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "7d6d-c74e-1aef-a9d1",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "f4ae-f1e1-6dc2-3c74",
@@ -21293,10 +21258,331 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "0e37-fdcf-4267-908a",
+        "name": "Succubi Tempters (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "10"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "10"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "9"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Strider, Feigned Flight, Hit and Run, Light Troops, Vanguard, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "c2f7-75b1-7b35-3140",
+        "name": "Succubi Tempters (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "97a7-64a3-9ee4-e7e0",
+        "name": "Succubus",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "3"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "5"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks, Smother (2)"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "970e-1edc-aca5-76c5",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "7ebe-9eb7-2545-876b",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "1d37-2070-869a-f369",
+        "name": "Strider",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1408-f621-8299-4cc5"
+       },
+       {
+        "id": "13c6-b789-6862-445e",
+        "name": "Feigned Flight",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4d61-e27e-f944-3047"
+       },
+       {
+        "id": "ce1f-4619-cdbc-373b",
+        "name": "Hit and Run",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "080c-0df2-52c0-2099"
+       },
+       {
+        "id": "1be4-3e6d-e9f6-4b01",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "f459-5437-2c5d-3c21",
+        "name": "Vanguard",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f930-f7e6-2b9b-81d7"
+       },
+       {
+        "id": "559f-b99c-1bba-c8f2",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "a8f8-e2d5-ebc6-2603",
+        "name": "Smother",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "455b-d0c1-9d6f-ca61"
+       },
+       {
+        "id": "23ba-e775-9db5-823a",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "6e78-584a-6ac7-26b7",
+        "name": "Hellsteed",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "9860-9cdb-93f4-7f2f",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "1f8d-2324-97d2-f8b5",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "3eb2-abe0-e50d-9418",
+          "name": "Hellsteed",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "1"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "3"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "3"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "0"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "3"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": "Magical Attacks"
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Daemon, Mount"
+           }
+          ]
+         },
+         {
+          "id": "1cfa-91b0-9734-8a7b",
+          "name": "Succubi Tempters (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "2"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Daemon"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "25×50"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Uncommon"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "1a94-750f-b6e2-7095",
+          "name": "Magical Attacks",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "4cae-8942-e006-f5f9"
+         },
+         {
+          "id": "7d6d-c74e-1aef-a9d1",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "5b08-cfbd-cd5c-6ca5",
@@ -21500,7 +21786,7 @@
           "collective": true
          }
         ],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -23317,265 +23603,8 @@
       "value": 60
      }
     ],
-    "profiles": [
-     {
-      "id": "cdce-3f3a-fa7e-f30c",
-      "name": "Brazen Beasts (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "7"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "0fc0-de48-fa10-69cd",
-      "name": "Brazen Beasts (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "4"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "f4de-7a06-d812-350b",
-      "name": "Myrmidon",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "5"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "5"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Devastating Charge (2 At, 1 AP), Magical Attacks, Fury"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "fb1d-f758-eeaa-028d",
-      "name": "Beast",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "3"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Devastating Charge (1 St, 1 AP), Magical Attacks, Impact Hits (2), Stomp Attack (1)"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon, Mount"
-       }
-      ]
-     },
-     {
-      "id": "3236-0517-0fde-f8d2",
-      "name": "Brazen Beasts (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×75"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "c64e-5661-9b0b-3981",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "f9fc-20bf-99a6-bf44",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "4853-a14f-cfd2-6660",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "3485-e7e5-6e2f-fdb5",
-      "name": "Devastating Charge",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e052-9518-2b65-26d1"
-     },
-     {
-      "id": "9b5e-4f5b-109a-ee6f",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "92d4-faff-9648-7da4",
-      "name": "Fury",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "481c-0c06-eaa9-bad6"
-     },
-     {
-      "id": "b9c0-243f-c2cd-c2b6",
-      "name": "Impact Hits",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dea2-4563-ee71-4004"
-     },
-     {
-      "id": "133f-4efd-8df4-5b29",
-      "name": "Stomp Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ca2f-c97f-04de-88bd"
-     },
-     {
-      "id": "6e3d-a454-e7d8-568c",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     },
-     {
-      "id": "d8ed-6480-5bf0-e461",
-      "name": "Innate Weapons",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "9938-bd60-6310-69d8"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "7177-470e-2234-78ac",
@@ -23614,10 +23643,317 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "cdce-3f3a-fa7e-f30c",
+        "name": "Brazen Beasts (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "7"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "0fc0-de48-fa10-69cd",
+        "name": "Brazen Beasts (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "4"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": ""
+         }
+        ]
+       },
+       {
+        "id": "f4de-7a06-d812-350b",
+        "name": "Myrmidon",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "5"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "5"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Devastating Charge (2 At, 1 AP), Magical Attacks, Fury"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "c64e-5661-9b0b-3981",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "f9fc-20bf-99a6-bf44",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "4853-a14f-cfd2-6660",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "3485-e7e5-6e2f-fdb5",
+        "name": "Devastating Charge",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e052-9518-2b65-26d1"
+       },
+       {
+        "id": "92d4-faff-9648-7da4",
+        "name": "Fury",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "481c-0c06-eaa9-bad6"
+       },
+       {
+        "id": "6e3d-a454-e7d8-568c",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
-      "selectionEntries": [],
+      "selectionEntries": [
+       {
+        "id": "6abf-ab14-97f7-0764",
+        "name": "Beast",
+        "type": "mount",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "fd17-e99d-3a92-22ec",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "c5ad-a083-9aff-fe99",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [
+         {
+          "id": "fb1d-f758-eeaa-028d",
+          "name": "Beast",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "2"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "3"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "4"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "1"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "3"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": "Devastating Charge (1 St, 1 AP), Magical Attacks, Impact Hits (2), Stomp Attack (1)"
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Daemon, Mount"
+           }
+          ]
+         },
+         {
+          "id": "3236-0517-0fde-f8d2",
+          "name": "Brazen Beasts (Size)",
+          "typeId": "bd4b-dd44-f5fb-829b",
+          "typeName": "Size",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Height",
+            "typeId": "7606-12ef-d609-88b4",
+            "$text": "4"
+           },
+           {
+            "name": "Type",
+            "typeId": "9b0f-0212-9927-48e3",
+            "$text": "Daemon"
+           },
+           {
+            "name": "Base",
+            "typeId": "a8c6-520e-1327-a8bc",
+            "$text": "50×75"
+           },
+           {
+            "name": "Rarity",
+            "typeId": "117e-0987-cb97-4ccc",
+            "$text": "Uncommon"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "9b5e-4f5b-109a-ee6f",
+          "name": "Magical Attacks",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "4cae-8942-e006-f5f9"
+         },
+         {
+          "id": "b9c0-243f-c2cd-c2b6",
+          "name": "Impact Hits",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "dea2-4563-ee71-4004"
+         },
+         {
+          "id": "133f-4efd-8df4-5b29",
+          "name": "Stomp Attack",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "ca2f-c97f-04de-88bd"
+         },
+         {
+          "id": "d8ed-6480-5bf0-e461",
+          "name": "Innate Weapons",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "9938-bd60-6310-69d8"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "defaultAmount": 1,
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
       "selectionEntryGroups": [
        {
         "id": "70f5-cb98-74a2-d840",
@@ -23821,7 +24157,7 @@
           "collective": true
          }
         ],
-        "sortIndex": 1,
+        "sortIndex": 2,
         "collective": true
        }
       ],
@@ -24086,221 +24422,8 @@
       "value": 130
      }
     ],
-    "profiles": [
-     {
-      "id": "e9ad-b2f9-bff1-9a00",
-      "name": "Furies (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "10"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "10"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "5"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Light Troops, Fly, Skirmisher, Swiftstride"
-       }
-      ]
-     },
-     {
-      "id": "7329-2807-cabc-d7b8",
-      "name": "Furies (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "1"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "3"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Hard Target (1)"
-       }
-      ]
-     },
-     {
-      "id": "e727-7890-3d55-7312",
-      "name": "Fury",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "3"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Devastating Charge (1 St), Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "bdc4-6728-1bc9-ad58",
-      "name": "Furies (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "1"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "25×25"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "5f31-6d93-66a0-0208",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "0ff3-760f-138e-5038",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "9e3f-5bb4-48e9-cc48",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "df74-872f-a0c5-5bdc",
-      "name": "Fly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1c37-18a9-53c1-2636"
-     },
-     {
-      "id": "8dee-640e-efda-9b08",
-      "name": "Skirmisher",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e6d7-6601-01c8-5b11"
-     },
-     {
-      "id": "1b7f-cab3-2ed7-adbd",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "7fbc-0a40-79ef-2599",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "1f98-248e-1bc3-bab7",
-      "name": "Devastating Charge",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "e052-9518-2b65-26d1"
-     },
-     {
-      "id": "01d4-05f7-a71f-0d9d",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "1ead-295c-0bfa-18d5",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "dc4e-f159-e4af-9208",
@@ -24339,8 +24462,221 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "e9ad-b2f9-bff1-9a00",
+        "name": "Furies (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "10"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "10"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "5"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Light Troops, Fly, Skirmisher, Swiftstride"
+         }
+        ]
+       },
+       {
+        "id": "7329-2807-cabc-d7b8",
+        "name": "Furies (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "1"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "3"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Hard Target (1)"
+         }
+        ]
+       },
+       {
+        "id": "e727-7890-3d55-7312",
+        "name": "Fury",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "1"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "3"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "1"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Devastating Charge (1 St), Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "bdc4-6728-1bc9-ad58",
+        "name": "Furies (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "1"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "25×25"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "5f31-6d93-66a0-0208",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "0ff3-760f-138e-5038",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "9e3f-5bb4-48e9-cc48",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "df74-872f-a0c5-5bdc",
+        "name": "Fly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1c37-18a9-53c1-2636"
+       },
+       {
+        "id": "8dee-640e-efda-9b08",
+        "name": "Skirmisher",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e6d7-6601-01c8-5b11"
+       },
+       {
+        "id": "1b7f-cab3-2ed7-adbd",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "7fbc-0a40-79ef-2599",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "1f98-248e-1bc3-bab7",
+        "name": "Devastating Charge",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "e052-9518-2b65-26d1"
+       },
+       {
+        "id": "01d4-05f7-a71f-0d9d",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "1ead-295c-0bfa-18d5",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
@@ -24616,214 +24952,8 @@
       "value": 110
      }
     ],
-    "profiles": [
-     {
-      "id": "4335-57a1-4f85-310b",
-      "name": "Veil Serpents (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "9"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Swiftstride, Light Troops, Fly, Morphlings"
-       }
-      ]
-     },
-     {
-      "id": "e68f-e8df-41de-970e",
-      "name": "Veil Serpents (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "3"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "4"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Hard Target (1)"
-       }
-      ]
-     },
-     {
-      "id": "4379-700e-a71b-9e25",
-      "name": "Veil Serpent",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "3"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "4"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "0"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "b9c9-f43c-baf6-ac33",
-      "name": "Veil Serpents (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "763d-0b8f-b912-e565",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "f641-0ca8-bf6d-493f",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "0888-3118-53ea-3b23",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "0504-ffc7-1a46-1d19",
-      "name": "Light Troops",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "dd07-03b5-b815-4b63"
-     },
-     {
-      "id": "844a-dfc5-80b9-0236",
-      "name": "Fly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1c37-18a9-53c1-2636"
-     },
-     {
-      "id": "7748-06d8-9d68-fced",
-      "name": "Morphlings",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "bf41-5b5b-c543-8608"
-     },
-     {
-      "id": "7749-95c2-ffe7-3356",
-      "name": "Hard Target",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "5edf-edf0-2a52-ca2d"
-     },
-     {
-      "id": "0649-d786-5f07-02cc",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "9422-65e8-cbbf-95f1",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "5c4a-9803-8687-3f64",
@@ -24862,8 +24992,214 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "4335-57a1-4f85-310b",
+        "name": "Veil Serpents (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "9"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "6"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "7"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Swiftstride, Light Troops, Fly, Morphlings"
+         }
+        ]
+       },
+       {
+        "id": "e68f-e8df-41de-970e",
+        "name": "Veil Serpents (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "3"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "4"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Hard Target (1)"
+         }
+        ]
+       },
+       {
+        "id": "4379-700e-a71b-9e25",
+        "name": "Veil Serpent",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "3"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "4"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "4"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "0"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "b9c9-f43c-baf6-ac33",
+        "name": "Veil Serpents (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "3"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "40×40"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "763d-0b8f-b912-e565",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "f641-0ca8-bf6d-493f",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "0888-3118-53ea-3b23",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "0504-ffc7-1a46-1d19",
+        "name": "Light Troops",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "dd07-03b5-b815-4b63"
+       },
+       {
+        "id": "844a-dfc5-80b9-0236",
+        "name": "Fly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1c37-18a9-53c1-2636"
+       },
+       {
+        "id": "7748-06d8-9d68-fced",
+        "name": "Morphlings",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "bf41-5b5b-c543-8608"
+       },
+       {
+        "id": "7749-95c2-ffe7-3356",
+        "name": "Hard Target",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "0649-d786-5f07-02cc",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "9422-65e8-cbbf-95f1",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [],
@@ -25227,221 +25563,8 @@
       "value": 30
      }
     ],
-    "profiles": [
-     {
-      "id": "9ab5-9578-2e19-82a0",
-      "name": "Bloat Flies (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "7"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "7"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "8"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": "Supernal, Fearless, Fly, Swiftstride, Acid Blood"
-       }
-      ]
-     },
-     {
-      "id": "2095-361a-d139-a0db",
-      "name": "Bloat Flies (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "4"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "4"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": "Aegis (5+, against Magical Attacks), Regeneration (5+)"
-       }
-      ]
-     },
-     {
-      "id": "ca52-eebc-cdd8-c783",
-      "name": "Bloat Fly",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "2"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "5"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "6"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "3"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "4"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Stomp Attack (1), Magical Attacks"
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Daemon"
-       }
-      ]
-     },
-     {
-      "id": "3093-86b0-3007-93a5",
-      "name": "Bloat Flies (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "4"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Daemon"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "50×75"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": "Uncommon"
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "c4d5-b666-1abe-38c4",
-      "name": "Supernal",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ad50-5d09-0885-b709"
-     },
-     {
-      "id": "41c1-1d51-21bc-68d3",
-      "name": "Fearless",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1828-bd11-103d-91e1"
-     },
-     {
-      "id": "b9c4-8bea-ef00-c25e",
-      "name": "Fly",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1c37-18a9-53c1-2636"
-     },
-     {
-      "id": "b33a-cee4-893b-7e08",
-      "name": "Swiftstride",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "1ab5-0ba0-b596-ace7"
-     },
-     {
-      "id": "5636-a5d8-537b-c34e",
-      "name": "Acid Blood",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "f1ee-b191-03d8-a558"
-     },
-     {
-      "id": "48b3-0cca-d2c3-126c",
-      "name": "Aegis",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "8bcb-afaf-0f53-3431"
-     },
-     {
-      "id": "06b8-c0bb-be5a-0269",
-      "name": "Regeneration",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "27da-1759-8c76-baa6"
-     },
-     {
-      "id": "8049-36f3-ee72-7cdf",
-      "name": "Stomp Attack",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "ca2f-c97f-04de-88bd"
-     },
-     {
-      "id": "7ffa-42e4-7bd5-4da6",
-      "name": "Magical Attacks",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "4cae-8942-e006-f5f9"
-     },
-     {
-      "id": "ff80-49e0-8d0c-4e83",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
+    "profiles": [],
+    "infoLinks": [],
     "selectionEntries": [
      {
       "id": "6d36-517b-f088-1248",
@@ -25480,8 +25603,221 @@
        }
       ],
       "modifiers": [],
-      "profiles": [],
-      "infoLinks": [],
+      "profiles": [
+       {
+        "id": "9ab5-9578-2e19-82a0",
+        "name": "Bloat Flies (Global)",
+        "typeId": "aa48-a922-168f-d5fe",
+        "typeName": "Global",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Adv",
+          "typeId": "0b36-bfc8-41dc-6db8",
+          "$text": "7"
+         },
+         {
+          "name": "Mar",
+          "typeId": "11fe-c01b-c45c-fcf8",
+          "$text": "7"
+         },
+         {
+          "name": "Dis",
+          "typeId": "e412-d143-2a9a-61e0",
+          "$text": "8"
+         },
+         {
+          "name": "Rules",
+          "typeId": "e392-8a7b-7124-ec0d",
+          "$text": "Supernal, Fearless, Fly, Swiftstride, Acid Blood"
+         }
+        ]
+       },
+       {
+        "id": "2095-361a-d139-a0db",
+        "name": "Bloat Flies (Defensive)",
+        "typeId": "14a5-b185-3b44-763b",
+        "typeName": "Defensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "HP",
+          "typeId": "78b5-478f-5615-ac81",
+          "$text": "4"
+         },
+         {
+          "name": "Def",
+          "typeId": "5db0-f74c-6a2c-a250",
+          "$text": "3"
+         },
+         {
+          "name": "Res",
+          "typeId": "29f8-d428-4518-3108",
+          "$text": "4"
+         },
+         {
+          "name": "Arm",
+          "typeId": "00fe-697b-eb17-c206",
+          "$text": "0"
+         },
+         {
+          "name": "Aeg",
+          "typeId": "b65c-53d9-5645-341f",
+          "$text": ""
+         },
+         {
+          "name": "Rules",
+          "typeId": "d032-8573-dd82-d2a7",
+          "$text": "Aegis (5+, against Magical Attacks), Regeneration (5+)"
+         }
+        ]
+       },
+       {
+        "id": "ca52-eebc-cdd8-c783",
+        "name": "Bloat Fly",
+        "typeId": "462e-145c-42af-7edc",
+        "typeName": "Offensive",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Att",
+          "typeId": "7e95-b3fb-a6d6-4cd9",
+          "$text": "2"
+         },
+         {
+          "name": "Off",
+          "typeId": "a8e8-7a43-565f-29b5",
+          "$text": "5"
+         },
+         {
+          "name": "Str",
+          "typeId": "12ea-f281-a7e1-3e1f",
+          "$text": "6"
+         },
+         {
+          "name": "AP",
+          "typeId": "5b66-2cef-4a23-a567",
+          "$text": "3"
+         },
+         {
+          "name": "Agi",
+          "typeId": "7a92-d09f-2671-cf10",
+          "$text": "4"
+         },
+         {
+          "name": "Rules",
+          "typeId": "b4ba-0abc-3bab-171b",
+          "$text": "Stomp Attack (1), Magical Attacks"
+         },
+         {
+          "name": "Tags",
+          "typeId": "6079-9ce5-90ed-8c32",
+          "$text": "Daemon"
+         }
+        ]
+       },
+       {
+        "id": "3093-86b0-3007-93a5",
+        "name": "Bloat Flies (Size)",
+        "typeId": "bd4b-dd44-f5fb-829b",
+        "typeName": "Size",
+        "hidden": false,
+        "characteristics": [
+         {
+          "name": "Height",
+          "typeId": "7606-12ef-d609-88b4",
+          "$text": "4"
+         },
+         {
+          "name": "Type",
+          "typeId": "9b0f-0212-9927-48e3",
+          "$text": "Daemon"
+         },
+         {
+          "name": "Base",
+          "typeId": "a8c6-520e-1327-a8bc",
+          "$text": "50×75"
+         },
+         {
+          "name": "Rarity",
+          "typeId": "117e-0987-cb97-4ccc",
+          "$text": "Uncommon"
+         }
+        ]
+       }
+      ],
+      "infoLinks": [
+       {
+        "id": "c4d5-b666-1abe-38c4",
+        "name": "Supernal",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ad50-5d09-0885-b709"
+       },
+       {
+        "id": "41c1-1d51-21bc-68d3",
+        "name": "Fearless",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1828-bd11-103d-91e1"
+       },
+       {
+        "id": "b9c4-8bea-ef00-c25e",
+        "name": "Fly",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1c37-18a9-53c1-2636"
+       },
+       {
+        "id": "b33a-cee4-893b-7e08",
+        "name": "Swiftstride",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "5636-a5d8-537b-c34e",
+        "name": "Acid Blood",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "f1ee-b191-03d8-a558"
+       },
+       {
+        "id": "48b3-0cca-d2c3-126c",
+        "name": "Aegis",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8bcb-afaf-0f53-3431"
+       },
+       {
+        "id": "06b8-c0bb-be5a-0269",
+        "name": "Regeneration",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "27da-1759-8c76-baa6"
+       },
+       {
+        "id": "8049-36f3-ee72-7cdf",
+        "name": "Stomp Attack",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "ca2f-c97f-04de-88bd"
+       },
+       {
+        "id": "7ffa-42e4-7bd5-4da6",
+        "name": "Magical Attacks",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "4cae-8942-e006-f5f9"
+       },
+       {
+        "id": "ff80-49e0-8d0c-4e83",
+        "name": "Hand Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "cc6a-85fb-a07e-e781"
+       }
+      ],
       "categoryLinks": [],
       "selectionEntries": [],
       "selectionEntryGroups": [
