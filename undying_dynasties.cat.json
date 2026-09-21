@@ -229,98 +229,6 @@
     ]
    },
    {
-    "id": "2cbf-7cb9-e6a9-c39a",
-    "name": "Pharaoh General",
-    "comment": "pharaoh_general",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "d1e5-6af8-da70-ddc3",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "min",
-      "shared": true,
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "d1e5-6af8-da70-ddc3",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "e47f-3496-4422-34e1",
-    "name": "Halberd",
-    "comment": "halberd",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4251-a9ca-1be7-86a0",
-    "name": "Lance",
-    "comment": "lance",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "714b-bdbe-eb1e-f891",
-    "name": "Barrow Legion",
-    "comment": "barrow_legion",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "dba2-6c83-6801-b61a",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "min",
-      "shared": true,
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "dba2-6c83-6801-b61a",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
     "id": "22e7-683e-4dae-df88",
     "name": "Specialized Army",
     "comment": "specialized_army",
@@ -337,62 +245,24 @@
     "modifiers": []
    },
    {
-    "id": "bd20-e092-aae7-7523",
-    "name": "Terracotta Army",
-    "comment": "terracotta",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "c42a-ff89-43bd-2bc7",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "min",
-      "shared": true,
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "c42a-ff89-43bd-2bc7",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "e4f6-8aaa-e455-8e9c",
-    "name": "Attached",
-    "comment": "attached",
+    "id": "ce1a-c963-4fa2-6515",
+    "name": "Barrow Legion",
+    "comment": "barrowLegion",
     "hidden": true,
     "constraints": [],
     "modifiers": []
    },
    {
-    "id": "9de7-9a8f-8823-2091",
-    "name": "Harbinger Amuut",
-    "comment": "harbinger_amuut",
+    "id": "95c4-891a-2e4f-4ded",
+    "name": "Longbow",
+    "comment": "archer_longbow",
     "hidden": true,
     "constraints": [
      {
-      "id": "fc48-a28c-0add-a79c",
+      "id": "e878-9569-729f-1b04",
       "field": "selections",
       "scope": "roster",
-      "value": 2,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
@@ -402,10 +272,31 @@
     ],
     "modifiers": [
      {
+      "type": "increment",
+      "field": "e878-9569-729f-1b04",
+      "value": 1,
+      "conditions": [],
+      "conditionGroups": [],
+      "repeats": [
+       {
+        "field": "selections",
+        "scope": "roster",
+        "value": 1,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "childId": "34e2-71d9-54fa-0a7c",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "fc48-a28c-0add-a79c",
+      "field": "e878-9569-729f-1b04",
       "conditions": [
        {
         "type": "instanceOf",
@@ -421,33 +312,9 @@
     ]
    },
    {
-    "id": "ce1a-c963-4fa2-6515",
-    "name": "Barrow Legion",
-    "comment": "barrowLegion",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "d140-5c01-481c-3d3b",
-    "name": "Longbow",
-    "comment": "longbow",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "31a4-1a73-082e-1ba9",
-    "name": "Mount",
-    "comment": "tag_Mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "a8fb-40ff-2487-c252",
-    "name": "Construct",
-    "comment": "tag_Construct",
+    "id": "7858-3ffd-22b9-e702",
+    "name": "Ambush",
+    "comment": "ambushopenTerrain",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -461,13 +328,13 @@
     "modifiers": []
    },
    {
-    "id": "5c7b-70a9-8e92-8788",
+    "id": "bd10-234c-3d8a-4336",
     "name": "Tomb Harbinger",
     "hidden": true,
     "comment": "Common",
     "constraints": [
      {
-      "id": "5333-fb67-a863-156e",
+      "id": "5b4f-586c-1ed0-2f85",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -483,7 +350,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "5333-fb67-a863-156e",
+      "field": "5b4f-586c-1ed0-2f85",
       "value": 1,
       "repeats": [
        {
@@ -505,7 +372,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "5333-fb67-a863-156e",
+      "field": "5b4f-586c-1ed0-2f85",
       "conditions": [
        {
         "type": "instanceOf",
@@ -521,13 +388,13 @@
     ]
    },
    {
-    "id": "d85c-703b-025d-aff4",
+    "id": "1d65-93ff-52dd-bbaa",
     "name": "Deathless Noble",
     "hidden": true,
     "comment": "Common",
     "constraints": [
      {
-      "id": "525b-97e9-33ed-bcc7",
+      "id": "f6c2-e498-6f90-af0e",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -543,7 +410,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "525b-97e9-33ed-bcc7",
+      "field": "f6c2-e498-6f90-af0e",
       "value": 1,
       "repeats": [
        {
@@ -565,7 +432,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "525b-97e9-33ed-bcc7",
+      "field": "f6c2-e498-6f90-af0e",
       "conditions": [
        {
         "type": "instanceOf",
@@ -581,13 +448,13 @@
     ]
    },
    {
-    "id": "47bb-376d-63c6-4982",
+    "id": "b0a0-545d-fb58-bc9d",
     "name": "Tomb Architect",
     "hidden": true,
     "comment": "Rare",
     "constraints": [
      {
-      "id": "fe9b-d007-b576-f839",
+      "id": "c721-d7d5-25ac-3190",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -603,7 +470,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "fe9b-d007-b576-f839",
+      "field": "c721-d7d5-25ac-3190",
       "value": 1,
       "repeats": [
        {
@@ -625,7 +492,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "fe9b-d007-b576-f839",
+      "field": "c721-d7d5-25ac-3190",
       "conditions": [
        {
         "type": "instanceOf",
@@ -641,13 +508,13 @@
     ]
    },
    {
-    "id": "ab76-3335-b7ee-6270",
+    "id": "2032-f915-f992-c424",
     "name": "Soul Conduit and Hierophant",
     "hidden": true,
     "comment": "Uncommon",
     "constraints": [
      {
-      "id": "25fa-60c9-8260-7aab",
+      "id": "b2b0-ae02-3fda-fa68",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -663,7 +530,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "25fa-60c9-8260-7aab",
+      "field": "b2b0-ae02-3fda-fa68",
       "value": 1,
       "repeats": [
        {
@@ -685,7 +552,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "25fa-60c9-8260-7aab",
+      "field": "b2b0-ae02-3fda-fa68",
       "conditions": [
        {
         "type": "instanceOf",
@@ -701,13 +568,13 @@
     ]
    },
    {
-    "id": "b99e-b477-41d1-bbbc",
+    "id": "4ca9-8378-fea6-6277",
     "name": "Barrow Legion and Ghastly Swarm",
     "hidden": true,
     "comment": "Rare",
     "constraints": [
      {
-      "id": "443c-e1ac-83ac-ddf4",
+      "id": "f132-baf3-1d02-a4b3",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -723,7 +590,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "443c-e1ac-83ac-ddf4",
+      "field": "f132-baf3-1d02-a4b3",
       "value": 1,
       "repeats": [
        {
@@ -745,7 +612,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "443c-e1ac-83ac-ddf4",
+      "field": "f132-baf3-1d02-a4b3",
       "conditions": [
        {
         "type": "instanceOf",
@@ -1654,17 +1521,17 @@
         ],
         "categoryLinks": [
          {
+          "id": "23e2-14f8-dd02-e72e",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "4513-0d6f-789a-ec62",
           "name": "General",
           "hidden": true,
           "targetId": "bf19-2ae3-58d2-5ff5",
-          "primary": false
-         },
-         {
-          "id": "0751-251d-7941-9c91",
-          "name": "Pharaoh General",
-          "hidden": true,
-          "targetId": "2cbf-7cb9-e6a9-c39a",
           "primary": false
          }
         ],
@@ -1851,6 +1718,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "0a96-1e46-339c-3870",
       "sortIndex": 2,
       "collective": true
      },
@@ -1910,15 +1778,7 @@
           "targetId": "cfbb-118b-629b-24b9"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "6b9a-8fc0-935b-202f",
-          "name": "Shield",
-          "hidden": true,
-          "targetId": "78e6-b065-4446-c3ec",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [
@@ -1991,7 +1851,24 @@
           ],
           "modifiers": [],
           "profiles": [],
-          "infoLinks": [],
+          "infoLinks": [
+           {
+            "id": "8a2d-8862-76b1-0e44",
+            "name": "Great Aspis Bow",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "09b2-6159-3662-06b8",
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "ac5e-bed6-2a99-99d3",
+              "value": "4+",
+              "conditions": [],
+              "conditionGroups": []
+             }
+            ]
+           }
+          ],
           "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
@@ -2208,15 +2085,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "eefa-fec9-e69f-8f44",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -2304,15 +2173,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "063f-4daf-2689-8653",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -2349,6 +2210,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 4,
           "collective": true
          },
@@ -2579,7 +2441,20 @@
           "includeChildSelections": false,
           "includeChildForces": false,
           "shared": true,
-          "percentValue": false
+          "percentValue": false,
+          "message": "{self}: a Pharaoh must be the General; other units in the Army List must be upgraded with Barrow Legion"
+         },
+         {
+          "id": "4d8a-fb3a-d6bd-bae8",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "6dab-7c70-a193-ddc3"
          },
          {
           "id": "87b2-cabe-8c9f-7e9b",
@@ -2594,30 +2469,6 @@
           "childId": "0844-57b9-7c37-aab3"
          },
          {
-          "id": "e359-e006-22fe-25bb",
-          "field": "selections",
-          "scope": "roster",
-          "value": 0,
-          "type": "max",
-          "includeChildSelections": true,
-          "includeChildForces": true,
-          "shared": true,
-          "percentValue": false,
-          "childId": "52a1-6ffc-f6a0-6aa7"
-         },
-         {
-          "id": "2ef7-78ce-ac94-d696",
-          "field": "selections",
-          "scope": "roster",
-          "value": 0,
-          "type": "max",
-          "includeChildSelections": true,
-          "includeChildForces": true,
-          "shared": true,
-          "percentValue": false,
-          "childId": "b9c1-5c30-13e9-8d07"
-         },
-         {
           "id": "ad7e-9420-26e7-ff3d",
           "field": "selections",
           "scope": "roster",
@@ -2627,10 +2478,30 @@
           "includeChildForces": true,
           "shared": true,
           "percentValue": false,
-          "childId": "bd20-e092-aae7-7523"
+          "childId": "8f83-3bf6-24ea-95fd"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "4d8a-fb3a-d6bd-bae8",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "55fa-a36d-9e56-1ea5",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -2643,13 +2514,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "211c-bcbc-038c-ca10",
-          "name": "Barrow Legion",
-          "hidden": true,
-          "targetId": "714b-bdbe-eb1e-f891",
-          "primary": false
-         },
-         {
           "id": "ce4a-e9c9-4b1c-be58",
           "name": "Specialized Army",
           "hidden": true,
@@ -2660,6 +2524,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: a Pharaoh must be the General; other units in the Army List must be upgraded with Barrow Legion",
         "sortIndex": 1,
         "collective": true
        },
@@ -2685,7 +2550,20 @@
           "includeChildSelections": false,
           "includeChildForces": false,
           "shared": true,
-          "percentValue": false
+          "percentValue": false,
+          "message": "{self}: a Pharaoh must be the General; other units in the Army List must be upgraded with Terracotta Army"
+         },
+         {
+          "id": "181b-3ea0-0b42-1498",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "6dab-7c70-a193-ddc3"
          },
          {
           "id": "21f2-74ee-44a4-a7c5",
@@ -2697,10 +2575,30 @@
           "includeChildForces": true,
           "shared": true,
           "percentValue": false,
-          "childId": "714b-bdbe-eb1e-f891"
+          "childId": "55fa-a36d-9e56-1ea5"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "181b-3ea0-0b42-1498",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "8f83-3bf6-24ea-95fd",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -2713,13 +2611,6 @@
         ],
         "categoryLinks": [
          {
-          "id": "bcc8-3512-660b-8d99",
-          "name": "Terracotta Army",
-          "hidden": true,
-          "targetId": "bd20-e092-aae7-7523",
-          "primary": false
-         },
-         {
           "id": "ed0c-7ba3-c297-de09",
           "name": "Specialized Army",
           "hidden": true,
@@ -2730,6 +2621,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: a Pharaoh must be the General; other units in the Army List must be upgraded with Terracotta Army",
         "sortIndex": 2,
         "collective": true
        }
@@ -3115,13 +3007,6 @@
           "hidden": true,
           "targetId": "cda6-3d55-eecf-4914",
           "primary": false
-         },
-         {
-          "id": "8bcf-55e6-6a3b-ea44",
-          "name": "Attached",
-          "hidden": true,
-          "targetId": "e4f6-8aaa-e455-8e9c",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -3167,6 +3052,13 @@
          }
         ],
         "categoryLinks": [
+         {
+          "id": "ead7-99da-4119-54c3",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
          {
           "id": "7dbd-40cb-a014-c542",
           "name": "General",
@@ -3318,6 +3210,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Deathless Noble and Tomb Harbinger only",
         "sortIndex": 4,
         "collective": true
        }
@@ -3498,6 +3391,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "e253-8e39-06ee-4017",
       "sortIndex": 2,
       "collective": true
      },
@@ -3614,7 +3508,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "38f2-7cb1-77e0-3d7b",
+            "childId": "499f-aeb4-d942-d4bc",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3706,15 +3600,7 @@
           "conditionGroups": []
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "758c-047d-f9ad-1c34",
-          "name": "Harbinger Amuut",
-          "hidden": true,
-          "targetId": "9de7-9a8f-8823-2091",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "sortIndex": 4,
         "collective": true
        },
@@ -3774,7 +3660,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "b24b-df70-ccb1-eb91",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3809,6 +3695,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "9d7f-8034-d195-9bb4",
       "sortIndex": 3,
       "collective": true
      },
@@ -3882,15 +3769,7 @@
           ]
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "c2a8-05fe-0cb3-1434",
-          "name": "Longbow",
-          "hidden": true,
-          "targetId": "d140-5c01-481c-3d3b",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -3933,15 +3812,7 @@
           "targetId": "cfbb-118b-629b-24b9"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "fcfb-76d1-2300-4ba4",
-          "name": "Shield",
-          "hidden": true,
-          "targetId": "78e6-b065-4446-c3ec",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [
@@ -4177,15 +4048,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "0244-2fea-28df-b807",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -4341,15 +4204,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "91df-2c82-f60c-2e4a",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -4386,6 +4241,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 5,
           "collective": true
          }
@@ -4556,7 +4412,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "bd20-e092-aae7-7523",
+            "childId": "8f83-3bf6-24ea-95fd",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -4590,9 +4446,41 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "5296-f948-5291-e305",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "8f83-3bf6-24ea-95fd"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "5296-f948-5291-e305",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "af8b-8751-af6f-8d9e",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -4607,6 +4495,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -4644,7 +4533,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -4678,6 +4567,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "bff2-bee2-64e3-a94a",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -5004,6 +4905,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "bff2-bee2-64e3-a94a",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "b99f-b654-fd15-af42",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -5049,6 +4969,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -5142,7 +5063,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "5c7b-70a9-8e92-8788",
+      "value": "bd10-234c-3d8a-4336",
       "conditions": [
        {
         "type": "atLeast",
@@ -5161,7 +5082,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "d85c-703b-025d-aff4",
+      "value": "1d65-93ff-52dd-bbaa",
       "conditions": [
        {
         "type": "atLeast",
@@ -5180,7 +5101,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "47bb-376d-63c6-4982",
+      "value": "b0a0-545d-fb58-bc9d",
       "conditions": [
        {
         "type": "atLeast",
@@ -5473,6 +5394,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "fa9f-025b-a744-1dc8",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "3f4c-0974-6437-1386",
           "name": "General",
           "hidden": true,
@@ -5637,6 +5565,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "8307-1302-e637-b9e6",
       "sortIndex": 2,
       "collective": true
      },
@@ -5776,6 +5705,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "8703-0837-9dee-fef3",
       "sortIndex": 3,
       "collective": true
      },
@@ -5807,27 +5737,7 @@
         "percentValue": false
        }
       ],
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "16ce-21ba-d582-46c6",
-        "value": 2,
-        "conditions": [
-         {
-          "type": "atLeast",
-          "value": 1,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "3ab0-9185-e522-de12",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
-       }
-      ],
+      "modifiers": [],
       "selectionEntries": [
        {
         "id": "0be0-4274-5a68-f167",
@@ -5900,7 +5810,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5919,7 +5829,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5938,7 +5848,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5957,7 +5867,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5976,7 +5886,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5995,7 +5905,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6085,7 +5995,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6104,7 +6014,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6123,7 +6033,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6142,7 +6052,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6161,7 +6071,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6180,7 +6090,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6270,7 +6180,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6289,7 +6199,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6308,7 +6218,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6327,7 +6237,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6346,7 +6256,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6365,7 +6275,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6388,6 +6298,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "0be0-4274-5a68-f167",
       "sortIndex": 4,
       "collective": true
      },
@@ -6409,16 +6320,36 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ac13-caba-4a5c-c406",
+        "value": 200,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "c04d-1882-6246-277c",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
-        "id": "90c2-7f14-c6d3-dd31",
+        "id": "c072-e8e8-783a-0070",
         "name": "Weapon",
         "hidden": false,
         "constraints": [
          {
-          "id": "60ee-df16-a3b4-6afc",
+          "id": "9be4-9715-19a3-ded2",
           "field": "selections",
           "scope": "parent",
           "value": 1,
@@ -6429,7 +6360,7 @@
           "percentValue": false
          },
          {
-          "id": "1ad2-1c32-b6af-ef7c",
+          "id": "d760-a761-6fc7-d704",
           "field": "selections",
           "scope": "parent",
           "value": 1,
@@ -6443,7 +6374,7 @@
         "modifiers": [],
         "selectionEntries": [
          {
-          "id": "f7f1-a5e1-b32e-d1fc",
+          "id": "b8af-0576-b641-296a",
           "name": "Hand Weapon",
           "type": "upgrade",
           "hidden": false,
@@ -6456,7 +6387,7 @@
           ],
           "constraints": [
            {
-            "id": "7882-88c0-0934-4d3e",
+            "id": "ae9f-beee-b01a-296a",
             "field": "selections",
             "scope": "parent",
             "value": 1,
@@ -6471,7 +6402,7 @@
           "profiles": [],
           "infoLinks": [
            {
-            "id": "5f7f-4e5e-5aab-4e8b",
+            "id": "7b3e-5f6a-3d0e-5226",
             "name": "Hand Weapon",
             "hidden": false,
             "type": "profile",
@@ -6483,14 +6414,14 @@
           "selectionEntryGroups": [],
           "entryLinks": [
            {
-            "id": "5cca-5335-7278-d7d8",
+            "id": "ff1b-c34e-293c-b8e0",
             "name": "Hand Weapon Enchant",
             "hidden": false,
             "type": "selectionEntryGroup",
             "targetId": "0796-609a-5a68-aab1",
             "constraints": [
              {
-              "id": "9af4-ee40-2d18-881c",
+              "id": "b3d4-7ed5-ac9d-59fd",
               "field": "selections",
               "scope": "parent",
               "value": 1,
@@ -6513,7 +6444,6 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "collapsible": true,
         "sortIndex": 1,
         "collective": true
        }
@@ -6703,7 +6633,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "bd20-e092-aae7-7523",
+            "childId": "8f83-3bf6-24ea-95fd",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -6737,9 +6667,41 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "5a26-afb0-a244-8b9a",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "8f83-3bf6-24ea-95fd"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "5a26-afb0-a244-8b9a",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "c3b9-d16e-6a52-e315",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -6754,6 +6716,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -6791,7 +6754,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -6825,6 +6788,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "2576-ca11-093f-150e",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -7151,6 +7126,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "2576-ca11-093f-150e",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "fafa-dd93-ffe7-0b4b",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -7196,6 +7190,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -7289,7 +7284,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "ab76-3335-b7ee-6270",
+      "value": "2032-f915-f992-c424",
       "conditions": [
        {
         "type": "atLeast",
@@ -7333,13 +7328,6 @@
       "name": "Wizard",
       "hidden": true,
       "targetId": "6c7e-be70-e418-112c",
-      "primary": false
-     },
-     {
-      "id": "37e3-9bdc-e041-0599",
-      "name": "Wizard Master",
-      "hidden": true,
-      "targetId": "c04d-1882-6246-277c",
       "primary": false
      },
      {
@@ -7682,310 +7670,1074 @@
     "selectionEntries": [],
     "selectionEntryGroups": [
      {
-      "id": "5eda-7b5f-2332-2c98",
-      "name": "Spells",
+      "id": "3528-d6c4-12ae-fb6e",
+      "name": "Weapon",
       "hidden": false,
       "constraints": [
        {
-        "id": "1b58-b91f-99d3-0b37",
+        "id": "40c1-a066-9d1a-c1f5",
         "field": "selections",
         "scope": "parent",
-        "value": 6,
+        "value": 1,
         "type": "min",
-        "includeChildSelections": true,
+        "includeChildSelections": false,
         "includeChildForces": false,
         "shared": true,
         "percentValue": false
        },
        {
-        "id": "4381-7e08-b48c-6953",
+        "id": "4565-acb1-b3da-851d",
         "field": "selections",
         "scope": "parent",
-        "value": 6,
+        "value": 1,
         "type": "max",
-        "includeChildSelections": true,
+        "includeChildSelections": false,
         "includeChildForces": false,
         "shared": true,
         "percentValue": false
        }
       ],
       "modifiers": [],
-      "selectionEntries": [],
-      "entryLinks": [],
-      "selectionEntryGroups": [
+      "selectionEntries": [
        {
-        "id": "8206-bbef-8d98-16bd",
-        "name": "Evocation",
+        "id": "06eb-7295-0073-6a62",
+        "name": "Hand Weapon",
+        "type": "upgrade",
         "hidden": false,
-        "constraints": [],
-        "modifiers": [],
-        "selectionEntries": [
+        "costs": [
          {
-          "id": "c613-1c9c-7f20-858f",
-          "name": "Whispers of the Veil",
-          "type": "upgrade",
-          "hidden": false,
-          "costs": [
-           {
-            "name": "pts",
-            "typeId": "ea90-6996-33df-993c",
-            "value": 0
-           }
-          ],
-          "constraints": [
-           {
-            "id": "f7d1-b0d2-6688-f769",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [
-           {
-            "id": "5b8a-29dd-f006-7b25",
-            "name": "Whispers of the Veil",
-            "hidden": false,
-            "type": "profile",
-            "targetId": "6d62-d131-6798-ba17",
-            "modifiers": []
-           }
-          ],
-          "categoryLinks": [],
-          "entryLinks": [],
-          "selectionEntryGroups": [],
-          "sortIndex": 1,
-          "collective": true
-         },
-         {
-          "id": "81f9-9606-c03b-e60f",
-          "name": "Danse Macabre",
-          "type": "upgrade",
-          "hidden": false,
-          "costs": [
-           {
-            "name": "pts",
-            "typeId": "ea90-6996-33df-993c",
-            "value": 0
-           }
-          ],
-          "constraints": [
-           {
-            "id": "0a2e-196d-9bfc-83dd",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [
-           {
-            "id": "9019-ab1a-60f1-b4c7",
-            "name": "Danse Macabre",
-            "hidden": false,
-            "type": "profile",
-            "targetId": "a3ea-8884-7252-5ac6",
-            "modifiers": []
-           }
-          ],
-          "categoryLinks": [],
-          "entryLinks": [],
-          "selectionEntryGroups": [],
-          "sortIndex": 2,
-          "collective": true
-         },
-         {
-          "id": "cf28-42b2-2169-3f8b",
-          "name": "Chorus of the Damned",
-          "type": "upgrade",
-          "hidden": false,
-          "costs": [
-           {
-            "name": "pts",
-            "typeId": "ea90-6996-33df-993c",
-            "value": 0
-           }
-          ],
-          "constraints": [
-           {
-            "id": "cb2a-b70d-8c9c-6e64",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [
-           {
-            "id": "5653-1ca0-afd6-64af",
-            "name": "Chorus of the Damned",
-            "hidden": false,
-            "type": "profile",
-            "targetId": "d3ff-ac49-5d6c-9ae7",
-            "modifiers": []
-           }
-          ],
-          "categoryLinks": [],
-          "entryLinks": [],
-          "selectionEntryGroups": [],
-          "sortIndex": 3,
-          "collective": true
-         },
-         {
-          "id": "b819-1bfc-7b6a-8546",
-          "name": "Touch of the Reaper",
-          "type": "upgrade",
-          "hidden": false,
-          "costs": [
-           {
-            "name": "pts",
-            "typeId": "ea90-6996-33df-993c",
-            "value": 0
-           }
-          ],
-          "constraints": [
-           {
-            "id": "4db3-37c0-d343-7d23",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [
-           {
-            "id": "7ff6-2cbf-9d3c-be9b",
-            "name": "Touch of the Reaper",
-            "hidden": false,
-            "type": "profile",
-            "targetId": "c266-3ee4-68d8-7c27",
-            "modifiers": []
-           }
-          ],
-          "categoryLinks": [],
-          "entryLinks": [],
-          "selectionEntryGroups": [],
-          "sortIndex": 4,
-          "collective": true
-         },
-         {
-          "id": "25bd-2436-5773-c1d9",
-          "name": "Spectral Blades",
-          "type": "upgrade",
-          "hidden": false,
-          "costs": [
-           {
-            "name": "pts",
-            "typeId": "ea90-6996-33df-993c",
-            "value": 0
-           }
-          ],
-          "constraints": [
-           {
-            "id": "a9be-9b68-8c40-4d3c",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [
-           {
-            "id": "3692-a5ce-8f44-b1cf",
-            "name": "Spectral Blades",
-            "hidden": false,
-            "type": "profile",
-            "targetId": "a114-1e60-4bac-993e",
-            "modifiers": []
-           }
-          ],
-          "categoryLinks": [],
-          "entryLinks": [],
-          "selectionEntryGroups": [],
-          "sortIndex": 5,
-          "collective": true
-         },
-         {
-          "id": "e77e-e99d-9bc3-de8b",
-          "name": "Soul Blight",
-          "type": "upgrade",
-          "hidden": false,
-          "costs": [
-           {
-            "name": "pts",
-            "typeId": "ea90-6996-33df-993c",
-            "value": 0
-           }
-          ],
-          "constraints": [
-           {
-            "id": "e13c-0e44-bedd-0b29",
-            "field": "selections",
-            "scope": "parent",
-            "value": 1,
-            "type": "max",
-            "includeChildSelections": false,
-            "includeChildForces": false,
-            "shared": true,
-            "percentValue": false
-           }
-          ],
-          "modifiers": [],
-          "profiles": [],
-          "infoLinks": [
-           {
-            "id": "cd08-faab-07bd-9126",
-            "name": "Soul Blight",
-            "hidden": false,
-            "type": "profile",
-            "targetId": "c219-7705-9fe5-ffe0",
-            "modifiers": []
-           }
-          ],
-          "categoryLinks": [],
-          "entryLinks": [],
-          "selectionEntryGroups": [],
-          "sortIndex": 6,
-          "collective": true
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
          }
         ],
+        "constraints": [
+         {
+          "id": "b101-9c3c-00d7-0cc6",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "90d8-12b5-4d40-21e8",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 1,
         "collective": true
        }
       ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
       "sortIndex": 1,
+      "collective": true
+     },
+     {
+      "id": "4c6b-0d46-aa06-15f0",
+      "name": "Spells",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "6973-03e4-9a08-17a7",
+        "field": "selections",
+        "scope": "parent",
+        "value": 6,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "acb4-e5e4-cf1a-9336",
+        "field": "selections",
+        "scope": "parent",
+        "value": 6,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "d85d-c7ce-2652-4a93",
+        "name": "Whispers of the Veil",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "8f9f-6a86-d79f-ace1",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [
+         {
+          "id": "db05-8e43-e2ad-2dfb",
+          "name": "Bound Spells",
+          "hidden": false,
+          "constraints": [],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "f58f-82d5-8d1f-addc",
+            "name": "Whispers of the Veil (Bound)",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "b7aa-ecf5-d945-b0ba",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "min",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             },
+             {
+              "id": "ca5c-c1e0-26a8-63ea",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
+             {
+              "id": "9ec1-2e74-5e04-9423",
+              "name": "Whispers of the Veil",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "6d62-d131-6798-ba17",
+              "modifiers": []
+             }
+            ],
+            "categoryLinks": [],
+            "entryLinks": [],
+            "selectionEntryGroups": [],
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       },
+       {
+        "id": "ed40-4f5a-d5e4-5414",
+        "name": "Danse Macabre",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "d2ff-7f30-f13a-1177",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [
+         {
+          "id": "a5c7-ab9b-1473-5495",
+          "name": "Bound Spells",
+          "hidden": false,
+          "constraints": [],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "e353-67e8-fe2c-1196",
+            "name": "Danse Macabre (Bound)",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "d408-5231-6f97-d922",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "min",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             },
+             {
+              "id": "ee34-1832-e37a-8016",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
+             {
+              "id": "a4e7-2ef7-0887-929c",
+              "name": "Danse Macabre",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "a3ea-8884-7252-5ac6",
+              "modifiers": []
+             }
+            ],
+            "categoryLinks": [],
+            "entryLinks": [],
+            "selectionEntryGroups": [],
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "entryLinks": [],
+        "sortIndex": 2,
+        "collective": true
+       },
+       {
+        "id": "45a5-abfa-4cee-af76",
+        "name": "Chorus of the Damned",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "f0b7-c588-5c96-5e42",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [
+         {
+          "id": "d093-6974-2f7b-4841",
+          "name": "Bound Spells",
+          "hidden": false,
+          "constraints": [],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "bead-7a51-8da5-4543",
+            "name": "Chorus of the Damned (Bound)",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "b091-26fb-f9e5-39e0",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "min",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             },
+             {
+              "id": "b067-8ba9-10d7-000f",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
+             {
+              "id": "b8d1-7f51-0cc1-b2ed",
+              "name": "Chorus of the Damned",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "d3ff-ac49-5d6c-9ae7",
+              "modifiers": []
+             }
+            ],
+            "categoryLinks": [],
+            "entryLinks": [],
+            "selectionEntryGroups": [],
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "entryLinks": [],
+        "sortIndex": 3,
+        "collective": true
+       },
+       {
+        "id": "6441-7057-75e4-6310",
+        "name": "Touch of the Reaper",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "c761-3bef-bb9d-eb5b",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [
+         {
+          "id": "371f-6d1d-b31f-af2b",
+          "name": "Bound Spells",
+          "hidden": false,
+          "constraints": [],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "1964-9886-797c-3f0c",
+            "name": "Touch of the Reaper (Bound)",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "3bc6-30d1-3b7f-4281",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "min",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             },
+             {
+              "id": "861a-9fb8-cf35-e477",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
+             {
+              "id": "ebcf-1ab9-4bbb-8f5f",
+              "name": "Touch of the Reaper",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "c266-3ee4-68d8-7c27",
+              "modifiers": []
+             }
+            ],
+            "categoryLinks": [],
+            "entryLinks": [],
+            "selectionEntryGroups": [],
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "entryLinks": [],
+        "sortIndex": 4,
+        "collective": true
+       },
+       {
+        "id": "17da-5227-ace3-d758",
+        "name": "Spectral Blades",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "17ce-907d-ba58-4298",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [
+         {
+          "id": "1cf4-5c4d-da00-cab1",
+          "name": "Bound Spells",
+          "hidden": false,
+          "constraints": [],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "2963-cebf-5903-128f",
+            "name": "Spectral Blades (Bound)",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "94d0-6aee-2831-2482",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "min",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             },
+             {
+              "id": "ef62-90e6-e70b-edfc",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
+             {
+              "id": "c2b5-12c6-c4ed-150d",
+              "name": "Spectral Blades",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "a114-1e60-4bac-993e",
+              "modifiers": []
+             }
+            ],
+            "categoryLinks": [],
+            "entryLinks": [],
+            "selectionEntryGroups": [],
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "entryLinks": [],
+        "sortIndex": 5,
+        "collective": true
+       },
+       {
+        "id": "1365-5987-de9f-1598",
+        "name": "Soul Blight",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "ae78-efc4-f368-13bf",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [
+         {
+          "id": "c1cf-d18d-2776-1eba",
+          "name": "Bound Spells",
+          "hidden": false,
+          "constraints": [],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "b471-0a88-42ba-f7d1",
+            "name": "Soul Blight (Bound)",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "3222-feb9-ce06-a68f",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "min",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             },
+             {
+              "id": "3bce-e0a7-f743-7684",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
+             {
+              "id": "ce54-d890-4500-0eb6",
+              "name": "Soul Blight",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "c219-7705-9fe5-ffe0",
+              "modifiers": []
+             }
+            ],
+            "categoryLinks": [],
+            "entryLinks": [],
+            "selectionEntryGroups": [],
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "entryLinks": [],
+          "selectionEntryGroups": [],
+          "sortIndex": 1,
+          "collective": true
+         }
+        ],
+        "entryLinks": [],
+        "sortIndex": 6,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "defaultSelectionEntryId": "d85d-c7ce-2652-4a93",
+      "sortIndex": 2,
+      "collective": true
+     },
+     {
+      "id": "bb3a-aa55-9c09-5991",
+      "name": "Bound Spells",
+      "hidden": false,
+      "constraints": [],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "4241-7ad2-fd8f-b632",
+        "name": "Whispers of the Veil (Bound)",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "e486-4c61-a49d-1e46",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "5e4e-9188-376b-20fe",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "875a-47e1-fdda-b768",
+          "name": "Whispers of the Veil",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "6d62-d131-6798-ba17",
+          "modifiers": []
+         }
+        ],
+        "categoryLinks": [],
+        "entryLinks": [],
+        "selectionEntryGroups": [],
+        "sortIndex": 1,
+        "collective": true
+       },
+       {
+        "id": "97dd-7c8a-1ff5-c3fe",
+        "name": "Danse Macabre (Bound)",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "3111-6489-1523-444a",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "4122-1fce-a9c3-d6fa",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "51ba-2c8c-8433-13e8",
+          "name": "Danse Macabre",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "a3ea-8884-7252-5ac6",
+          "modifiers": []
+         }
+        ],
+        "categoryLinks": [],
+        "entryLinks": [],
+        "selectionEntryGroups": [],
+        "sortIndex": 2,
+        "collective": true
+       },
+       {
+        "id": "9015-607c-d77e-ffcb",
+        "name": "Chorus of the Damned (Bound)",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "ffe5-3061-c13c-7f6f",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "853d-9d37-8e06-113c",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "6630-0b92-f007-dd53",
+          "name": "Chorus of the Damned",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "d3ff-ac49-5d6c-9ae7",
+          "modifiers": []
+         }
+        ],
+        "categoryLinks": [],
+        "entryLinks": [],
+        "selectionEntryGroups": [],
+        "sortIndex": 3,
+        "collective": true
+       },
+       {
+        "id": "e811-3d1d-902a-bc09",
+        "name": "Touch of the Reaper (Bound)",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "77c7-4a16-5305-213c",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "f694-c085-b24b-f31f",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "83c2-31bd-da9a-29f5",
+          "name": "Touch of the Reaper",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "c266-3ee4-68d8-7c27",
+          "modifiers": []
+         }
+        ],
+        "categoryLinks": [],
+        "entryLinks": [],
+        "selectionEntryGroups": [],
+        "sortIndex": 4,
+        "collective": true
+       },
+       {
+        "id": "e029-fd18-ab43-f0e2",
+        "name": "Spectral Blades (Bound)",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "b2a9-dc69-fa26-2024",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "5f64-2efb-c084-a1d2",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "8326-48ee-f1e7-a8bb",
+          "name": "Spectral Blades",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "a114-1e60-4bac-993e",
+          "modifiers": []
+         }
+        ],
+        "categoryLinks": [],
+        "entryLinks": [],
+        "selectionEntryGroups": [],
+        "sortIndex": 5,
+        "collective": true
+       },
+       {
+        "id": "80b2-e51f-41a7-efd3",
+        "name": "Soul Blight (Bound)",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "1e03-f886-5a19-f0fc",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "3297-7d28-4b1e-2932",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "5b40-59f6-1306-83a1",
+          "name": "Soul Blight",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "c219-7705-9fe5-ffe0",
+          "modifiers": []
+         }
+        ],
+        "categoryLinks": [],
+        "entryLinks": [],
+        "selectionEntryGroups": [],
+        "sortIndex": 6,
+        "collective": true
+       }
+      ],
+      "entryLinks": [],
+      "selectionEntryGroups": [],
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -8520,7 +9272,87 @@
       "collective": true
      }
     ],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "74a2-46bc-f286-0f73",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "ebe7-18fd-1a67-5205",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "2f7d-9048-fbb7-9fe9",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "1dab-f632-7810-e711",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "2c20-3f61-4496-04c8",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "e853-7df3-a312-0494",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -8627,7 +9459,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "3ada-07e9-9284-0956",
+        "value": 20,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "af35-f3eb-3a55-f918",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "18d8-9873-1085-778c",
@@ -8877,15 +9729,7 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "0efe-c221-1355-f8b9",
-            "name": "Shield",
-            "hidden": true,
-            "targetId": "78e6-b065-4446-c3ec",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -8935,15 +9779,7 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "3d57-81d9-5e3e-0ff5",
-            "name": "Shield",
-            "hidden": true,
-            "targetId": "78e6-b065-4446-c3ec",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -8986,15 +9822,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "49de-2896-0e88-0cc9",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9004,6 +9832,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "b995-caaf-8c10-b57c",
         "sortIndex": 1,
         "collective": true
        },
@@ -9043,7 +9872,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "bd20-e092-aae7-7523",
+              "childId": "8f83-3bf6-24ea-95fd",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -9077,9 +9906,41 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "7b36-72ee-f130-f52b",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "8f83-3bf6-24ea-95fd"
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "7b36-72ee-f130-f52b",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "0618-3c8a-7481-1d7d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "profiles": [],
             "infoLinks": [
              {
@@ -9094,6 +9955,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -9131,7 +9993,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "714b-bdbe-eb1e-f891",
+              "childId": "55fa-a36d-9e56-1ea5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -9165,6 +10027,18 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "276d-ab72-5064-7c32",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "55fa-a36d-9e56-1ea5"
              }
             ],
             "modifiers": [
@@ -9599,6 +10473,25 @@
               "arg": "Light Troops",
               "conditions": [],
               "conditionGroups": []
+             },
+             {
+              "type": "set",
+              "field": "276d-ab72-5064-7c32",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "3ce8-9d65-efcb-0671",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
              }
             ],
             "profiles": [],
@@ -9651,6 +10544,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -9942,7 +10836,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "9fce-606e-0329-8f1f",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "af35-f3eb-3a55-f918",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "db84-e556-2884-ef3f",
@@ -10270,15 +11184,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "316f-1da5-60b0-2a70",
-            "name": "Longbow",
-            "hidden": true,
-            "targetId": "d140-5c01-481c-3d3b",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10288,6 +11194,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "9c60-dbe2-d402-edd8",
         "sortIndex": 1,
         "collective": true
        },
@@ -10327,7 +11234,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "bd20-e092-aae7-7523",
+              "childId": "8f83-3bf6-24ea-95fd",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -10361,9 +11268,41 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "8137-4e41-2d83-7fe1",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "8f83-3bf6-24ea-95fd"
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "8137-4e41-2d83-7fe1",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "ccd5-8246-eb87-fd62",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "profiles": [],
             "infoLinks": [
              {
@@ -10378,6 +11317,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -10415,7 +11355,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "714b-bdbe-eb1e-f891",
+              "childId": "55fa-a36d-9e56-1ea5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -10449,6 +11389,18 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "2c62-eb63-9b5c-aa81",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "55fa-a36d-9e56-1ea5"
              }
             ],
             "modifiers": [
@@ -10883,6 +11835,25 @@
               "arg": "Light Troops",
               "conditions": [],
               "conditionGroups": []
+             },
+             {
+              "type": "set",
+              "field": "2c62-eb63-9b5c-aa81",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "7f07-aec1-49b1-85d2",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
              }
             ],
             "profiles": [],
@@ -10935,6 +11906,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -11155,6 +12127,25 @@
         "percentValue": false
        }
       ]
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "95c4-891a-2e4f-4ded",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "a95f-50f6-d2ce-4f7b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "collective": true
@@ -11233,7 +12224,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "acf5-2444-ac61-5e12",
+        "value": 10,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "af35-f3eb-3a55-f918",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "779d-a017-4b01-a58b",
@@ -11338,7 +12349,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Lance"
          },
          {
           "name": "Tags",
@@ -11397,6 +12408,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "7879-f703-d919-76c8",
+        "name": "Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7732-8bec-981c-6371"
        },
        {
         "id": "39ad-1bf7-aee3-8a24",
@@ -11567,7 +12585,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "bd20-e092-aae7-7523",
+            "childId": "8f83-3bf6-24ea-95fd",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -11601,9 +12619,41 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "7224-e7be-54f9-dab8",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "8f83-3bf6-24ea-95fd"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "7224-e7be-54f9-dab8",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "8f02-38da-b1b4-5df1",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -11618,6 +12668,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -11655,7 +12706,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -11689,6 +12740,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "4d05-39a1-c103-8115",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -12015,6 +13078,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "4d05-39a1-c103-8115",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "d997-91ce-f6e5-61d1",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -12060,6 +13142,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -12358,7 +13441,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ee26-facf-eb7e-0602",
+        "value": 5,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "af35-f3eb-3a55-f918",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "e5dd-45be-3cdb-916f",
@@ -12463,7 +13566,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Aspis Arrows"
+          "$text": "Aspis Arrows, Bow"
          },
          {
           "name": "Tags",
@@ -12536,6 +13639,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "9897-43c6-61c9-cc75"
+       },
+       {
+        "id": "64bf-acda-cf23-cd60",
+        "name": "Bow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8f45-6b39-e272-aec1"
        },
        {
         "id": "6063-d574-8272-2ebc",
@@ -12706,7 +13816,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -12740,6 +13850,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "6c9e-5f59-231e-156c",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -13066,6 +14188,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "6c9e-5f59-231e-156c",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "5ee7-6127-4de8-91c1",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -13111,6 +14252,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -13277,7 +14419,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "bd20-e092-aae7-7523"
+      "childId": "8f83-3bf6-24ea-95fd"
      }
     ],
     "modifiers": [
@@ -13423,7 +14565,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "eb2d-62d1-846e-575b",
+        "value": 3,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "af35-f3eb-3a55-f918",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "4f10-dd7f-8ef3-ec8c",
@@ -13835,15 +14997,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "d0e6-32ae-777a-295d",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13886,15 +15040,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "7a3c-c217-de5b-e42f",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13983,15 +15129,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "f66d-7fe2-d4de-2bbd",
-            "name": "Aspis Arrows",
-            "hidden": true,
-            "targetId": "7c4d-6437-9c27-ad7b",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -14200,7 +15338,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "bd20-e092-aae7-7523",
+              "childId": "8f83-3bf6-24ea-95fd",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -14234,9 +15372,41 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "4dce-44be-8dde-9f47",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "8f83-3bf6-24ea-95fd"
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "4dce-44be-8dde-9f47",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "bc74-1f91-d842-9f18",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "profiles": [],
             "infoLinks": [
              {
@@ -14251,6 +15421,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -14288,7 +15459,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "714b-bdbe-eb1e-f891",
+              "childId": "55fa-a36d-9e56-1ea5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -14322,6 +15493,18 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "ff20-29ca-c284-60a6",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "55fa-a36d-9e56-1ea5"
              }
             ],
             "modifiers": [
@@ -14756,6 +15939,25 @@
               "arg": "Light Troops",
               "conditions": [],
               "conditionGroups": []
+             },
+             {
+              "type": "set",
+              "field": "ff20-29ca-c284-60a6",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "e7ee-ff99-dcdf-46dd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
              }
             ],
             "profiles": [],
@@ -14808,6 +16010,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -14921,6 +16124,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Models with Legion Charioteers only.",
         "sortIndex": 1,
         "collective": true
        },
@@ -15191,7 +16395,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Lethal Strike"
+        "$text": "Lethal Strike, Halberd"
        },
        {
         "name": "Tags",
@@ -15302,6 +16506,13 @@
       "targetId": "b128-d5b9-a024-b424"
      },
      {
+      "id": "4a30-d653-1e40-2350",
+      "name": "Halberd",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "42b4-4d10-2466-39ce"
+     },
+     {
       "id": "356a-cb74-e40d-637c",
       "name": "Innate Weapons",
       "hidden": false,
@@ -15339,7 +16550,7 @@
           "value": 1,
           "field": "selections",
           "scope": "roster",
-          "childId": "bd20-e092-aae7-7523",
+          "childId": "8f83-3bf6-24ea-95fd",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": true,
@@ -15373,9 +16584,41 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "2d92-20b4-5035-3e2a",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "8f83-3bf6-24ea-95fd"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "2d92-20b4-5035-3e2a",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "56f8-daae-be45-5e1a",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -15390,6 +16633,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
         "sortIndex": 1,
         "collective": true
        }
@@ -15427,7 +16671,7 @@
           "value": 1,
           "field": "selections",
           "scope": "roster",
-          "childId": "714b-bdbe-eb1e-f891",
+          "childId": "55fa-a36d-9e56-1ea5",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": true,
@@ -15461,6 +16705,18 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "989d-c676-3cb6-9743",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "55fa-a36d-9e56-1ea5"
          }
         ],
         "modifiers": [
@@ -15787,6 +17043,25 @@
           "arg": "Light Troops",
           "conditions": [],
           "conditionGroups": []
+         },
+         {
+          "type": "set",
+          "field": "989d-c676-3cb6-9743",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1608-d34f-5855-3ccf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
          }
         ],
         "profiles": [],
@@ -15832,6 +17107,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
         "sortIndex": 1,
         "collective": true
        }
@@ -16003,6 +17279,7 @@
       ],
       "entryLinks": [],
       "selectionEntryGroups": [],
+      "defaultSelectionEntryId": "309c-2513-086b-8174",
       "sortIndex": 3,
       "collective": true
      }
@@ -16393,15 +17670,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "83a2-1237-18d6-b421",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -16485,7 +17754,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "bd20-e092-aae7-7523",
+            "childId": "8f83-3bf6-24ea-95fd",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -16519,9 +17788,41 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "2f16-e80e-947b-c2d2",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "8f83-3bf6-24ea-95fd"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "2f16-e80e-947b-c2d2",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "592d-eeef-5227-5c74",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -16536,6 +17837,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -16573,7 +17875,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -16607,6 +17909,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "7c8c-f38b-d809-3315",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -16933,6 +18247,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "7c8c-f38b-d809-3315",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "2691-63f1-05f2-7cd4",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -16978,6 +18311,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -17030,15 +18364,7 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "1a70-2b76-5bfc-333b",
-            "name": "Shield",
-            "hidden": true,
-            "targetId": "78e6-b065-4446-c3ec",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -17421,7 +18747,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Lethal Strike"
+          "$text": "Lethal Strike, Halberd"
          },
          {
           "name": "Tags",
@@ -17473,6 +18799,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "b128-d5b9-a024-b424"
+       },
+       {
+        "id": "6c96-60a4-25f9-f9ca",
+        "name": "Halberd",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "42b4-4d10-2466-39ce"
        },
        {
         "id": "370b-2a05-8729-048f",
@@ -17694,6 +19027,13 @@
           ],
           "categoryLinks": [
            {
+            "id": "9105-89ce-064f-bbcc",
+            "name": "Ambush",
+            "hidden": true,
+            "targetId": "7858-3ffd-22b9-e702",
+            "primary": false
+           },
+           {
             "id": "506e-8ef8-770a-23e7",
             "name": "Underground Ambush",
             "hidden": true,
@@ -17704,6 +19044,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: Cannot be taken with Lose Ambush.",
           "sortIndex": 1,
           "collective": true
          }
@@ -17749,7 +19090,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "bd20-e092-aae7-7523",
+              "childId": "8f83-3bf6-24ea-95fd",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -17783,9 +19124,41 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "8a57-5331-9fac-6a50",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "8f83-3bf6-24ea-95fd"
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "8a57-5331-9fac-6a50",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "f750-8108-2e9c-61bf",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "profiles": [],
             "infoLinks": [
              {
@@ -17808,6 +19181,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "alias: Terracotta Army and loses Ambush\nrestriction: Cannot be taken by models with Ambush; all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -18002,6 +19376,25 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "60fe-9cf2-48cc-1057",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "b0e7-751a-89c6-2937",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "7858-3ffd-22b9-e702",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -18374,15 +19767,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "737a-83f4-71b8-1e8b",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -18562,7 +19947,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "bd20-e092-aae7-7523",
+            "childId": "8f83-3bf6-24ea-95fd",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -18596,9 +19981,41 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "0003-3919-bb06-1a36",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "8f83-3bf6-24ea-95fd"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "0003-3919-bb06-1a36",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "7c32-bc7f-ead9-f7b5",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -18613,6 +20030,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -18650,7 +20068,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -18684,6 +20102,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "839e-5532-b3f9-5e2f",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -19118,6 +20548,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "839e-5532-b3f9-5e2f",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "fe3e-4ab7-335c-2ab6",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -19170,6 +20619,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -19571,7 +21021,7 @@
           "value": 1,
           "field": "selections",
           "scope": "roster",
-          "childId": "714b-bdbe-eb1e-f891",
+          "childId": "55fa-a36d-9e56-1ea5",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": true,
@@ -19605,6 +21055,18 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "6658-5e5a-a861-766c",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "55fa-a36d-9e56-1ea5"
          }
         ],
         "modifiers": [
@@ -19931,6 +21393,25 @@
           "arg": "Light Troops",
           "conditions": [],
           "conditionGroups": []
+         },
+         {
+          "type": "set",
+          "field": "6658-5e5a-a861-766c",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "232d-a8dc-fe7c-6458",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
          }
         ],
         "profiles": [],
@@ -19976,6 +21457,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
         "sortIndex": 1,
         "collective": true
        }
@@ -20011,7 +21493,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "bd20-e092-aae7-7523"
+      "childId": "8f83-3bf6-24ea-95fd"
      }
     ],
     "modifiers": [
@@ -20117,7 +21599,46 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "7931-322c-9912-ad3f",
+        "value": 4,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "be1f-808e-bee4-d292",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "7931-322c-9912-ad3f",
+        "value": 4,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "be1f-808e-bee4-d292",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "6e80-3965-f497-4177",
@@ -20414,7 +21935,7 @@
               "value": 1,
               "field": "selections",
               "scope": "root-entry-self",
-              "childId": "714b-bdbe-eb1e-f891",
+              "childId": "55fa-a36d-9e56-1ea5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": false,
@@ -20436,6 +21957,13 @@
           ],
           "categoryLinks": [
            {
+            "id": "2e64-c24e-929f-d510",
+            "name": "Ambush",
+            "hidden": true,
+            "targetId": "7858-3ffd-22b9-e702",
+            "primary": false
+           },
+           {
             "id": "5b1a-b4af-62f3-5b8b",
             "name": "Underground Ambush",
             "hidden": true,
@@ -20446,6 +21974,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: Cannot be taken with Barrow Legion.",
           "sortIndex": 1,
           "collective": true
          }
@@ -20483,7 +22012,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -20517,6 +22046,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "8738-ffa9-72ce-8d05",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -20846,6 +22387,25 @@
            },
            {
             "type": "set",
+            "field": "8738-ffa9-72ce-8d05",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "be1f-808e-bee4-d292",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "type": "set",
             "field": "hidden",
             "value": true,
             "conditions": [
@@ -20914,6 +22474,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: (max. 4 models/unit) (Rare) (Cannot be taken by models with Ambush); all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -20955,7 +22516,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "bd20-e092-aae7-7523"
+      "childId": "8f83-3bf6-24ea-95fd"
      }
     ],
     "modifiers": [
@@ -20999,6 +22560,25 @@
       "conditionGroups": []
      },
      {
+      "type": "add",
+      "field": "category",
+      "value": "b0e7-751a-89c6-2937",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "7858-3ffd-22b9-e702",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "897d-f4f3-135f-f4e6",
@@ -21020,7 +22600,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "b99e-b477-41d1-bbbc",
+      "value": "4ca9-8378-fea6-6277",
       "conditions": [
        {
         "type": "atLeast",
@@ -21209,7 +22789,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Great Aspis Bow"
          },
          {
           "name": "Tags",
@@ -21276,6 +22856,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "27a0-dd7f-eb46-2ae8"
+       },
+       {
+        "id": "590c-d828-c95c-7f4b",
+        "name": "Great Aspis Bow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "09b2-6159-3662-06b8"
        },
        {
         "id": "bcbb-5252-a187-0f16",
@@ -21429,7 +23016,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "bd20-e092-aae7-7523",
+            "childId": "8f83-3bf6-24ea-95fd",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -21463,9 +23050,41 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "2743-0950-641d-8c82",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "8f83-3bf6-24ea-95fd"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "2743-0950-641d-8c82",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "011c-f348-b37b-ae1a",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -21480,6 +23099,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -21517,7 +23137,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -21551,6 +23171,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "ca83-b8cf-03c5-7232",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -21985,6 +23617,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "ca83-b8cf-03c5-7232",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "f821-5e28-d235-6da0",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -22037,6 +23688,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -22422,10 +24074,30 @@
             "includeChildForces": true,
             "shared": true,
             "percentValue": false,
-            "childId": "714b-bdbe-eb1e-f891"
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "hidden",
+            "value": true,
+            "conditions": [
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "cda4-c284-e51f-735c",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -22438,6 +24110,13 @@
           ],
           "categoryLinks": [
            {
+            "id": "96e5-eb51-faab-f13f",
+            "name": "Ambush",
+            "hidden": true,
+            "targetId": "7858-3ffd-22b9-e702",
+            "primary": false
+           },
+           {
             "id": "fded-2f69-6ed4-32ab",
             "name": "Underground Ambush",
             "hidden": true,
@@ -22448,6 +24127,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: Cannot be taken with Lose Ambush.",
           "sortIndex": 1,
           "collective": true
          }
@@ -22493,7 +24173,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "bd20-e092-aae7-7523",
+              "childId": "8f83-3bf6-24ea-95fd",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -22527,9 +24207,41 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "e900-df5e-8c6b-324c",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "8f83-3bf6-24ea-95fd"
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "e900-df5e-8c6b-324c",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "0c7b-4c1e-4ffa-7827",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "profiles": [],
             "infoLinks": [
              {
@@ -22552,6 +24264,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "alias: Terracotta Army and loses Ambush\nrestriction: *Cannot be taken by models with Ambush; all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -22589,7 +24302,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "714b-bdbe-eb1e-f891",
+              "childId": "55fa-a36d-9e56-1ea5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -22623,6 +24336,18 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "cb0f-82a0-6627-a708",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "55fa-a36d-9e56-1ea5"
              }
             ],
             "modifiers": [
@@ -23057,6 +24782,25 @@
               "arg": "Light Troops",
               "conditions": [],
               "conditionGroups": []
+             },
+             {
+              "type": "set",
+              "field": "cb0f-82a0-6627-a708",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "9cd7-9161-7c77-3917",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
              }
             ],
             "profiles": [],
@@ -23116,6 +24860,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "alias: Barrow Legion and loses Ambush\nrestriction: *Cannot be taken by models with Ambush; all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -23242,6 +24987,25 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "60fe-9cf2-48cc-1057",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "b0e7-751a-89c6-2937",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "7858-3ffd-22b9-e702",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -23411,7 +25175,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
+        "$text": "Charnel Catapult"
        },
        {
         "name": "Tags",
@@ -23494,6 +25258,13 @@
       "targetId": "1828-bd11-103d-91e1"
      },
      {
+      "id": "83be-0da6-b0b7-2018",
+      "name": "Charnel Catapult",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "0847-9842-041b-6266"
+     },
+     {
       "id": "ef00-a7be-5965-f4fc",
       "name": "Innate Weapons",
       "hidden": false,
@@ -23539,7 +25310,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "bd20-e092-aae7-7523",
+            "childId": "8f83-3bf6-24ea-95fd",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -23573,9 +25344,41 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "aa85-ab29-e6c9-18b0",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "8f83-3bf6-24ea-95fd"
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "aa85-ab29-e6c9-18b0",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "9138-d84c-298a-4f36",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -23590,6 +25393,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -23627,7 +25431,7 @@
             "value": 1,
             "field": "selections",
             "scope": "roster",
-            "childId": "714b-bdbe-eb1e-f891",
+            "childId": "55fa-a36d-9e56-1ea5",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": true,
@@ -23661,6 +25465,18 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "3c61-00c3-da66-42fb",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "55fa-a36d-9e56-1ea5"
            }
           ],
           "modifiers": [
@@ -23987,6 +25803,25 @@
             "arg": "Light Troops",
             "conditions": [],
             "conditionGroups": []
+           },
+           {
+            "type": "set",
+            "field": "3c61-00c3-da66-42fb",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "90e7-3d47-8d97-4bf8",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
            }
           ],
           "profiles": [],
@@ -24032,6 +25867,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
           "sortIndex": 1,
           "collective": true
          }
@@ -24245,7 +26081,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Lethal Strike"
+        "$text": "Lethal Strike, Halberd"
        },
        {
         "name": "Tags",
@@ -24318,6 +26154,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "ca2f-c97f-04de-88bd"
+     },
+     {
+      "id": "93e3-b2ae-5e92-68e2",
+      "name": "Halberd",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "42b4-4d10-2466-39ce"
      },
      {
       "id": "3423-c8cd-5e09-5459",
@@ -24470,8 +26313,40 @@
       "id": "3d0b-3be9-9551-a80b",
       "name": "Options",
       "hidden": false,
-      "constraints": [],
-      "modifiers": [],
+      "constraints": [
+       {
+        "id": "e6ec-6edd-7ec5-0bd0",
+        "field": "selections",
+        "scope": "parent",
+        "value": 0,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "e6ec-6edd-7ec5-0bd0",
+        "value": 1,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "roster",
+          "childId": "8f83-3bf6-24ea-95fd",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [
        {
         "id": "a5d8-8d1d-5fbd-1902",
@@ -24496,9 +26371,41 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "8399-580b-1ab8-d0a1",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "8f83-3bf6-24ea-95fd"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "8399-580b-1ab8-d0a1",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "a5d8-8d1d-5fbd-1902",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -24513,6 +26420,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
         "sortIndex": 1,
         "collective": true
        }
@@ -24548,7 +26456,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "714b-bdbe-eb1e-f891"
+      "childId": "55fa-a36d-9e56-1ea5"
      }
     ],
     "modifiers": [
@@ -24726,7 +26634,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Poison Attacks, Multiple Wounds (D3, towards Height 4-5 or towards Characters), Stomp Attack (D6)"
+        "$text": "Poison Attacks, Multiple Wounds (D3, towards Height 4-5 or towards Characters), Stomp Attack (D6), Great Weapon"
        },
        {
         "name": "Tags",
@@ -24851,6 +26759,13 @@
       "targetId": "ca2f-c97f-04de-88bd"
      },
      {
+      "id": "740d-4551-3b82-73f4",
+      "name": "Great Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "404b-7330-b333-3778"
+     },
+     {
       "id": "904f-6729-1aaf-de6b",
       "name": "Innate Weapons",
       "hidden": false,
@@ -24888,7 +26803,7 @@
           "value": 1,
           "field": "selections",
           "scope": "roster",
-          "childId": "bd20-e092-aae7-7523",
+          "childId": "8f83-3bf6-24ea-95fd",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": true,
@@ -24922,9 +26837,41 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "959f-481a-018e-7c92",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "8f83-3bf6-24ea-95fd"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "959f-481a-018e-7c92",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "c937-befe-0610-3f20",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -24939,6 +26886,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
         "sortIndex": 1,
         "collective": true
        }
@@ -24974,7 +26922,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "714b-bdbe-eb1e-f891"
+      "childId": "55fa-a36d-9e56-1ea5"
      }
     ],
     "modifiers": [
@@ -25379,15 +27327,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "6814-f515-fca1-da99",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -25440,6 +27380,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "2824-3f98-511c-990b",
         "sortIndex": 1,
         "collective": true
        },
@@ -25479,7 +27420,7 @@
               "value": 1,
               "field": "selections",
               "scope": "roster",
-              "childId": "714b-bdbe-eb1e-f891",
+              "childId": "55fa-a36d-9e56-1ea5",
               "shared": true,
               "includeChildSelections": true,
               "includeChildForces": true,
@@ -25513,6 +27454,18 @@
               "includeChildForces": false,
               "shared": true,
               "percentValue": false
+             },
+             {
+              "id": "b589-7eeb-d082-f591",
+              "field": "selections",
+              "scope": "roster",
+              "value": 1,
+              "type": "min",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": true,
+              "percentValue": false,
+              "childId": "55fa-a36d-9e56-1ea5"
              }
             ],
             "modifiers": [
@@ -25947,6 +27900,25 @@
               "arg": "Light Troops",
               "conditions": [],
               "conditionGroups": []
+             },
+             {
+              "type": "set",
+              "field": "b589-7eeb-d082-f591",
+              "value": 0,
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "2277-3b22-16df-be5d",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
              }
             ],
             "profiles": [],
@@ -25999,6 +27971,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
             "sortIndex": 1,
             "collective": true
            }
@@ -26045,7 +28018,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "bd20-e092-aae7-7523"
+      "childId": "8f83-3bf6-24ea-95fd"
      }
     ],
     "modifiers": [
@@ -26493,9 +28466,9 @@
           "primary": false
          },
          {
-          "id": "e0b9-a045-568a-bf83",
+          "id": "c017-0f2c-f2fc-2728",
           "name": "Wizard Apprentice",
-          "hidden": true,
+          "hidden": false,
           "targetId": "a71d-a1c0-93ae-9ac5",
           "primary": false
          }
@@ -26603,7 +28576,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26622,7 +28595,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26641,7 +28614,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "0eb6-4350-a18a-a9bf",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26660,7 +28633,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "0eb6-4350-a18a-a9bf",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26679,7 +28652,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "c04d-1882-6246-277c",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26698,7 +28671,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "c04d-1882-6246-277c",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26788,7 +28761,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26807,7 +28780,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26826,7 +28799,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "0eb6-4350-a18a-a9bf",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26845,7 +28818,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "0eb6-4350-a18a-a9bf",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26864,7 +28837,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "c04d-1882-6246-277c",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26883,7 +28856,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "c04d-1882-6246-277c",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26973,7 +28946,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
@@ -26992,7 +28965,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
@@ -27011,7 +28984,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "0eb6-4350-a18a-a9bf",
                   "shared": true,
                   "includeChildSelections": true,
@@ -27030,7 +29003,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "0eb6-4350-a18a-a9bf",
                   "shared": true,
                   "includeChildSelections": true,
@@ -27049,7 +29022,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "c04d-1882-6246-277c",
                   "shared": true,
                   "includeChildSelections": true,
@@ -27068,7 +29041,7 @@
                   "type": "atLeast",
                   "value": 1,
                   "field": "selections",
-                  "scope": "root-entry",
+                  "scope": "root-entry-self",
                   "childId": "c04d-1882-6246-277c",
                   "shared": true,
                   "includeChildSelections": true,
@@ -27090,6 +29063,7 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "defaultSelectionEntryId": "a04e-4753-73cd-fa86",
           "sortIndex": 1,
           "collective": true
          }
@@ -27183,7 +29157,26 @@
           "value": 1,
           "field": "selections",
           "scope": "roster",
-          "childId": "bd20-e092-aae7-7523",
+          "childId": "8f83-3bf6-24ea-95fd",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       },
+       {
+        "type": "set",
+        "field": "131f-e9d6-7609-d688",
+        "value": 1,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "roster",
+          "childId": "55fa-a36d-9e56-1ea5",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": true,
@@ -27217,9 +29210,41 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "8087-da14-2d84-13fc",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "8f83-3bf6-24ea-95fd"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "8087-da14-2d84-13fc",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "f556-e917-e790-f47c",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -27234,6 +29259,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
         "sortIndex": 1,
         "collective": true
        },
@@ -27260,6 +29286,18 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "ccca-dff2-74f1-d81a",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "55fa-a36d-9e56-1ea5"
          }
         ],
         "modifiers": [
@@ -27586,6 +29624,25 @@
           "arg": "Light Troops",
           "conditions": [],
           "conditionGroups": []
+         },
+         {
+          "type": "set",
+          "field": "ccca-dff2-74f1-d81a",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "b9a0-b4d4-15ed-ceaf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
          }
         ],
         "profiles": [],
@@ -27631,6 +29688,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: all models in the army must be upgraded with the same option, and a Pharaoh must be the army General",
         "sortIndex": 2,
         "collective": true
        }
@@ -27973,7 +30031,7 @@
           "value": 1,
           "field": "selections",
           "scope": "roster",
-          "childId": "bd20-e092-aae7-7523",
+          "childId": "8f83-3bf6-24ea-95fd",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": true,
@@ -28007,9 +30065,41 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "4ba5-cf84-8921-fcf9",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "8f83-3bf6-24ea-95fd"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "4ba5-cf84-8921-fcf9",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "eb8c-8ef7-69ae-8eaf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -28032,6 +30122,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "alias: Terracotta Army and loses Ambush\nrestriction: Requires Terracotta Army in the army.",
         "sortIndex": 1,
         "collective": true
        }
@@ -28069,7 +30160,7 @@
           "value": 1,
           "field": "selections",
           "scope": "roster",
-          "childId": "714b-bdbe-eb1e-f891",
+          "childId": "55fa-a36d-9e56-1ea5",
           "shared": true,
           "includeChildSelections": true,
           "includeChildForces": true,
@@ -28103,6 +30194,18 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "102a-9529-bbc7-6eaa",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "55fa-a36d-9e56-1ea5"
          }
         ],
         "modifiers": [
@@ -28429,6 +30532,25 @@
           "arg": "Light Troops",
           "conditions": [],
           "conditionGroups": []
+         },
+         {
+          "type": "set",
+          "field": "102a-9529-bbc7-6eaa",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "2d9d-a468-9baa-0314",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
          }
         ],
         "profiles": [],
@@ -28481,6 +30603,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "alias: Barrow Legion and loses Ambush\nrestriction: Requires Barrow Legion in the army.",
         "sortIndex": 1,
         "collective": true
        }
@@ -28974,7 +31097,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Aspis Arrows, Lethal Strike"
+        "$text": "Aspis Arrows, Lethal Strike, Bow"
        },
        {
         "name": "Tags",
@@ -29084,6 +31207,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "5fc9-84b6-b9d5-40da",
+      "name": "Bow",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "8f45-6b39-e272-aec1"
      },
      {
       "id": "8dd9-14af-45bf-f12b",
@@ -30853,6 +32983,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Core and Battle Standard Bearer of Height (1–4) only.",
     "collective": true
    },
    {
@@ -30983,6 +33114,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by units that count towards “Core”.",
     "collective": true
    },
    {
@@ -31046,6 +33178,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Great Weapon.",
     "collective": true
    },
    {
@@ -31109,6 +33242,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Hand Weapon or Paired Weapons.",
     "collective": true
    },
    {
@@ -31207,6 +33341,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only.",
     "collective": true
    },
    {
@@ -31282,6 +33417,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Undying Will only.",
     "collective": true
    },
    {
@@ -31322,7 +33458,27 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6c7e-be70-e418-112c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -31345,6 +33501,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Wizards only.",
     "collective": true
    },
    {
@@ -31593,7 +33750,50 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [],
+      "conditionGroups": [
+       {
+        "type": "or",
+        "conditions": [],
+        "conditionGroups": [
+         {
+          "type": "or",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry",
+            "childId": "b7a6-2b4b-dee8-7f1a",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           },
+           {
+            "type": "instanceOf",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry",
+            "childId": "b7a6-2b4b-dee8-7f1a",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
+       }
+      ]
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -31616,6 +33816,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only.",
     "collective": true
    },
    {
@@ -31656,7 +33857,50 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [],
+      "conditionGroups": [
+       {
+        "type": "or",
+        "conditions": [],
+        "conditionGroups": [
+         {
+          "type": "or",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry",
+            "childId": "b7a6-2b4b-dee8-7f1a",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           },
+           {
+            "type": "instanceOf",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry",
+            "childId": "b7a6-2b4b-dee8-7f1a",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
+       }
+      ]
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
@@ -31671,6 +33915,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only.",
     "collective": true
    },
    {
@@ -31746,6 +33991,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: without Mount only.",
     "collective": true
    },
    {
@@ -31844,6 +34090,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only.",
     "collective": true
    }
   ],
@@ -31898,6 +34145,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -32038,6 +34286,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -32178,6 +34427,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -32318,6 +34568,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -32410,6 +34661,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -32522,6 +34774,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -32782,6 +35035,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -33013,6 +35267,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -33221,6 +35476,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    }
   ],

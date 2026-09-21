@@ -123,99 +123,51 @@
     ]
    },
    {
-    "id": "df86-05de-de8d-8ea8",
-    "name": "Wildheart",
-    "comment": "ok_bn_wildheart",
+    "id": "a7f9-f47d-ebe5-edb5",
+    "name": "Mercenary Veterans or Mercenary Gunners",
+    "comment": "srar:mercenariesRarity",
     "hidden": true,
     "constraints": [
      {
-      "id": "2718-d514-f037-92aa",
+      "id": "e70b-96af-4fcf-7c63",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
-      "type": "min",
-      "shared": true,
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "2718-d514-f037-92aa",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "e4f6-8aaa-e455-8e9c",
-    "name": "Attached",
-    "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "1aa7-ee8f-180a-8a9f",
-    "name": "Rock Aurochs",
-    "comment": "rockAurochs",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4251-a9ca-1be7-86a0",
-    "name": "Lance",
-    "comment": "lance",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "a8fb-40ff-2487-c252",
-    "name": "Construct",
-    "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "ffa1-726f-8d92-3798",
-    "name": "Scrapling Bows",
-    "comment": "scrapling_bows",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "e1f5-61c4-85f4-0ad6",
-      "field": "selections",
-      "scope": "roster",
-      "value": 100,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "comment": "Uncommon",
+      "message": "{roster} has {difference} too many selections of **Mercenary Veterans or Mercenary Gunners** (max {value}, **Uncommon**)"
      }
     ],
     "modifiers": [
      {
+      "type": "increment",
+      "field": "e70b-96af-4fcf-7c63",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Uncommon"
+     },
+     {
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "e1f5-61c4-85f4-0ad6",
+      "field": "e70b-96af-4fcf-7c63",
       "conditions": [
        {
         "type": "instanceOf",
@@ -232,7 +184,7 @@
    },
    {
     "id": "f3d1-8fec-cc05-4c28",
-    "name": "Scar Lethal",
+    "name": "Lethal Strike",
     "comment": "scar_lethal",
     "hidden": true,
     "constraints": [
@@ -240,7 +192,7 @@
       "id": "5ddd-2797-da54-2592",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
@@ -249,6 +201,25 @@
      }
     ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "5ddd-2797-da54-2592",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -270,7 +241,7 @@
    },
    {
     "id": "46a2-9ed8-1034-586e",
-    "name": "Scar Fury",
+    "name": "First Strike",
     "comment": "scar_fury",
     "hidden": true,
     "constraints": [
@@ -278,7 +249,7 @@
       "id": "b99f-625a-792c-2cb4",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
@@ -287,6 +258,25 @@
      }
     ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "b99f-625a-792c-2cb4",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -308,7 +298,7 @@
    },
    {
     "id": "afcb-5a45-faf3-004c",
-    "name": "Scar Devast",
+    "name": "Devastating Charge",
     "comment": "scar_devast",
     "hidden": true,
     "constraints": [
@@ -316,7 +306,7 @@
       "id": "05f6-12d7-008f-0b52",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
@@ -325,6 +315,25 @@
      }
     ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "05f6-12d7-008f-0b52",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -346,7 +355,7 @@
    },
    {
     "id": "f576-7077-9dc5-1c6d",
-    "name": "Scar Resist",
+    "name": "Magic Resistance",
     "comment": "scar_resist",
     "hidden": true,
     "constraints": [
@@ -354,7 +363,7 @@
       "id": "222b-8ad5-594f-f95b",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
@@ -363,6 +372,25 @@
      }
     ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "222b-8ad5-594f-f95b",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -384,7 +412,7 @@
    },
    {
     "id": "3eb1-b41d-0750-fdda",
-    "name": "Scar Vanguard",
+    "name": "Vanguard",
     "comment": "scar_vanguard",
     "hidden": true,
     "constraints": [
@@ -392,7 +420,7 @@
       "id": "a498-b8e0-7c33-a3da",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
@@ -401,6 +429,25 @@
      }
     ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "a498-b8e0-7c33-a3da",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -422,7 +469,7 @@
    },
    {
     "id": "c0f8-3f31-16fa-9e8f",
-    "name": "Scar Swift",
+    "name": "Swiftstride",
     "comment": "scar_swift",
     "hidden": true,
     "constraints": [
@@ -430,7 +477,7 @@
       "id": "dfe2-b54c-0867-0548",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
@@ -439,6 +486,25 @@
      }
     ],
     "modifiers": [
+     {
+      "type": "increment",
+      "field": "dfe2-b54c-0867-0548",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -459,127 +525,13 @@
     ]
    },
    {
-    "id": "e47f-3496-4422-34e1",
-    "name": "Halberd",
-    "comment": "halberd",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "31a4-1a73-082e-1ba9",
-    "name": "Mount",
-    "comment": "tag_Mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4708-dee2-8488-1b7a",
-    "name": "Rock Aurochs",
-    "comment": "srar:rockAurochsRarity",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "cab1-f982-cdcd-f243",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false,
-      "comment": "Rare",
-      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Rare**)"
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "increment",
-      "field": "cab1-f982-cdcd-f243",
-      "value": 1,
-      "repeats": [
-       {
-        "field": "limit::ea90-6996-33df-993c",
-        "scope": "roster",
-        "value": 2500,
-        "percentValue": false,
-        "shared": true,
-        "includeChildSelections": false,
-        "includeChildForces": false,
-        "childId": "any",
-        "repeats": 1,
-        "roundUp": true
-       }
-      ],
-      "comment": "Rare"
-     },
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "cab1-f982-cdcd-f243",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "1f3c-a0eb-c743-9cde",
-    "name": "Rock Aurochs Mount Unit",
-    "comment": "rockAurochs_mount_unit",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "ad29-be6d-e713-b17e",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "ad29-be6d-e713-b17e",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "1479-f4ec-9f1d-a9fe",
+    "id": "2b0a-370d-1ac0-d874",
     "name": "Lethal Strike",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "3167-36f1-f4a2-969d",
+      "id": "9df0-a136-65c3-fd44",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -595,7 +547,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "3167-36f1-f4a2-969d",
+      "field": "9df0-a136-65c3-fd44",
       "value": 1,
       "repeats": [
        {
@@ -617,7 +569,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "3167-36f1-f4a2-969d",
+      "field": "9df0-a136-65c3-fd44",
       "conditions": [
        {
         "type": "instanceOf",
@@ -633,13 +585,13 @@
     ]
    },
    {
-    "id": "5b72-98ce-65ec-4e7e",
+    "id": "29fa-69a0-facd-c227",
     "name": "First Strike (Fury)",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "848b-2160-7b43-3d31",
+      "id": "8302-d58c-18c8-792d",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -655,7 +607,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "848b-2160-7b43-3d31",
+      "field": "8302-d58c-18c8-792d",
       "value": 1,
       "repeats": [
        {
@@ -677,7 +629,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "848b-2160-7b43-3d31",
+      "field": "8302-d58c-18c8-792d",
       "conditions": [
        {
         "type": "instanceOf",
@@ -693,13 +645,13 @@
     ]
    },
    {
-    "id": "7199-8979-c5e5-fe3e",
+    "id": "1466-1b68-1fe4-b489",
     "name": "Devastating Charge (+1 Str, +1 AP)",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "b748-26ae-64f1-413e",
+      "id": "04ac-7cb0-d966-9cdc",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -715,7 +667,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "b748-26ae-64f1-413e",
+      "field": "04ac-7cb0-d966-9cdc",
       "value": 1,
       "repeats": [
        {
@@ -737,7 +689,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "b748-26ae-64f1-413e",
+      "field": "04ac-7cb0-d966-9cdc",
       "conditions": [
        {
         "type": "instanceOf",
@@ -753,13 +705,13 @@
     ]
    },
    {
-    "id": "855e-5510-4827-94e0",
+    "id": "227d-ba03-91bd-d504",
     "name": "Magic Resistance (2)",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "d2fe-c297-840b-7be4",
+      "id": "8dff-8ad3-c6e4-ac6a",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -775,7 +727,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "d2fe-c297-840b-7be4",
+      "field": "8dff-8ad3-c6e4-ac6a",
       "value": 1,
       "repeats": [
        {
@@ -797,7 +749,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "d2fe-c297-840b-7be4",
+      "field": "8dff-8ad3-c6e4-ac6a",
       "conditions": [
        {
         "type": "instanceOf",
@@ -813,13 +765,13 @@
     ]
    },
    {
-    "id": "cf2b-0c99-17f7-e55a",
+    "id": "2c88-dc7f-c079-c57e",
     "name": "Vanguard",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "924c-bcc0-5cd6-4ebf",
+      "id": "ce68-dac1-0827-515c",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -835,7 +787,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "924c-bcc0-5cd6-4ebf",
+      "field": "ce68-dac1-0827-515c",
       "value": 1,
       "repeats": [
        {
@@ -857,7 +809,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "924c-bcc0-5cd6-4ebf",
+      "field": "ce68-dac1-0827-515c",
       "conditions": [
        {
         "type": "instanceOf",
@@ -873,13 +825,13 @@
     ]
    },
    {
-    "id": "4716-ec2b-c526-97a6",
+    "id": "c839-c99c-8216-60dd",
     "name": "Swiftstride",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "8314-c64a-f59a-02de",
+      "id": "fd39-a052-c800-eda1",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -895,7 +847,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "8314-c64a-f59a-02de",
+      "field": "fd39-a052-c800-eda1",
       "value": 1,
       "repeats": [
        {
@@ -917,7 +869,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "8314-c64a-f59a-02de",
+      "field": "fd39-a052-c800-eda1",
       "conditions": [
        {
         "type": "instanceOf",
@@ -933,13 +885,13 @@
     ]
    },
    {
-    "id": "b4e4-c6e9-e05c-e244",
+    "id": "ac6b-4085-506d-23b1",
     "name": "Hunting Spear (4+), Iron Fist and Poison Attacks (Shooting)",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "7b39-deb7-1b5e-9b59",
+      "id": "1545-b4ae-f70e-e8d3",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -955,7 +907,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "7b39-deb7-1b5e-9b59",
+      "field": "1545-b4ae-f70e-e8d3",
       "value": 1,
       "repeats": [
        {
@@ -977,7 +929,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "7b39-deb7-1b5e-9b59",
+      "field": "1545-b4ae-f70e-e8d3",
       "conditions": [
        {
         "type": "instanceOf",
@@ -993,13 +945,13 @@
     ]
    },
    {
-    "id": "fa83-817b-14c2-081e",
+    "id": "4d48-65ba-67dd-6436",
     "name": "Brace of Ogre Pistols (4+) and Lethal Strike (Shooting)",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "51a2-e383-79fb-cf50",
+      "id": "a382-5ab9-7cbd-b9ed",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -1015,7 +967,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "51a2-e383-79fb-cf50",
+      "field": "a382-5ab9-7cbd-b9ed",
       "value": 1,
       "repeats": [
        {
@@ -1037,7 +989,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "51a2-e383-79fb-cf50",
+      "field": "a382-5ab9-7cbd-b9ed",
       "conditions": [
        {
         "type": "instanceOf",
@@ -1053,13 +1005,13 @@
     ]
    },
    {
-    "id": "5cad-84d4-0568-9d79",
+    "id": "0bc8-8b92-829a-be00",
     "name": "Ogre Crossbow (4+) and Accurate",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "842c-4b2f-92a0-6b78",
+      "id": "070f-371e-6cc1-dec4",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -1075,7 +1027,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "842c-4b2f-92a0-6b78",
+      "field": "070f-371e-6cc1-dec4",
       "value": 1,
       "repeats": [
        {
@@ -1097,7 +1049,187 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "842c-4b2f-92a0-6b78",
+      "field": "070f-371e-6cc1-dec4",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "c48b-53e3-44d7-e209",
+    "name": "Magic Resistance (2)",
+    "hidden": true,
+    "comment": "Extraordinary",
+    "constraints": [
+     {
+      "id": "86b6-658f-8a8d-503d",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Extraordinary",
+      "message": "{roster} has {difference} too many selections of **Magic Resistance (2)** (max {value}, **Extraordinary**)"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "86b6-658f-8a8d-503d",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Extraordinary"
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "86b6-658f-8a8d-503d",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "5af1-4a17-fcaf-3c36",
+    "name": "Swiftstride",
+    "hidden": true,
+    "comment": "Extraordinary",
+    "constraints": [
+     {
+      "id": "0008-a373-96a6-e349",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Extraordinary",
+      "message": "{roster} has {difference} too many selections of **Swiftstride** (max {value}, **Extraordinary**)"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "0008-a373-96a6-e349",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Extraordinary"
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "0008-a373-96a6-e349",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "6657-71e2-420f-949b",
+    "name": "Vanguard",
+    "hidden": true,
+    "comment": "Extraordinary",
+    "constraints": [
+     {
+      "id": "0c27-057a-d0fa-ce6c",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Extraordinary",
+      "message": "{roster} has {difference} too many selections of **Vanguard** (max {value}, **Extraordinary**)"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "0c27-057a-d0fa-ce6c",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Extraordinary"
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "0c27-057a-d0fa-ce6c",
       "conditions": [
        {
         "type": "instanceOf",
@@ -1960,6 +2092,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "c065-4c23-572d-e154",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "7aab-9291-1218-2209",
           "name": "General",
           "hidden": true,
@@ -2006,6 +2145,17 @@
         "hidden": false,
         "constraints": [
          {
+          "id": "09c4-db5d-b405-83e5",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
           "id": "1110-14a5-e07c-2b5e",
           "field": "selections",
           "scope": "parent",
@@ -2019,6 +2169,94 @@
         ],
         "modifiers": [],
         "selectionEntries": [
+         {
+          "id": "6132-e1ad-eff1-7470",
+          "name": "Hand Weapon",
+          "type": "upgrade",
+          "hidden": false,
+          "costs": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 0
+           }
+          ],
+          "constraints": [
+           {
+            "id": "379a-eeb7-dc5b-b440",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "4edd-0933-da70-732e",
+            "name": "Hand Weapon",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "cc6a-85fb-a07e-e781"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
+          "selectionEntryGroups": [],
+          "entryLinks": [
+           {
+            "id": "c3a0-2070-e763-7c6a",
+            "name": "Hand Weapon Enchant",
+            "hidden": false,
+            "type": "selectionEntryGroup",
+            "targetId": "13e5-56f5-5103-e825",
+            "constraints": [
+             {
+              "id": "511f-b75e-c20b-0b31",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "hidden",
+              "value": true,
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "e810-1cc5-8e38-83f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
+            "collapsible": true,
+            "sortIndex": 1,
+            "collective": true
+           }
+          ],
+          "sortIndex": 1,
+          "collective": true
+         },
          {
           "id": "fd45-efe0-f248-0eb2",
           "name": "Paired Weapons",
@@ -2104,7 +2342,8 @@
             "collective": true
            }
           ],
-          "sortIndex": 1,
+          "comment": "restriction: Cannot be taken with Hoardmaster.",
+          "sortIndex": 2,
           "collective": true
          },
          {
@@ -2192,7 +2431,8 @@
             "collective": true
            }
           ],
-          "sortIndex": 2,
+          "comment": "restriction: Cannot be taken with Hoardmaster.",
+          "sortIndex": 3,
           "collective": true
          },
          {
@@ -2280,13 +2520,15 @@
             "collective": true
            }
           ],
-          "sortIndex": 3,
+          "comment": "restriction: Cannot be taken with Hoardmaster.",
+          "sortIndex": 4,
           "collective": true
          }
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "6132-e1ad-eff1-7470",
         "sortIndex": 1,
         "collective": true
        },
@@ -2382,7 +2624,27 @@
               "percentValue": false
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "hidden",
+              "value": true,
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "e810-1cc5-8e38-83f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "collapsible": true,
             "sortIndex": 1,
             "collective": true
@@ -2464,7 +2726,27 @@
               "percentValue": false
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "hidden",
+              "value": true,
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "e810-1cc5-8e38-83f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "collapsible": true,
             "sortIndex": 1,
             "collective": true
@@ -2507,50 +2789,6 @@
         "collective": true
        },
        {
-        "id": "113f-ce47-4c06-3923",
-        "name": "Hand Weapon Enchant",
-        "hidden": false,
-        "type": "selectionEntryGroup",
-        "targetId": "13e5-56f5-5103-e825",
-        "constraints": [
-         {
-          "id": "8d72-ae7d-c550-df15",
-          "field": "selections",
-          "scope": "parent",
-          "value": 1,
-          "type": "max",
-          "includeChildSelections": false,
-          "includeChildForces": false,
-          "shared": true,
-          "percentValue": false
-         }
-        ],
-        "modifiers": [
-         {
-          "type": "set",
-          "field": "hidden",
-          "value": true,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "root-entry-self",
-            "childId": "e810-1cc5-8e38-83f6",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
-          "conditionGroups": []
-         }
-        ],
-        "collapsible": true,
-        "sortIndex": 4,
-        "collective": true
-       },
-       {
         "id": "d8f2-29db-93a3-7618",
         "name": "Artefact",
         "hidden": false,
@@ -2571,7 +2809,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 5,
+        "sortIndex": 4,
         "collective": true
        },
        {
@@ -2595,7 +2833,7 @@
         ],
         "modifiers": [],
         "collapsible": true,
-        "sortIndex": 6,
+        "sortIndex": 5,
         "collective": true
        }
       ],
@@ -2654,7 +2892,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "df86-05de-de8d-8ea8"
+      "childId": "954f-3bbc-e536-e625"
      }
     ],
     "modifiers": [
@@ -2983,22 +3221,7 @@
           "targetId": "f036-04a1-4adf-1814"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "174e-7e52-5510-e5f1",
-          "name": "Captain",
-          "hidden": true,
-          "targetId": "cda6-3d55-eecf-4914",
-          "primary": false
-         },
-         {
-          "id": "9927-9a17-5690-044d",
-          "name": "Attached",
-          "hidden": true,
-          "targetId": "e4f6-8aaa-e455-8e9c",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -3093,6 +3316,13 @@
          }
         ],
         "categoryLinks": [
+         {
+          "id": "9442-f2b2-6bda-3cc9",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
          {
           "id": "e4df-6aec-3e07-2e9a",
           "name": "General",
@@ -3275,7 +3505,27 @@
               "percentValue": false
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "hidden",
+              "value": true,
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "e810-1cc5-8e38-83f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "collapsible": true,
             "sortIndex": 1,
             "collective": true
@@ -3369,6 +3619,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Hoardmaster.",
           "sortIndex": 2,
           "collective": true
          },
@@ -3457,6 +3708,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Hoardmaster.",
           "sortIndex": 3,
           "collective": true
          },
@@ -3545,6 +3797,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Hoardmaster.",
           "sortIndex": 4,
           "collective": true
          }
@@ -3648,7 +3901,27 @@
               "percentValue": false
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "hidden",
+              "value": true,
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "e810-1cc5-8e38-83f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "collapsible": true,
             "sortIndex": 1,
             "collective": true
@@ -3730,7 +4003,27 @@
               "percentValue": false
              }
             ],
-            "modifiers": [],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "hidden",
+              "value": true,
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "e810-1cc5-8e38-83f6",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
             "collapsible": true,
             "sortIndex": 1,
             "collective": true
@@ -3920,7 +4213,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "df86-05de-de8d-8ea8"
+      "childId": "954f-3bbc-e536-e625"
      }
     ],
     "modifiers": [
@@ -4233,6 +4526,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "3b69-76b7-f071-dd61",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "3b14-0e8a-3f3c-8d7e",
           "name": "General",
           "hidden": true,
@@ -4388,6 +4688,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "edc4-f891-04d7-4df9",
       "sortIndex": 2,
       "collective": true
      },
@@ -4419,27 +4720,7 @@
         "percentValue": false
        }
       ],
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "c57b-83ba-1518-eb0f",
-        "value": 2,
-        "conditions": [
-         {
-          "type": "atLeast",
-          "value": 1,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "3ab0-9185-e522-de12",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
-       }
-      ],
+      "modifiers": [],
       "selectionEntries": [
        {
         "id": "feaa-d48d-a733-6352",
@@ -4512,7 +4793,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4531,7 +4812,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4550,7 +4831,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4569,7 +4850,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4588,7 +4869,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -4607,7 +4888,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -4697,7 +4978,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4716,7 +4997,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4735,7 +5016,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4754,7 +5035,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4773,7 +5054,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -4792,7 +5073,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -4882,7 +5163,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4901,7 +5182,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4920,7 +5201,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4939,7 +5220,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4958,7 +5239,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -4977,7 +5258,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5000,6 +5281,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "feaa-d48d-a733-6352",
       "sortIndex": 3,
       "collective": true
      },
@@ -5021,7 +5303,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "2f6d-6a24-40ac-7671",
+        "value": 200,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "c04d-1882-6246-277c",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -5330,6 +5632,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "e205-14de-2d93-f85e",
         "sortIndex": 1,
         "collective": true
        }
@@ -5790,13 +6093,6 @@
           "hidden": true,
           "targetId": "bf19-2ae3-58d2-5ff5",
           "primary": false
-         },
-         {
-          "id": "e5f0-b411-cb2d-79a4",
-          "name": "Wildheart",
-          "hidden": true,
-          "targetId": "df86-05de-de8d-8ea8",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -5828,9 +6124,41 @@
           "includeChildForces": false,
           "shared": true,
           "percentValue": false
+         },
+         {
+          "id": "d9e9-9093-9238-e7ef",
+          "field": "selections",
+          "scope": "roster",
+          "value": 1,
+          "type": "min",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": true,
+          "percentValue": false,
+          "childId": "954f-3bbc-e536-e625"
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "d9e9-9093-9238-e7ef",
+          "value": 0,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1cac-5b9b-e3be-a49b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -5860,6 +6188,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Wildheart in Armylist only",
         "sortIndex": 2,
         "collective": true
        }
@@ -6043,10 +6372,19 @@
               "targetId": "f930-f7e6-2b9b-81d7"
              }
             ],
-            "categoryLinks": [],
+            "categoryLinks": [
+             {
+              "id": "116d-d512-c56e-6d05",
+              "name": "Vanguard",
+              "hidden": true,
+              "targetId": "ad1c-4d45-a6a3-a974",
+              "primary": false
+             }
+            ],
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "alias: Scout, Vanguard",
             "sortIndex": 2,
             "collective": true
            }
@@ -6122,20 +6460,13 @@
          }
         ],
         "modifiers": [],
-        "categoryLinks": [
-         {
-          "id": "8206-b5ed-e012-529e",
-          "name": "Rock Aurochs",
-          "hidden": true,
-          "targetId": "1aa7-ee8f-180a-8a9f",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "sortIndex": 3,
         "collective": true
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "1297-4a66-0c94-97e2",
       "sortIndex": 2,
       "collective": true
      },
@@ -6343,6 +6674,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: without Mount only",
           "sortIndex": 2,
           "collective": true
          },
@@ -6382,15 +6714,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "a438-6d33-fa04-8679",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -6739,6 +7063,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "be83-a16e-a28d-2e0a",
         "sortIndex": 2,
         "collective": true
        }
@@ -6933,7 +7258,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "df86-05de-de8d-8ea8",
+        "childId": "954f-3bbc-e536-e625",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -6951,7 +7276,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "df86-05de-de8d-8ea8",
+        "childId": "954f-3bbc-e536-e625",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -6971,7 +7296,7 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "df86-05de-de8d-8ea8",
+        "childId": "954f-3bbc-e536-e625",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
@@ -7009,29 +7334,10 @@
         "value": 1,
         "field": "selections",
         "scope": "roster",
-        "childId": "df86-05de-de8d-8ea8",
+        "childId": "954f-3bbc-e536-e625",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": true,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "add",
-      "field": "category",
-      "value": "92f1-4dc4-547a-6bc1",
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "1aa7-ee8f-180a-8a9f",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
         "percentValue": false
        }
       ],
@@ -7205,7 +7511,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Weapon Master, Stomp Attack (1), Impact Hits (D3)"
+        "$text": "Weapon Master, Stomp Attack (1), Impact Hits (D3), Iron Fist, Paired Weapons, Great Weapon, Halberd, Brace of Ogre Pistols, Ogre Crossbow, Hunting Spear"
        },
        {
         "name": "Tags",
@@ -7323,6 +7629,55 @@
       "targetId": "dea2-4563-ee71-4004"
      },
      {
+      "id": "c26a-6319-0e30-33f6",
+      "name": "Iron Fist",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "3362-1df2-09ee-accc"
+     },
+     {
+      "id": "5193-358b-796b-5b9c",
+      "name": "Paired Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "2431-3187-a071-99c8"
+     },
+     {
+      "id": "72bd-44a3-1cac-c507",
+      "name": "Great Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "404b-7330-b333-3778"
+     },
+     {
+      "id": "5fae-1440-ac45-da02",
+      "name": "Halberd",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "42b4-4d10-2466-39ce"
+     },
+     {
+      "id": "1898-32f7-171b-1d84",
+      "name": "Brace of Ogre Pistols",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "3a4f-d102-0d32-b468"
+     },
+     {
+      "id": "387f-c79e-df7a-75f0",
+      "name": "Ogre Crossbow",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "ba2a-ff2d-7899-b431"
+     },
+     {
+      "id": "b8db-65af-6bde-197f",
+      "name": "Hunting Spear",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "84f8-30ce-c17c-6211"
+     },
+     {
       "id": "0ce9-f923-b169-1edf",
       "name": "Hand Weapon",
       "hidden": false,
@@ -7331,7 +7686,87 @@
      }
     ],
     "selectionEntries": [],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "7ff7-6623-fca1-56db",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "7b20-0f03-d0b3-5b6a",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "bf19-2054-e7f9-ee14",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "01d6-0b79-51c9-65f3",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "62e9-30d1-1150-51b3",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "04cd-fb19-8ce1-fa7d",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -7703,7 +8138,87 @@
      }
     ],
     "selectionEntries": [],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "400d-0c6e-b504-0afc",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "3aeb-e817-f489-fc7d",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "1baf-81c9-7ecd-8a8b",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "7ed3-7b6d-a163-6ead",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "473b-3c65-034a-cbd4",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "dc22-0e4d-7302-9c4c",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -8099,6 +8614,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "791a-3e6d-69da-50ca",
         "sortIndex": 1,
         "collective": true
        }
@@ -8472,7 +8988,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Impact Hits (1), Stomp Attack (1)"
+          "$text": "Impact Hits (1), Stomp Attack (1), Great Weapon"
          },
          {
           "name": "Tags",
@@ -8532,6 +9048,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ca2f-c97f-04de-88bd"
+       },
+       {
+        "id": "bf6d-98fc-1975-9c36",
+        "name": "Great Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "404b-7330-b333-3778"
        },
        {
         "id": "8226-170a-c2aa-3c6a",
@@ -8700,7 +9223,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "df86-05de-de8d-8ea8"
+      "childId": "954f-3bbc-e536-e625"
      }
     ],
     "modifiers": [
@@ -9191,15 +9714,7 @@
             ]
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "b4d1-b5f7-15a1-3e2d",
-            "name": "Scrapling Bows",
-            "hidden": true,
-            "targetId": "ffa1-726f-8d92-3798",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9242,15 +9757,7 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "e89f-8105-7698-55f8",
-            "name": "Shield",
-            "hidden": true,
-            "targetId": "78e6-b065-4446-c3ec",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9481,6 +9988,13 @@
       "name": "⟨Hgt:3⟩",
       "hidden": true,
       "targetId": "8425-1339-fedd-7297",
+      "primary": false
+     },
+     {
+      "id": "fff7-de23-d31d-6fee",
+      "name": "Mercenary Veterans",
+      "hidden": true,
+      "targetId": "a7f9-f47d-ebe5-edb5",
       "primary": false
      }
     ],
@@ -9891,15 +10405,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "805e-5cd9-98d0-57d1",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -9978,15 +10484,7 @@
             "targetId": "b128-d5b9-a024-b424"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "8798-117a-fde4-c6a9",
-            "name": "Scar Lethal",
-            "hidden": true,
-            "targetId": "f3d1-8fec-cc05-4c28",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10029,15 +10527,7 @@
             "targetId": "ce0e-c1b2-a268-c6da"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "7092-e9e1-8405-99cd",
-            "name": "Scar Fury",
-            "hidden": true,
-            "targetId": "46a2-9ed8-1034-586e",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10080,15 +10570,7 @@
             "targetId": "e052-9518-2b65-26d1"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "587f-81c7-77b6-fa41",
-            "name": "Scar Devast",
-            "hidden": true,
-            "targetId": "afcb-5a45-faf3-004c",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10098,6 +10580,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "a694-53c4-e2fc-70f5",
         "sortIndex": 2,
         "collective": true
        },
@@ -10156,15 +10639,7 @@
             "targetId": "c2c3-399d-227c-e712"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "d106-afec-2c47-a443",
-            "name": "Scar Resist",
-            "hidden": true,
-            "targetId": "f576-7077-9dc5-1c6d",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10207,15 +10682,7 @@
             "targetId": "f930-f7e6-2b9b-81d7"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "1a7a-41f1-737b-c5d9",
-            "name": "Scar Vanguard",
-            "hidden": true,
-            "targetId": "3eb1-b41d-0750-fdda",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10258,15 +10725,7 @@
             "targetId": "1ab5-0ba0-b596-ace7"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "0baf-9b1b-3f19-da62",
-            "name": "Scar Swift",
-            "hidden": true,
-            "targetId": "c0f8-3f31-16fa-9e8f",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -10436,7 +10895,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "df86-05de-de8d-8ea8"
+      "childId": "954f-3bbc-e536-e625"
      }
     ],
     "modifiers": [
@@ -10482,7 +10941,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "1479-f4ec-9f1d-a9fe",
+      "value": "2b0a-370d-1ac0-d874",
       "conditions": [
        {
         "type": "atLeast",
@@ -10501,7 +10960,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "5b72-98ce-65ec-4e7e",
+      "value": "29fa-69a0-facd-c227",
       "conditions": [
        {
         "type": "atLeast",
@@ -10520,7 +10979,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "7199-8979-c5e5-fe3e",
+      "value": "1466-1b68-1fe4-b489",
       "conditions": [
        {
         "type": "atLeast",
@@ -10539,7 +10998,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "855e-5510-4827-94e0",
+      "value": "227d-ba03-91bd-d504",
       "conditions": [
        {
         "type": "atLeast",
@@ -10558,7 +11017,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "cf2b-0c99-17f7-e55a",
+      "value": "2c88-dc7f-c079-c57e",
       "conditions": [
        {
         "type": "atLeast",
@@ -10577,7 +11036,140 @@
      {
       "type": "add",
       "field": "category",
-      "value": "4716-ec2b-c526-97a6",
+      "value": "c839-c99c-8216-60dd",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "dd5b-203c-51d4-aa6a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "f3d1-8fec-cc05-4c28",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "a694-53c4-e2fc-70f5",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "46a2-9ed8-1034-586e",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "c57e-d8e3-4b7b-cf7c",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "afcb-5a45-faf3-004c",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "cb73-df9c-205b-ec0d",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "f576-7077-9dc5-1c6d",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "fa13-d9fa-0a09-0456",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "ad1c-4d45-a6a3-a974",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "0d84-91a7-fb28-84de",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "3eb1-b41d-0750-fdda",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "0d84-91a7-fb28-84de",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "c0f8-3f31-16fa-9e8f",
       "conditions": [
        {
         "type": "atLeast",
@@ -11807,7 +12399,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Throwing Weapons, Lethal Strike (Shooting)"
          },
          {
           "name": "Tags",
@@ -11909,6 +12501,20 @@
         "hidden": false,
         "type": "profile",
         "targetId": "5edf-edf0-2a52-ca2d"
+       },
+       {
+        "id": "71cc-77b2-bde5-d7d1",
+        "name": "Throwing Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "38ae-71b8-126f-173c"
+       },
+       {
+        "id": "c19c-48dc-bdb4-42e3",
+        "name": "Lethal Strike",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "b128-d5b9-a024-b424"
        },
        {
         "id": "0d03-9de0-1500-167f",
@@ -12331,6 +12937,44 @@
       "comment": "Uncommon"
      },
      {
+      "type": "set-primary",
+      "field": "category",
+      "value": "9d42-206a-0e5a-5139",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 5,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c702-9d04-52c8-6d62",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "remove",
+      "field": "category",
+      "value": "03e6-4fdd-35c5-bad1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 5,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "c702-9d04-52c8-6d62",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "5c6c-cc9e-9ab6-e6bd",
@@ -12675,6 +13319,13 @@
       "hidden": true,
       "targetId": "8425-1339-fedd-7297",
       "primary": false
+     },
+     {
+      "id": "39a1-4cc8-6a33-d46e",
+      "name": "Mercenary Gunners",
+      "hidden": true,
+      "targetId": "a7f9-f47d-ebe5-edb5",
+      "primary": false
      }
     ],
     "costs": [
@@ -12998,6 +13649,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "alias: Hunting Spear , Iron Fist and Poison Attacks (Shooting) (4+)",
           "sortIndex": 1,
           "collective": true
          },
@@ -13040,7 +13692,7 @@
             "includeChildForces": true,
             "shared": true,
             "percentValue": false,
-            "childId": "df86-05de-de8d-8ea8"
+            "childId": "954f-3bbc-e536-e625"
            }
           ],
           "modifiers": [],
@@ -13074,6 +13726,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "alias: Brace of Ogre Pistols and Lethal Strike (Shooting) (4+)",
           "sortIndex": 2,
           "collective": true
          },
@@ -13138,12 +13791,14 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "alias: Ogre Crossbow and Accurate (4+)",
           "sortIndex": 3,
           "collective": true
          }
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "fff8-c7ea-9390-69bf",
         "sortIndex": 1,
         "collective": true
        },
@@ -13202,15 +13857,7 @@
             "targetId": "c2c3-399d-227c-e712"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5b73-0888-cc8f-b8a8",
-            "name": "Scar Resist",
-            "hidden": true,
-            "targetId": "f576-7077-9dc5-1c6d",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13253,15 +13900,7 @@
             "targetId": "1ab5-0ba0-b596-ace7"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "1fcb-ff13-0d7f-0f3c",
-            "name": "Scar Swift",
-            "hidden": true,
-            "targetId": "c0f8-3f31-16fa-9e8f",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13304,15 +13943,7 @@
             "targetId": "f930-f7e6-2b9b-81d7"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "d94a-1fe3-3cdf-8201",
-            "name": "Scar Vanguard",
-            "hidden": true,
-            "targetId": "3eb1-b41d-0750-fdda",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13516,7 +14147,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "b4e4-c6e9-e05c-e244",
+      "value": "ac6b-4085-506d-23b1",
       "conditions": [
        {
         "type": "atLeast",
@@ -13535,7 +14166,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "fa83-817b-14c2-081e",
+      "value": "4d48-65ba-67dd-6436",
       "conditions": [
        {
         "type": "atLeast",
@@ -13554,7 +14185,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "5cad-84d4-0568-9d79",
+      "value": "0bc8-8b92-829a-be00",
       "conditions": [
        {
         "type": "atLeast",
@@ -13573,7 +14204,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "855e-5510-4827-94e0",
+      "value": "c48b-53e3-44d7-e209",
       "conditions": [
        {
         "type": "atLeast",
@@ -13592,7 +14223,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "4716-ec2b-c526-97a6",
+      "value": "5af1-4a17-fcaf-3c36",
       "conditions": [
        {
         "type": "atLeast",
@@ -13611,7 +14242,83 @@
      {
       "type": "add",
       "field": "category",
-      "value": "cf2b-0c99-17f7-e55a",
+      "value": "6657-71e2-420f-949b",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "0aca-0e1b-8321-0611",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "f576-7077-9dc5-1c6d",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "6885-dd6b-842d-2e01",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "c0f8-3f31-16fa-9e8f",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "2443-8869-6033-4f07",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "ad1c-4d45-a6a3-a974",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "0aca-0e1b-8321-0611",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "3eb1-b41d-0750-fdda",
       "conditions": [
        {
         "type": "atLeast",
@@ -13807,7 +14514,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Impact Hits (1), Stomp Attack (1)"
+          "$text": "Impact Hits (1), Stomp Attack (1), Hand Cannon"
          },
          {
           "name": "Tags",
@@ -13860,6 +14567,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ca2f-c97f-04de-88bd"
+       },
+       {
+        "id": "d023-e77b-c5f1-f2b3",
+        "name": "Hand Cannon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "de1f-5e23-a9e1-ca73"
        },
        {
         "id": "3dab-18e8-371b-2988",
@@ -14028,7 +14742,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "df86-05de-de8d-8ea8"
+      "childId": "954f-3bbc-e536-e625"
      }
     ],
     "modifiers": [
@@ -14264,7 +14978,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (D6)"
+        "$text": "Impact Hits (D6), Thunder Cannon"
        },
        {
         "name": "Tags",
@@ -14302,6 +15016,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "304d-8128-da4b-8adf",
+      "name": "Thunder Cannon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "326f-4f31-4862-86dc"
      },
      {
       "id": "e5a7-60d7-54d3-e432",
@@ -14468,7 +15189,7 @@
       "includeChildForces": true,
       "shared": true,
       "percentValue": false,
-      "childId": "df86-05de-de8d-8ea8"
+      "childId": "954f-3bbc-e536-e625"
      }
     ],
     "modifiers": [
@@ -14704,7 +15425,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (D6)"
+        "$text": "Impact Hits (D6), Scratapult"
        },
        {
         "name": "Tags",
@@ -14749,6 +15470,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "1694-73aa-f64a-34fa",
+      "name": "Scratapult",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "1db4-d971-0673-cde3"
      },
      {
       "id": "2d7d-85f5-6d57-532f",
@@ -14956,13 +15684,6 @@
     "hidden": false,
     "categoryLinks": [
      {
-      "id": "310f-68fb-362e-4ce2",
-      "name": "Rock Aurochs",
-      "hidden": true,
-      "targetId": "1aa7-ee8f-180a-8a9f",
-      "primary": false
-     },
-     {
       "id": "f4bf-6d20-5a45-ab24",
       "name": "Mount",
       "hidden": true,
@@ -14974,13 +15695,6 @@
       "name": "⟨Hgt:5⟩",
       "hidden": true,
       "targetId": "b7a6-2b4b-dee8-7f1a",
-      "primary": false
-     },
-     {
-      "id": "6b6d-334e-e1d5-dc9e",
-      "name": "Rock Aurochs",
-      "hidden": true,
-      "targetId": "4708-dee2-8488-1b7a",
       "primary": false
      }
     ],
@@ -15503,15 +16217,7 @@
           "targetId": "7732-8bec-981c-6371"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "9933-7624-37d9-bd7a",
-          "name": "Lance",
-          "hidden": true,
-          "targetId": "4251-a9ca-1be7-86a0",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -15521,6 +16227,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "642e-29cb-60d3-2175",
       "sortIndex": 2,
       "collective": true
      }
@@ -15560,7 +16267,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "4fcb-947c-4245-2de1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "c50a-090f-f262-239a",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "4fcb-947c-4245-2de1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary"
+     },
+     {
+      "type": "increment",
+      "field": "c50a-090f-f262-239a",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "4fcb-947c-4245-2de1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "4fcb-947c-4245-2de1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -16063,6 +16860,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "f3d4-ed5a-e5e9-4242",
       "sortIndex": 2,
       "collective": true
      },
@@ -16122,7 +16920,7 @@
            {
             "type": "set",
             "field": "f86d-a5a6-1411-30e5",
-            "value": "5",
+            "value": "4",
             "conditions": [],
             "conditionGroups": []
            }
@@ -16595,6 +17393,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "21ea-59e9-ac5d-ecd1",
         "sortIndex": 1,
         "collective": true
        },
@@ -16816,6 +17615,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "80f7-c6e2-942f-740c",
         "sortIndex": 3,
         "collective": true
        }
@@ -16905,13 +17705,6 @@
       "primary": false
      },
      {
-      "id": "1b80-a446-1bcb-2b55",
-      "name": "Rock Aurochs Mount Unit",
-      "hidden": true,
-      "targetId": "1f3c-a0eb-c743-9cde",
-      "primary": false
-     },
-     {
       "id": "3b0d-48f1-0417-9fea",
       "name": "Chained Beasts",
       "hidden": false,
@@ -16937,13 +17730,6 @@
       "name": "⟨loses:lighttroops⟩",
       "hidden": true,
       "targetId": "8e83-bdcc-b7ef-6994",
-      "primary": false
-     },
-     {
-      "id": "f166-a05d-94bd-6c4d",
-      "name": "Rock Aurochs",
-      "hidden": true,
-      "targetId": "4708-dee2-8488-1b7a",
       "primary": false
      }
     ],
@@ -17785,6 +18571,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models without Mount only",
     "collective": true
    },
    {
@@ -17860,6 +18647,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by the General",
     "collective": true
    },
    {
@@ -17935,6 +18723,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by Mammoth Hunter",
     "collective": true
    },
    {
@@ -18029,6 +18818,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Great Khan or Khan only",
     "collective": true
    },
    {
@@ -18235,6 +19025,7 @@
      }
     ],
     "entryLinks": [],
+    "comment": "restriction: Shamans only",
     "collective": true
    },
    {
@@ -18310,6 +19101,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Shamans only",
     "collective": true
    },
    {
@@ -18440,6 +19232,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models without Mount only",
     "collective": true
    },
    {
@@ -18515,6 +19308,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by units that count towards \"Core\"",
     "collective": true
    },
    {
@@ -18688,6 +19482,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Great Weapon",
     "collective": true
    },
    {
@@ -18751,6 +19546,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Brace of Ogre Pistols or Ogre Crossbow",
     "collective": true
    },
    {
@@ -18814,10 +19610,11 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Iron Fist or Paired Weapons",
     "collective": true
    },
    {
-    "id": "bba8-5ea4-e5ac-d966",
+    "id": "ee46-e61c-6323-9b34",
     "name": "Ritual Bloodletter",
     "type": "upgrade",
     "hidden": false,
@@ -18830,7 +19627,7 @@
     ],
     "constraints": [
      {
-      "id": "2458-3091-baf4-1c5b",
+      "id": "a5c8-d9d4-918b-065c",
       "field": "selections",
       "scope": "parent",
       "value": 1,
@@ -18841,7 +19638,7 @@
       "percentValue": false
      },
      {
-      "id": "0fd0-3231-22b7-8280",
+      "id": "7388-5875-fdd6-2dda",
       "field": "selections",
       "scope": "roster",
       "value": 1,
@@ -18878,7 +19675,7 @@
     "profiles": [],
     "infoLinks": [
      {
-      "id": "f45f-1761-c2e6-5dd1",
+      "id": "410d-61ca-ba92-9f16",
       "name": "Ritual Bloodletter",
       "hidden": false,
       "type": "profile",
@@ -18887,7 +19684,7 @@
     ],
     "categoryLinks": [
      {
-      "id": "02b1-fa3c-34c9-ad89",
+      "id": "4f7e-f45d-e52b-e2ab",
       "name": "Weapon Enchant",
       "hidden": true,
       "targetId": "c68b-884a-a0d7-b8b4",
@@ -18897,6 +19694,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Shamans only. Enchantment: Iron Fist or Paired Weapons",
     "collective": true
    },
    {
@@ -19079,6 +19877,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only",
     "collective": true
    },
    {
@@ -19154,6 +19953,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models without Mount only",
     "collective": true
    },
    {
@@ -19229,6 +20029,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models without Mount only",
     "collective": true
    },
    {
@@ -19556,6 +20357,184 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
+    "collective": true
+   },
+   {
+    "id": "13e5-56f5-5103-e825",
+    "name": "Hand Weapon Enchant",
+    "hidden": false,
+    "constraints": [],
+    "modifiers": [],
+    "selectionEntries": [],
+    "selectionEntryGroups": [],
+    "entryLinks": [
+     {
+      "id": "e85c-3192-2bda-9e33",
+      "name": "Touch of Greatness",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "7cfc-3b95-6969-929b",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "8a90-fa9b-93df-4421",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 1,
+      "collective": true
+     },
+     {
+      "id": "07d5-540e-cf08-b4e2",
+      "name": "Vorpal Binding",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "dc43-9d4c-3ef7-5c8c",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "d996-80c6-1744-8d8a",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 2,
+      "collective": true
+     },
+     {
+      "id": "1f7b-de3d-5dcc-3162",
+      "name": "Eldritch Inscriptions",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "10dd-d1ae-8ba1-bb32",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 35,
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
+      "categoryLinks": [
+       {
+        "id": "1e9f-b5d4-1075-89c4",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 3,
+      "collective": true
+     },
+     {
+      "id": "d390-2c5e-e082-3197",
+      "name": "King Slayer",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "d9bd-9ee6-564b-e050",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "a600-fca5-24a7-92be",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 4,
+      "collective": true
+     },
+     {
+      "id": "ba0d-cdc0-c9f3-39d3",
+      "name": "Shield Breaker",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "d82d-fb6f-5ec9-5048",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 30,
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
+      "categoryLinks": [
+       {
+        "id": "6e8e-bd8a-661c-775b",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 5,
+      "collective": true
+     },
+     {
+      "id": "ef49-3c97-4bbc-37cf",
+      "name": "Giant Slayer",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "ec30-2e97-7e13-f776",
+      "modifiers": [],
+      "categoryLinks": [
+       {
+        "id": "a8d2-e50b-7340-8441",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 6,
+      "collective": true
+     },
+     {
+      "id": "cfed-11c6-08ed-6fdb",
+      "name": "Hero's Heart",
+      "hidden": false,
+      "type": "selectionEntry",
+      "targetId": "e7f5-403c-4be4-6861",
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ea90-6996-33df-993c",
+        "value": 25,
+        "conditions": [],
+        "conditionGroups": []
+       }
+      ],
+      "categoryLinks": [
+       {
+        "id": "6213-17c2-b37f-e95e",
+        "name": "⟨Special Equipment⟩",
+        "hidden": true,
+        "targetId": "5432-a3ba-dba4-9098",
+        "primary": false
+       }
+      ],
+      "constraints": [],
+      "sortIndex": 7,
+      "collective": true
+     }
+    ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -19676,15 +20655,15 @@
       "collective": true
      },
      {
-      "id": "0ea8-0d97-daa3-7b8f",
+      "id": "9136-035e-02c1-9d9e",
       "name": "Ritual Bloodletter",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "bba8-5ea4-e5ac-d966",
+      "targetId": "ee46-e61c-6323-9b34",
       "modifiers": [],
       "categoryLinks": [
        {
-        "id": "1e51-be04-52db-3b3d",
+        "id": "038f-3e8d-0b22-ecfa",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",
@@ -19772,6 +20751,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -19892,15 +20872,15 @@
       "collective": true
      },
      {
-      "id": "2cf4-9b20-f7c6-1b1a",
+      "id": "ce91-0761-8613-4e6e",
       "name": "Ritual Bloodletter",
       "hidden": false,
       "type": "selectionEntry",
-      "targetId": "bba8-5ea4-e5ac-d966",
+      "targetId": "ee46-e61c-6323-9b34",
       "modifiers": [],
       "categoryLinks": [
        {
-        "id": "8b4b-e82f-e238-8e7f",
+        "id": "46b9-a784-93f6-f380",
         "name": "⟨Special Equipment⟩",
         "hidden": true,
         "targetId": "5432-a3ba-dba4-9098",
@@ -19960,6 +20940,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -20128,6 +21109,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -20189,202 +21171,6 @@
       ],
       "constraints": [],
       "sortIndex": 1,
-      "collective": true
-     }
-    ],
-    "collective": true
-   },
-   {
-    "id": "13e5-56f5-5103-e825",
-    "name": "Hand Weapon Enchant",
-    "hidden": false,
-    "constraints": [],
-    "modifiers": [],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [
-     {
-      "id": "e85c-3192-2bda-9e33",
-      "name": "Touch of Greatness",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "7cfc-3b95-6969-929b",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "8a90-fa9b-93df-4421",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 1,
-      "collective": true
-     },
-     {
-      "id": "07d5-540e-cf08-b4e2",
-      "name": "Vorpal Binding",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "dc43-9d4c-3ef7-5c8c",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "d996-80c6-1744-8d8a",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 2,
-      "collective": true
-     },
-     {
-      "id": "1f7b-de3d-5dcc-3162",
-      "name": "Eldritch Inscriptions",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "10dd-d1ae-8ba1-bb32",
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "ea90-6996-33df-993c",
-        "value": 35,
-        "conditions": [],
-        "conditionGroups": []
-       }
-      ],
-      "categoryLinks": [
-       {
-        "id": "1e9f-b5d4-1075-89c4",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 3,
-      "collective": true
-     },
-     {
-      "id": "d390-2c5e-e082-3197",
-      "name": "King Slayer",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "d9bd-9ee6-564b-e050",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "a600-fca5-24a7-92be",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 4,
-      "collective": true
-     },
-     {
-      "id": "0d54-aa7e-b4c6-07dc",
-      "name": "Ritual Bloodletter",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "bba8-5ea4-e5ac-d966",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "0bb6-465c-138e-f5b2",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 5,
-      "collective": true
-     },
-     {
-      "id": "ba0d-cdc0-c9f3-39d3",
-      "name": "Shield Breaker",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "d82d-fb6f-5ec9-5048",
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "ea90-6996-33df-993c",
-        "value": 30,
-        "conditions": [],
-        "conditionGroups": []
-       }
-      ],
-      "categoryLinks": [
-       {
-        "id": "6e8e-bd8a-661c-775b",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 6,
-      "collective": true
-     },
-     {
-      "id": "ef49-3c97-4bbc-37cf",
-      "name": "Giant Slayer",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "ec30-2e97-7e13-f776",
-      "modifiers": [],
-      "categoryLinks": [
-       {
-        "id": "a8d2-e50b-7340-8441",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 7,
-      "collective": true
-     },
-     {
-      "id": "cfed-11c6-08ed-6fdb",
-      "name": "Hero's Heart",
-      "hidden": false,
-      "type": "selectionEntry",
-      "targetId": "e7f5-403c-4be4-6861",
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "ea90-6996-33df-993c",
-        "value": 25,
-        "conditions": [],
-        "conditionGroups": []
-       }
-      ],
-      "categoryLinks": [
-       {
-        "id": "6213-17c2-b37f-e95e",
-        "name": "⟨Special Equipment⟩",
-        "hidden": true,
-        "targetId": "5432-a3ba-dba4-9098",
-        "primary": false
-       }
-      ],
-      "constraints": [],
-      "sortIndex": 8,
       "collective": true
      }
     ],
@@ -20588,6 +21374,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -20764,6 +21551,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -20884,6 +21672,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -21092,6 +21881,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -21240,6 +22030,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    }
   ],

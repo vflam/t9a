@@ -111,7 +111,7 @@
    {
     "id": "aa36-5926-cd2a-c6a3",
     "name": "Bolt Throwers",
-    "comment": "bolt_throwers",
+    "comment": "[indicator] bolt_throwers",
     "hidden": true,
     "constraints": [
      {
@@ -166,70 +166,6 @@
     ]
    },
    {
-    "id": "c29f-b0a4-cb3a-9d7d",
-    "name": "Crucible Of Slaughter",
-    "comment": "crucible_of_slaughter",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "e47f-3496-4422-34e1",
-    "name": "Halberd",
-    "comment": "halberd",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4251-a9ca-1be7-86a0",
-    "name": "Lance",
-    "comment": "lance",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "e4f6-8aaa-e455-8e9c",
-    "name": "Attached",
-    "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4067-7597-6273-04e3",
-    "name": "Wizard Apprentice or Adept",
-    "comment": "wizardApprenticeOrAdept",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "31a4-1a73-082e-1ba9",
-    "name": "Mount",
-    "comment": "tag_Mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "a8fb-40ff-2487-c252",
-    "name": "Construct",
-    "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "1079-ea6e-0ba6-8ca3",
-    "name": "Covert Operatives",
-    "comment": "covert_operatives",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "2904-965d-2257-0a83",
     "name": "Colossal Kraken",
     "comment": "colossal_kraken",
@@ -268,21 +204,89 @@
     ]
    },
    {
-    "id": "0381-eab9-ae7e-13a3",
-    "name": "Fleet Commander",
-    "comment": "fleet_commander",
+    "id": "f919-9204-c7f0-eedc",
+    "name": "Dreaded Giant",
+    "comment": "dreadedGiant",
     "hidden": true,
-    "constraints": [],
-    "modifiers": []
+    "constraints": [
+     {
+      "id": "d36f-6ef3-7cc6-3ea8",
+      "field": "selections",
+      "scope": "roster",
+      "value": 3,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "d36f-6ef3-7cc6-3ea8",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
    },
    {
-    "id": "c00a-96f3-7329-5687",
+    "id": "3628-ea50-6055-1aad",
+    "name": "Divine Altar",
+    "comment": "divineAltar_mount_unit",
+    "hidden": true,
+    "constraints": [
+     {
+      "id": "2ed5-f46e-1a43-e6ce",
+      "field": "selections",
+      "scope": "roster",
+      "value": 1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "2ed5-f46e-1a43-e6ce",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "1ae0-8e0a-7d9f-f9a6",
     "name": "Shield",
     "hidden": true,
     "comment": "Rare",
     "constraints": [
      {
-      "id": "c02d-4fc1-7861-d5b7",
+      "id": "6feb-6bc0-e6b2-801e",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -298,7 +302,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "c02d-4fc1-7861-d5b7",
+      "field": "6feb-6bc0-e6b2-801e",
       "value": 1,
       "repeats": [
        {
@@ -320,7 +324,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "c02d-4fc1-7861-d5b7",
+      "field": "6feb-6bc0-e6b2-801e",
       "conditions": [
        {
         "type": "instanceOf",
@@ -336,13 +340,13 @@
     ]
    },
    {
-    "id": "e69d-d606-f802-27da",
+    "id": "442f-66fe-f3a1-49e9",
     "name": "Repeater Crossbow (3+)",
     "hidden": true,
     "comment": "Rare",
     "constraints": [
      {
-      "id": "0546-5955-9c44-fb36",
+      "id": "dca9-7960-122e-0b36",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -358,7 +362,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "0546-5955-9c44-fb36",
+      "field": "dca9-7960-122e-0b36",
       "value": 1,
       "repeats": [
        {
@@ -380,7 +384,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "0546-5955-9c44-fb36",
+      "field": "dca9-7960-122e-0b36",
       "conditions": [
        {
         "type": "instanceOf",
@@ -396,13 +400,13 @@
     ]
    },
    {
-    "id": "50c8-9792-9144-db70",
+    "id": "5b0c-ad25-f7b5-f606",
     "name": "Colossal Kraken",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "3adb-bc61-0aeb-49c7",
+      "id": "0601-acfa-4dbe-8218",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -418,7 +422,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "3adb-bc61-0aeb-49c7",
+      "field": "0601-acfa-4dbe-8218",
       "value": 1,
       "repeats": [
        {
@@ -440,7 +444,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "3adb-bc61-0aeb-49c7",
+      "field": "0601-acfa-4dbe-8218",
       "conditions": [
        {
         "type": "instanceOf",
@@ -1376,22 +1380,111 @@
         ],
         "modifiers": [
          {
-          "type": "set",
-          "field": "hidden",
-          "value": true,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "root-entry-self",
-            "childId": "c29f-b0a4-cb3a-9d7d",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Global",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Channel",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Global",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Channel, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Global",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Channel",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Offensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Channel",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Offensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Channel, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Offensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Channel",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Defensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Channel",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Defensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Channel, ",
+          "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Defensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Channel",
+          "conditions": [],
           "conditionGroups": []
          }
         ],
@@ -1407,10 +1500,24 @@
         ],
         "categoryLinks": [
          {
+          "id": "a8d2-4223-798a-2588",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "5173-e032-dd15-6cc0",
           "name": "General",
           "hidden": true,
           "targetId": "bf19-2ae3-58d2-5ff5",
+          "primary": false
+         },
+         {
+          "id": "ce5f-ca53-461f-5585",
+          "name": "⟨loses:channel⟩",
+          "hidden": true,
+          "targetId": "98af-a2d0-7876-4f7d",
           "primary": false
          }
         ],
@@ -1471,7 +1578,7 @@
                 "value": 0,
                 "field": "selections",
                 "scope": "root-entry-self",
-                "childId": "bf19-2ae3-58d2-5ff5",
+                "childId": "fffd-0772-fb48-80fb",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
@@ -1495,6 +1602,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: One choice only (General only)",
             "sortIndex": 1,
             "collective": true
            },
@@ -1534,7 +1642,7 @@
                 "value": 0,
                 "field": "selections",
                 "scope": "root-entry-self",
-                "childId": "bf19-2ae3-58d2-5ff5",
+                "childId": "fffd-0772-fb48-80fb",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
@@ -1558,6 +1666,7 @@
             "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: One choice only (General only)",
             "sortIndex": 2,
             "collective": true
            }
@@ -1842,6 +1951,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "b956-adc3-0c12-e524",
       "sortIndex": 2,
       "collective": true
      },
@@ -2001,6 +2111,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: without Mount only",
         "sortIndex": 2,
         "collective": true
        }
@@ -2121,6 +2232,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mount.",
           "sortIndex": 1,
           "collective": true
          },
@@ -2228,15 +2340,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "4ad4-91db-c4a8-d0a0",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -2324,15 +2428,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5c2f-50b4-c784-bc10",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -2361,6 +2457,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 4,
           "collective": true
          },
@@ -2937,13 +3034,6 @@
           "hidden": true,
           "targetId": "cda6-3d55-eecf-4914",
           "primary": false
-         },
-         {
-          "id": "3f55-c919-9851-3cc9",
-          "name": "Attached",
-          "hidden": true,
-          "targetId": "e4f6-8aaa-e455-8e9c",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -2989,6 +3079,13 @@
          }
         ],
         "categoryLinks": [
+         {
+          "id": "a3b6-1a1f-5983-19c9",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
          {
           "id": "eaf1-aab7-b763-2191",
           "name": "General",
@@ -3185,7 +3282,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "d002-5be6-5bc8-7cb1",
+            "childId": "499f-aeb4-d942-d4bc",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3209,6 +3306,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken by Solitary",
         "sortIndex": 1,
         "collective": true
        }
@@ -3252,7 +3350,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "d002-5be6-5bc8-7cb1",
+            "childId": "499f-aeb4-d942-d4bc",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3311,7 +3409,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "d002-5be6-5bc8-7cb1",
+            "childId": "499f-aeb4-d942-d4bc",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3370,7 +3468,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3423-3d2c-6873-2eef",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3429,7 +3527,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3423-3d2c-6873-2eef",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3488,7 +3586,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3423-3d2c-6873-2eef",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3512,6 +3610,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "d104-e409-948d-caf2",
       "sortIndex": 2,
       "collective": true
      },
@@ -3533,7 +3632,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "5bca-9ce3-d02b-08a5",
+        "value": 150,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "bf19-2ae3-58d2-5ff5",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -3679,6 +3798,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: without Mount only",
           "sortIndex": 2,
           "collective": true
          }
@@ -3804,6 +3924,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mount.",
           "sortIndex": 1,
           "collective": true
          },
@@ -3843,15 +3964,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "0196-0ffd-5d28-27e7",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -4044,7 +4157,27 @@
             "percentValue": false
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "hidden",
+            "value": true,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "db21-6ca1-547b-551a",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -4055,15 +4188,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "8102-53c9-b9df-1094",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -4092,6 +4217,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 5,
           "collective": true
          },
@@ -4563,7 +4689,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "First Strike (Artistry of Death), Zeal (against Characters), Poison Attacks"
+        "$text": "First Strike (Artistry of Death), Zeal (against Characters), Poison Attacks, Paired Weapons, Repeater Handbow"
        },
        {
         "name": "Tags",
@@ -4660,6 +4786,20 @@
       "targetId": "644e-543b-7f0a-41e2"
      },
      {
+      "id": "b3c4-b58f-6761-8d09",
+      "name": "Paired Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "2431-3187-a071-99c8"
+     },
+     {
+      "id": "350f-c8ec-2906-6959",
+      "name": "Repeater Handbow",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "a4d7-bfc9-3e74-dbb6"
+     },
+     {
       "id": "5227-c840-9683-5abc",
       "name": "Hand Weapon",
       "hidden": false,
@@ -4668,7 +4808,87 @@
      }
     ],
     "selectionEntries": [],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "300a-9cd6-373a-2f6a",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "dd65-e393-5617-c697",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "8209-f34f-cac8-2d78",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "1714-7931-3aca-b1a6",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "9814-4eeb-c942-56f1",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "0fc2-e4d3-5483-1150",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -4749,13 +4969,6 @@
       "primary": false
      },
      {
-      "id": "609e-4a34-39de-15a4",
-      "name": "Wizard Apprentice",
-      "hidden": true,
-      "targetId": "a71d-a1c0-93ae-9ac5",
-      "primary": false
-     },
-     {
       "id": "fe8d-5b32-cf69-e613",
       "name": "⟨Hgt:1⟩",
       "hidden": true,
@@ -4767,6 +4980,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "e37d-3622-0313-4b5b",
+      "name": "Wizard Apprentice",
+      "hidden": false,
+      "targetId": "a71d-a1c0-93ae-9ac5",
       "primary": false
      }
     ],
@@ -5016,6 +5236,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "0c5d-4eef-8c98-cac1",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "a294-90fc-780c-1f34",
           "name": "General",
           "hidden": true,
@@ -5161,17 +5388,10 @@
         ],
         "categoryLinks": [
          {
-          "id": "3f77-4b40-b32b-3995",
+          "id": "08c2-acaa-3cbe-882b",
           "name": "Wizard Apprentice",
-          "hidden": true,
+          "hidden": false,
           "targetId": "a71d-a1c0-93ae-9ac5",
-          "primary": false
-         },
-         {
-          "id": "d6dc-0913-48a5-002b",
-          "name": "Wizard Apprentice or Adept",
-          "hidden": true,
-          "targetId": "4067-7597-6273-04e3",
           "primary": false
          }
         ],
@@ -5244,18 +5464,12 @@
           "hidden": true,
           "targetId": "0eb6-4350-a18a-a9bf",
           "primary": false
-         },
-         {
-          "id": "a7de-8ef9-3749-f1f0",
-          "name": "Wizard Apprentice or Adept",
-          "hidden": true,
-          "targetId": "4067-7597-6273-04e3",
-          "primary": false
          }
         ],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken by the Battle Standard Bearer",
         "sortIndex": 2,
         "collective": true
        }
@@ -5295,27 +5509,7 @@
         "percentValue": false
        }
       ],
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "55e1-6b1f-cb06-90bc",
-        "value": 2,
-        "conditions": [
-         {
-          "type": "atLeast",
-          "value": 1,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "3ab0-9185-e522-de12",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
-       }
-      ],
+      "modifiers": [],
       "selectionEntries": [
        {
         "id": "be08-4fb7-87c0-3ff4",
@@ -5388,7 +5582,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5407,7 +5601,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5426,7 +5620,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5445,7 +5639,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5464,7 +5658,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5483,7 +5677,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5573,7 +5767,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5592,7 +5786,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5611,7 +5805,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5630,7 +5824,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5649,7 +5843,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5668,7 +5862,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5691,6 +5885,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "be08-4fb7-87c0-3ff4",
       "sortIndex": 3,
       "collective": true
      },
@@ -5830,6 +6025,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mount.",
           "sortIndex": 1,
           "collective": true
          },
@@ -5937,15 +6133,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "d8f7-140e-7c59-6297",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -6558,27 +6746,7 @@
           "percentValue": false
          }
         ],
-        "modifiers": [
-         {
-          "type": "set",
-          "field": "hidden",
-          "value": true,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "root-entry-self",
-            "childId": "c29f-b0a4-cb3a-9d7d",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
-          "conditionGroups": []
-         }
-        ],
+        "modifiers": [],
         "profiles": [],
         "infoLinks": [
          {
@@ -6590,6 +6758,13 @@
          }
         ],
         "categoryLinks": [
+         {
+          "id": "5f70-ba21-0dfa-a87e",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
          {
           "id": "b918-c2e8-395b-8bac",
           "name": "General",
@@ -6923,6 +7098,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "3863-5400-43c2-f5f4",
       "sortIndex": 2,
       "collective": true
      },
@@ -7070,6 +7246,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "1a5d-58bc-5759-3243",
         "sortIndex": 1,
         "collective": true
        },
@@ -7101,27 +7278,7 @@
           "percentValue": false
          }
         ],
-        "modifiers": [
-         {
-          "type": "set",
-          "field": "8d9b-71fc-1d8f-6e11",
-          "value": 2,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "root-entry-self",
-            "childId": "3ab0-9185-e522-de12",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
-          "conditionGroups": []
-         }
-        ],
+        "modifiers": [],
         "selectionEntries": [
          {
           "id": "3f93-2e84-a571-0398",
@@ -7194,7 +7351,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7213,7 +7370,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7232,7 +7389,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7251,7 +7408,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7270,7 +7427,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7289,7 +7446,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7379,7 +7536,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7398,7 +7555,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7417,7 +7574,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7436,7 +7593,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7455,7 +7612,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7474,7 +7631,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7564,7 +7721,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7583,7 +7740,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7602,7 +7759,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7621,7 +7778,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7640,7 +7797,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7659,7 +7816,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -7682,6 +7839,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "3f93-2e84-a571-0398",
         "sortIndex": 2,
         "collective": true
        }
@@ -7709,7 +7867,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "8c17-3520-5c2a-d2bb",
+        "value": 200,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "c04d-1882-6246-277c",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -7871,6 +8049,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "8f9e-5d27-a193-06eb",
         "sortIndex": 1,
         "collective": true
        }
@@ -8152,7 +8331,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Artistry of Death, Elven Finesse"
+        "$text": "Artistry of Death, Elven Finesse, Grim Harpoon"
        },
        {
         "name": "Tags",
@@ -8253,6 +8432,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "181c-f9d5-5d2c-ceb8"
+     },
+     {
+      "id": "3824-9e65-53b8-c49c",
+      "name": "Grim Harpoon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "e20f-db50-02ce-fbb7"
      },
      {
       "id": "540a-fb03-cfa5-8da3",
@@ -8414,7 +8600,87 @@
       "collective": true
      }
     ],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "4128-08a8-6ff6-4454",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "a8f5-3cb5-bf02-9e35",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "e648-716f-5c8f-cf88",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "71e7-0b41-35f6-59ad",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "ffa5-cb18-7a47-f46e",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "f3d2-20c5-6920-946d",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -8600,7 +8866,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Artistry of Death"
+        "$text": "Artistry of Death, Aembeghen’s Blades, Dance of the Rose"
        },
        {
         "name": "Tags",
@@ -8674,6 +8940,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "0496-8df6-3646-8d00"
+     },
+     {
+      "id": "e4d5-0faa-e62b-851a",
+      "name": "Aembeghen’s Blades",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "2056-4366-24db-4bc0"
+     },
+     {
+      "id": "845a-0385-7040-a460",
+      "name": "Dance of the Rose",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "618c-60fe-ea7d-3c0b"
      },
      {
       "id": "cafd-f7b8-b1d2-8c92",
@@ -8751,6 +9031,85 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
+      "collective": true
+     },
+     {
+      "id": "1c71-bbb9-7ef5-f30e",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "c6d4-072e-9970-c9b4",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "a273-2c6a-65b3-81d5",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "381e-225c-9e1e-9c48",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "4971-ab5f-a7ec-ea6a",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "31cd-299e-953a-2aca",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -8860,7 +9219,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "5050-7ec7-eee7-1109",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "cf6e-ea44-9f0f-cb44",
@@ -8965,7 +9344,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (Artistry of Death)"
+          "$text": "First Strike (Artistry of Death), Spear"
          },
          {
           "name": "Tags",
@@ -9025,6 +9404,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "57f7-ecca-e354-149f",
+        "name": "Spear",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1751-dc92-5392-82ee"
        },
        {
         "id": "1763-eff9-98f4-16f0",
@@ -9293,7 +9679,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "efc1-183d-140c-5474",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "7d50-4062-92cb-9a38",
@@ -9398,7 +9804,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (Artistry of Death), March and Shoot"
+          "$text": "First Strike (Artistry of Death), March and Shoot, Repeater Crossbow"
          },
          {
           "name": "Tags",
@@ -9465,6 +9871,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "21dc-d4bd-c82f-01a9"
+       },
+       {
+        "id": "39b3-47dd-e6a5-6a25",
+        "name": "Repeater Crossbow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "5fef-d1a3-05ff-506a"
        },
        {
         "id": "f493-7bd3-fac1-dc97",
@@ -9742,7 +10155,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "3f01-cb45-95d3-c169",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "906c-7660-0ea8-c738",
@@ -9847,7 +10280,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (Artistry of Death)"
+          "$text": "First Strike (Artistry of Death), Paired Weapons"
          },
          {
           "name": "Tags",
@@ -9921,6 +10354,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "531c-ced7-ae35-86c8",
+        "name": "Paired Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2431-3187-a071-99c8"
        },
        {
         "id": "3be5-e6cf-2fae-8e7c",
@@ -10003,6 +10443,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "alias: Vanguard (3)",
           "sortIndex": 1,
           "collective": true
          },
@@ -10069,6 +10510,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "3900-0677-6755-45e5",
         "sortIndex": 1,
         "collective": true
        }
@@ -10330,7 +10772,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "adb9-d7a3-a226-0bf1",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "6ae9-8c64-b59c-f90d",
@@ -10435,7 +10897,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (Artistry of Death)"
+          "$text": "First Strike (Artistry of Death), Paired Weapons"
          },
          {
           "name": "Tags",
@@ -10502,6 +10964,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "2596-937f-98e2-fb24",
+        "name": "Paired Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2431-3187-a071-99c8"
        },
        {
         "id": "ed52-05f3-0ff4-c289",
@@ -10778,7 +11247,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "e584-5605-e07e-be8c",
+        "value": 6,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "0f42-376d-fb77-5363",
@@ -10883,7 +11372,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (Artistry of Death)"
+          "$text": "First Strike (Artistry of Death), Light Lance"
          },
          {
           "name": "Tags",
@@ -10935,6 +11424,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "6846-1a2e-ba2b-3027",
+        "name": "Light Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "78bf-1cd9-b47f-43d7"
        },
        {
         "id": "f443-4afb-9c19-78db",
@@ -11221,6 +11717,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "e612-469d-feb1-b925",
         "sortIndex": 2,
         "collective": true
        }
@@ -11390,7 +11887,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "c00a-96f3-7329-5687",
+      "value": "1ae0-8e0a-7d9f-f9a6",
       "conditions": [
        {
         "type": "atLeast",
@@ -11409,7 +11906,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "e69d-d606-f802-27da",
+      "value": "442f-66fe-f3a1-49e9",
       "conditions": [
        {
         "type": "atLeast",
@@ -11502,7 +11999,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "11e8-697f-9d50-7b1f",
+        "value": 6,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "7ed8-64c3-819f-5e8c",
@@ -11906,15 +12423,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "c80f-41e6-7437-e7ca",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11979,46 +12488,33 @@
         ],
         "categoryLinks": [],
         "selectionEntries": [],
-        "selectionEntryGroups": [
+        "selectionEntryGroups": [],
+        "entryLinks": [
          {
-          "id": "b139-301e-3045-9346",
-          "name": "Standard Bearer",
+          "id": "785e-34b3-12e9-1bbb",
+          "name": "Banner Enchant",
           "hidden": false,
-          "constraints": [],
-          "modifiers": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [],
-          "entryLinks": [
+          "type": "selectionEntryGroup",
+          "targetId": "c921-fcbe-9258-f5d3",
+          "constraints": [
            {
-            "id": "fdf0-0a83-4c89-d362",
-            "name": "Banner Enchant",
-            "hidden": false,
-            "type": "selectionEntryGroup",
-            "targetId": "c921-fcbe-9258-f5d3",
-            "constraints": [
-             {
-              "id": "88a2-9b33-cf20-30a6",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             }
-            ],
-            "modifiers": [],
-            "collapsible": true,
-            "sortIndex": 1,
-            "collective": true
+            "id": "3a37-1f81-f8de-18a9",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
            }
           ],
+          "modifiers": [],
+          "collapsible": true,
           "sortIndex": 1,
           "collective": true
          }
         ],
-        "entryLinks": [],
         "sortIndex": 1,
         "collective": true
        },
@@ -12525,7 +13021,30 @@
       "id": "6aa0-c04e-e47e-d2e8",
       "name": "Options",
       "hidden": false,
-      "constraints": [],
+      "constraints": [
+       {
+        "id": "cdb8-a300-914f-6417",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "a1ff-5656-b860-12e0",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
       "modifiers": [],
       "selectionEntries": [
        {
@@ -12564,15 +13083,7 @@
           "targetId": "42b4-4d10-2466-39ce"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "bad9-e85b-614c-abbf",
-          "name": "Halberd",
-          "hidden": true,
-          "targetId": "e47f-3496-4422-34e1",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -12615,15 +13126,7 @@
           "targetId": "7732-8bec-981c-6371"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "b1ac-f339-9bda-a5e6",
-          "name": "Lance",
-          "hidden": true,
-          "targetId": "4251-a9ca-1be7-86a0",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -12633,6 +13136,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "62a1-f4d8-5f9a-dd68",
       "sortIndex": 2,
       "collective": true
      }
@@ -13193,7 +13697,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Artistry of Death"
+        "$text": "Artistry of Death, Paired Weapons"
        },
        {
         "name": "Tags",
@@ -13224,6 +13728,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "0496-8df6-3646-8d00"
+     },
+     {
+      "id": "0aaf-c4be-8f3c-c7e6",
+      "name": "Paired Weapons",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "2431-3187-a071-99c8"
      },
      {
       "id": "ee7d-a2a3-0ff8-7a50",
@@ -13369,7 +13880,30 @@
       "id": "588b-6965-be17-179a",
       "name": "Options",
       "hidden": false,
-      "constraints": [],
+      "constraints": [
+       {
+        "id": "a4ad-3ac4-d7f0-c8df",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "7198-0b0e-b381-23b7",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
       "modifiers": [],
       "selectionEntries": [
        {
@@ -13504,6 +14038,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "dc17-b721-0db7-34cf",
       "sortIndex": 2,
       "collective": true
      }
@@ -13944,15 +14479,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "3a11-cba1-4a55-18c5",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -14098,7 +14625,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "1313-044f-9422-aebe",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "5042-76f2-075e-d659",
@@ -14203,7 +14750,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Elven Finesse, First Strike (Artistry of Death), Lethal Strike"
+          "$text": "Elven Finesse, First Strike (Artistry of Death), Lethal Strike, Great Weapon"
          },
          {
           "name": "Tags",
@@ -14270,6 +14817,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "b128-d5b9-a024-b424"
+       },
+       {
+        "id": "01e2-9e4f-cfee-9ac1",
+        "name": "Great Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "404b-7330-b333-3778"
        },
        {
         "id": "0735-360b-decb-1540",
@@ -14539,7 +15093,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "775c-7568-4c7c-4f54",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "c545-18b1-3eee-a399",
@@ -14644,7 +15218,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (Artistry of Death)"
+          "$text": "First Strike (Artistry of Death), Halberd"
          },
          {
           "name": "Tags",
@@ -14711,6 +15285,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "fc1b-b881-9da3-2c24",
+        "name": "Halberd",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "42b4-4d10-2466-39ce"
        },
        {
         "id": "9307-0cdc-5d88-6966",
@@ -15340,7 +15921,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "7617-48d4-9f7f-daba",
+        "value": 6,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "8f93-203d-392d-52b5",
@@ -15636,7 +16237,30 @@
         "id": "423d-7d65-1144-ee2b",
         "name": "Options",
         "hidden": false,
-        "constraints": [],
+        "constraints": [
+         {
+          "id": "2118-6731-7e14-ff39",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "a042-7c2e-5bd6-4af3",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
         "modifiers": [],
         "selectionEntries": [
          {
@@ -15926,17 +16550,26 @@
             ],
             "entryLinks": [],
             "selectionEntryGroups": [],
+            "defaultSelectionEntryId": "273f-b56b-fc3c-9144",
             "sortIndex": 1,
             "collective": true
            }
           ],
           "entryLinks": [],
+          "displayCosts": [
+           {
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 100
+           }
+          ],
           "sortIndex": 2,
           "collective": true
          }
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "4ce2-aa6e-8857-1c02",
         "sortIndex": 2,
         "collective": true
        }
@@ -16295,7 +16928,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "First Strike (Artistry of Death)"
+        "$text": "First Strike (Artistry of Death), Light Lance"
        },
        {
         "name": "Tags",
@@ -16339,7 +16972,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (D6)"
+        "$text": "Impact Hits (D6), Harpoon Launcher"
        },
        {
         "name": "Tags",
@@ -16384,6 +17017,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "fe2d-239f-d704-0c7d",
+      "name": "Light Lance",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "78bf-1cd9-b47f-43d7"
+     },
+     {
+      "id": "b77f-5838-a6ab-7451",
+      "name": "Harpoon Launcher",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "8e30-368e-8ebf-0e64"
      },
      {
       "id": "29a2-e341-58fa-7912",
@@ -16716,7 +17363,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "First Strike (Artistry of Death)"
+        "$text": "First Strike (Artistry of Death), Daeb Bolt Thrower"
        },
        {
         "name": "Tags",
@@ -16776,6 +17423,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "ce0e-c1b2-a268-c6da"
+     },
+     {
+      "id": "5201-a3c1-c065-1b49",
+      "name": "Daeb Bolt Thrower",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "64f5-a8fd-a20b-3405"
      },
      {
       "id": "5567-3796-a7df-dfbc",
@@ -17011,7 +17665,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Devastating Charge (Distracting), First Strike (Artistry of Death), Poison Attacks (Melee)"
+          "$text": "Devastating Charge (Distracting), First Strike (Artistry of Death), Poison Attacks (Melee), Paired Weapons"
          },
          {
           "name": "Tags",
@@ -17115,6 +17769,13 @@
         "targetId": "644e-543b-7f0a-41e2"
        },
        {
+        "id": "5f05-3efa-80fe-14fc",
+        "name": "Paired Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2431-3187-a071-99c8"
+       },
+       {
         "id": "97b1-386d-7d88-e34f",
         "name": "Hand Weapon",
         "hidden": false,
@@ -17129,7 +17790,30 @@
         "id": "ca17-436d-e310-324b",
         "name": "Options",
         "hidden": false,
-        "constraints": [],
+        "constraints": [
+         {
+          "id": "ad8d-b2c4-7367-e73d",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "9850-e564-cefd-c406",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
         "modifiers": [],
         "selectionEntries": [
          {
@@ -17256,12 +17940,14 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "alias: Repeater Handbow (4+) and Poison Attacks (Shooting) (4+)",
           "sortIndex": 2,
           "collective": true
          }
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "b450-6ce9-2e9d-56d1",
         "sortIndex": 1,
         "collective": true
        }
@@ -17367,25 +18053,6 @@
       "comment": "Rare"
      },
      {
-      "type": "set",
-      "field": "ea90-6996-33df-993c",
-      "value": 0,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "1079-ea6e-0ba6-8ca3",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
       "type": "remove",
       "field": "category",
       "value": "8ae7-fb8a-bebd-4980",
@@ -17467,7 +18134,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "946e-aee9-82c9-a794",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "b3ee-1780-a606-1cef",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "1db0-51f6-a26e-12dc",
@@ -17572,7 +18259,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (Artistry of Death, 1 At), Weapon Master"
+          "$text": "First Strike (Artistry of Death, 1 At), Weapon Master, Halberd, Paired Weapons, Spear"
          },
          {
           "name": "Tags",
@@ -17646,6 +18333,27 @@
         "hidden": false,
         "type": "profile",
         "targetId": "6405-e868-d2f6-1c09"
+       },
+       {
+        "id": "6288-073a-0006-9fe0",
+        "name": "Halberd",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "42b4-4d10-2466-39ce"
+       },
+       {
+        "id": "6cf9-3f8c-6d97-8ccf",
+        "name": "Paired Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2431-3187-a071-99c8"
+       },
+       {
+        "id": "81d8-ce7c-096e-0ef8",
+        "name": "Spear",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1751-dc92-5392-82ee"
        },
        {
         "id": "dc93-f393-846a-5596",
@@ -18281,7 +18989,7 @@
      {
       "type": "add",
       "field": "category",
-      "value": "50c8-9792-9144-db70",
+      "value": "5b0c-ad25-f7b5-f606",
       "conditions": [
        {
         "type": "atLeast",
@@ -19015,7 +19723,15 @@
     "name": "Dreaded Giant",
     "type": "model",
     "hidden": false,
-    "categoryLinks": [],
+    "categoryLinks": [
+     {
+      "id": "b6fb-b2de-d684-4b06",
+      "name": "Dreaded Giant",
+      "hidden": true,
+      "targetId": "f919-9204-c7f0-eedc",
+      "primary": false
+     }
+    ],
     "costs": [
      {
       "name": "pts",
@@ -19081,7 +19797,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "c2bb-f939-3529-bb2d",
+          "name": "Giant Club",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "4cae-c75b-2db0-3d02"
+         }
+        ],
         "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
@@ -19199,7 +19923,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "c6d1-b657-0af6-7042",
+          "name": "Big Brother",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "f207-5e9d-fd90-66e0"
+         }
+        ],
         "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
@@ -19226,17 +19958,17 @@
     "hidden": false,
     "categoryLinks": [
      {
+      "id": "9009-6a1a-de3e-05e5",
+      "name": "Divine Altar",
+      "hidden": true,
+      "targetId": "3628-ea50-6055-1aad",
+      "primary": false
+     },
+     {
       "id": "1bd3-1881-6792-9789",
       "name": "Mount",
       "hidden": true,
       "targetId": "db21-6ca1-547b-551a",
-      "primary": false
-     },
-     {
-      "id": "233f-2adb-c866-500f",
-      "name": "Towering",
-      "hidden": true,
-      "targetId": "b9c1-5c30-13e9-8d07",
       "primary": false
      },
      {
@@ -20234,15 +20966,7 @@
           "targetId": "02fd-cb69-4080-d9e7"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "8a6f-4b59-9a6d-e2d8",
-          "name": "Towering",
-          "hidden": true,
-          "targetId": "b9c1-5c30-13e9-8d07",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -21135,25 +21859,6 @@
        }
       ],
       "comment": "Rare"
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "0381-eab9-ae7e-13a3",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      }
     ],
     "collective": true
@@ -21290,7 +21995,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Artistry of Death, Elven Finesse"
+        "$text": "Artistry of Death, Elven Finesse, Grim Harpoon"
        },
        {
         "name": "Tags",
@@ -21391,6 +22096,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "181c-f9d5-5d2c-ceb8"
+     },
+     {
+      "id": "1e50-ba5c-5fcf-e977",
+      "name": "Grim Harpoon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "e20f-db50-02ce-fbb7"
      },
      {
       "id": "c932-1f4c-8617-1dd8",
@@ -21645,6 +22357,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by units that count towards \"Core\".",
     "collective": true
    },
    {
@@ -21781,6 +22494,25 @@
        }
       ],
       "comment": "Uncommon"
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "7227-7a7f-4b51-86d7",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -21797,6 +22529,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by the Battle Standard Bearer.",
     "collective": true
    },
    {
@@ -21860,6 +22593,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Great Weapon or Halberd.",
     "collective": true
    },
    {
@@ -21923,6 +22657,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Spear.",
     "collective": true
    },
    {
@@ -21986,6 +22721,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Halberd.",
     "collective": true
    },
    {
@@ -22049,6 +22785,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Lance.",
     "collective": true
    },
    {
@@ -22112,6 +22849,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Paired Weapons.",
     "collective": true
    },
    {
@@ -22206,6 +22944,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: without Mount only. Enchantment: Metal Armour.",
     "collective": true
    },
    {
@@ -22316,7 +23055,7 @@
            {
             "type": "set",
             "field": "f86d-a5a6-1411-30e5",
-            "value": "3",
+            "value": "4",
             "conditions": [],
             "conditionGroups": []
            }
@@ -22574,6 +23313,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1-4 only.",
     "collective": true
    },
    {
@@ -22783,6 +23523,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -22951,6 +23692,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23127,6 +23869,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23315,6 +24058,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23483,6 +24227,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23679,6 +24424,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23847,6 +24593,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24047,6 +24794,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24250,6 +24998,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24458,6 +25207,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    }
   ],

@@ -68,6 +68,14 @@
     "hidden": false
    },
    {
+    "id": "07c6-567f-2d46-e4bc",
+    "name": "Sylvan Bow",
+    "comment": "sylvanBow",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "7a39-fa6d-6a93-5b21",
     "name": "Sylvan Spirit",
     "comment": "sylvan_spirit",
@@ -77,7 +85,7 @@
    },
    {
     "id": "e4f6-8aaa-e455-8e9c",
-    "name": "Attached",
+    "name": "Captain and Attached",
     "comment": "attached",
     "hidden": true,
     "constraints": [],
@@ -92,33 +100,9 @@
     "modifiers": []
    },
    {
-    "id": "07c6-567f-2d46-e4bc",
-    "name": "Sylvan Bow",
-    "comment": "sylvanBow",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "4251-a9ca-1be7-86a0",
-    "name": "Lance",
-    "comment": "lance",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "98f6-cc40-e6ae-da88",
-    "name": "Art Drago Gem",
-    "comment": "art_drago_gem",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "31a4-1a73-082e-1ba9",
-    "name": "Mount",
-    "comment": "tag_Mount",
+    "id": "3f6d-9692-445e-d41b",
+    "name": "Not Solitary Leader",
+    "comment": "not_solitary_leader",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -162,16 +146,8 @@
     ]
    },
    {
-    "id": "330a-8d44-4e14-5327",
-    "name": "Ambush Battlefield Edge",
-    "comment": "ambushBattlefieldEdge",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
     "id": "4c50-ec4f-5749-e0fd",
-    "name": "Scout Sentinels",
+    "name": "Scout",
     "comment": "scout_sentinels",
     "hidden": true,
     "constraints": [
@@ -246,51 +222,13 @@
     ]
    },
    {
-    "id": "7fdb-fe61-0b22-cce8",
-    "name": "Dragon Mount Unit",
-    "comment": "dragon_mount_unit",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "ae57-d996-24e5-c199",
-      "field": "selections",
-      "scope": "roster",
-      "value": 1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "ae57-d996-24e5-c199",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "2922-80a7-d6fc-df35",
+    "id": "5432-4eaa-2771-0f9e",
     "name": "Scout",
     "hidden": true,
     "comment": "Extraordinary",
     "constraints": [
      {
-      "id": "7c85-d99e-6910-bbc5",
+      "id": "ea04-30c7-85d4-52d0",
       "field": "selections",
       "scope": "roster",
       "value": 0,
@@ -306,7 +244,7 @@
     "modifiers": [
      {
       "type": "increment",
-      "field": "7c85-d99e-6910-bbc5",
+      "field": "ea04-30c7-85d4-52d0",
       "value": 1,
       "repeats": [
        {
@@ -328,7 +266,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "7c85-d99e-6910-bbc5",
+      "field": "ea04-30c7-85d4-52d0",
       "conditions": [
        {
         "type": "instanceOf",
@@ -409,7 +347,7 @@
         "id": "cfa9-432e-1323-367a",
         "field": "limit::ea90-6996-33df-993c",
         "scope": "roster",
-        "value": 35,
+        "value": 30,
         "percentValue": true,
         "type": "max",
         "includeChildSelections": true,
@@ -1233,6 +1171,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "cb54-0c04-16f3-f43d",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "526e-1873-4b3d-3d2b",
           "name": "General",
           "hidden": true,
@@ -1454,6 +1399,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "1592-681d-e7a8-c9c6",
       "sortIndex": 2,
       "collective": true
      },
@@ -1570,6 +1516,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Cannot be taken with Blade Dancer.",
         "sortIndex": 1,
         "collective": true
        },
@@ -1656,6 +1603,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken by Height 5.",
         "sortIndex": 2,
         "collective": true
        }
@@ -1787,6 +1735,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Blade Dancer.",
           "sortIndex": 1,
           "collective": true
          }
@@ -1980,6 +1929,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mount.",
           "sortIndex": 2,
           "collective": true
          },
@@ -2192,13 +2142,6 @@
           ],
           "categoryLinks": [
            {
-            "id": "4cb9-7c23-5ddb-07d2",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           },
-           {
             "id": "313e-0578-ac39-0daa",
             "name": "Sylvan Blades Or Lance",
             "hidden": true,
@@ -2234,6 +2177,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 5,
           "collective": true
          }
@@ -2699,9 +2643,16 @@
          },
          {
           "id": "8e5b-27b2-3ad6-aab7",
-          "name": "Attached",
+          "name": "Captain and Attached",
           "hidden": true,
           "targetId": "e4f6-8aaa-e455-8e9c",
+          "primary": false
+         },
+         {
+          "id": "2921-8255-12e1-c295",
+          "name": "Not Solitary Leader",
+          "hidden": true,
+          "targetId": "3f6d-9692-445e-d41b",
           "primary": false
          }
         ],
@@ -2749,10 +2700,24 @@
         ],
         "categoryLinks": [
          {
+          "id": "64a4-1c83-a32a-8421",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "efef-2c9a-5085-1354",
           "name": "General",
           "hidden": true,
           "targetId": "bf19-2ae3-58d2-5ff5",
+          "primary": false
+         },
+         {
+          "id": "b70c-1c84-a96d-8f97",
+          "name": "Not Solitary Leader",
+          "hidden": true,
+          "targetId": "3f6d-9692-445e-d41b",
           "primary": false
          }
         ],
@@ -2863,6 +2828,13 @@
           "hidden": true,
           "targetId": "0237-49e0-a2f5-2467",
           "primary": false
+         },
+         {
+          "id": "e7a1-1f12-fccc-c41f",
+          "name": "Not Solitary Leader",
+          "hidden": true,
+          "targetId": "3f6d-9692-445e-d41b",
+          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -2933,7 +2905,38 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "hidden",
+          "value": true,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "3f6d-9692-445e-d41b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "2173-9c7c-c669-bfa8",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -2948,6 +2951,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken by a model with Solitary, unless it is a Shapeshifter.",
         "sortIndex": 1,
         "collective": true
        }
@@ -2980,7 +2984,38 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "hidden",
+          "value": true,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "3f6d-9692-445e-d41b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "2173-9c7c-c669-bfa8",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "categoryLinks": [],
         "sortIndex": 2,
         "collective": true
@@ -3069,6 +3104,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "fb10-2404-fea6-c52e",
       "sortIndex": 2,
       "collective": true
      },
@@ -3251,6 +3287,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken by Height 5.",
         "sortIndex": 2,
         "collective": true
        }
@@ -3382,6 +3419,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Blade Dancer.",
           "sortIndex": 1,
           "collective": true
          }
@@ -3575,6 +3613,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mount.",
           "sortIndex": 2,
           "collective": true
          },
@@ -3795,13 +3834,6 @@
           ],
           "categoryLinks": [
            {
-            "id": "8d85-6409-be85-3075",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           },
-           {
             "id": "7bdf-8ac0-6519-6667",
             "name": "Sylvan Blades Or Lance",
             "hidden": true,
@@ -3837,6 +3869,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 5,
           "collective": true
          }
@@ -4327,6 +4360,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "9fb9-e8cf-437b-cef7",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "ef16-9e81-3eca-61a6",
           "name": "General",
           "hidden": true,
@@ -4568,6 +4608,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "b74c-0b28-2b63-0617",
       "sortIndex": 2,
       "collective": true
      },
@@ -4707,6 +4748,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "10c1-0446-ff27-434d",
       "sortIndex": 3,
       "collective": true
      },
@@ -4738,27 +4780,7 @@
         "percentValue": false
        }
       ],
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "eca0-80b1-7e47-6cc9",
-        "value": 2,
-        "conditions": [
-         {
-          "type": "atLeast",
-          "value": 1,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "3ab0-9185-e522-de12",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
-       }
-      ],
+      "modifiers": [],
       "selectionEntries": [
        {
         "id": "32d2-5afc-7e0f-2dbf",
@@ -4831,7 +4853,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4850,7 +4872,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -4869,7 +4891,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4888,7 +4910,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -4907,7 +4929,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -4926,7 +4948,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5016,7 +5038,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5035,7 +5057,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5054,7 +5076,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5073,7 +5095,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5092,7 +5114,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5111,7 +5133,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5201,7 +5223,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5220,7 +5242,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5239,7 +5261,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5258,7 +5280,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5277,7 +5299,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5296,7 +5318,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5319,6 +5341,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "32d2-5afc-7e0f-2dbf",
       "sortIndex": 4,
       "collective": true
      },
@@ -5340,7 +5363,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "0897-1453-f968-6dcf",
+        "value": 200,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "c04d-1882-6246-277c",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
@@ -5469,6 +5512,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Blade Dancer.",
           "sortIndex": 1,
           "collective": true
          }
@@ -5649,6 +5693,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "69a5-837c-4af4-3e55",
         "sortIndex": 2,
         "collective": true
        }
@@ -5998,7 +6043,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Crush Attack, Stomp Attack (D6), Magical Attacks"
+        "$text": "Crush Attack, Stomp Attack (D6), Magical Attacks, Impaling Roots"
        },
        {
         "name": "Tags",
@@ -6123,6 +6168,13 @@
       "targetId": "4cae-8942-e006-f5f9"
      },
      {
+      "id": "8b14-0669-d3c0-4674",
+      "name": "Impaling Roots",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "b684-a1fb-7e5b-3c0d"
+     },
+     {
       "id": "78e9-ac16-41cc-0269",
       "name": "Hand Weapon",
       "hidden": false,
@@ -6189,6 +6241,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "a0c6-d358-5e0c-6553",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "85ab-c5b0-a165-6f2c",
           "name": "General",
           "hidden": true,
@@ -6253,7 +6312,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "e579-4b00-6ad6-3527",
+          "name": "Wizard",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "1c14-9c9d-39df-2b80"
+         }
+        ],
         "categoryLinks": [
          {
           "id": "b575-7e9a-9c39-963d",
@@ -6266,31 +6333,50 @@
         "selectionEntries": [],
         "selectionEntryGroups": [
          {
-          "id": "c374-84bb-7391-029b",
-          "name": "Wizard",
+          "id": "65b9-3db2-18dd-2434",
+          "name": "Level",
           "hidden": false,
-          "constraints": [],
-          "modifiers": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [
+          "constraints": [
            {
-            "id": "ee94-8245-bb1e-44ba",
-            "name": "Level",
+            "id": "2fd5-6c5d-efff-27c6",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "min",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           },
+           {
+            "id": "eb0b-af08-f8d2-feb7",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "164a-7784-8cb2-b853",
+            "name": "Wizard Adept",
+            "type": "upgrade",
             "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
             "constraints": [
              {
-              "id": "5679-da16-e23d-df4c",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "4a09-5dd4-2457-8506",
+              "id": "00df-dac0-51e3-1d82",
               "field": "selections",
               "scope": "parent",
               "value": 1,
@@ -6302,134 +6388,46 @@
              }
             ],
             "modifiers": [],
-            "selectionEntries": [
+            "profiles": [],
+            "infoLinks": [
              {
-              "id": "e5fd-b7d0-1b54-42da",
+              "id": "5e1a-0ed6-53b3-b0ee",
               "name": "Wizard Adept",
-              "type": "upgrade",
               "hidden": false,
-              "costs": [
-               {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 0
-               }
-              ],
-              "constraints": [
-               {
-                "id": "0070-0adb-d75c-f878",
-                "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               }
-              ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [
-               {
-                "id": "bc76-cee0-4d0f-93ee",
-                "name": "Wizard Adept",
-                "hidden": false,
-                "type": "profile",
-                "targetId": "fb1d-b46b-62d7-7427"
-               }
-              ],
-              "categoryLinks": [
-               {
-                "id": "e4b7-a4f9-7971-66bb",
-                "name": "Wizard Adept",
-                "hidden": true,
-                "targetId": "0eb6-4350-a18a-a9bf",
-                "primary": false
-               }
-              ],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [],
-              "sortIndex": 1,
-              "collective": true
-             },
-             {
-              "id": "db2b-34be-40cc-91cb",
-              "name": "Wizard Master",
-              "type": "upgrade",
-              "hidden": false,
-              "costs": [
-               {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 150
-               }
-              ],
-              "constraints": [
-               {
-                "id": "ebef-c5cc-27cb-c314",
-                "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               }
-              ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [
-               {
-                "id": "7a50-993a-21e0-f120",
-                "name": "Wizard Master",
-                "hidden": false,
-                "type": "profile",
-                "targetId": "d9b2-b78b-6ad9-6d70"
-               }
-              ],
-              "categoryLinks": [
-               {
-                "id": "bab4-0cf8-e91d-19fd",
-                "name": "Wizard Master",
-                "hidden": true,
-                "targetId": "c04d-1882-6246-277c",
-                "primary": false
-               }
-              ],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [],
-              "sortIndex": 2,
-              "collective": true
+              "type": "profile",
+              "targetId": "fb1d-b46b-62d7-7427"
              }
             ],
+            "categoryLinks": [
+             {
+              "id": "1b2f-e37c-7e8f-3d32",
+              "name": "Wizard Adept",
+              "hidden": true,
+              "targetId": "0eb6-4350-a18a-a9bf",
+              "primary": false
+             }
+            ],
+            "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
-            "collapsible": true,
             "sortIndex": 1,
             "collective": true
            },
            {
-            "id": "87e1-e122-b183-dc73",
-            "name": "Path",
+            "id": "197c-1a8a-3254-2a1e",
+            "name": "Wizard Master",
+            "type": "upgrade",
             "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 150
+             }
+            ],
             "constraints": [
              {
-              "id": "1cab-415c-11d0-d9e8",
-              "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "7eb5-7761-4d52-e1b7",
+              "id": "01a2-5e72-81ed-d612",
               "field": "selections",
               "scope": "parent",
               "value": 1,
@@ -6440,412 +6438,451 @@
               "percentValue": false
              }
             ],
-            "modifiers": [
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
              {
-              "type": "set",
-              "field": "7eb5-7761-4d52-e1b7",
-              "value": 2,
-              "conditions": [
+              "id": "44f1-916c-31ff-5659",
+              "name": "Wizard Master",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "d9b2-b78b-6ad9-6d70"
+             }
+            ],
+            "categoryLinks": [
+             {
+              "id": "8ea3-6f87-8a87-7c5d",
+              "name": "Wizard Master",
+              "hidden": true,
+              "targetId": "c04d-1882-6246-277c",
+              "primary": false
+             }
+            ],
+            "selectionEntries": [],
+            "selectionEntryGroups": [],
+            "entryLinks": [],
+            "sortIndex": 2,
+            "collective": true
+           }
+          ],
+          "selectionEntryGroups": [],
+          "entryLinks": [],
+          "collapsible": true,
+          "defaultSelectionEntryId": "164a-7784-8cb2-b853",
+          "sortIndex": 1,
+          "collective": true
+         },
+         {
+          "id": "1908-fd73-5452-193d",
+          "name": "Path",
+          "hidden": false,
+          "constraints": [
+           {
+            "id": "689d-9942-cc84-996c",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "min",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           },
+           {
+            "id": "366e-ef95-eccc-b851",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "a2e6-bcd8-ebf2-4294",
+            "name": "Divination",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "2187-8ce7-e6f0-a8e4",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [],
+            "categoryLinks": [],
+            "selectionEntries": [],
+            "selectionEntryGroups": [],
+            "entryLinks": [
+             {
+              "id": "3fd0-49d7-0d07-88c8",
+              "name": "Divination Spells",
+              "hidden": false,
+              "type": "selectionEntryGroup",
+              "constraints": [
                {
-                "type": "atLeast",
-                "value": 1,
+                "id": "db21-1fb6-d205-9f00",
                 "field": "selections",
-                "scope": "root-entry-self",
-                "childId": "3ab0-9185-e522-de12",
+                "scope": "parent",
+                "value": 0,
+                "type": "max",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "id": "3d84-6fde-be8c-1ce4",
+                "field": "selections",
+                "scope": "parent",
+                "value": 0,
+                "type": "min",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
                 "percentValue": false
                }
               ],
-              "conditionGroups": []
-             }
-            ],
-            "selectionEntries": [
-             {
-              "id": "26ab-9fc6-288b-46de",
-              "name": "Divination",
-              "type": "upgrade",
-              "hidden": false,
-              "costs": [
+              "modifiers": [
                {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 0
-               }
-              ],
-              "constraints": [
-               {
-                "id": "96e7-f2d7-df2e-eb85",
-                "field": "selections",
-                "scope": "parent",
+                "type": "set",
+                "field": "db21-1fb6-d205-9f00",
                 "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               }
-              ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [],
-              "categoryLinks": [],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
                {
-                "id": "0353-96c3-3fc9-0677",
-                "name": "Divination Spells",
-                "hidden": false,
-                "type": "selectionEntryGroup",
-                "constraints": [
+                "type": "set",
+                "field": "3d84-6fde-be8c-1ce4",
+                "value": 1,
+                "conditions": [
                  {
-                  "id": "8265-ddc2-f7e1-c2c8",
+                  "type": "atLeast",
+                  "value": 1,
                   "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "max",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
-                  "includeChildForces": false,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "f58a-29b4-4f6e-6b18",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "min",
-                  "shared": true,
-                  "includeChildSelections": true,
-                  "includeChildForces": false,
+                  "includeChildForces": true,
                   "percentValue": false
                  }
                 ],
-                "modifiers": [
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "db21-1fb6-d205-9f00",
+                "value": 3,
+                "conditions": [
                  {
-                  "type": "set",
-                  "field": "8265-ddc2-f7e1-c2c8",
+                  "type": "atLeast",
                   "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "f58a-29b4-4f6e-6b18",
-                  "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "8265-ddc2-f7e1-c2c8",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "f58a-29b4-4f6e-6b18",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "8265-ddc2-f7e1-c2c8",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "f58a-29b4-4f6e-6b18",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
                  }
                 ],
-                "targetId": "17b3-c05a-f059-f09a",
-                "sortIndex": 1,
-                "collective": true
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "3d84-6fde-be8c-1ce4",
+                "value": 3,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "db21-1fb6-d205-9f00",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "3d84-6fde-be8c-1ce4",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
                }
               ],
+              "targetId": "17b3-c05a-f059-f09a",
               "sortIndex": 1,
               "collective": true
-             },
+             }
+            ],
+            "sortIndex": 1,
+            "collective": true
+           },
+           {
+            "id": "010b-4867-69d4-4cd3",
+            "name": "Druidism",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
              {
-              "id": "ad1b-98cc-c29c-ddb3",
-              "name": "Druidism",
-              "type": "upgrade",
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "693e-3a73-4294-d34e",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [],
+            "categoryLinks": [],
+            "selectionEntries": [],
+            "selectionEntryGroups": [],
+            "entryLinks": [
+             {
+              "id": "4d50-b138-5f8d-fddd",
+              "name": "Druidism Spells",
               "hidden": false,
-              "costs": [
-               {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 0
-               }
-              ],
+              "type": "selectionEntryGroup",
               "constraints": [
                {
-                "id": "601d-a924-db8d-7fd5",
+                "id": "3937-7551-7a6c-09a3",
                 "field": "selections",
                 "scope": "parent",
-                "value": 1,
+                "value": 0,
                 "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
                 "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "id": "d177-5e26-d131-6111",
+                "field": "selections",
+                "scope": "parent",
+                "value": 0,
+                "type": "min",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
                 "percentValue": false
                }
               ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [],
-              "categoryLinks": [],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [
+              "modifiers": [
                {
-                "id": "c055-637e-3205-ccd0",
-                "name": "Druidism Spells",
-                "hidden": false,
-                "type": "selectionEntryGroup",
-                "constraints": [
+                "type": "set",
+                "field": "3937-7551-7a6c-09a3",
+                "value": 1,
+                "conditions": [
                  {
-                  "id": "44f3-e034-70d7-141a",
+                  "type": "atLeast",
+                  "value": 1,
                   "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "max",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
-                  "includeChildForces": false,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "240e-92f9-5c09-82a1",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "min",
-                  "shared": true,
-                  "includeChildSelections": true,
-                  "includeChildForces": false,
+                  "includeChildForces": true,
                   "percentValue": false
                  }
                 ],
-                "modifiers": [
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "d177-5e26-d131-6111",
+                "value": 1,
+                "conditions": [
                  {
-                  "type": "set",
-                  "field": "44f3-e034-70d7-141a",
+                  "type": "atLeast",
                   "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "240e-92f9-5c09-82a1",
-                  "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "44f3-e034-70d7-141a",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "240e-92f9-5c09-82a1",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "44f3-e034-70d7-141a",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "240e-92f9-5c09-82a1",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
                  }
                 ],
-                "targetId": "5e0d-ec58-5ae3-23d4",
-                "sortIndex": 1,
-                "collective": true
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "3937-7551-7a6c-09a3",
+                "value": 3,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "d177-5e26-d131-6111",
+                "value": 3,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "3937-7551-7a6c-09a3",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "d177-5e26-d131-6111",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
                }
               ],
-              "sortIndex": 2,
+              "targetId": "5e0d-ec58-5ae3-23d4",
+              "sortIndex": 1,
               "collective": true
              }
             ],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "collapsible": true,
             "sortIndex": 2,
             "collective": true
            }
           ],
+          "selectionEntryGroups": [],
           "entryLinks": [],
-          "sortIndex": 1,
+          "collapsible": true,
+          "defaultSelectionEntryId": "a2e6-bcd8-ebf2-4294",
+          "sortIndex": 2,
           "collective": true
          }
         ],
         "entryLinks": [],
+        "exportable": false,
         "defaultAmount": 1,
         "sortIndex": 1,
         "collective": true
@@ -6855,6 +6892,85 @@
       "entryLinks": [],
       "collapsible": true,
       "sortIndex": 2,
+      "collective": true
+     },
+     {
+      "id": "b63e-01df-a79d-7783",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "ef64-ba2e-aa3f-f355",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "48cf-af32-7ba3-c876",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "0e25-c92b-ed4f-b31b",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "97a6-0fc7-7c41-1122",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "a873-f6d4-ddb2-2028",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -6891,7 +7007,7 @@
       ],
       "modifiers": [],
       "collapsible": true,
-      "sortIndex": 3,
+      "sortIndex": 4,
       "collective": true
      }
     ],
@@ -6930,25 +7046,6 @@
        }
       ],
       "comment": "Extraordinary"
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry-self",
-        "childId": "98f6-cc40-e6ae-da88",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -7123,7 +7220,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Crush Attack, Stomp Attack (D6), Magical Attacks"
+        "$text": "Crush Attack, Stomp Attack (D6), Magical Attacks, Impaling Roots"
        },
        {
         "name": "Tags",
@@ -7248,6 +7345,13 @@
       "targetId": "4cae-8942-e006-f5f9"
      },
      {
+      "id": "5721-34f7-d53b-0c1e",
+      "name": "Impaling Roots",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "b684-a1fb-7e5b-3c0d"
+     },
+     {
       "id": "80c0-e2cd-4fc0-a340",
       "name": "Hand Weapon",
       "hidden": false,
@@ -7314,6 +7418,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "a26f-4c52-6efe-2e88",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "4eeb-f8e1-7bd7-d029",
           "name": "General",
           "hidden": true,
@@ -7331,6 +7442,85 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
+      "collective": true
+     },
+     {
+      "id": "afd2-36be-44c7-4647",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "cf7c-e27a-9db5-bc86",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "0474-b00d-32d4-2189",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "7e80-6d13-3fee-00be",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "cea0-cede-04a4-788d",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "b6df-fe27-dfea-3cd6",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -7367,7 +7557,7 @@
       ],
       "modifiers": [],
       "collapsible": true,
-      "sortIndex": 2,
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -7771,7 +7961,7 @@
          },
          {
           "id": "eb51-b0b7-a62d-3ed0",
-          "name": "Attached",
+          "name": "Captain and Attached",
           "hidden": true,
           "targetId": "e4f6-8aaa-e455-8e9c",
           "primary": false
@@ -7820,6 +8010,13 @@
          }
         ],
         "categoryLinks": [
+         {
+          "id": "dc14-1a4e-9c45-b817",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
          {
           "id": "e57f-ef46-19c0-f244",
           "name": "General",
@@ -7886,7 +8083,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "39db-2c62-d23e-c474",
+          "name": "Wizard",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "1c14-9c9d-39df-2b80"
+         }
+        ],
         "categoryLinks": [
          {
           "id": "d75b-eec8-f59a-521c",
@@ -7899,20 +8104,39 @@
         "selectionEntries": [],
         "selectionEntryGroups": [
          {
-          "id": "b4bf-6859-89bb-66ed",
-          "name": "Wizard",
+          "id": "c12a-088d-6d4f-3b2c",
+          "name": "Level",
           "hidden": false,
-          "constraints": [],
-          "modifiers": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [
+          "constraints": [
            {
-            "id": "53d7-8c90-a0a6-dd31",
-            "name": "Level",
+            "id": "79ab-7b70-e587-1e95",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "c23c-5bc5-a1ae-8113",
+            "name": "Wizard Apprentice",
+            "type": "upgrade",
             "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 50
+             }
+            ],
             "constraints": [
              {
-              "id": "284f-5ac9-a53e-a2ae",
+              "id": "6db0-dea0-f62c-ba5b",
               "field": "selections",
               "scope": "parent",
               "value": 1,
@@ -7924,123 +8148,46 @@
              }
             ],
             "modifiers": [],
-            "selectionEntries": [
+            "profiles": [],
+            "infoLinks": [
              {
-              "id": "5c71-b1de-49d8-dfa2",
+              "id": "20b8-7063-4467-60a6",
               "name": "Wizard Apprentice",
-              "type": "upgrade",
               "hidden": false,
-              "costs": [
-               {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 50
-               }
-              ],
-              "constraints": [
-               {
-                "id": "f40b-b366-5daf-e343",
-                "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               }
-              ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [
-               {
-                "id": "55d0-cf77-4e1c-26c9",
-                "name": "Wizard Apprentice",
-                "hidden": false,
-                "type": "profile",
-                "targetId": "4eab-5bc5-9ea8-1b0c"
-               }
-              ],
-              "categoryLinks": [
-               {
-                "id": "38d0-4915-ef10-9650",
-                "name": "Wizard Apprentice",
-                "hidden": true,
-                "targetId": "a71d-a1c0-93ae-9ac5",
-                "primary": false
-               }
-              ],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [],
-              "sortIndex": 1,
-              "collective": true
-             },
-             {
-              "id": "d334-1795-61be-2688",
-              "name": "Wizard Adept",
-              "type": "upgrade",
-              "hidden": false,
-              "costs": [
-               {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 150
-               }
-              ],
-              "constraints": [
-               {
-                "id": "013c-a60b-5c40-4f8d",
-                "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               }
-              ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [
-               {
-                "id": "0f1d-68e5-aa1d-6305",
-                "name": "Wizard Adept",
-                "hidden": false,
-                "type": "profile",
-                "targetId": "fb1d-b46b-62d7-7427"
-               }
-              ],
-              "categoryLinks": [
-               {
-                "id": "ea99-1d06-6d04-dcf1",
-                "name": "Wizard Adept",
-                "hidden": true,
-                "targetId": "0eb6-4350-a18a-a9bf",
-                "primary": false
-               }
-              ],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [],
-              "sortIndex": 2,
-              "collective": true
+              "type": "profile",
+              "targetId": "4eab-5bc5-9ea8-1b0c"
              }
             ],
+            "categoryLinks": [
+             {
+              "id": "f599-cf57-b7a0-ea14",
+              "name": "Wizard Apprentice",
+              "hidden": false,
+              "targetId": "a71d-a1c0-93ae-9ac5",
+              "primary": false
+             }
+            ],
+            "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
-            "collapsible": true,
             "sortIndex": 1,
             "collective": true
            },
            {
-            "id": "a067-bd7a-abc7-d284",
-            "name": "Path",
+            "id": "a708-5df6-d64f-aee1",
+            "name": "Wizard Adept",
+            "type": "upgrade",
             "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 150
+             }
+            ],
             "constraints": [
              {
-              "id": "d6dc-a8ff-52f3-3e3d",
+              "id": "0e61-ece0-f745-10b6",
               "field": "selections",
               "scope": "parent",
               "value": 1,
@@ -8051,412 +8198,438 @@
               "percentValue": false
              }
             ],
-            "modifiers": [
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [
              {
-              "type": "set",
-              "field": "d6dc-a8ff-52f3-3e3d",
-              "value": 2,
-              "conditions": [
+              "id": "6eb5-6788-55eb-9e63",
+              "name": "Wizard Adept",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "fb1d-b46b-62d7-7427"
+             }
+            ],
+            "categoryLinks": [
+             {
+              "id": "d984-5d22-f8bb-a025",
+              "name": "Wizard Adept",
+              "hidden": true,
+              "targetId": "0eb6-4350-a18a-a9bf",
+              "primary": false
+             }
+            ],
+            "selectionEntries": [],
+            "selectionEntryGroups": [],
+            "entryLinks": [],
+            "sortIndex": 2,
+            "collective": true
+           }
+          ],
+          "selectionEntryGroups": [],
+          "entryLinks": [],
+          "collapsible": true,
+          "sortIndex": 1,
+          "collective": true
+         },
+         {
+          "id": "d7f0-ba73-ac8f-6adb",
+          "name": "Path",
+          "hidden": false,
+          "constraints": [
+           {
+            "id": "dd6d-8af5-1832-0363",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [],
+          "selectionEntries": [
+           {
+            "id": "61b0-973d-0f24-9a7c",
+            "name": "Divination",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "8141-4cd7-1e87-728d",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [],
+            "categoryLinks": [],
+            "selectionEntries": [],
+            "selectionEntryGroups": [],
+            "entryLinks": [
+             {
+              "id": "0003-2cd7-fc57-72fe",
+              "name": "Divination Spells",
+              "hidden": false,
+              "type": "selectionEntryGroup",
+              "constraints": [
                {
-                "type": "atLeast",
-                "value": 1,
+                "id": "fa0e-c3c0-3ad8-1ef1",
                 "field": "selections",
-                "scope": "root-entry-self",
-                "childId": "3ab0-9185-e522-de12",
+                "scope": "parent",
+                "value": 0,
+                "type": "max",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "id": "ba6e-eb0b-a84f-877b",
+                "field": "selections",
+                "scope": "parent",
+                "value": 0,
+                "type": "min",
                 "shared": true,
                 "includeChildSelections": true,
                 "includeChildForces": false,
                 "percentValue": false
                }
               ],
-              "conditionGroups": []
-             }
-            ],
-            "selectionEntries": [
-             {
-              "id": "d3bc-9f37-fd45-6e52",
-              "name": "Divination",
-              "type": "upgrade",
-              "hidden": false,
-              "costs": [
+              "modifiers": [
                {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 0
-               }
-              ],
-              "constraints": [
-               {
-                "id": "b226-0937-48a8-d0df",
-                "field": "selections",
-                "scope": "parent",
+                "type": "set",
+                "field": "fa0e-c3c0-3ad8-1ef1",
                 "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               }
-              ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [],
-              "categoryLinks": [],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
                {
-                "id": "95ea-5fe3-a964-d60e",
-                "name": "Divination Spells",
-                "hidden": false,
-                "type": "selectionEntryGroup",
-                "constraints": [
+                "type": "set",
+                "field": "ba6e-eb0b-a84f-877b",
+                "value": 1,
+                "conditions": [
                  {
-                  "id": "fbf7-6639-dea9-4071",
+                  "type": "atLeast",
+                  "value": 1,
                   "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "max",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
-                  "includeChildForces": false,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "dcfc-2b5d-9ed3-fd32",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "min",
-                  "shared": true,
-                  "includeChildSelections": true,
-                  "includeChildForces": false,
+                  "includeChildForces": true,
                   "percentValue": false
                  }
                 ],
-                "modifiers": [
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "fa0e-c3c0-3ad8-1ef1",
+                "value": 3,
+                "conditions": [
                  {
-                  "type": "set",
-                  "field": "fbf7-6639-dea9-4071",
+                  "type": "atLeast",
                   "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "dcfc-2b5d-9ed3-fd32",
-                  "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "fbf7-6639-dea9-4071",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "dcfc-2b5d-9ed3-fd32",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "fbf7-6639-dea9-4071",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "dcfc-2b5d-9ed3-fd32",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
                  }
                 ],
-                "targetId": "17b3-c05a-f059-f09a",
-                "sortIndex": 1,
-                "collective": true
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "ba6e-eb0b-a84f-877b",
+                "value": 3,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "fa0e-c3c0-3ad8-1ef1",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "ba6e-eb0b-a84f-877b",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
                }
               ],
+              "targetId": "17b3-c05a-f059-f09a",
               "sortIndex": 1,
               "collective": true
-             },
+             }
+            ],
+            "sortIndex": 1,
+            "collective": true
+           },
+           {
+            "id": "fee6-8db0-7da7-dc4e",
+            "name": "Druidism",
+            "type": "upgrade",
+            "hidden": false,
+            "costs": [
              {
-              "id": "c973-e174-be55-ed94",
-              "name": "Druidism",
-              "type": "upgrade",
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
+            "constraints": [
+             {
+              "id": "125e-b7fc-c24a-979c",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [],
+            "profiles": [],
+            "infoLinks": [],
+            "categoryLinks": [],
+            "selectionEntries": [],
+            "selectionEntryGroups": [],
+            "entryLinks": [
+             {
+              "id": "0048-b518-21cd-d400",
+              "name": "Druidism Spells",
               "hidden": false,
-              "costs": [
-               {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 0
-               }
-              ],
+              "type": "selectionEntryGroup",
               "constraints": [
                {
-                "id": "deb5-8bb8-2fe9-97f4",
+                "id": "e5ee-013f-9973-dd54",
                 "field": "selections",
                 "scope": "parent",
-                "value": 1,
+                "value": 0,
                 "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
                 "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "id": "b949-ae55-66b4-0867",
+                "field": "selections",
+                "scope": "parent",
+                "value": 0,
+                "type": "min",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
                 "percentValue": false
                }
               ],
-              "modifiers": [],
-              "profiles": [],
-              "infoLinks": [],
-              "categoryLinks": [],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [
+              "modifiers": [
                {
-                "id": "d1c2-79a2-ebce-8925",
-                "name": "Druidism Spells",
-                "hidden": false,
-                "type": "selectionEntryGroup",
-                "constraints": [
+                "type": "set",
+                "field": "e5ee-013f-9973-dd54",
+                "value": 1,
+                "conditions": [
                  {
-                  "id": "6fc2-f184-f844-4b60",
+                  "type": "atLeast",
+                  "value": 1,
                   "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "max",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
                   "shared": true,
                   "includeChildSelections": true,
-                  "includeChildForces": false,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "e10c-adbf-1796-8405",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 0,
-                  "type": "min",
-                  "shared": true,
-                  "includeChildSelections": true,
-                  "includeChildForces": false,
+                  "includeChildForces": true,
                   "percentValue": false
                  }
                 ],
-                "modifiers": [
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "b949-ae55-66b4-0867",
+                "value": 1,
+                "conditions": [
                  {
-                  "type": "set",
-                  "field": "6fc2-f184-f844-4b60",
+                  "type": "atLeast",
                   "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "e10c-adbf-1796-8405",
-                  "value": 1,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "a71d-a1c0-93ae-9ac5",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "6fc2-f184-f844-4b60",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "e10c-adbf-1796-8405",
-                  "value": 3,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "0eb6-4350-a18a-a9bf",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "6fc2-f184-f844-4b60",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 },
-                 {
-                  "type": "set",
-                  "field": "e10c-adbf-1796-8405",
-                  "value": 5,
-                  "conditions": [
-                   {
-                    "type": "atLeast",
-                    "value": 1,
-                    "field": "selections",
-                    "scope": "root-entry",
-                    "childId": "c04d-1882-6246-277c",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": true,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "a71d-a1c0-93ae-9ac5",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
                  }
                 ],
-                "targetId": "5e0d-ec58-5ae3-23d4",
-                "sortIndex": 1,
-                "collective": true
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "e5ee-013f-9973-dd54",
+                "value": 3,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "b949-ae55-66b4-0867",
+                "value": 3,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "0eb6-4350-a18a-a9bf",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "e5ee-013f-9973-dd54",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
+               },
+               {
+                "type": "set",
+                "field": "b949-ae55-66b4-0867",
+                "value": 5,
+                "conditions": [
+                 {
+                  "type": "atLeast",
+                  "value": 1,
+                  "field": "selections",
+                  "scope": "root-entry-self",
+                  "childId": "c04d-1882-6246-277c",
+                  "shared": true,
+                  "includeChildSelections": true,
+                  "includeChildForces": true,
+                  "percentValue": false
+                 }
+                ],
+                "conditionGroups": []
                }
               ],
-              "sortIndex": 2,
+              "targetId": "5e0d-ec58-5ae3-23d4",
+              "sortIndex": 1,
               "collective": true
              }
             ],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "collapsible": true,
             "sortIndex": 2,
             "collective": true
            }
           ],
+          "selectionEntryGroups": [],
           "entryLinks": [],
-          "sortIndex": 1,
+          "collapsible": true,
+          "sortIndex": 2,
           "collective": true
          }
         ],
         "entryLinks": [],
+        "exportable": false,
         "defaultAmount": 1,
         "sortIndex": 1,
         "collective": true
@@ -8466,6 +8639,85 @@
       "entryLinks": [],
       "collapsible": true,
       "sortIndex": 2,
+      "collective": true
+     },
+     {
+      "id": "15e0-5393-12e7-0f6b",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "8020-728b-908c-728f",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "048f-228f-3ad1-8127",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "a5a8-c03d-3685-5969",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "e474-3869-a7c7-981a",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "9195-6413-a514-74b8",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -8514,7 +8766,7 @@
       ],
       "modifiers": [],
       "collapsible": true,
-      "sortIndex": 3,
+      "sortIndex": 4,
       "collective": true
      }
     ],
@@ -8885,6 +9137,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "caf0-ee2c-330a-3385",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "dcce-c44a-52d3-9a3d",
           "name": "General",
           "hidden": true,
@@ -8961,6 +9220,85 @@
       "entryLinks": [],
       "sortIndex": 1,
       "collective": true
+     },
+     {
+      "id": "6be8-b31d-93aa-c4db",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "5e2c-2bf8-62fe-7f04",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "4378-9fdf-d50a-209d",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "903c-5a36-4bd5-307f",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "b09a-eeb0-826e-24e1",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "e58f-4232-5075-79e2",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
+      "collective": true
      }
     ],
     "entryLinks": [
@@ -9008,7 +9346,7 @@
       ],
       "modifiers": [],
       "collapsible": true,
-      "sortIndex": 2,
+      "sortIndex": 3,
       "collective": true
      }
     ],
@@ -9202,7 +9540,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Weapon Master"
+        "$text": "Weapon Master, The Unicorn’s Horn, The Unicorn’s Fury"
        },
        {
         "name": "Tags",
@@ -9306,6 +9644,20 @@
       "targetId": "6405-e868-d2f6-1c09"
      },
      {
+      "id": "00c7-4557-2110-7392",
+      "name": "The Unicorn’s Horn",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "3625-606d-e4a9-d16b"
+     },
+     {
+      "id": "021a-1292-bd0c-5c3b",
+      "name": "The Unicorn’s Fury",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "46a1-3fc4-e3e7-d0d2"
+     },
+     {
       "id": "20a8-6ef1-32da-7ff0",
       "name": "Hand Weapon",
       "hidden": false,
@@ -9314,7 +9666,87 @@
      }
     ],
     "selectionEntries": [],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "a33b-2b45-3f15-9487",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "1e25-e718-20f7-e862",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "728d-4e2f-2848-4a18",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "a279-55e7-654a-1779",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "6d08-7275-248b-f58f",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "dbbe-864a-105d-ea53",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -9668,6 +10100,85 @@
     "selectionEntries": [],
     "selectionEntryGroups": [
      {
+      "id": "f0b8-3820-de3d-2f8b",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "ad59-ffe6-88f6-cbb3",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "d39f-3de6-ba4a-8615",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "e243-5069-8d9b-0cbc",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "bf43-2d89-f9ab-e07e",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "5dce-d41c-2a91-5c95",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 1,
+      "collective": true
+     },
+     {
       "id": "789a-83a5-bca8-f204",
       "name": "Spells",
       "hidden": false,
@@ -9829,7 +10340,8 @@
       ],
       "entryLinks": [],
       "selectionEntryGroups": [],
-      "sortIndex": 1,
+      "defaultSelectionEntryId": "3d4b-0895-4921-6532",
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -10562,7 +11074,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Sylvan Bow"
          },
          {
           "name": "Tags",
@@ -10615,6 +11127,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "eaf1-603f-b111-f866"
+       },
+       {
+        "id": "cf37-a8bf-d921-26a0",
+        "name": "Sylvan Bow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "20f6-eaf7-7892-bd44"
        },
        {
         "id": "53cb-4eac-c7ff-08c2",
@@ -11530,93 +12049,73 @@
             "primary": false
            }
           ],
-          "selectionEntries": [],
-          "selectionEntryGroups": [
+          "selectionEntries": [
            {
-            "id": "fed3-151d-c508-5f15",
-            "name": "Heath Hunters",
+            "id": "050e-89e9-84ca-ab50",
+            "name": "Ambush (Battlefield Edge)",
+            "type": "upgrade",
             "hidden": false,
-            "constraints": [],
-            "modifiers": [],
-            "selectionEntries": [
+            "costs": [
              {
-              "id": "37fa-92b0-adea-9d2e",
-              "name": "Ambush (Battlefield Edge)",
-              "type": "upgrade",
-              "hidden": false,
-              "costs": [
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 1
+             }
+            ],
+            "constraints": [
+             {
+              "id": "3dca-8507-bcd2-8ea7",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "hidden",
+              "value": true,
+              "conditions": [
                {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 1
-               }
-              ],
-              "constraints": [
-               {
-                "id": "6eb9-d1a4-6855-ccba",
+                "type": "atMost",
+                "value": 0,
                 "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
+                "scope": "root-entry-self",
+                "childId": "31b1-2cc6-a45c-e69b",
                 "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
                 "percentValue": false
                }
               ],
-              "modifiers": [
-               {
-                "type": "set",
-                "field": "hidden",
-                "value": true,
-                "conditions": [
-                 {
-                  "type": "atMost",
-                  "value": 0,
-                  "field": "selections",
-                  "scope": "root-entry-self",
-                  "childId": "31b1-2cc6-a45c-e69b",
-                  "shared": true,
-                  "includeChildSelections": true,
-                  "includeChildForces": false,
-                  "percentValue": false
-                 }
-                ],
-                "conditionGroups": []
-               }
-              ],
-              "profiles": [],
-              "infoLinks": [
-               {
-                "id": "28b0-c36d-744d-3852",
-                "name": "Ambush",
-                "hidden": false,
-                "type": "profile",
-                "targetId": "3bc5-40b3-2dc8-4226"
-               }
-              ],
-              "categoryLinks": [
-               {
-                "id": "37db-8cbc-d368-dde6",
-                "name": "Ambush Battlefield Edge",
-                "hidden": true,
-                "targetId": "330a-8d44-4e14-5327",
-                "primary": false
-               }
-              ],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [],
-              "sortIndex": 1,
-              "collective": true
+              "conditionGroups": []
              }
             ],
+            "profiles": [],
+            "infoLinks": [
+             {
+              "id": "82f0-1110-4ed6-5456",
+              "name": "Ambush",
+              "hidden": false,
+              "type": "profile",
+              "targetId": "3bc5-40b3-2dc8-4226"
+             }
+            ],
+            "categoryLinks": [],
+            "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: Heath Hunters only",
             "sortIndex": 1,
             "collective": true
            }
           ],
+          "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 2,
           "collective": true
@@ -11817,6 +12316,25 @@
       "conditionGroups": []
      },
      {
+      "type": "add",
+      "field": "category",
+      "value": "abf3-be35-3d74-a84f",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "31b1-2cc6-a45c-e69b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "5c6c-cc9e-9ab6-e6bd",
@@ -11905,7 +12423,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "8b67-d673-cfc6-82b9",
+        "value": 15,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "4eb8-2556-0d47-670c",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "39ef-bf7e-ee9d-d647",
@@ -12283,6 +12821,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken with Clearing Spirits.",
         "sortIndex": 2,
         "collective": true
        }
@@ -12517,7 +13056,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Elven Finesse"
+          "$text": "Elven Finesse, Great Weapon"
          },
          {
           "name": "Tags",
@@ -12584,6 +13123,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "181c-f9d5-5d2c-ceb8"
+       },
+       {
+        "id": "f9c5-e055-c01e-bca7",
+        "name": "Great Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "404b-7330-b333-3778"
        },
        {
         "id": "b1ae-61aa-2587-69db",
@@ -13768,7 +14314,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Dances of Cenyrn"
+          "$text": "Dances of Cenyrn, Sylvan Blades"
          },
          {
           "name": "Tags",
@@ -13856,6 +14402,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "0986-a217-df8c-1e8d"
+       },
+       {
+        "id": "e468-a174-6b7f-9a5f",
+        "name": "Sylvan Blades",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8716-1f38-2caf-3ef5"
        },
        {
         "id": "c516-a262-720a-3a11",
@@ -14195,7 +14748,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Crush Attack, Stomp Attack (D6), Magical Attacks"
+        "$text": "Crush Attack, Stomp Attack (D6), Magical Attacks, Impaling Roots"
        },
        {
         "name": "Tags",
@@ -14318,6 +14871,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "4cae-8942-e006-f5f9"
+     },
+     {
+      "id": "48e2-c87f-fc0c-20bc",
+      "name": "Impaling Roots",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "b684-a1fb-7e5b-3c0d"
      },
      {
       "id": "3116-0c92-bc47-ec52",
@@ -14969,15 +15529,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "b445-1b4c-f029-f4f3",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -14987,6 +15539,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "fe89-f796-6b7e-a720",
         "sortIndex": 3,
         "collective": true
        }
@@ -15728,13 +16281,6 @@
           ],
           "categoryLinks": [
            {
-            "id": "2117-fac7-c5b9-ddd8",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           },
-           {
             "id": "0478-10ba-0cd9-b661",
             "name": "Shield",
             "hidden": true,
@@ -15751,6 +16297,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "fae0-09ff-21de-96b4",
         "sortIndex": 2,
         "collective": true
        }
@@ -16122,7 +16669,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Poison Attacks"
+          "$text": "Poison Attacks, Poisoned Thorn"
          },
          {
           "name": "Tags",
@@ -16174,6 +16721,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "644e-543b-7f0a-41e2"
+       },
+       {
+        "id": "641b-95b6-1df6-cd08",
+        "name": "Poisoned Thorn",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "9b86-e178-31b1-1885"
        },
        {
         "id": "ede7-4598-4e8a-5cde",
@@ -16588,6 +17142,7 @@
           ],
           "entryLinks": [],
           "selectionEntryGroups": [],
+          "defaultSelectionEntryId": "3645-a542-6d96-7943",
           "sortIndex": 1,
           "collective": true
          }
@@ -16931,7 +17486,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Big Game Hunters"
+          "$text": "Big Game Hunters, Sylvan Bow"
          },
          {
           "name": "Tags",
@@ -17012,6 +17567,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "938c-b58e-3ea3-0e7c"
+       },
+       {
+        "id": "542d-2c6b-2fda-3c49",
+        "name": "Sylvan Bow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "20f6-eaf7-7892-bd44"
        },
        {
         "id": "711c-6f29-ac5f-ded6",
@@ -17110,15 +17672,7 @@
             "targetId": "dc62-e346-c5c3-de7c"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "3f7b-6d9a-619e-fab5",
-            "name": "Scout Sentinels",
-            "hidden": true,
-            "targetId": "4c50-ec4f-5749-e0fd",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -17173,7 +17727,97 @@
         "roundUp": true
        }
       ],
-      "comment": "Rare"
+      "comment": "Rare",
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "6389-3dda-dfe8-d216",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "cd1d-af94-6395-f3d6",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "6389-3dda-dfe8-d216",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary"
+     },
+     {
+      "type": "increment",
+      "field": "cd1d-af94-6395-f3d6",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "6389-3dda-dfe8-d216",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "Extraordinary",
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "6389-3dda-dfe8-d216",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -17197,7 +17841,26 @@
      {
       "type": "add",
       "field": "category",
-      "value": "2922-80a7-d6fc-df35",
+      "value": "5432-4eaa-2771-0f9e",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "f636-b6fe-77dd-73c3",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "4c50-ec4f-5749-e0fd",
       "conditions": [
        {
         "type": "atLeast",
@@ -17386,7 +18049,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Forest’s Thorns, Stand and Shoot"
+          "$text": "Forest’s Thorns, Stand and Shoot, Sylvan Bow, Sylvan Blades"
          },
          {
           "name": "Tags",
@@ -17488,6 +18151,20 @@
         "hidden": false,
         "type": "profile",
         "targetId": "5c94-76ff-8f35-3e1a"
+       },
+       {
+        "id": "1221-84f8-906f-c365",
+        "name": "Sylvan Bow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "20f6-eaf7-7892-bd44"
+       },
+       {
+        "id": "43cd-e286-79a9-2d19",
+        "name": "Sylvan Blades",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8716-1f38-2caf-3ef5"
        },
        {
         "id": "f5c0-a990-c6be-ef4a",
@@ -17644,7 +18321,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "678c-3a04-7086-d898",
+          "name": "Giant Club",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "4cae-c75b-2db0-3d02"
+         }
+        ],
         "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
@@ -17770,7 +18455,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "28b9-1090-f02e-a2d1",
+          "name": "Big Brother",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "f207-5e9d-fd90-66e0"
+         }
+        ],
         "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
@@ -17786,20 +18479,7 @@
      }
     ],
     "entryLinks": [],
-    "constraints": [
-     {
-      "id": "2b07-d4a4-b580-69bb",
-      "field": "selections",
-      "scope": "roster",
-      "value": 3,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false,
-      "childId": "52a1-6ffc-f6a0-6aa7"
-     }
-    ],
+    "constraints": [],
     "modifiers": [],
     "collective": true
    },
@@ -19266,6 +19946,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1 only.",
     "collective": true
    },
    {
@@ -19569,6 +20250,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by units that count towards “Core”.",
     "collective": true
    },
    {
@@ -19632,6 +20314,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Lance or Spear.",
     "collective": true
    },
    {
@@ -19695,11 +20378,12 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Sylvan Bow.",
     "collective": true
    },
    {
     "id": "e69d-f373-f444-acf4",
-    "name": "Bough Of Wyscan",
+    "name": "Bough of Wyscan",
     "type": "upgrade",
     "hidden": false,
     "costs": [
@@ -19740,12 +20424,51 @@
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
-    "modifiers": [],
+    "modifiers": [
+     {
+      "type": "add",
+      "field": "category",
+      "value": "c68b-884a-a0d7-b8b4",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "b667-c996-288d-a4c3",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "9bf7-8f86-a1ac-3be3",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "b667-c996-288d-a4c3",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     }
+    ],
     "profiles": [],
     "infoLinks": [
      {
       "id": "0f41-bc10-bc13-9152",
-      "name": "Bough Of Wyscan",
+      "name": "Bough of Wyscan",
       "hidden": false,
       "type": "profile",
       "targetId": "863c-848d-5929-6876"
@@ -19763,6 +20486,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Sylvan Bow.",
     "collective": true
    },
    {
@@ -19826,6 +20550,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Sylvan Blades.",
     "collective": true
    },
    {
@@ -19943,6 +20668,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1 only.",
     "collective": true
    },
    {
@@ -20020,6 +20746,25 @@
       "value": true,
       "conditions": [
        {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "07c6-567f-2d46-e4bc",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
         "type": "atLeast",
         "value": 1,
         "field": "selections",
@@ -20048,6 +20793,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Chieftain or Forest Prince only. Models with Sylvan Bow only.",
     "collective": true
    },
    {
@@ -20304,6 +21050,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only.",
     "collective": true
    },
    {
@@ -20426,6 +21173,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Common. Models without Attached only. without Mount only.",
     "collective": true
    },
    {
@@ -20551,6 +21299,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Common. Models on Elven Horse or Great Elk only. Models with Lance and Sylvan Blades only.",
     "collective": true
    },
    {
@@ -20623,6 +21372,25 @@
       "value": true,
       "conditions": [
        {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "07c6-567f-2d46-e4bc",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
         "type": "atLeast",
         "value": 1,
         "field": "selections",
@@ -20687,6 +21455,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Rare. Cannot be taken by the Battle Standard Bearer. Models with Sylvan Bow only. without Mount only.",
     "collective": true
    },
    {
@@ -20782,6 +21551,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Common. without Mount only.",
     "collective": true
    },
    {
@@ -20915,6 +21685,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Common. Models without Shield or Sylvan Bow only. without Mount only.",
     "collective": true
    },
    {
@@ -21314,6 +22085,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Extraordinary. Treefather Ancient only.",
     "collective": true
    },
    {
@@ -21389,6 +22161,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models without Fly only.",
     "collective": true
    }
   ],
@@ -21543,6 +22316,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -21556,7 +22330,7 @@
     "entryLinks": [
      {
       "id": "ca40-3f18-5ddf-27ae",
-      "name": "Bough Of Wyscan",
+      "name": "Bough of Wyscan",
       "hidden": false,
       "type": "selectionEntry",
       "targetId": "e69d-f373-f444-acf4",
@@ -21595,6 +22369,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -21763,6 +22538,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -21951,6 +22727,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -22139,6 +22916,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -22307,6 +23085,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -22495,6 +23274,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -22743,6 +23523,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -22994,6 +23775,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23066,6 +23848,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23246,6 +24029,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23318,6 +24102,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    }
   ],

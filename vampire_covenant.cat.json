@@ -133,17 +133,6 @@
     "hidden": true,
     "constraints": [
      {
-      "id": "70a8-a7e1-bcb7-2497",
-      "field": "selections",
-      "scope": "roster",
-      "value": 3,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     },
-     {
       "id": "7f14-8996-51c1-634b",
       "field": "selections",
       "scope": "roster",
@@ -156,23 +145,6 @@
      }
     ],
     "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "70a8-a7e1-bcb7-2497",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -197,25 +169,55 @@
     "name": "Strigoi General",
     "comment": "strigoi_general",
     "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "bccc-b124-e3b5-24c4",
+    "name": "Gates of the Netherworld or Necromancer or The Collective of Varyag the Sainted",
+    "comment": "srar:gatesOfTheNetherworld",
+    "hidden": true,
     "constraints": [
      {
-      "id": "f680-42d1-99c6-f4f0",
+      "id": "353d-82d2-d05f-bd88",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
-      "type": "min",
-      "shared": true,
+      "value": 0,
+      "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
-      "percentValue": false
+      "shared": true,
+      "percentValue": false,
+      "comment": "Uncommon",
+      "message": "{roster} has {difference} too many selections of **Gates of the Netherworld or Necromancer or The Collective of Varyag the Sainted** (max {value}, **Uncommon**)"
      }
     ],
     "modifiers": [
      {
+      "type": "increment",
+      "field": "353d-82d2-d05f-bd88",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Uncommon"
+     },
+     {
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "f680-42d1-99c6-f4f0",
+      "field": "353d-82d2-d05f-bd88",
       "conditions": [
        {
         "type": "instanceOf",
@@ -231,61 +233,51 @@
     ]
    },
    {
-    "id": "4251-a9ca-1be7-86a0",
-    "name": "Lance",
-    "comment": "lance",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "e47f-3496-4422-34e1",
-    "name": "Halberd",
-    "comment": "halberd",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "31a4-1a73-082e-1ba9",
-    "name": "Mount",
-    "comment": "tag_Mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "a8fb-40ff-2487-c252",
-    "name": "Construct",
-    "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "3443-29be-c888-9794",
-    "name": "Vampire Knight",
-    "comment": "vampire_knight",
+    "id": "0f86-9ec5-fb73-6452",
+    "name": "Court of the Damned",
+    "comment": "srar:courtOfTheDamnedRarity",
     "hidden": true,
     "constraints": [
      {
-      "id": "708a-a586-676e-c4af",
+      "id": "df8a-9e23-36cc-c982",
       "field": "selections",
       "scope": "roster",
-      "value": 2,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "comment": "Rare",
+      "message": "{roster} has {difference} too many selections of **Court of the Damned** (max {value}, **Rare**)"
      }
     ],
     "modifiers": [
      {
+      "type": "increment",
+      "field": "df8a-9e23-36cc-c982",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 2500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Rare"
+     },
+     {
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "708a-a586-676e-c4af",
+      "field": "df8a-9e23-36cc-c982",
       "conditions": [
        {
         "type": "instanceOf",
@@ -301,29 +293,179 @@
     ]
    },
    {
-    "id": "9a7c-ec6c-4026-e9e9",
-    "name": "Mount Shriek",
-    "comment": "mountShriek",
+    "id": "47dc-9aff-92a5-ffce",
+    "name": "Gigantic Mount",
+    "comment": "giganticMount",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "95c5-bb04-f6a3-6e3f",
+    "name": "Zombie Dragon or Colossal Zombie Dragon",
+    "comment": "srar:zombieDragonRarity",
     "hidden": true,
     "constraints": [
      {
-      "id": "9f61-dab1-e895-81ca",
+      "id": "cdff-0df1-2e41-d1bd",
       "field": "selections",
       "scope": "roster",
-      "value": 1,
+      "value": 0,
       "type": "max",
       "includeChildSelections": true,
       "includeChildForces": true,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "comment": "Extraordinary",
+      "message": "{roster} has {difference} too many selections of **Zombie Dragon or Colossal Zombie Dragon** (max {value}, **Extraordinary**)"
      }
     ],
     "modifiers": [
      {
+      "type": "increment",
+      "field": "cdff-0df1-2e41-d1bd",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 5000,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Extraordinary"
+     },
+     {
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "9f61-dab1-e895-81ca",
+      "field": "cdff-0df1-2e41-d1bd",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "1674-f4aa-2372-9a61",
+    "name": "Gates of the Netherworld",
+    "hidden": true,
+    "comment": "Uncommon",
+    "constraints": [
+     {
+      "id": "6364-7497-84bc-ec78",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Uncommon",
+      "message": "{roster} has {difference} too many selections of **Gates of the Netherworld** (max {value}, **Uncommon**)"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "6364-7497-84bc-ec78",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Uncommon"
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "6364-7497-84bc-ec78",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cb88-be22-b879-f2a4",
+    "name": "Gates of the Netherworld",
+    "hidden": true,
+    "comment": "Uncommon",
+    "constraints": [
+     {
+      "id": "7a57-5844-8358-e68d",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": true,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Uncommon",
+      "message": "{roster} has {difference} too many selections of **Gates of the Netherworld** (max {value}, **Uncommon**)"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "increment",
+      "field": "7a57-5844-8358-e68d",
+      "value": 1,
+      "repeats": [
+       {
+        "field": "limit::ea90-6996-33df-993c",
+        "scope": "roster",
+        "value": 1500,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "childId": "any",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ],
+      "comment": "Uncommon"
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "7a57-5844-8358-e68d",
       "conditions": [
        {
         "type": "instanceOf",
@@ -1314,6 +1456,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "4a81-4045-c2c2-fa94",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "bd41-a0c5-9d20-f20f",
           "name": "General",
           "hidden": true,
@@ -1324,31 +1473,70 @@
         "selectionEntries": [],
         "selectionEntryGroups": [
          {
-          "id": "e126-9ca1-d4d7-6883",
-          "name": "General, Disciplined, and The Dead Arise",
+          "id": "19a1-f610-1f9a-7089",
+          "name": "Options",
           "hidden": false,
-          "constraints": [],
-          "modifiers": [],
-          "selectionEntries": [],
-          "selectionEntryGroups": [
+          "constraints": [
            {
-            "id": "836e-0b42-5938-7126",
-            "name": "Options",
+            "id": "59b9-6663-9c5a-17a3",
+            "field": "selections",
+            "scope": "parent",
+            "value": 0,
+            "type": "min",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           },
+           {
+            "id": "cd0e-45a4-2b78-76f1",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "59b9-6663-9c5a-17a3",
+            "value": 1,
+            "conditions": [
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "c5a9-8fdc-519a-ce2f",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ],
+          "selectionEntries": [
+           {
+            "id": "773b-5a79-76ab-4d5e",
+            "name": "Strigoi General",
+            "type": "upgrade",
             "hidden": false,
+            "costs": [
+             {
+              "name": "pts",
+              "typeId": "ea90-6996-33df-993c",
+              "value": 0
+             }
+            ],
             "constraints": [
              {
-              "id": "d1a9-ac2b-88de-a6af",
-              "field": "selections",
-              "scope": "parent",
-              "value": 0,
-              "type": "min",
-              "includeChildSelections": false,
-              "includeChildForces": false,
-              "shared": true,
-              "percentValue": false
-             },
-             {
-              "id": "605c-c8d6-4d6e-3958",
+              "id": "defb-6270-c3dc-8138",
               "field": "selections",
               "scope": "parent",
               "value": 1,
@@ -1362,12 +1550,12 @@
             "modifiers": [
              {
               "type": "set",
-              "field": "d1a9-ac2b-88de-a6af",
-              "value": 1,
+              "field": "hidden",
+              "value": true,
               "conditions": [
                {
-                "type": "atLeast",
-                "value": 1,
+                "type": "atMost",
+                "value": 0,
                 "field": "selections",
                 "scope": "root-entry-self",
                 "childId": "c5a9-8fdc-519a-ce2f",
@@ -1380,89 +1568,27 @@
               "conditionGroups": []
              }
             ],
-            "selectionEntries": [
+            "profiles": [],
+            "infoLinks": [],
+            "categoryLinks": [
              {
-              "id": "a20b-bd8a-7a72-9721",
+              "id": "f9f1-fd5b-af91-1949",
               "name": "Strigoi General",
-              "type": "upgrade",
               "hidden": true,
-              "costs": [
-               {
-                "name": "pts",
-                "typeId": "ea90-6996-33df-993c",
-                "value": 0
-               }
-              ],
-              "constraints": [
-               {
-                "id": "f9c2-e822-4d8c-5f5a",
-                "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "type": "max",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               },
-               {
-                "id": "6c19-4f61-1edc-3b5c",
-                "field": "selections",
-                "scope": "parent",
-                "value": 1,
-                "type": "min",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               }
-              ],
-              "modifiers": [
-               {
-                "type": "set",
-                "field": "hidden",
-                "value": true,
-                "conditions": [
-                 {
-                  "type": "atMost",
-                  "value": 0,
-                  "field": "selections",
-                  "scope": "root-entry-self",
-                  "childId": "c5a9-8fdc-519a-ce2f",
-                  "shared": true,
-                  "includeChildSelections": true,
-                  "includeChildForces": false,
-                  "percentValue": false
-                 }
-                ],
-                "conditionGroups": []
-               }
-              ],
-              "profiles": [],
-              "infoLinks": [],
-              "categoryLinks": [
-               {
-                "id": "5d9b-d888-a7a4-1ef3",
-                "name": "Strigoi General",
-                "hidden": true,
-                "targetId": "58a0-48e5-1c5b-4836",
-                "primary": false
-               }
-              ],
-              "selectionEntries": [],
-              "selectionEntryGroups": [],
-              "entryLinks": [],
-              "defaultAmount": 1,
-              "sortIndex": 1,
-              "collective": true
+              "targetId": "58a0-48e5-1c5b-4836",
+              "primary": false
              }
             ],
+            "selectionEntries": [],
             "selectionEntryGroups": [],
             "entryLinks": [],
+            "comment": "restriction: Models with Strigoi only.",
+            "exportable": false,
             "sortIndex": 1,
             "collective": true
            }
           ],
+          "selectionEntryGroups": [],
           "entryLinks": [],
           "sortIndex": 1,
           "collective": true
@@ -1486,7 +1612,7 @@
        {
         "id": "8bd2-3f6b-04ad-33ea",
         "field": "selections",
-        "scope": "unit",
+        "scope": "parent",
         "value": 1,
         "type": "min",
         "shared": true,
@@ -1537,6 +1663,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "none",
       "sortIndex": 2,
       "collective": true
      },
@@ -1735,7 +1862,27 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "hidden",
+          "value": true,
+          "conditions": [
+           {
+            "type": "atMost",
+            "value": 0,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "c5a9-8fdc-519a-ce2f",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ],
         "categoryLinks": [],
         "sortIndex": 5,
         "collective": true
@@ -1835,6 +1982,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "0fab-692c-850c-7a56",
       "sortIndex": 3,
       "collective": true
      },
@@ -1914,17 +2062,17 @@
           ],
           "categoryLinks": [
            {
-            "id": "02d9-7efb-b797-9739",
-            "name": "Wizard Apprentice",
-            "hidden": true,
-            "targetId": "a71d-a1c0-93ae-9ac5",
-            "primary": false
-           },
-           {
             "id": "434c-e80c-e419-6ff1",
             "name": "Wizard Apprentice or Adept",
             "hidden": true,
             "targetId": "4067-7597-6273-04e3",
+            "primary": false
+           },
+           {
+            "id": "0e90-3b45-832f-2c37",
+            "name": "Wizard Apprentice",
+            "hidden": false,
+            "targetId": "a71d-a1c0-93ae-9ac5",
             "primary": false
            }
           ],
@@ -2079,6 +2227,7 @@
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: Cannot be taken with Sangreal or Strigoi",
           "sortIndex": 3,
           "collective": true
          }
@@ -2118,27 +2267,7 @@
           "percentValue": false
          }
         ],
-        "modifiers": [
-         {
-          "type": "set",
-          "field": "93a0-b9c1-1d75-4ba1",
-          "value": 2,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "root-entry-self",
-            "childId": "3ab0-9185-e522-de12",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
-          "conditionGroups": []
-         }
-        ],
+        "modifiers": [],
         "selectionEntries": [
          {
           "id": "eefe-3261-2903-9b13",
@@ -2231,7 +2360,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2250,7 +2379,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2269,7 +2398,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2288,7 +2417,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2307,7 +2436,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2326,7 +2455,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2342,6 +2471,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mysteries of the Night.",
           "sortIndex": 1,
           "collective": true
          },
@@ -2436,7 +2566,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2455,7 +2585,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2474,7 +2604,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2493,7 +2623,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2512,7 +2642,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2531,7 +2661,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2547,6 +2677,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mysteries of the Night.",
           "sortIndex": 2,
           "collective": true
          },
@@ -2641,7 +2772,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2660,7 +2791,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2679,7 +2810,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2698,7 +2829,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2717,7 +2848,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2736,7 +2867,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2752,6 +2883,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mysteries of the Night only.",
           "sortIndex": 3,
           "collective": true
          },
@@ -2846,7 +2978,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2865,7 +2997,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2884,7 +3016,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2903,7 +3035,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2922,7 +3054,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2941,7 +3073,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -2957,6 +3089,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mysteries of the Night only.",
           "sortIndex": 4,
           "collective": true
          }
@@ -2964,6 +3097,7 @@
         "selectionEntryGroups": [],
         "entryLinks": [],
         "collapsible": true,
+        "defaultSelectionEntryId": "eefe-3261-2903-9b13",
         "sortIndex": 2,
         "collective": true
        }
@@ -3048,7 +3182,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "6720-24be-52f3-0fd5",
+            "childId": "993e-cd9b-80ba-96f7",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3124,6 +3258,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: not with Lahmia or Strigoi",
         "sortIndex": 1,
         "collective": true
        }
@@ -3351,15 +3486,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "303b-7f8e-3af0-80bd",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -3388,6 +3515,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 3,
           "collective": true
          },
@@ -3427,15 +3555,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5a98-4636-402e-ba44",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -3758,6 +3878,44 @@
         "percentValue": false
        }
       ]
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "1674-f4aa-2372-9a61",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "ce4f-3478-1564-e960",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "bccc-b124-e3b5-24c4",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "ce4f-3478-1564-e960",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "collective": true
@@ -4079,6 +4237,13 @@
           ],
           "categoryLinks": [
            {
+            "id": "a7b1-3927-7f02-fbf8",
+            "name": "General",
+            "hidden": true,
+            "targetId": "fffd-0772-fb48-80fb",
+            "primary": false
+           },
+           {
             "id": "440d-6e16-e783-f2b9",
             "name": "General",
             "hidden": true,
@@ -4089,31 +4254,70 @@
           "selectionEntries": [],
           "selectionEntryGroups": [
            {
-            "id": "f25b-cd51-887f-3119",
-            "name": "General and The Dead Arise",
+            "id": "069f-194c-0805-1320",
+            "name": "Options",
             "hidden": false,
-            "constraints": [],
-            "modifiers": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [
+            "constraints": [
              {
-              "id": "de38-2d4e-8d95-600f",
-              "name": "Options",
+              "id": "72d2-3670-abf7-8f6c",
+              "field": "selections",
+              "scope": "parent",
+              "value": 0,
+              "type": "min",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             },
+             {
+              "id": "dc1d-84ad-e117-ebde",
+              "field": "selections",
+              "scope": "parent",
+              "value": 1,
+              "type": "max",
+              "includeChildSelections": false,
+              "includeChildForces": false,
+              "shared": true,
+              "percentValue": false
+             }
+            ],
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "72d2-3670-abf7-8f6c",
+              "value": 1,
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "c5a9-8fdc-519a-ce2f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ],
+            "selectionEntries": [
+             {
+              "id": "ee14-b441-2e75-20ea",
+              "name": "Strigoi General",
+              "type": "upgrade",
               "hidden": false,
+              "costs": [
+               {
+                "name": "pts",
+                "typeId": "ea90-6996-33df-993c",
+                "value": 0
+               }
+              ],
               "constraints": [
                {
-                "id": "ff10-4b9b-abf7-4445",
-                "field": "selections",
-                "scope": "parent",
-                "value": 0,
-                "type": "min",
-                "includeChildSelections": false,
-                "includeChildForces": false,
-                "shared": true,
-                "percentValue": false
-               },
-               {
-                "id": "6c3c-23a6-1e6b-210d",
+                "id": "bac5-6875-826f-fdf5",
                 "field": "selections",
                 "scope": "parent",
                 "value": 1,
@@ -4127,12 +4331,12 @@
               "modifiers": [
                {
                 "type": "set",
-                "field": "ff10-4b9b-abf7-4445",
-                "value": 1,
+                "field": "hidden",
+                "value": true,
                 "conditions": [
                  {
-                  "type": "atLeast",
-                  "value": 1,
+                  "type": "atMost",
+                  "value": 0,
                   "field": "selections",
                   "scope": "root-entry-self",
                   "childId": "c5a9-8fdc-519a-ce2f",
@@ -4145,89 +4349,27 @@
                 "conditionGroups": []
                }
               ],
-              "selectionEntries": [
+              "profiles": [],
+              "infoLinks": [],
+              "categoryLinks": [
                {
-                "id": "0d2b-4714-f9e8-6f9b",
+                "id": "a679-4eea-5a79-d3cb",
                 "name": "Strigoi General",
-                "type": "upgrade",
                 "hidden": true,
-                "costs": [
-                 {
-                  "name": "pts",
-                  "typeId": "ea90-6996-33df-993c",
-                  "value": 0
-                 }
-                ],
-                "constraints": [
-                 {
-                  "id": "1b71-a20f-b196-0d98",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 1,
-                  "type": "max",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 },
-                 {
-                  "id": "b88e-8a24-d44e-e463",
-                  "field": "selections",
-                  "scope": "parent",
-                  "value": 1,
-                  "type": "min",
-                  "includeChildSelections": false,
-                  "includeChildForces": false,
-                  "shared": true,
-                  "percentValue": false
-                 }
-                ],
-                "modifiers": [
-                 {
-                  "type": "set",
-                  "field": "hidden",
-                  "value": true,
-                  "conditions": [
-                   {
-                    "type": "atMost",
-                    "value": 0,
-                    "field": "selections",
-                    "scope": "root-entry-self",
-                    "childId": "c5a9-8fdc-519a-ce2f",
-                    "shared": true,
-                    "includeChildSelections": true,
-                    "includeChildForces": false,
-                    "percentValue": false
-                   }
-                  ],
-                  "conditionGroups": []
-                 }
-                ],
-                "profiles": [],
-                "infoLinks": [],
-                "categoryLinks": [
-                 {
-                  "id": "2af7-1813-deb0-d07c",
-                  "name": "Strigoi General",
-                  "hidden": true,
-                  "targetId": "58a0-48e5-1c5b-4836",
-                  "primary": false
-                 }
-                ],
-                "selectionEntries": [],
-                "selectionEntryGroups": [],
-                "entryLinks": [],
-                "defaultAmount": 1,
-                "sortIndex": 1,
-                "collective": true
+                "targetId": "58a0-48e5-1c5b-4836",
+                "primary": false
                }
               ],
+              "selectionEntries": [],
               "selectionEntryGroups": [],
               "entryLinks": [],
+              "comment": "restriction: Models with Strigoi only.",
+              "exportable": false,
               "sortIndex": 1,
               "collective": true
              }
             ],
+            "selectionEntryGroups": [],
             "entryLinks": [],
             "sortIndex": 1,
             "collective": true
@@ -4314,7 +4456,7 @@
        {
         "id": "fa94-04af-8fc9-73c0",
         "field": "selections",
-        "scope": "unit",
+        "scope": "parent",
         "value": 1,
         "type": "min",
         "shared": true,
@@ -4365,6 +4507,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "none",
       "sortIndex": 2,
       "collective": true
      },
@@ -4578,6 +4721,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "aa60-aa39-80b9-6537",
       "sortIndex": 3,
       "collective": true
      },
@@ -4646,13 +4790,6 @@
           ],
           "categoryLinks": [
            {
-            "id": "6bb2-4eb4-9b16-f4e3",
-            "name": "Wizard Apprentice",
-            "hidden": true,
-            "targetId": "a71d-a1c0-93ae-9ac5",
-            "primary": false
-           },
-           {
             "id": "b250-b188-8d04-60c7",
             "name": "Wizard",
             "hidden": true,
@@ -4664,6 +4801,13 @@
             "name": "Wizard Apprentice or Adept",
             "hidden": true,
             "targetId": "4067-7597-6273-04e3",
+            "primary": false
+           },
+           {
+            "id": "8e96-8a0e-8452-90e3",
+            "name": "Wizard Apprentice",
+            "hidden": false,
+            "targetId": "a71d-a1c0-93ae-9ac5",
             "primary": false
            }
           ],
@@ -4792,25 +4936,6 @@
            }
           ],
           "conditionGroups": []
-         },
-         {
-          "type": "set",
-          "field": "b754-6d4e-cd6c-52df",
-          "value": 2,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "root-entry-self",
-            "childId": "3ab0-9185-e522-de12",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
-          "conditionGroups": []
          }
         ],
         "selectionEntries": [
@@ -4924,7 +5049,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -4943,7 +5068,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -4962,7 +5087,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -4981,7 +5106,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5000,7 +5125,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5019,7 +5144,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5035,6 +5160,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Wizard only. Cannot be taken with Mysteries of the Night.",
           "sortIndex": 1,
           "collective": true
          },
@@ -5148,7 +5274,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5167,7 +5293,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5186,7 +5312,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5205,7 +5331,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5224,7 +5350,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5243,7 +5369,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5259,6 +5385,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Wizard only. Cannot be taken with Mysteries of the Night.",
           "sortIndex": 2,
           "collective": true
          },
@@ -5372,7 +5499,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5391,7 +5518,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5410,7 +5537,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5429,7 +5556,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5448,7 +5575,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5467,7 +5594,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5483,6 +5610,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Wizard only. Models with Mysteries of the Night only.",
           "sortIndex": 3,
           "collective": true
          },
@@ -5596,7 +5724,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5615,7 +5743,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "a71d-a1c0-93ae-9ac5",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5634,7 +5762,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5653,7 +5781,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "0eb6-4350-a18a-a9bf",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5672,7 +5800,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5691,7 +5819,7 @@
                 "type": "atLeast",
                 "value": 1,
                 "field": "selections",
-                "scope": "root-entry",
+                "scope": "root-entry-self",
                 "childId": "c04d-1882-6246-277c",
                 "shared": true,
                 "includeChildSelections": true,
@@ -5707,6 +5835,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Wizard only. Models with Mysteries of the Night only.",
           "sortIndex": 4,
           "collective": true
          }
@@ -5798,7 +5927,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "6720-24be-52f3-0fd5",
+            "childId": "993e-cd9b-80ba-96f7",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -5874,6 +6003,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: not with Lahmia or Strigoi",
         "sortIndex": 1,
         "collective": true
        }
@@ -6177,15 +6307,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "97a6-3256-fef1-e343",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -6214,6 +6336,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 4,
           "collective": true
          },
@@ -6253,15 +6376,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "b786-1f6a-e831-1af8",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -6313,7 +6428,7 @@
       "entryLinks": [
        {
         "id": "1df2-dcb1-32a2-276b",
-        "name": " Enchant",
+        "name": "Banner Enchant",
         "hidden": false,
         "type": "selectionEntryGroup",
         "targetId": "7c6b-e8de-52a0-0a6e",
@@ -6552,6 +6667,44 @@
         "percentValue": false
        }
       ]
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "cb88-be22-b879-f2a4",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "03fb-4409-842f-ae8d",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "bccc-b124-e3b5-24c4",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "03fb-4409-842f-ae8d",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "collective": true
@@ -6588,6 +6741,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "8bfc-de3a-5d87-6a12",
+      "name": "Necromancer",
+      "hidden": true,
+      "targetId": "bccc-b124-e3b5-24c4",
       "primary": false
      }
     ],
@@ -6839,6 +6999,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "fe32-56bd-17a8-e772",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "137b-5273-176b-dcfc",
           "name": "General",
           "hidden": true,
@@ -7084,7 +7251,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "6720-24be-52f3-0fd5",
+            "childId": "993e-cd9b-80ba-96f7",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -7100,6 +7267,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "f20e-64bd-1a8c-bdda",
       "sortIndex": 2,
       "collective": true
      },
@@ -7229,85 +7397,73 @@
           "primary": false
          }
         ],
-        "selectionEntries": [],
-        "selectionEntryGroups": [
+        "selectionEntries": [
          {
-          "id": "cf79-a6ef-eff4-7449",
+          "id": "993e-cd9b-80ba-96f7",
           "name": "Lich",
+          "type": "upgrade",
           "hidden": false,
-          "constraints": [],
-          "modifiers": [],
-          "selectionEntries": [
+          "costs": [
            {
-            "id": "6720-24be-52f3-0fd5",
-            "name": "Lich",
-            "type": "upgrade",
-            "hidden": false,
-            "costs": [
+            "name": "pts",
+            "typeId": "ea90-6996-33df-993c",
+            "value": 40
+           }
+          ],
+          "constraints": [
+           {
+            "id": "0470-7958-133f-96f5",
+            "field": "selections",
+            "scope": "parent",
+            "value": 1,
+            "type": "max",
+            "includeChildSelections": false,
+            "includeChildForces": false,
+            "shared": true,
+            "percentValue": false
+           }
+          ],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "hidden",
+            "value": true,
+            "conditions": [
              {
-              "name": "pts",
-              "typeId": "ea90-6996-33df-993c",
-              "value": 40
-             }
-            ],
-            "constraints": [
-             {
-              "id": "cd29-df29-8460-7cd7",
+              "type": "atMost",
+              "value": 0,
               "field": "selections",
-              "scope": "parent",
-              "value": 1,
-              "type": "max",
-              "includeChildSelections": false,
-              "includeChildForces": false,
+              "scope": "root-entry-self",
+              "childId": "c04d-1882-6246-277c",
               "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
               "percentValue": false
              }
             ],
-            "modifiers": [
-             {
-              "type": "set",
-              "field": "hidden",
-              "value": true,
-              "conditions": [
-               {
-                "type": "atMost",
-                "value": 0,
-                "field": "selections",
-                "scope": "root-entry-self",
-                "childId": "c04d-1882-6246-277c",
-                "shared": true,
-                "includeChildSelections": true,
-                "includeChildForces": false,
-                "percentValue": false
-               }
-              ],
-              "conditionGroups": []
-             }
-            ],
-            "profiles": [],
-            "infoLinks": [
-             {
-              "id": "5a71-a116-cc72-e5c1",
-              "name": "Lich",
-              "hidden": false,
-              "type": "profile",
-              "targetId": "8cb0-256c-f7f7-5ba6"
-             }
-            ],
-            "categoryLinks": [],
-            "selectionEntries": [],
-            "selectionEntryGroups": [],
-            "entryLinks": [],
-            "sortIndex": 1,
-            "collective": true
+            "conditionGroups": []
            }
           ],
+          "profiles": [],
+          "infoLinks": [
+           {
+            "id": "4c55-3793-9b76-13fd",
+            "name": "Lich",
+            "hidden": false,
+            "type": "profile",
+            "targetId": "8cb0-256c-f7f7-5ba6"
+           }
+          ],
+          "categoryLinks": [],
+          "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: Wizard Master only",
           "sortIndex": 1,
           "collective": true
          }
         ],
+        "selectionEntryGroups": [],
         "entryLinks": [],
         "sortIndex": 2,
         "collective": true
@@ -7316,6 +7472,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "1ed6-ae0e-beac-ac01",
       "sortIndex": 3,
       "collective": true
      },
@@ -7347,27 +7504,7 @@
         "percentValue": false
        }
       ],
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "2b41-f621-c448-7e65",
-        "value": 2,
-        "conditions": [
-         {
-          "type": "atLeast",
-          "value": 1,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "3ab0-9185-e522-de12",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
-       }
-      ],
+      "modifiers": [],
       "selectionEntries": [
        {
         "id": "bf70-bb25-bdc5-fe31",
@@ -7440,7 +7577,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -7459,7 +7596,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -7478,7 +7615,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -7497,7 +7634,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -7516,7 +7653,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -7535,7 +7672,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -7625,7 +7762,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -7644,7 +7781,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -7663,7 +7800,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -7682,7 +7819,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -7701,7 +7838,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -7720,7 +7857,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -7775,7 +7912,7 @@
             "value": 0,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "6720-24be-52f3-0fd5",
+            "childId": "993e-cd9b-80ba-96f7",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -7830,7 +7967,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -7849,7 +7986,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -7868,7 +8005,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -7887,7 +8024,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -7906,7 +8043,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -7925,7 +8062,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -7941,6 +8078,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Models with Lich only.",
         "sortIndex": 3,
         "collective": true
        }
@@ -7970,16 +8108,36 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "ccc4-6518-da97-fa78",
+        "value": 200,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "c04d-1882-6246-277c",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [],
       "selectionEntryGroups": [
        {
-        "id": "a012-b12d-0195-86ac",
+        "id": "c4e4-51d2-881e-2f01",
         "name": "Weapon",
         "hidden": false,
         "constraints": [
          {
-          "id": "c2bd-350e-69a7-ccd5",
+          "id": "78c1-cfd2-5d1b-7266",
           "field": "selections",
           "scope": "parent",
           "value": 1,
@@ -7990,7 +8148,7 @@
           "percentValue": false
          },
          {
-          "id": "7404-7aac-680a-28e4",
+          "id": "c2a5-03ad-c464-1177",
           "field": "selections",
           "scope": "parent",
           "value": 1,
@@ -8004,7 +8162,7 @@
         "modifiers": [],
         "selectionEntries": [
          {
-          "id": "e9e5-9048-dc8a-630b",
+          "id": "40ab-2a96-04b3-d77d",
           "name": "Hand Weapon",
           "type": "upgrade",
           "hidden": false,
@@ -8017,7 +8175,7 @@
           ],
           "constraints": [
            {
-            "id": "23ab-ee29-32f1-a057",
+            "id": "80bb-9d8b-d9e3-8249",
             "field": "selections",
             "scope": "parent",
             "value": 1,
@@ -8032,7 +8190,7 @@
           "profiles": [],
           "infoLinks": [
            {
-            "id": "84cd-3586-f0b9-0b4c",
+            "id": "44d8-79af-be72-46da",
             "name": "Hand Weapon",
             "hidden": false,
             "type": "profile",
@@ -8044,14 +8202,14 @@
           "selectionEntryGroups": [],
           "entryLinks": [
            {
-            "id": "0b0e-7548-3253-9770",
+            "id": "242d-8231-acab-a05c",
             "name": "Hand Weapon Enchant",
             "hidden": false,
             "type": "selectionEntryGroup",
             "targetId": "b31a-b78d-be44-3c14",
             "constraints": [
              {
-              "id": "2bd5-a387-5c49-a6c0",
+              "id": "0310-656e-cbed-c1ff",
               "field": "selections",
               "scope": "parent",
               "value": 1,
@@ -8074,7 +8232,6 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
-        "collapsible": true,
         "sortIndex": 1,
         "collective": true
        }
@@ -8549,15 +8706,7 @@
           "targetId": "efcc-65b0-f437-50cf"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "db7a-2c34-43e3-9855",
-          "name": "Captain",
-          "hidden": true,
-          "targetId": "cda6-3d55-eecf-4914",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
@@ -8601,6 +8750,13 @@
          }
         ],
         "categoryLinks": [
+         {
+          "id": "9d33-a741-39df-93f2",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
          {
           "id": "b300-d8a4-7b66-d9ac",
           "name": "General",
@@ -8789,6 +8945,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "c5b7-6022-04d4-0b7d",
       "sortIndex": 2,
       "collective": true
      },
@@ -9091,15 +9248,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5584-56cb-8764-6eb3",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -9195,15 +9344,7 @@
             "targetId": "7732-8bec-981c-6371"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "dedf-8c8e-781c-2db9",
-            "name": "Lance",
-            "hidden": true,
-            "targetId": "4251-a9ca-1be7-86a0",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [
@@ -9232,6 +9373,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 5,
           "collective": true
          }
@@ -9265,13 +9407,6 @@
          }
         ],
         "modifiers": [
-         {
-          "type": "set",
-          "field": "name",
-          "value": "Banner Enchant",
-          "conditions": [],
-          "conditionGroups": []
-         },
          {
           "type": "set",
           "field": "hidden",
@@ -9777,6 +9912,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "alias: Sweeping Attack (1)",
         "sortIndex": 1,
         "collective": true
        }
@@ -9784,6 +9920,85 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
+      "collective": true
+     },
+     {
+      "id": "99ff-0e4d-fa75-5a49",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "97bc-c1cf-9263-1ba7",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "91fb-4279-3332-f3d2",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "903d-1347-5ddd-b994",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "fec9-2afb-31e0-6603",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "1c7f-1017-ed19-cb62",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -9992,7 +10207,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Dance of Death, Unholy Appetite"
+        "$text": "Dance of Death, Unholy Appetite, Thirsty Rapiers"
        },
        {
         "name": "Tags",
@@ -10110,6 +10325,13 @@
       "targetId": "de62-8909-105a-879b"
      },
      {
+      "id": "5bbc-a809-ef3c-8c6d",
+      "name": "Thirsty Rapiers",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "f15b-da7a-6229-13de"
+     },
+     {
       "id": "9c78-a8d8-94f6-505b",
       "name": "Hand Weapon",
       "hidden": false,
@@ -10118,7 +10340,87 @@
      }
     ],
     "selectionEntries": [],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "9d63-e832-a1a3-1753",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "355c-4d9b-fb9e-6836",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "4165-46dc-b80a-d4d9",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "e5a8-10d4-ec12-8387",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "bca5-9e2c-c60f-94a1",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "72e7-f56d-c33e-2c5f",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 1,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -10197,6 +10499,13 @@
       "name": "⟨Character⟩",
       "hidden": true,
       "targetId": "a0c5-3ac0-4d3e-d8a7",
+      "primary": false
+     },
+     {
+      "id": "f259-6cfd-c271-beae",
+      "name": "The Collective of Varyag the Sainted",
+      "hidden": true,
+      "targetId": "bccc-b124-e3b5-24c4",
       "primary": false
      }
     ],
@@ -10311,7 +10620,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Stomp Attack (D6)"
+        "$text": "Stomp Attack (D6), Cacophony of Suffering"
        },
        {
         "name": "Tags",
@@ -10450,6 +10759,13 @@
       "targetId": "ca2f-c97f-04de-88bd"
      },
      {
+      "id": "cc09-1968-d073-2578",
+      "name": "Cacophony of Suffering",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "d7a4-5fe3-17f6-c6a9"
+     },
+     {
       "id": "eea9-6d88-6b47-3357",
       "name": "Hand Weapon",
       "hidden": false,
@@ -10560,7 +10876,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -10579,7 +10895,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -10598,7 +10914,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -10617,7 +10933,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -10636,7 +10952,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -10655,7 +10971,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -10678,6 +10994,85 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "sortIndex": 1,
+      "collective": true
+     },
+     {
+      "id": "3fa6-db3b-c3f4-1fd2",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "cfaf-5e52-53e7-96b2",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "47df-0aaa-3748-a033",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "0b4a-6c5a-ae74-c83c",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "1a0d-6b94-1782-ed06",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "7fc2-f0ad-5ddf-609a",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -11500,15 +11895,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "ec79-298f-ae73-65ee",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -11652,15 +12039,7 @@
             "percentValue": false
            }
           ],
-          "modifiers": [
-           {
-            "type": "set",
-            "field": "name",
-            "value": "Banner Enchant",
-            "conditions": [],
-            "conditionGroups": []
-           }
-          ],
+          "modifiers": [],
           "collapsible": true,
           "sortIndex": 1,
           "collective": true
@@ -11845,7 +12224,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "4193-a6f5-4eb6-5f67",
+        "value": 35,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "ad1c-4d45-a6a3-a974",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "profiles": [
        {
         "id": "111a-c41d-6688-4c30",
@@ -12087,9 +12486,40 @@
             "includeChildForces": false,
             "shared": true,
             "percentValue": false
+           },
+           {
+            "id": "dd0e-c1f7-a803-1e29",
+            "field": "selections",
+            "scope": "roster",
+            "value": 1,
+            "type": "min",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": true,
+            "percentValue": false,
+            "childId": "58a0-48e5-1c5b-4836"
            }
           ],
           "modifiers": [
+           {
+            "type": "set",
+            "field": "dd0e-c1f7-a803-1e29",
+            "value": 0,
+            "conditions": [
+             {
+              "type": "atMost",
+              "value": 0,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "9f09-a7b1-fd91-d236",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           },
            {
             "type": "set",
             "field": "hidden",
@@ -12155,10 +12585,19 @@
             "targetId": "f930-f7e6-2b9b-81d7"
            }
           ],
-          "categoryLinks": [],
+          "categoryLinks": [
+           {
+            "id": "b08f-d54c-642f-203d",
+            "name": "Vanguard",
+            "hidden": true,
+            "targetId": "ad1c-4d45-a6a3-a974",
+            "primary": false
+           }
+          ],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "comment": "restriction: Only if the General has Strigoi.",
           "sortIndex": 1,
           "collective": true
          }
@@ -13484,15 +13923,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "5aef-a7ab-8641-6d52",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -13621,15 +14052,7 @@
             "percentValue": false
            }
           ],
-          "modifiers": [
-           {
-            "type": "set",
-            "field": "name",
-            "value": "Banner Enchant",
-            "conditions": [],
-            "conditionGroups": []
-           }
-          ],
+          "modifiers": [],
           "collapsible": true,
           "sortIndex": 1,
           "collective": true
@@ -13933,7 +14356,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Magical Attacks, Lethal Strike, Multiple Wounds (2, towards Height (1-2))"
+          "$text": "Magical Attacks, Lethal Strike, Multiple Wounds (2, towards Height (1-2)), Lance"
          },
          {
           "name": "Tags",
@@ -14020,6 +14443,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "7230-b501-e62b-1367"
+       },
+       {
+        "id": "dddf-8bd5-294c-b533",
+        "name": "Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7732-8bec-981c-6371"
        },
        {
         "id": "49a4-7301-ad78-bed2",
@@ -14241,15 +14671,7 @@
             "percentValue": false
            }
           ],
-          "modifiers": [
-           {
-            "type": "set",
-            "field": "name",
-            "value": "Banner Enchant",
-            "conditions": [],
-            "conditionGroups": []
-           }
-          ],
+          "modifiers": [],
           "collapsible": true,
           "sortIndex": 1,
           "collective": true
@@ -14385,7 +14807,7 @@
      {
       "name": "pts",
       "typeId": "ea90-6996-33df-993c",
-      "value": 10
+      "value": -85
      }
     ],
     "profiles": [],
@@ -15908,6 +16330,13 @@
       "name": "⟨Hgt:4⟩",
       "hidden": true,
       "targetId": "b2ef-7b34-2347-daab",
+      "primary": false
+     },
+     {
+      "id": "0f5a-8cc9-5372-db23",
+      "name": "Court of the Damned",
+      "hidden": true,
+      "targetId": "0f86-9ec5-fb73-6452",
       "primary": false
      }
     ],
@@ -19126,6 +19555,7 @@
           ],
           "entryLinks": [],
           "selectionEntryGroups": [],
+          "defaultSelectionEntryId": "a0eb-9eaa-e8f4-ea69",
           "sortIndex": 1,
           "collective": true
          }
@@ -19518,6 +19948,27 @@
       "comment": "Rare"
      },
      {
+      "type": "decrement",
+      "field": "f5d7-7379-322e-5497",
+      "value": 1,
+      "conditions": [],
+      "conditionGroups": [],
+      "repeats": [
+       {
+        "field": "selections",
+        "scope": "roster",
+        "value": 1,
+        "percentValue": false,
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "childId": "47dc-9aff-92a5-ffce",
+        "repeats": 1,
+        "roundUp": true
+       }
+      ]
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "b7a6-2b4b-dee8-7f1a",
@@ -19564,13 +20015,6 @@
       "name": "Mount",
       "hidden": true,
       "targetId": "31a4-1a73-082e-1ba9",
-      "primary": false
-     },
-     {
-      "id": "6999-46d6-90bd-165d",
-      "name": "Vampire Knight",
-      "hidden": true,
-      "targetId": "3443-29be-c888-9794",
       "primary": false
      },
      {
@@ -19732,7 +20176,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Vampiric (6), Devastating Charge (1 At)"
+          "$text": "Vampiric (6), Devastating Charge (1 At), Lance"
          },
          {
           "name": "Tags",
@@ -19798,6 +20242,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "e052-9518-2b65-26d1"
+       },
+       {
+        "id": "c5f4-67b3-5bf0-839d",
+        "name": "Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7732-8bec-981c-6371"
        },
        {
         "id": "6271-2562-5d3a-e2ab",
@@ -20012,15 +20463,7 @@
             "percentValue": false
            }
           ],
-          "modifiers": [
-           {
-            "type": "set",
-            "field": "name",
-            "value": "Banner Enchant",
-            "conditions": [],
-            "conditionGroups": []
-           }
-          ],
+          "modifiers": [],
           "collapsible": true,
           "sortIndex": 1,
           "collective": true
@@ -20407,7 +20850,30 @@
         "id": "326e-833b-6256-84b7",
         "name": "Options",
         "hidden": false,
-        "constraints": [],
+        "constraints": [
+         {
+          "id": "e737-cde7-1371-6409",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "min",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         },
+         {
+          "id": "e29e-8a07-377e-76b1",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
         "modifiers": [],
         "selectionEntries": [
          {
@@ -20446,15 +20912,7 @@
             "targetId": "42b4-4d10-2466-39ce"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "1c5a-573e-aec9-bba0",
-            "name": "Halberd",
-            "hidden": true,
-            "targetId": "e47f-3496-4422-34e1",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -20507,6 +20965,7 @@
         ],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "defaultSelectionEntryId": "261c-564a-c234-d809",
         "sortIndex": 1,
         "collective": true
        }
@@ -21885,6 +22344,13 @@
       "name": "⟨mount⟩",
       "hidden": true,
       "targetId": "8f29-751f-db8c-5da5",
+      "primary": false
+     },
+     {
+      "id": "1dbd-650f-0419-e962",
+      "name": "Court of the Damned",
+      "hidden": true,
+      "targetId": "0f86-9ec5-fb73-6452",
       "primary": false
      }
     ],
@@ -23292,10 +23758,10 @@
       "primary": false
      },
      {
-      "id": "41c3-7750-03c1-3637",
-      "name": "Mount Shriek",
+      "id": "0c1f-a8c7-4827-7bc9",
+      "name": "Gigantic Mount",
       "hidden": true,
-      "targetId": "9a7c-ec6c-4026-e9e9",
+      "targetId": "47dc-9aff-92a5-ffce",
       "primary": false
      },
      {
@@ -23612,6 +24078,13 @@
       "primary": false
      },
      {
+      "id": "8dd6-2d17-32dd-f0cd",
+      "name": "Gigantic Mount",
+      "hidden": true,
+      "targetId": "47dc-9aff-92a5-ffce",
+      "primary": false
+     },
+     {
       "id": "806c-f6b2-0f9a-ba2d",
       "name": "Swift Death",
       "hidden": false,
@@ -23630,6 +24103,13 @@
       "name": "⟨mount⟩",
       "hidden": true,
       "targetId": "8f29-751f-db8c-5da5",
+      "primary": false
+     },
+     {
+      "id": "9100-41a6-9e93-e496",
+      "name": "Zombie Dragon",
+      "hidden": true,
+      "targetId": "95c5-bb04-f6a3-6e3f",
       "primary": false
      }
     ],
@@ -23930,6 +24410,13 @@
       "primary": false
      },
      {
+      "id": "ff54-2c99-6caa-e469",
+      "name": "Gigantic Mount",
+      "hidden": true,
+      "targetId": "47dc-9aff-92a5-ffce",
+      "primary": false
+     },
+     {
       "id": "5ef7-35c9-db77-fe1d",
       "name": "Swift Death",
       "hidden": false,
@@ -23948,6 +24435,13 @@
       "name": "⟨mount⟩",
       "hidden": true,
       "targetId": "8f29-751f-db8c-5da5",
+      "primary": false
+     },
+     {
+      "id": "b758-bbfe-dbb5-c30d",
+      "name": "Colossal Zombie Dragon",
+      "hidden": true,
+      "targetId": "95c5-bb04-f6a3-6e3f",
       "primary": false
      }
     ],
@@ -24182,18 +24676,6 @@
       "percentValue": false,
       "comment": "Extraordinary",
       "message": "{roster} has {difference} too many selections of {self} (max {value}, **Extraordinary**)"
-     },
-     {
-      "id": "b19a-6825-2e15-322d",
-      "field": "selections",
-      "scope": "roster",
-      "value": 0,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false,
-      "childId": "a562-cac9-69c9-f256"
      }
     ],
     "modifiers": [
@@ -24419,6 +24901,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1-4 only.",
     "collective": true
    },
    {
@@ -24494,6 +24977,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Barrow Guard and Barrow Knights only.",
     "collective": true
    },
    {
@@ -24569,6 +25053,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Units that count towards \"Core\" only.",
     "collective": true
    },
    {
@@ -24632,6 +25117,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Hand Weapon.",
     "collective": true
    },
    {
@@ -24715,6 +25201,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Vampire Counts and Courtiers only. Enchantment: Hand Weapon.",
     "collective": true
    },
    {
@@ -24852,14 +25339,14 @@
            {
             "type": "set",
             "field": "ba93-6e90-4696-c2b4",
-            "value": "6\"",
+            "value": "12\"",
             "conditions": [],
             "conditionGroups": []
            },
            {
             "type": "append",
             "field": "74cf-1caa-f204-a191",
-            "value": ", Aura",
+            "value": ", Augment, Aura",
             "conditions": [],
             "conditionGroups": []
            }
@@ -24880,6 +25367,7 @@
      }
     ],
     "entryLinks": [],
+    "comment": "restriction: Wizards only.",
     "collective": true
    },
    {
@@ -25062,6 +25550,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1-4 only.",
     "collective": true
    },
    {
@@ -25107,7 +25596,19 @@
       "type": "set",
       "field": "hidden",
       "value": true,
-      "conditions": [],
+      "conditions": [
+       {
+        "type": "lessThan",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e1ca-1645-d989-14e1",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
       "conditionGroups": [
        {
         "type": "and",
@@ -25235,6 +25736,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1-3 only. Vampire Counts and Courtiers on Monstrous Revenant or.",
     "collective": true
    },
    {
@@ -25361,6 +25863,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1-2 only.",
     "collective": true
    },
    {
@@ -25555,6 +26058,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken with Shield. Cannot be taken with Wizard Master.",
     "collective": true
    },
    {
@@ -25625,6 +26129,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken with Wizard Master.",
     "collective": true
    },
    {
@@ -25750,6 +26255,19 @@
       "includeChildForces": false,
       "shared": true,
       "percentValue": false
+     },
+     {
+      "id": "7db6-d838-0467-72aa",
+      "field": "selections",
+      "scope": "roster",
+      "value": 1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Legendary",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
     "modifiers": [
@@ -25814,6 +26332,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Vampire Count only. Models with Strigoi only.",
     "collective": true
    },
    {
@@ -25839,6 +26358,19 @@
       "includeChildForces": false,
       "shared": true,
       "percentValue": false
+     },
+     {
+      "id": "4a3c-7c68-cfa4-47e9",
+      "field": "selections",
+      "scope": "roster",
+      "value": 1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Legendary",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
     "modifiers": [
@@ -25903,6 +26435,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Vampire Count only. Models with Lahmia only.",
     "collective": true
    },
    {
@@ -25928,6 +26461,19 @@
       "includeChildForces": false,
       "shared": true,
       "percentValue": false
+     },
+     {
+      "id": "14fc-1ad3-3a76-d752",
+      "field": "selections",
+      "scope": "roster",
+      "value": 1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Legendary",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
     "modifiers": [
@@ -25992,6 +26538,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Vampire Count only. Models with Sangreal only.",
     "collective": true
    },
    {
@@ -26017,6 +26564,19 @@
       "includeChildForces": false,
       "shared": true,
       "percentValue": false
+     },
+     {
+      "id": "dcb7-2fd3-6461-dbba",
+      "field": "selections",
+      "scope": "roster",
+      "value": 1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Legendary",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
     "modifiers": [
@@ -26081,6 +26641,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Vampire Count only. Models with Vetala only.",
     "collective": true
    },
    {
@@ -26106,6 +26667,19 @@
       "includeChildForces": false,
       "shared": true,
       "percentValue": false
+     },
+     {
+      "id": "991a-8181-c498-a5c1",
+      "field": "selections",
+      "scope": "roster",
+      "value": 1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false,
+      "comment": "Legendary",
+      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Legendary**)"
      }
     ],
     "modifiers": [
@@ -26437,11 +27011,13 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "defaultSelectionEntryId": "87bd-ad5d-17ee-e9ef",
           "sortIndex": 1,
           "collective": true
          }
         ],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken with Mysteries of the Night.",
         "sortIndex": 1,
         "collective": true
        },
@@ -26702,11 +27278,13 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "defaultSelectionEntryId": "8eeb-b342-89cb-1c42",
           "sortIndex": 1,
           "collective": true
          }
         ],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken with Mysteries of the Night.",
         "sortIndex": 2,
         "collective": true
        },
@@ -26967,11 +27545,13 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "defaultSelectionEntryId": "cdce-4f1a-4ae3-337d",
           "sortIndex": 1,
           "collective": true
          }
         ],
         "entryLinks": [],
+        "comment": "restriction: Models with Mysteries of the Night only.",
         "sortIndex": 3,
         "collective": true
        },
@@ -27232,22 +27812,26 @@
           ],
           "selectionEntryGroups": [],
           "entryLinks": [],
+          "defaultSelectionEntryId": "556b-ea2a-9b0a-72a5",
           "sortIndex": 1,
           "collective": true
          }
         ],
         "entryLinks": [],
+        "comment": "restriction: Models with Mysteries of the Night only.",
         "sortIndex": 4,
         "collective": true
        }
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "b9fe-3d10-7433-7129",
       "sortIndex": 1,
       "collective": true
      }
     ],
     "entryLinks": [],
+    "comment": "restriction: Models with Wizard only.",
     "collective": true
    },
    {
@@ -27418,6 +28002,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken with Mount.",
     "collective": true
    },
    {
@@ -27538,6 +28123,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken with Mount.",
     "collective": true
    },
    {
@@ -27658,6 +28244,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Wizard Apprentice or Adept only.",
     "collective": true
    }
   ],
@@ -27720,6 +28307,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -27888,6 +28476,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -27948,6 +28537,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -28096,6 +28686,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -28284,6 +28875,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -28432,6 +29024,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -28580,6 +29173,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -28876,6 +29470,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -28968,11 +29563,12 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
     "id": "7c6b-e8de-52a0-0a6e",
-    "name": " Enchant",
+    "name": "Banner Enchant",
     "hidden": false,
     "constraints": [],
     "modifiers": [],
@@ -29128,6 +29724,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    }
   ],

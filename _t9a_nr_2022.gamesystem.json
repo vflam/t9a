@@ -524,6 +524,11 @@
     "hidden": true
    },
    {
+    "id": "98af-a2d0-7876-4f7d",
+    "name": "⟨loses:channel⟩",
+    "hidden": true
+   },
+   {
     "id": "0990-1a28-93c9-9c1f",
     "name": "⟨loses:metalarmour⟩",
     "hidden": true
@@ -557,6 +562,12 @@
     "id": "f98e-90de-1eac-f873",
     "name": "Metal Armour",
     "comment": "tag_Metal Armour",
+    "hidden": true
+   },
+   {
+    "id": "a8fb-40ff-2487-c252",
+    "name": "Construct",
+    "comment": "tag_Construct",
     "hidden": true
    },
    {
@@ -730,6 +741,12 @@
     ]
    },
    {
+    "id": "74b8-263b-63e9-d79e",
+    "name": "Trophy Rack",
+    "comment": "trophyRack",
+    "hidden": true
+   },
+   {
     "id": "c68b-884a-a0d7-b8b4",
     "name": "Weapon Enchant",
     "comment": "weaponEnchantUni",
@@ -745,9 +762,64 @@
       "includeChildForces": false,
       "shared": true,
       "percentValue": false
+     },
+     {
+      "id": "e795-663c-c898-3289",
+      "field": "selections",
+      "scope": "root-entry",
+      "value": 1,
+      "type": "max",
+      "includeChildSelections": true,
+      "includeChildForces": false,
+      "shared": true,
+      "percentValue": false
      }
     ],
     "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "type": "ceil",
+      "value": -1,
+      "field": "e795-663c-c898-3289",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "self",
+        "childId": "header",
+        "childName": "header",
+        "shared": true
+       }
+      ]
+     },
+     {
+      "type": "set",
+      "field": "e795-663c-c898-3289",
+      "value": 2,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "3764-f224-6926-f933",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "primary-catalogue",
+        "childId": "cebb-6401-a703-eb27",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
      {
       "parentKey": "modifiers",
       "type": "ceil",
@@ -780,6 +852,12 @@
     "hidden": true
    },
    {
+    "id": "fffd-0772-fb48-80fb",
+    "name": "General",
+    "comment": "general",
+    "hidden": true
+   },
+   {
     "id": "bf19-2ae3-58d2-5ff5",
     "name": "General",
     "comment": "army_general",
@@ -794,6 +872,17 @@
       "includeChildSelections": true,
       "includeChildForces": true,
       "shared": true,
+      "percentValue": false
+     },
+     {
+      "id": "ddef-e0e0-47d7-8268",
+      "field": "selections",
+      "scope": "roster",
+      "value": 0,
+      "type": "min",
+      "shared": true,
+      "includeChildSelections": true,
+      "includeChildForces": true,
       "percentValue": false
      }
     ],
@@ -948,75 +1037,18 @@
         "shared": true
        }
       ]
-     }
-    ]
-   },
-   {
-    "id": "78e6-b065-4446-c3ec",
-    "name": "Shield",
-    "comment": "shield",
-    "hidden": true
-   },
-   {
-    "id": "cda6-3d55-eecf-4914",
-    "name": "Captain",
-    "comment": "captain",
-    "hidden": true
-   },
-   {
-    "id": "0237-49e0-a2f5-2467",
-    "name": "Not A Leader",
-    "comment": "not_a_leader",
-    "hidden": true
-   },
-   {
-    "id": "3ab0-9185-e522-de12",
-    "name": "Art Free Ess",
-    "comment": "art_free_ess",
-    "hidden": true
-   },
-   {
-    "id": "bc9c-d563-7c81-e5a3",
-    "name": "Core Unit",
-    "comment": "core_unit",
-    "hidden": true
-   },
-   {
-    "id": "b9c1-5c30-13e9-8d07",
-    "name": "Towering",
-    "comment": "towering",
-    "hidden": true
-   },
-   {
-    "id": "dc6d-f21e-be27-7f76",
-    "name": "Flyer",
-    "comment": "flyer",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "c783-7fc9-83db-676c",
-      "field": "selections",
-      "scope": "roster",
-      "value": -1,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
+     },
      {
       "type": "set",
-      "field": "c783-7fc9-83db-676c",
-      "value": 2,
+      "field": "ddef-e0e0-47d7-8268",
+      "value": 1,
       "conditions": [
        {
         "type": "instanceOf",
         "value": 1,
         "field": "selections",
         "scope": "primary-catalogue",
-        "childId": "cebb-6401-a703-eb27",
+        "childId": "f0e4-d463-91d0-6b26",
         "shared": true
        }
       ],
@@ -1026,7 +1058,7 @@
       "parentKey": "modifiers",
       "type": "ceil",
       "value": -1,
-      "field": "c783-7fc9-83db-676c",
+      "field": "ddef-e0e0-47d7-8268",
       "conditions": [
        {
         "type": "instanceOf",
@@ -1042,57 +1074,51 @@
     ]
    },
    {
-    "id": "52a1-6ffc-f6a0-6aa7",
-    "name": "Gigantic Size",
-    "comment": "sizeGigantic",
+    "id": "0237-49e0-a2f5-2467",
+    "name": "Not A Leader",
+    "comment": "not_a_leader",
     "hidden": true
    },
    {
-    "id": "37fb-d62f-d2eb-9cce",
-    "name": "Holy Vows",
-    "comment": "[indicator] tag_Holy Vows",
+    "id": "bc9c-d563-7c81-e5a3",
+    "name": "Core Unit",
+    "comment": "core_unit",
     "hidden": true
    },
    {
-    "id": "7c4d-6437-9c27-ad7b",
-    "name": "Aspis Arrows",
-    "comment": "[indicator] aspisArrows",
+    "id": "31a4-1a73-082e-1ba9",
+    "name": "Mount",
+    "comment": "tag_Mount",
     "hidden": true
    },
    {
-    "id": "59d3-3e05-f6bf-f1e5",
-    "name": "Canister Launcher",
-    "comment": "[indicator] canisterLauncher",
+    "id": "78e6-b065-4446-c3ec",
+    "name": "Shield",
+    "comment": "shield",
     "hidden": true
    },
    {
-    "id": "c8bf-79a8-fbcb-574a",
-    "name": "Deepfire Thrower",
-    "comment": "[indicator] deepfireThrower",
+    "id": "cda6-3d55-eecf-4914",
+    "name": "Captain",
+    "comment": "captain",
     "hidden": true
    },
    {
-    "id": "31d5-85af-8d39-0a9d",
-    "name": "Deepfire Thrower",
-    "comment": "[indicator] deepfire_thrower",
+    "id": "dc6d-f21e-be27-7f76",
+    "name": "Flyer",
+    "comment": "flyer",
     "hidden": true
    },
    {
-    "id": "30ce-2799-f7ed-6d34",
-    "name": "Rotary Gun",
-    "comment": "[indicator] rotaryGun",
+    "id": "ad1c-4d45-a6a3-a974",
+    "name": "Vanguard",
+    "comment": "vanguard",
     "hidden": true
    },
    {
-    "id": "1348-28b6-0bc5-dbb5",
-    "name": "Rotary Gun",
-    "comment": "[indicator] rotary_gun",
-    "hidden": true
-   },
-   {
-    "id": "b376-7078-76d6-9109",
-    "name": "Feldraks",
-    "comment": "[indicator] feldraks",
+    "id": "fe16-2b37-5363-4501",
+    "name": "Wings",
+    "comment": "wings",
     "hidden": true
    }
   ],
@@ -2095,6 +2121,27 @@
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
       "$text": "A model with <b>Channel</b> may add X Magic Dice during the Siphon the Veil step of its Magic Phase. <br> <i>Note: <b>Shaken</b> models may not use this rule.</i>"
+     }
+    ],
+    "modifiers": [
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditionGroups": [],
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry",
+        "childId": "98af-a2d0-7876-4f7d",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ]
      }
     ],
     "attributes": [

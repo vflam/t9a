@@ -71,6 +71,14 @@
     "modifiers": []
    },
    {
+    "id": "e668-0e14-cd56-554a",
+    "name": "Dragon or Ancient Dragon",
+    "comment": "mountDragon",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
     "id": "d140-5c01-481c-3d3b",
     "name": "Longbow",
     "comment": "longbow",
@@ -96,7 +104,7 @@
    },
    {
     "id": "f7c7-7f41-2108-167b",
-    "name": "Great Weapon",
+    "name": "Great Weapon and Elven Finesse",
     "comment": "great_weapon",
     "hidden": true,
     "constraints": [],
@@ -106,6 +114,14 @@
     "id": "4251-a9ca-1be7-86a0",
     "name": "Lance",
     "comment": "lance",
+    "hidden": true,
+    "constraints": [],
+    "modifiers": []
+   },
+   {
+    "id": "7a7e-58ce-5c56-8887",
+    "name": "Queen's Cavalier with Height 5",
+    "comment": "dragon_army",
     "hidden": true,
     "constraints": [],
     "modifiers": []
@@ -168,68 +184,6 @@
     ]
    },
    {
-    "id": "e4f6-8aaa-e455-8e9c",
-    "name": "Attached",
-    "comment": "attached",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "31a4-1a73-082e-1ba9",
-    "name": "Mount",
-    "comment": "tag_Mount",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "a8fb-40ff-2487-c252",
-    "name": "Construct",
-    "comment": "tag_Construct",
-    "hidden": true,
-    "constraints": [],
-    "modifiers": []
-   },
-   {
-    "id": "5234-782f-cffc-5bcc",
-    "name": "Sky Sloop or Sea Guard Reaper",
-    "comment": "sea_guard_reaper_or_sky_sloop",
-    "hidden": true,
-    "constraints": [
-     {
-      "id": "03e8-8407-f793-5b1c",
-      "field": "selections",
-      "scope": "roster",
-      "value": 3,
-      "type": "max",
-      "includeChildSelections": true,
-      "includeChildForces": true,
-      "shared": true,
-      "percentValue": false
-     }
-    ],
-    "modifiers": [
-     {
-      "parentKey": "modifiers",
-      "type": "ceil",
-      "value": -1,
-      "field": "03e8-8407-f793-5b1c",
-      "conditions": [
-       {
-        "type": "instanceOf",
-        "value": 1,
-        "field": "selections",
-        "scope": "self",
-        "childId": "header",
-        "childName": "header",
-        "shared": true
-       }
-      ]
-     }
-    ]
-   },
-   {
     "id": "fc46-26dd-3c10-15d4",
     "name": "Sky Sloop",
     "comment": "srar:sky_sloop",
@@ -246,7 +200,7 @@
       "shared": true,
       "percentValue": false,
       "comment": "Rare",
-      "message": "{roster} has {difference} too many selections of {self} (max {value}, **Rare**)"
+      "message": "{roster} has {difference} too many selections of **Sky Sloop** (max {value}, **Rare**)"
      }
     ],
     "modifiers": [
@@ -1159,6 +1113,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "db48-4bc8-47b4-f62e",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "b01b-73d1-1ea7-1c99",
           "name": "General",
           "hidden": true,
@@ -1552,6 +1513,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "e8b7-a93c-5f4f-2e81",
       "sortIndex": 2,
       "collective": true
      },
@@ -1611,7 +1573,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "86b3-ca74-9581-0f9c",
+            "childId": "8653-b27d-698a-d7ef",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -1631,15 +1593,7 @@
           "targetId": "cfbb-118b-629b-24b9"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "c3a6-f95b-0408-7d85",
-          "name": "Shield",
-          "hidden": true,
-          "targetId": "78e6-b065-4446-c3ec",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [
@@ -1668,6 +1622,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Cannot be taken with Royal Huntsman.",
         "sortIndex": 1,
         "collective": true
        },
@@ -1701,7 +1656,55 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "523a-18cb-c3c4-6b72",
+          "value": 0,
+          "conditions": [],
+          "conditionGroups": [
+           {
+            "type": "or",
+            "conditions": [
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "6516-5db2-1139-52cf",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             },
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "f51c-7c03-9e95-dde8",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             },
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "a1f8-5c97-847d-750b",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ]
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -1785,7 +1788,134 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "hidden",
+          "value": true,
+          "conditions": [],
+          "conditionGroups": [
+           {
+            "type": "and",
+            "conditions": [],
+            "conditionGroups": [
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8ae7-fb8a-bebd-4980",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8ae7-fb8a-bebd-4980",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "5c6c-cc9e-9ab6-e6bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "5c6c-cc9e-9ab6-e6bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8425-1339-fedd-7297",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8425-1339-fedd-7297",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "b2ef-7b34-2347-daab",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "b2ef-7b34-2347-daab",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ]
+           }
+          ]
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -1800,6 +1930,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Height 1–4 only (Army Model Rules p.4)",
         "sortIndex": 3,
         "collective": true
        }
@@ -1988,6 +2119,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 2,
           "collective": true
          },
@@ -2220,6 +2352,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mount.",
           "sortIndex": 5,
           "collective": true
          },
@@ -2316,6 +2449,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 6,
           "collective": true
          },
@@ -2365,7 +2499,7 @@
           "categoryLinks": [
            {
             "id": "1e29-4812-e4b2-2b3c",
-            "name": "Great Weapon",
+            "name": "Great Weapon and Elven Finesse",
             "hidden": true,
             "targetId": "f7c7-7f41-2108-167b",
             "primary": false
@@ -2613,6 +2747,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Must choose (one choice only) (Queen's Companion only)",
         "sortIndex": 1,
         "collective": true
        },
@@ -2676,12 +2811,14 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Must choose (one choice only) (Queen's Companion only)",
         "sortIndex": 2,
         "collective": true
        }
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "6d4d-c9b5-d9c3-5728",
       "sortIndex": 4,
       "collective": true
      }
@@ -3046,13 +3183,6 @@
           "hidden": true,
           "targetId": "cda6-3d55-eecf-4914",
           "primary": false
-         },
-         {
-          "id": "9f21-40d8-225e-8e4c",
-          "name": "Attached",
-          "hidden": true,
-          "targetId": "e4f6-8aaa-e455-8e9c",
-          "primary": false
          }
         ],
         "selectionEntries": [],
@@ -3098,6 +3228,13 @@
          }
         ],
         "categoryLinks": [
+         {
+          "id": "e1f9-b5e9-d3dd-f504",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
          {
           "id": "67fe-d4f3-a4a7-2494",
           "name": "General",
@@ -3287,7 +3424,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "08cc-f348-a2b4-fd5d",
+            "childId": "499f-aeb4-d942-d4bc",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3319,6 +3456,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Cannot be taken by Solitary",
         "sortIndex": 1,
         "collective": true
        }
@@ -3362,7 +3500,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "08cc-f348-a2b4-fd5d",
+            "childId": "499f-aeb4-d942-d4bc",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3494,7 +3632,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3778-487d-e6d3-68d6",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3545,7 +3683,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3778-487d-e6d3-68d6",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3615,7 +3753,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3778-487d-e6d3-68d6",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3685,7 +3823,7 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "3778-487d-e6d3-68d6",
+            "childId": "cda6-3d55-eecf-4914",
             "shared": true,
             "includeChildSelections": true,
             "includeChildForces": false,
@@ -3701,6 +3839,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "9a6e-2c46-c4a3-443a",
       "sortIndex": 2,
       "collective": true
      },
@@ -3760,25 +3899,6 @@
             "value": 1,
             "field": "selections",
             "scope": "root-entry-self",
-            "childId": "86b3-ca74-9581-0f9c",
-            "shared": true,
-            "includeChildSelections": true,
-            "includeChildForces": false,
-            "percentValue": false
-           }
-          ],
-          "conditionGroups": []
-         },
-         {
-          "type": "set",
-          "field": "hidden",
-          "value": true,
-          "conditions": [
-           {
-            "type": "atLeast",
-            "value": 1,
-            "field": "selections",
-            "scope": "root-entry-self",
             "childId": "8653-b27d-698a-d7ef",
             "shared": true,
             "includeChildSelections": true,
@@ -3799,15 +3919,7 @@
           "targetId": "cfbb-118b-629b-24b9"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "e060-8dfa-842e-603f",
-          "name": "Shield",
-          "hidden": true,
-          "targetId": "78e6-b065-4446-c3ec",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [
@@ -3836,6 +3948,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Cannot be taken with Royal Huntsman.",
         "sortIndex": 1,
         "collective": true
        },
@@ -3869,7 +3982,66 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "523a-18cb-c3c4-6b72",
+          "value": 0,
+          "conditions": [],
+          "conditionGroups": [
+           {
+            "type": "or",
+            "conditions": [
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "6516-5db2-1139-52cf",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             },
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "f51c-7c03-9e95-dde8",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             },
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "a1f8-5c97-847d-750b",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             },
+             {
+              "type": "atLeast",
+              "value": 1,
+              "field": "selections",
+              "scope": "root-entry-self",
+              "childId": "d090-cdfb-be0f-bb10",
+              "shared": true,
+              "includeChildSelections": true,
+              "includeChildForces": false,
+              "percentValue": false
+             }
+            ],
+            "conditionGroups": []
+           }
+          ]
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -3953,7 +4125,134 @@
           "percentValue": false
          }
         ],
-        "modifiers": [],
+        "modifiers": [
+         {
+          "type": "set",
+          "field": "hidden",
+          "value": true,
+          "conditions": [],
+          "conditionGroups": [
+           {
+            "type": "and",
+            "conditions": [],
+            "conditionGroups": [
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8ae7-fb8a-bebd-4980",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8ae7-fb8a-bebd-4980",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "5c6c-cc9e-9ab6-e6bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "5c6c-cc9e-9ab6-e6bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8425-1339-fedd-7297",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8425-1339-fedd-7297",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "b2ef-7b34-2347-daab",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "b2ef-7b34-2347-daab",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ]
+           }
+          ]
+         }
+        ],
         "profiles": [],
         "infoLinks": [
          {
@@ -3968,6 +4267,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Height 1–4 only (Army Model Rules p.4)",
         "sortIndex": 3,
         "collective": true
        }
@@ -4156,6 +4456,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 2,
           "collective": true
          },
@@ -4312,6 +4613,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Cannot be taken with Mount.",
           "sortIndex": 4,
           "collective": true
          },
@@ -4437,7 +4739,7 @@
           "categoryLinks": [
            {
             "id": "e6be-2429-ef5f-6f79",
-            "name": "Great Weapon",
+            "name": "Great Weapon and Elven Finesse",
             "hidden": true,
             "targetId": "f7c7-7f41-2108-167b",
             "primary": false
@@ -4567,6 +4869,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Models with Mount only.",
           "sortIndex": 7,
           "collective": true
          }
@@ -4825,6 +5128,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Must choose (one choice only) (Queen's Companion only)",
         "sortIndex": 1,
         "collective": true
        },
@@ -4888,12 +5192,14 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Must choose (one choice only) (Queen's Companion only)",
         "sortIndex": 2,
         "collective": true
        }
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "64b1-7a14-8f33-1438",
       "sortIndex": 4,
       "collective": true
      }
@@ -5242,6 +5548,13 @@
         ],
         "categoryLinks": [
          {
+          "id": "4953-0dd5-f392-9b3e",
+          "name": "General",
+          "hidden": true,
+          "targetId": "fffd-0772-fb48-80fb",
+          "primary": false
+         },
+         {
           "id": "485a-2eb8-7762-15ea",
           "name": "General",
           "hidden": true,
@@ -5553,6 +5866,7 @@
        }
       ],
       "collapsible": true,
+      "defaultSelectionEntryId": "4bc6-c955-cfa7-e454",
       "sortIndex": 2,
       "collective": true
      },
@@ -5692,6 +6006,7 @@
       "selectionEntryGroups": [],
       "entryLinks": [],
       "collapsible": true,
+      "defaultSelectionEntryId": "23b1-5fae-b525-da7f",
       "sortIndex": 3,
       "collective": true
      },
@@ -5723,27 +6038,7 @@
         "percentValue": false
        }
       ],
-      "modifiers": [
-       {
-        "type": "set",
-        "field": "439c-e9b6-a33a-a512",
-        "value": 2,
-        "conditions": [
-         {
-          "type": "atLeast",
-          "value": 1,
-          "field": "selections",
-          "scope": "root-entry-self",
-          "childId": "3ab0-9185-e522-de12",
-          "shared": true,
-          "includeChildSelections": true,
-          "includeChildForces": false,
-          "percentValue": false
-         }
-        ],
-        "conditionGroups": []
-       }
-      ],
+      "modifiers": [],
       "selectionEntries": [
        {
         "id": "2705-5ebd-7e2b-3612",
@@ -5836,7 +6131,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5855,7 +6150,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -5874,7 +6169,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5893,7 +6188,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -5912,7 +6207,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5931,7 +6226,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -5947,6 +6242,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Cannot be taken with Order of the Fiery Heart.",
         "sortIndex": 1,
         "collective": true
        },
@@ -6041,7 +6337,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6060,7 +6356,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6079,7 +6375,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6098,7 +6394,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6117,7 +6413,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6136,7 +6432,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6152,6 +6448,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Cannot be taken with Order of the Fiery Heart.",
         "sortIndex": 2,
         "collective": true
        },
@@ -6226,7 +6523,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6245,7 +6542,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6264,7 +6561,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6283,7 +6580,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6302,7 +6599,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6321,7 +6618,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6431,7 +6728,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6450,7 +6747,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "a71d-a1c0-93ae-9ac5",
               "shared": true,
               "includeChildSelections": true,
@@ -6469,7 +6766,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6488,7 +6785,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "0eb6-4350-a18a-a9bf",
               "shared": true,
               "includeChildSelections": true,
@@ -6507,7 +6804,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6526,7 +6823,7 @@
               "type": "atLeast",
               "value": 1,
               "field": "selections",
-              "scope": "root-entry",
+              "scope": "root-entry-self",
               "childId": "c04d-1882-6246-277c",
               "shared": true,
               "includeChildSelections": true,
@@ -6542,6 +6839,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Models with Order of the Fiery Heart only.",
         "sortIndex": 4,
         "collective": true
        }
@@ -6571,7 +6869,27 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "93b8-63b8-8fd8-798f",
+        "value": 200,
+        "conditions": [
+         {
+          "type": "atLeast",
+          "value": 1,
+          "field": "selections",
+          "scope": "root-entry-self",
+          "childId": "c04d-1882-6246-277c",
+          "shared": true,
+          "includeChildSelections": true,
+          "includeChildForces": false,
+          "percentValue": false
+         }
+        ],
+        "conditionGroups": []
+       }
+      ],
       "selectionEntries": [
        {
         "id": "0248-f009-fcf2-204f",
@@ -6629,15 +6947,7 @@
           "targetId": "cfbb-118b-629b-24b9"
          }
         ],
-        "categoryLinks": [
-         {
-          "id": "b5df-e32e-e4b9-239c",
-          "name": "Shield",
-          "hidden": true,
-          "targetId": "78e6-b065-4446-c3ec",
-          "primary": false
-         }
-        ],
+        "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [
@@ -6666,6 +6976,7 @@
           "collective": true
          }
         ],
+        "comment": "restriction: Order of the Fiery Heart only",
         "sortIndex": 1,
         "collective": true
        },
@@ -6713,6 +7024,132 @@
            }
           ],
           "conditionGroups": []
+         },
+         {
+          "type": "set",
+          "field": "hidden",
+          "value": true,
+          "conditions": [],
+          "conditionGroups": [
+           {
+            "type": "and",
+            "conditions": [],
+            "conditionGroups": [
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8ae7-fb8a-bebd-4980",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8ae7-fb8a-bebd-4980",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "5c6c-cc9e-9ab6-e6bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "5c6c-cc9e-9ab6-e6bd",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8425-1339-fedd-7297",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "8425-1339-fedd-7297",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             },
+             {
+              "type": "and",
+              "conditions": [
+               {
+                "type": "atMost",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "b2ef-7b34-2347-daab",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               },
+               {
+                "type": "notInstanceOf",
+                "value": 0,
+                "field": "selections",
+                "scope": "root-entry",
+                "childId": "b2ef-7b34-2347-daab",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": true,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ]
+           }
+          ]
          }
         ],
         "profiles": [],
@@ -6729,6 +7166,7 @@
         "selectionEntries": [],
         "selectionEntryGroups": [],
         "entryLinks": [],
+        "comment": "restriction: Order of the Fiery Heart only; Height 1–4 only (Army Model Rules p.4)",
         "sortIndex": 2,
         "collective": true
        }
@@ -6917,6 +7355,7 @@
             "collective": true
            }
           ],
+          "comment": "restriction: Order of the Fiery Heart only",
           "sortIndex": 2,
           "collective": true
          }
@@ -7299,6 +7738,13 @@
       "targetId": "d1aa-705c-f1c5-210e"
      },
      {
+      "id": "c99e-7263-43ac-32ec",
+      "name": "Asfada Headmaster",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "8c74-8ef5-960b-aac0"
+     },
+     {
       "id": "d9fe-530b-4953-75e0",
       "name": "Commander of the Veil",
       "hidden": false,
@@ -7329,6 +7775,85 @@
     ],
     "selectionEntries": [],
     "selectionEntryGroups": [
+     {
+      "id": "9b45-e03d-993a-94b8",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "d43f-b2e4-1471-dc98",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "6778-e41a-49f0-3498",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "3c86-f438-cb66-6277",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "fb21-fc5d-9973-3515",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "fb21-da12-07fc-90f4",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 1,
+      "collective": true
+     },
      {
       "id": "0a7d-58b5-4286-f61d",
       "name": "Wizard Conclave",
@@ -8297,7 +8822,8 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
-      "sortIndex": 1,
+      "defaultSelectionEntryId": "a8ba-c9a2-770b-948b",
+      "sortIndex": 2,
       "collective": true
      }
     ],
@@ -8497,7 +9023,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
+        "$text": "The Lance of Tears"
        },
        {
         "name": "Tags",
@@ -8570,6 +9096,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "5b9e-1c3b-7d0c-19e0"
+     },
+     {
+      "id": "57a0-1623-1c06-8d36",
+      "name": "The Lance of Tears",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "5b85-c5dc-43ea-f1e5"
      },
      {
       "id": "c603-eb3b-1271-ca92",
@@ -8724,7 +9257,87 @@
       "collective": true
      }
     ],
-    "selectionEntryGroups": [],
+    "selectionEntryGroups": [
+     {
+      "id": "9d9a-c67c-ecb4-9b9d",
+      "name": "Weapon",
+      "hidden": false,
+      "constraints": [
+       {
+        "id": "acb1-103b-52ea-ceaa",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "min",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       },
+       {
+        "id": "6eb6-f016-49a5-413d",
+        "field": "selections",
+        "scope": "parent",
+        "value": 1,
+        "type": "max",
+        "includeChildSelections": false,
+        "includeChildForces": false,
+        "shared": true,
+        "percentValue": false
+       }
+      ],
+      "modifiers": [],
+      "selectionEntries": [
+       {
+        "id": "9961-c263-8323-c737",
+        "name": "Hand Weapon",
+        "type": "upgrade",
+        "hidden": false,
+        "costs": [
+         {
+          "name": "pts",
+          "typeId": "ea90-6996-33df-993c",
+          "value": 0
+         }
+        ],
+        "constraints": [
+         {
+          "id": "71be-7cf0-babe-240d",
+          "field": "selections",
+          "scope": "parent",
+          "value": 1,
+          "type": "max",
+          "includeChildSelections": false,
+          "includeChildForces": false,
+          "shared": true,
+          "percentValue": false
+         }
+        ],
+        "modifiers": [],
+        "profiles": [],
+        "infoLinks": [
+         {
+          "id": "f91c-2e98-12a5-76cf",
+          "name": "Hand Weapon",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "cc6a-85fb-a07e-e781"
+         }
+        ],
+        "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
+        "sortIndex": 1,
+        "collective": true
+       }
+      ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
+      "sortIndex": 2,
+      "collective": true
+     }
+    ],
     "entryLinks": [],
     "constraints": [
      {
@@ -8947,7 +9560,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Fight in Extra Rank"
+          "$text": "Fight in Extra Rank, Spear"
          },
          {
           "name": "Tags",
@@ -9007,6 +9620,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ad6f-0ad5-9510-4fc5"
+       },
+       {
+        "id": "beb3-90b7-c501-fcd4",
+        "name": "Spear",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1751-dc92-5392-82ee"
        },
        {
         "id": "c766-ff62-cf8b-3557",
@@ -9394,7 +10014,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Lance"
          },
          {
           "name": "Tags",
@@ -9425,6 +10045,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "cfbb-118b-629b-24b9"
+       },
+       {
+        "id": "8844-74ac-39df-ac45",
+        "name": "Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7732-8bec-981c-6371"
        },
        {
         "id": "5c17-1545-0c6b-f097",
@@ -9828,7 +10455,77 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "523a-18cb-c3c4-6b72",
+        "value": 0,
+        "conditions": [],
+        "conditionGroups": [
+         {
+          "type": "or",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "6516-5db2-1139-52cf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "f51c-7c03-9e95-dde8",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "a1f8-5c97-847d-750b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "d090-cdfb-be0f-bb10",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1c09-da20-f2d2-92f4",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
+       }
+      ],
       "profiles": [
        {
         "id": "6722-c20b-3286-d843",
@@ -9933,7 +10630,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Longbow"
          },
          {
           "name": "Tags",
@@ -9979,6 +10676,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "4d3f-19f0-b319-2c54"
+       },
+       {
+        "id": "ee85-40bf-7700-71d6",
+        "name": "Longbow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "aa67-fa9c-919e-74f1"
        },
        {
         "id": "d738-9794-a109-96d6",
@@ -10252,7 +10956,88 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "523a-18cb-c3c4-6b72",
+        "value": 0,
+        "conditions": [],
+        "conditionGroups": [
+         {
+          "type": "or",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "6516-5db2-1139-52cf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "f51c-7c03-9e95-dde8",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "a1f8-5c97-847d-750b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "d090-cdfb-be0f-bb10",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1c09-da20-f2d2-92f4",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "d94b-b412-210b-911f",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
+       }
+      ],
       "profiles": [
        {
         "id": "2ec6-3f43-ac0b-c1b2",
@@ -10357,7 +11142,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Stand and Shoot, Resolute"
+          "$text": "Stand and Shoot, Resolute, Spear, Bow"
          },
          {
           "name": "Tags",
@@ -10431,6 +11216,20 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ec6f-d566-b8a1-a2b6"
+       },
+       {
+        "id": "6f89-d0bd-cf1b-72ac",
+        "name": "Spear",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1751-dc92-5392-82ee"
+       },
+       {
+        "id": "b881-32de-5d70-9d02",
+        "name": "Bow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "8f45-6b39-e272-aec1"
        },
        {
         "id": "0b8c-7603-c568-6ec9",
@@ -10811,7 +11610,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Light Lance"
          },
          {
           "name": "Tags",
@@ -10863,6 +11662,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "1ab5-0ba0-b596-ace7"
+       },
+       {
+        "id": "5eaa-7be8-5370-2421",
+        "name": "Light Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "78bf-1cd9-b47f-43d7"
        },
        {
         "id": "0fc9-56f1-adbf-b283",
@@ -11042,7 +11848,99 @@
             "percentValue": false
            }
           ],
-          "modifiers": [],
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "523a-18cb-c3c4-6b72",
+            "value": 0,
+            "conditions": [],
+            "conditionGroups": [
+             {
+              "type": "or",
+              "conditions": [
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "6516-5db2-1139-52cf",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "f51c-7c03-9e95-dde8",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "a1f8-5c97-847d-750b",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "d090-cdfb-be0f-bb10",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "1c09-da20-f2d2-92f4",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "d94b-b412-210b-911f",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               },
+               {
+                "type": "atLeast",
+                "value": 1,
+                "field": "selections",
+                "scope": "root-entry-self",
+                "childId": "cc6d-9788-341e-7f38",
+                "shared": true,
+                "includeChildSelections": true,
+                "includeChildForces": false,
+                "percentValue": false
+               }
+              ],
+              "conditionGroups": []
+             }
+            ]
+           }
+          ],
           "profiles": [],
           "infoLinks": [
            {
@@ -11437,7 +12335,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Elven Finesse, Sword Sworn, First Strike (1 Df, 1 Of)"
+          "$text": "Elven Finesse, Sword Sworn, First Strike (1 Df, 1 Of), Great Weapon"
          },
          {
           "name": "Tags",
@@ -11504,6 +12402,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "9189-ef98-4da8-604d",
+        "name": "Great Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "404b-7330-b333-3778"
        },
        {
         "id": "20ad-4241-70c4-6069",
@@ -11877,7 +12782,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Multiple Wounds (2, towards Height (4-5)), Elven Finesse"
+          "$text": "Multiple Wounds (2, towards Height (4-5)), Elven Finesse, Great Weapon"
          },
          {
           "name": "Tags",
@@ -11965,6 +12870,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "181c-f9d5-5d2c-ceb8"
+       },
+       {
+        "id": "2603-d297-e76d-2a5b",
+        "name": "Great Weapon",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "404b-7330-b333-3778"
        },
        {
         "id": "66b3-e66b-e8cd-75bb",
@@ -12338,7 +13250,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Halberd"
          },
          {
           "name": "Tags",
@@ -12398,6 +13310,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "8bcb-afaf-0f53-3431"
+       },
+       {
+        "id": "11c3-86a5-4cc4-0099",
+        "name": "Halberd",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "42b4-4d10-2466-39ce"
        },
        {
         "id": "41b1-7357-6415-40c3",
@@ -12778,7 +13697,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "First Strike (1 At, 1 Of)"
+          "$text": "First Strike (1 At, 1 Of), Lance"
          },
          {
           "name": "Tags",
@@ -12823,6 +13742,13 @@
         "hidden": false,
         "type": "profile",
         "targetId": "ce0e-c1b2-a268-c6da"
+       },
+       {
+        "id": "fdfb-201b-7ccb-418c",
+        "name": "Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "7732-8bec-981c-6371"
        },
        {
         "id": "0bb3-1bf2-ebde-ee47",
@@ -13233,7 +14159,44 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "523a-18cb-c3c4-6b72",
+        "value": 0,
+        "conditions": [],
+        "conditionGroups": [
+         {
+          "type": "or",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "6516-5db2-1139-52cf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "f51c-7c03-9e95-dde8",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
+       }
+      ],
       "profiles": [
        {
         "id": "73ac-41c3-a15b-e66d",
@@ -13338,7 +14301,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": ""
+          "$text": "Light Lance, Longbow"
          },
          {
           "name": "Tags",
@@ -13441,6 +14404,20 @@
         "hidden": false,
         "type": "profile",
         "targetId": "dea2-4563-ee71-4004"
+       },
+       {
+        "id": "6e84-7486-e415-2901",
+        "name": "Light Lance",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "78bf-1cd9-b47f-43d7"
+       },
+       {
+        "id": "f278-2d4e-ecc2-60fb",
+        "name": "Longbow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "aa67-fa9c-919e-74f1"
        },
        {
         "id": "507e-01b0-f6d4-dec2",
@@ -13894,7 +14871,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Multiple Wounds (2, towards Height (4-5)), Elven Finesse"
+        "$text": "Multiple Wounds (2, towards Height (4-5)), Elven Finesse, Great Weapon"
        },
        {
         "name": "Tags",
@@ -14004,6 +14981,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "e17c-383f-d894-ae01",
+      "name": "Great Weapon",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "404b-7330-b333-3778"
      },
      {
       "id": "ecaa-f241-d364-a959",
@@ -14889,6 +15873,7 @@
       ],
       "selectionEntryGroups": [],
       "entryLinks": [],
+      "defaultSelectionEntryId": "124d-199e-67e2-1f0f",
       "sortIndex": 1,
       "collective": true
      },
@@ -14898,15 +15883,12 @@
       "hidden": false,
       "constraints": [],
       "modifiers": [],
-      "selectionEntries": [],
-      "selectionEntryGroups": [],
-      "entryLinks": [
+      "selectionEntries": [
        {
         "id": "7996-906f-ca3e-5c36",
         "name": "Warden's Bond",
+        "type": "upgrade",
         "hidden": false,
-        "type": "selectionEntry",
-        "targetId": "d70e-2515-e1df-f979",
         "costs": [
          {
           "name": "pts",
@@ -14928,11 +15910,78 @@
          }
         ],
         "modifiers": [],
+        "profiles": [
+         {
+          "id": "a469-7790-2e9a-0891",
+          "name": "Warden",
+          "typeId": "462e-145c-42af-7edc",
+          "typeName": "Offensive",
+          "hidden": false,
+          "characteristics": [
+           {
+            "name": "Att",
+            "typeId": "7e95-b3fb-a6d6-4cd9",
+            "$text": "1"
+           },
+           {
+            "name": "Off",
+            "typeId": "a8e8-7a43-565f-29b5",
+            "$text": "6"
+           },
+           {
+            "name": "Str",
+            "typeId": "12ea-f281-a7e1-3e1f",
+            "$text": "4"
+           },
+           {
+            "name": "AP",
+            "typeId": "5b66-2cef-4a23-a567",
+            "$text": "1"
+           },
+           {
+            "name": "Agi",
+            "typeId": "7a92-d09f-2671-cf10",
+            "$text": "6"
+           },
+           {
+            "name": "Rules",
+            "typeId": "b4ba-0abc-3bab-171b",
+            "$text": "Halberd"
+           },
+           {
+            "name": "Tags",
+            "typeId": "6079-9ce5-90ed-8c32",
+            "$text": "Elf"
+           }
+          ]
+         }
+        ],
+        "infoLinks": [
+         {
+          "id": "d8d7-8226-8475-b4c1",
+          "name": "Warden's Bond",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "b4dc-a3a9-3965-b8f9"
+         },
+         {
+          "id": "2dcd-2ef8-75bd-1f0c",
+          "name": "Halberd",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "42b4-4d10-2466-39ce"
+         }
+        ],
         "categoryLinks": [],
+        "selectionEntries": [],
+        "selectionEntryGroups": [],
+        "entryLinks": [],
         "sortIndex": 1,
         "collective": true
        }
       ],
+      "selectionEntryGroups": [],
+      "entryLinks": [],
       "sortIndex": 2,
       "collective": true
      }
@@ -14973,6 +16022,25 @@
        }
       ],
       "comment": "Rare"
+     },
+     {
+      "type": "set",
+      "field": "1ae1-2980-3e1d-5d83",
+      "value": 2,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      },
      {
       "type": "remove",
@@ -15072,7 +16140,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "a233-a1c0-95c5-c93f",
+          "name": "Giant Club",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "4cae-c75b-2db0-3d02"
+         }
+        ],
         "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
@@ -15198,7 +16274,15 @@
         ],
         "modifiers": [],
         "profiles": [],
-        "infoLinks": [],
+        "infoLinks": [
+         {
+          "id": "4a43-796e-9c00-838d",
+          "name": "Big Brother",
+          "hidden": false,
+          "type": "profile",
+          "targetId": "f207-5e9d-fd90-66e0"
+         }
+        ],
         "categoryLinks": [],
         "selectionEntries": [],
         "selectionEntryGroups": [],
@@ -15224,13 +16308,6 @@
     "type": "model",
     "hidden": false,
     "categoryLinks": [
-     {
-      "id": "59dc-53aa-122d-bffc",
-      "name": "Sky Sloop or Sea Guard Reaper",
-      "hidden": true,
-      "targetId": "5234-782f-cffc-5bcc",
-      "primary": false
-     },
      {
       "id": "42d1-bd38-1be6-eac6",
       "name": "Naval Ordnance",
@@ -15357,7 +16434,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
+        "$text": "Elven Bolt Thrower"
        },
        {
         "name": "Tags",
@@ -15424,6 +16501,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "8793-b53c-382d-3a4d"
+     },
+     {
+      "id": "2431-7871-46d0-01ac",
+      "name": "Elven Bolt Thrower",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "f3da-97a0-71ea-e6db"
      },
      {
       "id": "d646-f60f-7319-6769",
@@ -16064,6 +17148,7 @@
       ],
       "entryLinks": [],
       "selectionEntryGroups": [],
+      "defaultSelectionEntryId": "23cb-b377-2379-4cc6",
       "sortIndex": 2,
       "collective": true
      }
@@ -16152,13 +17237,6 @@
       "name": "Sky Sloop",
       "hidden": true,
       "targetId": "f36c-4f81-b23f-95dc",
-      "primary": false
-     },
-     {
-      "id": "fb2c-6923-5af0-624b",
-      "name": "Sky Sloop or Sea Guard Reaper",
-      "hidden": true,
-      "targetId": "5234-782f-cffc-5bcc",
       "primary": false
      },
      {
@@ -16294,7 +17372,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
+        "$text": "Light Lance"
        },
        {
         "name": "Tags",
@@ -16338,7 +17416,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": "Impact Hits (D6)"
+        "$text": "Impact Hits (D6), Sky Reaper"
        },
        {
         "name": "Tags",
@@ -16404,6 +17482,20 @@
       "hidden": false,
       "type": "profile",
       "targetId": "dea2-4563-ee71-4004"
+     },
+     {
+      "id": "b5d0-85e5-e1d0-388a",
+      "name": "Light Lance",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "78bf-1cd9-b47f-43d7"
+     },
+     {
+      "id": "e856-79ef-0f92-044d",
+      "name": "Sky Reaper",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "f47d-7b93-9a27-fc06"
      },
      {
       "id": "984a-5790-dc7d-69c0",
@@ -16669,7 +17761,110 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "523a-18cb-c3c4-6b72",
+        "value": 0,
+        "conditions": [],
+        "conditionGroups": [
+         {
+          "type": "or",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "6516-5db2-1139-52cf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "f51c-7c03-9e95-dde8",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "a1f8-5c97-847d-750b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "d090-cdfb-be0f-bb10",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1c09-da20-f2d2-92f4",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "d94b-b412-210b-911f",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "cc6d-9788-341e-7f38",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "e19d-eab6-43d9-d447",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
+       }
+      ],
       "profiles": [
        {
         "id": "23a5-138d-6642-7b4c",
@@ -16774,7 +17969,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Moonlight Arrows"
+          "$text": "Moonlight Arrows, Longbow, Spear"
          },
          {
           "name": "Tags",
@@ -16827,6 +18022,20 @@
         "hidden": false,
         "type": "profile",
         "targetId": "7744-de8e-2eb8-84e2"
+       },
+       {
+        "id": "e007-e4f2-b90c-acc6",
+        "name": "Longbow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "aa67-fa9c-919e-74f1"
+       },
+       {
+        "id": "54e0-36b5-9e64-8430",
+        "name": "Spear",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "1751-dc92-5392-82ee"
        },
        {
         "id": "50f6-6050-586b-6b15",
@@ -16882,15 +18091,7 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "67c8-0b6a-a339-ee21",
-            "name": "Shield",
-            "hidden": true,
-            "targetId": "78e6-b065-4446-c3ec",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -17158,7 +18359,121 @@
         "percentValue": false
        }
       ],
-      "modifiers": [],
+      "modifiers": [
+       {
+        "type": "set",
+        "field": "523a-18cb-c3c4-6b72",
+        "value": 0,
+        "conditions": [],
+        "conditionGroups": [
+         {
+          "type": "or",
+          "conditions": [
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "6516-5db2-1139-52cf",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "f51c-7c03-9e95-dde8",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "a1f8-5c97-847d-750b",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "d090-cdfb-be0f-bb10",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1c09-da20-f2d2-92f4",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "d94b-b412-210b-911f",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "cc6d-9788-341e-7f38",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "e19d-eab6-43d9-d447",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           },
+           {
+            "type": "atLeast",
+            "value": 1,
+            "field": "selections",
+            "scope": "root-entry-self",
+            "childId": "1b6d-3443-6cb9-1694",
+            "shared": true,
+            "includeChildSelections": true,
+            "includeChildForces": false,
+            "percentValue": false
+           }
+          ],
+          "conditionGroups": []
+         }
+        ]
+       }
+      ],
       "profiles": [
        {
         "id": "4113-a5e8-1b98-2ae3",
@@ -17263,7 +18578,7 @@
          {
           "name": "Rules",
           "typeId": "b4ba-0abc-3bab-171b",
-          "$text": "Fae Miasma"
+          "$text": "Fae Miasma, Longbow, Paired Weapons"
          },
          {
           "name": "Tags",
@@ -17353,6 +18668,20 @@
         "targetId": "3709-5fc4-9b73-4e38"
        },
        {
+        "id": "612a-ffe7-8dea-8316",
+        "name": "Longbow",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "aa67-fa9c-919e-74f1"
+       },
+       {
+        "id": "dee3-d9f2-90ff-f766",
+        "name": "Paired Weapons",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "2431-3187-a071-99c8"
+       },
+       {
         "id": "86ca-d255-116c-c639",
         "name": "Hand Weapon",
         "hidden": false,
@@ -17406,15 +18735,7 @@
             "targetId": "cfbb-118b-629b-24b9"
            }
           ],
-          "categoryLinks": [
-           {
-            "id": "d530-aa0d-d378-70b2",
-            "name": "Shield",
-            "hidden": true,
-            "targetId": "78e6-b065-4446-c3ec",
-            "primary": false
-           }
-          ],
+          "categoryLinks": [],
           "selectionEntries": [],
           "selectionEntryGroups": [],
           "entryLinks": [],
@@ -17568,6 +18889,13 @@
       "name": "Mount",
       "hidden": true,
       "targetId": "db21-6ca1-547b-551a",
+      "primary": false
+     },
+     {
+      "id": "0d53-9176-7c13-9d36",
+      "name": "Dragon or Ancient Dragon",
+      "hidden": true,
+      "targetId": "e668-0e14-cd56-554a",
       "primary": false
      },
      {
@@ -17836,6 +19164,82 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "db21-6ca1-547b-551a",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "e668-0e14-cd56-554a",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "31a4-1a73-082e-1ba9",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "1ae1-2980-3e1d-5d83",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "collective": true
@@ -17858,6 +19262,13 @@
       "name": "Mount",
       "hidden": true,
       "targetId": "db21-6ca1-547b-551a",
+      "primary": false
+     },
+     {
+      "id": "0500-a1f1-2b3d-2ad4",
+      "name": "Dragon or Ancient Dragon",
+      "hidden": true,
+      "targetId": "e668-0e14-cd56-554a",
       "primary": false
      },
      {
@@ -18126,6 +19537,82 @@
        }
       ],
       "comment": "Rare"
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "db21-6ca1-547b-551a",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "e668-0e14-cd56-554a",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "31a4-1a73-082e-1ba9",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "1ae1-2980-3e1d-5d83",
+      "value": 1,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "7a7e-58ce-5c56-8887",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "collective": true
@@ -19606,10 +21093,10 @@
       "primary": false
      },
      {
-      "id": "b0f1-6a2c-2a99-c969",
-      "name": "Sky Sloop or Sea Guard Reaper",
+      "id": "f7de-daed-5a85-33d7",
+      "name": "Naval Ordnance",
       "hidden": true,
-      "targetId": "5234-782f-cffc-5bcc",
+      "targetId": "2681-5c9e-3e6d-abf7",
       "primary": false
      },
      {
@@ -19922,186 +21409,6 @@
     "collective": true
    },
    {
-    "id": "d70e-2515-e1df-f979",
-    "name": "Warden",
-    "type": "mount",
-    "hidden": false,
-    "categoryLinks": [
-     {
-      "id": "5075-5b04-abd5-6994",
-      "name": "⟨mount⟩",
-      "hidden": true,
-      "targetId": "8f29-751f-db8c-5da5",
-      "primary": false
-     }
-    ],
-    "costs": [
-     {
-      "name": "pts",
-      "typeId": "ea90-6996-33df-993c",
-      "value": 0
-     }
-    ],
-    "profiles": [
-     {
-      "id": "af46-1533-f7c5-301c",
-      "name": "Warden (Global)",
-      "typeId": "aa48-a922-168f-d5fe",
-      "typeName": "Global",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Adv",
-        "typeId": "0b36-bfc8-41dc-6db8",
-        "$text": "3D6"
-       },
-       {
-        "name": "Mar",
-        "typeId": "11fe-c01b-c45c-fcf8",
-        "$text": "3D6"
-       },
-       {
-        "name": "Dis",
-        "typeId": "e412-d143-2a9a-61e0",
-        "$text": "7"
-       },
-       {
-        "name": "Rules",
-        "typeId": "e392-8a7b-7124-ec0d",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "7d78-22bd-d83b-3ab6",
-      "name": "Warden (Defensive)",
-      "typeId": "14a5-b185-3b44-763b",
-      "typeName": "Defensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "HP",
-        "typeId": "78b5-478f-5615-ac81",
-        "$text": "4"
-       },
-       {
-        "name": "Def",
-        "typeId": "5db0-f74c-6a2c-a250",
-        "$text": "3"
-       },
-       {
-        "name": "Res",
-        "typeId": "29f8-d428-4518-3108",
-        "$text": "5"
-       },
-       {
-        "name": "Arm",
-        "typeId": "00fe-697b-eb17-c206",
-        "$text": "0"
-       },
-       {
-        "name": "Aeg",
-        "typeId": "b65c-53d9-5645-341f",
-        "$text": ""
-       },
-       {
-        "name": "Rules",
-        "typeId": "d032-8573-dd82-d2a7",
-        "$text": ""
-       }
-      ]
-     },
-     {
-      "id": "0034-dc6d-06a5-e926",
-      "name": "Warden",
-      "typeId": "462e-145c-42af-7edc",
-      "typeName": "Offensive",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Att",
-        "typeId": "7e95-b3fb-a6d6-4cd9",
-        "$text": "1"
-       },
-       {
-        "name": "Off",
-        "typeId": "a8e8-7a43-565f-29b5",
-        "$text": "6"
-       },
-       {
-        "name": "Str",
-        "typeId": "12ea-f281-a7e1-3e1f",
-        "$text": "4"
-       },
-       {
-        "name": "AP",
-        "typeId": "5b66-2cef-4a23-a567",
-        "$text": "1"
-       },
-       {
-        "name": "Agi",
-        "typeId": "7a92-d09f-2671-cf10",
-        "$text": "6"
-       },
-       {
-        "name": "Rules",
-        "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
-       },
-       {
-        "name": "Tags",
-        "typeId": "6079-9ce5-90ed-8c32",
-        "$text": "Elf"
-       }
-      ]
-     },
-     {
-      "id": "769d-7df9-ba56-7f33",
-      "name": "Warden (Size)",
-      "typeId": "bd4b-dd44-f5fb-829b",
-      "typeName": "Size",
-      "hidden": false,
-      "characteristics": [
-       {
-        "name": "Height",
-        "typeId": "7606-12ef-d609-88b4",
-        "$text": "3"
-       },
-       {
-        "name": "Type",
-        "typeId": "9b0f-0212-9927-48e3",
-        "$text": "Elf"
-       },
-       {
-        "name": "Base",
-        "typeId": "a8c6-520e-1327-a8bc",
-        "$text": "40×40"
-       },
-       {
-        "name": "Rarity",
-        "typeId": "117e-0987-cb97-4ccc",
-        "$text": ""
-       }
-      ]
-     }
-    ],
-    "infoLinks": [
-     {
-      "id": "0ea3-7681-3f59-1b0e",
-      "name": "Hand Weapon",
-      "hidden": false,
-      "type": "profile",
-      "targetId": "cc6a-85fb-a07e-e781"
-     }
-    ],
-    "selectionEntries": [],
-    "selectionEntryGroups": [],
-    "entryLinks": [],
-    "constraints": [],
-    "modifiers": [],
-    "collective": true
-   },
-   {
     "id": "6a45-a9fe-569a-a37c",
     "name": "Tenacla and Baluruth",
     "type": "mount",
@@ -20233,7 +21540,7 @@
        {
         "name": "Rules",
         "typeId": "b4ba-0abc-3bab-171b",
-        "$text": ""
+        "$text": "The Lance of Tears"
        },
        {
         "name": "Tags",
@@ -20306,6 +21613,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "5b9e-1c3b-7d0c-19e0"
+     },
+     {
+      "id": "6dd8-55c7-d716-03e1",
+      "name": "The Lance of Tears",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "5b85-c5dc-43ea-f1e5"
      },
      {
       "id": "7a56-c876-01a0-ffbc",
@@ -20715,6 +22029,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only.",
     "collective": true
    },
    {
@@ -20881,6 +22196,25 @@
         ]
        }
       ]
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "9bf9-0bff-6648-d9a3",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -20897,6 +22231,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by models mounted on Griffon. Height 1–4 only.",
     "collective": true
    },
    {
@@ -20944,6 +22279,25 @@
       "value": true,
       "conditions": [
        {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f98e-90de-1eac-f873",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "hidden",
+      "value": true,
+      "conditions": [
+       {
         "type": "atLeast",
         "value": 1,
         "field": "selections",
@@ -20972,6 +22326,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: without Mount only. Enchantment: Metal Armour.",
     "collective": true
    },
    {
@@ -21088,6 +22443,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Mage only. Models on Elven Horse or Giant Eagle, or without Mount.",
     "collective": true
    },
    {
@@ -21151,6 +22507,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Great Weapon or Halberd.",
     "collective": true
    },
    {
@@ -21281,6 +22638,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Cannot be taken by units that count towards “Core”.",
     "collective": true
    },
    {
@@ -21344,19 +22702,19 @@
      }
     ],
     "profiles": [],
-    "infoLinks": [],
+    "infoLinks": [
+     {
+      "id": "87b0-45e4-4d79-f80e",
+      "name": "War Banner of Rymâ",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "c347-350a-9e08-462b"
+     }
+    ],
     "categoryLinks": [],
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
-    "rules": [
-     {
-      "id": "a615-c48f-5eca-5eb3",
-      "name": "War Banner of Rymâ",
-      "hidden": false,
-      "description": "A unit with one or more War Banners of Rymâ gains +1\" Cha.\n\nIn addition, Rank-and-File model parts with Elf in the unit gain Devastating Charge(+1 Str)."
-     }
-    ],
     "collective": true
    },
    {
@@ -21420,6 +22778,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Lance.",
     "collective": true
    },
    {
@@ -21483,6 +22842,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Spear.",
     "collective": true
    },
    {
@@ -21551,6 +22911,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Enchantment: Longbow.",
     "collective": true
    },
    {
@@ -21796,6 +23157,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Height 1–4 only.",
     "collective": true
    },
    {
@@ -21871,6 +23233,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Wizards only.",
     "collective": true
    },
    {
@@ -21966,6 +23329,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Wizard Master only.",
     "collective": true
    },
    {
@@ -21990,7 +23354,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models on Elven Horse or Regal Dragon, or without Mount."
      },
      {
       "id": "8726-f42b-c984-b4ff",
@@ -22026,6 +23391,47 @@
        }
       ],
       "comment": "Extraordinary"
+     },
+     {
+      "type": "set",
+      "field": "6142-e71f-9909-df9e",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6124-c8c7-a41e-339a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "685c-0a3f-2b5b-a56d",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e668-0e14-cd56-554a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -22050,6 +23456,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models on Elven Horse or Regal Dragon, or without Mount.",
     "collective": true
    },
    {
@@ -22074,7 +23481,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models on Elven Horse or Giant Eagle, or without Mount. Models without Longbow only."
      },
      {
       "id": "1532-503f-de9b-fb97",
@@ -22113,8 +23521,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "d868-bd17-2030-8afd",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -22154,8 +23562,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "d868-bd17-2030-8afd",
+      "value": 0,
       "conditions": [
        {
         "type": "atLeast",
@@ -22527,11 +23935,13 @@
       ],
       "entryLinks": [],
       "selectionEntryGroups": [],
+      "defaultSelectionEntryId": "2afe-e671-ee27-d363",
       "sortIndex": 1,
       "collective": true
      }
     ],
     "entryLinks": [],
+    "comment": "restriction: Models on Elven Horse or Giant Eagle, or without Mount. Models without Longbow only.",
     "collective": true
    },
    {
@@ -22556,7 +23966,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models with Halberd only. without Mount only."
      },
      {
       "id": "4ed6-9496-2593-08f9",
@@ -22595,8 +24006,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "2b20-9639-b951-62b5",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -22614,8 +24025,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "2b20-9639-b951-62b5",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -22646,6 +24057,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Halberd only. without Mount only.",
     "collective": true
    },
    {
@@ -22670,7 +24082,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models on Giant Eagle, Griffon, or Sky Sloop, or without Mount."
      },
      {
       "id": "2482-1d16-36fd-659b",
@@ -22709,8 +24122,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "db0c-b856-a13c-b94b",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -22774,6 +24187,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models on Giant Eagle, Griffon, or Sky Sloop, or without Mount.",
     "collective": true
    },
    {
@@ -22798,7 +24212,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models with Great Weapon only. without Mount only."
      },
      {
       "id": "43f1-2ef6-891d-f1a3",
@@ -22837,8 +24252,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "69e8-b1de-b273-1da2",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -22856,8 +24271,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "69e8-b1de-b273-1da2",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -22888,6 +24303,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Great Weapon only. without Mount only.",
     "collective": true
    },
    {
@@ -22912,7 +24328,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models on Lion Chariot, or without Mount. The model must take Great Weapon and cannot take Shield."
      },
      {
       "id": "098d-961f-3e20-d254",
@@ -22951,8 +24368,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "ffbe-3f92-9853-27be",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -22978,6 +24395,25 @@
        }
       ],
       "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "ffbe-3f92-9853-27be",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "f7c7-7f41-2108-167b",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "profiles": [],
@@ -22994,6 +24430,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models on Lion Chariot, or without Mount. The model must take Great Weapon and cannot take Shield.",
     "collective": true
    },
    {
@@ -23018,7 +24455,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models on Ancient Dragon, Elven Horse, or Regal Dragon only. Models with Lance only."
      },
      {
       "id": "6c37-70f7-2da0-bb82",
@@ -23057,8 +24495,38 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "74f3-2495-5963-a72b",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "685c-0a3f-2b5b-a56d",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       },
+       {
+        "type": "atMost",
+        "value": 0,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e668-0e14-cd56-554a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "74f3-2495-5963-a72b",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -23066,6 +24534,25 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "4251-a9ca-1be7-86a0",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "add",
+      "field": "category",
+      "value": "7a7e-58ce-5c56-8887",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "e668-0e14-cd56-554a",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -23089,6 +24576,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models on Ancient Dragon, Elven Horse, or Regal Dragon only. Models with Lance only.",
     "collective": true
    },
    {
@@ -23118,7 +24606,8 @@
       "includeChildSelections": false,
       "includeChildForces": false,
       "shared": true,
-      "percentValue": false
+      "percentValue": false,
+      "message": "{self}: Models with Longbow only. without Mount only."
      },
      {
       "id": "95bb-6007-874a-6f22",
@@ -23157,8 +24646,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "0479-3ffd-ff28-d6e4",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -23176,8 +24665,8 @@
      },
      {
       "type": "set",
-      "field": "hidden",
-      "value": true,
+      "field": "0479-3ffd-ff28-d6e4",
+      "value": 0,
       "conditions": [
        {
         "type": "atMost",
@@ -23185,6 +24674,25 @@
         "field": "selections",
         "scope": "root-entry-self",
         "childId": "6124-c8c7-a41e-339a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": false,
+        "percentValue": false
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "type": "set",
+      "field": "523a-18cb-c3c4-6b72",
+      "value": 0,
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "root-entry-self",
+        "childId": "6516-5db2-1139-52cf",
         "shared": true,
         "includeChildSelections": true,
         "includeChildForces": false,
@@ -23208,6 +24716,7 @@
     "selectionEntries": [],
     "selectionEntryGroups": [],
     "entryLinks": [],
+    "comment": "restriction: Models with Longbow only. without Mount only.",
     "collective": true
    }
   ],
@@ -23306,6 +24815,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23394,6 +24904,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23606,6 +25117,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23754,6 +25266,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -23902,6 +25415,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24050,6 +25564,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24218,6 +25733,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24386,6 +25902,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24554,6 +26071,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24722,6 +26240,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -24950,6 +26469,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -25118,6 +26638,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -25214,6 +26735,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -25394,6 +26916,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    },
    {
@@ -25430,6 +26953,7 @@
       "collective": true
      }
     ],
+    "defaultSelectionEntryId": "none",
     "collective": true
    }
   ],
