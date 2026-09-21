@@ -970,6 +970,11 @@
         "$text": "10"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Disciplined, Strider (Forest)"
@@ -2414,6 +2419,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "9"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -4157,6 +4167,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "9"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -5963,6 +5978,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Solitary, Forest Dweller, Fearless, Strider (Forest), Stubborn, Terror, Tree Singing"
@@ -7140,6 +7160,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Solitary, Forest Dweller, Fearless, Strider (Forest), Stubborn, Terror, Tree Singing"
@@ -7676,6 +7701,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "9"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -8887,6 +8917,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Exclusive (Sylvan Spirit), Fearless, Forest Dweller, Light Troops, Strider (Forest), Tree Singing"
@@ -9460,6 +9495,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Light Troops, The Unicorn’s Path, Strider, Solitary, Vanguard"
@@ -9862,6 +9902,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "9"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -10476,6 +10521,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Strider (Forest)"
@@ -10994,6 +11044,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Strider (Forest)"
@@ -11435,6 +11490,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Strider (Forest), Swiftstride"
@@ -11815,6 +11875,27 @@
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Global",
+            "position": "1",
+            "type": "replace",
+            "value": "",
+            "arg": ", Scoring",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "e392-8a7b-7124-ec0d",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "2",
             "type": "replace",
@@ -11827,12 +11908,54 @@
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Global",
+            "position": "2",
+            "type": "replace",
+            "value": "",
+            "arg": "Scoring, ",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "e392-8a7b-7124-ec0d",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "3",
             "type": "replace",
             "value": "",
             "arg": "Scoring",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "e392-8a7b-7124-ec0d",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Global",
+            "position": "3",
+            "type": "replace",
+            "value": "",
+            "arg": "Scoring",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
             "conditionGroups": []
            },
            {
@@ -11851,6 +11974,27 @@
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Offensive",
+            "position": "1",
+            "type": "replace",
+            "value": "",
+            "arg": ", Scoring",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "b4ba-0abc-3bab-171b",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "2",
             "type": "replace",
@@ -11863,12 +12007,54 @@
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Offensive",
+            "position": "2",
+            "type": "replace",
+            "value": "",
+            "arg": "Scoring, ",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "b4ba-0abc-3bab-171b",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "3",
             "type": "replace",
             "value": "",
             "arg": "Scoring",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "b4ba-0abc-3bab-171b",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Offensive",
+            "position": "3",
+            "type": "replace",
+            "value": "",
+            "arg": "Scoring",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
             "conditionGroups": []
            },
            {
@@ -11887,12 +12073,54 @@
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Defensive",
+            "position": "1",
+            "type": "replace",
+            "value": "",
+            "arg": ", Scoring",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "d032-8573-dd82-d2a7",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "2",
             "type": "replace",
             "value": "",
             "arg": "Scoring, ",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "d032-8573-dd82-d2a7",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Defensive",
+            "position": "2",
+            "type": "replace",
+            "value": "",
+            "arg": "Scoring, ",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
             "conditionGroups": []
            },
            {
@@ -11909,6 +12137,27 @@
            },
            {
             "parentKey": "modifiers",
+            "field": "d032-8573-dd82-d2a7",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Defensive",
+            "position": "3",
+            "type": "replace",
+            "value": "",
+            "arg": "Scoring",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
             "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
@@ -11917,6 +12166,27 @@
             "value": "",
             "arg": ", Devastating Charge",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "e392-8a7b-7124-ec0d",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Global",
+            "position": "1",
+            "type": "replace",
+            "value": "",
+            "arg": ", Devastating Charge",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
             "conditionGroups": []
            },
            {
@@ -11935,6 +12205,27 @@
             "parentKey": "modifiers",
             "field": "e392-8a7b-7124-ec0d",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Global",
+            "position": "2",
+            "type": "replace",
+            "value": "",
+            "arg": "Devastating Charge, ",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "e392-8a7b-7124-ec0d",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Global",
             "position": "3",
             "type": "replace",
@@ -11945,6 +12236,27 @@
            },
            {
             "parentKey": "modifiers",
+            "field": "e392-8a7b-7124-ec0d",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Global",
+            "position": "3",
+            "type": "replace",
+            "value": "",
+            "arg": "Devastating Charge",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
             "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
@@ -11953,6 +12265,27 @@
             "value": "",
             "arg": ", Devastating Charge",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "b4ba-0abc-3bab-171b",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Offensive",
+            "position": "1",
+            "type": "replace",
+            "value": "",
+            "arg": ", Devastating Charge",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
             "conditionGroups": []
            },
            {
@@ -11971,12 +12304,54 @@
             "parentKey": "modifiers",
             "field": "b4ba-0abc-3bab-171b",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Offensive",
+            "position": "2",
+            "type": "replace",
+            "value": "",
+            "arg": "Devastating Charge, ",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "b4ba-0abc-3bab-171b",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Offensive",
             "position": "3",
             "type": "replace",
             "value": "",
             "arg": "Devastating Charge",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "b4ba-0abc-3bab-171b",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Offensive",
+            "position": "3",
+            "type": "replace",
+            "value": "",
+            "arg": "Devastating Charge",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
             "conditionGroups": []
            },
            {
@@ -11995,6 +12370,27 @@
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Defensive",
+            "position": "1",
+            "type": "replace",
+            "value": "",
+            "arg": ", Devastating Charge",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "d032-8573-dd82-d2a7",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "2",
             "type": "replace",
@@ -12007,12 +12403,54 @@
             "parentKey": "modifiers",
             "field": "d032-8573-dd82-d2a7",
             "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Defensive",
+            "position": "2",
+            "type": "replace",
+            "value": "",
+            "arg": "Devastating Charge, ",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "d032-8573-dd82-d2a7",
+            "scope": "non-upgrade-entry-self",
             "affects": "self.profiles.Defensive",
             "position": "3",
             "type": "replace",
             "value": "",
             "arg": "Devastating Charge",
             "conditions": [],
+            "conditionGroups": []
+           },
+           {
+            "parentKey": "modifiers",
+            "field": "d032-8573-dd82-d2a7",
+            "scope": "non-upgrade-entry-self",
+            "affects": "entries.recursive.profiles.Defensive",
+            "position": "3",
+            "type": "replace",
+            "value": "",
+            "arg": "Devastating Charge",
+            "conditions": [
+             {
+              "type": "instanceOf",
+              "value": 1,
+              "field": "selections",
+              "scope": "non-upgrade-entry-self",
+              "childId": "unit",
+              "shared": true
+             }
+            ],
             "conditionGroups": []
            }
           ],
@@ -12466,6 +12904,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -12976,6 +13419,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Disciplined, Strider (Forest)"
@@ -13474,6 +13922,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Bodyguard (Thicket Shepherd), Fearless, Forest Dweller, Strider (Forest), Exclusive (Sylvan Spirit)"
@@ -13911,6 +14364,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Fly, Light Troops, Strider (Forest), Swiftstride, Unruly"
@@ -14232,6 +14690,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "9"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -14668,6 +15131,11 @@
         "$text": "8"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Solitary, Forest Dweller, Fearless, Strider (Forest), Stubborn, Terror, Tree Singing"
@@ -15038,6 +15506,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -15826,6 +16299,11 @@
           "$text": "9"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Disciplined, Feigned Flight, Hit and Run, Fly, Light Troops, Strider (Forest), Swiftstride, Vanguard"
@@ -16587,6 +17065,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -17406,6 +17889,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Light Troops, Skirmisher, Strider (Forest)"
@@ -17820,6 +18308,37 @@
       "conditionGroups": []
      },
      {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "6389-3dda-dfe8-d216",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       },
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "8ae7-fb8a-bebd-4980",
@@ -17967,6 +18486,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -18561,6 +19085,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Solitary, Fly, Meeting of Minds, Strider (Forest), Swiftstride, Terror"
@@ -18860,6 +19389,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Fly, Light Troops, Swiftstride"
@@ -19124,6 +19658,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Light Troops, Swiftstride"
@@ -19372,6 +19911,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -19629,6 +20173,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -24301,6 +24850,26 @@
       "conditionGroups": [],
       "type": "increment",
       "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
      }
     ],
     "attributes": [
@@ -24340,11 +24909,51 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "decrement",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
       "field": "5b66-2cef-4a23-a567",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "decrement",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "decrement",
       "value": 1
@@ -24595,6 +25204,27 @@
       "comment": "<conditional>",
       "type": "increment",
       "value": 3
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5db0-f74c-6a2c-a250",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional>",
+      "type": "increment",
+      "value": 3
      }
     ],
     "attributes": [
@@ -24758,11 +25388,51 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
       "field": "5b66-2cef-4a23-a567",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "increment",
       "value": 1
@@ -24951,6 +25621,26 @@
       "conditionGroups": [],
       "type": "increment",
       "value": 3
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 3
      }
     ],
     "attributes": [
@@ -25118,11 +25808,51 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "11fe-c01b-c45c-fcf8",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 2
+     },
+     {
+      "parentKey": "modifiers",
       "field": "0b36-bfc8-41dc-6db8",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Global",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 2
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "0b36-bfc8-41dc-6db8",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "increment",
       "value": 2
@@ -25163,6 +25893,26 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "78b5-478f-5615-ac81",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
       "field": "00fe-697b-eb17-c206",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
@@ -25176,9 +25926,49 @@
       "parentKey": "modifiers",
       "field": "00fe-697b-eb17-c206",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "ceil",
+      "value": 4
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "00fe-697b-eb17-c206",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "floor",
+      "value": 4
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "00fe-697b-eb17-c206",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "floor",
       "value": 4
@@ -25261,7 +26051,58 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
       "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
@@ -25274,9 +26115,18 @@
       "parentKey": "modifiers",
       "field": "5b66-2cef-4a23-a567",
       "scope": "non-upgrade-entry-self",
-      "affects": "self.profiles.Offensive",
+      "affects": "entries.recursive.profiles.Offensive",
       "position": "1",
-      "conditions": [],
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "increment",
       "value": 1
@@ -25338,7 +26188,58 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
       "field": "a8e8-7a43-565f-29b5",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "a8e8-7a43-565f-29b5",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
@@ -25351,9 +26252,18 @@
       "parentKey": "modifiers",
       "field": "7e95-b3fb-a6d6-4cd9",
       "scope": "non-upgrade-entry-self",
-      "affects": "self.profiles.Offensive",
+      "affects": "entries.recursive.profiles.Offensive",
       "position": "1",
-      "conditions": [],
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "increment",
       "value": 1

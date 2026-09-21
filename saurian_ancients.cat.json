@@ -1457,6 +1457,11 @@
         "$text": "5"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Communal Bond, Wizard Master"
@@ -2866,6 +2871,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "8"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -4831,6 +4841,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "7"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -7453,6 +7468,11 @@
         "$text": "8"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Communal Bond"
@@ -9767,6 +9787,11 @@
         "$text": "8"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Communal Bond, Fearless, Light Troops, Solitary, Strider, General, Eternal Mastery, Utterly Ruthless, Like the Tyrants of Old, Greater Guiding Mastery, Wizard Master"
@@ -10396,6 +10421,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "8"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -11404,6 +11434,11 @@
           "$text": "7"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Communal Bond, Strider (Water Terrain)"
@@ -12107,6 +12142,11 @@
           "$text": "5"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Communal Bond, Light Troops, Strider (Water Terrain)"
@@ -12774,6 +12814,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "5"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -13542,6 +13587,11 @@
           "$text": "7"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Communal Bond, Strider (Water Terrain)"
@@ -14180,6 +14230,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -14904,6 +14959,11 @@
           "$text": "6"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Communal Bond, Strider (Forest), Pack Hunter, Unruly, Swiftstride"
@@ -15396,6 +15456,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -15947,6 +16012,11 @@
           "$text": "6"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Communal Bond, Frenzy, Fearless, Light Troops, Swiftstride, Fly, Unruly"
@@ -16468,6 +16538,37 @@
       "conditionGroups": []
      },
      {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "42aa-a499-2438-df04",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       },
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "8425-1339-fedd-7297",
@@ -16572,6 +16673,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "4"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -16951,6 +17057,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -17406,6 +17517,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "8"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -18262,6 +18378,11 @@
           "$text": "6"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Fearless, Communal Bond, Stubborn, Swiftstride"
@@ -18908,6 +19029,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "6"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -19896,6 +20022,37 @@
       "conditionGroups": []
      },
      {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Extraordinary",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 2,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "f5e5-658f-d5cc-7ce0",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       },
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "8425-1339-fedd-7297",
@@ -20019,6 +20176,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "6"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -20720,6 +20882,11 @@
           "$text": "6"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Communal Bond, Light Troops, Swiftstride, Unruly"
@@ -21156,6 +21323,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "8"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -21802,6 +21974,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "6"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -22620,6 +22797,11 @@
         "$text": "6"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Communal Bond, Solitary, Swiftstride, Terror"
@@ -23038,6 +23220,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "6"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -23476,6 +23663,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Frenzy, Fearless, Swiftstride, Terror, Solitary, Unruly"
@@ -23839,6 +24031,11 @@
         "$text": "8"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Light Troops"
@@ -24106,6 +24303,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -24391,6 +24593,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -24737,6 +24944,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Pack Hunter, Swiftstride, Strider (Forest)"
@@ -24992,6 +25204,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -30789,6 +31006,26 @@
       "position": "1",
       "conditions": [],
       "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "a8c6-520e-1327-a8bc",
+      "value": "40x40",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "attributes": [
@@ -31569,6 +31806,26 @@
      },
      {
       "parentKey": "modifiers",
+      "type": "set",
+      "field": "a8c6-520e-1327-a8bc",
+      "value": "100x150",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
       "field": "78b5-478f-5615-ac81",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
@@ -31576,7 +31833,27 @@
       "conditions": [],
       "conditionGroups": [],
       "type": "set",
-      "value": 7
+      "value": 8
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "78b5-478f-5615-ac81",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "set",
+      "value": 8
      }
     ],
     "attributes": [
@@ -31629,6 +31906,26 @@
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "set",
+      "value": 6
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "set",
       "value": 6
@@ -31878,6 +32175,26 @@
       "position": "1",
       "conditions": [],
       "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "a8c6-520e-1327-a8bc",
+      "value": "60x100",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
      }
     ],
     "attributes": [
@@ -31909,6 +32226,26 @@
       "affects": "self.profiles.Defensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "78b5-478f-5615-ac81",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "increment",
       "value": 1

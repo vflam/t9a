@@ -2274,6 +2274,11 @@
         "$text": "10"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Commanding Presence (6”, Insignificant), Disciplined, Keys to the Citadel"
@@ -3799,6 +3804,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Commanding Presence (6”, Insignificant)"
@@ -4619,12 +4629,54 @@
           "parentKey": "modifiers",
           "field": "e392-8a7b-7124-ec0d",
           "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Global",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Infernal Armour",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry-self",
           "affects": "self.profiles.Global",
           "position": "2",
           "type": "replace",
           "value": "",
           "arg": "Infernal Armour, ",
           "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Global",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Infernal Armour, ",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
           "conditionGroups": []
          },
          {
@@ -4641,6 +4693,27 @@
          },
          {
           "parentKey": "modifiers",
+          "field": "e392-8a7b-7124-ec0d",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Global",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Infernal Armour",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
           "field": "b4ba-0abc-3bab-171b",
           "scope": "non-upgrade-entry-self",
           "affects": "self.profiles.Offensive",
@@ -4649,6 +4722,27 @@
           "value": "",
           "arg": ", Infernal Armour",
           "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Offensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Infernal Armour",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
           "conditionGroups": []
          },
          {
@@ -4667,12 +4761,54 @@
           "parentKey": "modifiers",
           "field": "b4ba-0abc-3bab-171b",
           "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Offensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Infernal Armour, ",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry-self",
           "affects": "self.profiles.Offensive",
           "position": "3",
           "type": "replace",
           "value": "",
           "arg": "Infernal Armour",
           "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "b4ba-0abc-3bab-171b",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Offensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Infernal Armour",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
           "conditionGroups": []
          },
          {
@@ -4691,6 +4827,27 @@
           "parentKey": "modifiers",
           "field": "d032-8573-dd82-d2a7",
           "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Defensive",
+          "position": "1",
+          "type": "replace",
+          "value": "",
+          "arg": ", Infernal Armour",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry-self",
           "affects": "self.profiles.Defensive",
           "position": "2",
           "type": "replace",
@@ -4703,12 +4860,54 @@
           "parentKey": "modifiers",
           "field": "d032-8573-dd82-d2a7",
           "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Defensive",
+          "position": "2",
+          "type": "replace",
+          "value": "",
+          "arg": "Infernal Armour, ",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry-self",
           "affects": "self.profiles.Defensive",
           "position": "3",
           "type": "replace",
           "value": "",
           "arg": "Infernal Armour",
           "conditions": [],
+          "conditionGroups": []
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "d032-8573-dd82-d2a7",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Defensive",
+          "position": "3",
+          "type": "replace",
+          "value": "",
+          "arg": "Infernal Armour",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
           "conditionGroups": []
          }
         ],
@@ -6742,6 +6941,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Commanding Presence (6”, Insignificant)"
@@ -8483,6 +8687,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Commanding Presence (6”, Insignificant), Swiftstride"
@@ -9468,6 +9677,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "7"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -10575,6 +10789,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Commanding Presence (6”, Insignificant), Fly, Light Troops, Riddle of the Lamassu, Solitary, Wizard Conclave (3), Swiftstride"
@@ -11393,6 +11612,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Fearless, Full Steam Ahead!, The Riddle of Peace, Solitary, Stubborn, Terror, Unstable, Wizard Master"
@@ -12082,6 +12306,11 @@
         "$text": "10"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Fly, Light Troops, General, Solitary, Swiftstride, Helm of Kadim Command"
@@ -12698,6 +12927,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "9"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -13343,6 +13577,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "9"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -14008,6 +14247,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "7"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -14695,6 +14939,11 @@
           "$text": "4"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Chained Together, Insignificant, Solitary, Unruly, Unstable"
@@ -15197,6 +15446,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "9"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -15821,6 +16075,11 @@
           "$text": "9"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Commanding Presence (6”, Insignificant), First Strike (Stubborn), Ghost Step, Theocratic Litigators"
@@ -16407,6 +16666,11 @@
           "$text": "6"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Exclusive (Supernal), Fearless, Ghost Step, Insignificant, Supernal, Swiftstride"
@@ -16794,6 +17058,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "9"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -17386,6 +17655,37 @@
       "conditionGroups": []
      },
      {
+      "parentKey": "modifiers",
+      "type": "set",
+      "field": "117e-0987-cb97-4ccc",
+      "value": "Rare",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "atLeast",
+        "value": 1,
+        "field": "selections",
+        "scope": "roster",
+        "childId": "693e-1197-f215-116a",
+        "shared": true,
+        "includeChildSelections": true,
+        "includeChildForces": true,
+        "percentValue": false
+       },
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
       "type": "remove",
       "field": "category",
       "value": "b2ef-7b34-2347-daab",
@@ -17497,6 +17797,11 @@
           "name": "Dis",
           "typeId": "e412-d143-2a9a-61e0",
           "$text": "9"
+         },
+         {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
          },
          {
           "name": "Rules",
@@ -18291,6 +18596,11 @@
           "$text": "9"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Bodyguard (Taurukh Commissioner), Commanding Presence (6”, Insignificant), First Strike (Stubborn), Swiftstride"
@@ -18981,6 +19291,11 @@
           "$text": "8"
          },
          {
+          "name": "Rsr",
+          "typeId": "01ba-a347-5794-7730",
+          "$text": ""
+         },
+         {
           "name": "Rules",
           "typeId": "e392-8a7b-7124-ec0d",
           "$text": "Feigned Flight, Hit and Run, Insignificant, Light Troops, Swiftstride, Vanguard"
@@ -19553,6 +19868,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Attached, Terror, Commanding Presence (12”, Insignificant), Firing Platform, Strider (Wall), War Platform"
@@ -20109,6 +20429,11 @@
         "$text": "7"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Emplacement, Insignificant, Solitary"
@@ -20397,6 +20722,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "9"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -21019,6 +21349,11 @@
         "$text": "9"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Commanding Presence (6”, Insignificant), Emplacement, Solitary"
@@ -21630,6 +21965,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "9"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -22300,6 +22640,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "7"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -23023,6 +23368,11 @@
         "$text": "8"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Giant See, Giant Do, Light Troops, Solitary, Terror"
@@ -23571,6 +23921,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Fearless, Fly, Light Troops, Solitary, Supernal, Swiftstride"
@@ -23910,6 +24265,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -24272,6 +24632,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -24895,6 +25260,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Light Troops, Solitary, Swiftstride"
@@ -25238,6 +25608,11 @@
         "$text": "C"
        },
        {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
+       },
+       {
         "name": "Rules",
         "typeId": "e392-8a7b-7124-ec0d",
         "$text": "Commanding Presence (12”, Insignificant), Disciplined, Vassal Governor"
@@ -25493,6 +25868,11 @@
         "name": "Dis",
         "typeId": "e412-d143-2a9a-61e0",
         "$text": "C"
+       },
+       {
+        "name": "Rsr",
+        "typeId": "01ba-a347-5794-7730",
+        "$text": ""
        },
        {
         "name": "Rules",
@@ -26418,25 +26798,6 @@
         "value": 1,
         "field": "selections",
         "scope": "root-entry-self",
-        "childId": "db21-6ca1-547b-551a",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ],
-      "conditionGroups": []
-     },
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry-self",
         "childId": "06e4-86c1-d5d4-7a26",
         "shared": true,
         "includeChildSelections": true,
@@ -26653,12 +27014,54 @@
       "parentKey": "modifiers",
       "field": "e392-8a7b-7124-ec0d",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "type": "replace",
+      "value": "",
+      "arg": ", Two-Handed",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "e392-8a7b-7124-ec0d",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Global",
       "position": "2",
       "type": "replace",
       "value": "",
       "arg": "Two-Handed, ",
       "conditions": [],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "e392-8a7b-7124-ec0d",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "2",
+      "type": "replace",
+      "value": "",
+      "arg": "Two-Handed, ",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": []
      },
      {
@@ -26675,6 +27078,27 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "e392-8a7b-7124-ec0d",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "3",
+      "type": "replace",
+      "value": "",
+      "arg": "Two-Handed",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
       "field": "b4ba-0abc-3bab-171b",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
@@ -26683,6 +27107,27 @@
       "value": "",
       "arg": ", Two-Handed",
       "conditions": [],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "b4ba-0abc-3bab-171b",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "type": "replace",
+      "value": "",
+      "arg": ", Two-Handed",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": []
      },
      {
@@ -26701,12 +27146,54 @@
       "parentKey": "modifiers",
       "field": "b4ba-0abc-3bab-171b",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "2",
+      "type": "replace",
+      "value": "",
+      "arg": "Two-Handed, ",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "b4ba-0abc-3bab-171b",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "3",
       "type": "replace",
       "value": "",
       "arg": "Two-Handed",
       "conditions": [],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "b4ba-0abc-3bab-171b",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "3",
+      "type": "replace",
+      "value": "",
+      "arg": "Two-Handed",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": []
      },
      {
@@ -26725,6 +27212,27 @@
       "parentKey": "modifiers",
       "field": "d032-8573-dd82-d2a7",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "type": "replace",
+      "value": "",
+      "arg": ", Two-Handed",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "d032-8573-dd82-d2a7",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "2",
       "type": "replace",
@@ -26737,12 +27245,54 @@
       "parentKey": "modifiers",
       "field": "d032-8573-dd82-d2a7",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "2",
+      "type": "replace",
+      "value": "",
+      "arg": "Two-Handed, ",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "d032-8573-dd82-d2a7",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Defensive",
       "position": "3",
       "type": "replace",
       "value": "",
       "arg": "Two-Handed",
       "conditions": [],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "d032-8573-dd82-d2a7",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "3",
+      "type": "replace",
+      "value": "",
+      "arg": "Two-Handed",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": []
      }
     ],
@@ -29533,6 +30083,26 @@
       "conditionGroups": [],
       "type": "increment",
       "value": 3
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "00fe-697b-eb17-c206",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 3
      }
     ],
     "attributes": [
@@ -29744,9 +30314,49 @@
       "parentKey": "modifiers",
       "field": "5b66-2cef-4a23-a567",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "ceil",
+      "value": 10
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "floor",
+      "value": 10
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "floor",
       "value": 10
@@ -29758,6 +30368,26 @@
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "set",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "set",
       "value": 1
@@ -29928,11 +30558,51 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
       "field": "5b66-2cef-4a23-a567",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "increment",
       "value": 1
@@ -29995,11 +30665,53 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "0b36-bfc8-41dc-6db8",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional>",
+      "type": "set",
+      "value": 4
+     },
+     {
+      "parentKey": "modifiers",
       "field": "11fe-c01b-c45c-fcf8",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Global",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional>",
+      "type": "set",
+      "value": 12
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "11fe-c01b-c45c-fcf8",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "comment": "<conditional>",
       "type": "set",
@@ -30185,6 +30897,26 @@
       "conditionGroups": [],
       "type": "increment",
       "value": 2
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7a92-d09f-2671-cf10",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 2
      }
     ],
     "attributes": [
@@ -30222,11 +30954,51 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
       "field": "5b66-2cef-4a23-a567",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "increment",
       "value": 1
@@ -30443,9 +31215,49 @@
       "parentKey": "modifiers",
       "field": "12ea-f281-a7e1-3e1f",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "ceil",
+      "value": 6
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "floor",
+      "value": 6
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "floor",
       "value": 6
@@ -30507,10 +31319,51 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "00fe-697b-eb17-c206",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Defensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "decrement",
+      "value": 3
+     },
+     {
+      "parentKey": "modifiers",
       "field": "6079-9ce5-90ed-8c32",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "replace",
+      "position": "1",
+      "value": "",
+      "arg": ", Metal Armour"
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "6079-9ce5-90ed-8c32",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "replace",
       "position": "1",
@@ -30533,8 +31386,50 @@
       "parentKey": "modifiers",
       "field": "6079-9ce5-90ed-8c32",
       "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "replace",
+      "position": "2",
+      "value": "",
+      "arg": "Metal Armour, "
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "6079-9ce5-90ed-8c32",
+      "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Offensive",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "replace",
+      "position": "3",
+      "value": "",
+      "arg": "Metal Armour"
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "6079-9ce5-90ed-8c32",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "replace",
       "position": "3",
@@ -30770,6 +31665,26 @@
      },
      {
       "parentKey": "modifiers",
+      "type": "set",
+      "field": "a8c6-520e-1327-a8bc",
+      "value": "25×50",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Size",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": []
+     },
+     {
+      "parentKey": "modifiers",
       "field": "0b36-bfc8-41dc-6db8",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Global",
@@ -30781,11 +31696,51 @@
      },
      {
       "parentKey": "modifiers",
+      "field": "0b36-bfc8-41dc-6db8",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "set",
+      "value": 7
+     },
+     {
+      "parentKey": "modifiers",
       "field": "11fe-c01b-c45c-fcf8",
       "scope": "non-upgrade-entry-self",
       "affects": "self.profiles.Global",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "set",
+      "value": 14
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "11fe-c01b-c45c-fcf8",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "set",
       "value": 14
@@ -31038,6 +31993,26 @@
       "affects": "self.profiles.Global",
       "position": "1",
       "conditions": [],
+      "conditionGroups": [],
+      "type": "set",
+      "value": 14
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "11fe-c01b-c45c-fcf8",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Global",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
       "conditionGroups": [],
       "type": "set",
       "value": 14
