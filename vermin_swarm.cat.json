@@ -11884,6 +11884,13 @@
         "targetId": "910a-e5a9-c228-e1fc"
        },
        {
+        "id": "c6e5-9252-e5b3-3635",
+        "name": "Exclusive (Cult of Errahman)",
+        "hidden": false,
+        "type": "profile",
+        "targetId": "a005-b547-c086-fbb3"
+       },
+       {
         "id": "10f6-95fd-b8ed-4a65",
         "name": "Hand Weapon",
         "hidden": false,
@@ -17704,7 +17711,16 @@
           "name": "Skorchit Ordnance",
           "hidden": false,
           "type": "profile",
-          "targetId": "3078-9e91-0463-16be"
+          "targetId": "3078-9e91-0463-16be",
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "ac5e-bed6-2a99-99d3",
+            "value": "5+",
+            "conditions": [],
+            "conditionGroups": []
+           }
+          ]
          }
         ],
         "categoryLinks": [],
@@ -17747,7 +17763,16 @@
           "name": "Rakachit Mauss Rifle",
           "hidden": false,
           "type": "profile",
-          "targetId": "2338-cece-2ff2-9618"
+          "targetId": "2338-cece-2ff2-9618",
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "ac5e-bed6-2a99-99d3",
+            "value": "5+",
+            "conditions": [],
+            "conditionGroups": []
+           }
+          ]
          }
         ],
         "categoryLinks": [],
@@ -18985,6 +19010,13 @@
       "hidden": false,
       "type": "profile",
       "targetId": "a9bd-bc07-942c-44c3"
+     },
+     {
+      "id": "b64c-f502-259b-6fc1",
+      "name": "Ambush (Terrain Feature with a friendly Tunnel Marker)",
+      "hidden": false,
+      "type": "profile",
+      "targetId": "3bc5-40b3-2dc8-4226"
      },
      {
       "id": "3cd5-a1b0-bb38-8f36",
@@ -24093,7 +24125,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Area Attack (3x3), Artillery, Maniacal Enthusiasm (toHitRoll), Quick to Fire, Toxic Attacks"
+      "$text": "Area Attack (3x3), Artillery, Maniacal Enthusiasm (To-Hit Roll), Quick to Fire, Toxic Attacks<br>Only one model per unit may use a Canister Launcher in any one Shooting Phase. <br>Increase the Aim of the Canister Launcher by 1 for each other model in the unit armed with a Canister Launcher."
      }
     ],
     "attributes": [
@@ -24233,41 +24265,91 @@
    {
     "id": "0d80-b72b-9369-e31f",
     "name": "Darkstone Generator",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": ""
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "Auto"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "12\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "D3+1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "D6+1"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "3"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "March and Shoot, Lightning Attacks, Maniacal Enthusiasm (To-wound roll), Unmodifiable, Automatic Hits"
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
+      "typeId": "73df-ea60-2ff9-4990",
+      "$text": "offensive"
      }
     ]
    },
    {
     "id": "33cc-7a5a-ce42-225a",
     "name": "Deepfire Grenades",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "When shooting at an enemy unit Engaged in Combat <i>(using the <b>Callous</b> rule)</i>, hits are distributed onto a randomly chosen friendly unit Engaged with the original target on a roll of 5+ instead of 4+."
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "5+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "8\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "2"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "6"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "2"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Accurate, Flaming Attacks, Quick to Fire<br>When shooting at an enemy unit Engaged in Combat <i>(using the <b>Callous</b> rule)</i>, hits are distributed onto a randomly chosen friendly unit Engaged with the original target on a roll of 5+ instead of 4+."
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
+      "typeId": "73df-ea60-2ff9-4990",
       "$text": "offensive"
      }
     ]
@@ -24307,7 +24389,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Accurate, Area Attack (3x5), Artillery, Maniacal Enthusiasm (toHitRoll), Quick to Fire, Flaming Attacks"
+      "$text": "Accurate, Area Attack (3x5), Artillery, Maniacal Enthusiasm (To-Hit Roll), Quick to Fire, Flaming Attacks<br>The model gains <b>Weakness (Flaming Attacks)</b>. <br>Only one model per unit may use a Deepfire Thrower in any one Shooting Phase. <br>Increase the Aim of the Deepfire Thrower by 1 for each other model in the unit armed with a Deepfire Thrower."
      }
     ],
     "attributes": [
@@ -24744,7 +24826,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Accurate, Unwieldy (1), Maniacal Enthusiasm (toHitRoll)"
+      "$text": "Accurate, Unwieldy (1), Maniacal Enthusiasm (To-Hit Roll)<br>Shots 1, Range 36\", Str 5, AP 3, <b>Accurate</b>, <b>Move or Fire</b>, and <b>Slow Reload</b>. If a ‘6’ is rolled to hit, the user suffers a hit with Strength 2 and Armour Penetration 0. No model can ever gain Weapon Proficiency for Jezails after being recruited, except through the <b>Jezail Sniper</b> Skill."
      }
     ],
     "attributes": [
@@ -25045,20 +25127,45 @@
    {
     "id": "2338-cece-2ff2-9618",
     "name": "Rakachit Mauss Rifle",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": ""
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "5+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "48\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "5"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "2"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Artillery, Lightning Attacks, Area Attack (1×3), Direct Hit (Str 10, AP 4, Multiple Wounds (D3+1))"
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
+      "typeId": "73df-ea60-2ff9-4990",
       "$text": "offensive"
      }
     ]
@@ -25140,7 +25247,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Maniacal Enthusiasm (toHitRoll), Quick to Fire"
+      "$text": "Maniacal Enthusiasm (To-Hit Roll), Quick to Fire<br>Range 18\", Shots 1, Str 4, AP 2, <b>Slow Reload</b>.<br> After choosing the target, roll a D6 and choose up to that many targets in total, or allocate up to that many attacks among the targets. All targets must be within 2\" of another target of the weapon and within range of the weapon. If a natural ‘6’ is rolled, the shooter is also automatically hit by the weapon. Roll to hit for all other targets following the normal rules. The weapon does <b>not</b> suffer the −1 to-hit modifier from firing multiple shots. <br> No model can ever gain Weapon Proficiency for Rotary Guns after being recruited."
      }
     ],
     "attributes": [
@@ -25296,41 +25403,91 @@
    {
     "id": "3078-9e91-0463-16be",
     "name": "Skorchit Ordnance",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": ""
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "5+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "48\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "4"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "1"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Artillery, Flaming Attacks, Area Attack (3×3)"
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
+      "typeId": "73df-ea60-2ff9-4990",
+      "$text": "offensive"
      }
     ]
    },
    {
     "id": "0726-cdac-55eb-d27c",
     "name": "Sling",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The attack gains +1 Strength when shooting from Short Range. Cannot be used by mounted models."
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "4+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "18\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "4"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "0"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Quick to Fire, Attacks made at Long Range have their Str set to 3<br>The attack gains +1 Strength when shooting from Short Range. Cannot be used by mounted models."
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
+      "typeId": "73df-ea60-2ff9-4990",
       "$text": "offensive"
      }
     ]

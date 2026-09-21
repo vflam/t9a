@@ -6273,7 +6273,16 @@
             "name": "Wyrm-Slayer Rocket",
             "hidden": false,
             "type": "profile",
-            "targetId": "3e19-4bb9-63f3-3373"
+            "targetId": "3e19-4bb9-63f3-3373",
+            "modifiers": [
+             {
+              "type": "set",
+              "field": "ac5e-bed6-2a99-99d3",
+              "value": "3+",
+              "conditions": [],
+              "conditionGroups": []
+             }
+            ]
            }
           ],
           "categoryLinks": [],
@@ -21567,7 +21576,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Area Attack (1x5), Direct Hit (Profile Change, Multiple Wounds)"
+      "$text": "Area Attack (1x5), Direct Hit (Str 6, Multiple Wounds (D3))"
      }
     ],
     "attributes": [
@@ -21613,7 +21622,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Artillery, Area Attack (1x3), Direct Hit (Profile Change, Multiple Wounds)"
+      "$text": "Artillery, Area Attack (1x3), Direct Hit (Str 10, AP 4, Multiple Wounds (D3+1))"
      }
     ],
     "attributes": [
@@ -21659,7 +21668,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Artillery, Area Attack (2x2), Direct Hit (Multiple Wounds)"
+      "$text": "Artillery, Area Attack (2x2), Direct Hit (Multiple Wounds (2))<br>The model’s Height is changed to 3."
      }
     ],
     "attributes": [
@@ -21761,20 +21770,45 @@
    {
     "id": "78f3-9485-8c61-0f62",
     "name": "Forge Gun",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Range 18\", Shots 2, Str 4, AP 0, <b>Flaming Attacks</b> and <b>Slow Reload</b>."
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "3+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "18\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "4"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "0"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "March and Shoot, Flaming Attacks, Stand and Shoot, Always hits on 3+<br>Range 18\", Shots 2, Str 4, AP 0, <b>Flaming Attacks</b> and <b>Slow Reload</b>."
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
+      "typeId": "73df-ea60-2ff9-4990",
       "$text": "offensive"
      }
     ]
@@ -21814,7 +21848,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Flaming Attacks, Quick to Fire"
+      "$text": "Flaming Attacks, Quick to Fire<br>Range 18\", Shots 2, Str 5, AP 2, <b>Flaming Attacks</b>, <b>Quick to Fire</b>, and <b>Slow Reload</b>.<br> No model can ever gain Weapon Proficiency for Forge Repeaters after being recruited."
      }
     ],
     "attributes": [
@@ -23344,20 +23378,45 @@
    {
     "id": "3e19-4bb9-63f3-3373",
     "name": "Wyrm-Slayer Rocket",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "Range 24\", Shots 1, Str 6, AP 3, <b>Flaming Attacks</b> and <b>Mighty Attacks (D3)</b>. Can only be used once per game."
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "3+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "24\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "6"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "3"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Multiple Wounds (D3), Flaming Attacks<br>Range 24\", Shots 1, Str 6, AP 3, <b>Flaming Attacks</b> and <b>Mighty Attacks (D3)</b>. Can only be used once per game."
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
+      "typeId": "73df-ea60-2ff9-4990",
       "$text": "offensive"
      }
     ]

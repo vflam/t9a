@@ -17399,7 +17399,16 @@
           "name": "Imperial Rocketeer",
           "hidden": false,
           "type": "profile",
-          "targetId": "4f99-8862-8fa7-a660"
+          "targetId": "4f99-8862-8fa7-a660",
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "ac5e-bed6-2a99-99d3",
+            "value": "5+",
+            "conditions": [],
+            "conditionGroups": []
+           }
+          ]
          }
         ],
         "categoryLinks": [],
@@ -17447,7 +17456,16 @@
           "name": "Mortar",
           "hidden": false,
           "type": "profile",
-          "targetId": "17ff-e7d6-fa18-305d"
+          "targetId": "17ff-e7d6-fa18-305d",
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "ac5e-bed6-2a99-99d3",
+            "value": "4+",
+            "conditions": [],
+            "conditionGroups": []
+           }
+          ]
          }
         ],
         "categoryLinks": [],
@@ -17495,7 +17513,16 @@
           "name": "Volley Gun",
           "hidden": false,
           "type": "profile",
-          "targetId": "2d08-4dfe-0d8d-3a91"
+          "targetId": "2d08-4dfe-0d8d-3a91",
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "ac5e-bed6-2a99-99d3",
+            "value": "4+",
+            "conditions": [],
+            "conditionGroups": []
+           }
+          ]
          }
         ],
         "categoryLinks": [],
@@ -17543,7 +17570,16 @@
           "name": "Cannon",
           "hidden": false,
           "type": "profile",
-          "targetId": "2340-df05-229e-44ea"
+          "targetId": "2340-df05-229e-44ea",
+          "modifiers": [
+           {
+            "type": "set",
+            "field": "ac5e-bed6-2a99-99d3",
+            "value": "4+",
+            "conditions": [],
+            "conditionGroups": []
+           }
+          ]
          }
         ],
         "categoryLinks": [],
@@ -23905,21 +23941,46 @@
    {
     "id": "2340-df05-229e-44ea",
     "name": "Cannon",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": ""
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "4+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "48\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "5"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "2"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Artillery, Area Attack (1×3), Direct Hit (Str 10, AP 4, Multiple Wounds (D3+1))"
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
+      "typeId": "73df-ea60-2ff9-4990",
+      "$text": "offensive"
      }
     ]
    },
@@ -24361,21 +24422,46 @@
    {
     "id": "4f99-8862-8fa7-a660",
     "name": "Imperial Rocketeer",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": ""
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "5+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "48\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "3"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "6"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "3"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Artillery, Multiple Wounds (2)"
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
+      "typeId": "73df-ea60-2ff9-4990",
+      "$text": "offensive"
      }
     ]
    },
@@ -24522,7 +24608,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Multiple Wounds (2, Towards Height), Unwieldy (2)"
+      "$text": "Multiple Wounds (2, Towards Height (1--2)), Unwieldy (2)<br>Range 48\", Shots 1, Str 5, AP 3, <b>Slow Reload</b> and <b>Unwieldy</b>. <br> No model can ever gain Weapon Proficiency for Long Rifles after being recruited, except through the <b>Imperial Marksman</b> Skill."
      }
     ],
     "attributes": [
@@ -24599,21 +24685,46 @@
    {
     "id": "17ff-e7d6-fa18-305d",
     "name": "Mortar",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": ""
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "4+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "48\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "4"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "1"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Artillery, Area Attack (3×3)"
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
+      "typeId": "73df-ea60-2ff9-4990",
+      "$text": "offensive"
      }
     ]
    },
@@ -24715,7 +24826,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Unwieldy (1)"
+      "$text": "Unwieldy (1)<br>Range 24\", Shots 3, Str 4, AP 2, <b>Slow Reload</b> and <b>Unwieldy</b>."
      }
     ],
     "attributes": [
@@ -24761,7 +24872,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Quick to Fire, Stand and Shoot"
+      "$text": "Quick to Fire, Stand and Shoot<br>Pistol with Shots 3."
      }
     ],
     "attributes": [
@@ -24904,21 +25015,46 @@
    {
     "id": "2156-c180-55b8-71b4",
     "name": "Steam Cannon",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": ""
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "3+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "36\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "1"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "5"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "2"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
+      "$text": "Artillery, Area Attack (1x3), Direct Hit (Str 10, AP 4, Multiple Wounds (D3+1)), Unwieldy (1)"
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
+      "typeId": "73df-ea60-2ff9-4990",
+      "$text": "offensive"
      }
     ]
    },
@@ -25075,21 +25211,46 @@
    {
     "id": "2d08-4dfe-0d8d-3a91",
     "name": "Volley Gun",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
+    "typeId": "6eab-f769-f198-f178",
+    "typeName": "Ranged Weapon",
     "hidden": false,
     "characteristics": [
      {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
+      "name": "Aim",
+      "typeId": "ac5e-bed6-2a99-99d3",
+      "$text": "4+"
+     },
+     {
+      "name": "Range",
+      "typeId": "62d1-7a86-4af8-4171",
+      "$text": "24\""
+     },
+     {
+      "name": "Shots",
+      "typeId": "1de3-fb36-4d10-cc37",
+      "$text": "4D6"
+     },
+     {
+      "name": "Str",
+      "typeId": "5d01-af22-06d7-f739",
+      "$text": "5"
+     },
+     {
+      "name": "AP",
+      "typeId": "bc90-9052-4ad9-d5f7",
+      "$text": "3"
+     },
+     {
+      "name": "Attack Attributes",
+      "typeId": "b775-3a93-d8ad-0967",
       "$text": ""
      }
     ],
     "attributes": [
      {
       "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
+      "typeId": "73df-ea60-2ff9-4990",
+      "$text": "offensive"
      }
     ]
    },
