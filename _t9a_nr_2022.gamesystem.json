@@ -1892,7 +1892,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "March and Shoot, Unmodifiable, Automatic Hits<br>A model part with a <b>Breath Attack</b> can use it as a Shooting Weapon in the Shooting Phase or as a Melee Attack in the Melee Phase. If a model has more than one <b>Breath Attack</b>, it can only use one in a single phase. <br>&nbsp;&nbsp;&bull; When used as a Shooting Weapon, the attack has a range of 6\". It can be used even if the model Marched previously in this Player Turn. <br>&nbsp;&nbsp;&bull; When used as a Melee Attack, the attack is made at the model part’s Agility in addition to its normal Close Combat Attacks. Declare that you are using the <b>Breath Attack</b> when allocating attacks, and choose a model in base contact to attack with it. When used in this way, it still counts as firing a shot for the purpose of <b>Slow Reload</b>. No matter if it is used as a Shooting Weapon or Melee Attack, the target of the <b>Breath Attack</b> suffers a single hit. The Strength, Armour Penetration and Attack Attributes (if any) of these hits are given within the brackets of the model rule as X, Y and Z. For example: <b>Breath Attack (Str 4, AP 1, <b>Flaming Attacks</b>, <b>Slow Reload</b>)</b>."
+      "$text": "March and Shoot, Unmodifiable, Automatic Hits<br><i>The Strength, Armour Penetration, and additional Attack Attributes are defined in brackets (X).</i>"
      }
     ],
     "attributes": [
@@ -2716,7 +2716,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Unwieldy (1)<br><b>Slow Reload</b>, <b>Unwieldy</b>."
+      "$text": "Unwieldy (1)"
      }
     ],
     "attributes": [
@@ -3893,7 +3893,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "<b>Two-Handed</b>"
+      "$text": "+2 Str, +2 AP, <b>always</b> Agi 0. <b>Two-Handed</b>"
      }
     ],
     "modifiers": [
@@ -4065,7 +4065,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "<b>Two-Handed</b>"
+      "$text": "+1 Str, +1 AP. <b>Two-Handed</b>"
      }
     ],
     "modifiers": [
@@ -4192,7 +4192,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "During <b>Combat Choices</b> a model part can only choose a Hand Weapon if it has no other options, or is a <b>Weapon Master</b>. <br> Models with a <b>Shield</b> using a Hand Weapon gain <b>Parry</b>."
+      "$text": "During <b>Combat Choices</b> a model part can only choose a Hand Weapon if it has no other options, or is a <b>Weapon Master</b>. <br> Models with a <b>Shield</b> using a Hand Weapon gain <b>Parry</b>.<br><i>All model parts without Innate Weapons come equipped with a Hand Weapon as their default equipment and cannot lose it.</i>"
      }
     ],
     "attributes": [
@@ -4240,7 +4240,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Unwieldy (1)<br><b>Slow Reload</b>, <b>Unwieldy</b>."
+      "$text": "Unwieldy (1)"
      }
     ],
     "attributes": [
@@ -4494,7 +4494,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "During <b>Combat Choices</b> a model part can only choose Innate Weapons if it has no other options."
+      "$text": "During <b>Combat Choices</b> a model part can only choose Innate Weapons if it has no other options.<br><i>All model parts with Beast, Construct, or Mount come equipped with Innate Weapons as their default equipment and cannot lose them.</i>"
      }
     ],
     "attributes": [
@@ -4601,7 +4601,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "--"
+      "$text": "<b>Devastating Charge (+2 Str, +2 AP, +1 Agi)</b><br><i>Only models with Centauroid or Mount can use a Lance.</i>"
      }
     ],
     "attributes": [
@@ -4657,48 +4657,6 @@
     ]
    },
    {
-    "id": "f42e-98b6-8276-8029",
-    "name": "Light Armour",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "+1 Armour."
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditionGroups": [],
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry",
-        "childId": "b228-c623-01a2-81d4",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ]
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "defensive"
-     }
-    ]
-   },
-   {
     "id": "78bf-1cd9-b47f-43d7",
     "name": "Light Lance",
     "typeId": "8088-42c3-13e3-23c6",
@@ -4708,7 +4666,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "--"
+      "$text": "<b>Devastating Charge (+1 Str, +1 AP)</b><br><i>Only models with Centauroid or Mount can use a Light Lance.</i>"
      }
     ],
     "attributes": [
@@ -5167,27 +5125,6 @@
     ]
    },
    {
-    "id": "dc2a-b79a-7488-fdf5",
-    "name": "Maximised",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model’s dice rolls stated in brackets are subject to Maximised Roll. This rule is cumulative."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
-     }
-    ]
-   },
-   {
     "id": "90d3-5894-a706-2d44",
     "name": "Measuring Distances",
     "typeId": "7b22-b208-93b8-3077",
@@ -5240,27 +5177,6 @@
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
       "$text": "A unit entirely with this rule automatically passes its Command Tests for Combat Reform, and automatically fails its Command Tests for Redirecting Charges."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
-     }
-    ]
-   },
-   {
-    "id": "de89-a48b-7392-33f4",
-    "name": "Minimised",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model’s dice rolls stated in brackets are subject to Minimised Roll. This rule is cumulative."
      }
     ],
     "attributes": [
@@ -5461,27 +5377,6 @@
     ]
    },
    {
-    "id": "b005-d2a1-b210-ea88",
-    "name": "Move or Fire",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The attack may not be used if the attacking model has made an Advance Move, March Move or Random Move during the current Player Turn."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
     "id": "5397-4428-79b5-f804",
     "name": "Move Pursuing Units",
     "typeId": "7b22-b208-93b8-3077",
@@ -5659,7 +5554,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "<b>Two-Handed</b>. <br>Attacks made with Paired Weapons ignore <b>Parry</b>."
+      "$text": "+1 Att, +1 Off. <b>Two-Handed</b>. <br>Attacks made with Paired Weapons ignore <b>Parry</b>."
      }
     ],
     "modifiers": [
@@ -5855,7 +5750,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Quick to Fire, Stand and Shoot<br><b>Quick to Fire</b>, <b>Slow Reload</b>. May be counted as Close Combat Weapon for the purpose of how many weapons a model can carry. <br> A model equipped with two or more Pistols can choose to fire either one or two in the Shooting Phase. If two or more shots are fired in total, the −1 to-hit modifier is applied to all shots.<br> In Close Combat, a Pistol can be used as a Dagger. In addition, any Close Combat Attack made with the Pistol can be made with the Strength and Armour Penetration of the Pistol (instead of the user). Announce if this is used when attacks are allocated. Roll to hit as any other Close Combat Attack. Each attack made in this way counts as firing a shot for the purpose of <b>Slow Reload</b>. (Remember that <b>Slow Reload</b> shots cannot be reloaded while Engaged in Combat.)"
+      "$text": "Quick to Fire, Stand and Shoot"
      }
     ],
     "attributes": [
@@ -6602,48 +6497,6 @@
     ]
    },
    {
-    "id": "ae49-b69c-219d-7e74",
-    "name": "Scoring",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "<b>Scoring</b> models are able to interact with objectives and can score you points to win the game. All models that are Infantry or Cavalry are <b>Scoring</b>. A model that is Knocked Down loses <b>Scoring</b> for as long as it is Knocked Down."
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditionGroups": [],
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry",
-        "childId": "b123-bca4-5326-247d",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ]
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
-     }
-    ]
-   },
-   {
     "id": "dc62-e346-c5c3-de7c",
     "name": "Scout",
     "typeId": "7b22-b208-93b8-3077",
@@ -6982,7 +6835,7 @@
      {
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
-      "$text": "<b>Fight in Extra Rank</b>"
+      "$text": "+1 Agi, +1 AP, and +1 additional AP towards Centauroid or Mount. <b>Fight in Extra Rank</b><br><i>Models with Centauroid or Mount cannot use a Spear.</i>"
      }
     ],
     "modifiers": [
@@ -7333,27 +7186,6 @@
     ]
    },
    {
-    "id": "ee52-3daf-af9b-54cc",
-    "name": "Swarm",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model cannot become Knocked Down. During the Status Phase, the model ignores Recovery (i.e. it does <b>not</b> Recover Health Points during that phase)."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "defensive"
-     }
-    ]
-   },
-   {
     "id": "b6cc-6380-72e5-050f",
     "name": "Sweeping Attack",
     "typeId": "68f7-9061-a298-f5f8",
@@ -7619,7 +7451,7 @@
      {
       "name": "Attack Attributes",
       "typeId": "b775-3a93-d8ad-0967",
-      "$text": "Accurate, Quick to Fire, Stand and Shoot<br><b>Accurate</b>, <b>Quick to Fire</b>."
+      "$text": "Accurate, Quick to Fire, Stand and Shoot"
      }
     ],
     "attributes": [
@@ -8282,27 +8114,6 @@
     ]
    },
    {
-    "id": "1c14-9c9d-39df-2b80",
-    "name": "Wizard",
-    "typeId": "7b22-b208-93b8-3077",
-    "typeName": "Rule",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Rule",
-      "typeId": "5e36-ea13-a37c-73d0",
-      "$text": "The model is a Wizard and can cast a single of its spells in each of its Magic Phases, unless it is Knocked Down.<br> Within the brackets of the rule, X will be given as a number and Y as one or more Paths, separated by commas. When the model is recruited, or gains this Universal Rule, the controlling player must choose one of those Paths. The Wizard will use that Path for the remainder of the campaign and must immediately generate X spells from it (see The 9th Age: Fantasy Battles – Paths for details). When writing this Universal Rule on the Warband Rooster, it is recommended to only write the chosen Path within the brackets. <br> Whenever a Wizard gains a Skill, it can instead choose to generate an additional spell instead."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "0198-7eff-d424-0bf6",
-      "$text": "global"
-     }
-    ]
-   },
-   {
     "id": "fb1d-b46b-62d7-7427",
     "name": "Wizard Adept",
     "typeId": "7b22-b208-93b8-3077",
@@ -8774,7 +8585,7 @@
      {
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with a <b>Breath Attack</b> can use it as a Shooting Weapon in the Shooting Phase or as a Melee Attack in the Melee Phase. If a model has more than one <b>Breath Attack</b>, it can only use one in a single phase. <br>&nbsp;&nbsp;&bull; When used as a Shooting Weapon, the attack has a range of 6\". It can be used even if the model Marched previously in this Player Turn. <br>&nbsp;&nbsp;&bull; When used as a Melee Attack, the attack is made at the model part’s Agility in addition to its normal Close Combat Attacks. Declare that you are using the <b>Breath Attack</b> when allocating attacks, and choose a model in base contact to attack with it. When used in this way, it still counts as firing a shot for the purpose of <b>Slow Reload</b>. No matter if it is used as a Shooting Weapon or Melee Attack, the target of the <b>Breath Attack</b> suffers a single hit. The Strength, Armour Penetration and Attack Attributes (if any) of these hits are given within the brackets of the model rule as X, Y and Z. For example: <b>Breath Attack (Str 4, AP 1, <b>Flaming Attacks</b>, <b>Slow Reload</b>)</b>."
+      "$text": "<i>The Strength, Armour Penetration, and additional Attack Attributes are defined in brackets (X).</i>"
      }
     ],
     "attributes": [
