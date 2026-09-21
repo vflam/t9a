@@ -24555,48 +24555,6 @@
     ]
    },
    {
-    "id": "33b8-1494-3291-eabb",
-    "name": "Devastating Charge",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A Charging model part with <b>Devastating Charge</b>, or using a weapon with <b>Devastating Charge</b>, gains the Rules and Characteristic modifiers stated in brackets. <br> <i>For example, a model part with <b>Devastating Charge (+1 Str)</b> gains +1 Str when Charging.</i>"
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditionGroups": [],
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry",
-        "childId": "b683-ec00-5895-cd4f",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ]
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
     "id": "cfd2-2d22-4a40-96eb",
     "name": "Diseased",
     "typeId": "7b22-b208-93b8-3077",
@@ -24656,27 +24614,6 @@
       "name": "Classification",
       "typeId": "9e9b-736e-1741-8c56",
       "$text": "global"
-     }
-    ]
-   },
-   {
-    "id": "4b20-f3da-628c-0494",
-    "name": "Extra Support",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with <b>Extra Support</b> replaces the limit on the maximum number of attacks the model can do as Restricted Attack with the value in brackets (X) or, if it includes a +, increases that limit with +X."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
      }
     ]
    },
@@ -24861,48 +24798,6 @@
     ]
    },
    {
-    "id": "74e3-54cc-8f2a-5580",
-    "name": "Grind Attack",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with a <b>Grind Attack</b> can make a Special Attack which is resolved at the model part’s Agility, and inflicts X hits, using the model part’s Strength, Armour Penetration, and Attack Attributes, but not Weapons. <br> <i>Remember that attacks multiplied into several hits are allocated after establishing how many hits are scored (i.e. after the attack has hit)</i>."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
-    "id": "d55d-3370-c951-64c1",
-    "name": "Hatred",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "An attack with <b>Hatred</b> must reroll failed to-hit rolls."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
     "id": "2df4-4354-4b01-d507",
     "name": "I am the Senate",
     "typeId": "83b2-3f78-7de5-bc03",
@@ -24953,27 +24848,6 @@
       "name": "Classification",
       "typeId": "9e9b-736e-1741-8c56",
       "$text": "global"
-     }
-    ]
-   },
-   {
-    "id": "b20d-6d87-31cf-eb7b",
-    "name": "Impact Hits",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "If Charging, the model part can make a Special Attack which is resolved at Agility Step 10, and inflicts X hits, using the model part’s Strength, Armour Penetration, and Attack Attributes, but not Weapons. <br> <i>Remember that attacks multiplied into several hits are allocated after establishing how many hits are scored (i.e. after the attack has hit)</i>. If more than one model part of a combined model has <b>Impact Hits</b>, only a single model part <i>(chosen by the model’s owner)</i> can perform its <b>Impact Hits</b> in a Round of Combat."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
      }
     ]
    },
@@ -25118,27 +24992,6 @@
       "name": "Attack Attribute",
       "typeId": "bb68-00a7-8cb1-79ba",
       "$text": "When models in a unit make a dice roll of the type defined in brackets (X), after seeing the result(s) of all simultaneous rolls for X, and rolling eventual re-rolls, it may add 2 to X for all simultaneous rolls with this attribute.<br> If this modifier is used, immediately roll a D6 and consult the table below: <br>&nbsp;&nbsp;&bull; <b>1--2 Oops:</b> Change the target of all simultaneous Attacks or a spell with <b>Maniacal Enthusiasm</b> to a friendly unit within range chosen by the controlling player <i>(the model’s own unit is always an eligible target)</i>. <br>&nbsp;&nbsp;&bull; <b>3--4 Room for Improvement:</b> After fully resolving the simultaneous attacks or a spell that triggered the roll on this table, the model’s unit suffers 3 hits with Str 4, AP 10 and <b>Unmodifiable</b>. <br>&nbsp;&nbsp;&bull; <b>5--6 Glorious Success!:</b> No additional effect."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
-    "id": "33d8-cfa3-4705-1cff",
-    "name": "Multiple Wounds",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "Health Point losses caused by the attack are multiplied into the value given in brackets (X). If the value is a dice, roll one dice for each unsaved wound from an attack with <b>Multiple Wounds</b>. <br> The number of Health Point losses that the attack is multiplied into can never be higher than the Health Points Characteristic of the target (excluding Health Points lost previously in the battle).<br> <i>For example, if an attack with <b>Multiple Wounds (D6)</b> wounds a unit of Trolls (HP 3) and rolls a ‘5’ for the multiplier, the number of Health Points lost is reduced to 3, even if the Troll unit has already lost one or two Health Points previously in battle.</i>"
      }
     ],
     "attributes": [
@@ -25876,27 +25729,6 @@
      {
       "name": "Classification",
       "typeId": "73df-ea60-2ff9-4990",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
-    "id": "e1ae-a8d0-ee02-f2d9",
-    "name": "Stomp Attack",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with <b>Stomp Attack</b> can make a Special Attack which is resolved at Agility Step 0, can only be allocated towards a Health Pool of Height 0–1, and inflicts X hits, using the model part’s Strength, Armour Penetration and Attack Attributes, but not Weapons. If more than one model part of a combined model has <b>Stomp Attack</b>, only a single model part <i>(chosen by the model’s owner)</i> can perform its <b>Stomp Attack</b> in each Round of Combat."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
       "$text": "offensive"
      }
     ]

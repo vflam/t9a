@@ -19691,7 +19691,7 @@
           "name": "Giant Club",
           "hidden": false,
           "type": "profile",
-          "targetId": "4cae-c75b-2db0-3d02"
+          "targetId": "a636-8e62-64b3-06ba"
          }
         ],
         "categoryLinks": [],
@@ -24495,48 +24495,6 @@
     ]
    },
    {
-    "id": "42d4-e2f0-b2f3-c6bd",
-    "name": "Devastating Charge",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A Charging model part with <b>Devastating Charge</b>, or using a weapon with <b>Devastating Charge</b>, gains the Rules and Characteristic modifiers stated in brackets. <br> <i>For example, a model part with <b>Devastating Charge (+1 Str)</b> gains +1 Str when Charging.</i>"
-     }
-    ],
-    "modifiers": [
-     {
-      "type": "set",
-      "field": "hidden",
-      "value": true,
-      "conditionGroups": [],
-      "conditions": [
-       {
-        "type": "atLeast",
-        "value": 1,
-        "field": "selections",
-        "scope": "root-entry",
-        "childId": "b683-ec00-5895-cd4f",
-        "shared": true,
-        "includeChildSelections": true,
-        "includeChildForces": false,
-        "percentValue": false
-       }
-      ]
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
     "id": "e17a-0c49-9966-05ee",
     "name": "Drunk",
     "typeId": "7b22-b208-93b8-3077",
@@ -24639,6 +24597,91 @@
      {
       "name": "Classification",
       "typeId": "a9f6-5173-bdc5-7a63",
+      "$text": "offensive"
+     }
+    ]
+   },
+   {
+    "id": "a636-8e62-64b3-06ba",
+    "name": "Giant Club",
+    "typeId": "7b22-b208-93b8-3077",
+    "typeName": "Rule",
+    "hidden": false,
+    "characteristics": [
+     {
+      "name": "Rule",
+      "typeId": "5e36-ea13-a37c-73d0",
+      "$text": "+1 Str, +1 AP."
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     }
+    ],
+    "attributes": [
+     {
+      "name": "Classification",
+      "typeId": "0198-7eff-d424-0bf6",
       "$text": "offensive"
      }
     ]
@@ -24832,27 +24875,6 @@
      {
       "name": "Classification",
       "typeId": "73df-ea60-2ff9-4990",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
-    "id": "3316-07d5-51d5-ec73",
-    "name": "Impact Hits",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "If Charging, the model part can make a Special Attack which is resolved at Agility Step 10, and inflicts X hits, using the model part’s Strength, Armour Penetration, and Attack Attributes, but not Weapons. <br> <i>Remember that attacks multiplied into several hits are allocated after establishing how many hits are scored (i.e. after the attack has hit)</i>. If more than one model part of a combined model has <b>Impact Hits</b>, only a single model part <i>(chosen by the model’s owner)</i> can perform its <b>Impact Hits</b> in a Round of Combat."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
       "$text": "offensive"
      }
     ]
@@ -25066,27 +25088,6 @@
       "name": "Classification",
       "typeId": "5679-0040-2585-071a",
       "$text": "global"
-     }
-    ]
-   },
-   {
-    "id": "67e1-2998-485a-db23",
-    "name": "Stomp Attack",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with <b>Stomp Attack</b> can make a Special Attack which is resolved at Agility Step 0, can only be allocated towards a Health Pool of Height 0–1, and inflicts X hits, using the model part’s Strength, Armour Penetration and Attack Attributes, but not Weapons. If more than one model part of a combined model has <b>Stomp Attack</b>, only a single model part <i>(chosen by the model’s owner)</i> can perform its <b>Stomp Attack</b> in each Round of Combat."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
      }
     ]
    },

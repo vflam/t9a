@@ -22636,7 +22636,7 @@
           "name": "Giant Club",
           "hidden": false,
           "type": "profile",
-          "targetId": "4cae-c75b-2db0-3d02"
+          "targetId": "19d1-e3df-59bf-ca68"
          }
         ],
         "categoryLinks": [],
@@ -32937,27 +32937,6 @@
     ]
    },
    {
-    "id": "96e6-3d63-3315-7fd6",
-    "name": "Extra Support",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with <b>Extra Support</b> replaces the limit on the maximum number of attacks the model can do as Restricted Attack with the value in brackets (X) or, if it includes a +, increases that limit with +X."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
     "id": "312e-4fdf-2c05-ce80",
     "name": "Gateway",
     "typeId": "7b22-b208-93b8-3077",
@@ -32975,6 +32954,91 @@
       "name": "Classification",
       "typeId": "0198-7eff-d424-0bf6",
       "$text": "global"
+     }
+    ]
+   },
+   {
+    "id": "19d1-e3df-59bf-ca68",
+    "name": "Giant Club",
+    "typeId": "7b22-b208-93b8-3077",
+    "typeName": "Rule",
+    "hidden": false,
+    "characteristics": [
+     {
+      "name": "Rule",
+      "typeId": "5e36-ea13-a37c-73d0",
+      "$text": "+1 Str, +1 AP."
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "type": "increment",
+      "value": 1
+     }
+    ],
+    "attributes": [
+     {
+      "name": "Classification",
+      "typeId": "0198-7eff-d424-0bf6",
+      "$text": "offensive"
      }
     ]
    },
@@ -33091,48 +33155,6 @@
      {
       "name": "Classification",
       "typeId": "0198-7eff-d424-0bf6",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
-    "id": "6845-0e2c-baff-5ae8",
-    "name": "Grind Attack",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with a <b>Grind Attack</b> can make a Special Attack which is resolved at the model part’s Agility, and inflicts X hits, using the model part’s Strength, Armour Penetration, and Attack Attributes, but not Weapons. <br> <i>Remember that attacks multiplied into several hits are allocated after establishing how many hits are scored (i.e. after the attack has hit)</i>."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
-    "id": "6de6-6aa2-6d15-5832",
-    "name": "Hatred",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "An attack with <b>Hatred</b> must reroll failed to-hit rolls."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
       "$text": "offensive"
      }
     ]
@@ -33345,27 +33367,6 @@
     ],
     "selectable": true,
     "selectionGroup": "immortal_gauntlets"
-   },
-   {
-    "id": "b28b-d8a1-7349-b18c",
-    "name": "Impact Hits",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "If Charging, the model part can make a Special Attack which is resolved at Agility Step 10, and inflicts X hits, using the model part’s Strength, Armour Penetration, and Attack Attributes, but not Weapons. <br> <i>Remember that attacks multiplied into several hits are allocated after establishing how many hits are scored (i.e. after the attack has hit)</i>. If more than one model part of a combined model has <b>Impact Hits</b>, only a single model part <i>(chosen by the model’s owner)</i> can perform its <b>Impact Hits</b> in a Round of Combat."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
    },
    {
     "id": "971f-28a6-d33e-3b24",
@@ -33739,48 +33740,6 @@
       "name": "Classification",
       "typeId": "0198-7eff-d424-0bf6",
       "$text": "defensive"
-     }
-    ]
-   },
-   {
-    "id": "a9ac-fff2-3b86-3edc",
-    "name": "Stomp Attack",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "A model part with <b>Stomp Attack</b> can make a Special Attack which is resolved at Agility Step 0, can only be allocated towards a Health Pool of Height 0–1, and inflicts X hits, using the model part’s Strength, Armour Penetration and Attack Attributes, but not Weapons. If more than one model part of a combined model has <b>Stomp Attack</b>, only a single model part <i>(chosen by the model’s owner)</i> can perform its <b>Stomp Attack</b> in each Round of Combat."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
-     }
-    ]
-   },
-   {
-    "id": "9160-2083-85d7-6e7c",
-    "name": "Sweeping Attack",
-    "typeId": "68f7-9061-a298-f5f8",
-    "typeName": "Attack Attribute",
-    "hidden": false,
-    "characteristics": [
-     {
-      "name": "Attack Attribute",
-      "typeId": "bb68-00a7-8cb1-79ba",
-      "$text": "When a model with <b>Sweeping Attack</b> is within 1\" of an Unengaged enemy unit during a Move Manoeuvre <i>(even temporarily)</i>, the model’s unit may perform a <b>Sweeping Attack</b> against that enemy unit. This can only be used once per friendly Player Turn. <br> Resolve the <b>Sweeping Attack</b> when the Move Manoeuvre is completed. The attack hits automatically, and counts as a Ranged Attack. <br> Each model part in the unit with <b>Sweeping Attack</b> must use it towards the same enemy unit. The attack causes X hits, resolved with the model part’s Strength, Armour Penetration and Attack Attributes, but not Weapons.<br> If values for Strength, Armour Penetration and additional Attack Attributes are defined in the bracket (Y), these are used instead. In this case, the <b>Sweeping Attack</b> is <b>Unmodifiable</b>."
-     }
-    ],
-    "attributes": [
-     {
-      "name": "Classification",
-      "typeId": "ea9d-5b65-af01-37be",
-      "$text": "offensive"
      }
     ]
    },
