@@ -4583,6 +4583,107 @@
       "$text": "<b>Devastating Charge (+2 Str, +2 AP, +1 Agi)</b><br><i>Only models with Centauroid or Mount can use a Lance.</i>"
      }
     ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 2
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 2
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 2
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 2
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7a92-d09f-2671-cf10",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7a92-d09f-2671-cf10",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     }
+    ],
     "attributes": [
      {
       "name": "Classification",
@@ -4646,6 +4747,74 @@
       "name": "Melee Weapon",
       "typeId": "0dd7-ba78-ca71-14df",
       "$text": "<b>Devastating Charge (+1 Str, +1 AP)</b><br><i>Only models with Centauroid or Mount can use a Light Lance.</i>"
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
      }
     ],
     "attributes": [
@@ -8483,6 +8652,41 @@
       "$text": "Lance. <b>Devastating Charge (+5 Agi)</b>. Attacks with the Blivet Lance ignore negative modifiers to to-hit rolls."
      }
     ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "7a92-d09f-2671-cf10",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 5
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7a92-d09f-2671-cf10",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 5
+     }
+    ],
     "attributes": [
      {
       "name": "Classification",
@@ -10639,6 +10843,74 @@
       "name": "Rule",
       "typeId": "5e36-ea13-a37c-73d0",
       "$text": "Hand Weapon. <b>Devastating Charge (+1 Str, +1 AP, and +X Att, where “X” is equal to the number of Ranks in a single enemy unit in contact, up to a maximum of 4.)</b> and <b>Divine Attacks</b>"
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "5b66-2cef-4a23-a567",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
      }
     ],
     "attributes": [

@@ -13737,7 +13737,42 @@
         "name": "Devastating Charge",
         "hidden": false,
         "type": "profile",
-        "targetId": "e052-9518-2b65-26d1"
+        "targetId": "e052-9518-2b65-26d1",
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "field": "7e95-b3fb-a6d6-4cd9",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Offensive",
+          "position": "1",
+          "conditions": [],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "7e95-b3fb-a6d6-4cd9",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Offensive",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         }
+        ]
        },
        {
         "id": "f4d3-34ad-4f36-bff9",
@@ -21580,7 +21615,75 @@
       "name": "Devastating Charge",
       "hidden": false,
       "type": "profile",
-      "targetId": "e052-9518-2b65-26d1"
+      "targetId": "e052-9518-2b65-26d1",
+      "modifiers": [
+       {
+        "parentKey": "modifiers",
+        "field": "12ea-f281-a7e1-3e1f",
+        "scope": "non-upgrade-entry-self",
+        "affects": "self.profiles.Offensive",
+        "position": "1",
+        "conditions": [],
+        "conditionGroups": [],
+        "comment": "<conditional> Charging (Devastating Charge)",
+        "type": "increment",
+        "value": 1
+       },
+       {
+        "parentKey": "modifiers",
+        "field": "12ea-f281-a7e1-3e1f",
+        "scope": "non-upgrade-entry-self",
+        "affects": "entries.recursive.profiles.Offensive",
+        "position": "1",
+        "conditions": [
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "non-upgrade-entry-self",
+          "childId": "unit",
+          "shared": true
+         }
+        ],
+        "conditionGroups": [],
+        "comment": "<conditional> Charging (Devastating Charge)",
+        "type": "increment",
+        "value": 1
+       },
+       {
+        "parentKey": "modifiers",
+        "field": "5b66-2cef-4a23-a567",
+        "scope": "non-upgrade-entry-self",
+        "affects": "self.profiles.Offensive",
+        "position": "1",
+        "conditions": [],
+        "conditionGroups": [],
+        "comment": "<conditional> Charging (Devastating Charge)",
+        "type": "increment",
+        "value": 1
+       },
+       {
+        "parentKey": "modifiers",
+        "field": "5b66-2cef-4a23-a567",
+        "scope": "non-upgrade-entry-self",
+        "affects": "entries.recursive.profiles.Offensive",
+        "position": "1",
+        "conditions": [
+         {
+          "type": "instanceOf",
+          "value": 1,
+          "field": "selections",
+          "scope": "non-upgrade-entry-self",
+          "childId": "unit",
+          "shared": true
+         }
+        ],
+        "conditionGroups": [],
+        "comment": "<conditional> Charging (Devastating Charge)",
+        "type": "increment",
+        "value": 1
+       }
+      ]
      },
      {
       "id": "bb5b-6cb6-9391-03b7",
@@ -25684,6 +25787,41 @@
       "name": "Banner Enchant",
       "typeId": "230e-af1c-f984-b6df",
       "$text": "<b>Exclusive (Captain, Silent Assassin)</b>. The unit’s maximum size is changed to 15 models for units entirely with Height 1, and to 6 models for units entirely with Height 2. <br> Rank-and-File model parts with Elf in the bearer’s unit gain <b>Devastating Charge (+1 Att)</b>."
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
      }
     ],
     "attributes": [

@@ -13108,7 +13108,75 @@
         "name": "Devastating Charge",
         "hidden": false,
         "type": "profile",
-        "targetId": "e052-9518-2b65-26d1"
+        "targetId": "e052-9518-2b65-26d1",
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "field": "12ea-f281-a7e1-3e1f",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Offensive",
+          "position": "1",
+          "conditions": [],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "12ea-f281-a7e1-3e1f",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Offensive",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "5b66-2cef-4a23-a567",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.Offensive",
+          "position": "1",
+          "conditions": [],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "5b66-2cef-4a23-a567",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.Offensive",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         }
+        ]
        },
        {
         "id": "92de-517d-67e2-f15f",
@@ -20366,7 +20434,42 @@
         "name": "Devastating Charge",
         "hidden": false,
         "type": "profile",
-        "targetId": "e052-9518-2b65-26d1"
+        "targetId": "e052-9518-2b65-26d1",
+        "modifiers": [
+         {
+          "parentKey": "modifiers",
+          "field": "7e95-b3fb-a6d6-4cd9",
+          "scope": "non-upgrade-entry-self",
+          "affects": "self.profiles.06f6-a407-ce1e-bd96",
+          "position": "1",
+          "conditions": [],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         },
+         {
+          "parentKey": "modifiers",
+          "field": "7e95-b3fb-a6d6-4cd9",
+          "scope": "non-upgrade-entry-self",
+          "affects": "entries.recursive.profiles.06f6-a407-ce1e-bd96",
+          "position": "1",
+          "conditions": [
+           {
+            "type": "instanceOf",
+            "value": 1,
+            "field": "selections",
+            "scope": "non-upgrade-entry-self",
+            "childId": "unit",
+            "shared": true
+           }
+          ],
+          "conditionGroups": [],
+          "comment": "<conditional> Charging (Devastating Charge)",
+          "type": "increment",
+          "value": 1
+         }
+        ]
        },
        {
         "id": "c5f4-67b3-5bf0-839d",

@@ -27826,6 +27826,41 @@
       "$text": "<b>Devastating Charge (+1 Att)</b>, <b>Divine Attacks</b>, and <b>Lethal Strike</b>. <br> One use only. May be used during Combat Choices: the wielder counts as Charging for the purpose of <b>Devastating Charge</b>, with Duration: Round of Combat."
      }
     ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "7e95-b3fb-a6d6-4cd9",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     }
+    ],
     "attributes": [
      {
       "name": "Classification",
@@ -28281,6 +28316,41 @@
       "name": "Banner Enchant",
       "typeId": "230e-af1c-f984-b6df",
       "$text": "A unit with one or more <i>War Banners of Rymâ</i> gains +1\" Cha. <br>In addition, Rank-and-File model parts with Elf in the unit gain <b>Devastating Charge (+1 Str)</b>."
+     }
+    ],
+    "modifiers": [
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "self.profiles.Offensive",
+      "position": "1",
+      "conditions": [],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
+     },
+     {
+      "parentKey": "modifiers",
+      "field": "12ea-f281-a7e1-3e1f",
+      "scope": "non-upgrade-entry-self",
+      "affects": "entries.recursive.profiles.Offensive",
+      "position": "1",
+      "conditions": [
+       {
+        "type": "instanceOf",
+        "value": 1,
+        "field": "selections",
+        "scope": "non-upgrade-entry-self",
+        "childId": "unit",
+        "shared": true
+       }
+      ],
+      "conditionGroups": [],
+      "comment": "<conditional> Charging (Devastating Charge)",
+      "type": "increment",
+      "value": 1
      }
     ],
     "attributes": [
