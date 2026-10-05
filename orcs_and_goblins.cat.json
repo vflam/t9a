@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 467,
+    "revision": 468,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -6049,6 +6049,7 @@
             "name": "Mount",
             "id": "1226-4a15-c74e-7b55",
             "collective": true,
+            "defaultSelectionEntryId": "6b65-2d53-4963-8397",
             "hidden": false,
             "sortIndex": 2,
             "constraints": [
@@ -6061,6 +6062,17 @@
                 "scope": "parent",
                 "shared": true,
                 "type": "min",
+                "value": 1
+              },
+              {
+                "id": "26e6-9093-cbd5-9043",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
                 "value": 1
               }
             ],
@@ -10648,9 +10660,21 @@
             "name": "Mount",
             "id": "d5b3-b1a0-63fa-ac56",
             "collective": true,
+            "defaultSelectionEntryId": "f8fa-9ec6-66ff-0f1d",
             "hidden": false,
             "sortIndex": 1,
             "constraints": [
+              {
+                "id": "023d-67de-caa3-0a67",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              },
               {
                 "id": "a729-7480-ee18-4f38",
                 "field": "selections",
