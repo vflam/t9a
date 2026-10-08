@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 518,
+    "revision": 519,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -1511,18 +1511,6 @@
             "name": "Abilities",
             "$text": "When calculating Combat Score for Combats containing one or more friendly unit within 12\" of a Ruinous Dictator, your side adds +1 to their Combat Score.",
             "typeId": "5480-0139-15c8-4fe4"
-          }
-        ],
-        "modifiers": [
-          {"affects": "self.profiles.Global", "field": "e412-d143-2a9a-61e0", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 1},
-          {
-            "affects": "entries.recursive.profiles.Global",
-            "field": "e412-d143-2a9a-61e0",
-            "position": "1",
-            "scope": "non-upgrade-entry-self",
-            "type": "increment",
-            "value": 1,
-            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ]
       },
