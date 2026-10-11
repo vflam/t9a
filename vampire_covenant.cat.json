@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 432,
+    "revision": 433,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -4401,6 +4401,24 @@
                         "scope": "root-entry-self",
                         "shared": true,
                         "type": "atLeast",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "hidden",
+                    "type": "set",
+                    "value": true,
+                    "conditions": [
+                      {
+                        "childId": "6c7e-be70-e418-112c",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": true,
+                        "percentValue": false,
+                        "scope": "root-entry-self",
+                        "shared": true,
+                        "type": "lessThan",
                         "value": 1
                       }
                     ]
