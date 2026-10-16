@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 366,
+    "revision": 367,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -1881,48 +1881,6 @@
             "name": "Rule",
             "$text": "The wielder gains +1D3 <b>Grind Attacks</b> when engaged with an enemy unit containing a Grudge Marker.",
             "typeId": "5e36-ea13-a37c-73d0"
-          }
-        ],
-        "modifiers": [
-          {"affects": "self.profiles.Offensive", "field": "12ea-f281-a7e1-3e1f", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 1},
-          {
-            "affects": "entries.recursive.profiles.Offensive",
-            "field": "12ea-f281-a7e1-3e1f",
-            "position": "1",
-            "scope": "non-upgrade-entry-self",
-            "type": "increment",
-            "value": 1,
-            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
-          },
-          {"affects": "self.profiles.Offensive", "field": "5b66-2cef-4a23-a567", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 1},
-          {
-            "affects": "entries.recursive.profiles.Offensive",
-            "field": "5b66-2cef-4a23-a567",
-            "position": "1",
-            "scope": "non-upgrade-entry-self",
-            "type": "increment",
-            "value": 1,
-            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
-          },
-          {"affects": "self.profiles.Offensive", "field": "7a92-d09f-2671-cf10", "position": "1", "scope": "non-upgrade-entry-self", "type": "ceil", "value": 10},
-          {
-            "affects": "entries.recursive.profiles.Offensive",
-            "field": "7a92-d09f-2671-cf10",
-            "position": "1",
-            "scope": "non-upgrade-entry-self",
-            "type": "ceil",
-            "value": 10,
-            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
-          },
-          {"affects": "self.profiles.Offensive", "field": "7a92-d09f-2671-cf10", "position": "1", "scope": "non-upgrade-entry-self", "type": "floor", "value": 10},
-          {
-            "affects": "entries.recursive.profiles.Offensive",
-            "field": "7a92-d09f-2671-cf10",
-            "position": "1",
-            "scope": "non-upgrade-entry-self",
-            "type": "floor",
-            "value": 10,
-            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ]
       },
