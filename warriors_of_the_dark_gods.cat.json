@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 388,
+    "revision": 389,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -1421,18 +1421,6 @@
             "name": "Rule",
             "$text": "The model gains <b>Aegis (6+)</b>. <br> In addition, if the model is Height 1--4 it gains <b>Aegis (+1, max. 4+, against no Armour Save*)</b>.<br> *Can only be used for attacks against which the model cannot take or would automatically fail its Armour Saves.",
             "typeId": "5e36-ea13-a37c-73d0"
-          }
-        ],
-        "modifiers": [
-          {"affects": "self.profiles.Defensive", "field": "29f8-d428-4518-3108", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 1},
-          {
-            "affects": "entries.recursive.profiles.Defensive",
-            "field": "29f8-d428-4518-3108",
-            "position": "1",
-            "scope": "non-upgrade-entry-self",
-            "type": "increment",
-            "value": 1,
-            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ]
       },
