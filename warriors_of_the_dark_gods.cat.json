@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 389,
+    "revision": 390,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -1489,33 +1489,33 @@
         "attributes": [{"name": "Classification", "$text": "defensive", "typeId": "8c28-9fd1-372b-305b"}],
         "characteristics": [{"name": "Armour Enchant", "$text": "Arm <b>set</b> to 6.", "typeId": "ddfb-d964-d4d4-ca48"}],
         "modifiers": [
-          {"affects": "self.profiles.Defensive", "field": "00fe-697b-eb17-c206", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 3},
+          {"affects": "self.profiles.Defensive", "field": "00fe-697b-eb17-c206", "position": "1", "scope": "non-upgrade-entry-self", "type": "set", "value": 6},
           {
             "affects": "entries.recursive.profiles.Defensive",
             "field": "00fe-697b-eb17-c206",
             "position": "1",
             "scope": "non-upgrade-entry-self",
-            "type": "increment",
-            "value": 3,
+            "type": "set",
+            "value": 6,
             "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           },
           {
             "affects": "self.profiles.Defensive",
-            "comment": "<conditional> see rule",
+            "comment": "Armour can never be higher than 6 (Rulebook)",
             "field": "00fe-697b-eb17-c206",
-            "position": "1",
+            "position": 1,
             "scope": "non-upgrade-entry-self",
             "type": "ceil",
-            "value": 5
+            "value": 6
           },
           {
             "affects": "entries.recursive.profiles.Defensive",
-            "comment": "<conditional> see rule",
+            "comment": "Armour can never be higher than 6 (Rulebook)",
             "field": "00fe-697b-eb17-c206",
-            "position": "1",
+            "position": 1,
             "scope": "non-upgrade-entry-self",
             "type": "ceil",
-            "value": 5,
+            "value": 6,
             "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ]

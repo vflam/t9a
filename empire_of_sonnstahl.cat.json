@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 377,
+    "revision": 378,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -1081,14 +1081,14 @@
         "attributes": [{"name": "Classification", "$text": "defensive", "typeId": "8c28-9fd1-372b-305b"}],
         "characteristics": [{"name": "Armour Enchant", "$text": "+1 Dis; Armour is <b>set</b> to 6. <b>Fearless</b>.", "typeId": "ddfb-d964-d4d4-ca48"}],
         "modifiers": [
-          {"affects": "self.profiles.Defensive", "field": "00fe-697b-eb17-c206", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 3},
+          {"affects": "self.profiles.Defensive", "field": "00fe-697b-eb17-c206", "position": "1", "scope": "non-upgrade-entry-self", "type": "set", "value": 6},
           {
             "affects": "entries.recursive.profiles.Defensive",
             "field": "00fe-697b-eb17-c206",
             "position": "1",
             "scope": "non-upgrade-entry-self",
-            "type": "increment",
-            "value": 3,
+            "type": "set",
+            "value": 6,
             "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           },
           {"affects": "self.profiles.Global", "field": "e412-d143-2a9a-61e0", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 1},
@@ -1099,6 +1099,25 @@
             "scope": "non-upgrade-entry-self",
             "type": "increment",
             "value": 1,
+            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
+          },
+          {
+            "affects": "self.profiles.Defensive",
+            "comment": "Armour can never be higher than 6 (Rulebook)",
+            "field": "00fe-697b-eb17-c206",
+            "position": 1,
+            "scope": "non-upgrade-entry-self",
+            "type": "ceil",
+            "value": 6
+          },
+          {
+            "affects": "entries.recursive.profiles.Defensive",
+            "comment": "Armour can never be higher than 6 (Rulebook)",
+            "field": "00fe-697b-eb17-c206",
+            "position": 1,
+            "scope": "non-upgrade-entry-self",
+            "type": "ceil",
+            "value": 6,
             "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ]

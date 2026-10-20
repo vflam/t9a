@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 469,
+    "revision": 470,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -2122,13 +2122,13 @@
         "attributes": [{"name": "Classification", "$text": "defensive", "typeId": "0198-7eff-d424-0bf6"}],
         "characteristics": [{"name": "Rule", "$text": "The model’s Armour value is <b>set</b> to 3, and it gains <b>Strider (Ruins)</b>.", "typeId": "5e36-ea13-a37c-73d0"}],
         "modifiers": [
-          {"affects": "self.profiles.Defensive", "field": "00fe-697b-eb17-c206", "position": "1", "scope": "non-upgrade-entry-self", "type": "increment", "value": 3},
+          {"affects": "self.profiles.Defensive", "field": "00fe-697b-eb17-c206", "position": "1", "scope": "non-upgrade-entry-self", "type": "set", "value": 3},
           {
             "affects": "entries.recursive.profiles.Defensive",
             "field": "00fe-697b-eb17-c206",
             "position": "1",
             "scope": "non-upgrade-entry-self",
-            "type": "increment",
+            "type": "set",
             "value": 3,
             "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           }

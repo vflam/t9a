@@ -4,7 +4,7 @@
     "id": "3552-6259-4b66-3788",
     "authorName": "NR t9a->bs converter",
     "battleScribeVersion": "2.03",
-    "revision": 4,
+    "revision": 5,
     "type": "gameSystem",
     "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
     "categoryEntries": [
@@ -828,8 +828,30 @@
         "characteristics": [
           {
             "name": "Rule",
-            "$text": "The model’s HP are <b>set</b> to 9, its base size is changed to 75×100 mm, and the roll for the number of hits it does with its <b>Stomp Attack</b> is <b>Maximised</b>.",
+            "$text": "The model's HP are <b>set</b> to 9, its base size is changed to 75×100 mm, and the roll for the number of hits it does with its <b>Stomp Attack</b> is <b>Maximised</b>.",
             "typeId": "5e36-ea13-a37c-73d0"
+          }
+        ],
+        "modifiers": [
+          {"affects": "self.profiles.Defensive", "field": "78b5-478f-5615-ac81", "position": 1, "scope": "non-upgrade-entry-self", "type": "set", "value": 9},
+          {
+            "affects": "entries.recursive.profiles.Defensive",
+            "field": "78b5-478f-5615-ac81",
+            "position": 1,
+            "scope": "non-upgrade-entry-self",
+            "type": "set",
+            "value": 9,
+            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
+          },
+          {"affects": "self.profiles.Size", "field": "a8c6-520e-1327-a8bc", "position": 1, "scope": "non-upgrade-entry-self", "type": "set", "value": "75×100"},
+          {
+            "affects": "entries.recursive.profiles.Size",
+            "field": "a8c6-520e-1327-a8bc",
+            "position": 1,
+            "scope": "non-upgrade-entry-self",
+            "type": "set",
+            "value": "75×100",
+            "conditions": [{"childId": "unit", "field": "selections", "scope": "non-upgrade-entry-self", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ]
       },
