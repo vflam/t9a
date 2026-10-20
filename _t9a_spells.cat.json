@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": true,
-    "revision": 2,
+    "revision": 3,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "sharedProfiles": [
@@ -862,7 +862,7 @@
           {"name": "Duration", "$text": "1", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "In each Round of Combat, one model in the target unit gains a “Majesty” model part, with Duration: Round of Combat. Select the affected model immediately before the “Majesty” model part allocates its attacks. \nThe “Majesty” model part has the following Offensive Profile: \n\nMajesty69528.",
+            "$text": "In each Round of Combat, one model in the target unit gains a “Majesty” model part, with Duration: Round of Combat. Select the affected model immediately before the “Majesty” model part allocates its attacks. \nThe “Majesty” model part has the following Offensive Profile: \n\nMajesty: Att 6, Off 9, Str 5, AP 2, Agi 8",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1066,7 +1066,7 @@
           {"name": "Duration", "$text": "2", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "Mark a Health Pool in the target. In each Round of Combat one model in the marked Health Pool gains a Guardian model part with Duration: Round of Combat. Select which model immediately before the Wild Guardian allocates its attacks. A unit can never have more than one Guardian model part. \n The Guardian model part has: \nGuardian43633.",
+            "$text": "Mark a Health Pool in the target. In each Round of Combat one model in the marked Health Pool gains a Guardian model part with Duration: Round of Combat. Select which model immediately before the Wild Guardian allocates its attacks. A unit can never have more than one Guardian model part. \n The Guardian model part has: \nGuardian: Att 4, Off 3, Str 6, AP 3, Agi 3",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1104,7 +1104,7 @@
           {"name": "Duration", "$text": "0", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "The target suffers D6+1 hits. All hits have Str 5, AP 2, and Magical Attacks. \n &bull; : select an different target, following the same targeting restrictions: that extra target suffers D3+1 hits. \n &bull; : select a different target, following the same targeting restrictions. That target suffers D3+1 hits.",
+            "$text": "The target suffers D6+1 hits. All hits have Str 5, AP 2, and Magical Attacks. \n ✠ : select an extra target, following the same targeting restrictions: that extra target suffers D3+1 hits. \n × : select a different target, following the same targeting restrictions. That target suffers D3+1 hits.",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1123,7 +1123,7 @@
           {"name": "Duration", "$text": "1", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "The target adds +1 to the Combat Score of its side, and gains +1 Dis. \n &bull; : the target gains Courageous. \n &bull; : the target's Charge, Flee, and Pursue rolls are Minimised.",
+            "$text": "The target adds +1 to the Combat Score of its side, and gains +1 Dis. \n ✠ : the target gains Courageous. \n × : the target's Charge, Flee, and Pursue rolls are Minimised.",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1142,7 +1142,7 @@
           {"name": "Duration", "$text": "1", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "The target suffers -2 Def, and -2 Agi (Agi to a minimum of 1). \n &bull; : the target suffers -2 Off. \n &bull; : the target does not suffer −2 Def (i.e. it only suffers -2 Agi).",
+            "$text": "The target suffers -2 Def, and -2 Agi (Agi to a minimum of 1). \n ✠ : the target suffers -2 Off. \n × : the target does not suffer −2 Def (i.e. it only suffers -2 Agi).",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1161,7 +1161,7 @@
           {"name": "Duration", "$text": "1", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "The target suffers -1 to wound with its Melee Attacks. \n &bull; : the target suffers -1 AP \n &bull; : the target gains +1 AP",
+            "$text": "The target suffers -1 to wound with its Melee Attacks. \n ✠ : the target suffers -1 AP \n × : the target gains +1 AP",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1180,7 +1180,7 @@
           {"name": "Duration", "$text": "2", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "Place a marker on the target point. Do not roll for Divine Intervention when resolving the effects of this spell. You must roll for Divine Intervention at the start of each subsequent Magic Phase: \n &bull; : each unit within 2D6\" of the centre of the marker suffers 2D6 hits with Str 5, AP 2, and Magical Attacks. Then remove the marker. \n &bull; : your opponent may move the marker up to 3\" in any direction.",
+            "$text": "Place a marker on the target point. Do not roll for Divine Intervention when resolving the effects of this spell. You must roll for Divine Intervention at the start of each subsequent Magic Phase: \n ✠ : each unit within 2D6\" of the centre of the marker suffers 2D6 hits with Str 5, AP 2, and Magical Attacks. Then remove the marker. \n × : your opponent may move the marker up to 3\" in any direction.",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1199,7 +1199,7 @@
           {"name": "Duration", "$text": "0", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "The target suffers D3+1 hits. All other units within 3\" of the target suffer 1 hit. \nAll hits are resolved with Str 9, AP 4, Magical Attacks,Flaming Attacks,. \n &bull; : increase the number of hits each unit suffers by 1. \n &bull; : decrease the number of hits each unit suffers by 1.",
+            "$text": "The target suffers D3+1 hits. All other units within 3\" of the target suffer 1 hit. \nAll hits are resolved with Str 9, AP 4, Flaming Attacks and Magical Attacks. \n ✠ : increase the number of hits each unit suffers by 1. \n × : decrease the number of hits each unit suffers by 1.",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1613,13 +1613,13 @@
         "typeId": "f4d6-35c2-496b-c7e9",
         "typeName": "Spell",
         "characteristics": [
-          {"name": "Casting Value", "$text": "6", "typeId": "f86d-a5a6-1411-30e5"},
-          {"name": "Range", "$text": "24\"", "typeId": "ba93-6e90-4696-c2b4"},
+          {"name": "Casting Value", "$text": "8", "typeId": "f86d-a5a6-1411-30e5"},
+          {"name": "Range", "$text": "18\"", "typeId": "ba93-6e90-4696-c2b4"},
           {"name": "Type", "$text": "Augment", "typeId": "74cf-1caa-f204-a191"},
           {"name": "Duration", "$text": "1", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "Place a Forest* underneath the target until the last model in the unit is removed as a casualty. This Forest always extends up to the edges of the target's Unit Boundary (even if the unit moves or changes formation).\n\n* You may place a marker next to the unit instead",
+            "$text": "Place a Forest* underneath the target until the last model in the unit is removed as a casualty. This Forest always extends up to the edges of the target's Unit Boundary (even if the unit moves or changes formation). Whenever the target is within 3\" of another Forest or an another unit entirely with Sylvan Spirit, it must reroll to-hit and to-wound rolls of '1' with its Melee Attacks.\n\n* You may place a marker next to the unit instead",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
@@ -1791,12 +1791,31 @@
         "typeId": "f4d6-35c2-496b-c7e9",
         "typeName": "Spell",
         "characteristics": [
-          {"name": "Casting Value", "$text": "9", "typeId": "f86d-a5a6-1411-30e5"},
+          {"name": "Casting Value", "$text": "8", "typeId": "f86d-a5a6-1411-30e5"},
           {"name": "Range", "$text": "12\"", "typeId": "ba93-6e90-4696-c2b4"},
           {"name": "Type", "$text": "Augment", "typeId": "74cf-1caa-f204-a191"},
           {"name": "Duration", "$text": "1", "typeId": "6eb0-063f-d744-e018"},
           {"name": "Description", "$text": "The target gains +1 Res.", "typeId": "6668-d1b5-e27e-213f"},
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
+        ]
+      },
+      {
+        "name": "Unfinished Duty",
+        "id": "96f2-f249-40ab-8785",
+        "hidden": false,
+        "typeId": "f4d6-35c2-496b-c7e9",
+        "typeName": "Spell",
+        "characteristics": [
+          {"name": "Casting Value", "$text": "4", "typeId": "f86d-a5a6-1411-30e5"},
+          {"name": "Range", "$text": "12\"", "typeId": "ba93-6e90-4696-c2b4"},
+          {"name": "Type", "$text": "Augment, Aura", "typeId": "74cf-1caa-f204-a191"},
+          {"name": "Duration", "$text": "0", "typeId": "6eb0-063f-d744-e018"},
+          {
+            "name": "Description",
+            "$text": "Choose one of the following effects for each target: \n &bull; The Rank-and-File part of the target Raises a number of HP equal to its Resurrected value. \n &bull; One model in the target Recovers a number of HP equal to its Resurrected value.",
+            "typeId": "6668-d1b5-e27e-213f"
+          },
+          {"name": "Bound", "$text": "true", "typeId": "f652-4361-2e55-57e2"}
         ]
       },
       {
@@ -1831,7 +1850,7 @@
           {"name": "Duration", "$text": "1", "typeId": "6eb0-063f-d744-e018"},
           {
             "name": "Description",
-            "$text": "The target gains Fearless. The target may perform a 5″ Magical Move. This spell may target units in Ambush. If so, the target unit immediately enters the Battlefied following normal Ambush rules.",
+            "$text": "The target gains Fearless.\nIn addition, it may immediately perform a Magical Move (5 Mob).\nThis spell may target units in Ambush. If so, the target unit immediately enters the Battlefied following normal Ambush rules, instead of performing a Magical Move.",
             "typeId": "6668-d1b5-e27e-213f"
           },
           {"name": "Bound", "$text": "false", "typeId": "f652-4361-2e55-57e2"}
