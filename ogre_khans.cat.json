@@ -7,7 +7,7 @@
     "gameSystemId": "3552-6259-4b66-3788",
     "gameSystemRevision": 1,
     "library": false,
-    "revision": 379,
+    "revision": 380,
     "type": "catalogue",
     "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
     "catalogueLinks": [
@@ -6239,9 +6239,30 @@
           {"name": "Paired Weapons", "id": "5193-358b-796b-5b9c", "hidden": false, "targetId": "2431-3187-a071-99c8", "type": "profile"},
           {"name": "Great Weapon", "id": "72bd-44a3-1cac-c507", "hidden": false, "targetId": "404b-7330-b333-3778", "type": "profile"},
           {"name": "Halberd", "id": "5fae-1440-ac45-da02", "hidden": false, "targetId": "42b4-4d10-2466-39ce", "type": "profile"},
-          {"name": "Brace of Ogre Pistols", "id": "1898-32f7-171b-1d84", "hidden": false, "targetId": "3a4f-d102-0d32-b468", "type": "profile"},
-          {"name": "Ogre Crossbow", "id": "387f-c79e-df7a-75f0", "hidden": false, "targetId": "ba2a-ff2d-7899-b431", "type": "profile"},
-          {"name": "Hunting Spear", "id": "b8db-65af-6bde-197f", "hidden": false, "targetId": "84f8-30ce-c17c-6211", "type": "profile"},
+          {
+            "name": "Brace of Ogre Pistols",
+            "id": "1898-32f7-171b-1d84",
+            "hidden": false,
+            "targetId": "3a4f-d102-0d32-b468",
+            "type": "profile",
+            "modifiers": [{"field": "ac5e-bed6-2a99-99d3", "type": "set", "value": "4+"}]
+          },
+          {
+            "name": "Ogre Crossbow",
+            "id": "387f-c79e-df7a-75f0",
+            "hidden": false,
+            "targetId": "ba2a-ff2d-7899-b431",
+            "type": "profile",
+            "modifiers": [{"field": "ac5e-bed6-2a99-99d3", "type": "set", "value": "3+"}]
+          },
+          {
+            "name": "Hunting Spear",
+            "id": "b8db-65af-6bde-197f",
+            "hidden": false,
+            "targetId": "84f8-30ce-c17c-6211",
+            "type": "profile",
+            "modifiers": [{"field": "ac5e-bed6-2a99-99d3", "type": "set", "value": "3+"}]
+          },
           {"name": "Hand Weapon", "id": "0ce9-f923-b169-1edf", "hidden": false, "targetId": "cc6a-85fb-a07e-e781", "type": "profile"}
         ],
         "modifiers": [
@@ -8286,7 +8307,16 @@
                       }
                     ],
                     "costs": [{"name": "pts", "typeId": "ea90-6996-33df-993c", "value": 2}],
-                    "infoLinks": [{"name": "First Strike", "id": "aebd-7bab-d48f-5e7f", "hidden": false, "targetId": "ce0e-c1b2-a268-c6da", "type": "profile"}]
+                    "infoLinks": [
+                      {
+                        "name": "First Strike",
+                        "id": "aebd-7bab-d48f-5e7f",
+                        "hidden": false,
+                        "targetId": "ce0e-c1b2-a268-c6da",
+                        "type": "profile",
+                        "modifiers": [{"field": "name", "type": "set", "value": "First Strike (Fury)"}]
+                      }
+                    ]
                   },
                   {
                     "name": "Devastating Charge (+1 Str, +1 AP)",
@@ -9222,7 +9252,14 @@
                 "type": "profile",
                 "modifiers": [{"field": "name", "type": "set", "value": "Hard Target (1)"}]
               },
-              {"name": "Throwing Weapons", "id": "71cc-77b2-bde5-d7d1", "hidden": false, "targetId": "38ae-71b8-126f-173c", "type": "profile"},
+              {
+                "name": "Throwing Weapons",
+                "id": "71cc-77b2-bde5-d7d1",
+                "hidden": false,
+                "targetId": "38ae-71b8-126f-173c",
+                "type": "profile",
+                "modifiers": [{"field": "ac5e-bed6-2a99-99d3", "type": "set", "value": "4+"}]
+              },
               {
                 "name": "Lethal Strike",
                 "id": "c19c-48dc-bdb4-42e3",
@@ -12323,7 +12360,16 @@
                       }
                     ],
                     "costs": [{"name": "pts", "typeId": "ea90-6996-33df-993c", "value": 0}],
-                    "infoLinks": [{"name": "First Strike", "id": "99d3-fdbc-9171-6da1", "hidden": false, "targetId": "ce0e-c1b2-a268-c6da", "type": "profile"}]
+                    "infoLinks": [
+                      {
+                        "name": "First Strike",
+                        "id": "99d3-fdbc-9171-6da1",
+                        "hidden": false,
+                        "targetId": "ce0e-c1b2-a268-c6da",
+                        "type": "profile",
+                        "modifiers": [{"field": "name", "type": "set", "value": "First Strike (Fury)"}]
+                      }
+                    ]
                   },
                   {
                     "name": "Lethal Strike",
